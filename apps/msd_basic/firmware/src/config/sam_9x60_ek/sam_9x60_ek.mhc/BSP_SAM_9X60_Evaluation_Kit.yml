@@ -3,4 +3,4 @@ type: UniqueComponent
 attributes: {id: BSP_SAM_9X60_Evaluation_Kit, bsp: 'true'}
 children:
 - type: ElementPosition
-  attributes: {x: '142', y: '36', id: BSP_SAM_9X60_Evaluation_Kit}
+  attributes: {x: '150', y: '36', id: BSP_SAM_9X60_Evaluation_Kit}

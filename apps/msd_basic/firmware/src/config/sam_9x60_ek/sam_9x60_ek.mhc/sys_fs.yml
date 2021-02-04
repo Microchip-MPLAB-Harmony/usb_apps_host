@@ -91,4 +91,4 @@ children:
         attributes: {targetComponentID: usb_host_msd, targetAttachmentID: USB Host
             MSD}
 - type: ElementPosition
-  attributes: {x: '432', y: '325', id: sys_fs}
+  attributes: {x: '450', y: '204', id: sys_fs}

@@ -1,7 +1,7 @@
 /**
  * \brief Component description for EMAC
  *
- * Copyright (c) 2019 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2019-08-22T13:04:26Z */
+/* file generated from device description version 2020-12-18T05:22:35Z */
 #ifndef _SAM9X_EMAC_COMPONENT_H_
 #define _SAM9X_EMAC_COMPONENT_H_
 

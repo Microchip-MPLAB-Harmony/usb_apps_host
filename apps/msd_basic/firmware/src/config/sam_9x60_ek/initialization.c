@@ -297,26 +297,6 @@ static void SYSC_Disable( void )
 }
 
 
-/*******************************************************************************
-  Function:
-    void STDIO_BufferModeSet ( void )
-
-  Summary:
-    Sets the buffering mode for stdin and stdout
-
-  Remarks:
- ********************************************************************************/
-static void STDIO_BufferModeSet(void)
-{
-
-    /* Make stdin unbuffered */
-    setbuf(stdin, NULL);
-
-    /* Make stdout unbuffered */
-    setbuf(stdout, NULL);
-}
-
-
 
 
 /*******************************************************************************
@@ -331,10 +311,8 @@ static void STDIO_BufferModeSet(void)
 
 void SYS_Initialize ( void* data )
 {
+
 	SYSC_Disable( );
-
-    STDIO_BufferModeSet();
-
 
   
     CLK_Initialize();
@@ -346,12 +324,10 @@ void SYS_Initialize ( void* data )
 	BSP_Initialize();
     MMU_Initialize();
 
-    INT_Initialize();
+    AIC_INT_Initialize();
     
     /* Disable WDT   */
     WDT_REGS->WDT_MR = WDT_MR_WDDIS_Msk;
-
-    DBGU_Initialize();
 
  
     TC0_CH0_TimerInitialize(); 

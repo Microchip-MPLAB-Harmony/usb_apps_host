@@ -38,10 +38,6 @@
             <logicalFolder name="f2" displayName="clk" projectFiles="true">
               <itemPath>../src/config/sam_9x60_ek/peripheral/clk/plib_clk.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f5" displayName="dbgu" projectFiles="true">
-              <itemPath>../src/config/sam_9x60_ek/peripheral/dbgu/plib_dbgu_common.h</itemPath>
-              <itemPath>../src/config/sam_9x60_ek/peripheral/dbgu/plib_dbgu.h</itemPath>
-            </logicalFolder>
             <logicalFolder name="f1" displayName="mmu" projectFiles="true">
               <itemPath>../src/config/sam_9x60_ek/peripheral/mmu/plib_mmu.h</itemPath>
               <itemPath>../src/config/sam_9x60_ek/peripheral/mmu/cp15.h</itemPath>
@@ -118,6 +114,7 @@
           <itemPath>../src/config/sam_9x60_ek/user.h</itemPath>
           <itemPath>../src/config/sam_9x60_ek/configuration.h</itemPath>
           <itemPath>..\src\config\sam_9x60_ek\device.h</itemPath>
+          <itemPath>../src/config/sam_9x60_ek/interrupts.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="packs" projectFiles="true">
@@ -169,6 +166,72 @@
             <itemPath>../src/packs/SAM9X60_DFP/component/wdt.h</itemPath>
             <itemPath>../src/packs/SAM9X60_DFP/component/xdmac.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="f3" displayName="instance" projectFiles="true">
+            <itemPath>../src/packs/SAM9X60_DFP/instance/adc.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/aes.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/aic.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/bsc.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/can0.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/can1.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/classd.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/dbgu.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/emac0.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/emac1.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/flexcom0.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/flexcom1.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/flexcom10.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/flexcom11.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/flexcom12.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/flexcom2.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/flexcom3.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/flexcom4.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/flexcom5.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/flexcom6.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/flexcom7.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/flexcom8.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/flexcom9.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/gfx2d.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/gpbr.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/i2smcc.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/isi.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/lcdc.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/matrix.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/mpddrc.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/otpc.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/pioa.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/piob.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/pioc.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/piod.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/pit.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/pit64b.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/pmc.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/pmecc.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/pmerrloc.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/pwm.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/qspi.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/rstc.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/rtc.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/rtt.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/sckc.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/sdmmc0.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/sdmmc1.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/sdramc.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/sfr.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/sha.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/shdwc.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/smc.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/ssc.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/syscwp.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/tc0.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/tc1.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/tdes.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/trng.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/udphs.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/uhphs_ehci.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/uhphs_ohci.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/wdt.h</itemPath>
+            <itemPath>../src/packs/SAM9X60_DFP/instance/xdmac.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f2" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/SAM9X60_DFP/pio/sam9x60.h</itemPath>
           </logicalFolder>
@@ -210,9 +273,6 @@
             </logicalFolder>
             <logicalFolder name="f2" displayName="clk" projectFiles="true">
               <itemPath>../src/config/sam_9x60_ek/peripheral/clk/plib_clk.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="f5" displayName="dbgu" projectFiles="true">
-              <itemPath>../src/config/sam_9x60_ek/peripheral/dbgu/plib_dbgu.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f1" displayName="mmu" projectFiles="true">
               <itemPath>../src/config/sam_9x60_ek/peripheral/mmu/plib_mmu.c</itemPath>
@@ -276,14 +336,12 @@
       <logicalFolder name="f1" displayName="sam_9x60_ek.mhc" projectFiles="true">
         <itemPath>../src/config/sam_9x60_ek/sam_9x60_ek.mhc/BSP_SAM_9X60_Evaluation_Kit.yml</itemPath>
         <itemPath>../src/config/sam_9x60_ek/sam_9x60_ek.mhc/core.yml</itemPath>
-        <itemPath>../src/config/sam_9x60_ek/sam_9x60_ek.mhc/dbgu.yml</itemPath>
         <itemPath>../src/config/sam_9x60_ek/sam_9x60_ek.mhc/dfp.yml</itemPath>
         <itemPath>../src/config/sam_9x60_ek/sam_9x60_ek.mhc/drv_usbhs_v1.yml</itemPath>
         <itemPath>../src/config/sam_9x60_ek/sam_9x60_ek.mhc/GraphSettings.yml</itemPath>
         <itemPath>../src/config/sam_9x60_ek/sam_9x60_ek.mhc/HarmonyCore.yml</itemPath>
         <itemPath>../src/config/sam_9x60_ek/sam_9x60_ek.mhc/project.yml</itemPath>
         <itemPath>../src/config/sam_9x60_ek/sam_9x60_ek.mhc/settings.yml</itemPath>
-        <itemPath>../src/config/sam_9x60_ek/sam_9x60_ek.mhc/stdio.yml</itemPath>
         <itemPath>../src/config/sam_9x60_ek/sam_9x60_ek.mhc/sys_fs.yml</itemPath>
         <itemPath>../src/config/sam_9x60_ek/sam_9x60_ek.mhc/sys_time.yml</itemPath>
         <itemPath>../src/config/sam_9x60_ek/sam_9x60_ek.mhc/tc0.yml</itemPath>
@@ -305,15 +363,21 @@
         <targetDevice>SAM9X60</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>jlink</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.50</languageToolchainVersion>
+        <languageToolchainVersion>3.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAM9X6_DFP" vendor="Microchip" version="1.3.36"/>
+        <pack name="SAM9X6_DFP" vendor="Microchip" version="1.5.50"/>
       </packs>
       <ScriptingSettings>
+        <ScriptingSetting key="boot.load_adr" value=""/>
+        <ScriptingSetting key="boot.use" value="true"/>
+        <ScriptingSetting key="boot.entry_adr" value=""/>
+        <ScriptingSetting key="boot.path"
+                          value="${ProjectDir}\..\at91bootstrap_sam_9x60_ek.X\binaries\at91bootstrap.elf "/>
+        <ScriptingSetting key="boot.prj" value=""/>
       </ScriptingSettings>
       <compileType>
         <linkerTool>
@@ -373,7 +437,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/sam_9x60_ek;../src/packs/SAM9X60_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;;../src/config/sam_9x60_ek/system/fs/fat_fs/file_system;../src/config/sam_9x60_ek/system/fs/fat_fs/hardware_access"/>
+                  value="../src;../src/config/sam_9x60_ek;../src/config/sam_9x60_ek/system/fs/fat_fs/file_system;../src/config/sam_9x60_ek/system/fs/fat_fs/hardware_access;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/SAM9X60_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -385,12 +449,13 @@
         <property key="preprocessor-macros" value=""/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="tentative-definitions" value=""/>
         <property key="toplevel-reordering" value=""/>
         <property key="unaligned-access" value=""/>
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
-        <appendMe value="-Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wredundant-decls -Wnested-externs  -Wlong-long -Wunreachable-code -Wmissing-noreturn"/>
+        <appendMe value="-Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wmissing-noreturn"/>
       </C32>
       <C32-AR>
         <property key="additional-options-chop-files" value="false"/>
@@ -417,6 +482,7 @@
       </C32-AS>
       <C32-CO>
         <property key="coverage-enable" value=""/>
+        <property key="stack-guidance" value="false"/>
       </C32-CO>
       <C32-LD>
         <property key="additional-options-use-response-files" value="false"/>
@@ -438,7 +504,7 @@
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-cross-reference-file" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
-        <property key="heap-size" value="512"/>
+        <property key="heap-size" value="4096"/>
         <property key="input-libraries" value=""/>
         <property key="kseg-length" value=""/>
         <property key="kseg-origin" value=""/>
@@ -448,8 +514,7 @@
         <property key="no-startup-files" value="false"/>
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
-        <property key="preprocessor-macros"
-                  value=";ROM_LENGTH=-0x23f00000;ROM_ORIGIN=0x0x23f00000"/>
+        <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
@@ -471,7 +536,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/sam_9x60_ek;../src/packs/SAM9X60_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;;../src/config/sam_9x60_ek/system/fs/fat_fs/file_system;../src/config/sam_9x60_ek/system/fs/fat_fs/hardware_access"/>
+                  value="../src;../src/config/sam_9x60_ek;../src/config/sam_9x60_ek/system/fs/fat_fs/file_system;../src/config/sam_9x60_ek/system/fs/fat_fs/hardware_access;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/SAM9X60_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -499,6 +564,7 @@
         <property key="omit-pack-options" value="1"/>
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
+        <property key="stack-smashing" value=""/>
         <property key="wpo-lto" value="false"/>
       </C32Global>
       <PICkit3PlatformTool>
@@ -1027,6 +1093,98 @@
                   value=""/>
         <property key="warningmessagebreakoptions.warningmessages" value="holdstate"/>
       </Simulator>
+      <Tool>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="boot.entry_adr" value=""/>
+        <property key="boot.load_adr" value=""/>
+        <property key="boot.path"
+                  value="${ProjectDir}\..\at91bootstrap_sam_9x60_ek.X\binaries\at91bootstrap.elf "/>
+        <property key="boot.prj" value=""/>
+        <property key="boot.use" value="true"/>
+        <property key="communication.autoselectspeed" value="true"/>
+        <property key="communication.interface" value="4wire"/>
+        <property key="communication.speed" value="4"/>
+        <property key="debugoptions.debug-startup" value="Use system settings"/>
+        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="lastid" value=""/>
+        <property key="memories.bootflash" value="true"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.instruction.ram" value="true"/>
+        <property key="memories.instruction.ram.end"
+                  value="${memories.instruction.ram.end.value}"/>
+        <property key="memories.instruction.ram.start"
+                  value="${memories.instruction.ram.start.value}"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.end" value="0x4fffff"/>
+        <property key="memories.programmemory.start" value="0x300000"/>
+        <property key="programoptions.eraseb4program" value="false"/>
+        <property key="programoptions.preservebootflash" value="false"/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.preserveprogramrange.end" value="0x4fffff"/>
+        <property key="programoptions.preserveprogramrange.start" value="0x300000"/>
+        <property key="programoptions.resetafterprogram" value="true"/>
+        <property key="script.has_reset" value="true"/>
+        <property key="script.log_level" value="1"/>
+        <property key="script.reset_delay" value="0"/>
+        <property key="script.show_output" value="false"/>
+      </Tool>
+      <jlink>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="communication.autoselectspeed" value="true"/>
+        <property key="communication.interface" value="4wire"/>
+        <property key="communication.speed" value="4"/>
+        <property key="debugoptions.debug-startup" value="Use system settings"/>
+        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="lastid" value=""/>
+        <property key="memories.bootflash" value="true"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.instruction.ram" value="true"/>
+        <property key="memories.instruction.ram.end"
+                  value="${memories.instruction.ram.end.value}"/>
+        <property key="memories.instruction.ram.start"
+                  value="${memories.instruction.ram.start.value}"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.end" value="0x4fffff"/>
+        <property key="memories.programmemory.start" value="0x300000"/>
+        <property key="programoptions.eraseb4program" value="false"/>
+        <property key="programoptions.preservebootflash" value="false"/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.preserveprogramrange.end" value="0x4fffff"/>
+        <property key="programoptions.preserveprogramrange.start" value="0x300000"/>
+        <property key="programoptions.resetafterprogram" value="true"/>
+        <property key="script.has_reset" value="true"/>
+        <property key="script.log_level" value="1"/>
+        <property key="script.reset_delay" value="0"/>
+        <property key="script.show_output" value="false"/>
+      </jlink>
+      <samice>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="communication.autoselectspeed" value="true"/>
+        <property key="communication.interface" value="4wire"/>
+        <property key="communication.speed" value="4"/>
+        <property key="memories.bootflash" value="true"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.instruction.ram" value="true"/>
+        <property key="memories.instruction.ram.end"
+                  value="${memories.instruction.ram.end.value}"/>
+        <property key="memories.instruction.ram.start"
+                  value="${memories.instruction.ram.start.value}"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.end" value="0x4fffff"/>
+        <property key="memories.programmemory.start" value="0x300000"/>
+        <property key="programoptions.eraseb4program" value="false"/>
+        <property key="programoptions.preservebootflash" value="false"/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.preserveprogramrange.end" value="0x4fffff"/>
+        <property key="programoptions.preserveprogramrange.start" value="0x300000"/>
+        <property key="programoptions.resetafterprogram" value="true"/>
+      </samice>
     </conf>
   </confs>
 </configurationDescriptor>

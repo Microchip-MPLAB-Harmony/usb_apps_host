@@ -1,7 +1,7 @@
 /**
  * \brief Header file for ATSAMA5D27
  *
- * Copyright (c) 2019 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2019-06-13T17:45:35Z */
+/* file generated from device description version 2020-05-04T06:27:24Z */
 #ifndef _SAMA5D27_H_
 #define _SAMA5D27_H_
 
@@ -68,14 +68,16 @@
 /** @}  end of Atmel Global Defines */
 
 /* ************************************************************************** */
-/*   INTERRUPTS DEFINITIONS FOR SAMA5D27                                           */
+/*   CMSIS DEFINITIONS FOR SAMA5D27                                           */
 /* ************************************************************************** */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** Interrupt Number Definition */
 typedef enum IRQn
 {
+/******  CORTEX-A5 Processor Exceptions Numbers ******************************/
 /******  SAMA5D27 specific Interrupt Numbers ***********************************/
   SAIC_IRQn                 =   0, /**< 0   Advanced Interrupt Controller (SAIC) */
+  PMU_IRQn                  =   2, /**< 2   PMU (PMU)                           */
   PIT_IRQn                  =   3, /**< 3   Periodic Interval Timer (PIT)       */
   WDT_IRQn                  =   4, /**< 4   Watchdog Timer (WDT)                */
   GMAC_IRQn                 =   5, /**< 5   Gigabit Ethernet MAC (GMAC)         */
@@ -90,6 +92,7 @@ typedef enum IRQn
   MATRIX1_IRQn              =  14, /**< 14  AHB Bus Matrix (MATRIX1)            */
   MATRIX0_IRQn              =  15, /**< 15  AHB Bus Matrix (MATRIX0)            */
   SECUMOD_IRQn              =  16, /**< 16  Security Module (SECUMOD)           */
+  HSMC_IRQn                 =  17, /**< 17  HSMC (HSMC)                         */
   PIOA_IRQn                 =  18, /**< 18  Parallel Input/Output Controller (PIOA) */
   FLEXCOM0_IRQn             =  19, /**< 19  Flexible Serial Communication (FLEXCOM0) */
   FLEXCOM1_IRQn             =  20, /**< 20  Flexible Serial Communication (FLEXCOM1) */
@@ -108,9 +111,10 @@ typedef enum IRQn
   SPI0_IRQn                 =  33, /**< 33  Serial Peripheral Interface (SPI0)  */
   SPI1_IRQn                 =  34, /**< 34  Serial Peripheral Interface (SPI1)  */
   TC0_IRQn                  =  35, /**< 35  Timer Counter (TC0)                 */
-  TC1_IRQn                  =  36, /**< 36  Timer Counter (TC0)                 */
+  TC1_IRQn                  =  36, /**< 36  Timer Counter (TC1)                 */
   PWM_IRQn                  =  38, /**< 38  Pulse Width Modulation Controller (PWM) */
   ADC_IRQn                  =  40, /**< 40  Analog-to-Digital Converter (ADC)   */
+  UHPHS_IRQn                =  41, /**< 41  UHPHS (UHPHS)                       */
   UDPHS_IRQn                =  42, /**< 42  USB High Speed Device Port (UDPHS)  */
   SSC0_IRQn                 =  43, /**< 43  Synchronous Serial Controller (SSC0) */
   SSC1_IRQn                 =  44, /**< 44  Synchronous Serial Controller (SSC1) */
@@ -120,6 +124,7 @@ typedef enum IRQn
   PDMIC_IRQn                =  48, /**< 48  Pulse Density Modulation Interface Controller (PDMIC) */
   AIC_IRQn                  =  49, /**< 49  Advanced Interrupt Controller (AIC) */
   SFC_IRQn                  =  50, /**< 50  Secure Fuse Controller (SFC)        */
+  SECURAM_IRQn              =  51, /**< 51  SECURAM (SECURAM)                   */
   QSPI0_IRQn                =  52, /**< 52  Quad Serial Peripheral Interface (QSPI0) */
   QSPI1_IRQn                =  53, /**< 53  Quad Serial Peripheral Interface (QSPI1) */
   I2SC0_IRQn                =  54, /**< 54  Inter-IC Sound Controller (I2SC0)   */
@@ -138,9 +143,9 @@ typedef enum IRQn
   PIOD_IRQn                 =  70, /**< 70  Parallel Input/Output Controller (PIOD) */
   SDMMC0_TIMER_IRQn         =  71, /**< 71  Secure Digital MultiMedia Card Controller (SDMMC0) */
   SDMMC1_TIMER_IRQn         =  72, /**< 72  Secure Digital MultiMedia Card Controller (SDMMC1) */
-  PMC_IRQn                  =  74, /**< 74  Shared between PMC RSTC RTC (PMC)   */
   RSTC_IRQn                 =  74, /**< 74  Shared between PMC RSTC RTC (RSTC)  */
   RTC_IRQn                  =  74, /**< 74  Shared between PMC RSTC RTC (RTC)   */
+  PMC_IRQn                  =  74, /**< 74  Shared between PMC RSTC RTC (PMC)   */
   ACC_IRQn                  =  75, /**< 75  Analog Comparator Controller (ACC)  */
   RXLP_IRQn                 =  76, /**< 76  Low Power Asynchronous Receiver (RXLP) */
 
@@ -148,10 +153,96 @@ typedef enum IRQn
 } IRQn_Type;
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
+#if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if !defined DONT_USE_PREDEFINED_CORE_HANDLERS
+/* CORTEX-A5 exception handlers */
+#endif /* DONT_USE_PREDEFINED_CORE_HANDLERS */
+
+#if !defined DONT_USE_PREDEFINED_PERIPHERALS_HANDLERS
+/* Peripherals interrupt handlers */
+void SAIC_Handler                  ( void );
+void PIT_Handler                   ( void );
+void WDT_Handler                   ( void );
+void GMAC_Handler                  ( void );
+void XDMAC0_Handler                ( void );
+void XDMAC1_Handler                ( void );
+void ICM_Handler                   ( void );
+void AES_Handler                   ( void );
+void AESB_Handler                  ( void );
+void TDES_Handler                  ( void );
+void SHA_Handler                   ( void );
+void MPDDRC_Handler                ( void );
+void MATRIX1_Handler               ( void );
+void MATRIX0_Handler               ( void );
+void SECUMOD_Handler               ( void );
+void PIOA_Handler                  ( void );
+void FLEXCOM0_Handler              ( void );
+void FLEXCOM1_Handler              ( void );
+void FLEXCOM2_Handler              ( void );
+void FLEXCOM3_Handler              ( void );
+void FLEXCOM4_Handler              ( void );
+void UART0_Handler                 ( void );
+void UART1_Handler                 ( void );
+void UART2_Handler                 ( void );
+void UART3_Handler                 ( void );
+void UART4_Handler                 ( void );
+void TWIHS0_Handler                ( void );
+void TWIHS1_Handler                ( void );
+void SDMMC0_Handler                ( void );
+void SDMMC1_Handler                ( void );
+void SPI0_Handler                  ( void );
+void SPI1_Handler                  ( void );
+void TC0_Handler                   ( void );
+void TC1_Handler                   ( void );
+void PWM_Handler                   ( void );
+void ADC_Handler                   ( void );
+void UDPHS_Handler                 ( void );
+void SSC0_Handler                  ( void );
+void SSC1_Handler                  ( void );
+void LCDC_Handler                  ( void );
+void ISC_Handler                   ( void );
+void TRNG_Handler                  ( void );
+void PDMIC_Handler                 ( void );
+void AIC_Handler                   ( void );
+void SFC_Handler                   ( void );
+void QSPI0_Handler                 ( void );
+void QSPI1_Handler                 ( void );
+void I2SC0_Handler                 ( void );
+void I2SC1_Handler                 ( void );
+void MCAN0_INT0_Handler            ( void );
+void MCAN1_INT0_Handler            ( void );
+void PTC_Handler                   ( void );
+void CLASSD_Handler                ( void );
+void L2CC_Handler                  ( void );
+void MCAN0_INT1_Handler            ( void );
+void MCAN1_INT1_Handler            ( void );
+void GMAC_Q1_Handler               ( void );
+void GMAC_Q2_Handler               ( void );
+void PIOB_Handler                  ( void );
+void PIOC_Handler                  ( void );
+void PIOD_Handler                  ( void );
+void SDMMC0_TIMER_Handler          ( void );
+void SDMMC1_TIMER_Handler          ( void );
+void SYSC_Handler                  ( void );
+void ACC_Handler                   ( void );
+void RXLP_Handler                  ( void );
+#endif /* DONT_USE_PREDEFINED_PERIPHERALS_HANDLERS */
+#endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
+
+/** \brief Configuration of the CORTEX-A5 Processor and Core Peripherals */
+#define __CA_REV                  0x0001 /**< CA5 Core Revision                                                         */
+#define __CORTEX_A                     5 /**< Core type number (Cortex-A5)                                              */
+#define __FPU_PRESENT                  1 /**< FPU is present on core                                                    */
+#define __GIC_PRESENT                  0 /**< GIC is present on core                                                    */
+#define __TIM_PRESENT                  0 /**< Private Timer is present on core                                          */
+
 /*
  * \brief CMSIS includes
  */
 #include "core_ca.h"
+#if defined USE_CMSIS_INIT
+#include "system_sama5d2.h"
+#endif /* USE_CMSIS_INIT */
 
 /** \defgroup SAMA5D27_api Peripheral Software API
  *  @{
@@ -180,7 +271,6 @@ typedef enum IRQn
 #include "component/mpddrc.h"
 #include "component/pdmic.h"
 #include "component/pio.h"
-#include "component/pio_ctrl.h"
 #include "component/pit.h"
 #include "component/pmc.h"
 #include "component/ptc.h"
@@ -320,11 +410,7 @@ typedef enum IRQn
 #define MCAN1_REGS                       ((mcan_registers_t*)0xfc050000)               /**< \brief MCAN1 Registers Address      */
 #define MPDDRC_REGS                      ((mpddrc_registers_t*)0xf000c000)             /**< \brief MPDDRC Registers Address     */
 #define PDMIC_REGS                       ((pdmic_registers_t*)0xf8018000)              /**< \brief PDMIC Registers Address      */
-#define PIOA_REGS                        ((pio_registers_t*)0xfc038000)                /**< \brief PIOA Registers Address       */
-#define PIOB_REGS                        ((pio_registers_t*)0xfc038040)                /**< \brief PIOB Registers Address       */
-#define PIOC_REGS                        ((pio_registers_t*)0xfc038080)                /**< \brief PIOC Registers Address       */
-#define PIOD_REGS                        ((pio_registers_t*)0xfc0380c0)                /**< \brief PIOD Registers Address       */
-#define PIO_CTRL_REGS                    ((pio_ctrl_registers_t*)0xfc038500)           /**< \brief PIO_CTRL Registers Address   */
+#define PIO_REGS                         ((pio_registers_t*)0xfc038000)                /**< \brief PIO Registers Address        */
 #define PIT_REGS                         ((pit_registers_t*)0xf8048030)                /**< \brief PIT Registers Address        */
 #define PMC_REGS                         ((pmc_registers_t*)0xf0014000)                /**< \brief PMC Registers Address        */
 #define PTC_REGS                         ((ptc_registers_t*)0xfc060000)                /**< \brief PTC Registers Address        */
@@ -400,11 +486,7 @@ typedef enum IRQn
 #define MCAN1_BASE_ADDRESS               _UL_(0xfc050000)                              /**< \brief MCAN1 Base Address */
 #define MPDDRC_BASE_ADDRESS              _UL_(0xf000c000)                              /**< \brief MPDDRC Base Address */
 #define PDMIC_BASE_ADDRESS               _UL_(0xf8018000)                              /**< \brief PDMIC Base Address */
-#define PIOA_BASE_ADDRESS                _UL_(0xfc038000)                              /**< \brief PIOA Base Address */
-#define PIOB_BASE_ADDRESS                _UL_(0xfc038040)                              /**< \brief PIOB Base Address */
-#define PIOC_BASE_ADDRESS                _UL_(0xfc038080)                              /**< \brief PIOC Base Address */
-#define PIOD_BASE_ADDRESS                _UL_(0xfc0380c0)                              /**< \brief PIOD Base Address */
-#define PIO_CTRL_BASE_ADDRESS            _UL_(0xfc038500)                              /**< \brief PIO_CTRL Base Address */
+#define PIO_BASE_ADDRESS                 _UL_(0xfc038000)                              /**< \brief PIO Base Address */
 #define PIT_BASE_ADDRESS                 _UL_(0xf8048030)                              /**< \brief PIT Base Address */
 #define PMC_BASE_ADDRESS                 _UL_(0xf0014000)                              /**< \brief PMC Base Address */
 #define PTC_BASE_ADDRESS                 _UL_(0xfc060000)                              /**< \brief PTC Base Address */
