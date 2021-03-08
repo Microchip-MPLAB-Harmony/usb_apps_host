@@ -173,12 +173,12 @@ void _DRV_USB_VBUSPowerEnable(uint8_t port, bool enable)
     if (enable == true)
 	{
 		/* Enable the VBUS */
-		VBUS_AH_PowerEnable();
+		VBUS_PowerEnable();
 	}
 	else
 	{
 		/* Disable the VBUS */
-		VBUS_AH_PowerDisable();
+		VBUS_PowerDisable();
 	}
 }
 

@@ -62,6 +62,13 @@ children:
       children:
       - type: User
         attributes: {value: 'true'}
+  - type: String
+    attributes: {id: USB_HOST_VBUS_ENABLE_PIN_NAME}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: VBUS}
   - type: Combo
     attributes: {id: USB_OPERATION_MODE}
     children:
@@ -70,4 +77,4 @@ children:
       - type: Dynamic
         attributes: {id: drv_usbfs_v1, value: Host}
 - type: ElementPosition
-  attributes: {x: '15', y: '189', id: drv_usbfs_v1}
+  attributes: {x: '12', y: '256', id: drv_usbfs_v1}

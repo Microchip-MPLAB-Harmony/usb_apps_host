@@ -6,13 +6,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: BF41AFBB026ACD6590D99911C50D8DE8
+- generatedChecksum: 001392D2EBA95184E80A3A01A82E3FFE
   logicalPath: config/pic32cm_le00_curiosity_pro/bsp
   name: bsp.c
   physicalPath: bsp
   security: NON_SECURE
   type: SOURCE
-  userChecksum: BF41AFBB026ACD6590D99911C50D8DE8
+  userChecksum: 001392D2EBA95184E80A3A01A82E3FFE
 - generatedChecksum: 87F0F31F449B8EBD868C4944619F978F
   logicalPath: config/pic32cm_le00_curiosity_pro/system/fs/fat_fs/hardware_access
   name: diskio.c
@@ -55,13 +55,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 9E153A6D4F8E0EA1F6901BAED7DD80FD
-- generatedChecksum: 763C2F75BDB7F0106C404D4A4E460781
+- generatedChecksum: F015D160CB148B8E1C9EACF4CB0A71CC
   logicalPath: config/pic32cm_le00_curiosity_pro
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 763C2F75BDB7F0106C404D4A4E460781
+  userChecksum: F015D160CB148B8E1C9EACF4CB0A71CC
 - generatedChecksum: F48EA419DC9B9BFBA311D2FD0360248E
   logicalPath: config/pic32cm_le00_curiosity_pro
   name: interrupts.c
@@ -83,13 +83,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: 664A061466E24C5BEAED92FACE18D5A2
+- generatedChecksum: C792069AC60CEBEF12166DB325A2AFA5
   logicalPath: config/pic32cm_le00_curiosity_pro/peripheral/clock
   name: plib_clock.c
   physicalPath: peripheral/clock
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 664A061466E24C5BEAED92FACE18D5A2
+  userChecksum: C792069AC60CEBEF12166DB325A2AFA5
 - generatedChecksum: C3ECDED3D6301DB0DE622293ED615D21
   logicalPath: config/pic32cm_le00_curiosity_pro/peripheral/evsys
   name: plib_evsys.c
@@ -118,13 +118,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 295EC4F84D0FFCF4D1DA1954720E7FA9
-- generatedChecksum: 789FE07E0A7E24FA635CA550C9BA19F4
+- generatedChecksum: C7175BED54155867A8427135F226AC46
   logicalPath: config/pic32cm_le00_curiosity_pro/peripheral/port
   name: plib_port.c
   physicalPath: peripheral/port
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 789FE07E0A7E24FA635CA550C9BA19F4
+  userChecksum: C7175BED54155867A8427135F226AC46
 - generatedChecksum: 4FD9A31F0F10D201DC1BFA84509F2F5C
   logicalPath: config/pic32cm_le00_curiosity_pro/peripheral/tc
   name: plib_tc0.c
@@ -251,13 +251,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: null
-- generatedChecksum: 1A55E5ECCDA19E8C6B7F02904DCE58A5
+- generatedChecksum: 81EFA8E2EBA6BDAA9E0DB32BDDD13C60
   logicalPath: config/pic32cm_le00_curiosity_pro/bsp
   name: bsp.h
   physicalPath: bsp
   security: NON_SECURE
   type: HEADER
-  userChecksum: 1A55E5ECCDA19E8C6B7F02904DCE58A5
+  userChecksum: 81EFA8E2EBA6BDAA9E0DB32BDDD13C60
 - generatedChecksum: 01B82424BC59A54620F7E9E0DB808EBB
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cachel1_armv7.h

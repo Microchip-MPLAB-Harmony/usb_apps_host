@@ -82,7 +82,7 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: 'false'}
+        attributes: {value: 'true'}
   - type: Integer
     attributes: {id: CPU_CLOCK_FREQUENCY}
     children:
@@ -404,42 +404,56 @@ children:
       - type: User
         attributes: {value: SWITCH_AL}
   - type: String
-    attributes: {id: PIN_70_DIR}
+    attributes: {id: PIN_61_DIR}
     children:
     - type: Values
       children:
       - type: User
         attributes: {value: Out}
   - type: String
-    attributes: {id: PIN_70_FUNCTION_NAME}
+    attributes: {id: PIN_61_FUNCTION_NAME}
     children:
     - type: Values
       children:
       - type: User
-        attributes: {value: VBUS_AH}
+        attributes: {value: VBUS}
   - type: String
-    attributes: {id: PIN_70_FUNCTION_TYPE}
+    attributes: {id: PIN_61_FUNCTION_TYPE}
     children:
     - type: Values
       children:
       - type: User
-        attributes: {value: VBUS_AH}
+        attributes: {value: VBUS_AL}
   - type: String
-    attributes: {id: PIN_70_INEN}
-    children:
-    - type: Values
-      children:
-      - type: User
-        attributes: {value: ''}
-  - type: String
-    attributes: {id: PIN_70_LAT}
+    attributes: {id: PIN_61_INEN}
     children:
     - type: Values
       children:
       - type: User
         attributes: {value: ''}
   - type: String
-    attributes: {id: PIN_70_MODE}
+    attributes: {id: PIN_61_LAT}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: High}
+  - type: String
+    attributes: {id: PIN_61_MODE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: ''}
+  - type: String
+    attributes: {id: PIN_61_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: VBUS_AL}
+  - type: String
+    attributes: {id: PIN_61_PULLEN}
     children:
     - type: Values
       children:
@@ -447,13 +461,6 @@ children:
         attributes: {value: ''}
   - type: String
     attributes: {id: PIN_70_PERIPHERAL_FUNCTION}
-    children:
-    - type: Values
-      children:
-      - type: User
-        attributes: {value: VBUS_AH}
-  - type: String
-    attributes: {id: PIN_70_PULLEN}
     children:
     - type: Values
       children:
@@ -501,6 +508,41 @@ children:
       children:
       - type: User
         attributes: {value: G}
+  - type: String
+    attributes: {id: PIN_85_INEN}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: ''}
+  - type: String
+    attributes: {id: PIN_85_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: LED_AL}
+  - type: String
+    attributes: {id: PIN_85_PULLEN}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: ''}
+  - type: String
+    attributes: {id: PIN_86_DIR}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: ''}
+  - type: String
+    attributes: {id: PIN_86_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: SWITCH_AL}
   - type: Boolean
     attributes: {id: PORT_GROUP_0}
     children:
@@ -514,7 +556,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0x100000'}
+        attributes: {id: core, value: '0x0'}
   - type: String
     attributes: {id: PORT_GROUP_0_OUT}
     children:
@@ -598,14 +640,14 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0x80000'}
+        attributes: {id: core, value: '0x8280000'}
   - type: String
     attributes: {id: PORT_GROUP_2_OUT}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0x180000'}
+        attributes: {id: core, value: '0x18380000'}
   - type: String
     attributes: {id: PORT_GROUP_2_PAD_19}
     children:
@@ -621,6 +663,27 @@ children:
       - type: Dynamic
         attributes: {id: core, value: PC20}
   - type: String
+    attributes: {id: PORT_GROUP_2_PAD_21}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: PC21}
+  - type: String
+    attributes: {id: PORT_GROUP_2_PAD_27}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: PC27}
+  - type: String
+    attributes: {id: PORT_GROUP_2_PAD_28}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: PC28}
+  - type: String
     attributes: {id: PORT_GROUP_2_PINCFG19}
     children:
     - type: Values
@@ -635,6 +698,20 @@ children:
       - type: Dynamic
         attributes: {id: core, value: '0x6'}
   - type: String
+    attributes: {id: PORT_GROUP_2_PINCFG21}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0x0'}
+  - type: String
+    attributes: {id: PORT_GROUP_2_PINCFG27}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0x0'}
+  - type: String
     attributes: {id: PORT_GROUP_2_PINCFG28}
     children:
     - type: Values
@@ -643,6 +720,20 @@ children:
         attributes: {id: core, value: '0x6'}
   - type: String
     attributes: {id: PORT_GROUP_2_PMUX10}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0x0'}
+  - type: String
+    attributes: {id: PORT_GROUP_2_PMUX13}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0x0'}
+  - type: String
+    attributes: {id: PORT_GROUP_2_PMUX14}
     children:
     - type: Values
       children:
@@ -803,7 +894,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0'}
+        attributes: {id: core, value: '32768'}
   - type: KeyValueSet
     attributes: {id: XOSC32K_OSCILLATOR_MODE}
     children:
@@ -826,4 +917,4 @@ children:
       - type: User
         attributes: {value: '0'}
 - type: ElementPosition
-  attributes: {x: '188', y: '150', id: core}
+  attributes: {x: '20', y: '101', id: core}

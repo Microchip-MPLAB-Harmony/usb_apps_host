@@ -80,9 +80,9 @@
 #define SW1_STATE_PRESSED   0
 #define SW1_STATE_RELEASED  1
 
-/*** VBUS Macros for VBUS_AH ***/
-#define VBUS_AH_PowerEnable()         (PORT_REGS->GROUP[0].PORT_OUTSET = 1 << 20)
-#define VBUS_AH_PowerDisable()        (PORT_REGS->GROUP[0].PORT_OUTCLR = 1 << 20)
+/*** VBUS Macros for VBUS ***/
+#define VBUS_PowerEnable()         (PORT_REGS->GROUP[2].PORT_OUTCLR = 1 << 21)
+#define VBUS_PowerDisable()        (PORT_REGS->GROUP[2].PORT_OUTSET = 1 << 21)
 
 
 
