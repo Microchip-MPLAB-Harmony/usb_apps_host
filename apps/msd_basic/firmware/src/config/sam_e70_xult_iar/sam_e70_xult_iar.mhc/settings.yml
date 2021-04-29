@@ -1,7 +1,7 @@
 configName: sam_e70_xult_iar
 folderName: sam_e70_xult_iar.IAR
 format_version: v1.0
-frameworkPath: ../../../..
+frameworkPath: ../../..
 processor: ATSAME70Q21B
 projectName: msd_basic_sam_e70_xult_iar
 settings:

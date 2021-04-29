@@ -1,7 +1,7 @@
 configName: sam_g55_xpro
 folderName: C:\jcb\usb\repo\H3\usb\apps\host\cdc_basic\firmware\sam_g55_xpro.X
 format_version: v1.0
-frameworkPath: ../../../..
+frameworkPath: ../../..
 processor: ATSAMG55J19
 projectName: cdc_basic_sam_g55_xpro
 settings:
