@@ -71,6 +71,7 @@ void GPIO_Initialize ( void )
     /* PORTE Initialization */
 
     /* PORTF Initialization */
+    ANSELFCLR = 0x2000; /* Digital Mode Enable */
 
     /* PORTG Initialization */
 
@@ -87,11 +88,21 @@ void GPIO_Initialize ( void )
     TRISKCLR = 0x80; /* Direction Control */
 
 
+    /* Unlock system for PPS configuration */
+    SYSKEY = 0x00000000;
+    SYSKEY = 0xAA996655;
+    SYSKEY = 0x556699AA;
+    CFGCONbits.IOLOCK = 0;
 
     /* PPS Input Remapping */
+    U6RXR = 9;
 
     /* PPS Output Remapping */
+    RPF2R = 4;
 
+    /* Lock back the system after PPS configuration */
+    CFGCONbits.IOLOCK = 1;
+    SYSKEY = 0x00000000;
 
 }
 
