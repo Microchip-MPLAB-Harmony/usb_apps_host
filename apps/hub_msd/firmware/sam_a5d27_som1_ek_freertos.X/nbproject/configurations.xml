@@ -127,6 +127,7 @@
           <itemPath>../src/config/sam_a5d27_som1_ek_freertos/FreeRTOSConfig.h</itemPath>
           <itemPath>../src/config/sam_a5d27_som1_ek_freertos/user.h</itemPath>
           <itemPath>../src/config/sam_a5d27_som1_ek_freertos/configuration.h</itemPath>
+          <itemPath>../src/config/sam_a5d27_som1_ek_freertos/interrupts.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f3" displayName="FreeRTOS" projectFiles="true">
@@ -212,10 +213,78 @@
             <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/component/wdt.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/component/xdmac.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="f3" displayName="instance" projectFiles="true">
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/acc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/adc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/aes.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/aesb.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/aic.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/aximx.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/chipid.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/classd.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/flexcom0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/flexcom1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/flexcom2.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/flexcom3.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/flexcom4.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/gmac.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/i2sc0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/i2sc1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/icm.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/isc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/l2cc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/lcdc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/matrix0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/matrix1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/mcan0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/mcan1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/mpddrc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/pdmic.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/pio.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/pit.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/pmc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/ptc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/pwm.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/qspi0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/qspi1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/rstc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/rtc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/rxlp.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/saic.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/sckc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/sdmmc0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/sdmmc1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/secumod.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/sfc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/sfr.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/sfrbu.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/sha.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/shdwc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/smc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/spi0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/spi1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/ssc0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/ssc1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/tc0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/tc1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/tdes.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/trng.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/twihs0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/twihs1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/uart0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/uart1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/uart2.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/uart3.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/uart4.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/udphs.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/xdmac0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/xdmac1.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f2" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/pio/sama5d27cd1g.h</itemPath>
           </logicalFolder>
-          <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/atsama5d27cd1g.h</itemPath>
+          <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/sama5d27cd1g.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="CMSIS" projectFiles="true">
           <logicalFolder name="f1" displayName="CMSIS" projectFiles="true">
@@ -404,9 +473,9 @@
         <targetDevice>ATSAMA5D27CD1G</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>samice</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.50</languageToolchainVersion>
+        <languageToolchainVersion>3.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -479,7 +548,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA5;../src/third_party/rtos/FreeRTOS/Source/include;../src/config/sam_a5d27_som1_ek_freertos/system/fs/fat_fs/file_system;../src/config/sam_a5d27_som1_ek_freertos/system/fs/fat_fs/hardware_access;../src;../src/config/sam_a5d27_som1_ek_freertos;../src/packs/ATSAMA5D27CD1G_DFP;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/CMSIS/"/>
+                  value="../src;../src/config/sam_a5d27_som1_ek_freertos;../src/config/sam_a5d27_som1_ek_freertos/system/fs/fat_fs/file_system;../src/config/sam_a5d27_som1_ek_freertos/system/fs/fat_fs/hardware_access;../src/packs/ATSAMA5D27CD1G_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA5"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -491,6 +560,7 @@
         <property key="preprocessor-macros" value=""/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="tentative-definitions" value=""/>
         <property key="toplevel-reordering" value=""/>
         <property key="unaligned-access" value=""/>
         <property key="use-cci" value="false"/>
@@ -522,6 +592,7 @@
       </C32-AS>
       <C32-CO>
         <property key="coverage-enable" value=""/>
+        <property key="stack-guidance" value="false"/>
       </C32-CO>
       <C32-LD>
         <property key="additional-options-use-response-files" value="false"/>
@@ -553,8 +624,7 @@
         <property key="no-startup-files" value="false"/>
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
-        <property key="preprocessor-macros"
-                  value="ROM_LENGTH=-0x23f00000;ROM_ORIGIN=0x0x23f00000"/>
+        <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
@@ -576,7 +646,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA5;../src/third_party/rtos/FreeRTOS/Source/include;../src/config/sam_a5d27_som1_ek_freertos/system/fs/fat_fs/file_system;../src/config/sam_a5d27_som1_ek_freertos/system/fs/fat_fs/hardware_access;../src;../src/config/sam_a5d27_som1_ek_freertos;../src/packs/ATSAMA5D27CD1G_DFP;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/CMSIS/"/>
+                  value="../src;../src/config/sam_a5d27_som1_ek_freertos;../src/config/sam_a5d27_som1_ek_freertos/system/fs/fat_fs/file_system;../src/config/sam_a5d27_som1_ek_freertos/system/fs/fat_fs/hardware_access;../src/packs/ATSAMA5D27CD1G_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA5"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -604,6 +674,7 @@
         <property key="omit-pack-options" value="1"/>
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
+        <property key="stack-smashing" value=""/>
         <property key="wpo-lto" value="false"/>
       </C32Global>
       <PICkit3PlatformTool>
@@ -1127,6 +1198,35 @@
                   value=""/>
         <property key="warningmessagebreakoptions.warningmessages" value="holdstate"/>
       </Simulator>
+      <Tool>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="communication.autoselectspeed" value="true"/>
+        <property key="communication.interface" value="swd"/>
+        <property key="communication.speed" value="4"/>
+        <property key="lastid" value=""/>
+        <property key="memories.bootflash" value="true"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.instruction.ram" value="true"/>
+        <property key="memories.instruction.ram.end"
+                  value="${memories.instruction.ram.end.value}"/>
+        <property key="memories.instruction.ram.start"
+                  value="${memories.instruction.ram.start.value}"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.end" value="0x23ffff"/>
+        <property key="memories.programmemory.start" value="0x200000"/>
+        <property key="programoptions.eraseb4program" value="false"/>
+        <property key="programoptions.preservebootflash" value="false"/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.preserveprogramrange.end" value="0x23ffff"/>
+        <property key="programoptions.preserveprogramrange.start" value="0x200000"/>
+        <property key="programoptions.resetafterprogram" value="true"/>
+        <property key="script.has_reset" value="true"/>
+        <property key="script.log_level" value="1"/>
+        <property key="script.reset_delay" value="0"/>
+        <property key="script.show_output" value="false"/>
+      </Tool>
       <jlink>
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="communication.autoselectspeed" value="true"/>
@@ -1159,7 +1259,6 @@
         <property key="communication.autoselectspeed" value="true"/>
         <property key="communication.interface" value="swd"/>
         <property key="communication.speed" value="4"/>
-        <property key="lastid" value=""/>
         <property key="memories.bootflash" value="true"/>
         <property key="memories.configurationmemory" value="true"/>
         <property key="memories.eeprom" value="true"/>
@@ -1178,10 +1277,6 @@
         <property key="programoptions.preserveprogramrange.end" value="0x23ffff"/>
         <property key="programoptions.preserveprogramrange.start" value="0x200000"/>
         <property key="programoptions.resetafterprogram" value="true"/>
-        <property key="script.has_reset" value="true"/>
-        <property key="script.log_level" value="1"/>
-        <property key="script.reset_delay" value="0"/>
-        <property key="script.show_output" value="false"/>
       </samice>
     </conf>
   </confs>
