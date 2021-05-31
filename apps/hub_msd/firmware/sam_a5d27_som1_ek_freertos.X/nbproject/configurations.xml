@@ -473,7 +473,7 @@
         <targetDevice>ATSAMA5D27CD1G</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>jlink</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>3.00</languageToolchainVersion>
         <platform>3</platform>
@@ -1232,7 +1232,6 @@
         <property key="communication.autoselectspeed" value="true"/>
         <property key="communication.interface" value="swd"/>
         <property key="communication.speed" value="4"/>
-        <property key="lastid" value=""/>
         <property key="memories.bootflash" value="true"/>
         <property key="memories.configurationmemory" value="true"/>
         <property key="memories.eeprom" value="true"/>
@@ -1251,8 +1250,6 @@
         <property key="programoptions.preserveprogramrange.end" value="0x23ffff"/>
         <property key="programoptions.preserveprogramrange.start" value="0x200000"/>
         <property key="programoptions.resetafterprogram" value="true"/>
-        <property key="script.log_level" value="0"/>
-        <property key="script.show_output" value="false"/>
       </jlink>
       <samice>
         <property key="AutoSelectMemRanges" value="auto"/>
