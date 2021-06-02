@@ -76,13 +76,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 5F15DEA8329424F376B881CF2D74F3CC
-- generatedChecksum: 1A709ADD0D1B637D4B52C5C113E0006C
+- generatedChecksum: 2AFB72B5B43970D5C84E3B0DA713F935
   logicalPath: config/pic32mz_ef_curiosity_2_0/peripheral/gpio
   name: plib_gpio.c
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 1A709ADD0D1B637D4B52C5C113E0006C
+  userChecksum: 2AFB72B5B43970D5C84E3B0DA713F935
 - generatedChecksum: C95CE0ABB86E6B11CF77E8891D294510
   logicalPath: config/pic32mz_ef_curiosity_2_0/system/int
   name: sys_int.c
@@ -153,20 +153,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 9AF4C889DEA013F3887636FBE2D3492A
-- generatedChecksum: 1BC9A0F868A6E125830DD8F6292B40B6
+- generatedChecksum: E25403BCA8C20DBE6F91700DCC6E88AE
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 1BC9A0F868A6E125830DD8F6292B40B6
-- generatedChecksum: D380E68B19FD5D69F6BD7AA560F5ACAC
+  userChecksum: E25403BCA8C20DBE6F91700DCC6E88AE
+- generatedChecksum: C6ED171BE56DCC89446394C319923A32
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: D380E68B19FD5D69F6BD7AA560F5ACAC
+  userChecksum: C6ED171BE56DCC89446394C319923A32
 - generatedChecksum: E189C26B2269F8DE46033CCD0621958D
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: device.h
@@ -615,13 +615,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: A0803FFCE7DA932883C0B89AD48FA04C
-- generatedChecksum: 4B3C3EF8A318908A22B78500515C3288
+- generatedChecksum: null
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: user.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4B3C3EF8A318908A22B78500515C3288
+  userChecksum: null
 - generatedChecksum: 07A482DAB7473FC475EA656561967B15
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: p32MZ2048EFM144.ld
