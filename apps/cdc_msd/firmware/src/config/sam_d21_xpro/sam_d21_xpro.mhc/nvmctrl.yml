@@ -9,6 +9,8 @@ children:
     children:
     - type: Values
       children:
+      - type: Dynamic
+        attributes: {id: nvmctrl, value: '1'}
       - type: User
         attributes: {value: '6'}
 - type: ElementPosition

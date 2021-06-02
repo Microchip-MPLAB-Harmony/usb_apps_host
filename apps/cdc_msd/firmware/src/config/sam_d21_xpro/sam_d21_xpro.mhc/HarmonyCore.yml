@@ -53,6 +53,24 @@ children:
         attributes: {id: enabled}
         children:
         - {type: Value, value: 'true'}
+  - type: File
+    attributes: {id: DRIVER_COMMON}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'true'}
+  - type: File
+    attributes: {id: DRIVER_ROOT}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'true'}
   - type: Boolean
     attributes: {id: ENABLE_APP_FILE}
     children:
@@ -219,6 +237,15 @@ children:
         attributes: {id: HarmonyCore, value: BareMetal}
   - type: File
     attributes: {id: SYSTEM_COMMON}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'true'}
+  - type: File
+    attributes: {id: SYSTEM_MEDIA}
     children:
     - type: Attributes
       children:
