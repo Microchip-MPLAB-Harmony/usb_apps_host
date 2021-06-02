@@ -13,13 +13,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: C90CEFB8543244CA652CCA7DFE3D9E9B
-- generatedChecksum: 08652B594EF55154284FC067A703DF57
+- generatedChecksum: A3E17273BDAD8A51FDF695EBF9AD9A77
   logicalPath: config/pic32mz_ef_curiosity_2_0/system/fs/fat_fs/hardware_access
   name: diskio.c
   physicalPath: system/fs/fat_fs/hardware_access
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 08652B594EF55154284FC067A703DF57
+  userChecksum: A3E17273BDAD8A51FDF695EBF9AD9A77
 - generatedChecksum: 8048089AA9DA0663AE185F78DF90D645
   logicalPath: config/pic32mz_ef_curiosity_2_0/driver/usb/usbhs/src
   name: drv_usbhs.c
@@ -118,13 +118,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 5F15DEA8329424F376B881CF2D74F3CC
-- generatedChecksum: 1A709ADD0D1B637D4B52C5C113E0006C
+- generatedChecksum: 2AFB72B5B43970D5C84E3B0DA713F935
   logicalPath: config/pic32mz_ef_curiosity_2_0/peripheral/gpio
   name: plib_gpio.c
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 1A709ADD0D1B637D4B52C5C113E0006C
+  userChecksum: 2AFB72B5B43970D5C84E3B0DA713F935
 - generatedChecksum: 47204A328D6218B0241B5993D3198668
   logicalPath: config/pic32mz_ef_curiosity_2_0/system/cache
   name: sys_cache.c
@@ -132,13 +132,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 47204A328D6218B0241B5993D3198668
-- generatedChecksum: 432E708340323F424D24280C077ECE6A
+- generatedChecksum: 080787C129FAB1FAECC1C54746696717
   logicalPath: config/pic32mz_ef_curiosity_2_0/system/fs
   name: sys_fs.c
   physicalPath: system/fs/src
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 432E708340323F424D24280C077ECE6A
+  userChecksum: 080787C129FAB1FAECC1C54746696717
 - generatedChecksum: 960D10B91B76FD2F25499454166A3C9A
   logicalPath: config/pic32mz_ef_curiosity_2_0/system/fs
   name: sys_fs_fat_interface.c
@@ -146,13 +146,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 960D10B91B76FD2F25499454166A3C9A
-- generatedChecksum: 72D106D7DAF840E749D01976A0F2E7CA
+- generatedChecksum: 8A001811B92463BDE7B3A13B4A9E4BCE
   logicalPath: config/pic32mz_ef_curiosity_2_0/system/fs
   name: sys_fs_media_manager.c
   physicalPath: system/fs/src
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 72D106D7DAF840E749D01976A0F2E7CA
+  userChecksum: 8A001811B92463BDE7B3A13B4A9E4BCE
 - generatedChecksum: C95CE0ABB86E6B11CF77E8891D294510
   logicalPath: config/pic32mz_ef_curiosity_2_0/system/int
   name: sys_int.c
@@ -237,20 +237,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 9AF4C889DEA013F3887636FBE2D3492A
-- generatedChecksum: 4A4A08315BB0052386B14072D30C474F
+- generatedChecksum: EA28A231290D1B7DF478C98AAFFC379F
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4A4A08315BB0052386B14072D30C474F
-- generatedChecksum: DA52D0798F1ADA824A572FA9F2D1F70A
+  userChecksum: EA28A231290D1B7DF478C98AAFFC379F
+- generatedChecksum: 5C2600EE973622850A365D64DEC0F539
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: DA52D0798F1ADA824A572FA9F2D1F70A
+  userChecksum: 5C2600EE973622850A365D64DEC0F539
 - generatedChecksum: E189C26B2269F8DE46033CCD0621958D
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: device.h
@@ -832,13 +832,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: A0803FFCE7DA932883C0B89AD48FA04C
-- generatedChecksum: 4B3C3EF8A318908A22B78500515C3288
+- generatedChecksum: null
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: user.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4B3C3EF8A318908A22B78500515C3288
+  userChecksum: null
 - generatedChecksum: 07A482DAB7473FC475EA656561967B15
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: p32MZ2048EFM144.ld
