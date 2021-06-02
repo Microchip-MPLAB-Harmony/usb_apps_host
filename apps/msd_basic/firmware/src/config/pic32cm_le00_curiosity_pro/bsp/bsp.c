@@ -77,7 +77,8 @@ void BSP_Initialize(void )
     VBUS_AH_PowerDisable(); 
 
     /* Switch off LEDs */
-    LED_Off();
+    LED0_Off();
+    LED1_Off();
 
 
 }

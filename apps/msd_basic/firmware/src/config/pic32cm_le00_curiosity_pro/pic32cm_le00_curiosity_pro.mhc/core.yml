@@ -635,6 +635,13 @@ children:
       - type: Dynamic
         attributes: {id: core, value: '0x6'}
   - type: String
+    attributes: {id: PORT_GROUP_2_PINCFG28}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0x6'}
+  - type: String
     attributes: {id: PORT_GROUP_2_PMUX10}
     children:
     - type: Values
@@ -668,7 +675,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0xbb80'}
+        attributes: {id: core, value: '0xBB80'}
   - type: Float
     attributes: {id: SYSTICK_PERIOD_MS}
     children:
