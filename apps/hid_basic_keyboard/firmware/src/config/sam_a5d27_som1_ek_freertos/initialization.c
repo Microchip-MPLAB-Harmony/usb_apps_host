@@ -74,7 +74,7 @@ const DRV_USART_PLIB_INTERFACE drvUsart0PlibAPI = {
     .read = (DRV_USART_PLIB_READ)UART1_Read,
     .readIsBusy = (DRV_USART_PLIB_READ_IS_BUSY)UART1_ReadIsBusy,
     .readCountGet = (DRV_USART_PLIB_READ_COUNT_GET)UART1_ReadCountGet,
-	.readAbort = (DRV_USART_PLIB_READ_ABORT)UART1_ReadAbort,
+    .readAbort = (DRV_USART_PLIB_READ_ABORT)UART1_ReadAbort,
     .writeCallbackRegister = (DRV_USART_PLIB_WRITE_CALLBACK_REG)UART1_WriteCallbackRegister,
     .write = (DRV_USART_PLIB_WRITE)UART1_Write,
     .writeIsBusy = (DRV_USART_PLIB_WRITE_IS_BUSY)UART1_WriteIsBusy,
@@ -126,6 +126,8 @@ const DRV_USART_INIT drvUsart0InitData =
     .remapStopBits = drvUsart0remapStopBits,
 
     .remapError = drvUsart0remapError,
+
+    .dataWidth = DRV_USART_DATA_8_BIT,
 };
 
 // </editor-fold>
@@ -255,6 +257,7 @@ const SYS_TIME_INIT sysTimeInitData =
 
 void SYS_Initialize ( void* data )
 {
+
   
     CLK_Initialize();
 	PIO_Initialize();
@@ -266,7 +269,7 @@ void SYS_Initialize ( void* data )
     MMU_Initialize();
     Matrix_Initialize();
 
-    INT_Initialize();
+    AIC_INT_Initialize();
     
 	WDT_REGS->WDT_MR = WDT_MR_WDDIS_Msk; 		// Disable WDT 
 
