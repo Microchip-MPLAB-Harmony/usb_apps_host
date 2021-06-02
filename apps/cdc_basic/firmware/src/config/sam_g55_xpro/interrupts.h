@@ -1,24 +1,20 @@
 /*******************************************************************************
-  FLEXCOM7 USART PLIB
+ System Interrupts File
 
-  Company
+  Company:
     Microchip Technology Inc.
 
-  File Name
-    plib_flexcom7_usart.h
+  File Name:
+    interrupt.h
 
-  Summary
-    FLEXCOM7 USART peripheral library interface.
+  Summary:
+    Interrupt vectors mapping
 
-  Description
-    This file defines the interface to the FLEXCOM7 USART peripheral library. This
-    library provides access to and control of the associated peripheral
-    instance.
+  Description:
+    This file contains declarations of device vectors used by Harmony 3
+ *******************************************************************************/
 
-  Remarks:
-    None.
-*******************************************************************************/
-
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
@@ -40,65 +36,32 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
+ *******************************************************************************/
+// DOM-IGNORE-END
 
-#ifndef PLIB_FLEXCOM7_USART_H // Guards against multiple inclusion
-#define PLIB_FLEXCOM7_USART_H
+#ifndef INTERRUPTS_H
+#define INTERRUPTS_H
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
+#include <stdint.h>
 
-#include "device.h"
-#include "plib_flexcom_usart_local.h"
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus // Provide C++ Compatibility
-
-	extern "C" {
-
-#endif
-// DOM-IGNORE-END
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Interface Routines
+// Section: Handler Routines
 // *****************************************************************************
 // *****************************************************************************
 
-#define FLEXCOM7_USART_FrequencyGet()    (uint32_t)(119996416UL)
-
-/****************************** FLEXCOM7 USART API *********************************/
-
-void FLEXCOM7_USART_Initialize( void );
-
-FLEXCOM_USART_ERROR FLEXCOM7_USART_ErrorGet( void );
-
-bool FLEXCOM7_USART_SerialSetup( FLEXCOM_USART_SERIAL_SETUP *setup, uint32_t srcClkFreq );
-
-bool FLEXCOM7_USART_Write( void *buffer, const size_t size );
-
-bool FLEXCOM7_USART_Read( void *buffer, const size_t size );
-
-uint8_t FLEXCOM7_USART_ReadByte( void );
-
-void FLEXCOM7_USART_WriteByte( uint8_t data );
-
-bool FLEXCOM7_USART_TransmitComplete( void );
-
-bool FLEXCOM7_USART_TransmitterIsReady( void );
-
-bool FLEXCOM7_USART_ReceiverIsReady( void );
+void Reset_Handler (void);
+void NonMaskableInt_Handler (void);
+void HardFault_Handler (void);
+void TC0_CH0_InterruptHandler (void);
+void UHP_Handler (void);
 
 
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
 
-    }
-
-#endif
-// DOM-IGNORE-END
-
-#endif //PLIB_FLEXCOM7_USART_H
+#endif // INTERRUPTS_H
