@@ -99,7 +99,7 @@ extern "C" {
 #define SYS_FS_STACK_SIZE                 1024
 #define SYS_FS_PRIORITY                   1
 
-#define SYS_FS_FAT_VERSION                "v0.14"
+#define SYS_FS_FAT_VERSION                "v0.14a"
 #define SYS_FS_FAT_READONLY               false
 #define SYS_FS_FAT_CODE_PAGE              437
 #define SYS_FS_FAT_MAX_SS                 SYS_FS_MEDIA_MAX_BLOCK_SIZE
