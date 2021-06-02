@@ -40,6 +40,7 @@
 
 #include "plib_clock.h"
 #include "device.h"
+#include "interrupts.h"
 
 static void SYSCTRL_Initialize(void)
 {
@@ -47,7 +48,6 @@ static void SYSCTRL_Initialize(void)
 
     /* Configure 32K External Oscillator */
     SYSCTRL_REGS->SYSCTRL_XOSC32K = SYSCTRL_XOSC32K_STARTUP(0) | SYSCTRL_XOSC32K_ENABLE_Msk | SYSCTRL_XOSC32K_EN32K_Msk | SYSCTRL_XOSC32K_XTALEN_Msk;
-
     while(!((SYSCTRL_REGS->SYSCTRL_PCLKSR & SYSCTRL_PCLKSR_XOSC32KRDY_Msk) == SYSCTRL_PCLKSR_XOSC32KRDY_Msk))
     {
         /* Waiting for the XOSC32K Ready state */
@@ -75,8 +75,16 @@ static void DFLL_Initialize(void)
     SYSCTRL_REGS->SYSCTRL_DFLLVAL = SYSCTRL_DFLLVAL_COARSE(calibCoarse) | SYSCTRL_DFLLVAL_FINE(calibFine);
 
     GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_GEN(0x1)  | GCLK_CLKCTRL_CLKEN_Msk | GCLK_CLKCTRL_ID(0);
+    while((SYSCTRL_REGS->SYSCTRL_PCLKSR & SYSCTRL_PCLKSR_DFLLRDY_Msk) != SYSCTRL_PCLKSR_DFLLRDY_Msk)
+    {
+        /* Waiting for the Ready state */
+    }
     SYSCTRL_REGS->SYSCTRL_DFLLMUL = SYSCTRL_DFLLMUL_MUL(1465) | SYSCTRL_DFLLMUL_FSTEP(1) | SYSCTRL_DFLLMUL_CSTEP(1);
 
+    while((SYSCTRL_REGS->SYSCTRL_PCLKSR & SYSCTRL_PCLKSR_DFLLRDY_Msk) != SYSCTRL_PCLKSR_DFLLRDY_Msk)
+    {
+        /* Waiting for the Ready state */
+    }
 
     /* Configure DFLL    */
     SYSCTRL_REGS->SYSCTRL_DFLLCTRL = SYSCTRL_DFLLCTRL_ENABLE_Msk | SYSCTRL_DFLLCTRL_MODE_Msk | SYSCTRL_DFLLCTRL_WAITLOCK_Msk ;
@@ -90,7 +98,7 @@ static void DFLL_Initialize(void)
 
 static void GCLK0_Initialize(void)
 {
-    
+
     GCLK_REGS->GCLK_GENCTRL = GCLK_GENCTRL_SRC(7) | GCLK_GENCTRL_GENEN_Msk | GCLK_GENCTRL_ID(0);
 
     while((GCLK_REGS->GCLK_STATUS & GCLK_STATUS_SYNCBUSY_Msk) == GCLK_STATUS_SYNCBUSY_Msk)
@@ -126,7 +134,7 @@ void CLOCK_Initialize (void)
     GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(23) | GCLK_CLKCTRL_GEN(0x0)  | GCLK_CLKCTRL_CLKEN_Msk;
     /* Selection of the Generator and write Lock for TC3 TCC2 */
     GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(27) | GCLK_CLKCTRL_GEN(0x0)  | GCLK_CLKCTRL_CLKEN_Msk;
-    
+
     /* Configure the APBC Bridge Clocks */
     PM_REGS->PM_APBCMASK = 0x10820;
 

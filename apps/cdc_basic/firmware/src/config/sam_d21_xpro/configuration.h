@@ -159,7 +159,7 @@ extern "C" {
 #define DRV_USBFSV1_HOST_RESET_DURATION                     100
 
 /* Alignment for buffers that are submitted to USB Driver*/ 
-#define USB_ALIGN  CACHE_ALIGN
+#define USB_ALIGN  __ALIGNED(CACHE_LINE_SIZE)
 
 
 
