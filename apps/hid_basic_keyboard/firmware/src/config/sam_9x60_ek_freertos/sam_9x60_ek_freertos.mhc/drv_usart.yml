@@ -72,6 +72,15 @@ children:
           children:
           - type: Dynamic
             attributes: {id: drv_usart_0, value: DBGU}
+      - type: Integer
+        attributes: {id: DRV_USART_QUEUE_SIZE}
+        children:
+        - type: Attributes
+          children:
+          - type: Boolean
+            attributes: {id: visible}
+            children:
+            - {type: Value, value: 'true'}
       - type: Boolean
         attributes: {id: DRV_USART_RX_DMA}
         children:

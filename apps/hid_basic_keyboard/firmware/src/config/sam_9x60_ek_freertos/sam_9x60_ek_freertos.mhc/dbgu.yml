@@ -19,14 +19,35 @@ children:
       - type: Dynamic
         attributes: {id: dbgu, value: '200000000'}
   - type: Boolean
+    attributes: {id: DBGU_INTERRUPT_MODE_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: dbgu, value: 'true'}
+  - type: KeyValueSet
+    attributes: {id: DBGU_OPERATING_MODE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: dbgu, value: '1'}
+  - type: Boolean
     attributes: {id: DBGU_RING_BUFFER_ENABLE}
     children:
     - type: Attributes
       children:
-      - type: Boolean
-        attributes: {id: readOnly}
+      - type: String
+        attributes: {id: label}
         children:
-        - {type: Value, value: 'true'}
+        - {type: Value, value: '---'}
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: dbgu, value: 'false'}
+  - type: Boolean
+    attributes: {id: DBGU_RING_BUFFER_MODE_ENABLE}
+    children:
     - type: Values
       children:
       - type: Dynamic
@@ -36,10 +57,10 @@ children:
     children:
     - type: Attributes
       children:
-      - type: Boolean
-        attributes: {id: readOnly}
+      - type: String
+        attributes: {id: label}
         children:
-        - {type: Value, value: 'true'}
+        - {type: Value, value: '---'}
     - type: Values
       children:
       - type: Dynamic
