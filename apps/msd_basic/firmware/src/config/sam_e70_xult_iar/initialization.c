@@ -219,6 +219,7 @@ const SYS_TIME_INIT sysTimeInitData =
 void SYS_Initialize ( void* data )
 {
 
+
     EFC_Initialize();
   
     CLOCK_Initialize();

@@ -1,14 +1,17 @@
- /*******************************************************************************
-  USB Host Initialization File
+/*******************************************************************************
+ System Interrupts File
+
+  Company:
+    Microchip Technology Inc.
 
   File Name:
-    usb_host_init_data.c
+    interrupt.h
 
   Summary:
-    This file contains source code necessary to initialize USB Host Stack.
+    Interrupt vectors mapping
 
   Description:
-    This file contains source code necessary to initialize USB Host Stack.
+    This file contains declarations of device vectors used by Harmony 3
  *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
@@ -35,31 +38,30 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
  *******************************************************************************/
 // DOM-IGNORE-END
-#include "configuration.h"
-#include "definitions.h" 
+
+#ifndef INTERRUPTS_H
+#define INTERRUPTS_H
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Included Files
+// *****************************************************************************
+// *****************************************************************************
+#include <stdint.h>
 
 
-const USB_HOST_TPL_ENTRY USBTPList[1] = 
-{
-	TPL_INTERFACE_CLASS_SUBCLASS_PROTOCOL(0x08, 0x06, 0x50, NULL,  USB_HOST_MSD_INTERFACE) ,
+// *****************************************************************************
+// *****************************************************************************
+// Section: Handler Routines
+// *****************************************************************************
+// *****************************************************************************
+
+void Reset_Handler (void);
+void NonMaskableInt_Handler (void);
+void HardFault_Handler (void);
+void TC0_CH0_InterruptHandler (void);
+void DRV_USBHSV1_USBHS_Handler (void);
 
 
-};
 
-const USB_HOST_HCD hcdTable = 
-{
-    /* Index of the USB Driver used by the Host Layer */
-    .drvIndex = DRV_USBHSV1_INDEX_0,
-
-    /* Pointer to the USB Driver Functions. */
-    .hcdInterface = DRV_USBHSV1_HOST_INTERFACE,
-
-};
-
-const USB_HOST_INIT usbHostInitData = 
-{
-    .nTPLEntries = 1 ,
-    .tplList = (USB_HOST_TPL_ENTRY *)USBTPList,
-    .hostControllerDrivers = (USB_HOST_HCD *)&hcdTable    
-};
-// </editor-fold>
+#endif // INTERRUPTS_H
