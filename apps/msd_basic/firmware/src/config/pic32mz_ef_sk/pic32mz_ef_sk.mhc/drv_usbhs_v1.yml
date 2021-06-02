@@ -36,6 +36,24 @@ children:
       children:
       - type: Dynamic
         attributes: {id: drv_usbhs_v1, value: 'true'}
+  - type: Integer
+    attributes: {id: USB_DRV_HOST_ATTACH_DEBOUNCE_DURATION}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: Integer
+    attributes: {id: USB_DRV_HOST_RESET_DUARTION}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
   - type: Boolean
     attributes: {id: USB_HOST_VBUS_ENABLE}
     children:
