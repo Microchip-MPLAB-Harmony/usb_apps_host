@@ -12,7 +12,7 @@ children:
       - type: Boolean
         attributes: {id: visible}
         children:
-        - {type: Value, value: 'true'}
+        - {type: Value, value: 'false'}
   - type: String
     attributes: {id: SYS_TIME_PLIB}
     children:
@@ -26,7 +26,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: sys_time, value: tc0}
+        attributes: {id: sys_time, value: ''}
   - type: Boolean
     attributes: {id: SYS_TIME_USE_SYSTICK}
     children:
