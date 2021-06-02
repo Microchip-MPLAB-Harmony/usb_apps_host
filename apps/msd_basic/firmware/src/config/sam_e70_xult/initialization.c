@@ -243,6 +243,7 @@ static void STDIO_BufferModeSet(void)
 void SYS_Initialize ( void* data )
 {
 
+
     EFC_Initialize();
     STDIO_BufferModeSet();
 
