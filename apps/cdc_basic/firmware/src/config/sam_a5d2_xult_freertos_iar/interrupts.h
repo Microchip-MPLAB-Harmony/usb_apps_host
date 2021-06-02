@@ -1,22 +1,22 @@
 /*******************************************************************************
-  USB Driver EHCI Data Structures
+ System Interrupts File
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    drv_usb_uhp_ehci_host.h
+    interrupt.h
 
   Summary:
-    USB driver EHCI declarations and definitions
+    Interrupt vectors mapping
 
   Description:
-    This file contains the USB driver's EHCI declarations and definitions.
-*******************************************************************************/
+    This file contains declarations of device vectors used by Harmony 3
+ *******************************************************************************/
 
-//DOM-IGNORE-BEGIN
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -36,46 +36,26 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
-//DOM-IGNORE-END
+ *******************************************************************************/
+// DOM-IGNORE-END
 
-#ifndef _DRV_USB_UHP_EHCI_H
-#define _DRV_USB_UHP_EHCI_H
-
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: File includes
-// *****************************************************************************
-// *****************************************************************************
-
-#ifndef UHP_EHCI_RAM_ADDR
-#define UHP_EHCI_RAM_ADDR                            0xA0100000u
-#endif
+#ifndef INTERRUPTS_H
+#define INTERRUPTS_H
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Data Type Definitions
+// Section: Included Files
+// *****************************************************************************
+// *****************************************************************************
+#include <stdint.h>
+
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Handler Routines
 // *****************************************************************************
 // *****************************************************************************
 
-extern void DRV_USB_UHP_EHCI_HOST_ResetEnable(DRV_USB_UHP_OBJ *hDriver);
-extern void DRV_USB_UHP_EHCI_HOST_ReceivedSize( uint32_t * BuffSize );
-extern void DRV_USB_UHP_EHCI_HOST_Init(DRV_USB_UHP_OBJ *drvObj);
-extern void DRV_USB_UHP_EHCI_HOST_DisableAsynchronousList(DRV_USB_UHP_OBJ *hDriver);
-extern void DRV_USB_UHP_EHCI_HOST_Tasks_ISR(DRV_USB_UHP_OBJ *hDriver);
-extern DRV_USB_UHP_HOST_PIPE_HANDLE DRV_USB_UHP_EHCI_PipeSetup
-(
-    DRV_HANDLE        client,
-    uint8_t           deviceAddress,
-    USB_ENDPOINT      endpointAndDirection,
-    uint8_t           hubAddress,
-    uint8_t           hubPort,
-    USB_TRANSFER_TYPE pipeType,
-    uint8_t           bInterval,
-    uint16_t          wMaxPacketSize,
-    USB_SPEED         speed
-);
-extern void DRV_USB_UHP_EHCI_PipeClose(DRV_USB_UHP_HOST_PIPE_HANDLE pipeHandle);
 
-#endif  // _DRV_USB_UHP_EHCI_H
+
+#endif // INTERRUPTS_H
