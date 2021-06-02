@@ -74,7 +74,7 @@ const DRV_USART_PLIB_INTERFACE drvUsart0PlibAPI = {
     .read = (DRV_USART_PLIB_READ)UART0_Read,
     .readIsBusy = (DRV_USART_PLIB_READ_IS_BUSY)UART0_ReadIsBusy,
     .readCountGet = (DRV_USART_PLIB_READ_COUNT_GET)UART0_ReadCountGet,
-	.readAbort = (DRV_USART_PLIB_READ_ABORT)UART0_ReadAbort,
+    .readAbort = (DRV_USART_PLIB_READ_ABORT)UART0_ReadAbort,
     .writeCallbackRegister = (DRV_USART_PLIB_WRITE_CALLBACK_REG)UART0_WriteCallbackRegister,
     .write = (DRV_USART_PLIB_WRITE)UART0_Write,
     .writeIsBusy = (DRV_USART_PLIB_WRITE_IS_BUSY)UART0_WriteIsBusy,
@@ -257,7 +257,7 @@ const SYS_TIME_INIT sysTimeInitData =
 
 void SYS_Initialize ( void* data )
 {
-  
+
   
     CLK_Initialize();
 	PIO_Initialize();
