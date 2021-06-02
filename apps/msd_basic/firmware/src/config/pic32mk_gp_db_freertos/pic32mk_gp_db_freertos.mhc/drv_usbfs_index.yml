@@ -32,6 +32,15 @@ children:
           children:
           - type: Dynamic
             attributes: {id: drv_usbfs_index_0, value: PERIPHERAL_USB_1}
+      - type: File
+        attributes: {id: USB_HOST_CONTROLLER_ENTRY_FILE}
+        children:
+        - type: Attributes
+          children:
+          - type: Boolean
+            attributes: {id: enabled}
+            children:
+            - {type: Value, value: 'true'}
       - type: Combo
         attributes: {id: USB_OPERATION_MODE}
         children:
