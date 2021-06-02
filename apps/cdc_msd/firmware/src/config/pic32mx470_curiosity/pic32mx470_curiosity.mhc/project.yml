@@ -216,13 +216,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 860755DC9BB8B097337AC03EF41FD946
-- generatedChecksum: 4D541B55AD3E649C13F7ECC788DB6825
+- generatedChecksum: 7D431229539D6C9A14BF464C4EC6054A
   logicalPath: config/pic32mx470_curiosity
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4D541B55AD3E649C13F7ECC788DB6825
+  userChecksum: 7D431229539D6C9A14BF464C4EC6054A
 - generatedChecksum: E189C26B2269F8DE46033CCD0621958D
   logicalPath: config/pic32mx470_curiosity
   name: device.h
