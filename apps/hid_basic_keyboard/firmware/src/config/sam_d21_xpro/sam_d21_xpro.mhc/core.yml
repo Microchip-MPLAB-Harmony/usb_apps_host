@@ -102,7 +102,7 @@ children:
       - type: Dynamic
         attributes: {id: core, value: '0'}
   - type: KeyValueSet
-    attributes: {id: DEVICE_SECURITY}
+    attributes: {id: DEVICE_SECURITY_CMD}
     children:
     - type: Values
       children:
@@ -170,14 +170,14 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: drv_usart_0, value: 'false'}
+        attributes: {id: core, value: 'false'}
   - type: Boolean
     attributes: {id: DMA_CH_NEEDED_FOR_SERCOM3_Transmit}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: drv_usart_0, value: 'false'}
+        attributes: {id: core, value: 'false'}
   - type: Integer
     attributes: {id: DPLL_CLOCK_FREQ}
     children:
@@ -1095,7 +1095,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0xbb85'}
+        attributes: {id: core, value: '0xBB85'}
   - type: Float
     attributes: {id: SYSTICK_PERIOD_MS}
     children:

@@ -160,7 +160,7 @@ extern "C" {
 #define DRV_USBFSV1_HOST_RESET_DURATION                     100
 
 /* Alignment for buffers that are submitted to USB Driver*/ 
-#define USB_ALIGN  CACHE_ALIGN
+#define USB_ALIGN  __ALIGNED(CACHE_LINE_SIZE)
 
 /* Number of HID Client driver instances in the application */
 #define USB_HOST_HID_INSTANCES_NUMBER        1
