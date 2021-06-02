@@ -48,9 +48,9 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include "peripheral/coretimer/plib_coretimer.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_host.h"
-#include "peripheral/coretimer/plib_coretimer.h"
 #include "bsp/bsp.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gpio/plib_gpio.h"
