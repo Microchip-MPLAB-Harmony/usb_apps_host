@@ -169,14 +169,6 @@ SECTIONS
 		. = ALIGN(32);
 	} >ram
 
-	/*.heap (NOLOAD) :
-	{
-		. = ALIGN(4);
-		__heap_start__ = .;
-		. += HEAP_SIZE;
-		__heap_end__ = .;
-	} >ram*/
-
 	.stacks (NOLOAD) :
 	{
 		. += IRQ_STACK_SIZE;
