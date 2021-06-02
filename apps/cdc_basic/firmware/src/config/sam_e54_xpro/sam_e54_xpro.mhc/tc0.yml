@@ -53,6 +53,12 @@ children:
   - type: Boolean
     attributes: {id: TC_TIMER_INTENSET_MC1}
     children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
     - type: Values
       children:
       - type: Dynamic
@@ -67,10 +73,16 @@ children:
   - type: Long
     attributes: {id: TC_TIMER_PERIOD}
     children:
+    - type: Attributes
+      children:
+      - type: Long
+        attributes: {id: max}
+        children:
+        - {type: Value, value: '65535'}
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: tc0, value: '65534'}
+        attributes: {id: tc0, value: '65536'}
   - type: Float
     attributes: {id: TC_TIMER_TIME_MS}
     children:
@@ -79,7 +91,11 @@ children:
       - type: Float
         attributes: {id: max}
         children:
-        - {type: Value, value: '0.546125'}
+        - {type: Value, value: '0.54613334'}
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
 - type: Attachments
   children:
   - type: DirectCapability
