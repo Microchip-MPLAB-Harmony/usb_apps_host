@@ -1,22 +1,22 @@
 /*******************************************************************************
-  DBGU PLIB
+ System Interrupts File
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_dbgu.h
+    interrupt.h
 
   Summary:
-    DBGU PLIB Header File
+    Interrupt vectors mapping
 
   Description:
-    None
+    This file contains declarations of device vectors used by Harmony 3
+ *******************************************************************************/
 
-*******************************************************************************/
-
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -36,53 +36,26 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
-
-#ifndef PLIB_DBGU_H
-#define PLIB_DBGU_H
-
-#include "plib_dbgu_common.h"
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-    extern "C" {
-
-#endif
+ *******************************************************************************/
 // DOM-IGNORE-END
 
+#ifndef INTERRUPTS_H
+#define INTERRUPTS_H
+
 // *****************************************************************************
 // *****************************************************************************
-// Section: Interface
+// Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-#define DBGU_FrequencyGet()    (uint32_t)(200000000UL)
+#include <stdint.h>
 
-/****************************** DBGU API *********************************/
 
-void DBGU_Initialize(void);
+// *****************************************************************************
+// *****************************************************************************
+// Section: Handler Routines
+// *****************************************************************************
+// *****************************************************************************
 
-DBGU_ERROR DBGU_ErrorGet(void);
 
-bool DBGU_SerialSetup(DBGU_SERIAL_SETUP *setup, uint32_t srcClkFreq);
 
-bool DBGU_Write(void *buffer, const size_t size);
-
-bool DBGU_Read(void *buffer, const size_t size);
-
-uint8_t DBGU_ReadByte(void);
-
-void DBGU_WriteByte(uint8_t data);
-
-bool DBGU_TransmitterIsReady(void);
-
-bool DBGU_ReceiverIsReady(void);
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-    }
-
-#endif
-// DOM-IGNORE-END
-#endif // PLIB_DBGU_H
+#endif // INTERRUPTS_H
