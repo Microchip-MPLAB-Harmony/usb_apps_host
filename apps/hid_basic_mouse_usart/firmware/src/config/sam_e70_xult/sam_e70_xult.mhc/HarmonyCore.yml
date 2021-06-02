@@ -255,6 +255,15 @@ children:
         children:
         - {type: Value, value: 'true'}
   - type: File
+    attributes: {id: OSAL_IMPL_BASIC_H}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'true'}
+  - type: File
     attributes: {id: OSAL_SYSDEF_H}
     children:
     - type: Attributes

@@ -140,14 +140,14 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: drv_usart_0, value: 'false'}
+        attributes: {id: core, value: 'false'}
   - type: Boolean
     attributes: {id: DMA_CH_NEEDED_FOR_USART1_Transmit}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: drv_usart_0, value: 'false'}
+        attributes: {id: core, value: 'false'}
   - type: Integer
     attributes: {id: GMAC_CLOCK_FREQUENCY}
     children:
@@ -933,7 +933,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0x493e0'}
+        attributes: {id: core, value: '0x493E0'}
   - type: Integer
     attributes: {id: SYSTICK_PERIOD_US}
     children:
