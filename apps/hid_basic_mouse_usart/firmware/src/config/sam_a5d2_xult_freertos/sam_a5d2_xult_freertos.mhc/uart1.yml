@@ -19,7 +19,14 @@ children:
       - type: Dynamic
         attributes: {id: uart1, value: '83000000'}
   - type: Boolean
-    attributes: {id: UART_RING_BUFFER_ENABLE}
+    attributes: {id: UART_INTERRUPT_MODE_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: uart1, value: 'true'}
+  - type: KeyValueSet
+    attributes: {id: UART_OPERATING_MODE}
     children:
     - type: Attributes
       children:
@@ -30,16 +37,30 @@ children:
     - type: Values
       children:
       - type: Dynamic
+        attributes: {id: uart1, value: '1'}
+  - type: Boolean
+    attributes: {id: UART_RING_BUFFER_ENABLE}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: label}
+        children:
+        - {type: Value, value: '---'}
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: uart1, value: 'false'}
+  - type: Boolean
+    attributes: {id: UART_RING_BUFFER_MODE_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
         attributes: {id: uart1, value: 'false'}
   - type: Boolean
     attributes: {id: USART_INTERRUPT_MODE}
     children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: readOnly}
-        children:
-        - {type: Value, value: 'true'}
     - type: Values
       children:
       - type: Dynamic
