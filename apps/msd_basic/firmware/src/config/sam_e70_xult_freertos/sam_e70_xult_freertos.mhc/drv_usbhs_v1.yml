@@ -4,6 +4,24 @@ attributes: {id: drv_usbhs_v1}
 children:
 - type: Symbols
   children:
+  - type: File
+    attributes: {id: DRV_USB_SOURCE_FILE_DEVICE}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'false'}
+  - type: File
+    attributes: {id: DRV_USB_SOURCE_FILE_HOST}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'true'}
   - type: Boolean
     attributes: {id: ENABLE_DRV_USB_DEVICE_SOURCE}
     children:
@@ -48,6 +66,12 @@ children:
   - type: Boolean
     attributes: {id: USB_HOST_VBUS_ENABLE}
     children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
     - type: Values
       children:
       - type: User
