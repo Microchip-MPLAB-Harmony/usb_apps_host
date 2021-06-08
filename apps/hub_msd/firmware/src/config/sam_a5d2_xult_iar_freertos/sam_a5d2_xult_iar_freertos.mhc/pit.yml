@@ -77,4 +77,4 @@ children:
       - type: Dynamic
         attributes: {id: pit, value: 'PIT_TimerStop '}
 - type: ElementPosition
-  attributes: {x: '8', y: '253', id: pit}
+  attributes: {x: '140', y: '114', id: pit}

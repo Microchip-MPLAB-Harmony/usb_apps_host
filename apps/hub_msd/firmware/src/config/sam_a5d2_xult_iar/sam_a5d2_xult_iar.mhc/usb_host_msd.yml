@@ -27,4 +27,4 @@ children:
         children:
         - {type: Value, value: sys_fs_DRV_MEDIA_dependency}
 - type: ElementPosition
-  attributes: {x: '305', y: '165', id: usb_host_msd}
+  attributes: {x: '304', y: '212', id: usb_host_msd}

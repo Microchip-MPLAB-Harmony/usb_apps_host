@@ -79,15 +79,6 @@ extern "C" {
 // Section: System Service Configuration
 // *****************************************************************************
 // *****************************************************************************
-/* TIME System Service Configuration Options */
-#define SYS_TIME_INDEX_0                            (0)
-#define SYS_TIME_MAX_TIMERS                         (5)
-#define SYS_TIME_HW_COUNTER_WIDTH                   (32)
-#define SYS_TIME_HW_COUNTER_PERIOD                  (4294967295U)
-#define SYS_TIME_HW_COUNTER_HALF_PERIOD             (SYS_TIME_HW_COUNTER_PERIOD>>1)
-#define SYS_TIME_CPU_CLOCK_FREQUENCY                (498000000)
-#define SYS_TIME_COMPARE_UPDATE_EXECUTION_CYCLES    (2200)
-
 
 /* File System Service Configuration */
 
@@ -126,6 +117,15 @@ extern "C" {
 #define SYS_FS_MEDIA_IDX1_DEVICE_NAME_VOLUME_IDX0			"/dev/sdb1"
 								
 
+/* TIME System Service Configuration Options */
+#define SYS_TIME_INDEX_0                            (0)
+#define SYS_TIME_MAX_TIMERS                         (5)
+#define SYS_TIME_HW_COUNTER_WIDTH                   (32)
+#define SYS_TIME_HW_COUNTER_PERIOD                  (4294967295U)
+#define SYS_TIME_HW_COUNTER_HALF_PERIOD             (SYS_TIME_HW_COUNTER_PERIOD>>1)
+#define SYS_TIME_CPU_CLOCK_FREQUENCY                (498000000)
+#define SYS_TIME_COMPARE_UPDATE_EXECUTION_CYCLES    (2200)
+
 
 
 // *****************************************************************************
@@ -140,14 +140,6 @@ extern "C" {
 // Section: Middleware & Other Library Configuration
 // *****************************************************************************
 // *****************************************************************************
-/* Number of MSD Function driver instances in the application */
-#define USB_HOST_MSD_INSTANCES_NUMBER         2
-
-/* Number of Logical Units */
-#define USB_HOST_SCSI_INSTANCES_NUMBER        2
-#define USB_HOST_MSD_LUN_NUMBERS              2
-
-
 	
 /*** USB EHCI Driver Configurations ***/
 
@@ -219,6 +211,14 @@ extern "C" {
 #define USB_HOST_HUB_SUPPORT                  true
 #define USB_HOST_HUB_INSTANCES_NUMBER         1
 #define USB_HOST_HUB_PORTS_NUMBER			  4
+
+/* Number of MSD Function driver instances in the application */
+#define USB_HOST_MSD_INSTANCES_NUMBER         2
+
+/* Number of Logical Units */
+#define USB_HOST_SCSI_INSTANCES_NUMBER        2
+#define USB_HOST_MSD_LUN_NUMBERS              2
+
 
 
 

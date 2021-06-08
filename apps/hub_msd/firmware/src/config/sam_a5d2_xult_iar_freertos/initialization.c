@@ -244,7 +244,6 @@ const SYS_TIME_INIT sysTimeInitData =
 
 
 
-
 /*******************************************************************************
   Function:
     void SYS_Initialize ( void *data )
@@ -257,7 +256,6 @@ const SYS_TIME_INIT sysTimeInitData =
 
 void SYS_Initialize ( void* data )
 {
-
 
   
     CLK_Initialize();
@@ -283,8 +281,6 @@ void SYS_Initialize ( void* data )
      
     
 	BSP_Initialize();
-	UART1_Initialize();
-
 
 
     sysObj.sysTime = SYS_TIME_Initialize(SYS_TIME_INDEX_0, (SYS_MODULE_INIT *)&sysTimeInitData);

@@ -2256,15 +2256,6 @@
                                 <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_iar_freertos\peripheral\tc\plib_tc_common.h</name>
                             </file>
                         </group>
-                        <group>
-                            <name>uart</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_iar_freertos\peripheral\uart\plib_uart_common.h</name>
-                            </file>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_iar_freertos\peripheral\uart\plib_uart1.h</name>
-                            </file>
-                        </group>
                     </group>
                     <file>
                         <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_iar_freertos\device_cache.h</name>
@@ -2974,12 +2965,6 @@
                             <name>tc</name>
                             <file>
                                 <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_iar_freertos\peripheral\tc\plib_tc0.c</name>
-                            </file>
-                        </group>
-                        <group>
-                            <name>uart</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_iar_freertos\peripheral\uart\plib_uart1.c</name>
                             </file>
                         </group>
                     </group>

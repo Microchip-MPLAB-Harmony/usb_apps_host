@@ -1197,7 +1197,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '33824768'}
+        attributes: {id: core, value: '270336'}
   - type: Hex
     attributes: {id: PMC_PCER1}
     children:
@@ -2191,20 +2191,13 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '0'}
-  - type: Boolean
-    attributes: {id: UART1_CLOCK_ENABLE}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: uart1, value: 'true'}
   - type: Integer
     attributes: {id: UART1_CLOCK_FREQUENCY}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '83000000'}
+        attributes: {id: core, value: '0'}
   - type: Integer
     attributes: {id: UART1_GENERIC_CLOCK_FREQUENCY}
     children:
@@ -2212,27 +2205,6 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '0'}
-  - type: Boolean
-    attributes: {id: UART1_INTERRUPT_ENABLE}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: uart1, value: 'false'}
-  - type: String
-    attributes: {id: UART1_INTERRUPT_HANDLER}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: uart1, value: UART1_Handler}
-  - type: Boolean
-    attributes: {id: UART1_INTERRUPT_HANDLER_LOCK}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: uart1, value: 'false'}
   - type: KeyValueSet
     attributes: {id: UART1_INTERRUPT_PRIORITY}
     children:

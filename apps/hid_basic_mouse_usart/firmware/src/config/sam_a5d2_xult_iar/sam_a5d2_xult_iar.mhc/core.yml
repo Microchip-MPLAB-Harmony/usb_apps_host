@@ -721,7 +721,7 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: LED1}
+        attributes: {value: LED_BLUE}
   - type: String
     attributes: {id: PIN_144_LAT}
     children:
@@ -798,7 +798,7 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: LED_GREEN}
+        attributes: {value: LED1}
   - type: String
     attributes: {id: PIN_24_LAT}
     children:
@@ -953,6 +953,22 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '0'}
+  - type: Integer
+    attributes: {id: PMC_CKGR_UCKR_UPLLCOUNT}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: readOnly}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Boolean
+    attributes: {id: PMC_CKGR_UCKR_UPLLEN}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
   - type: Hex
     attributes: {id: PMC_PCER0}
     children:
