@@ -90,7 +90,7 @@ extern void RTT_Handler                ( void ) __attribute__((weak, alias("Dumm
 extern void WDT_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void PMC_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void EFC_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void FLEXCOM7_InterruptHandler  ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void FLEXCOM7_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void FLEXCOM0_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void FLEXCOM1_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void PIOA_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler")));
@@ -143,7 +143,7 @@ const H3DeviceVectors exception_table=
     .pfnWDT_Handler                = WDT_Handler,
     .pfnPMC_Handler                = PMC_Handler,
     .pfnEFC_Handler                = EFC_Handler,
-    .pfnFLEXCOM7_Handler           = FLEXCOM7_InterruptHandler,
+    .pfnFLEXCOM7_Handler           = FLEXCOM7_Handler,
     .pfnFLEXCOM0_Handler           = FLEXCOM0_Handler,
     .pfnFLEXCOM1_Handler           = FLEXCOM1_Handler,
     .pfnPIOA_Handler               = PIOA_Handler,

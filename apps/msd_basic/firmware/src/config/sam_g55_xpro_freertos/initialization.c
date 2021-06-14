@@ -217,26 +217,6 @@ const SYS_TIME_INIT sysTimeInitData =
 // *****************************************************************************
 // *****************************************************************************
 
-/*******************************************************************************
-  Function:
-    void STDIO_BufferModeSet ( void )
-
-  Summary:
-    Sets the buffering mode for stdin and stdout
-
-  Remarks:
- ********************************************************************************/
-static void STDIO_BufferModeSet(void)
-{
-
-    /* Make stdin unbuffered */
-    setbuf(stdin, NULL);
-
-    /* Make stdout unbuffered */
-    setbuf(stdout, NULL);
-}
-
-
 
 
 /*******************************************************************************
@@ -254,17 +234,12 @@ void SYS_Initialize ( void* data )
 
 
     EFC_Initialize();
-    STDIO_BufferModeSet();
-
-
   
 	PIO_Initialize();
 
     CLOCK_Initialize();
 
 
-
-    FLEXCOM7_USART_Initialize();
 
 	WDT_REGS->WDT_MR = WDT_MR_WDDIS_Msk; 		// Disable WDT 
 

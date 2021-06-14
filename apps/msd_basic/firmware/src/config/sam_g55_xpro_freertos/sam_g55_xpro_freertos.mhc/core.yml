@@ -64,27 +64,13 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '0'}
-  - type: Boolean
-    attributes: {id: FLEXCOM7_CLOCK_ENABLE}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: flexcom7, value: 'true'}
   - type: Integer
     attributes: {id: FLEXCOM7_CLOCK_FREQUENCY}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '119996416'}
-  - type: Boolean
-    attributes: {id: FLEXCOM7_INTERRUPT_ENABLE}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: flexcom7, value: 'false'}
+        attributes: {id: core, value: '0'}
   - type: Boolean
     attributes: {id: FLEXCOM7_INTERRUPT_ENABLE_UPDATE}
     children:
@@ -92,20 +78,6 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: 'true'}
-  - type: String
-    attributes: {id: FLEXCOM7_INTERRUPT_HANDLER}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: flexcom7, value: FLEXCOM7_InterruptHandler}
-  - type: Boolean
-    attributes: {id: FLEXCOM7_INTERRUPT_HANDLER_LOCK}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: flexcom7, value: 'false'}
   - type: String
     attributes: {id: KEIL_STACK_HEAP_SIZE}
     children:
@@ -315,7 +287,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: FLEXCOM7_InterruptHandler}
+        attributes: {id: core, value: FLEXCOM7_Handler}
   - type: Boolean
     attributes: {id: NVIC_7_0_HANDLER_LOCK}
     children:
@@ -511,7 +483,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '8394880'}
+        attributes: {id: core, value: '8394752'}
   - type: Hex
     attributes: {id: PMC_PCER1}
     children:

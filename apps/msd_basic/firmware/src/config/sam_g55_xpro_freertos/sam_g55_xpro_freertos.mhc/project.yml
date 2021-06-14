@@ -83,20 +83,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 972E955D94A63BA89BF6ABD6AADB1023
-- generatedChecksum: 178D13244B346D862B33A20A18DD5029
+- generatedChecksum: 4D2ADB9C628EB2AF2C73A96CD57F7554
   logicalPath: config/sam_g55_xpro_freertos
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 178D13244B346D862B33A20A18DD5029
-- generatedChecksum: 824A9E965C772F5F01690EA9A4F9E306
+  userChecksum: 4D2ADB9C628EB2AF2C73A96CD57F7554
+- generatedChecksum: 1F0988C1AF5BCEF5DC8CF62AC48159EF
   logicalPath: config/sam_g55_xpro_freertos
   name: interrupts.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 824A9E965C772F5F01690EA9A4F9E306
+  userChecksum: 1F0988C1AF5BCEF5DC8CF62AC48159EF
 - generatedChecksum: 6513F2461B8F476B68CA73906086047F
   logicalPath: config/sam_g55_xpro_freertos
   name: libc_syscalls.c
@@ -125,13 +125,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 8FDD6248506F28B32C4F5FD9AA0D9C6F
-- generatedChecksum: 38F3C05E141E5DA92A616D7F9F148E95
+- generatedChecksum: F659164A32FEBCF5ED26238748E3D1C9
   logicalPath: config/sam_g55_xpro_freertos/peripheral/clock
   name: plib_clock.c
   physicalPath: peripheral/clock
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 38F3C05E141E5DA92A616D7F9F148E95
+  userChecksum: F659164A32FEBCF5ED26238748E3D1C9
 - generatedChecksum: 08455A8B76479102F310CC00F3BCD2E9
   logicalPath: config/sam_g55_xpro_freertos/peripheral/cmcc
   name: plib_cmcc.c
@@ -146,13 +146,6 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 8974F8056362B223EEC3FD4C15C54414
-- generatedChecksum: A657E571880D2AE02E4914F65A3DBE33
-  logicalPath: config/sam_g55_xpro_freertos/peripheral/flexcom/usart
-  name: plib_flexcom7_usart.c
-  physicalPath: peripheral/flexcom/usart
-  security: NON_SECURE
-  type: SOURCE
-  userChecksum: A657E571880D2AE02E4914F65A3DBE33
 - generatedChecksum: F5DDE74B482D90B4736FD58D03734EB0
   logicalPath: config/sam_g55_xpro_freertos/peripheral/nvic
   name: plib_nvic.c
@@ -286,13 +279,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 6FB71B015A2C3B84C8913F9C8A53532F
-- generatedChecksum: 292963C2BCFF8EC1750628416487C396
+- generatedChecksum: 7806B30ECAE0D18D08CD583D8775530D
   logicalPath: config/sam_g55_xpro_freertos/stdio
   name: xc32_monitor.c
   physicalPath: stdio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 292963C2BCFF8EC1750628416487C396
+  userChecksum: 7806B30ECAE0D18D08CD583D8775530D
 - generatedChecksum: AF3A8D8AA610E7DFD3E38DDAC5E42074
   logicalPath: FreeRTOS/Source/include
   name: FreeRTOS.h
@@ -454,13 +447,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 48B661D8C967C6BC397001F10FB43D1D
-- generatedChecksum: B83944C572A7946B48EA50E50DBF6D47
+- generatedChecksum: 5099147081F588A2ACDE77CEC9F93C33
   logicalPath: config/sam_g55_xpro_freertos
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: B83944C572A7946B48EA50E50DBF6D47
+  userChecksum: 5099147081F588A2ACDE77CEC9F93C33
 - generatedChecksum: 1EA4EDD5EA90F43EC407DE32441159A9
   logicalPath: FreeRTOS/Source/include
   name: deprecated_definitions.h
@@ -839,20 +832,6 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: FB046CED42CA3B2AE1895C186571EF71
-- generatedChecksum: 2FEFE9BBE6788C4936C9618BF0946188
-  logicalPath: config/sam_g55_xpro_freertos/peripheral/flexcom/usart
-  name: plib_flexcom7_usart.h
-  physicalPath: peripheral/flexcom/usart
-  security: NON_SECURE
-  type: HEADER
-  userChecksum: 2FEFE9BBE6788C4936C9618BF0946188
-- generatedChecksum: 301464123E30997D035056FEB1895A1A
-  logicalPath: config/sam_g55_xpro_freertos/peripheral/flexcom/usart
-  name: plib_flexcom_usart_local.h
-  physicalPath: peripheral/flexcom/usart
-  security: NON_SECURE
-  type: HEADER
-  userChecksum: 301464123E30997D035056FEB1895A1A
 - generatedChecksum: 55ECCC7FA71BD15B46EF80DC0515ED7A
   logicalPath: config/sam_g55_xpro_freertos/peripheral/nvic
   name: plib_nvic.h
