@@ -165,6 +165,7 @@ const H3DeviceVectors exception_table=
     /* Configure Initial Stack Pointer, using linker-generated symbols */
     .pvStack = &_stack,
 
+
     .pfnReset_Handler              = Reset_Handler,
     .pfnNonMaskableInt_Handler     = NonMaskableInt_Handler,
     .pfnHardFault_Handler          = HardFault_Handler,
@@ -245,7 +246,6 @@ const H3DeviceVectors exception_table=
     .pfnGMAC_Q3_Handler            = GMAC_Q3_Handler,
     .pfnGMAC_Q4_Handler            = GMAC_Q4_Handler,
     .pfnGMAC_Q5_Handler            = GMAC_Q5_Handler,
-
 
 
 };

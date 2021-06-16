@@ -55,13 +55,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 9E153A6D4F8E0EA1F6901BAED7DD80FD
-- generatedChecksum: E428AB7C107BF80B97144C0D6E5B26C8
+- generatedChecksum: 6CC48B33B344777F7B9C114DE50087DE
   logicalPath: config/sam_d21_xpro
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: E428AB7C107BF80B97144C0D6E5B26C8
+  userChecksum: 6CC48B33B344777F7B9C114DE50087DE
 - generatedChecksum: 69906ACE80745AAB526A143A70D2655A
   logicalPath: config/sam_d21_xpro
   name: interrupts.c
@@ -83,13 +83,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: 0EB9E53DABD1C6F0D463C91AB3E6BC40
+- generatedChecksum: 9490E38F81A1663C93F5D930F3014C8B
   logicalPath: config/sam_d21_xpro/peripheral/clock
   name: plib_clock.c
   physicalPath: peripheral/clock
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 0EB9E53DABD1C6F0D463C91AB3E6BC40
+  userChecksum: 9490E38F81A1663C93F5D930F3014C8B
 - generatedChecksum: C3ECDED3D6301DB0DE622293ED615D21
   logicalPath: config/sam_d21_xpro/peripheral/evsys
   name: plib_evsys.c
@@ -118,13 +118,6 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: D8C25827B4CCBFD81D2AB5273CDFBBD4
-- generatedChecksum: F02B21AA62264641B006DDF7421B3442
-  logicalPath: config/sam_d21_xpro/peripheral/sercom/usart
-  name: plib_sercom3_usart.c
-  physicalPath: peripheral/sercom/usart
-  security: NON_SECURE
-  type: SOURCE
-  userChecksum: F02B21AA62264641B006DDF7421B3442
 - generatedChecksum: 33B16168A5ADDEA8687282521EA47FA1
   logicalPath: config/sam_d21_xpro/peripheral/tc
   name: plib_tc3.c
@@ -209,13 +202,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 6FB71B015A2C3B84C8913F9C8A53532F
-- generatedChecksum: 2A2C591B7D7741406146511FFE2B3016
+- generatedChecksum: 7806B30ECAE0D18D08CD583D8775530D
   logicalPath: config/sam_d21_xpro/stdio
   name: xc32_monitor.c
   physicalPath: stdio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 2A2C591B7D7741406146511FFE2B3016
+  userChecksum: 7806B30ECAE0D18D08CD583D8775530D
 - generatedChecksum: 6DE7A9F0A5973D127B56B9739EBCDE20
   logicalPath: packs/ATSAMD21J18A_DFP/component
   name: ac.h
@@ -342,13 +335,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 2AD9700A41DC94A60C663A17CEDB2703
-- generatedChecksum: 4323C8CD8308D29BF7D947D05C9DFC26
+- generatedChecksum: DB16855341D7D2D4FDB33298222EEC8C
   logicalPath: config/sam_d21_xpro
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4323C8CD8308D29BF7D947D05C9DFC26
+  userChecksum: DB16855341D7D2D4FDB33298222EEC8C
 - generatedChecksum: 636DD2FCAC011D9457B3B1813AC63647
   logicalPath: config/sam_d21_xpro
   name: device.h
@@ -657,20 +650,6 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: A695468181E8CF1FE3DBEEF21117EA51
-- generatedChecksum: DCC0369AFDD597FB63203FB1B7488E8B
-  logicalPath: config/sam_d21_xpro/peripheral/sercom/usart
-  name: plib_sercom3_usart.h
-  physicalPath: peripheral/sercom/usart
-  security: NON_SECURE
-  type: HEADER
-  userChecksum: DCC0369AFDD597FB63203FB1B7488E8B
-- generatedChecksum: 6F9F9CBBFEDEC8784446F157BB625E1C
-  logicalPath: config/sam_d21_xpro/peripheral/sercom/usart
-  name: plib_sercom_usart_common.h
-  physicalPath: peripheral/sercom/usart
-  security: NON_SECURE
-  type: HEADER
-  userChecksum: 6F9F9CBBFEDEC8784446F157BB625E1C
 - generatedChecksum: 0DE96936AB21998A284FA176F870E596
   logicalPath: config/sam_d21_xpro/peripheral/tc
   name: plib_tc3.h
@@ -1126,13 +1105,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 8AF03E090F2D85FDF03C40E013D06615
-- generatedChecksum: null
+- generatedChecksum: 4B3C3EF8A318908A22B78500515C3288
   logicalPath: config/sam_d21_xpro
   name: user.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: null
+  userChecksum: 4B3C3EF8A318908A22B78500515C3288
 - generatedChecksum: FF1BA6166BFA6C9898A26FEC0DA4A381
   logicalPath: packs/ATSAMD21J18A_DFP/component
   name: wdt.h

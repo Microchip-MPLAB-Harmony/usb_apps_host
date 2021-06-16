@@ -55,13 +55,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 9E153A6D4F8E0EA1F6901BAED7DD80FD
-- generatedChecksum: C69C1572C29E7FF67C16D4BCF140021F
+- generatedChecksum: 7F690AF6E5E90D5C154837419827F6F8
   logicalPath: config/sam_e70_xult
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: C69C1572C29E7FF67C16D4BCF140021F
+  userChecksum: 7F690AF6E5E90D5C154837419827F6F8
 - generatedChecksum: 3B3B679C5E72FAF3E9C99A453F82D108
   logicalPath: config/sam_e70_xult
   name: interrupts.c
@@ -83,13 +83,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: B1BA67E9323D8B5AA1B728CB83EA1A77
+- generatedChecksum: 9DFBDBAF3465156C36D5CA54F2B56B54
   logicalPath: config/sam_e70_xult/peripheral/clk
   name: plib_clk.c
   physicalPath: peripheral/clk
   security: NON_SECURE
   type: SOURCE
-  userChecksum: B1BA67E9323D8B5AA1B728CB83EA1A77
+  userChecksum: 9DFBDBAF3465156C36D5CA54F2B56B54
 - generatedChecksum: FE200EC8792729E8C9B163A12991C169
   logicalPath: config/sam_e70_xult/peripheral/efc
   name: plib_efc.c
@@ -118,13 +118,6 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 72C33CBE3A5B9F0A3B02F4AED5121184
-- generatedChecksum: 13C3B1B28675DBC96083B4831872D550
-  logicalPath: config/sam_e70_xult/peripheral/usart
-  name: plib_usart1.c
-  physicalPath: peripheral/usart
-  security: NON_SECURE
-  type: SOURCE
-  userChecksum: 13C3B1B28675DBC96083B4831872D550
 - generatedChecksum: 3A35F794BD3C19E7B3142ED6806E4EFE
   logicalPath: config/sam_e70_xult
   name: startup_xc32.c
@@ -209,13 +202,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 6FB71B015A2C3B84C8913F9C8A53532F
-- generatedChecksum: A9148A612F837BC6C6DD7F5A62D3A104
+- generatedChecksum: 7806B30ECAE0D18D08CD583D8775530D
   logicalPath: config/sam_e70_xult/stdio
   name: xc32_monitor.c
   physicalPath: stdio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: A9148A612F837BC6C6DD7F5A62D3A104
+  userChecksum: 7806B30ECAE0D18D08CD583D8775530D
 - generatedChecksum: 51AC9ADA7DD9FD74C608ABCB9A9A9B6F
   logicalPath: packs/ATSAME70Q21B_DFP/component
   name: acc.h
@@ -349,13 +342,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 52F91AC0727F2311EDA0E3BAA7719A9F
-- generatedChecksum: ABDBC6E623C146181E6BAC9E190E4B28
+- generatedChecksum: B0D9FB59B287CF5536295497CA685190
   logicalPath: config/sam_e70_xult
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: ABDBC6E623C146181E6BAC9E190E4B28
+  userChecksum: B0D9FB59B287CF5536295497CA685190
 - generatedChecksum: 8DA90CDFAED934C14DB1E81B104CEE2F
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: core_cm7.h
@@ -377,13 +370,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: CBD842DCA3BC175A2FE63AE2DBF3E71D
-- generatedChecksum: 1573FA9E9078B51DB3AF57582188EB58
+- generatedChecksum: 1B301E63D47B4F2517A9966B1A433340
   logicalPath: config/sam_e70_xult
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 1573FA9E9078B51DB3AF57582188EB58
+  userChecksum: 1B301E63D47B4F2517A9966B1A433340
 - generatedChecksum: C679A77E2A1338BE090B760AD405B86C
   logicalPath: config/sam_e70_xult
   name: device.h
@@ -734,20 +727,6 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: A2F276372C68B8EE16FB32AE5DF1BE37
-- generatedChecksum: F9A99D2FAB2DA82C1FF0D1BBB95832A3
-  logicalPath: config/sam_e70_xult/peripheral/usart
-  name: plib_usart1.h
-  physicalPath: peripheral/usart
-  security: NON_SECURE
-  type: HEADER
-  userChecksum: F9A99D2FAB2DA82C1FF0D1BBB95832A3
-- generatedChecksum: 2B0D6DB62F6E6E43DA189A8FA1DB7B5C
-  logicalPath: config/sam_e70_xult/peripheral/usart
-  name: plib_usart_common.h
-  physicalPath: peripheral/usart
-  security: NON_SECURE
-  type: HEADER
-  userChecksum: 2B0D6DB62F6E6E43DA189A8FA1DB7B5C
 - generatedChecksum: 14803DE91A29C406E647A774613322C7
   logicalPath: packs/ATSAME70Q21B_DFP/component
   name: pmc.h

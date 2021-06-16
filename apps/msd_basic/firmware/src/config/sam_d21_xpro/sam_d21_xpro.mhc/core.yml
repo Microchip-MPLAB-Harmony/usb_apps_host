@@ -279,14 +279,14 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 'true'}
+        attributes: {id: core, value: 'false'}
   - type: Integer
     attributes: {id: GCLK_ID_23_FREQ}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '48005120'}
+        attributes: {id: core, value: '0'}
   - type: Boolean
     attributes: {id: GCLK_ID_27_CHEN}
     children:
@@ -636,7 +636,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0x10820'}
+        attributes: {id: core, value: '0x10800'}
   - type: Boolean
     attributes: {id: PORT_GROUP_0}
     children:
@@ -819,27 +819,13 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: PORT}
-  - type: Boolean
-    attributes: {id: SERCOM3_CORE_CLOCK_ENABLE}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: sercom3, value: 'true'}
   - type: Integer
     attributes: {id: SERCOM3_CORE_CLOCK_FREQUENCY}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '48005120'}
-  - type: Boolean
-    attributes: {id: SERCOM3_INTERRUPT_ENABLE}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: sercom3, value: 'false'}
+        attributes: {id: core, value: '0'}
   - type: Boolean
     attributes: {id: SERCOM3_INTERRUPT_ENABLE_UPDATE}
     children:
@@ -847,20 +833,6 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: 'true'}
-  - type: String
-    attributes: {id: SERCOM3_INTERRUPT_HANDLER}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: sercom3, value: SERCOM3_Handler}
-  - type: Boolean
-    attributes: {id: SERCOM3_INTERRUPT_HANDLER_LOCK}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: sercom3, value: 'false'}
   - type: String
     attributes: {id: SYSTICK_PERIOD}
     children:

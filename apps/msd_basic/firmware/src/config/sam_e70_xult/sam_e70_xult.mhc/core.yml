@@ -2739,7 +2739,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '8608768'}
+        attributes: {id: core, value: '8592384'}
   - type: Hex
     attributes: {id: PMC_PCER1}
     children:
@@ -3125,13 +3125,6 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '150000000'}
-  - type: Boolean
-    attributes: {id: USART1_CLOCK_ENABLE}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: usart1, value: 'true'}
   - type: Integer
     attributes: {id: USART1_CLOCK_FREQUENCY}
     children:
@@ -3140,33 +3133,12 @@ children:
       - type: Dynamic
         attributes: {id: core, value: '150000000'}
   - type: Boolean
-    attributes: {id: USART1_INTERRUPT_ENABLE}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: usart1, value: 'false'}
-  - type: Boolean
     attributes: {id: USART1_INTERRUPT_ENABLE_UPDATE}
     children:
     - type: Values
       children:
       - type: Dynamic
         attributes: {id: core, value: 'true'}
-  - type: String
-    attributes: {id: USART1_INTERRUPT_HANDLER}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: usart1, value: USART1_Handler}
-  - type: Boolean
-    attributes: {id: USART1_INTERRUPT_HANDLER_LOCK}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: usart1, value: 'false'}
   - type: Integer
     attributes: {id: USART2_CLOCK_FREQUENCY}
     children:

@@ -75,4 +75,4 @@ children:
       - type: Dynamic
         attributes: {id: drv_usbfs_v1, value: Host}
 - type: ElementPosition
-  attributes: {x: '12', y: '348', id: drv_usbfs_v1}
+  attributes: {x: '10', y: '288', id: drv_usbfs_v1}
