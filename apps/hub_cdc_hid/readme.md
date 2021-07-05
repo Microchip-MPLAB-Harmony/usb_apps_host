@@ -33,12 +33,16 @@ Following table gives the details of project configurations, target device used,
 
 ### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
 
-- Use the USB micro-B port J201 to connect the USB Device to the USB Host PC.
-- LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
+- Connect the USB device to the "TARGET USB" connector (J201) using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit). 
+- LED1 is controlled by the attched USB Mouse. 
+- LED1, LED2, and LED3 are controlled by the attched USB CDC Device. 
+
 
 ### <a name="config_16"></a> [PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](https://www.microchip.com/Developmenttools/ProductDetails/DM320007)
 
 - Connect the USB Hub to the Type A connector J5, which is located on the top side of the starter kit. 
+- LED1 is controlled by the attched USB Mouse. 
+- LED1, LED2, and LED3 are controlled by the attched USB CDC Device. 
 
 ## Running the Application
 
@@ -47,7 +51,7 @@ This application demonstrates the capability of the USB Host Stack to access and
 Open the project in MPLAB X IDE and select the desired project configuration. 
 
 1. Build the code and program the device. 
-2. Connect a hub to the Type A Host connector(J5) on the desired board. 
+2. Connect a hub to the Host connector on the desired board. 
 3. Connect a mouse to a spare port on the hub. 
 4. Connect the CDC emulator device to another spare port on the hub. Follow the directions for setting up and running the cdc_serial_emulator USB device demonstration. On the personal computer, open a serial terminal and set the serial Baudrate to 9600. 
 5. At the prompt, (LED:), enter 1, 2, or 3 to toggle the corresponding LEDs on the starter kit. 
