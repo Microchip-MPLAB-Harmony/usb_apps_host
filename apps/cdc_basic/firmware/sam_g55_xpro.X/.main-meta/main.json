@@ -4,27 +4,27 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_host_cdc_basic_sam_g55_xpro",
-		"version": "3.0.0",
+		"version": "3.1.0",
 		"displayName": "CDC Basic Example (cdc_basic) Example for SAM G5x Family",
 		"projectName": "cdc_basic_sam_g55_xpro",
 		"shortDescription": "This application uses the USB Host Layer and CDC Client driver to enumerate a standard CDC USB device. The demonstration host application then operates and uses the functionality of the attached CDC Device.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=5.45.0"
+			"semverRange": ">=5.50.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=2.50.0"
+				"semverRange": ">=3.00.0"
 			}
 		],
 		"dfp": {
 			"name": "SAMG_DFP",
-			"semverRange": "^3.3.42"
+			"semverRange": "^3.4.57"
 		},
 		"configurator": {
 			"name": "MHC",
-			"semverRange": ">=3.6.1"
+			"semverRange": ">=3.6.4"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",

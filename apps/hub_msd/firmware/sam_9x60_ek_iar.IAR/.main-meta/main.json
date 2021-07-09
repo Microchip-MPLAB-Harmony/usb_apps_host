@@ -1,0 +1,75 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.usb_apps_host_hub_msd_sam_9x60_ek_iar",
+		"version": "3.1.0",
+		"displayName": "HUB MSD Example (hub_msd) Example for SAM 9x60 Family",
+		"projectName": "hub_msd_sam_9x60_ek_iar",
+		"shortDescription": "This application uses USB Host stack and the Harmony Filesystem Service to copy a file from a source USB pen drive to a target USB pen drive.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.50.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=3.00.0"
+			}
+		],
+		"dfp": {
+			"name": "SAM9X6_DFP",
+			"semverRange": "^1.5.50"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.6.4"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "SAM9X60",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "SAM9X60-EK Evaluation Kit"
+			],
+			[
+				"Harmony", "Middleware", "USB", "HUB_MSD"
+			],
+			[
+				"Middleware", "USB", "HUB_MSD"
+			]
+		],
+		"peripherals": [
+			"USB"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"Middleware",
+			"USB",
+			"SAM9X60",
+			"SAM 9x60 Family",
+			"USB"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}
