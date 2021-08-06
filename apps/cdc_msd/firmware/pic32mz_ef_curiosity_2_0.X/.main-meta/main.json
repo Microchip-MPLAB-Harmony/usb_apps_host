@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_host_cdc_msd_pic32mz_ef_curiosity_2",
-		"version": "3.1.0",
+		"version": "3.1.1",
 		"displayName": "CDC MSD Example (cdc_msd) Example for PIC32MZ EF Family",
 		"projectName": "cdc_msd_pic32mz_ef_curiosity_2",
 		"shortDescription": "This application creates a USB Host that can recognize and enumerate a CDC USB Device and MSC USB Device",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.00.0"
+				"semverRange": ">=3.0.0"
 			}
 		],
 		"dfp": {

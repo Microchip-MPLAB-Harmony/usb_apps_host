@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_host_hid_basic_mouse_usart_sam_a5d2_xult_freertos_iar",
-		"version": "3.1.0",
+		"version": "3.1.1",
 		"displayName": "HID Basic Mouse USART Example (hid_basic_mouse_usart) for SAM A5D2 Family",
 		"projectName": "hid_basic_mouse_usart_sam_a5d2_xult_freertos_iar",
 		"shortDescription": "This application uses the USB Host layer, HID Client driver and HID Mouse Usage driver to enumerate a USB Mouse and detect Mouse button press release events. The Mouse events are displayed using a terminal emulator on a personal computer.",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.00.0"
+				"semverRange": ">=3.0.0"
 			}
 		],
 		"dfp": {
