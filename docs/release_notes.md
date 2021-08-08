@@ -8,6 +8,22 @@ nav_order: 99
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## Harmony 3 USB Host application examples v3.1.1
+### Bug fixes
+-   [MPLAB® Discover portal](https://mplab-discover.microchip.com/) metadata for all demonstration application configurations have been updated. 
+
+### New Features and Enhancements
+
+- None
+
+### Known Issues
+
+- None 
+
+### Development Tools
+
+- Same as v3.1.0 
+
 ## Harmony 3 USB Host application examples v3.1.0
 
 ### Development kit and demo application support
@@ -35,7 +51,7 @@ Following table provides number of USB Host examples available for different dev
 
 ### New Features
 
-- MPLABX USB Device demonstration application configurations has been added for following development boards.
+- MPLAB® X IDE  USB Host demonstration application configurations have been added for the following development boards.
     - [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
     - [Curiosity PIC32MX470 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/dm320103)
     - [SAM9X60-EK Evaluation Board](https://www.microchip.com/developmenttools/ProductDetails/DT100126)  
