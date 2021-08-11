@@ -47,6 +47,7 @@ Following table gives the details of project configurations, target device used,
 | sam_a5d27_som1_ek_freertos.X           | MPLABX   | ATSAMA5D27C         | [SAMA5D27 SOM1 Kit1](#config_18)                                |
 | sam_a5d27_wlsom1_ek1.X           | MPLABX    | ATSAMA5D27C         | [ATSAMA5D27 WLSOM1 EK1](#config_19)                                |
 | sam_a5d27_wlsom1_ek1_freertos.X           | MPLABX   | ATSAMA5D27C         | [ATSAMA5D27 WLSOM1 EK1](#config_19)                                |
+| sam_a7g5_ek.X                   | MPLABX | SAMA7G54            | [SAMA7G5 EK Board](#config_21)                                    |
 | sam_d21_xpro.X                  | MPLABX | ATSAMD21J18A        | [SAMD21 Xplained Pro Board](#config_2)                                    |
 | sam_d21_xpro_iar.IAR            | IAR    | ATSAMD21J18A        | [SAMD21 Xplained Pro Board](#config_2)                                    |
 | sam_e54_xpro.X                  | MPLABX | ATSAME54P20A        | [SAME54 Xplained Pro Board](#config_3)                                    |
@@ -174,15 +175,28 @@ Following table gives the details of project configurations, target device used,
 ### <a name="config_19"></a> [ATSAMA5D27-WLSOM1 Evaluation Kit ](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320117)
 
 - Setup the SD card 
-    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a5d27_wlsom1_ek1.X/binaries/boot.bin).
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a7g5_ek.X/build/binaries/boot.bin).
     - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
-    - Insert the SD card into the SDMMC0 Card Connector (J9) on the board.
-    - Reset the board by pressing the Reset Button (SW2) 
+    - Insert the SD card into the SD Card Connector (J4) on the board.
+    - Reset the board by pressing the Reset Button (nRST) 
 - Connect the USB-A MicroAB connector (J10) on the board to the computer using a micro USB cable.
 - Press the "START_SOM" button to activate board start-up.  
 - Connect the USB device to the USB Type-A connector (J11) on the board. 
 - RGB LED turning to Green indicates the file write is complete.
   ![SAM9X60-EK Evaluation Board](images/SAMA5D2_WLSOM1_EK_USB.png)
+
+### <a name="config_21"></a> [SAMA7G5-EK Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/TOBEADDED)
+
+- Powered the board with an external power supply (J1).
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a7g5_ek.X/build/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SD Card Connector (J4) on the board.
+    - Reset the board by pressing the Reset Button (nRST) 
+- Press the "nSTART" button to activate board start-up.  
+- Connect the USB device to the USB Host connector (J7, J8 or J9) on the board. 
+- RGB LED turning to Green indicates the file write is complete.
+  ![SAMA7G5-EK Evaluation Board](images/SAMA7G5_EK_USB.png)
 
 ## Running the Application
 
