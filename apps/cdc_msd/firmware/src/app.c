@@ -631,6 +631,8 @@ USB_HOST_CDC_EVENT_RESPONSE APP_USBHostCDCEventHandler
             
             /* The device was detached */
             appCDCData.deviceWasDetached = true;
+			/* Switch off LED  */
+            LED1_Off();
             break;
             
         default:
