@@ -151,10 +151,10 @@ Following table gives the details of project configurations, target device used,
     - Insert the SD card into the SD Card Connector (J4) on the board.
     - Reset the board by pressing the Reset Button (nRST) 
 - Press the "nSTART" button to activate board start-up.
-- Connect the USB device to the USB Host connector (J7, J8 or J9) on the board. 
+- Connect the USB device to the USB Host Type-A connector (J9) on the board. 
+  Alternatively, the USB Device could be connected to the Type-C connector (J8) or micro A/B connector (J7). 
 - The demonstration uses the Debug UART port (J24) to transfer demonstration application messages on a PC. 
 - RGB LED indicates a Device Connection (Attached device has been successfully enumerated and configured). This LED is also toggled on Keyboard "CapsLock" press event. 
-  ![SAMA7G5-EK Evaluation Board](images/SAMA7G5_EK_USB.png)
 
 ## Running the Application
 
