@@ -143,13 +143,15 @@ const SYS_FS_FUNCTIONS FatFsFunctions =
 };
 
 
+
 const SYS_FS_REGISTRATION_TABLE sysFSInit [ SYS_FS_MAX_FILE_SYSTEM_TYPE ] =
 {
     {
         .nativeFileSystemType = FAT,
         .nativeFileSystemFunctions = &FatFsFunctions
-    }
+    },
 };
+
 
 // </editor-fold>
 
@@ -184,6 +186,8 @@ void _DRV_USB_VBUSPowerEnable(uint8_t port, bool enable)
 
 const DRV_USBFSV1_INIT drvUSBInit =
 {
+    /* Interrupt Source for USB module */ 
+    .interruptSource = USB_IRQn,
 
     /* System module initialization */
     .moduleInit = {0},
