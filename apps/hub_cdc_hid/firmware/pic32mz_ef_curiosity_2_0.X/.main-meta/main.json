@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_host_hub_cdc_hid_pic32mz_ef_curiosity_2",
-		"version": "3.1.1",
+		"version": "3.2.0",
 		"displayName": "HUB CDC HID Example (hub_cdc_hid) Example for PIC32MZ EF Family",
 		"projectName": "hub_cdc_hid_pic32mz_ef_curiosity_2",
 		"shortDescription": "This application creates a USB Host that can recognize and enumerate a CDC Emulator USB Device and a HID USB Mouse connected via an external Hub. The host will demonstrate the communication from the CDC emulator device and the HID mouse.",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.0.0"
+				"semverRange": ">=3.1.0"
 			}
 		],
 		"dfp": {
@@ -42,10 +42,10 @@
 				"Development Kit", "Curiosity PIC32MZ EF 2.0 Development Board"
 			],
 			[
-				"Harmony", "Middleware", "USB", "HUB_CDC_HID"
+				"Harmony", "Middleware", "USB", "HOST_HUB_CDC_HID"
 			],
 			[
-				"Middleware", "USB", "HUB_CDC_HID"
+				"Middleware", "USB", "HOST_HUB_CDC_HID"
 			]
 		],
 		"peripherals": [

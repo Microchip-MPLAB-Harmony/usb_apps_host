@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_host_hub_msd_sam_a5d2_som1_ek",
-		"version": "3.1.1",
+		"version": "3.2.0",
 		"displayName": "HUB MSD Example (hub_msd)  Example for SAM A5D2 Family",
 		"projectName": "hub_msd_sam_a5d2_som1_ek",
 		"shortDescription": ""This application uses USB Host stack and the Harmony Filesystem Service to copy a file from a source USB pen drive to a target USB pen drive.",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.0.0"
+				"semverRange": ">=3.1.0"
 			}
 		],
 		"dfp": {
@@ -42,10 +42,10 @@
 				"Development Kit", "SAMA5D2-SOM1 Evaluation Kit"
 			],
 			[
-				"Harmony", "Middleware", "USB", "HUB_MSD"
+				"Harmony", "Middleware", "USB", "HOST_HUB_MSD"
 			],
 			[
-				"Middleware", "USB", "HUB_MSD"
+				"Middleware", "USB", "HOST_HUB_MSD"
 			]
 		],
 		"peripherals": [

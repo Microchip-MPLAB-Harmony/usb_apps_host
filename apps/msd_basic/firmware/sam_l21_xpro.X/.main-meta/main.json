@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_host_msd_basic_sam_l21_xpro",
-		"version": "3.1.1",
+		"version": "3.2.0",
 		"displayName": "MSD Basic Example (msd_basic) Example for SAM L21/L22 Family",
 		"projectName": "msd_basic_sam_l21_xpro",
 		"shortDescription": "This application demonstrates the use of the MSD Host Class Driver to write a file to a USB Flash drive. The application uses the USB Host_layer , MSD class driver and the MPLAB Harmony File System Framework to enumerate a USB Flash drive and to write a file to it.",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.0.0"
+				"semverRange": ">=3.1.0"
 			}
 		],
 		"dfp": {
@@ -42,10 +42,10 @@
 				"Development Kit", "SAM L21 Xplained Pro Evaluation Kit"
 			],
 			[
-				"Harmony", "Middleware", "USB", "MSD_BASIC"
+				"Harmony", "Middleware", "USB", "HOST_MSD_BASIC"
 			],
 			[
-				"Middleware", "USB", "MSD_BASIC"
+				"Middleware", "USB", "HOST_MSD_BASIC"
 			]
 		],
 		"peripherals": [
