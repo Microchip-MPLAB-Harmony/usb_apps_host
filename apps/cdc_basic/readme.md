@@ -26,6 +26,7 @@ Following table gives the details of project configurations, target device used,
 
 | Project Name                    | IDE    | Target Device       | Hardware / Configuration                                                   |
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
+| pic32cm_le00_curiosity_pro.X    | MPLABX | PIC32CM5164LE00100  | [PIC32CM Lx Curiosity Pro Board](#config_22)               |
 | pic32mz_ef_curiosity_2_0.X      | MPLABX | PIC32MZ2048EFM144    | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15) |
 | pic32mz_ef_sk.X                 | MPLABX | PIC32MZ2048EFH144   | [PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](#config_16)      |
 | pic32mz_ef_sk_freertos.X        | MPLABX | PIC32MZ2048EFH144   | [PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](#config_16)      |
@@ -53,21 +54,6 @@ Following table gives the details of project configurations, target device used,
 
 ## <a name="config_title"></a> Configuring the Hardware
 
-### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
-
-- Connect the USB device to the "TARGET USB" connector (J201) using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit). 
-- LED1 on the board is controlled by the attached USB CDC device.
-
-### <a name="config_13"></a> [Curiosity PIC32MX470 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/dm320103)
-- Install a jumper in the J13 header to drive the VBUS line in Host mode.
-- Connect the USB device to the USB micro-AB connector J12 using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit). 
-- LED1 on the board is controlled by the attached USB CDC device.
-
-### <a name="config_16"></a> [PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](https://www.microchip.com/Developmenttools/ProductDetails/DM320007)
-
-- Connect the device to the Type A connector J5, which is located on the top side of the starter kit.
-- LED1 on the board is controlled by the attached USB CDC device.
-
 ### <a name="config_2"></a> [SAMD21 Xplained Pro Board](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro)
 
 - Jumper titled "PA03 SELECT" must be shorted between PA03 and USB_ID (positions 2 and 3)
@@ -85,17 +71,17 @@ Following table gives the details of project configurations, target device used,
 - Connect the USB device to the "TARGET USB" connector using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit).
 - LED3 on the board is controlled by the attached USB CDC device.
 
-### <a name="config_6"></a> [SAMG55 Xplained Pro Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMG55-XPRO)
-
-- Chip Erase Jumper must be open.
-- Connect the USB device to the "TARGET USB" connector using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit).
-- LED0 on the board is controlled by the attached USB CDC device.
-
 ### <a name="config_5"></a> [SAMV71 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMV71-XULT)
 
 - Jumper titled "USB VBUS" must be shorted between PC09 and LED1 (positions 1 and 2)
 -- Connect the USB device to the "TARGET USB" connector using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit).
 - LED1 on the board is controlled by the attached USB CDC device.
+
+### <a name="config_6"></a> [SAMG55 Xplained Pro Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMG55-XPRO)
+
+- Chip Erase Jumper must be open.
+- Connect the USB device to the "TARGET USB" connector using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit).
+- LED0 on the board is controlled by the attached USB CDC device.
 
 ### <a name="config_9"></a> [SAM9X60-EK Evaluation Board](https://www.microchip.com/developmenttools/ProductDetails/DT100126)
 - Setup the SD card 
@@ -124,6 +110,21 @@ Following table gives the details of project configurations, target device used,
 - Connect the USB device to the USB Type-A connector "A5-USB-B" (J13).  
 - RGB LED on the board is controlled by the attached USB CDC device.
 
+### <a name="config_13"></a> [Curiosity PIC32MX470 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/dm320103)
+- Install a jumper in the J13 header to drive the VBUS line in Host mode.
+- Connect the USB device to the USB micro-AB connector J12 using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit). 
+- LED1 on the board is controlled by the attached USB CDC device.
+
+### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
+
+- Connect the USB device to the "TARGET USB" connector (J201) using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit). 
+- LED1 on the board is controlled by the attached USB CDC device.
+
+### <a name="config_16"></a> [PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](https://www.microchip.com/Developmenttools/ProductDetails/DM320007)
+
+- Connect the device to the Type A connector J5, which is located on the top side of the starter kit.
+- LED1 on the board is controlled by the attached USB CDC device.
+
 ### <a name="config_18"></a> [SAMA5D27 SOM1 Kit1](https://www.microchip.com/developmenttools/ProductDetails/atsama5d27-som1-ek1)
 
 - Setup the SD card 
@@ -135,7 +136,6 @@ Following table gives the details of project configurations, target device used,
 - Connect the USB device to the USB-B Type-C connector (J19) on the board. 
 - RGB LED on the board is controlled by the attached USB CDC device.
   ![SAM9X60-EK Evaluation Board](images/SAMA5D2_SOM1_EK_USB.png)
-
 
 ### <a name="config_19"></a> [ATSAMA5D27-WLSOM1 Evaluation Kit ](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320117)
 
@@ -162,6 +162,12 @@ Following table gives the details of project configurations, target device used,
 - Connect the USB device to the USB Host Type-A connector (J9) on the board.
   Alternatively, the USB Device could be connected to the Type-C connector (J8) or micro A/B connector (J7). 
 - RGB LED on the board is controlled by the attached USB CDC device.
+
+### <a name="config_22"></a> [Curiosity Pro PIC32CM LE00 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DMXXXXX)
+
+- Powered the board by connecting an host to "DEBUG USB" (J300) connector.
+- Connect the USB device to the USB Host "TARGET USB" (J200) using a USB Type-A Female to micro-B male cable (This cable is not included in the kit).
+- LED0 on the board is controlled by the attached USB CDC device.
 
 ## Running the Application
 
