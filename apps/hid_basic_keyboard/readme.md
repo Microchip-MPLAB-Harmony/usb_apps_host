@@ -26,31 +26,24 @@ Following table gives the details of project configurations, target device used,
 
 | Project Name                    | IDE    | Target Device       | Hardware / Configuration                                                   |
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
-| pic32mz_ef_curiosity_2_0.X      | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)                   |
-| sam_9x60_ek.X                   | MPLABX | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   |
-| sam_9x60_ek_freertos.X                   | MPLABX | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   |
-| sam_a5d2_xult.X           | MPLABX    | ATSAMA5D27C         | [SAMA5D2 Xplained Ultra Board](#config_10)                                |
-| sam_a5d2_xult_freertos.X           | MPLABX   | ATSAMA5D27C         | [SAMA5D2 Xplained Ultra Board](#config_10)                                |
-| sam_a5d27_som1_ek.X           | MPLABX    | ATSAMA5D27C         | [SAMA5D27 SOM1 Kit1](#config_18)                                |
-| sam_a5d27_som1_ek_freertos.X           | MPLABX   | ATSAMA5D27C         | [SAMA5D27 SOM1 Kit1](#config_18)                                |
-| sam_a5d27_wlsom1_ek1.X           | MPLABX    | ATSAMA5D27C         | [ATSAMA5D27 WLSOM1 EK1](#config_19)                                |
-| sam_a5d27_wlsom1_ek1_freertos.X           | MPLABX   | ATSAMA5D27C         | [ATSAMA5D27 WLSOM1 EK1](#config_19)                                |
-| sam_a7g5_ek.X                   | MPLABX | SAMA7G54            | [SAMA7G5 EK Board](#config_21)                                    |
-| sam_d21_xpro.X                  | MPLABX | ATSAMD21J18A        | [SAMD21 Xplained Pro Board](#config_2)                                    |
-| sam_e70_xult.X                  | MPLABX | ATSAME70Q21B        | [SAME70 Xplained Ultra Board](#config_4)                                  |
-| sam_e70_xult_freertos.X         | MPLABX | ATSAME70Q21B        | [SAME70 Xplained Ultra Board](#config_4)                                  |
-| sam_g55_xpro.X                  | MPLABX | ATSAMG55J19         | [SAMG55 Xplained Pro Board](#config_6)                                    |
-| sam_g55_xpro_freertos.X         | MPLABX | ATSAMG55J19         | [SAMG55 Xplained Pro Board](#config_6)                                    |
+| pic32cm_le00_curiosity_pro.X    | MPLABX | PIC32CM5164LE00100  | [PIC32CM Lx Curiosity Pro Board](#config_22)               |
+| pic32mz_ef_curiosity_2_0.X      | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)   |
+| sam_9x60_ek.X                   | MPLABX | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                   |
+| sam_9x60_ek_freertos.X          | MPLABX | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                   |
+| sam_a5d2_xult.X                 | MPLABX | ATSAMA5D27C         | [SAMA5D2 Xplained Ultra Board](#config_10)                 |
+| sam_a5d2_xult_freertos.X        | MPLABX | ATSAMA5D27C         | [SAMA5D2 Xplained Ultra Board](#config_10)                 |
+| sam_a5d27_som1_ek.X             | MPLABX | ATSAMA5D27C         | [SAMA5D27 SOM1 Kit1](#config_18)                           |
+| sam_a5d27_som1_ek_freertos.X    | MPLABX | ATSAMA5D27C         | [SAMA5D27 SOM1 Kit1](#config_18)                           |
+| sam_a5d27_wlsom1_ek1.X          | MPLABX | ATSAMA5D27C         | [ATSAMA5D27 WLSOM1 EK1](#config_19)                        |
+| sam_a5d27_wlsom1_ek1_freertos.X | MPLABX | ATSAMA5D27C         | [ATSAMA5D27 WLSOM1 EK1](#config_19)                        |
+| sam_a7g5_ek.X                   | MPLABX | SAMA7G54            | [SAMA7G5 EK Board](#config_21)                             |
+| sam_d21_xpro.X                  | MPLABX | ATSAMD21J18A        | [SAMD21 Xplained Pro Board](#config_2)                     |
+| sam_e70_xult.X                  | MPLABX | ATSAME70Q21B        | [SAME70 Xplained Ultra Board](#config_4)                   |
+| sam_e70_xult_freertos.X         | MPLABX | ATSAME70Q21B        | [SAME70 Xplained Ultra Board](#config_4)                   |
+| sam_g55_xpro.X                  | MPLABX | ATSAMG55J19         | [SAMG55 Xplained Pro Board](#config_6)                     |
+| sam_g55_xpro_freertos.X         | MPLABX | ATSAMG55J19         | [SAMG55 Xplained Pro Board](#config_6)                     |
 
 ## <a name="config_title"></a> Configuring the Hardware
-
-### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
-
-- A commercially available USB Keyboard is required to run this demonstration application. 
-- Connect the USB Keyboard to the "TARGET USB" connector (J201) using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit). 
-- The demonstration uses the PKOB4 Serial Interface to transfer messages on a PC. 
-- LED1 indicates a Device Connection (Attached device has been successfully enumerated and configured). This LED is also toggled on the Keyboard "CapsLock" Button press event.
-
 
 ### <a name="config_2"></a> [SAMD21 Xplained Pro Board](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro)
 
@@ -59,7 +52,6 @@ Following table gives the details of project configurations, target device used,
 - Use "TARGET USB" connector on the board to connect the USB Keyboard to the USB Host. A USB Type-A Female to micro-B male cable will be needed to connect the device (This cable is not included in the kit). 
 - The demonstration uses the EDBG Serial Interface to transfer demonstration application messages on a PC. 
 - LED0 indicates a Device Connection. (Attached device has been successfully enumerated and configured). This LED is also toggled on Keyboard "CapsLock" press event.
-
 
 ### <a name="config_4"></a> [SAME70 Xplained Ultra Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
 
@@ -92,7 +84,6 @@ Following table gives the details of project configurations, target device used,
 - Connect the USB device to the Type-A connector (J8).
 - LED D1 indicates a Device Connection (Attached device has been successfully enumerated and configured). This LED is also toggled on Keyboard "CapsLock" press event.
 
-
     ![SAM9X60-EK Evaluation Board](images/sam9x60_evk.png)
 
     **Note: Reset push button on SAM9X60 EK is labeled as SW3**
@@ -110,6 +101,13 @@ Following table gives the details of project configurations, target device used,
 - The demonstration uses the EDBG USB Micro-B port J14 to transfer demonstration application messages on a PC. 
 - RGB LED indicates a Device Connection (Attached device has been successfully enumerated and configured). This LED is also toggled on Keyboard "CapsLock" press event.
 
+### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
+
+- A commercially available USB Keyboard is required to run this demonstration application. 
+- Connect the USB Keyboard to the "TARGET USB" connector (J201) using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit). 
+- The demonstration uses the PKOB4 Serial Interface to transfer messages on a PC. 
+- LED1 indicates a Device Connection (Attached device has been successfully enumerated and configured). This LED is also toggled on the Keyboard "CapsLock" Button press event.
+
 ### <a name="config_18"></a> [SAMA5D27 SOM1 Kit1](https://www.microchip.com/developmenttools/ProductDetails/atsama5d27-som1-ek1)
 
 - A commercially available USB Keyboard is required to run this demonstration application.
@@ -124,7 +122,6 @@ Following table gives the details of project configurations, target device used,
 - RGB LED indicates a Device Connection (Attached device has been successfully enumerated and configured). This LED is also toggled on Keyboard "CapsLock" press event. 
 
   ![SAM9X60-EK Evaluation Board](images/SAMA5D2_SOM1_EK_USB.png)
-
 
 ### <a name="config_19"></a> [ATSAMA5D27-WLSOM1 Evaluation Kit ](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320117)
 
@@ -155,6 +152,12 @@ Following table gives the details of project configurations, target device used,
   Alternatively, the USB Device could be connected to the Type-C connector (J8) or micro A/B connector (J7). 
 - The demonstration uses the Debug UART port (J24) to transfer demonstration application messages on a PC. 
 - RGB LED indicates a Device Connection (Attached device has been successfully enumerated and configured). This LED is also toggled on Keyboard "CapsLock" press event. 
+
+### <a name="config_22"></a> [Curiosity Pro PIC32CM LE00 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DMXXXXX)
+
+- Powered the board by connecting an host to "DEBUG USB" (J300) connector.
+- Connect the USB device to the USB Host "TARGET USB" (J200) using a USB Type-A Female to micro-B male cable (This cable is not included in the kit).
+- LED0 indicates a Device Connection (Attached device has been successfully enumerated and configured). This LED is also toggled on the Keyboard "CapsLock" Button press event.
 
 ## Running the Application
 
