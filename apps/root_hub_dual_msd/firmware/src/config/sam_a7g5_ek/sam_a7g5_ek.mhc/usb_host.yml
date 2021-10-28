@@ -1,0 +1,22 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: usb_host}
+children:
+- type: Symbols
+  children:
+  - type: Integer
+    attributes: {id: CONFIG_USB_HOST_DEVICE_NUMNBER}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '3'}
+  - type: Integer
+    attributes: {id: CONFIG_USB_HOST_TPL_ENTRY_NUMBER}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: usb_host, value: '1'}
+- type: ElementPosition
+  attributes: {x: '185', y: '208', id: usb_host}

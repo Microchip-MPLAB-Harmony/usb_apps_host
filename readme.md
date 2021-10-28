@@ -44,7 +44,7 @@ The following applications are provided to demonstrate the typical or interestin
 | HUB CDC HID               | This application creates a USB Host that can recognize and enumerate a CDC Emulator USB Device and a HID USB Mouse connected via an external Hub. The host will demonstrate the communication from the CDC emulator device and the HID mouse. |
 | HUB MSD                   | This application uses USB Host stack and the Harmony Filesystem Service to copy a file from a source USB pen drive to a target USB pen drive. |
 | MSD Basic                 | This application demonstrates the use of the MSD Host Class Driver to write a file to a USB Flash drive. The application uses the USB Host_layer , MSD class driver and the MPLAB Harmony File System Framework to enumerate a USB Flash drive and to write a file to it. |
-
+| ROOT HUB DUAL MSD         | This application demonstrates the use of the root hub of the host.
 ____
 
 [![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/usb_apps_host/blob/master/mplab_harmony_license.md)
