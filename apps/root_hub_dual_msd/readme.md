@@ -27,8 +27,26 @@ Following table gives the details of project configurations, target device used,
 | Project Name                    | IDE    | Target Device       | Hardware / Configuration                                                   |
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
 | sam_a7g5_ek.X                   | MPLABX | SAMA7G54            | [SAMA7G5 EK Board](#config_21)                                             |
+| sam_9x60_ek.X                   | MPLABX | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   |
 
 ## <a name="config_title"></a> Configuring the Hardware
+
+### <a name="config_9"></a> [SAM9X60-EK Evaluation Board](https://www.microchip.com/developmenttools/ProductDetails/DT100126)
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x60_ek.X/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SDMMC connector J4 on the board.
+    - Reset the board by pressing the Push Button SW3. 
+- Jumpers J20, J21, and J13 must be open.
+- Jumper J2 and J3 must be shorted.
+- Connect the External Power Jack (J1) to a 5V power supply. 
+- Connect 2 USB devices to the USB Host on the board:
+    - Stacked type-A USB (J8A)
+    - Stacked type-A USB (J8B)
+- LED D1 on the board indicates the file write is complete.
+    ![SAM9X60-EK Evaluation Board](images/sam9x60_evk.png)
+
+    **Note: Reset push button on SAM9X60 EK is labeled as SW3**
 
 ### <a name="config_21"></a> [SAMA7G5-EK Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/TOBEADDED)
 
@@ -50,9 +68,8 @@ Following table gives the details of project configurations, target device used,
 This application demonstrates the use of the MSD Host Class Driver to write a file to USB Flash drive. The application uses the USB Host_layer, MSD class driver and the MPLAB Harmony File System Framework to enumerate a USB Flash drive and to write a file to it.
 
 1. Open the project with appropriate IDE. Compile the project and program the target device.
-1. With the code running, attach a USB Flash drive to the Host connector on the desired starter kit. 
-1. The demonstration application will then create a file named file.txt. It will then write the text "Hello World" to this file, and then close the file. 
-1. The LED on the selected hardware will indicate the status of the operation. Refer to the Configuring the Hardware instruction for details. 
-1. The USB Flash drive can then be attached to a USB Host personal computer to verify the demonstration application operation. 
-1. Steps 3 through 6 can be repeated. 
-1. If the USB Flash drive already contains a file with the name file.txt, the demonstration application will append the text "Hello World" to the end of the file contents.
+1. With the code running, attach a USB Flash drive to the Host connector on the desired starter kit containing a non empty file named file.txt
+1. Attach a second empty USB Flash drive to another Host connector on the desired starter kit
+1. The demonstration application will then copy the file.txt from the first USB Flash drive to the second. 
+1. The LED on the selected hardware will indicate the status of the operation. 
+1. The second USB Flash drive can then be attached to a USB Host personal computer to verify the demonstration application operation. 
