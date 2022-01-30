@@ -56,7 +56,7 @@
 */
 
 #include "user.h"
-#include "toolchain_specifics.h"
+#include "device.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -103,7 +103,6 @@ extern "C" {
 #define SYS_FS_USE_LFN                    1
 #define SYS_FS_FILE_NAME_LEN              255
 #define SYS_FS_CWD_STRING_LEN             1024
-#define SYS_FS_ALIGNED_BUFFER_LEN         512
 
 /* File System RTOS Configurations*/
 #define SYS_FS_STACK_SIZE                 1024
@@ -113,6 +112,8 @@ extern "C" {
 #define SYS_FS_FAT_READONLY               false
 #define SYS_FS_FAT_CODE_PAGE              437
 #define SYS_FS_FAT_MAX_SS                 SYS_FS_MEDIA_MAX_BLOCK_SIZE
+#define SYS_FS_FAT_ALIGNED_BUFFER_LEN     512
+
 
 
 
@@ -197,7 +198,7 @@ extern "C" {
 /* Number of Endpoints used */
 
 /* Total number of devices to be supported */
-#define USB_HOST_DEVICES_NUMBER                             1
+#define USB_HOST_DEVICES_NUMBER                             1 
 
 /* Target peripheral list entries */
 #define  USB_HOST_TPL_ENTRIES                               1 
