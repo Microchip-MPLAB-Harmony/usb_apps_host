@@ -56,7 +56,7 @@
 */
 
 #include "user.h"
-#include "toolchain_specifics.h"
+#include "device.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -94,13 +94,14 @@ extern "C" {
 #define SYS_FS_USE_LFN                    1
 #define SYS_FS_FILE_NAME_LEN              255
 #define SYS_FS_CWD_STRING_LEN             1024
-#define SYS_FS_ALIGNED_BUFFER_LEN         512
 
 
 #define SYS_FS_FAT_VERSION                "v0.14a"
 #define SYS_FS_FAT_READONLY               false
 #define SYS_FS_FAT_CODE_PAGE              437
 #define SYS_FS_FAT_MAX_SS                 SYS_FS_MEDIA_MAX_BLOCK_SIZE
+#define SYS_FS_FAT_ALIGNED_BUFFER_LEN     512
+
 
 
 
@@ -152,7 +153,7 @@ extern "C" {
 #define DRV_USBHSV1_HOST_NAK_LIMIT                          2000 
 
 /* Maximum Number of pipes */
-#define DRV_USBHSV1_HOST_PIPES_NUMBER                       10  
+#define DRV_USBHSV1_HOST_PIPES_NUMBER                       10   
 
 /* Attach Debounce duration in milli Seconds */ 
 #define DRV_USBHSV1_HOST_ATTACH_DEBOUNCE_DURATION           500
@@ -173,7 +174,7 @@ extern "C" {
 #define DRV_USBHSV1_ENDPOINTS_NUMBER                        1
 
 /* Total number of devices to be supported */
-#define USB_HOST_DEVICES_NUMBER                             1
+#define USB_HOST_DEVICES_NUMBER                             1 
 
 /* Target peripheral list entries */
 #define  USB_HOST_TPL_ENTRIES                               1 
