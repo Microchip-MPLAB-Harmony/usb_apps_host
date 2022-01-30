@@ -61,6 +61,12 @@ children:
   - type: Boolean
     attributes: {id: USART_INTERRUPT_MODE}
     children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: label}
+        children:
+        - {type: Value, value: '---'}
     - type: Values
       children:
       - type: Dynamic
