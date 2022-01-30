@@ -114,20 +114,18 @@ DRV_USB_EHCI_INIT drvUSBEHCIInit =
     /* USB Host Power Enable. USB Driver uses this function to Enable the VBUS */ 
     .portPowerEnable = DRV_USB_VBUSPowerEnable,
     
-    /* Root hub available current in milliamperes */    
+    /* Root hub available current in milliamperes */
     .rootHubAvailableCurrent = 500,
 
     .companionDriverIndex = DRV_USB_OHCI_INDEX_0
-
 };
 
 DRV_USB_OHCI_INIT drvUSBOHCIInit =
 {
     /* Interrupt Source for USB module */
     .interruptSource = (INT_SOURCE)41,
-
     /* USB base address */
-    .usbID = ((UhpOhci *)UHPHS_OHCI_ADDR),
+    .usbID = ((UhpOhci*)UHPHS_OHCI_ADDR),
 
      /* Ports Selection */ 
     .bmPortSelect = 0x02,
@@ -190,12 +188,12 @@ void SYS_Initialize ( void* data )
 {
 
   
+    MMU_Initialize();
     CLK_Initialize();
 	PIO_Initialize();
 
 
 
-    MMU_Initialize();
     Matrix_Initialize();
 
     AIC_INT_Initialize();
