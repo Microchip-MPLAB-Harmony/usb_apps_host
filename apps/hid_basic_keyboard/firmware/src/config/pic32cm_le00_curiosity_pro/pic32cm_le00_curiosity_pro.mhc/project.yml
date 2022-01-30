@@ -167,13 +167,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: B1BE78DA4858C586B72A7824E2410F13
-- generatedChecksum: 62E7C9063F81194D97F866A309FAF38D
+- generatedChecksum: 93ABAECAF5E783909EE31E888595D7D7
   logicalPath: config/pic32cm_le00_curiosity_pro/usb/src
   name: usb_host_hid.c
   physicalPath: usb/src
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 62E7C9063F81194D97F866A309FAF38D
+  userChecksum: 93ABAECAF5E783909EE31E888595D7D7
 - generatedChecksum: FBFB61AEBB00D89CE267E01C92CE8284
   logicalPath: config/pic32cm_le00_curiosity_pro/usb/src
   name: usb_host_hid_keyboard.c
@@ -307,13 +307,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 52F91AC0727F2311EDA0E3BAA7719A9F
-- generatedChecksum: DC9DF0548A3BDD0E5A6A54FD1162E58A
+- generatedChecksum: C37100C849FC78E4EB5A384543F0E3C9
   logicalPath: config/pic32cm_le00_curiosity_pro
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: DC9DF0548A3BDD0E5A6A54FD1162E58A
+  userChecksum: C37100C849FC78E4EB5A384543F0E3C9
 - generatedChecksum: 0FA8F383A68E6909F4F1D040B920F2F2
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: core_cm23.h
@@ -1084,13 +1084,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: F258661D72F9E844BF936D43BF859BE7
-- generatedChecksum: F127C67A3E33E5788C0F057F648EE57C
+- generatedChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
   logicalPath: config/pic32cm_le00_curiosity_pro/usb
   name: usb_host.h
   physicalPath: usb
   security: NON_SECURE
   type: HEADER
-  userChecksum: F127C67A3E33E5788C0F057F648EE57C
+  userChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
 - generatedChecksum: 6EBC5E4D06FC96A02ADF3B7416957DD6
   logicalPath: config/pic32cm_le00_curiosity_pro/usb
   name: usb_host_client_driver.h
