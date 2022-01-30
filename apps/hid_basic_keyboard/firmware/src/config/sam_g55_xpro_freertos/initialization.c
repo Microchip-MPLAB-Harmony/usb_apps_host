@@ -171,7 +171,6 @@ DRV_USB_OHCI_INIT drvUSBOHCIInit =
 {
     /* Interrupt Source for USB module */
     .interruptSource = (INT_SOURCE)UHP_IRQn,
-
     /* USB base address */
     .usbID = ((UhpOhci*)0x20400000),   
 
