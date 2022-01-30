@@ -90,18 +90,18 @@
     #define UHPHS_PORTSC_N_PED_Msk  UHPHS_PORTSC_PED_Msk
 
 #ifdef _SAMA7G54_H_
-    /* Specific to SAMA7G54 */
-    #define PMC_UCKR_UPLLEN() \
-        UDPHSA_REGS->UDPHS_CTRL &= ~UDPHS_CTRL_EN_UDPHS_Msk; \
-        for(i = 0; i < DRV_USB_EHCI_PORT_NUMBERS; i ++) \
-        { \
-            if(drvInit->bmPortSelect & (1 << i)) \
+        /* Specific to SAMA7G54 */
+        #define PMC_UCKR_UPLLEN() \
+            UDPHSA_REGS->UDPHS_CTRL &= ~UDPHS_CTRL_EN_UDPHS_Msk; \
+            for(i = 0; i < DRV_USB_EHCI_PORT_NUMBERS; i ++) \
             { \
-                RSTC_REGS->RSTC_GRSTR &= ~(1 << (4+i)); \
-            } \
-        }
+                if(drvInit->bmPortSelect & (1 << i)) \
+                { \
+                    RSTC_REGS->RSTC_GRSTR &= ~(1 << (4+i)); \
+                } \
+            }
 
-    #define IS_LOCKU_ENABLE()  1
+        #define IS_LOCKU_ENABLE()  1
 #else
         /* Specific to SAM9X60 */
         #define PMC_PCR_GCKCSS_UPLL_CLK  PMC_PCR_GCLKCSS(PMC_PCR_GCLKCSS_UPLL_Val) 
