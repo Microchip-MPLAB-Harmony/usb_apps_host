@@ -84,8 +84,6 @@ SYS_FS_Tasks();
     	/* USB Host Task Routine */ 
      USB_HOST_Tasks(sysObj.usbHostObject0);
 
-    /* USB FS Driver Task Routine */ 
-    DRV_USBFS_Tasks(sysObj.drvUSBFSObject);
 
 
 
