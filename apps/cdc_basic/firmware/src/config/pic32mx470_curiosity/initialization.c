@@ -151,6 +151,7 @@ const DRV_USBFS_INIT drvUSBFSInit =
 	/* Interrupt Source for USB module */
 	.interruptSource = INT_SOURCE_USB,
 
+
     
 	/* USB Controller to operate as USB Host */
     .operationMode = DRV_USBFS_OPMODE_HOST,
