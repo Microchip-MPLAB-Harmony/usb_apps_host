@@ -56,7 +56,7 @@
 */
 
 #include "user.h"
-#include "toolchain_specifics.h"
+#include "device.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -103,6 +103,7 @@ extern "C" {
 
 
 
+
 #define SYS_FS_MEDIA_TYPE_IDX0 				SYS_FS_MEDIA_TYPE_MSD
 #define SYS_FS_TYPE_IDX0 					FAT
 					
@@ -140,10 +141,10 @@ extern "C" {
 // **************************************************************************
 
 /* Number of Endpoints used */
-#define DRV_USBFS_ENDPOINTS_NUMBER 							1
+#define DRV_USBFS_ENDPOINTS_NUMBER                          1
 
 /* Total number of devices to be supported */
-#define USB_HOST_DEVICES_NUMBER                             1
+#define USB_HOST_DEVICES_NUMBER                             1 
 
 /* Target peripheral list entries */
 #define  USB_HOST_TPL_ENTRIES                               1 
@@ -186,7 +187,7 @@ extern "C" {
 #define DRV_USBFS_HOST_NAK_LIMIT                          2000 
 
 /* Maximum Number of pipes */
-#define DRV_USBFS_HOST_PIPES_NUMBER                       10 
+#define DRV_USBFS_HOST_PIPES_NUMBER                       10  
 
 /* Attach Debounce duration in milli Seconds */ 
 #define DRV_USBFS_HOST_ATTACH_DEBOUNCE_DURATION           500
