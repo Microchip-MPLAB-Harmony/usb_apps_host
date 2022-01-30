@@ -342,13 +342,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: ACE577277E146F49B92285A8CD8E2D1D
-- generatedChecksum: 39F0C26EF1AB95000A0FBBF3B64F59F7
+- generatedChecksum: 21707F23A35C0B5874C674880B9D5933
   logicalPath: config/sam_a7g5_ek
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 39F0C26EF1AB95000A0FBBF3B64F59F7
+  userChecksum: 21707F23A35C0B5874C674880B9D5933
 - generatedChecksum: 32D6F5036C919DE32EFC951936B81657
   logicalPath: packs/CMSIS/CMSIS/Core_A/Include
   name: core_ca.h
@@ -1623,13 +1623,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 6C4A6859DB16EA8C046F995C6B6C1C6F
-- generatedChecksum: F127C67A3E33E5788C0F057F648EE57C
+- generatedChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
   logicalPath: config/sam_a7g5_ek/usb
   name: usb_host.h
   physicalPath: usb
   security: NON_SECURE
   type: HEADER
-  userChecksum: F127C67A3E33E5788C0F057F648EE57C
+  userChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
 - generatedChecksum: 6EBC5E4D06FC96A02ADF3B7416957DD6
   logicalPath: config/sam_a7g5_ek/usb
   name: usb_host_client_driver.h
