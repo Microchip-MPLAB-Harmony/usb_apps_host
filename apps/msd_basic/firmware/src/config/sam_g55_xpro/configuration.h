@@ -56,7 +56,7 @@
 */
 
 #include "user.h"
-#include "toolchain_specifics.h"
+#include "device.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -100,6 +100,7 @@ extern "C" {
 #define SYS_FS_FAT_READONLY               false
 #define SYS_FS_FAT_CODE_PAGE              437
 #define SYS_FS_FAT_MAX_SS                 SYS_FS_MEDIA_MAX_BLOCK_SIZE
+
 
 
 
@@ -170,7 +171,7 @@ extern "C" {
 /* Number of Endpoints used */
 
 /* Total number of devices to be supported */
-#define USB_HOST_DEVICES_NUMBER                             1
+#define USB_HOST_DEVICES_NUMBER                             1 
 
 /* Target peripheral list entries */
 #define  USB_HOST_TPL_ENTRIES                               1 

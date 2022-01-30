@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <configurationDescriptor version="65">
   <logicalFolder displayName="root" name="root" projectFiles="true">
     <logicalFolder displayName="Header Files" name="HeaderFiles" projectFiles="true">
@@ -143,6 +143,7 @@
             <itemPath>../src/packs/ATSAMG55J19_DFP/component/uhp.h</itemPath>
             <itemPath>../src/packs/ATSAMG55J19_DFP/component/usart.h</itemPath>
             <itemPath>../src/packs/ATSAMG55J19_DFP/component/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAMG55J19_DFP/component/fuses.h</itemPath>
           </logicalFolder>
           <logicalFolder displayName="pio" name="f2" projectFiles="true">
             <itemPath>../src/packs/ATSAMG55J19_DFP/pio/samg55j19.h</itemPath>
@@ -204,6 +205,7 @@
             <itemPath>../src/packs/ATSAMG55J19_DFP/instance/usart6.h</itemPath>
             <itemPath>../src/packs/ATSAMG55J19_DFP/instance/usart7.h</itemPath>
             <itemPath>../src/packs/ATSAMG55J19_DFP/instance/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAMG55J19_DFP/instance/fuses.h</itemPath>
           </logicalFolder>
           <itemPath>../src/packs/ATSAMG55J19_DFP/samg55j19.h</itemPath>
         </logicalFolder>
@@ -356,7 +358,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMG_DFP" vendor="Microchip" version="3.4.57"/>
+        <pack name="SAMG_DFP" vendor="Microchip" version="3.5.65"/>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
       </packs>
       <ScriptingSettings>
