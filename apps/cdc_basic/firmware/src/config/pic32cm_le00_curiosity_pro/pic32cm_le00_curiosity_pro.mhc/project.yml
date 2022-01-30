@@ -6,13 +6,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: D01D181230B84E9366778A072A47EE2C
+- generatedChecksum: 23D9CC4BC1D74FB2B7D4194BA5796195
   logicalPath: config/pic32cm_le00_curiosity_pro/bsp
   name: bsp.c
   physicalPath: bsp
   security: NON_SECURE
   type: SOURCE
-  userChecksum: D01D181230B84E9366778A072A47EE2C
+  userChecksum: 23D9CC4BC1D74FB2B7D4194BA5796195
 - generatedChecksum: 941C09024124A4937C0E368A25C140DE
   logicalPath: config/pic32cm_le00_curiosity_pro/driver/usb/usbfsv1/src
   name: drv_usbfsv1.c
@@ -209,13 +209,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: null
-- generatedChecksum: 8B5B66C2C6FE290804560BCD5ECCB714
+- generatedChecksum: D36C16F0023FC806AD41570840382BB8
   logicalPath: config/pic32cm_le00_curiosity_pro/bsp
   name: bsp.h
   physicalPath: bsp
   security: NON_SECURE
   type: HEADER
-  userChecksum: 8B5B66C2C6FE290804560BCD5ECCB714
+  userChecksum: D36C16F0023FC806AD41570840382BB8
 - generatedChecksum: 14F1AD56D242EFD0AF76849C6ADFECC4
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cachel1_armv7.h
@@ -286,13 +286,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 52F91AC0727F2311EDA0E3BAA7719A9F
-- generatedChecksum: 34B791509F6440B92B6387122B3187C2
+- generatedChecksum: 4F6FBD5C62FC74F3F6CF085A4EFC983B
   logicalPath: config/pic32cm_le00_curiosity_pro
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 34B791509F6440B92B6387122B3187C2
+  userChecksum: 4F6FBD5C62FC74F3F6CF085A4EFC983B
 - generatedChecksum: 0FA8F383A68E6909F4F1D040B920F2F2
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: core_cm23.h
@@ -1035,13 +1035,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 6C4A6859DB16EA8C046F995C6B6C1C6F
-- generatedChecksum: F127C67A3E33E5788C0F057F648EE57C
+- generatedChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
   logicalPath: config/pic32cm_le00_curiosity_pro/usb
   name: usb_host.h
   physicalPath: usb
   security: NON_SECURE
   type: HEADER
-  userChecksum: F127C67A3E33E5788C0F057F648EE57C
+  userChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
 - generatedChecksum: 5FD5D906841764168AD601EEFBFBEC76
   logicalPath: config/pic32cm_le00_curiosity_pro/usb
   name: usb_host_cdc.h
