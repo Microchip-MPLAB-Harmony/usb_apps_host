@@ -154,7 +154,7 @@ extern "C" {
 /* Number of Endpoints used */
 
 /* Total number of devices to be supported */
-#define USB_HOST_DEVICES_NUMBER                             1
+#define USB_HOST_DEVICES_NUMBER                             1 
 
 /* Target peripheral list entries */
 #define  USB_HOST_TPL_ENTRIES                               1 
