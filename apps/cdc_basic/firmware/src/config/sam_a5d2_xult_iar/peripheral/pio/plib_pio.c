@@ -60,6 +60,8 @@ void PIO_Initialize ( void )
 	PIOA_REGS->PIO_MSKR = 0x80000000LU;
 	PIOA_REGS->PIO_CFGR = 0x0U;
 	
+ /* Port A Latch configuration */
+	PIOA_REGS->PIO_CODR = 0x80000000LU;
 
  /* Port B Peripheral function GPIO configuration */
 	PIOB_REGS->PIO_MSKR = 0x661U;
@@ -87,7 +89,7 @@ void PIO_Initialize ( void )
 	
  /* Port B Latch configuration */
 	PIOB_REGS->PIO_SODR = 0x61U;
-	
+	PIOB_REGS->PIO_CODR = 0x661U & ~0x61U;
 
 
  /* Port D Peripheral function A configuration */
@@ -102,6 +104,8 @@ void PIO_Initialize ( void )
 	PIOD_REGS->PIO_MSKR = 0x800000U;
 	PIOD_REGS->PIO_CFGR = (PIOD_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x500U;
 	
+ /* Port D Latch configuration */
+	PIOD_REGS->PIO_CODR = 0x800000U;
 
 
 
