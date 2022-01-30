@@ -220,9 +220,9 @@ struct _DRV_USART_INIT
     /* Pointer to the transmit and receive buffer pool */
     uintptr_t                               bufferObjPool;
 
-    const DRV_USART_INTERRUPT_SOURCES*      interruptSources;    
-	
-	DRV_USART_DATA_BIT                      dataWidth;
+    const DRV_USART_INTERRUPT_SOURCES*      interruptSources;
+
+    DRV_USART_DATA_BIT                      dataWidth;
 };
 
 //DOM-IGNORE-BEGIN
