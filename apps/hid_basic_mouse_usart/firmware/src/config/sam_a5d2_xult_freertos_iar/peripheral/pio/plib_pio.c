@@ -77,6 +77,8 @@ void PIO_Initialize ( void )
 	PIOB_REGS->PIO_MSKR = 0x400U;
 	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x100U;
 	
+ /* Port B Latch configuration */
+	PIOB_REGS->PIO_CODR = 0x661U;
 
 
  /* Port D Peripheral function A configuration */
@@ -91,6 +93,8 @@ void PIO_Initialize ( void )
 	PIOD_REGS->PIO_MSKR = 0x800000U;
 	PIOD_REGS->PIO_CFGR = (PIOD_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x100U;
 	
+ /* Port D Latch configuration */
+	PIOD_REGS->PIO_CODR = 0x800000U;
 
 
 
