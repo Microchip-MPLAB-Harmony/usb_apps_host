@@ -129,13 +129,15 @@ const SYS_FS_FUNCTIONS FatFsFunctions =
 };
 
 
+
 const SYS_FS_REGISTRATION_TABLE sysFSInit [ SYS_FS_MAX_FILE_SYSTEM_TYPE ] =
 {
     {
         .nativeFileSystemType = FAT,
         .nativeFileSystemFunctions = &FatFsFunctions
-    }
+    },
 };
+
 
 // </editor-fold>
 
@@ -147,7 +149,7 @@ const SYS_FS_REGISTRATION_TABLE sysFSInit [ SYS_FS_MAX_FILE_SYSTEM_TYPE ] =
 
 const DRV_USBFSV1_INIT drvUSBInit =
 {
-    /* Interrupt Source for USB module */
+    /* Interrupt Source for USB module */ 
     .interruptSource = USB_IRQn,
 
     /* System module initialization */
@@ -229,7 +231,7 @@ const SYS_TIME_INIT sysTimeInitData =
 void SYS_Initialize ( void* data )
 {
 
-    NVMCTRL_REGS->NVMCTRL_CTRLB = NVMCTRL_CTRLB_RWS(3);
+    NVMCTRL_REGS->NVMCTRL_CTRLB = NVMCTRL_CTRLB_RWS(3UL);
 
   
     PORT_Initialize();
