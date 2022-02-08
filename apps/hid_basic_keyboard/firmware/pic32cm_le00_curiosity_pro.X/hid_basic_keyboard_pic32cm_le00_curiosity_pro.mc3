@@ -1,4 +1,4 @@
-<config configName="pic32cm_le00_curiosity_pro" projectName="hid_basic_keyboard_pic32cm_le00_curiosity_pro" configVersion="1.1" device="PIC32CM5164LE00100" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.3.3">
+<config configName="pic32cm_le00_curiosity_pro" projectName="hid_basic_keyboard_pic32cm_le00_curiosity_pro" configVersion="1.1" device="PIC32CM5164LE00100" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.1">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -67,7 +67,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.0.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.0.8"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -1146,7 +1146,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_59_FUNCTION_NAME&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;LED&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;LED1&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1521,6 +1521,17 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_75_PERIPHERAL_FUNCTION&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;User dnOrder=&quot;0&quot; value=&quot;G&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_85_FUNCTION_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_85_FUNCTION_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;LED2&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -3455,7 +3466,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\peripheral\clock\plib_clock.c</file>
-         <hash>4e17198cce97f7d48be1e7da7da20bdfad08c1be1c3d24e805df5a17c61e21f0</hash>
+         <hash/>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164LE00100_DFP\component\mclk.h</file>
@@ -3475,7 +3486,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\definitions.h</file>
-         <hash>a306d43aa189d2b474a5fefe6585ca7c2b1daa8ced03f4b5be2cb43be72969a3</hash>
+         <hash/>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164LE00100_DFP\component\supc.h</file>
@@ -3499,7 +3510,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\initialization.c</file>
-         <hash>0908b39830c04132237819976fa383990568c7d8943276f7755bdf2c9caeebb2</hash>
+         <hash/>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164LE00100_DFP\instance\sercom2.h</file>
@@ -3531,7 +3542,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\usb_host_init_data.c</file>
-         <hash>b9c073c5c2c6e43814fd47cc8003feb3598719cbc97779fd49949f0b1110ed45</hash>
+         <hash/>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\osal\osal.h</file>
@@ -3555,7 +3566,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\usb\src\usb_host_hid.c</file>
-         <hash>22bb0ca811aec2c03fb3892b0fa1a24cd180a7ce44c21192ccce0a1051996483</hash>
+         <hash>651bde77cd992320aa6ddba23a57fcc715f09b28fbeea42c232151be38c2020f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\peripheral\tc\plib_tc0.h</file>
@@ -3655,7 +3666,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\bsp\bsp.h</file>
-         <hash>2c2967a458bffa27922273d4d82f13bd8a6674e00b971114632d999384bc9386</hash>
+         <hash/>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\system\time\sys_time_definitions.h</file>
@@ -3691,7 +3702,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\bsp\bsp.c</file>
-         <hash>f5445f76e5af647324255712fae6fb1c5719b2ddec5bc4163644ad4ae2c10e58</hash>
+         <hash/>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\device_cache.h</file>
@@ -3887,7 +3898,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\interrupts.c</file>
-         <hash>665630eea8a414d6c8b2e53a56b37da0a4af581dc84577e68173aa941dec8157</hash>
+         <hash/>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164LE00100_DFP\component\usb.h</file>
@@ -3923,7 +3934,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\interrupts.h</file>
-         <hash>d6d61ecd68bf1ac1e2ea71592addd965eeffa28e81640b952447603b93b733c3</hash>
+         <hash/>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\peripheral\evsys\plib_evsys.c</file>
@@ -3963,7 +3974,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\configuration.h</file>
-         <hash>ee6e914ea05f9280846079e51c17043c5aae4a42bafb148a903fa259042c88c9</hash>
+         <hash/>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164LE00100_DFP\instance\tram.h</file>
@@ -4011,11 +4022,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\tasks.c</file>
-         <hash>1fc6b6c449a6e9e8d887437e2c32f56bb29a4cd01b1db35d48be880e48eae21a</hash>
+         <hash/>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\peripheral\port\plib_port.h</file>
-         <hash>d2a389c0d4202a2f53168fd71db2fff5822a27af428154a4b051107b0b78b7d6</hash>
+         <hash/>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\peripheral\pm\plib_pm.h</file>
