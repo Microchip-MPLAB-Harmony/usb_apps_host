@@ -37,6 +37,7 @@ Following table gives the details of project configurations, target device used,
 | sam_a5d27_wlsom1_ek1.X           | MPLABX    | ATSAMA5D27C         | [ATSAMA5D27 WLSOM1 EK1](#config_19)                                |
 | sam_a7g5_ek.X                   | MPLABX | SAMA7G54            | [SAMA7G5 EK Board](#config_21)                                    |
 | sam_d21_xpro.X                  | MPLABX | ATSAMD21J18A        | [SAMD21 Xplained Pro Board](#config_2)                                    |
+| sam_g55_xpro.X                  | MPLABX | ATSAMG55J19         | [SAMG55 Xplained Pro Board](#config_6)                                    |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
@@ -62,6 +63,12 @@ Following table gives the details of project configurations, target device used,
 - Jumper titled "PA03 SELECT" must be shorted between PA03 and USB_ID(positions 2 and 3) 
 - Use "TARGET USB" connector on the board to connect the USB Device to the the USB Host. A USB micro AB to type A USB Host receptacle converter will be needed to connect the device. 
 - LED0 on the demonstration board will illuminate to indicate completion of the file transfer. 
+
+### <a name="config_6"></a> [SAMG55 Xplained Pro Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMG55-XPRO)
+
+- Chip Erase Jumper must be open.
+- Connect the USB device to the "TARGET USB" connector using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit).
+- LED0 on the demonstration board will illuminate to indicate completion of the file transfer.
 
 ### <a name="config_9"></a> [SAM9X60-EK Evaluation Board](https://www.microchip.com/developmenttools/ProductDetails/DT100126)
 
