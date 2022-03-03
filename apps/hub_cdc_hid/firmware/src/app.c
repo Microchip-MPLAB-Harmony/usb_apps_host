@@ -76,16 +76,16 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     Application strings and buffers are be defined outside this structure.
 */
 
-APP_DATA appData __attribute__((coherent)) __attribute__((aligned(16)));
+APP_DATA USB_ALIGN appData;
 
 /* Application MSD Task Object */
-APP_HID_DATA appHIDData __attribute__((coherent)) __attribute__((aligned(16)));;
+APP_HID_DATA USB_ALIGN appHIDData;
 
 /* Application CDC Task Object */
-APP_CDC_DATA  appCDCData __attribute__((coherent)) __attribute__((aligned(16))) ;
+APP_CDC_DATA USB_ALIGN appCDCData;
 
 /* This is the string that will written to the file */
-const uint8_t prompt[8]  __attribute__((aligned(16)))  = "\r\nLED : ";
+USB_ALIGN uint8_t prompt[8]  = "\r\nLED : ";
 
 // *****************************************************************************
 // *****************************************************************************
@@ -107,15 +107,12 @@ USB_HOST_EVENT_RESPONSE APP_USBHostEventHandler
     switch (event)
     {
         case USB_HOST_EVENT_DEVICE_UNSUPPORTED:
-            
             /* The attached device is not supported for some reason */
             break;
             
         default:
             break;
-                    
     }
-    
     return(USB_HOST_EVENT_RESPONSE_NONE);
 }
 
@@ -125,7 +122,7 @@ void APP_USBHostCDCAttachEventListener(USB_HOST_CDC_OBJ cdcObj, uintptr_t contex
      * application data structure to let the application know that this device
      * is attached */
     
-     appCDCData.deviceIsAttached = true;
+    appCDCData.deviceIsAttached = true;
     appCDCData.cdcObj = cdcObj;
 }
 
@@ -230,14 +227,13 @@ void APP_Initialize ( void )
     APP_CDC_Initialize( &appCDCData );
     APP_HID_Initialize();
     /* TODO: Initialize your application's state machine and other
-     * parameteitialize ( &appHIDData);
-       rs.
+     * parameters Initialize ( &appHIDData);
      */
 }
 
 void APP_CDC_Initialize ( APP_CDC_DATA *appCDCInitData )
 {
-      /* Initialize the application state machine */
+    /* Initialize the application state machine */
     
     appCDCInitData->state =  APP_CDC_STATE_WAIT_FOR_DEVICE_ATTACH;
     appCDCInitData->cdcHostLineCoding.dwDTERate     = APP_HOST_CDC_BAUDRATE_SUPPORTED;
@@ -260,7 +256,6 @@ void APP_HID_Initialize ( void )
     appHIDData.state = APP_HID_STATE_WAIT_FOR_DEVICE_ATTACH;
 }
 
-
 /******************************************************************************
   Function:
     void APP_Tasks ( void )
@@ -271,13 +266,9 @@ void APP_HID_Initialize ( void )
 
 void APP_Tasks ( void )
 {
-   
-   
-     
     switch (appData.state)
     {
         case APP_STATE_BUS_ENABLE:
-        
             /* In this state the application enables the USB Host Bus. Note
              * how the CDC Attach event handler are registered before the bus
              * is enabled. */
@@ -290,7 +281,6 @@ void APP_Tasks ( void )
             break;
         
         case APP_STATE_WAIT_FOR_BUS_ENABLE_COMPLETE:
-            
             /* In this state we wait for the Bus enable to complete */
             if(USB_HOST_BusIsEnabled(USB_HOST_BUS_ALL))
             {
@@ -299,21 +289,17 @@ void APP_Tasks ( void )
             break;
             
         case APP_STATE_RUN_HID_CDC_TASKS:
-            
             /* In this state the application is waiting for the device to be
              * attached */
             /* Run the Application CDC and HID Tasks */
             APP_HID_Tasks ();
             APP_CDC_Tasks ();
-
             break;
-            
-            
+
         case APP_STATE_ERROR:
-
             /* Some error has occurred */
-
             break;
+
         default:
             break;
             
@@ -343,7 +329,6 @@ void APP_CDC_Tasks( )
     switch (appCDCData.state)
     {
         case APP_CDC_STATE_WAIT_FOR_DEVICE_ATTACH:
-
             /* In this state the application is waiting for the device to be
              * attached */
             if(appCDCData.deviceIsAttached)
@@ -355,7 +340,6 @@ void APP_CDC_Tasks( )
             break;
 
         case APP_CDC_STATE_OPEN_DEVICE:
-
             /* In this state the application opens the attached device */
             appCDCData.cdcHostHandle = USB_HOST_CDC_Open(appCDCData.cdcObj);
             if(appCDCData.cdcHostHandle != USB_HOST_CDC_HANDLE_INVALID)
@@ -368,10 +352,8 @@ void APP_CDC_Tasks( )
             break;
 
         case APP_CDC_STATE_SET_LINE_CODING:
-
             /* Here we set the Line coding. The control request done flag will
              * be set to true when the control request has completed. */
-
             appCDCData.controlRequestDone = false;
             result = USB_HOST_CDC_ACM_LineCodingSet(appCDCData.cdcHostHandle, NULL, &appCDCData.cdcHostLineCoding);
 
@@ -380,11 +362,9 @@ void APP_CDC_Tasks( )
                 /* We wait for the set line coding to complete */
                 appCDCData.state = APP_CDC_STATE_WAIT_FOR_SET_LINE_CODING;
             }
-
             break;
 
         case APP_CDC_STATE_WAIT_FOR_SET_LINE_CODING:
-
             if(appCDCData.controlRequestDone)
             {
                 if(appCDCData.controlRequestResult != USB_HOST_CDC_RESULT_SUCCESS)
@@ -401,7 +381,6 @@ void APP_CDC_Tasks( )
             break;
 
         case APP_CDC_STATE_SEND_SET_CONTROL_LINE_STATE:
-
             /* Here we set the control line state */
             appCDCData.controlRequestDone = false;
             result = USB_HOST_CDC_ACM_ControlLineStateSet(appCDCData.cdcHostHandle, NULL, 
@@ -412,11 +391,9 @@ void APP_CDC_Tasks( )
                 /* We wait for the set line coding to complete */
                 appCDCData.state = APP_CDC_STATE_WAIT_FOR_SET_CONTROL_LINE_STATE;
             }
-
             break;
 
         case APP_CDC_STATE_WAIT_FOR_SET_CONTROL_LINE_STATE:
-
             /* Here we wait for the control line state set request to complete */
             if(appCDCData.controlRequestDone)
             {
@@ -431,11 +408,9 @@ void APP_CDC_Tasks( )
                     appCDCData.state = APP_CDC_STATE_SEND_PROMPT_TO_DEVICE;
                 }
             }
-
             break;
 
         case APP_CDC_STATE_SEND_PROMPT_TO_DEVICE:
-
             /* The prompt is sent to the device here. The write transfer done
              * flag is updated in the event handler. */
 
@@ -449,7 +424,6 @@ void APP_CDC_Tasks( )
             break;
 
         case APP_CDC_STATE_WAIT_FOR_PROMPT_SEND_COMPLETE:
-
             /* Here we check if the write transfer is done */
             if(appCDCData.writeTransferDone)
             {
@@ -464,11 +438,9 @@ void APP_CDC_Tasks( )
                     appCDCData.state = APP_CDC_STATE_SEND_PROMPT_TO_DEVICE;
                 }
             }
-
             break;
 
         case APP_CDC_STATE_GET_DATA_FROM_DEVICE:
-
             /* Here we request data from the device */
             appCDCData.readTransferDone = false;
             result = USB_HOST_CDC_Read(appCDCData.cdcHostHandle, NULL, appCDCData.inDataArray, 1);
@@ -476,11 +448,9 @@ void APP_CDC_Tasks( )
             {
                 appCDCData.state = APP_CDC_STATE_WAIT_FOR_DATA_FROM_DEVICE;
             }
-
             break;
 
         case APP_CDC_STATE_WAIT_FOR_DATA_FROM_DEVICE:
-
             /* Wait for data from device. If the data has arrived, then toggle
              * the LED. */
             if(appCDCData.readTransferDone)
@@ -492,26 +462,27 @@ void APP_CDC_Tasks( )
                         /* Toggle LED 1 */
                         LED1_Toggle();
                     }
+#ifdef LED2_Toggle
                     else if (appCDCData.inDataArray[0] == '2')
                     {
                         /* Toggle LED 2  */
                         LED2_Toggle();
                     }
+#endif
+#ifdef LED3_Toggle                    
                     else if (appCDCData.inDataArray[0] == '3')
                     {
                         /* Toggle LED 3 */
                         LED3_Toggle();
                     }
-
+#endif
                     /* Send the prompt to the device and wait for data again */
                     appCDCData.state = APP_CDC_STATE_SEND_PROMPT_TO_DEVICE;
                 }
             }
-
             break;
 
         case APP_STATE_ERROR:
-
             /* An error has occurred */
             break;
 
@@ -534,38 +505,31 @@ void APP_HID_Tasks ( void )
     /* Check the application's current state. */
     switch ( appHIDData.state )
     {
-      case APP_HID_STATE_WAIT_FOR_DEVICE_ATTACH:
-
+        case APP_HID_STATE_WAIT_FOR_DEVICE_ATTACH:
             /* Wait for device attach. The state machine will move
              * to the next state when the attach event
              * is received.  */
-
             break;
-      case APP_HID_STATE_DEVICE_ATTACHED:
-          
-          appHIDData.state = APP_HID_STATE_READ_HID;
-          /* Clear the app data */
-            memset(&appHIDData.data, 0, (size_t)sizeof(appHIDData.data));
-          
-          break;
-          
-     case APP_HID_STATE_READ_HID:
-         
-                 
-         break;
-    case APP_HID_STATE_DEVICE_DETACHED:
-        
-         LED1_Off();
-        break;
-        
-    case APP_STATE_ERROR:
 
+        case APP_HID_STATE_DEVICE_ATTACHED:
+            appHIDData.state = APP_HID_STATE_READ_HID;
+            /* Clear the app data */
+            memset(&appHIDData.data, 0, (size_t)sizeof(appHIDData.data));
+            break;
+          
+        case APP_HID_STATE_READ_HID:
+            break;
+
+        case APP_HID_STATE_DEVICE_DETACHED:
+            LED1_Off();
+            break;
+        
+        case APP_STATE_ERROR:
             /* The application comes here when the demo
              * has failed. Provide LED indication .*/
-
-            
             break;
-    default:
+
+        default:
             break;
     }
 }
@@ -604,15 +568,14 @@ void APP_USBHostHIDMouseEventHandler(USB_HOST_HID_MOUSE_HANDLE handle,
                     /* BUTTON1 pressed */
                     LED1_On();
                 }
-				else if((appHIDData.data.buttonState[loop]) &&
+                else if((appHIDData.data.buttonState[loop]) &&
                         (USB_HID_USAGE_ID_BUTTON2 == appHIDData.data.buttonID[loop]))
                 {
                     /* BUTTON2 pressed */
                      LED1_Off();
                 }
-              
             }
-            
+            break;
 
         default:
             break;

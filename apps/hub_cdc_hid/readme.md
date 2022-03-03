@@ -28,15 +28,21 @@ Following table gives the details of project configurations, target device used,
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
 | pic32mz_ef_curiosity_2_0.X      | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)                   |
 | pic32mz_ef_sk.X                 | MPLABX | PIC32MZ2048EFH144   | [PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](#config_16)      |
+| sam_g55_xpro.X                  | MPLABX | ATSAMG55J19         | [SAMG55 Xplained Pro Board](#config_6)                                    |
 
 ## <a name="config_title"></a> Configuring the Hardware
+
+### <a name="config_6"></a> [SAMG55 Xplained Pro Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMG55-XPRO)
+
+- Chip Erase Jumper must be open.
+- Connect the USB device to the "TARGET USB" connector using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit).
+- LED0 on the board is controlled by the attached USB CDC device.
 
 ### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
 
 - Connect the USB device to the "TARGET USB" connector (J201) using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit). 
 - LED1 is controlled by the attched USB Mouse. 
 - LED1, LED2, and LED3 are controlled by the attched USB CDC Device. 
-
 
 ### <a name="config_16"></a> [PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](https://www.microchip.com/Developmenttools/ProductDetails/DM320007)
 
@@ -54,7 +60,7 @@ Open the project in MPLAB X IDE and select the desired project configuration.
 2. Connect a hub to the Host connector on the desired board. 
 3. Connect a mouse to a spare port on the hub. 
 4. Connect the CDC emulator device to another spare port on the hub. Follow the directions for setting up and running the cdc_serial_emulator USB device demonstration. On the personal computer, open a serial terminal and set the serial Baudrate to 9600. 
-5. At the prompt, (LED:), enter 1, 2, or 3 to toggle the corresponding LEDs on the starter kit. 
+5. At the prompt, (LED:), enter 1, 2*, or 3* to toggle the corresponding LEDs on the starter kit. (*: depending of the board).
 6. Click the mouse Left and Right buttons. This will toggle LED on the demo board.
 
 
