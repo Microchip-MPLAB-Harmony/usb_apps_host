@@ -4,7 +4,7 @@
 
 
 project: msd_basic
-creation_date: 2022-01-31T03:13:03.747+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2022-03-24T10:53:16.233+01:00[Europe/Paris]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mhc_mode: IDE            # [IDE|Standalone|Headless]
 mhc_version: v3.8.3
@@ -16,6 +16,6 @@ modules:
     - {name: "csp", version: "v3.11.0"}
     - {name: "core", version: "v3.10.0"}
     - {name: "usb", version: "v3.9.0"}
-    - {name: "dev_packs", version: "v3.11.1"}
+    - {name: "dev_packs", version: "v3.11.2"}
     - {name: "bsp", version: "v3.11.0"}
 
