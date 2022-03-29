@@ -4,27 +4,27 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_host_hid_basic_keyboard_sam_g55_xpro",
-		"version": "3.2.0",
+		"version": "3.3.0",
 		"displayName": "HID Basic Keyboard Example (hid_basic_keyboard) Example for SAM G5x Family",
 		"projectName": "hid_basic_keyboard_sam_g55_xpro",
 		"shortDescription": "This application creates a USB Host application that uses the USB Host Layer, HID Client driver and HID Keyboard Usage driver to enumerate a USB keyboard and understand keyboard press release events. The keyboard events are displayed using a terminal emulator on a personal computer.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=5.50.0"
+			"semverRange": ">=6.00.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.1.0"
+				"semverRange": ">=4.0.0"
 			}
 		],
 		"dfp": {
 			"name": "SAMG_DFP",
-			"semverRange": "^3.4.57"
+			"semverRange": "^3.5.65"
 		},
 		"configurator": {
-			"name": "MHC",
-			"semverRange": ">=3.6.4"
+			"name": "MCC",
+			"semverRange": ">=5.1.1"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",

@@ -4,18 +4,18 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_host_cdc_msd_sam_d21_xpro",
-		"version": "3.2.0",
+		"version": "3.3.0",
 		"displayName": "CDC MSD Example (cdc_msd) Example for SAM D21/DA1 Family",
 		"projectName": "cdc_msd_sam_d21_xpro",
 		"shortDescription": "This application creates a USB Host that can recognize and enumerate a CDC USB Device and MSC USB Device",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=5.50.0"
+			"semverRange": ">=6.00.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.1.0"
+				"semverRange": ">=4.0.0"
 			}
 		],
 		"dfp": {
@@ -23,8 +23,8 @@
 			"semverRange": "^3.4.116"
 		},
 		"configurator": {
-			"name": "MHC",
-			"semverRange": ">=3.6.4"
+			"name": "MCC",
+			"semverRange": ">=5.1.1"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",

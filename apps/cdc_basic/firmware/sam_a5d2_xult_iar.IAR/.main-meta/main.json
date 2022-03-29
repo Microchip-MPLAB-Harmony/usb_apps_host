@@ -4,27 +4,27 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_host_cdc_basic_sam_a5d2_xult_iar",
-		"version": "3.2.0",
+		"version": "3.3.0",
 		"displayName": "CDC Basic Example (cdc_basic) Example for SAM A5D2 Family",
 		"projectName": "cdc_basic_sam_a5d2_xult_iar",
 		"shortDescription": "This application uses the USB Host Layer and CDC Client driver to enumerate a standard CDC USB device. The demonstration host application then operates and uses the functionality of the attached CDC Device.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=5.50.0"
+			"semverRange": ">=6.00.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.1.0"
+				"semverRange": ">=4.0.0"
 			}
 		],
 		"dfp": {
 			"name": "SAMA5D2_DFP",
-			"semverRange": "^1.5.53"
+			"semverRange": "^1.6.69"
 		},
 		"configurator": {
-			"name": "MHC",
-			"semverRange": ">=3.6.4"
+			"name": "MCC",
+			"semverRange": ">=5.1.1"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",
