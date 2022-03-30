@@ -1,13 +1,13 @@
 ---
 parent: Harmony 3 USB Host application examples
-title: MSD Basic Example 
+title: Root Hub Dual MSD Example 
 has_children: false
 has_toc: false
 ---
 
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
-# MSD Basic Example (msd_basic)
+# Root Hub Dual MSD Example (root_hub_dual_msd)
 
 This application demonstrates the ability of the MPLAB Harmony USB Host Stack to support MSD Host Class Driver . It demonstrates the feature with an application to read / write a file to a USB Flash drive.
 
@@ -20,7 +20,7 @@ This application demonstrates the use of the MSD Host Class Driver to write a fi
 To clone or download this application from Github, go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/usb_apps_host) and then click **Clone** button to clone this repository or download as zip file.
 This content can also be downloaded using content manager by following these [instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki).
 
-Path of the application within the repository is [usb_apps_host/apps/msd_basic](https://github.com/Microchip-MPLAB-Harmony/usb_apps_host/apps/msd_basic).
+Path of the application within the repository is [usb_apps_host/apps/root_hub_dual_msd](https://github.com/Microchip-MPLAB-Harmony/usb_apps_host/apps/msd_basic).
 
 Following table gives the details of project configurations, target device used, hardware and its IDE. Open the project using the respective IDE and build it. 
 
