@@ -31,6 +31,7 @@ Following table gives the details of project configurations, target device used,
 | sam_9x60_ek_freertos.X                   | MPLABX | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   |
 | sam_9x60_ek_iar.IAR             | IAR    | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   |
 | sam_9x60_ek_freertos_iar.IAR    | IAR    | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   |
+| sam_9x75_eb.X                   | MPLABX | SAM9X75             | [SAM9X75-DDR3-EB Evaluation Board](#config_22)                             |
 | sam_a5d2_xult.X           | MPLABX    | ATSAMA5D27C         | [SAM A5D2 Xplained Ultra Board](#config_10)                                |
 | sam_a5d2_xult_freertos.X           | MPLABX   | ATSAMA5D27C         | [SAMA5D2 Xplained Ultra Board](#config_10)                                |
 | sam_a5d2_xult_iar.IAR           | IAR    | ATSAMA5D27C         | [SAMA5D2 Xplained Ultra Board](#config_10)                                |
@@ -39,6 +40,7 @@ Following table gives the details of project configurations, target device used,
 | sam_a5d27_som1_ek_freertos.X           | MPLABX   | ATSAMA5D27C         | [SAMA5D27 SOM1 Kit1](#config_18)                                |
 | sam_a5d27_wlsom1_ek1.X           | MPLABX    | ATSAMA5D27C         | [ATSAMA5D27 WLSOM1 EK1](#config_19)                                |
 | sam_a5d27_wlsom1_ek1_freertos.X           | MPLABX   | ATSAMA5D27C         | [ATSAMA5D27 WLSOM1 EK1](#config_19)                                |
+| sam_a7g5_ek.X                   | MPLABX | SAMA7G54            | [SAMA7G5 EK Board](#config_21)                                    |
 | sam_d21_xpro.X                  | MPLABX | ATSAMD21J18A        | [SAMD21 Xplained Pro Board](#config_2)                                    |
 | sam_e70_xult.X                  | MPLABX | ATSAME70Q21B        | [SAME70 Xplained Ultra Board](#config_4)                                  |
 | sam_e70_xult_freertos.X         | MPLABX | ATSAME70Q21B        | [SAME70 Xplained Ultra Board](#config_4)                                  |
@@ -97,7 +99,23 @@ Following table gives the details of project configurations, target device used,
 
     ![SAM9X60-EK Evaluation Board](images/sam9x60_evk.png)
 
-    **Note: Reset push button on SAM9X60 EK is labeled as SW3**
+    **Note: Reset push button on SAM9X60 EK is labelled as SW3**
+
+### <a name="config_22"></a> [SAM9X75-DDR3-EB Evaluation Board]()
+
+- A commercially available USB Mouse is required to run this demonstration application. 
+- Powered the board with an external power supply (or use the micro AB connector).
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x75_eb.X/build/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SDMMC connector (SDMMC0) on the board.
+    - Reset the board by pressing the Push Button RESET, then START. 
+- Connect a ftdi cable to DBGU0 (to enable debug com port).
+- Connect the USB device to the Type-A connector or to the micro AB with a specific dongle (in these case the need to be powered by the external power supply).
+- LED near VDDCORE inscription on the board indicates a Device Connection Attached device has been successfully enumerated and configured). This LED is also toggled on the Mouse Button press event. 
+- The demonstration uses the ftdi to transfer demonstration application messages on a PC. 
+
+    ![SAM9X75-DDR3-EB Evaluation Board](images/sam9x75_ddr3_eb.png)
 
 ### <a name="config_10"></a> [SAMA5D2 Xplained Ultra Board](https://www.microchip.com/Developmenttools/ProductDetails/ATSAMA5D2C-XULT)
 
