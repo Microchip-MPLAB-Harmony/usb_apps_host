@@ -93,7 +93,12 @@ const uint8_t writeData[12]  __attribute__((aligned(16))) = "Hello World ";;
 //writeData = "Hello World ";
 
 /* This is the string that will written to the CDC device */
-const uint8_t prompt[8]  __attribute__((aligned(16)))  = "\r\nLED : ";
+uint8_t *prompt;
+uint8_t cdcWriteSize = 1; 
+USB_ALIGN uint8_t ledon[12]  = "\r\nLED ON  :";
+USB_ALIGN uint8_t ledoff[12] = "\r\nLED OFF  :";
+
+
 
 /* Application MSD Task Object */
 APP_MSD_DATA appMSDData __attribute__((aligned(16)));;
@@ -340,6 +345,7 @@ void APP_MSD_Tasks (  )
             /* Close the file */
             SYS_FS_FileClose(appMSDData.fileHandle);
             LED1_On();
+            
             /* The test was successful. Lets idle. */
             appMSDData.state = APP_MSD_STATE_IDLE;
             break;
@@ -389,7 +395,7 @@ void APP_MSD_Tasks (  )
 void APP_CDC_Tasks( )
 {
     USB_HOST_CDC_RESULT result;
-    
+  
     
     if(appCDCData.deviceWasDetached)
    {
@@ -498,11 +504,14 @@ void APP_CDC_Tasks( )
             
         case APP_CDC_STATE_SEND_PROMPT_TO_DEVICE:
             
+            LED1_On();
+            cdcWriteSize = sizeof(ledon);
+            prompt = ledon;
             /* The prompt is sent to the device here. The write transfer done
              * flag is updated in the event handler. */
             
             appCDCData.writeTransferDone = false;
-            result = USB_HOST_CDC_Write(appCDCData.cdcHostHandle, NULL, ( void *) prompt, 8);
+            result = USB_HOST_CDC_Write(appCDCData.cdcHostHandle, NULL, ( void *) prompt, cdcWriteSize);
             
             if(result == USB_HOST_CDC_RESULT_SUCCESS)
             {
@@ -552,12 +561,18 @@ void APP_CDC_Tasks( )
                     {
                         /* Switch on LED 1 */
 
-                       LED1_On();
+                        LED1_On();
+                        cdcWriteSize = sizeof(ledon);
+                        prompt = ledon;
+
                     }
                     else 
                     {
                         /* Switch on LED 2 */
                         LED1_Off();
+                        cdcWriteSize = sizeof(ledoff);
+                        prompt = ledoff;
+
                     }
                     /* Send the prompt to the device and wait
                      * for data again */

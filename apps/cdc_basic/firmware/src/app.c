@@ -79,7 +79,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 APP_DATA USB_ALIGN appData;
 
 /* This is the string that will written to the file */
- USB_ALIGN uint8_t prompt[8]  = "\r\nLED : ";
+uint8_t *prompt;
+uint8_t cdcWriteSize = 1; 
+USB_ALIGN uint8_t ledon[12]  = "\r\nLED ON  :";
+USB_ALIGN uint8_t ledoff[12] = "\r\nLED OFF  :";
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -377,9 +381,14 @@ void APP_Tasks ( void )
             
             /* The prompt is sent to the device here. The write transfer done
              * flag is updated in the event handler. */
+            LED1_On();
+            cdcWriteSize = sizeof(ledon);
+            prompt = ledon;
             
+            
+
             appData.writeTransferDone = false;
-            result = USB_HOST_CDC_Write(appData.cdcHostHandle, NULL, ( void * )prompt, 8);
+            result = USB_HOST_CDC_Write(appData.cdcHostHandle, NULL, ( void * )prompt, cdcWriteSize);
             
             if(result == USB_HOST_CDC_RESULT_SUCCESS)
             {
@@ -394,6 +403,7 @@ void APP_Tasks ( void )
             {
                 if(appData.writeTransferResult == USB_HOST_CDC_RESULT_SUCCESS)
                 {
+                   
                     /* Now to get data from the device */
                     appData.state = APP_STATE_GET_DATA_FROM_DEVICE;
                 }
@@ -429,11 +439,16 @@ void APP_Tasks ( void )
                     {
                         /* Switch on LED  */
                         LED1_On();
+                        cdcWriteSize = sizeof(ledon);
+                        prompt = ledon;
                     }
                    else
                    {
                         /* Switch off LED  */
                         LED1_Off();
+                        cdcWriteSize = sizeof(ledoff);
+                        prompt = ledoff;
+				
                    }
                     
                     /* Send the prompt to the device and wait
