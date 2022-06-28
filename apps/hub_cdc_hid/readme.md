@@ -20,7 +20,7 @@ This application creates a USB Host that can recognize and enumerate a CDC Emula
 To clone or download this application from Github, go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/usb_apps_host) and then click **Clone** button to clone this repository or download as zip file.
 This content can also be downloaded using content manager by following these [instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki).
 
-Path of the application within the repository is [usb_apps_host/apps/hub_cdc_hid](https://github.com/Microchip-MPLAB-Harmony/usb_apps_host/apps/hub_cdc_hid).
+Path of the application within the repository is [usb_apps_host/apps/hub_cdc_hid](https://github.com/Microchip-MPLAB-Harmony/usb_apps_host/tree/master/apps/hub_cdc_hid).
 
 Following table gives the details of project configurations, target device used, hardware and its IDE. Open the project using the respective IDE and build it. 
 

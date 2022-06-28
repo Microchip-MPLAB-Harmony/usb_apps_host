@@ -20,7 +20,7 @@ This application creates a USB Host that can recognize and enumerate a CDC USB D
 To clone or download this application from Github, go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/usb_apps_host) and then click **Clone** button to clone this repository or download as zip file.
 This content can also be downloaded using content manager by following these [instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki).
 
-Path of the application within the repository is [usb_apps_host/apps/cdc_msd](https://github.com/Microchip-MPLAB-Harmony/usb_apps_host/apps/cdc_msd).
+Path of the application within the repository is [usb_apps_host/apps/cdc_msd](https://github.com/Microchip-MPLAB-Harmony/usb_apps_host/tree/master/apps/cdc_msd).
 
 Following table gives the details of project configurations, target device used, hardware and its IDE. Open the project using the respective IDE and build it. 
 
@@ -62,5 +62,5 @@ Following table gives the details of project configurations, target device used,
 
 This demonstration application creates a USB Host application that enumerates a CDC and a MSD Host. This application combines the functionality of the Host cdc_basic and msd_basic demonstration applications into one application. If a CDC device is connected, the demonstration application behaves like the cdc_basic host application. If a MSD device is connected, the demonstration application behaves like the msd_basic host application. 
 
-To exercise the CDC Host capabilities, refer to local documentation from [usb_apps_host/apps/cdc_basic](..\..\apps\cdc_basic\readme.md). The documentation is also available in the github path [usb_apps_host/apps/cdc_basic](https://github.com/Microchip-MPLAB-Harmony/usb_apps_host/apps/cdc_basic).
-To exercise the MSD Host capabilities, refer to local documentation from [usb_apps_host/apps/msd_basic](..\..\apps\msd_basic\readme.md). The documentation is also available in the github path [usb_apps_host/apps/msd_basic](https://github.com/Microchip-MPLAB-Harmony/usb_apps_host/apps/msd_basic).
+To exercise the CDC Host capabilities, refer to local documentation from [usb_apps_host/apps/cdc_basic](..\..\apps\cdc_basic\readme.md). The documentation is also available in the github path [usb_apps_host/apps/cdc_basic](https://github.com/Microchip-MPLAB-Harmony/usb_apps_host/tree/master/apps/cdc_basic).
+To exercise the MSD Host capabilities, refer to local documentation from [usb_apps_host/apps/msd_basic](..\..\apps\msd_basic\readme.md). The documentation is also available in the github path [usb_apps_host/apps/msd_basic](https://github.com/Microchip-MPLAB-Harmony/usb_apps_host/tree/master/apps/msd_basic).
