@@ -8,6 +8,48 @@ nav_order: 99
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## Harmony 3 USB Host application examples v3.4.0
+
+### Development kit and demo application support
+
+The following table provides the number of USB Host examples available for various development kits.
+
+| Development Kits  | MPLAB X Applications | IAR Applications |
+| ----------------- | ------------------- | ---------------- |
+| [Curiosity PIC32MX470 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/dm320103)                             | 5  | 0 |
+| [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)                      | 7  | 0 |
+| [PIC32MK General Purpose (GP) Development Board](https://www.microchip.com/developmenttools/ProductDetails/dm320106)                  | 2  | 0 |
+| [PIC32MZ Embedded Graphics with Stacked DRAM (DA) Starter Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/DM320010-C)  | 1  | 0 |
+| [PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](https://www.microchip.com/Developmenttools/ProductDetails/DM320007)         | 6  | 0 |
+| [Curiosity PIC32MZ W1 Development Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320104)                   | 1  | 0 |
+| [SAM D21 Xplained Pro Board](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro)                                 | 6  | 1 |
+| [SAM E54 Xplained Pro Board](https://www.microchip.com/developmenttools/productdetails/atsame54-xpro)                                 | 2  | 1 |
+| [SAM E70 Xplained Ultra Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)                             | 10 | 1 |
+| [SAMG55 Xplained Pro Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMG55-XPRO)                           | 9  | 0 |
+| [SAM L21 Xplained Pro Board](https://www.microchip.com/developmenttools/ProductDetails/PartNO/ATSAML21-XPRO-B)                        | 1  | 0 |
+| [SAM V71 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMV71-XULT)                        | 2  | 0 |
+| [SAM9X60-EK Evaluation Board](https://www.microchip.com/developmenttools/ProductDetails/DT100126)                                     | 10  | 7 |
+| [SAM A5D2 Xplained Ultra Board](https://www.microchip.com/Developmenttools/ProductDetails/ATSAMA5D2C-XULT)                            | 9 | 7 |
+| [SAMA5D27 SOM1 Kit1](https://www.microchip.com/developmenttools/ProductDetails/atsama5d27-som1-ek1)                            | 9  | 0 |
+| [ATSAMA5D27-WLSOM1 Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320117)                            | 9  | 0 |
+
+### New Features
+
+- Added USB Host Hub MSD (hub_msd) and Hub CDC + HID (hub_cdc_hid) demo configurations for SAMG55 XPRO. This application demonstrates connecting multiple USB devices to a single USB peripheral through a Hub. 
+
+### Bug fixes
+- Updated USB Host CDC applications to turn off LED when the USB device is detached. 
+
+### Known Issues
+- None
+
+### Development Tools
+
+-    [MPLAB® X IDE v6.00](https://www.microchip.com/mplab/mplab-x-ide)
+-    [MPLAB® XC32 C/C++ Compiler v4.10](https://www.microchip.com/mplab/compilers)
+-    [IAR Embedded Workbench® for ARM® v8.5](https://www.iar.com/iar-embedded-workbench/#!?architecture=Arm)
+-   MPLAB® X IDE plug-ins:- MMPLAB® X IDE plug-ins:- MPLAB® Code Configurator (MCC) v5.1.1 or above.
+
 ## Harmony 3 USB Host application examples v3.3.0
 
 ### Development kit and demo application support
