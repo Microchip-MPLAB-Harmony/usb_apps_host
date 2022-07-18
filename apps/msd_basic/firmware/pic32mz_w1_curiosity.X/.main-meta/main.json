@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_host_msd_basic_pic32mz_w1_curiosity",
-		"version": "3.3.0",
+		"version": "3.4.0",
 		"displayName": "MSD Basic Example (msd_basic) Example for PIC32MZ W1 Family",
 		"projectName": "msd_basic_pic32mz_w1_curiosity",
 		"shortDescription": "This application demonstrates the use of the MSD Host Class Driver to write a file to a USB Flash drive. The application uses the USB Host_layer , MSD class driver and the MPLAB Harmony File System Framework to enumerate a USB Flash drive and to write a file to it.",

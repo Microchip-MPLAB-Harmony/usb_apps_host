@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_host_cdc_basic_sam_9x60_ek_iar",
-		"version": "3.3.0",
+		"version": "3.4.0",
 		"displayName": "CDC Basic Example (cdc_basic) Example for SAM 9x60 Family",
 		"projectName": "cdc_basic_sam_9x60_ek_iar",
 		"shortDescription": "This application uses the USB Host Layer and CDC Client driver to enumerate a standard CDC USB device. The demonstration host application then operates and uses the functionality of the attached CDC Device.",

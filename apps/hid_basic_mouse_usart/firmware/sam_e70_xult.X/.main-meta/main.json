@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_host_hid_basic_mouse_usart_sam_e70_xult",
-		"version": "3.3.0",
+		"version": "3.4.0",
 		"displayName": "HID Basic Mouse USART Example (hid_basic_mouse_usart) Example for SAM E70/S70/V70/V71 Family",
 		"projectName": "hid_basic_mouse_usart_sam_e70_xult",
 		"shortDescription": "This application uses the USB Host layer, HID Client driver and HID Mouse Usage driver to enumerate a USB Mouse and detect Mouse button press release events. The Mouse events are displayed using a terminal emulator on a personal computer.",

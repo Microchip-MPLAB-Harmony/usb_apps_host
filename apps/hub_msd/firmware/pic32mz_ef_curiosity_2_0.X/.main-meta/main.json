@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_host_hub_msd_pic32mz_ef_curiosity_2",
-		"version": "3.3.0",
+		"version": "3.4.0",
 		"displayName": "HUB MSD Example (hub_msd) Example for PIC32MZ EF Family",
 		"projectName": "hub_msd_pic32mz_ef_curiosity_2",
 		"shortDescription": "This application uses USB Host stack and the Harmony Filesystem Service to copy a file from a source USB pen drive to a target USB pen drive.",
