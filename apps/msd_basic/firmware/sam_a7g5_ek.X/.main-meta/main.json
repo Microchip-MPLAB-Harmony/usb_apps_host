@@ -3,10 +3,10 @@
 	"category": "com.microchip.ide.project",
 	"content": {
 		"metaDataVersion": "1.1.0",
-		"name": "com.microchip.mcu32.mplabx.project.usb_apps_host_msd_basic_pic32cm_le00_curiosity_pro",
+		"name": "com.microchip.mcu32.mplabx.project.usb_apps_host_msd_basic_sam_a7g5_ek",
 		"version": "3.4.0",
-		"displayName": "MSD Basic Example (msd_basic) Example for PIC32CM LE Family",
-		"projectName": "msd_basic_pic32cm_le00_curiosity_pro",
+		"displayName": "MSD Basic Example (msd_basic) Example for SAM A7G5 Family",
+		"projectName": "msd_basic_sam_a7g5_ek",
 		"shortDescription": "This application demonstrates the use of the MSD Host Class Driver to write a file to a USB Flash drive. The application uses the USB Host_layer , MSD class driver and the MPLAB Harmony File System Framework to enumerate a USB Flash drive and to write a file to it.",
 		"ide": {
 			"name": "MPLABX",
@@ -19,8 +19,8 @@
 			}
 		],
 		"dfp": {
-			"name": "PIC32CM-LE_DFP",
-			"semverRange": "^1.1.162"
+			"name": "SAMA7G5_DFP",
+			"semverRange": "^1.0.56"
 		},
 		"configurator": {
 			"name": "MCC",
@@ -32,14 +32,14 @@
 			"content": {
 				"metaDataVersion": "1.0.0",
 				"category": "com.microchip.device",
-				"name": "PIC32CM5164LE00100",
+				"name": "SAMA7G5",
 				"versionRange": "*"
 			}
 		},
 		"author": "Microchip",
 		"subcategories": [
 			[
-				"Development Kit", "PIC32CM LE Curiosity Pro Board"
+				"Development Kit", "SAMA7G54 Evaluation Kit"
 			],
 			[
 				"Harmony", "Middleware", "USB", "HOST_MSD_BASIC"
@@ -56,8 +56,8 @@
 			"Harmony",
 			"Middleware",
 			"USB",
-			"PIC32CM5164LE00100",
-			"PIC32CM LE Family",
+			"SAMA7G54",
+			"SAM A7G5 Family",
 			"USB"
 		],
 		"additionalData": {

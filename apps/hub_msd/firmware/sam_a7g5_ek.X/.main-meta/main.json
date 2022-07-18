@@ -3,10 +3,10 @@
 	"category": "com.microchip.ide.project",
 	"content": {
 		"metaDataVersion": "1.1.0",
-		"name": "com.microchip.mcu32.mplabx.project.usb_apps_host_hub_msd_pic32cm_le00_curiosity_pro",
+		"name": "com.microchip.mcu32.mplabx.project.usb_apps_host_hub_msd_sam_a7g5_ek",
 		"version": "3.4.0",
-		"displayName": "HUB MSD Example (hub_msd) Example for PIC32CM LE Family",
-		"projectName": "hub_msd_pic32cm_le00_curiosity_pro",
+		"displayName": "HUB MSD Example (hub_msd) Example for SAM A7G5 Family",
+		"projectName": "hub_msd_sam_a7g5_ek",
 		"shortDescription": "This application uses USB Host stack and the Harmony Filesystem Service to copy a file from a source USB pen drive to a target USB pen drive.",
 		"ide": {
 			"name": "MPLABX",
@@ -19,8 +19,8 @@
 			}
 		],
 		"dfp": {
-			"name": "PIC32CM-LE_DFP",
-			"semverRange": "^1.1.162"
+			"name": "SAMA7G5_DFP",
+			"semverRange": "^1.0.56"
 		},
 		"configurator": {
 			"name": "MCC",
@@ -32,14 +32,14 @@
 			"content": {
 				"metaDataVersion": "1.0.0",
 				"category": "com.microchip.device",
-				"name": "PIC32CM5164LE00100",
+				"name": "SAMA7G5",
 				"versionRange": "*"
 			}
 		},
 		"author": "Microchip",
 		"subcategories": [
 			[
-				"Development Kit", "PIC32CM LE Curiosity Pro Board"
+				"Development Kit", "SAMA7G54 Evaluation Kit"
 			],
 			[
 				"Harmony", "Middleware", "USB", "HOST_HUB_MSD"
@@ -56,8 +56,8 @@
 			"Harmony",
 			"Middleware",
 			"USB",
-			"PIC32CM5164LE00100",
-			"PIC32CM LE Family",
+			"SAMA7G54",
+			"SAM A7G5 Family",
 			"USB"
 		],
 		"additionalData": {
