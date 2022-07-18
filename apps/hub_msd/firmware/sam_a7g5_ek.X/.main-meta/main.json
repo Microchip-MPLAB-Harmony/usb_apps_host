@@ -1,0 +1,75 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.usb_apps_host_hub_msd_pic32cm_le00_curiosity_pro",
+		"version": "3.4.0",
+		"displayName": "HUB MSD Example (hub_msd) Example for PIC32CM LE Family",
+		"projectName": "hub_msd_pic32cm_le00_curiosity_pro",
+		"shortDescription": "This application uses USB Host stack and the Harmony Filesystem Service to copy a file from a source USB pen drive to a target USB pen drive.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=6.00.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=4.1.0"
+			}
+		],
+		"dfp": {
+			"name": "PIC32CM-LE_DFP",
+			"semverRange": "^1.1.162"
+		},
+		"configurator": {
+			"name": "MCC",
+			"semverRange": ">=5.1.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "PIC32CM5164LE00100",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "PIC32CM LE Curiosity Pro Board"
+			],
+			[
+				"Harmony", "Middleware", "USB", "HOST_HUB_MSD"
+			],
+			[
+				"Middleware", "USB", "HOST_HUB_MSD"
+			]
+		],
+		"peripherals": [
+			"USB"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"Middleware",
+			"USB",
+			"PIC32CM5164LE00100",
+			"PIC32CM LE Family",
+			"USB"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}
