@@ -111,7 +111,8 @@ Following table gives the details of project configurations, target device used,
 ### <a name="config_18"></a> [SAMA5D27 SOM1 Kit1](https://www.microchip.com/developmenttools/ProductDetails/atsama5d27-som1-ek1)
 
 - A commercially available USB Keyboard is required to run this demonstration application.
-- Setup the SD card 
+- Setup the SD card
+    - Jumper J9 must be removed to have the JTAG-CDC enable.
     - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a5d27_som1_ek.X/build/binaries/boot.bin).
     - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
     - Insert the SD card into the SDMMC0 slot (J12) on the board.
