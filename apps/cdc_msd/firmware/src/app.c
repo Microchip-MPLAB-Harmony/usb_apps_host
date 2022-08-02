@@ -77,7 +77,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     Application strings and buffers are be defined outside this structure.
 */
 
-APP_DATA appData __attribute__((aligned(16)));
+APP_DATA USB_ALIGN appData;
 
 
 // *****************************************************************************
@@ -89,22 +89,19 @@ APP_DATA appData __attribute__((aligned(16)));
 
 
 /* This is the string that will written to the file */
-const uint8_t writeData[12]  __attribute__((aligned(16))) = "Hello World ";;
-//writeData = "Hello World ";
+USB_ALIGN uint8_t writeData[12] = "Hello World ";
 
 /* This is the string that will written to the CDC device */
-uint8_t *prompt;
-uint8_t cdcWriteSize = 1; 
-USB_ALIGN uint8_t ledon[12]  = "\r\nLED ON  :";
-USB_ALIGN uint8_t ledoff[12] = "\r\nLED OFF  :";
+USB_ALIGN uint8_t ledon[]  = "\r\nLED ON";
+USB_ALIGN uint8_t ledoff[] = "\r\nLED OFF";
 
 
 
 /* Application MSD Task Object */
-APP_MSD_DATA appMSDData __attribute__((aligned(16)));;
+APP_MSD_DATA USB_ALIGN appMSDData;
 
 /* Application CDC Task Object */
-APP_CDC_DATA  appCDCData __attribute__((aligned(16))) ;
+APP_CDC_DATA  USB_ALIGN appCDCData;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -112,6 +109,20 @@ APP_CDC_DATA  appCDCData __attribute__((aligned(16))) ;
 // *****************************************************************************
 // *****************************************************************************
 
+/*******************************************************************************
+  Function:
+    USB_HOST_EVENT_RESPONSE APP_USBHostEventHandler 
+    (
+        USB_HOST_EVENT event, 
+        void * eventData,
+        uintptr_t context
+    )
+
+  Remarks:
+    The USB Host Layer uses this function to communicate events to the 
+    application.
+    
+ */
 USB_HOST_EVENT_RESPONSE APP_USBHostEventHandler 
 (
     USB_HOST_EVENT event, 
@@ -119,9 +130,9 @@ USB_HOST_EVENT_RESPONSE APP_USBHostEventHandler
     uintptr_t context
 )
 {
-    /* This function is called by the USB Host whenever a USB Host Layer event
-     * has occurred. In this example we only handle the device unsupported event
-     * */
+    /* The USB Host Layer uses this function to communicate events to the 
+       application. In this example only the USB_HOST_EVENT_DEVICE_UNSUPPORTED
+       event is handled. */
 
     switch (event)
     {
@@ -138,7 +149,135 @@ USB_HOST_EVENT_RESPONSE APP_USBHostEventHandler
     return(USB_HOST_EVENT_RESPONSE_NONE);
 }
 
+/*******************************************************************************
+  Function:
+    void APP_SYSFSEventHandler(SYS_FS_EVENT event, void * eventData, uintptr_t context)
 
+  Remarks:
+    The File System (FS) uses this function to communicate events to the 
+    application.
+    
+ */
+void APP_SYSFSEventHandler(SYS_FS_EVENT event, void * eventData, uintptr_t context)
+{
+    switch(event)
+    {
+        case SYS_FS_EVENT_MOUNT:
+            appMSDData.deviceIsConnected = true;
+            break;
+            
+        case SYS_FS_EVENT_UNMOUNT:
+            appMSDData.deviceIsConnected = false;
+            LED1_Off();
+            break;
+            
+        default:
+            break;
+    }
+}
+
+/*******************************************************************************
+  Function:
+    void APP_USBHostCDCAttachEventListener(USB_HOST_CDC_OBJ cdcObj, uintptr_t context)
+
+  Remarks:
+    The CDC Host client Driver uses this function to communicate attach events to the 
+    application.
+    
+ */
+void APP_USBHostCDCAttachEventListener(USB_HOST_CDC_OBJ cdcObj, uintptr_t context)
+{
+    /* This function gets called when a CDC device is attached. Here, the data 
+       structure of the application is modified to reflect the device's 
+       attachment. */
+    
+    appCDCData.deviceIsAttached = true;
+    appCDCData.cdcObj = cdcObj;
+}
+
+/*******************************************************************************
+  Function:
+    USB_HOST_CDC_EVENT_RESPONSE APP_USBHostCDCEventHandler
+    (
+        USB_HOST_CDC_HANDLE cdcHandle,
+        USB_HOST_CDC_EVENT event,
+        void * eventData,
+        uintptr_t context
+    )
+
+  Remarks:
+    The CDC Host client Driver uses this function to communicate all events 
+    (except the device attach event) to the application.
+    
+ */
+
+USB_HOST_CDC_EVENT_RESPONSE APP_USBHostCDCEventHandler
+(
+    USB_HOST_CDC_HANDLE cdcHandle,
+    USB_HOST_CDC_EVENT event,
+    void * eventData,
+    uintptr_t context
+)
+{
+    /* This function is called when a CDC Host event has occurred. A pointer to
+     * this function is registered after opening the device. See the call to
+     * USB_HOST_CDC_EventHandlerSet() function. */
+
+    USB_HOST_CDC_EVENT_ACM_SET_LINE_CODING_COMPLETE_DATA * setLineCodingEventData;
+    USB_HOST_CDC_EVENT_ACM_SET_CONTROL_LINE_STATE_COMPLETE_DATA * setControlLineStateEventData;
+    USB_HOST_CDC_EVENT_WRITE_COMPLETE_DATA * writeCompleteEventData;
+    USB_HOST_CDC_EVENT_READ_COMPLETE_DATA * readCompleteEventData;
+    
+    switch(event)
+    {
+        case USB_HOST_CDC_EVENT_ACM_SET_LINE_CODING_COMPLETE:
+            
+            /* This means the application requested Set Line Coding request is
+             * complete. */
+            setLineCodingEventData = (USB_HOST_CDC_EVENT_ACM_SET_LINE_CODING_COMPLETE_DATA *)(eventData);
+            appCDCData.controlRequestDone = true;
+            appCDCData.controlRequestResult = setLineCodingEventData->result;
+            break;
+            
+        case USB_HOST_CDC_EVENT_ACM_SET_CONTROL_LINE_STATE_COMPLETE:
+            
+            /* This means the application requested Set Control Line State 
+             * request has completed. */
+            setControlLineStateEventData = (USB_HOST_CDC_EVENT_ACM_SET_CONTROL_LINE_STATE_COMPLETE_DATA *)(eventData);
+            appCDCData.controlRequestDone = true;
+            appCDCData.controlRequestResult = setControlLineStateEventData->result;
+            break;
+            
+        case USB_HOST_CDC_EVENT_WRITE_COMPLETE:
+            
+            /* This means an application requested write has completed */
+            appCDCData.writeTransferDone = true;
+            writeCompleteEventData = (USB_HOST_CDC_EVENT_WRITE_COMPLETE_DATA *)(eventData);
+            appCDCData.writeTransferResult = writeCompleteEventData->result;
+            break;
+            
+        case USB_HOST_CDC_EVENT_READ_COMPLETE:
+            
+            /* This means an application requested write has completed */
+            appCDCData.readTransferDone = true;
+            readCompleteEventData = (USB_HOST_CDC_EVENT_READ_COMPLETE_DATA *)(eventData);
+            appCDCData.readTransferResult = readCompleteEventData->result;
+            break;
+            
+        case USB_HOST_CDC_EVENT_DEVICE_DETACHED:
+            
+            /* The device was detached */
+            appCDCData.deviceWasDetached = true;
+            /* Switch off LED  */
+            LED1_Off();
+            break;
+            
+        default:
+            break;
+    }
+    
+    return(USB_HOST_CDC_EVENT_RESPONE_NONE);
+}
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Initialization and State Machine Functions
@@ -158,30 +297,9 @@ void APP_Initialize ( void )
     /* Place the App state machine in its initial state. */
     appData.state = APP_STATE_BUS_ENABLE;
     APP_CDC_Initialize( &appCDCData );
-    APP_MSD_Initialize ( &appMSDData);
-       
-    /* TODO: Initialize your application's state machine and other
-     * parameters.
-     */
+    APP_MSD_Initialize ( &appMSDData);    
 }
 
-void APP_SYSFSEventHandler(SYS_FS_EVENT event, void * eventData, uintptr_t context)
-{
-    switch(event)
-    {
-        case SYS_FS_EVENT_MOUNT:
-            appMSDData.deviceIsConnected = true;
-            break;
-            
-        case SYS_FS_EVENT_UNMOUNT:
-            appMSDData.deviceIsConnected = false;
-            LED1_Off();
-            break;
-            
-        default:
-            break;
-    }
-}
 /*************************************************
  * Application MSD Task Initialize Function.
  *************************************************/
@@ -214,17 +332,6 @@ void APP_CDC_Initialize ( APP_CDC_DATA *appCDInitCData )
     appCDInitCData->writeTransferDone = false;
     appCDInitCData->controlRequestDone = false;
 }
-
-void APP_USBHostCDCAttachEventListener(USB_HOST_CDC_OBJ cdcObj, uintptr_t context)
-{
-    /* This function gets called when the CDC device is attached. Update the
-     * application data structure to let the application know that this device
-     * is attached */
-    
-    appCDCData.deviceIsAttached = true;
-    appCDCData.cdcObj = cdcObj;
-}
-
 
 /******************************************************************************
   Function:
@@ -495,7 +602,14 @@ void APP_CDC_Tasks( )
                 }
                 else
                 {
-                    /* Next we set the Control Line State */
+                    /* Turn ON LED to indicate the device is attached and ready 
+                       for data transfer. */
+                    LED1_On();
+
+                    /* Now, the application will send an "LED ON" message to the
+                       CDC Device. Fill the buffer here. */
+                    appCDCData.cdcWriteSize = sizeof(ledon);
+                    appCDCData.cdcWriteData = ledon;
                     appCDCData.state = APP_CDC_STATE_SEND_PROMPT_TO_DEVICE;
                 }
             }
@@ -504,14 +618,11 @@ void APP_CDC_Tasks( )
             
         case APP_CDC_STATE_SEND_PROMPT_TO_DEVICE:
             
-            LED1_On();
-            cdcWriteSize = sizeof(ledon);
-            prompt = ledon;
             /* The prompt is sent to the device here. The write transfer done
              * flag is updated in the event handler. */
             
             appCDCData.writeTransferDone = false;
-            result = USB_HOST_CDC_Write(appCDCData.cdcHostHandle, NULL, ( void *) prompt, cdcWriteSize);
+            result = USB_HOST_CDC_Write(appCDCData.cdcHostHandle, NULL, ( void *) appCDCData.cdcWriteData, appCDCData.cdcWriteSize);
             
             if(result == USB_HOST_CDC_RESULT_SUCCESS)
             {
@@ -562,16 +673,18 @@ void APP_CDC_Tasks( )
                         /* Switch on LED 1 */
 
                         LED1_On();
-                        cdcWriteSize = sizeof(ledon);
-                        prompt = ledon;
+                        /* Fill the buffer. */
+                        appCDCData.cdcWriteSize = sizeof(ledon);
+                        appCDCData.cdcWriteData = ledon;
 
                     }
                     else 
                     {
                         /* Switch on LED 2 */
                         LED1_Off();
-                        cdcWriteSize = sizeof(ledoff);
-                        prompt = ledoff;
+                        /* Fill the buffer. */
+                        appCDCData.cdcWriteSize = sizeof(ledoff);
+                        appCDCData.cdcWriteData = ledoff;
 
                     }
                     /* Send the prompt to the device and wait
@@ -588,76 +701,6 @@ void APP_CDC_Tasks( )
             break;
     }
 }
-
-USB_HOST_CDC_EVENT_RESPONSE APP_USBHostCDCEventHandler
-(
-    USB_HOST_CDC_HANDLE cdcHandle,
-    USB_HOST_CDC_EVENT event,
-    void * eventData,
-    uintptr_t context
-)
-{
-    /* This function is called when a CDC Host event has occurred. A pointer to
-     * this function is registered after opening the device. See the call to
-     * USB_HOST_CDC_EventHandlerSet() function. */
-
-    USB_HOST_CDC_EVENT_ACM_SET_LINE_CODING_COMPLETE_DATA * setLineCodingEventData;
-    USB_HOST_CDC_EVENT_ACM_SET_CONTROL_LINE_STATE_COMPLETE_DATA * setControlLineStateEventData;
-    USB_HOST_CDC_EVENT_WRITE_COMPLETE_DATA * writeCompleteEventData;
-    USB_HOST_CDC_EVENT_READ_COMPLETE_DATA * readCompleteEventData;
-    
-    switch(event)
-    {
-        case USB_HOST_CDC_EVENT_ACM_SET_LINE_CODING_COMPLETE:
-            
-            /* This means the application requested Set Line Coding request is
-             * complete. */
-            setLineCodingEventData = (USB_HOST_CDC_EVENT_ACM_SET_LINE_CODING_COMPLETE_DATA *)(eventData);
-            appCDCData.controlRequestDone = true;
-            appCDCData.controlRequestResult = setLineCodingEventData->result;
-            break;
-            
-        case USB_HOST_CDC_EVENT_ACM_SET_CONTROL_LINE_STATE_COMPLETE:
-            
-            /* This means the application requested Set Control Line State 
-             * request has completed. */
-            setControlLineStateEventData = (USB_HOST_CDC_EVENT_ACM_SET_CONTROL_LINE_STATE_COMPLETE_DATA *)(eventData);
-            appCDCData.controlRequestDone = true;
-            appCDCData.controlRequestResult = setControlLineStateEventData->result;
-            break;
-            
-        case USB_HOST_CDC_EVENT_WRITE_COMPLETE:
-            
-            /* This means an application requested write has completed */
-            appCDCData.writeTransferDone = true;
-            writeCompleteEventData = (USB_HOST_CDC_EVENT_WRITE_COMPLETE_DATA *)(eventData);
-            appCDCData.writeTransferResult = writeCompleteEventData->result;
-            break;
-            
-        case USB_HOST_CDC_EVENT_READ_COMPLETE:
-            
-            /* This means an application requested write has completed */
-            appCDCData.readTransferDone = true;
-            readCompleteEventData = (USB_HOST_CDC_EVENT_READ_COMPLETE_DATA *)(eventData);
-            appCDCData.readTransferResult = readCompleteEventData->result;
-            break;
-            
-        case USB_HOST_CDC_EVENT_DEVICE_DETACHED:
-            
-            /* The device was detached */
-            appCDCData.deviceWasDetached = true;
-			/* Switch off LED  */
-            LED1_Off();
-            break;
-            
-        default:
-            break;
-    }
-    
-    return(USB_HOST_CDC_EVENT_RESPONE_NONE);
-}
-
-
 
 /*******************************************************************************
  End of File

@@ -263,6 +263,13 @@ typedef struct
     /* True if device was detached */
     bool deviceWasDetached;
     
+    /* This variable points to the data that need to send to the attached USB 
+       CDC Device.  */
+    uint8_t *cdcWriteData;
+
+    /* This variable holds the data size */
+    uint8_t cdcWriteSize;
+    
 } APP_CDC_DATA;
 
 
@@ -331,7 +338,7 @@ USB_HOST_CDC_EVENT_RESPONSE APP_USBHostCDCEventHandler
 
 void APP_USBHostHIDMouseEventHandler(USB_HOST_HID_MOUSE_HANDLE handle, 
         USB_HOST_HID_MOUSE_EVENT event, void * pData);
-	
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Initialization and State Machine Functions

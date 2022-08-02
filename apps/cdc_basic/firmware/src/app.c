@@ -76,13 +76,9 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     Application strings and buffers are be defined outside this structure.
 */
 
-APP_DATA USB_ALIGN appData;
-
-/* This is the string that will written to the file */
-uint8_t *prompt;
-uint8_t cdcWriteSize = 1; 
-USB_ALIGN uint8_t ledon[12]  = "\r\nLED ON  :";
-USB_ALIGN uint8_t ledoff[12] = "\r\nLED OFF  :";
+USB_ALIGN APP_DATA appData;
+USB_ALIGN uint8_t ledon[]  = "\r\nLED ON";
+USB_ALIGN uint8_t ledoff[] = "\r\nLED OFF";
 
 
 // *****************************************************************************
@@ -98,9 +94,9 @@ USB_HOST_EVENT_RESPONSE APP_USBHostEventHandler
     uintptr_t context
 )
 {
-    /* This function is called by the USB Host whenever a USB Host Layer event
-     * has occurred. In this example we only handle the device unsupported event
-     * */
+    /* The USB Host Layer uses this function to communicate events to the 
+       application. In this example only the USB_HOST_EVENT_DEVICE_UNSUPPORTED
+       event is handled. */
 
     switch (event)
     {
@@ -119,9 +115,9 @@ USB_HOST_EVENT_RESPONSE APP_USBHostEventHandler
 
 void APP_USBHostCDCAttachEventListener(USB_HOST_CDC_OBJ cdcObj, uintptr_t context)
 {
-    /* This function gets called when the CDC device is attached. Update the
-     * application data structure to let the application know that this device
-     * is attached */
+    /* This function gets called when a CDC device is attached. Here, the data 
+       structure of the application is modified to reflect the device's 
+       attachment. */
     
     appData.deviceIsAttached = true;
     appData.cdcObj = cdcObj;
@@ -184,7 +180,8 @@ USB_HOST_CDC_EVENT_RESPONSE APP_USBHostCDCEventHandler
         case USB_HOST_CDC_EVENT_DEVICE_DETACHED:
             /* The device was detached */
             appData.deviceWasDetached = true;
-			/* Switch off LED  */
+            
+            /* Switch off LED  */
             LED1_Off();
             break;
             
@@ -266,9 +263,9 @@ void APP_Tasks ( void )
     {
         case APP_STATE_BUS_ENABLE:
         
-            /* In this state the application enables the USB Host Bus. Note
-             * how the CDC Attach event handler are registered before the bus
-             * is enabled. */
+            /* In this state, the application enables the USB Host Bus. Note how
+               the CDC Attach event handler is registered before the bus is 
+               enabled. */
             
             USB_HOST_EventHandlerSet(APP_USBHostEventHandler, (uintptr_t)0);
             USB_HOST_CDC_AttachEventHandlerSet(APP_USBHostCDCAttachEventListener, (uintptr_t) 0);
@@ -278,7 +275,8 @@ void APP_Tasks ( void )
         
         case APP_STATE_WAIT_FOR_BUS_ENABLE_COMPLETE:
             
-            /* In this state we wait for the Bus enable to complete */
+            /* In this state, the application is waiting for the Bus enable to 
+               complete. */
             if(USB_HOST_BusIsEnabled(USB_HOST_BUS_ALL))
             {
                 appData.state = APP_STATE_WAIT_FOR_DEVICE_ATTACH;
@@ -287,11 +285,11 @@ void APP_Tasks ( void )
             
         case APP_STATE_WAIT_FOR_DEVICE_ATTACH:
             
-            /* In this state the application is waiting for the device to be
-             * attached */
+            /* In this state, the application is waiting for the device to be
+               attached. */
             if(appData.deviceIsAttached)
             {
-                /* A device is attached. We can open this device */
+                /* A CDC device is attached. We can open this device */
                 appData.state = APP_STATE_OPEN_DEVICE;
                 appData.deviceIsAttached = false;
             }
@@ -299,11 +297,11 @@ void APP_Tasks ( void )
             
         case APP_STATE_OPEN_DEVICE:
             
-            /* In this state the application opens the attached device */
+            /* In this state, the application opens the attached device */
             appData.cdcHostHandle = USB_HOST_CDC_Open(appData.cdcObj);
             if(appData.cdcHostHandle != USB_HOST_CDC_HANDLE_INVALID)
             {
-                /* The driver was opened successfully. Set the event handler
+                /* The CDC Device was opened successfully. Set the event handler
                  * and then go to the next state. */
                 USB_HOST_CDC_EventHandlerSet(appData.cdcHostHandle, APP_USBHostCDCEventHandler, (uintptr_t)0);
                 appData.state = APP_STATE_SET_LINE_CODING;
@@ -360,7 +358,7 @@ void APP_Tasks ( void )
             
         case APP_STATE_WAIT_FOR_SET_CONTROL_LINE_STATE:
             
-            /* Here we wait for the control line state set request to complete */
+            /* Here, we wait for the control line state set request to complete */
             if(appData.controlRequestDone)
             {
                 if(appData.controlRequestResult != USB_HOST_CDC_RESULT_SUCCESS)
@@ -370,7 +368,14 @@ void APP_Tasks ( void )
                 }
                 else
                 {
-                    /* Next we set the Control Line State */
+                    /* Turn ON LED to indicate the device is attached and ready 
+                       for data transfer. */
+                    LED1_On();
+                    
+                    /* Now, the application will send an "LED ON" message to the
+                       CDC Device. Fill the buffer here. */
+                    appData.cdcWriteSize = sizeof(ledon);
+                    appData.cdcWriteData = ledon;
                     appData.state = APP_STATE_SEND_PROMPT_TO_DEVICE;
                 }
             }
@@ -381,14 +386,9 @@ void APP_Tasks ( void )
             
             /* The prompt is sent to the device here. The write transfer done
              * flag is updated in the event handler. */
-            LED1_On();
-            cdcWriteSize = sizeof(ledon);
-            prompt = ledon;
-            
-            
-
+                      
             appData.writeTransferDone = false;
-            result = USB_HOST_CDC_Write(appData.cdcHostHandle, NULL, ( void * )prompt, cdcWriteSize);
+            result = USB_HOST_CDC_Write(appData.cdcHostHandle, NULL, ( void *)appData.cdcWriteData, appData.cdcWriteSize);
             
             if(result == USB_HOST_CDC_RESULT_SUCCESS)
             {
@@ -398,12 +398,11 @@ void APP_Tasks ( void )
             
         case APP_STATE_WAIT_FOR_PROMPT_SEND_COMPLETE:
             
-            /* Here we check if the write transfer is done */
+            /* Here we check if the write transfer is done. */
             if(appData.writeTransferDone)
             {
                 if(appData.writeTransferResult == USB_HOST_CDC_RESULT_SUCCESS)
                 {
-                   
                     /* Now to get data from the device */
                     appData.state = APP_STATE_GET_DATA_FROM_DEVICE;
                 }
@@ -437,18 +436,22 @@ void APP_Tasks ( void )
                 {
                    if ( appData.inDataArray[0] == '1')
                     {
-                        /* Switch on LED  */
+                        /* Switch on LED   */
                         LED1_On();
-                        cdcWriteSize = sizeof(ledon);
-                        prompt = ledon;
+                        
+                        /* Fill the buffer. */
+                        appData.cdcWriteSize = sizeof(ledon);
+                        appData.cdcWriteData = ledon;
                     }
                    else
                    {
                         /* Switch off LED  */
                         LED1_Off();
-                        cdcWriteSize = sizeof(ledoff);
-                        prompt = ledoff;
-				
+                        
+                        /* Fill the buffer. */
+                        appData.cdcWriteSize = sizeof(ledoff);
+                        appData.cdcWriteData = ledoff;
+
                    }
                     
                     /* Send the prompt to the device and wait

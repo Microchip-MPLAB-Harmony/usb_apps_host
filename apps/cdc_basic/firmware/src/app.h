@@ -87,7 +87,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 typedef enum
 {
-	 /* Application enabled the bus*/
+    /* Application enabled the bus*/
     APP_STATE_BUS_ENABLE,
             
     /* Application waits for bus to be enabled */
@@ -205,6 +205,12 @@ typedef struct
     /* True if device was detached */
     bool deviceWasDetached;
 
+    /* This variable points to the data that need to send to the attached USB 
+     * CDC Device.  */
+    uint8_t *cdcWriteData;
+
+    /* This variable holds the data size */
+    uint8_t cdcWriteSize;
 
 } APP_DATA;
 
@@ -236,7 +242,7 @@ USB_HOST_CDC_EVENT_RESPONSE APP_USBHostCDCEventHandler
     void * eventData,
     uintptr_t context
 );
-	
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Initialization and State Machine Functions
