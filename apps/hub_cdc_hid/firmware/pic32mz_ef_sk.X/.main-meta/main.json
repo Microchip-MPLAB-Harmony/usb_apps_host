@@ -2,9 +2,9 @@
 	"metaDataVersion": "1.0.0",
 	"category": "com.microchip.ide.project",
 	"content": {
-		"metaDataVersion": "1.1.0",
+		"metaDataVersion": "1.3.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_host_hub_cdc_hid_pic32mz_ef_sk",
-		"version": "3.4.0",
+		"version": "3.4.1",
 		"displayName": "HUB CDC HID Example (hub_cdc_hid) Example for PIC32MZ EF Family",
 		"projectName": "hub_cdc_hid_pic32mz_ef_sk",
 		"shortDescription": "This application creates a USB Host that can recognize and enumerate a CDC Emulator USB Device and a HID USB Mouse connected via an external Hub. The host will demonstrate the communication from the CDC emulator device and the HID mouse.",
@@ -37,28 +37,17 @@
 			}
 		},
 		"author": "Microchip",
-		"subcategories": [
-			[
-				"Development Kit", "PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit"
-			],
-			[
-				"Harmony", "Middleware", "USB", "HOST_HUB_CDC_HID"
-			],
-			[
-				"Middleware", "USB", "HOST_HUB_CDC_HID"
-			]
-		],
 		"peripherals": [
 			"USB"
 		],
 		"keywords": [
-			"MHC",
 			"Harmony",
-			"Middleware",
+			"MCC",
 			"USB",
-			"PIC32MZ2048EFH144",
-			"PIC32MZ EF Family",
-			"USB"
+			"USB Host",
+			"USB Hub",
+			"CDC",
+			"HID"
 		],
 		"additionalData": {
 			"longDescription": {
