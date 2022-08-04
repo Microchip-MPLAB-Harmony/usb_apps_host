@@ -7,7 +7,7 @@
 		"version": "3.4.1",
 		"displayName": "HUB MSD Example (hub_msd)  Example for SAM A5D2 Family",
 		"projectName": "hub_msd_sam_a5d2_xult",
-		"shortDescription": ""This application uses USB Host stack and the Harmony Filesystem Service to copy a file from a source USB pen drive to a target USB pen drive.",
+		"shortDescription": "This application uses USB Host stack and the Harmony Filesystem Service to copy a file from a source USB pen drive to a target USB pen drive.",
 		"ide": {
 			"name": "MPLABX",
 			"semverRange": ">=6.00.0"
