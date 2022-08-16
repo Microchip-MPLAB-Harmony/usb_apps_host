@@ -42,6 +42,7 @@ Following table gives the details of project configurations, target device used,
 | sam_a5d27_wlsom1_ek1_freertos.X           | MPLABX   | ATSAMA5D27C         | [ATSAMA5D27 WLSOM1 EK1](#config_19)                                |
 | sam_a7g5_ek.X                   | MPLABX | SAMA7G54            | [SAMA7G5 EK Board](#config_21)                                    |
 | sam_d21_xpro.X                  | MPLABX | ATSAMD21J18A        | [SAMD21 Xplained Pro Board](#config_2)                                    |
+| sam_e54_xpro.X                  | MPLABX | ATSAME54P20A        | [SAME54 Xplained Pro Board](#config_3)                                    |
 | sam_e70_xult.X                  | MPLABX | ATSAME70Q21B        | [SAME70 Xplained Ultra Board](#config_4)                                  |
 | sam_e70_xult_freertos.X         | MPLABX | ATSAME70Q21B        | [SAME70 Xplained Ultra Board](#config_4)                                  |
 | sam_g55_xpro.X                  | MPLABX | ATSAMG55J19         | [SAMG55 Xplained Pro Board](#config_6)                                    |
@@ -64,6 +65,13 @@ Following table gives the details of project configurations, target device used,
 - Use "TARGET USB" connector on the board to connect the USB Mouse to the USB Host. A USB micro AB to type A USB Host receptacle converter will be needed to connect the device.
 - LED0 indicates a Device Connection. (Attached device has been successfully enumerated and configured). This LED is also toggled on Mouse Button press event.
 - The demonstration uses the EDBG Serial Interface to transfer demonstration application messages on a PC. 
+
+### <a name="config_3"></a> [SAME54 Xplained Pro Board](https://www.microchip.com/developmenttools/productdetails/atsame54-xpro)
+
+- A commercially available USB Mouse is required to run this demonstration application. 
+- Use "TARGET USB" connector on the board to connect the USB Mouse to the USB Host. A USB micro AB to type A USB Host receptacle converter will be needed to connect the device.
+- LED0 indicates a Device Connection. (Attached device has been successfully enumerated and configured). This LED is also toggled on Mouse Button press event.
+- The demonstration uses the EDBG Serial Interface to transfer demonstration application messages on a PC.
 
 ### <a name="config_4"></a> [SAME70 Xplained Ultra Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
 
