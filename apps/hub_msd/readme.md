@@ -39,8 +39,14 @@ Following table gives the details of project configurations, target device used,
 | sam_d21_xpro.X                  | MPLABX | ATSAMD21J18A        | [SAMD21 Xplained Pro Board](#config_2)                                    |
 | sam_e54_xpro.X                  | MPLABX | ATSAME54P20A        | [SAME54 Xplained Pro Board](#config_3)                                    |
 | sam_g55_xpro.X                  | MPLABX | ATSAMG55J19         | [SAMG55 Xplained Pro Board](#config_6)                                    |
+| pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curiosity Development Board](#config_23)           |
 
 ## <a name="config_title"></a> Configuring the Hardware
+
+### <a name="config_23"></a> PIC32CZ CA80 Curiosity Development Board
+- A commercially available USB Mouse is required to run this demonstration application. 
+- Connect the USB Hub to the connector (J102) using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit). 
+- LED0 on the demonstration board will illuminate to indicate completion of the file transfer.
 
 ### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
 
