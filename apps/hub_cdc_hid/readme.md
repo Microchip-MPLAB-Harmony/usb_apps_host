@@ -28,9 +28,16 @@ Following table gives the details of project configurations, target device used,
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
 | pic32mz_ef_curiosity_2_0.X      | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)                   |
 | pic32mz_ef_sk.X                 | MPLABX | PIC32MZ2048EFH144   | [PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](#config_16)      |
-| sam_g55_xpro.X                  | MPLABX | ATSAMG55J19         | [SAMG55 Xplained Pro Board](#config_6)                                    |
+| sam_g55_xpro.X                  | MPLABX | ATSAMG55J19         | [SAMG55 Xplained Pro Board](#config_6)                                     |
+| pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curiosity Development Board](#config_23)                          |
 
 ## <a name="config_title"></a> Configuring the Hardware
+
+### <a name="config_23"></a> PIC32CZ CA80 Curiosity Development Board
+- A commercially available USB Mouse is required to run this demonstration application. 
+- Connect the USB Hub to the connector (J102) using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit). 
+- LED1 is controlled by the attached USB Mouse. 
+- LED0, LED1 are controlled by the attached USB CDC Device. 
 
 ### <a name="config_6"></a> [SAMG55 Xplained Pro Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMG55-XPRO)
 
@@ -41,14 +48,14 @@ Following table gives the details of project configurations, target device used,
 ### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
 
 - Connect the USB device to the "TARGET USB" connector (J201) using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit). 
-- LED1 is controlled by the attched USB Mouse. 
-- LED1, LED2, and LED3 are controlled by the attched USB CDC Device. 
+- LED1 is controlled by the attached USB Mouse. 
+- LED1, LED2, and LED3 are controlled by the attached USB CDC Device. 
 
 ### <a name="config_16"></a> [PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](https://www.microchip.com/Developmenttools/ProductDetails/DM320007)
 
 - Connect the USB Hub to the Type A connector J5, which is located on the top side of the starter kit. 
-- LED1 is controlled by the attched USB Mouse. 
-- LED1, LED2, and LED3 are controlled by the attched USB CDC Device. 
+- LED1 is controlled by the attached USB Mouse. 
+- LED1, LED2, and LED3 are controlled by the attached USB CDC Device. 
 
 ## Running the Application
 
