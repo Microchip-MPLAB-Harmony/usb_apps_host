@@ -38,13 +38,21 @@ Following table gives the details of project configurations, target device used,
 | sam_a5d27_wlsom1_ek1_freertos.X | MPLABX | ATSAMA5D27C         | [ATSAMA5D27 WLSOM1 EK1](#config_19)                        |
 | sam_a7g5_ek.X                   | MPLABX | SAMA7G54            | [SAMA7G5 EK Board](#config_21)                             |
 | sam_d21_xpro.X                  | MPLABX | ATSAMD21J18A        | [SAMD21 Xplained Pro Board](#config_2)                     |
-| sam_e54_xpro.X                  | MPLABX | ATSAME54P20A        | [SAME54 Xplained Pro Board](#config_3)                                    |
+| sam_e54_xpro.X                  | MPLABX | ATSAME54P20A        | [SAME54 Xplained Pro Board](#config_3)                     |
 | sam_e70_xult.X                  | MPLABX | ATSAME70Q21B        | [SAME70 Xplained Ultra Board](#config_4)                   |
 | sam_e70_xult_freertos.X         | MPLABX | ATSAME70Q21B        | [SAME70 Xplained Ultra Board](#config_4)                   |
 | sam_g55_xpro.X                  | MPLABX | ATSAMG55J19         | [SAMG55 Xplained Pro Board](#config_6)                     |
 | sam_g55_xpro_freertos.X         | MPLABX | ATSAMG55J19         | [SAMG55 Xplained Pro Board](#config_6)                     |
+| pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curiosity Development Board](#config_23)          |
 
 ## <a name="config_title"></a> Configuring the Hardware
+
+### <a name="config_23"></a> PIC32CZ CA80 Curiosity Development Board
+- A commercially available USB Keyboard is required to run this demonstration application. 
+- Connect the USB Keyboard to the connector (J102) using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit). 
+- The demonstration uses the PKOB4 Serial Interface to transfer messages on a PC. 
+- LED0 indicates a Device Connection. (Attached device has been successfully enumerated and configured). The LED on the keyboard is also toggled on Keyboard "CapsLock" press event.
+
 
 ### <a name="config_2"></a> [SAMD21 Xplained Pro Board](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro)
 
@@ -52,7 +60,7 @@ Following table gives the details of project configurations, target device used,
 - Jumper titled "PA03 SELECT" must be shorted between PA03 and USB_ID (positions 2 and 3)
 - Use "TARGET USB" connector on the board to connect the USB Keyboard to the USB Host. A USB Type-A Female to micro-B male cable will be needed to connect the device (This cable is not included in the kit). 
 - The demonstration uses the EDBG Serial Interface to transfer demonstration application messages on a PC. 
-- LED0 indicates a Device Connection. (Attached device has been successfully enumerated and configured). This LED is also toggled on Keyboard "CapsLock" press event.
+- LED0 indicates a Device Connection. (Attached device has been successfully enumerated and configured). The LED on the keyboard is also toggled on Keyboard "CapsLock" press event.
 
 
 ### <a name="config_3"></a> [SAME54 Xplained Pro Board](https://www.microchip.com/developmenttools/productdetails/atsame54-xpro)
@@ -60,7 +68,7 @@ Following table gives the details of project configurations, target device used,
 - A commercially available USB Keyboard is required to run this demonstration application. 
 - Use "TARGET USB" connector on the board to connect the USB Keyboard to the USB Host. A USB Type-A Female to micro-B male cable will be needed to connect the device (This cable is not included in the kit). 
 - The demonstration uses the EDBG Serial Interface to transfer demonstration application messages on a PC. 
-- LED0 indicates a Device Connection. (Attached device has been successfully enumerated and configured). This LED is also toggled on Keyboard "CapsLock" press event.
+- LED0 indicates a Device Connection. (Attached device has been successfully enumerated and configured). The LED on the keyboard is also toggled on Keyboard "CapsLock" press event.
 
 
 ### <a name="config_4"></a> [SAME70 Xplained Ultra Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
@@ -69,7 +77,7 @@ Following table gives the details of project configurations, target device used,
 - Jumper J203 must be shorted between PB08 and LED2 (positions 1 and 2).
 - Use "TARGET USB" J200 connector on the board to connect the USB Keyboard to the USB Host. A USB Type-A Female to micro-B male cable will be needed to connect the device (This cable is not included in the kit). 
 - The demonstration uses the EDBG Serial Interface to transfer demonstration application messages on a PC. 
-- LED3 indicates a Device Connection. (Attached device has been successfully enumerated and configured). This LED is also toggled on Keyboard "CapsLock" press event.
+- LED3 indicates a Device Connection. (Attached device has been successfully enumerated and configured). The LED on the keyboard is also toggled on Keyboard "CapsLock" press event.
 
 ### <a name="config_6"></a> [SAMG55 Xplained Pro Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMG55-XPRO)
 
@@ -77,7 +85,7 @@ Following table gives the details of project configurations, target device used,
 - Chip Erase Jumper must be open.
 - Use TARGET USB connector on the board to connect the USB keyboard to the USB Host. A USB Type-A Female to micro-B male cable will be needed to connect the device (This cable is not included in the kit). 
 - The demonstration uses the EDBG Serial Interface to transfer demonstration application messages on a PC. 
-- LED0 indicates a Device Connection. (Attached device has been successfully enumerated and configured). This LED is also toggled on Keyboard "CapsLock" press event.
+- LED0 indicates a Device Connection. (Attached device has been successfully enumerated and configured). The LED on the keyboard is also toggled on Keyboard "CapsLock" press event.
 
 ### <a name="config_9"></a> [SAM9X60-EK Evaluation Board](https://www.microchip.com/developmenttools/ProductDetails/DT100126)
 
@@ -92,7 +100,7 @@ Following table gives the details of project configurations, target device used,
 - Connect the USB Micro-B port (J22) on board to the computer using a micro USB cable (to enable debug com port).
 - Connect the USB Micro-B Connector (J7) on the board to the computer using a micro USB cable to power up the board. 
 - Connect the USB device to the Type-A connector (J8).
-- LED D1 indicates a Device Connection (Attached device has been successfully enumerated and configured). This LED is also toggled on Keyboard "CapsLock" press event.
+- LED D1 indicates a Device Connection (Attached device has been successfully enumerated and configured). The LED on the keyboard is also toggled on Keyboard "CapsLock" press event.
 
     ![SAM9X60-EK Evaluation Board](images/sam9x60_evk.png)
 
@@ -109,7 +117,7 @@ Following table gives the details of project configurations, target device used,
 - Connect the EDBG USB Micro-B port J14 on the board to the computer using a micro USB cable.
 - Connect the USB device to the USB Type-A connector "A5-USB-B" (J13).   
 - The demonstration uses the EDBG USB Micro-B port J14 to transfer demonstration application messages on a PC. 
-- RGB LED indicates a Device Connection (Attached device has been successfully enumerated and configured). This LED is also toggled on Keyboard "CapsLock" press event.
+- RGB LED indicates a Device Connection (Attached device has been successfully enumerated and configured). The LED on the keyboard is also toggled on Keyboard "CapsLock" press event.
 
 ### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
 
@@ -130,7 +138,7 @@ Following table gives the details of project configurations, target device used,
 - Connect the USB Micro-AB port (J10) on the board to the computer using a micro USB cable.
 - Connect the USB device to the USB-B Type-C connector (J19) on the board. 
 - The demonstration uses the USB Micro-AB port (J10) to transfer demonstration application messages on a PC. 
-- RGB LED indicates a Device Connection (Attached device has been successfully enumerated and configured). This LED is also toggled on Keyboard "CapsLock" press event. 
+- RGB LED indicates a Device Connection (Attached device has been successfully enumerated and configured). The LED on the keyboard is also toggled on Keyboard "CapsLock" press event. 
 
   ![SAMA5D27 SOM1 Kit1](images/SAMA5D2_SOM1_EK_USB.png)
 
@@ -146,7 +154,7 @@ Following table gives the details of project configurations, target device used,
 - Press the "START_SOM" button to activate board start-up.  
 - Connect the USB device to the USB Type-A connector (J11) on the board. 
 - The demonstration uses the Debug UART port (J26) to transfer demonstration application messages on a PC. A USB/Serial converter is required to connect the J26 to a PC (The USB/Serial converter is not included in the kit). 
-- RGB LED indicates a Device Connection (Attached device has been successfully enumerated and configured). This LED is also toggled on Keyboard "CapsLock" press event. 
+- RGB LED indicates a Device Connection (Attached device has been successfully enumerated and configured). The LED on the keyboard is also toggled on Keyboard "CapsLock" press event. 
   ![ATSAMA5D27 WLSOM1 EK1](images/SAMA5D2_WLSOM1_EK_USB.png)
 
 ### <a name="config_21"></a> [SAMA7G5-EK Evaluation Kit](https://www.microchip.com/en-us/development-tool/EV21H18A)
@@ -162,7 +170,7 @@ Following table gives the details of project configurations, target device used,
 - Connect the USB device to the USB Host Type-A connector (J9) on the board. 
   Alternatively, the USB Device could be connected to the Type-C connector (J8) or micro A/B connector (J7). 
 - The demonstration uses the Debug UART port (J24) to transfer demonstration application messages on a PC. 
-- RGB LED indicates a Device Connection (Attached device has been successfully enumerated and configured). This LED is also toggled on Keyboard "CapsLock" press event. 
+- RGB LED indicates a Device Connection (Attached device has been successfully enumerated and configured). The LED on the keyboard is also toggled on Keyboard "CapsLock" press event. 
 
 ### <a name="config_22"></a> [Curiosity Pro PIC32CM LE00 Development Board](https://www.microchip.com/en-us/development-tool/EV80P12A)
 
