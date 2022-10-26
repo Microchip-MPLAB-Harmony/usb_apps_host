@@ -60,7 +60,8 @@ Following table gives the details of project configurations, target device used,
 | sam_g55_xpro_freertos.X         | MPLABX | ATSAMG55J19         | [SAMG55 Xplained Pro Board](#config_6)                                    |
 | sam_l21_xpro.X                  | MPLABX | ATSAML21J18B        | [SAML21 Xplained Pro Board](#config_7)                                    |
 | sam_v71_xult_freertos.X         | MPLABX | ATSAMV71Q21B        | [SAMV71 Xplained Ultra board](#config_5)                                    |
-| pic32cz_ca80_curiosity_ultra.X         | MPLABX | PIC32CZ8110CA80208   | [PIC32CZ Curiosity Development Board](#config_23)           |
+| pic32cz_ca80_curiosity_ultra.X          | MPLABX | PIC32CZ8110CA80208 | [PIC32CZ Curiosity Development Board](#config_23)     |
+| pic32cz_ca80_curiosity_ultra_freertos.X | MPLABX | PIC32CZ8110CA80208 | [PIC32CZ Curiosity Development Board](#config_23)     |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
