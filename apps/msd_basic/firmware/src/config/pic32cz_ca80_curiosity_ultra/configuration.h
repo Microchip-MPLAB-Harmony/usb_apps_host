@@ -189,7 +189,7 @@ extern "C" {
 /* Maximum number of configurations supported per device */
 #define USB_HOST_DEVICE_INTERFACES_NUMBER                   5  
 
-#define USB_HOST_CONTROLLERS_NUMBER            				1  
+#define USB_HOST_CONTROLLERS_NUMBER                         1  
 
 
 

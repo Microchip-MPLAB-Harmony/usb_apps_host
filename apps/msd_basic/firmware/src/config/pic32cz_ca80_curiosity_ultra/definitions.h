@@ -56,7 +56,6 @@
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/rtc/plib_rtc.h"
-#include "bsp/bsp.h"
 #include "system/time/sys_time.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_host.h"
@@ -67,6 +66,7 @@
 #include "system/fs/fat_fs/file_system/ffconf.h"
 #include "system/fs/fat_fs/hardware_access/diskio.h"
 #include "driver/usb/usbhs/drv_usbhs.h"
+#include "bsp/bsp.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
@@ -197,7 +197,7 @@ Remarks:
 typedef struct
 {
     SYS_MODULE_OBJ  sysTime;
-	SYS_MODULE_OBJ  usbHostObject0;
+    SYS_MODULE_OBJ  usbHostObject0;
 
 
     SYS_MODULE_OBJ  drvUSBHSObject0;

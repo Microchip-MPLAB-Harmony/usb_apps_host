@@ -2,7 +2,7 @@
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
-         <string>BSP_PIC32Z_CA80_Curiosity_Ultra</string>
+         <string>BSP_PIC32CZ_CA80_Curiosity_Ultra</string>
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
       <entry>
@@ -63,340 +63,340 @@
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="#&amp;__MCC_Group_Parrent_id"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="#&amp;__MCC_Group_Parrent_id"/>
          <value>__ROOTVIEW</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_DIR0"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_DIR0&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_DIR0"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_DIR0&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_DIR1"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_DIR1&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_DIR1"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_DIR1&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_DIR2"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_DIR2&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_DIR2"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_DIR2&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_DIR3"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_DIR3&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_DIR3"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_DIR3&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_DIR4"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_DIR4&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_DIR4"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_DIR4&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_DIR5"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_DIR5&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_DIR5"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_DIR5&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_IE0"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_IE0&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_IE0"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_IE0&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_IE1"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_IE1&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_IE1"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_IE1&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_IE2"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_IE2&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_IE2"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_IE2&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_IE3"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_IE3&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_IE3"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_IE3&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_IE4"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_IE4&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_IE4"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_IE4&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_IE5"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_IE5&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_IE5"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_IE5&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_LAT0"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_LAT0&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_LAT0"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_LAT0&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_LAT1"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_LAT1&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_LAT1"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_LAT1&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_LAT2"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_LAT2&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_LAT2"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_LAT2&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_LAT3"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_LAT3&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_LAT3"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_LAT3&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_LAT4"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_LAT4&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_LAT4"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_LAT4&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_LAT5"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_LAT5&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_LAT5"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_LAT5&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_MODE0"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_MODE0&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_MODE0"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_MODE0&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_MODE1"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_MODE1&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_MODE1"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_MODE1&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_MODE2"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_MODE2&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_MODE2"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_MODE2&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_MODE3"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_MODE3&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_MODE3"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_MODE3&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_MODE4"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_MODE4&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_MODE4"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_MODE4&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_MODE5"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_MODE5&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_MODE5"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_MODE5&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_PE0"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_PE0&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_PE0"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_PE0&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_PE1"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_PE1&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_PE1"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_PE1&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_PE2"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_PE2&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_PE2"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_PE2&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_PE3"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_PE3&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_PE3"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_PE3&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_PE4"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_PE4&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_PE4"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_PE4&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_PE5"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_PE5&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_PE5"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_PE5&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_TYPE0"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_TYPE0&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_TYPE0"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_TYPE0&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_TYPE1"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_TYPE1&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_TYPE1"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_TYPE1&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_TYPE2"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_TYPE2&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_TYPE2"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_TYPE2&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_TYPE3"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_TYPE3&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_TYPE3"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_TYPE3&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_TYPE4"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_TYPE4&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_TYPE4"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_TYPE4&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_CUSTOM_TYPE5"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_TYPE5&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_CUSTOM_TYPE5"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_CUSTOM_TYPE5&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32Z_CA80_Curiosity_Ultra" name="BSP_TYPE_SIZE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-  &lt;BSP_PIC32Z_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_TYPE_SIZE&quot;&gt;
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32CZ_CA80_Curiosity_Ultra" name="BSP_TYPE_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+  &lt;BSP_PIC32CZ_CA80_Curiosity_Ultra dnOrder=&quot;0&quot; id=&quot;BSP_TYPE_SIZE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
-&lt;/BSP_PIC32Z_CA80_Curiosity_Ultra&gt;
+  &lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
+&lt;/BSP_PIC32CZ_CA80_Curiosity_Ultra&gt;
 </value>
       </entry>
       <entry>
@@ -3240,7 +3240,7 @@
   &lt;UserData dnOrder=&quot;0&quot;&gt;
     &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
-        &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_PIC32Z_CA80_Curiosity_Ultra&quot; x=&quot;180&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_PIC32CZ_CA80_Curiosity_Ultra&quot; x=&quot;180&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;HarmonyCore&quot; x=&quot;14&quot; y=&quot;194&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;cmsis&quot; x=&quot;291&quot; y=&quot;77&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;core&quot; x=&quot;208&quot; y=&quot;74&quot;/&gt;
@@ -4683,24 +4683,6 @@
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drv_usbhs_index_0&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
-  &lt;/drv_usbhs_index_0&gt;
-&lt;/drv_usbhs_index_0&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="drv_usbhs_index_0" name="USB_DRV_HOST_ATTACH_DEBOUNCE_DURATION"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drv_usbhs_index_0&gt;
-  &lt;drv_usbhs_index_0 dnOrder=&quot;0&quot; id=&quot;USB_DRV_HOST_ATTACH_DEBOUNCE_DURATION&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/drv_usbhs_index_0&gt;
-&lt;/drv_usbhs_index_0&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="drv_usbhs_index_0" name="USB_DRV_HOST_RESET_DUARTION"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drv_usbhs_index_0&gt;
-  &lt;drv_usbhs_index_0 dnOrder=&quot;0&quot; id=&quot;USB_DRV_HOST_RESET_DUARTION&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/drv_usbhs_index_0&gt;
 &lt;/drv_usbhs_index_0&gt;
 </value>
@@ -8091,7 +8073,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\usb_host_init_data.c</file>
-         <hash>4657ba2538ac85f08d55d2b1097d207c5c455545316e7a5074490aaaa8c143d8</hash>
+         <hash>0789f3a731126f53a72a8713edf641a3f56e4a81ba866b318a159c38cf31bcaa</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\mpu_armv7.h</file>
@@ -8142,12 +8124,12 @@
          <hash>974cdcaf5302e365a5bc6253bdc1df158b6d7ee09354e076cb44d0e73b1d2fbe</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32cz_ca80_curiosity_ultra\bsp\bsp.c</file>
-         <hash>e694893a15af9f4f25998309682ec8d32f317133bc9731c71cd62bae3c423177</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\PIC32CZ8110CA80208_DFP\instance\sercom1.h</file>
          <hash>8ed34410940d418717f0c88fa1980803272e4cb9fd47eddcb33aa1731ec00aac</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32cz_ca80_curiosity_ultra\bsp\bsp.c</file>
+         <hash>e694893a15af9f4f25998309682ec8d32f317133bc9731c71cd62bae3c423177</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\bsp\bsp.h</file>
@@ -8211,7 +8193,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\tasks.c</file>
-         <hash>7241ebb1cdb76aee7a59aa0416d2960f17140c17cec021db06fe6f44db36b443</hash>
+         <hash>c7650454573673c231d34b1983e1bac2fdb12042594d15e2d20eff47d97b2829</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\system\system_module.h</file>
@@ -8271,7 +8253,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\initialization.c</file>
-         <hash>42fc354239352fbdfa7bfbaf670a0911b29e88d9f40205469fd7de1304c3cb21</hash>
+         <hash>1614191d4e5d4bb2a3e56c29dfc6b38455b12ee52c6cbe305b9581a06dd74278</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CZ8110CA80208_DFP\instance\port.h</file>
@@ -8555,7 +8537,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\definitions.h</file>
-         <hash>1b72f5948b6a742975c23d44ae6dcf6f6e4f9e16abf4fff96062513f41b50e78</hash>
+         <hash>3132459912bd86fc9330bd5b828d93e43824716e3bbe1f8aba9b8d76fed03e7c</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CZ8110CA80208_DFP\instance\gclk.h</file>
@@ -8831,7 +8813,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\configuration.h</file>
-         <hash>5d26c0a85e68f20e2bc046865a240118b2dea7a76e4686f0f2ec608fa0bc771e</hash>
+         <hash>5e51066273c0a8e93578af68e0b3a55fd7e995b1c52e1f0cc6f33af1b94f73cf</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CZ8110CA80208_DFP\component\spi_ixs.h</file>
