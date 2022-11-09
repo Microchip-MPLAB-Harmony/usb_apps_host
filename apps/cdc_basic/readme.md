@@ -195,13 +195,14 @@ Following table gives the details of project configurations, target device used,
 
 This application demonstrates the use of the CDC Host Client Driver to enumerate and operate a CDC USB Device. The application uses the USB Host Layer and CDC Client driver to enumerate a CDC USB device. The demonstration host application then operates and uses the functionality of the attached CDC Device.
 
-1. Open_the project corresponding to the selected board. Refer to the [Building the Application](#building_the_application) section for details.
+1. Open MPLAB X IDE the project corresponding to the selected board. Refer to the [Building the Application](#building_the_application) section for details.
 1. Build the code and program the device.
-1. Follow the directions for setting up and running the cdc_serial_emulator USB device demonstration. Start a terminal program on the USB Host personal computer and select the Serial-to-USB Dongle as the communication port. Select the baud rate as 9600, no parity, 1 Stop bit, and no flow control.
+1. Follow the directions for setting up and running the cdc_serial_emulator USB device demonstration. Start a terminal program on the USB Host personal computer and select the Serial-to-USB Dongle as the communication port. Select the baud rate as 9600, no parity, One Stop bit, and no flow control.
 1. Connect the USB Device connector of the CDC USB Device board to the USB Host Target board. Refer to the [Configuring the Hardware](#config_title) section for any converter requirements.
-1. A prompt (LED :) will be displayed immediately on the terminal emulation program.
-1. Pressing the 1 key on the USB Host keyboard will cause the LED on the Host USB board to switch on. Refer to the [Configuring the Hardware](#config_title) section for details on the relevant LED. Pressing any other key at the prompt message will cause the LED to switch off.
-1. The prompt will again be displayed on the terminal emulation program, and step 7 can be repeated.
+1. The LED on the USB host board will turn on as soon as the CDC device is connected. Refer to the [Configuring the Hardware](#config_title) section for details on the relevant LED.  
+1. The terminal emulator program will immediately display the text "LED ON."
+1. Pressing the key "1" on the terminal will cause the LED on the Host USB board to switch on.  Pressing any other key on the terminal message will cause the LED to switch off.
+1. The above step can be repeated.
 1. Ensure that the CDC serial emulator device is completely powered off before detaching and reattaching to the embedded CDC host.
 
 In the below setup, the USB Device Board emulates a CDC USB-to-Serial Dongle. The USB Host Board (running the cdc_basic demonstration application) sends the prompt message to the CDC device. The CDC device forwards the prompt to the UART port from where it is transmitted to the PC USB Host through the USB serial interface. A key press on the PC USB Host is transmitted to the CDC device, which in turn presents the key press data to the CDC host. The cdc_basic demonstration then analyzes the key press data and switches on the respective LED.

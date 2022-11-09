@@ -44,8 +44,8 @@ Following table gives the details of project configurations, target device used,
 ## <a name="config_title"></a> Configuring the Hardware
 
 ### <a name="config_23"></a> PIC32CZ CA80 Curiosity Development Board
-- A commercially available USB Mouse is required to run this demonstration application. 
-- Connect the USB Hub to the connector (J102) using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit). 
+- An external power supply (6.5V to 14V) must be connected through the J100 connector. 
+- Connect the USB Hub to the micro A/B connector (J102) using a USB Type-A Female to micro-B male cable (This cable is not included in the kit). 
 - LED0 on the demonstration board will illuminate to indicate completion of the file transfer.
 
 ### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)

@@ -36,8 +36,8 @@ Following table gives the details of project configurations, target device used,
 ### <a name="config_23"></a> PIC32CZ CA80 Curiosity Development Board
 - A commercially available USB Mouse is required to run this demonstration application. 
 - Connect the USB Hub to the connector (J102) using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit). 
-- LED1 is controlled by the attached USB Mouse. 
-- LED0, LED1 are controlled by the attached USB CDC Device. 
+- LED0 is controlled by the attached USB Mouse. 
+- LED0 is also controlled by the attached USB CDC Device. 
 
 ### <a name="config_6"></a> [SAMG55 Xplained Pro Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMG55-XPRO)
 
@@ -61,13 +61,17 @@ Following table gives the details of project configurations, target device used,
 
 This application demonstrates the capability of the USB Host Stack to access and manage multiple USB Devices through a Hub. The demonstration application enumerates a HID mouse and CDC emulator device via an external hub. The host will demonstrate the communication from the CDC emulator device and the HID mouse. 
 
-Open the project in MPLAB X IDE and select the desired project configuration. 
-
+1. Open MPLAB X IDE the project corresponding to the selected board. Refer to the [Building the Application](#building_the_application) section for details.
 1. Build the code and program the device. 
-2. Connect a hub to the Host connector on the desired board. 
-3. Connect a mouse to a spare port on the hub. 
-4. Connect the CDC emulator device to another spare port on the hub. Follow the directions for setting up and running the cdc_serial_emulator USB device demonstration. On the personal computer, open a serial terminal and set the serial Baudrate to 9600. 
-5. At the prompt, (LED:), enter 1, 2*, or 3* to toggle the corresponding LEDs on the starter kit. (*: depending of the board).
-6. Click the mouse Left and Right buttons. This will toggle LED on the demo board.
+1. Connect a USB hub to the Host connector on the desired board. 
+1. Connect a USB mouse to a spare port on the hub.
+1. Click the mouse Left and Right buttons. This will toggle LED on the demo board. 
+1. Follow the directions for setting up and running the cdc_serial_emulator USB device demonstration. Start a terminal program on the USB Host personal computer and select the Serial-to-USB Dongle as the communication port. Select the baud rate as 9600, no parity, One Stop bit, and no flow control.
+1. Connect the CDC emulator device to another spare port on the hub. 
+1. The LED on the USB host board will turn on as soon as the CDC device is connected. Refer to the [Configuring the Hardware](#config_title) section for details on the relevant LED.  
+1. The terminal emulator program will immediately display the text "LED ON."
+1. Pressing the key "1" on the terminal will cause the LED on the Host USB board to switch on.  Pressing any other key on the terminal message will cause the LED to switch off.
+1. The above step can be repeated.
+1. Ensure that the CDC serial emulator device is completely powered off before detaching and reattaching to the embedded CDC host. 
 
 
