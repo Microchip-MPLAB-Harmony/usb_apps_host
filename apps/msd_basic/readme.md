@@ -62,12 +62,17 @@ Following table gives the details of project configurations, target device used,
 | sam_v71_xult_freertos.X         | MPLABX | ATSAMV71Q21B        | [SAMV71 Xplained Ultra board](#config_5)                                    |
 | pic32cz_ca80_curiosity_ultra.X          | MPLABX | PIC32CZ8110CA80208 | [PIC32CZ Curiosity Development Board](#config_23)     |
 | pic32cz_ca80_curiosity_ultra_freertos.X | MPLABX | PIC32CZ8110CA80208 | [PIC32CZ Curiosity Development Board](#config_23)     |
+| pic32ck_gc01_curiosity_ultra.X         | MPLABX | PIC32CK2051GC01144   | [PIC32CK Curiosity Ultra Development Board](#config_24)           |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
 ### <a name="config_23"></a> PIC32CZ CA80 Curiosity Development Board
 - Connect the USB device to the micro-B connector (J102) using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit). 
 - LED1 indicates the file write is complete.
+
+### <a name="config_24"></a> PIC32CK Curiosity Ultra Development Board
+- Connect the USB device to the Type-C connector (J202).
+- LED1 indicates the file write is complete
 
 ### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
 
