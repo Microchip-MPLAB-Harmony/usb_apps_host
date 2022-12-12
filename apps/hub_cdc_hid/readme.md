@@ -30,6 +30,7 @@ Following table gives the details of project configurations, target device used,
 | pic32mz_ef_sk.X                 | MPLABX | PIC32MZ2048EFH144   | [PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](#config_16)      |
 | sam_g55_xpro.X                  | MPLABX | ATSAMG55J19         | [SAMG55 Xplained Pro Board](#config_6)                                     |
 | pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curiosity Development Board](#config_23)                          |
+| pic32ck_gc01_curiosity_ultra.X  | MPLABX | PIC32CK2051GC01144  | [PIC32CK Curiosity Development Board](#config_24)           |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
@@ -38,6 +39,13 @@ Following table gives the details of project configurations, target device used,
 - Connect the USB Hub to the connector (J102) using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit). 
 - LED0 is controlled by the attached USB Mouse. 
 - LED0 is also controlled by the attached USB CDC Device. 
+
+### <a name="config_24"></a> PIC32CK Curiosity Development Board
+- A commercially available USB Mouse is required to run this demonstration application.
+- Connect the USB Hub to the USB Type-C connector (J202). A USB Type-C to Type-A Female adapter is required to connect the USB device to the board. (This adapter is not included in the kit) 
+- LED1 is controlled by the attached USB Mouse. 
+- LED1 is also controlled by the attached USB CDC Device. 
+
 
 ### <a name="config_6"></a> [SAMG55 Xplained Pro Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMG55-XPRO)
 
