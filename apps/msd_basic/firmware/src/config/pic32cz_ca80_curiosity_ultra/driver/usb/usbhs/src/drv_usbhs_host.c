@@ -686,18 +686,33 @@ void _DRV_USBHS_HOST_Initialize
     /* Initialize the device handle */
     drvObj->usbDrvHostObj.attachedDeviceObjHandle = USB_HOST_DEVICE_OBJ_HANDLE_INVALID;
 
+    /* IDVAL is the source of ID */
+    ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_CTRLA |= USBHS_CTRLA_IDOVEN(1); 
+
+    /* ID override value is 0 (A plug) */
+    ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_CTRLA &= ~USBHS_CTRLA_IDVAL(1);
+
+    /* Enable module */
     ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_CTRLA |= USBHS_CTRLA_ENABLE(1);
+
+    /* Software must poll this bit to know when the operation completes. */
     while ((((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_SYNCBUSY & USBHS_SYNCBUSY_ENABLE_Msk) == USBHS_SYNCBUSY_ENABLE_Msk)
     {
     }
-    while ((((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_STATUS & USBHS_STATUS_PHYRDY_Msk) == USBHS_STATUS_PHYRDY_Msk)
+    /* PHY is in on (operational power state) */
+    while ((((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_STATUS & USBHS_STATUS_PHYON_Msk ) == 0)
     {
     }
-    ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_CTRLA |= USBHS_CTRLA_IDOVEN(1); 
-    ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_CTRLA |= USBHS_CTRLA_IDVAL(0);
+    /* PHY is ready for USB activity */
+    while ((((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_STATUS & USBHS_STATUS_PHYRDY_Msk) == 0)
+    {
+    }
+    
+    /* PHY24.OTGOFF controls OTG threshold detection.
+     * When OTGOFF=1, OTG VBUS monitoring (vbus valid, A valid, B valid, session end)
+     * is powered off */
     ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_PHY24 |= (1<<1);
-    ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_PHY44 |= USBHS_PHY44_PLLDAMP(0x03);  
-    ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_PHY20 |= USBHS_PHY20_RSVD(0x08);  
+
     if(DRV_USBHS_OPMODE_DUAL_ROLE != drvObj->usbDrvCommonObj.operationMode)
     {
         /* Disable all interrupts. Interrupts will be enabled when the root hub is
@@ -3267,8 +3282,7 @@ USB_SPEED DRV_USBHS_HOST_ROOT_HUB_PortSpeedGet
 /* Function:
     void DRV_USBHS_HOST_EndpointToggleClear
     (
-        DRV_HANDLE client,
-        USB_ENDPOINT endpointAndDirection
+        DRV_USBHS_HOST_PIPE_HANDLE pipeHandle
     )
 
   Summary:
@@ -3288,27 +3302,27 @@ void DRV_USBHS_HOST_EndpointToggleClear
     DRV_USBHS_HOST_PIPE_HANDLE pipeHandle
 )
 {
-    USBHS_MODULE_ID usbID = USBHS_ID_0;
+    USBHS_MODULE_ID usbID = USBHS_NUMBER_OF_MODULES;
     USB_DATA_DIRECTION  direction = USB_DATA_DIRECTION_DEVICE_TO_HOST;
-    DRV_USBHS_HOST_PIPE_OBJ * pPipe = NULL;
+    DRV_USBHS_HOST_PIPE_OBJ * pipe = NULL;
     DRV_USBHS_OBJ * hDriver = NULL;
 
     if ((pipeHandle != DRV_USBHS_HOST_PIPE_HANDLE_INVALID) && ((DRV_USBHS_HOST_PIPE_HANDLE)NULL != pipeHandle))
     {
-        pPipe = (DRV_USBHS_HOST_PIPE_OBJ *)pipeHandle;
-        hDriver = ((DRV_USBHS_CLIENT_OBJ *)(pPipe->hClient))->hDriver;
+        pipe = (DRV_USBHS_HOST_PIPE_OBJ *)pipeHandle;
+        hDriver = ((DRV_USBHS_CLIENT_OBJ *)(pipe->hClient))->hDriver;
         usbID = hDriver->usbDrvCommonObj.usbID;
-        direction = (pPipe->endpointAndDirection & 0x80) >> 7;
+        direction = (pipe->endpointAndDirection & 0x80) >> 7;
         
         if(USB_DATA_DIRECTION_HOST_TO_DEVICE == direction)
         {
             /* Clear the Data Toggle for TX Endpoint */
-            PLIB_USBHS_HostTxEndpointDataToggleClear(usbID, pPipe->hostEndpoint);
+            PLIB_USBHS_HostTxEndpointDataToggleClear(usbID, pipe->hostEndpoint);
         }
         else
         {
             /* Clear the Data Toggle for RX Endpoint */
-            PLIB_USBHS_HostRxEndpointDataToggleClear(usbID, pPipe->hostEndpoint);
+            PLIB_USBHS_HostRxEndpointDataToggleClear(usbID, pipe->hostEndpoint);
         }
     }
     else
