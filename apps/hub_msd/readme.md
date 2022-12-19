@@ -40,6 +40,7 @@ Following table gives the details of project configurations, target device used,
 | sam_e54_xpro.X                  | MPLABX | ATSAME54P20A        | [SAME54 Xplained Pro Board](#config_3)                                    |
 | sam_g55_xpro.X                  | MPLABX | ATSAMG55J19         | [SAMG55 Xplained Pro Board](#config_6)                                    |
 | pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curiosity Development Board](#config_23)           |
+| pic32ck_gc01_curiosity_ultra.X  | MPLABX | PIC32CK2051GC01144  | [PIC32CK Curiosity Development Board](#config_24)           |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
@@ -47,6 +48,11 @@ Following table gives the details of project configurations, target device used,
 - An external power supply (6.5V to 14V) must be connected through the J100 connector. 
 - Connect the USB Hub to the micro A/B connector (J102) using a USB Type-A Female to micro-B male cable (This cable is not included in the kit). 
 - LED0 on the demonstration board will illuminate to indicate completion of the file transfer.
+
+### <a name="config_24"></a> PIC32CK  Curiosity Development Board
+- An external power supply (6.5V to 14V) must be connected through the J200 connector. 
+- Connect the USB Hub to the micro C connector (J202). A USB Type-C to Type-A Female adapter is required to connect the USB device to the board. (This adapter is not included in the kit).  
+- LED1 on the demonstration board will illuminate to indicate completion of the file transfer.
 
 ### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
 
