@@ -53,6 +53,7 @@ Following table gives the details of project configurations, target device used,
 | sam_g55_xpro_freertos.X         | MPLABX | ATSAMG55J19         | [SAMG55 Xplained Pro Board](#config_6)                                    |
 | sam_v71_xult_freertos.X         | MPLABX | ATSAMV71Q21B        | [SAMV71 Xplained Ultra board](#config_5)                                   |
 | pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curiosity Development Board](#config_23)           |
+| pic32ck_gc01_curiosity_ultra.X  | MPLABX | PIC32CK2051GC01144  | [PIC32CK Curiosity Development Board](#config_24)           |
 
 
 ## <a name="config_title"></a> Configuring the Hardware
@@ -60,6 +61,11 @@ Following table gives the details of project configurations, target device used,
 ### <a name="config_23"></a> PIC32CZ CA80 Curiosity Development Board
 - Connect the USB device to the connector (J102) using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit). 
 - LED0 on the board is controlled by the attached USB CDC device.
+
+### <a name="config_24"></a> PIC32CK Curiosity Development Board
+- Connect the USB device to the USB Type-C connector (J202). A USB Type-C to Type-A Female adapter is required to connect the USB device to the board. (This cable is not included in the kit). 
+- LED1 on the board is controlled by the attached USB CDC device.
+
 
 
 ### <a name="config_2"></a> [SAMD21 Xplained Pro Board](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro)
