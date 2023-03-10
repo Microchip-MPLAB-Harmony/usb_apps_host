@@ -4,7 +4,7 @@
 
 
 project: msd_basic
-creation_date: 2023-03-10T09:37:03.480+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2023-03-10T13:32:57.624+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.2.2
@@ -19,5 +19,5 @@ modules:
     - {name: "usb", version: "unknown"}
     - {name: "dev_packs", version: "v3.16.0"}
     - {name: "bsp", version: "v3.15.0"}
-    - {name: "CMSIS-FreeRTOS", version: "unknown"}
+    - {name: "CMSIS-FreeRTOS", version: "v10.4.6"}
 

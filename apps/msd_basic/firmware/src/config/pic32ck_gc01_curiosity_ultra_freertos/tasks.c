@@ -59,16 +59,6 @@
 // Section: RTOS "Tasks" Routine
 // *****************************************************************************
 // *****************************************************************************
-void _DRV_USBHS_Tasks(  void *pvParameters  )
-{
-    while(1)
-    {
-				 /* USB FS Driver Task Routine */
-        DRV_USBHS_Tasks(sysObj.drvUSBHSObject);
-        vTaskDelay(10 / portTICK_PERIOD_MS);
-    }
-}
-
 void _USB_HOST_Tasks(  void *pvParameters  )
 {
     while(1)
