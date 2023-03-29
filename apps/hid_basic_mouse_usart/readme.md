@@ -29,6 +29,7 @@ Following table gives the details of project configurations, target device used,
 | pic32mz_ef_curiosity_2_0.X      | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)                   |
 | sam_9x60_ek.X                   | MPLABX | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   |
 | sam_9x60_ek_freertos.X                   | MPLABX | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   |
+| sam_9x60_curiosity.X            | MPLABX | SAM9X60             | [SAM9X60 Curiosity Development Board](#config_sam9x60_curiosity) |
 | sam_9x75_eb.X                   | MPLABX | SAM9X75             | [SAM9X75-DDR3-EB Evaluation Board](#config_22)                             |
 | sam_a5d2_xult.X           | MPLABX    | ATSAMA5D27C         | [SAM A5D2 Xplained Ultra Board](#config_10)                                |
 | sam_a5d2_xult_freertos.X           | MPLABX   | ATSAMA5D27C         | [SAMA5D2 Xplained Ultra Board](#config_10)                                |
@@ -118,6 +119,20 @@ Following table gives the details of project configurations, target device used,
     ![SAM9X60-EK Evaluation Board](images/sam9x60_evk.png)
 
     **Note: Reset push button on SAM9X60 EK is labelled as SW3**
+
+### <a name="#config_sam9x60_curiosity"></a> [SAM9X60-Curiosity Board](https://www.microchip.com/en-us/development-tool/EV40E67A)
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x60_curiosity.X/build/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SDMMC0 connector J3 on the board.
+    - Reset the board by pressing the Push Button RESET. 
+- Jumper J4 must be shorted.
+- Connect the USB Micro-B Connector (J1) on the board to the computer using a micro USB cable. 
+- Connect the USB device to the Type-A connector (J10).
+- LED D1 indicates a Device Connection Attached device has been successfully enumerated and configured). This LED is also toggled on the Mouse Button press event.
+- The demonstration uses an USB to serial cable to transfer demonstration application messages on a PC. 
+
+    ![SAM9X60-EK Evaluation Board](images/sam9x60_curiosity.png)
 
 ### <a name="config_22"></a> [SAM9X75-DDR3-EB Evaluation Board]()
 
