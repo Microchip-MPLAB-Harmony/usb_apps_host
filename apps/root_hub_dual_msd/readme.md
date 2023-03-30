@@ -28,6 +28,7 @@ Following table gives the details of project configurations, target device used,
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
 | sam_a7g5_ek.X                   | MPLABX | SAMA7G54            | [SAMA7G5 EK Board](#config_21)                                             |
 | sam_9x60_ek.X                   | MPLABX | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   |
+| sam_9x60_curiosity.X            | MPLABX | SAM9X60             | [SAM9X60 Curiosity Development Board](#config_sam9x60_curiosity) |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
@@ -47,6 +48,22 @@ Following table gives the details of project configurations, target device used,
     ![SAM9X60-EK Evaluation Board](images/sam9x60_evk.png)
 
     **Note: Reset push button on SAM9X60 EK is labeled as SW3**
+
+### <a name="#config_sam9x60_curiosity"></a> [SAM9X60-Curiosity Board](https://www.microchip.com/en-us/development-tool/EV40E67A)
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x60_curiosity.X/build/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SDMMC0 connector J3 on the board.
+    - Reset the board by pressing the Push Button RESET. 
+- Jumper J4 must be shorted.
+- Connect the USB Micro-B Connector (J1) on the board to the computer using a micro USB cable. 
+- Connect 2 USB devices to the USB Host on the board:
+    - Stacked type-A USB (J10A)
+    - Stacked type-A USB (J10B)
+- LED D1 on the board indicates the file write is complete.
+
+    ![SAM9X60-EK Evaluation Board](images/sam9x60_curiosity.png)
+
 
 ### <a name="config_21"></a> [SAMA7G5-EK Evaluation Kit](https://www.microchip.com/en-us/development-tool/EV21H18A)
 
