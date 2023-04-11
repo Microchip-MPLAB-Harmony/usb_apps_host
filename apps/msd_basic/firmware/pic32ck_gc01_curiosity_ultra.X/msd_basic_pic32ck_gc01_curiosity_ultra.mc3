@@ -7868,7 +7868,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\configuration.h</file>
-         <hash>eb7fb09b8514f8fcf4204356cd81f4083e32c9ee2f8a6ec087d3201f58b9dd96</hash>
+         <hash>1b6960d5b7590ce65ce7a77f5b415d207fd256e8e6568db34d37a59e3df1bc49</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\system\fs\src\sys_fs.c</file>
@@ -7920,7 +7920,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\usb_host_init_data.c</file>
-         <hash>931fb4c0a070277316e03ab68c858fde6c41af163c822035557aa670bce62bd1</hash>
+         <hash>0789f3a731126f53a72a8713edf641a3f56e4a81ba866b318a159c38cf31bcaa</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CK2051GC01144_DFP\component\fcw.h</file>
@@ -7980,7 +7980,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\definitions.h</file>
-         <hash>576611bbf40557e25919bccff3fbb149f01ba07499671a9355a93f9babfa1ea4</hash>
+         <hash>13fc5bd52af292825b54428399f8a30df3cde772d9e679e0dd401bb7d328de00</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\bsp\bsp.c</file>
