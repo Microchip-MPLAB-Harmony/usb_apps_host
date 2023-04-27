@@ -28,6 +28,7 @@ Following table gives the details of project configurations, target device used,
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
 | pic32mz_ef_curiosity_2_0.X      | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)                   |
 | pic32mx470_curiosity.X          | MPLABX | PIC32MX470F512H     | [PIC32MX Curiosity Development Board](#config_13)                          |
+| sam_9x75_eb.X                   | MPLABX | SAM9X75             | [SAM9X75-DDR3-EB Evaluation Board](#config_22)                             |
 | sam_d21_xpro.X                  | MPLABX | ATSAMD21J18A        | [SAMD21 Xplained Pro Board](#config_2)                                    |
 | sam_e70_xult.X                  | MPLABX | ATSAME70Q21B        | [SAME70 Xplained Ultra Board](#config_4)                                  |
 | sam_e70_xult_freertos.X         | MPLABX | ATSAME70Q21B        | [SAME70 Xplained Ultra Board](#config_4)                                  |
@@ -51,6 +52,19 @@ Following table gives the details of project configurations, target device used,
 - Connect the USB device to the USB micro-AB connector J12 using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit). 
 - LED1 on the board is controlled by the attached USB CDC device when a CDC device is attached. When a Mass Storage Device is attached, it indicates file write completion.
 
+### <a name="config_22"></a> [SAM9X75-DDR3-EB Evaluation Board]()
+
+- Powered the board with an external power supply (or use the micro AB connector).
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x75_eb.X/build/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SDMMC connector (SDMMC0) on the board.
+    - Reset the board by pressing the Push Button RESET, then START. 
+- Connect an USB to serial cable to DBGU0 (to enable debug com port).
+- Connect the USB device to the Type-A connector or to the micro AB with a specific dongle (in these case the need to be powered by the external power supply).
+- LED near VDDCORE inscription on the board indicates the file write is complete. 
+
+    ![SAM9X75-DDR3-EB Evaluation Board](images/sam9x75_ddr3_eb.png)
 
 ### <a name="config_2"></a> [SAMD21 Xplained Pro Board](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro)
 
@@ -63,6 +77,11 @@ Following table gives the details of project configurations, target device used,
 - Jumper J203 must be shorted between PB08 and LED2(positions 1 and 2). 
 - Use TARGET USB J200 connector on the board to connect the USB Device to the USB Host. A USB micro AB to type A USB Host receptacle converter will be needed to connect the device. 
 - LED3 on the board is controlled by the attached USB CDC device when a CDC device is attached. When a Mass Storage Device is attached, it indicates file write completion. 
+### <a name="config_22"></a> [Curiosity Pro PIC32CM LE00 Development Board](https://www.microchip.com/en-us/development-tool/EV80P12A)
+
+- Powered the board by connecting an host to "DEBUG USB" (J300) connector.
+- Connect the USB device to the USB Host "TARGET USB" (J200) using a USB Type-A Female to micro-B male cable (This cable is not included in the kit).
+- LED0 on the board is controlled by the attached USB CDC device.
 
 ## Running the Application
 
