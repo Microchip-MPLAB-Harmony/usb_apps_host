@@ -30,6 +30,7 @@ Following table gives the details of project configurations, target device used,
 | pic32mz_ef_curiosity_2_0.X      | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)   |
 | sam_9x60_ek.X                   | MPLABX | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                   |
 | sam_9x60_ek_freertos.X          | MPLABX | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                   |
+| sam_9x75_eb.X                   | MPLABX | SAM9X75             | [SAM9X75-DDR3-EB Evaluation Board](#config_22)                             |
 | sam_9x60_curiosity.X            | MPLABX | SAM9X60             | [SAM9X60 Curiosity Development Board](#config_sam9x60_curiosity) |
 | sam_9x60_curiosity_freertos.X   | MPLABX | SAM9X60             | [SAM9X60 Curiosity Development Board](#config_sam9x60_curiosity) |
 | sam_a5d2_xult.X                 | MPLABX | ATSAMA5D27C         | [SAMA5D2 Xplained Ultra Board](#config_10)                 |
@@ -57,11 +58,26 @@ Following table gives the details of project configurations, target device used,
 - The demonstration uses the PKOB4 Serial Interface to transfer messages on a PC. 
 - LED0 indicates a Device Connection. (Attached device has been successfully enumerated and configured). The LED on the keyboard is also toggled on Keyboard "CapsLock" press event.
 
-### <a name="config_23"></a> PIC32CK Curiosity Ultra Development Board
+### <a name="config_24"></a> PIC32CK Curiosity Ultra Development Board
 - A commercially available USB Keyboard is required to run this demonstration application. 
 - Connect the USB Keyboard to the USB Type-C connector (J202). A USB Type-C to Type-A Female adapter is required to connect the USB device to the board (This cable is not included in the kit). 
 - The demonstration uses the PKOB4 Serial Interface to transfer messages on a PC. 
 - LED1 indicates a Device Connection. (Attached device has been successfully enumerated and configured). The LED on the keyboard is also toggled on Keyboard "CapsLock" press event.
+### <a name="config_22"></a> [SAM9X75-DDR3-EB Evaluation Board]()
+
+- Powered the board with an external power supply (or use the micro AB connector).
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x75_eb.X/build/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SDMMC connector (SDMMC0) on the board.
+    - Reset the board by pressing the Push Button RESET, then START. 
+- Connect an USB to serial cable to DBGU0 (to enable debug com port).
+- Connect the USB device to the Type-A connector or to the micro AB with a specific dongle (in these case the need to be powered by the external power supply).
+- LED near VDDCORE inscription on the board is controlled by the attached USB CDC device.
+
+    ![SAM9X75-DDR3-EB Evaluation Board](images/sam9x75_ddr3_eb.png)
+
+
 
 
 ### <a name="config_2"></a> [SAMD21 Xplained Pro Board](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro)
