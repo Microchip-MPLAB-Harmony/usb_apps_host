@@ -28,6 +28,7 @@ Following table gives the details of project configurations, target device used,
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
 | pic32mz_ef_curiosity_2_0.X      | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)                   |
 | pic32mz_ef_sk.X                 | MPLABX | PIC32MZ2048EFH144   | [PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](#config_16)      |
+| sam_9x75_eb.X                   | MPLABX | SAM9X75             | [SAM9X75-DDR3-EB Evaluation Board](#config_22)                             |
 | sam_g55_xpro.X                  | MPLABX | ATSAMG55J19         | [SAMG55 Xplained Pro Board](#config_6)                                     |
 | pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curiosity Development Board](#config_23)                          |
 | pic32ck_gc01_curiosity_ultra.X  | MPLABX | PIC32CK2051GC01144  | [PIC32CK Curiosity Development Board](#config_24)           |
@@ -45,6 +46,22 @@ Following table gives the details of project configurations, target device used,
 - Connect the USB Hub to the USB Type-C connector (J202). A USB Type-C to Type-A Female adapter is required to connect the USB device to the board. (This adapter is not included in the kit) 
 - LED1 is controlled by the attached USB Mouse. 
 - LED1 is also controlled by the attached USB CDC Device. 
+
+### <a name="config_22"></a> [SAM9X75-DDR3-EB Evaluation Board]()
+
+- Powered the board with an external power supply (or use the micro AB connector).
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x75_eb.X/build/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SDMMC connector (SDMMC0) on the board.
+    - Reset the board by pressing the Push Button RESET, then START. 
+- Connect an USB to serial cable to DBGU0 (to enable debug com port).
+- Connect the USB Hub to the Type-A connector or to the micro AB with a specific dongle (in these case the need to be powered by the external power supply).
+- LED near VDDCORE inscription on the board is controlled by the attached USB Mouse. 
+- LED near VDDCORE inscription on the board is also controlled by the attached USB CDC device.
+
+    ![SAM9X75-DDR3-EB Evaluation Board](images/sam9x75_ddr3_eb.png)
+
 
 
 ### <a name="config_6"></a> [SAMG55 Xplained Pro Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMG55-XPRO)
