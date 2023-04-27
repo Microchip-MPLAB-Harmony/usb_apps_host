@@ -29,6 +29,7 @@ Following table gives the details of project configurations, target device used,
 | sam_a7g5_ek.X                   | MPLABX | SAMA7G54            | [SAMA7G5 EK Board](#config_21)                                             |
 | sam_9x60_ek.X                   | MPLABX | SAM9X60             | [SAM9X60-EK Evaluation Board](#config_9)                                   |
 | sam_9x60_curiosity.X            | MPLABX | SAM9X60             | [SAM9X60 Curiosity Development Board](#config_sam9x60_curiosity) |
+| sam_9x75_eb.X                   | MPLABX | SAM9X75             | [SAM9X75-DDR3-EB Evaluation Board](#config_22)                             |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
@@ -48,6 +49,21 @@ Following table gives the details of project configurations, target device used,
     ![SAM9X60-EK Evaluation Board](images/sam9x60_evk.png)
 
     **Note: Reset push button on SAM9X60 EK is labeled as SW3**
+
+### <a name="config_22"></a> [SAM9X75-DDR3-EB Evaluation Board]()
+
+- Powered the board with an external power supply (or use the micro AB connector).
+- Setup the SD card 
+    - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x75_eb.X/build/binaries/boot.bin).
+    - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
+    - Insert the SD card into the SDMMC connector (SDMMC0) on the board.
+    - Reset the board by pressing the Push Button RESET, then START. 
+- Connect 2 USB devices to the USB Host on the board:
+    - Stacked type-A USB (J8A)
+    - Stacked type-A USB (J8B)
+- LED near VDDCORE inscription on the board indicates the file write is complete.
+
+    ![SAM9X75-DDR3-EB Evaluation Board](images/sam9x75_ddr3_eb.png)
 
 ### <a name="#config_sam9x60_curiosity"></a> [SAM9X60-Curiosity Board](https://www.microchip.com/en-us/development-tool/EV40E67A)
 - Setup the SD card 
