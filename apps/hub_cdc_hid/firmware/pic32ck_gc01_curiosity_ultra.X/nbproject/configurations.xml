@@ -133,6 +133,7 @@
           <itemPath>../src/config/pic32ck_gc01_curiosity_ultra/definitions.h</itemPath>
           <itemPath>../src/config/pic32ck_gc01_curiosity_ultra/interrupts.h</itemPath>
           <itemPath>../src/config/pic32ck_gc01_curiosity_ultra/configuration.h</itemPath>
+          <itemPath>../src/config/pic32ck_gc01_curiosity_ultra/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
@@ -605,6 +606,8 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-63ffffff"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Harmony_Riverside/usb_apps_host/apps/hub_cdc_hid/firmware/pic32ck_gc01_curiosity_ultra.X/debug/pic32ck_gc01_curiosity_ultra/pic32ck_gc01_curiosity_ultra_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
