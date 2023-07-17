@@ -48,7 +48,6 @@
 #include "device.h"
 
 
-
 // ****************************************************************************
 // ****************************************************************************
 // Section: Configuration Bits
@@ -114,15 +113,6 @@
 #pragma config FUSES_USERCFG1_FUCFG8_PFM_UC1WPLOCK = CLEAR
 #pragma config FUSES_USERCFG1_FUCFG8_PFM_UC2WPLOCK = CLEAR
 #pragma config FUSES_USERCFG1_FUCFG9_FUCFG9 = 0x202U
-#pragma config FUSES_USERCFG1_FUCFG10_BOOTROM_NONSECA = 0x0U
-#pragma config FUSES_USERCFG1_FUCFG11_BOOTROM_NONSECB = 0x0U
-#pragma config FUSES_USERCFG1_FUCFG12_BOOTROM_NONSECC = 0x0U
-#pragma config FUSES_USERCFG1_FUCFG13_BOOTROM_NONSECAHB = 0x0U
-#pragma config FUSES_USERCFG1_FUCFG14_ANS = 0x0U
-#pragma config FUSES_USERCFG1_FUCFG14_ANSC = CLEAR
-#pragma config FUSES_USERCFG1_FUCFG15_RNS = 0x0U
-#pragma config FUSES_USERCFG1_FUCFG16_HSM_PTRMETA0 = 0xffffffffU
-#pragma config FUSES_USERCFG1_FUCFG24_HSM_PTRMETA1 = 0xffffffffU
 #pragma config FUSES_BOOTCFG1_BLDRCFG_PFM_BCRP = CLEAR
 #pragma config FUSES_BOOTCFG1_BLDRCFG_PFM_BCWP = CLEAR
 #pragma config FUSES_BOOTCFG1_BLDRCFG_BROM_EN_BFMCHK = NONE
@@ -254,15 +244,6 @@
 #pragma config FUSES_USERCFG2_FUCFG8_PFM_UC1WPLOCK = CLEAR
 #pragma config FUSES_USERCFG2_FUCFG8_PFM_UC2WPLOCK = CLEAR
 #pragma config FUSES_USERCFG2_FUCFG9_FUCFG9 = 0x202U
-#pragma config FUSES_USERCFG2_FUCFG10_BOOTROM_NONSECA = 0x0U
-#pragma config FUSES_USERCFG2_FUCFG11_BOOTROM_NONSECB = 0x0U
-#pragma config FUSES_USERCFG2_FUCFG12_BOOTROM_NONSECC = 0x0U
-#pragma config FUSES_USERCFG2_FUCFG13_BOOTROM_NONSECAHB = 0x0U
-#pragma config FUSES_USERCFG2_FUCFG14_ANS = 0x0U
-#pragma config FUSES_USERCFG2_FUCFG14_ANSC = CLEAR
-#pragma config FUSES_USERCFG2_FUCFG15_RNS = 0x0U
-#pragma config FUSES_USERCFG2_FUCFG16_HSM_PTRMETA0 = 0xffffffffU
-#pragma config FUSES_USERCFG2_FUCFG24_HSM_PTRMETA1 = 0xffffffffU
 #pragma config FUSES_BOOTCFG2_BLDRCFG_PFM_BCRP = CLEAR
 #pragma config FUSES_BOOTCFG2_BLDRCFG_PFM_BCWP = CLEAR
 #pragma config FUSES_BOOTCFG2_BLDRCFG_BROM_EN_BFMCHK = NONE
@@ -343,6 +324,10 @@
 // Section: Driver Initialization Data
 // *****************************************************************************
 // *****************************************************************************
+/* Following MISRA-C rules are deviated in the below code block */
+/* MISRA C-2012 Rule 11.1 */
+/* MISRA C-2012 Rule 11.3 */
+/* MISRA C-2012 Rule 11.8 */
 // <editor-fold defaultstate="collapsed" desc="DRV_USART Instance 0 Initialization Data">
 
 static DRV_USART_CLIENT_OBJ drvUSART0ClientObjPool[DRV_USART_CLIENTS_NUMBER_IDX0];
@@ -350,38 +335,38 @@ static DRV_USART_CLIENT_OBJ drvUSART0ClientObjPool[DRV_USART_CLIENTS_NUMBER_IDX0
 /* USART transmit/receive transfer objects pool */
 static DRV_USART_BUFFER_OBJ drvUSART0BufferObjPool[DRV_USART_QUEUE_SIZE_IDX0];
 
-const DRV_USART_PLIB_INTERFACE drvUsart0PlibAPI = {
+static const DRV_USART_PLIB_INTERFACE drvUsart0PlibAPI = {
     .readCallbackRegister = (DRV_USART_PLIB_READ_CALLBACK_REG)SERCOM5_USART_ReadCallbackRegister,
-    .read = (DRV_USART_PLIB_READ)SERCOM5_USART_Read,
+    .read_t = (DRV_USART_PLIB_READ)SERCOM5_USART_Read,
     .readIsBusy = (DRV_USART_PLIB_READ_IS_BUSY)SERCOM5_USART_ReadIsBusy,
     .readCountGet = (DRV_USART_PLIB_READ_COUNT_GET)SERCOM5_USART_ReadCountGet,
     .readAbort = (DRV_USART_PLIB_READ_ABORT)SERCOM5_USART_ReadAbort,
     .writeCallbackRegister = (DRV_USART_PLIB_WRITE_CALLBACK_REG)SERCOM5_USART_WriteCallbackRegister,
-    .write = (DRV_USART_PLIB_WRITE)SERCOM5_USART_Write,
+    .write_t = (DRV_USART_PLIB_WRITE)SERCOM5_USART_Write,
     .writeIsBusy = (DRV_USART_PLIB_WRITE_IS_BUSY)SERCOM5_USART_WriteIsBusy,
     .writeCountGet = (DRV_USART_PLIB_WRITE_COUNT_GET)SERCOM5_USART_WriteCountGet,
     .errorGet = (DRV_USART_PLIB_ERROR_GET)SERCOM5_USART_ErrorGet,
     .serialSetup = (DRV_USART_PLIB_SERIAL_SETUP)SERCOM5_USART_SerialSetup
 };
 
-const uint32_t drvUsart0remapDataWidth[] = { 0x5, 0x6, 0x7, 0x0, 0x1 };
-const uint32_t drvUsart0remapParity[] = { 0x2, 0x0, 0x80000, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF };
-const uint32_t drvUsart0remapStopBits[] = { 0x0, 0xFFFFFFFF, 0x40 };
-const uint32_t drvUsart0remapError[] = { 0x4, 0x0, 0x2 };
+static const uint32_t drvUsart0remapDataWidth[] = { 0x5, 0x6, 0x7, 0x0, 0x1 };
+static const uint32_t drvUsart0remapParity[] = { 0x2, 0x0, 0x80000, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU };
+static const uint32_t drvUsart0remapStopBits[] = { 0x0, 0xFFFFFFFFU, 0x40 };
+static const uint32_t drvUsart0remapError[] = { 0x4, 0x0, 0x2 };
 
-const DRV_USART_INTERRUPT_SOURCES drvUSART0InterruptSources =
+static const DRV_USART_INTERRUPT_SOURCES drvUSART0InterruptSources =
 {
     /* Peripheral has more than one interrupt vector */
     .isSingleIntSrc                        = false,
 
     /* Peripheral interrupt lines */
-    .intSources.multi.usartTxCompleteInt   = SERCOM5_1_IRQn,
-    .intSources.multi.usartTxReadyInt      = SERCOM5_0_IRQn,
-    .intSources.multi.usartRxCompleteInt   = SERCOM5_2_IRQn,
-    .intSources.multi.usartErrorInt        = SERCOM5_56_IRQn,
+    .intSources.multi.usartTxCompleteInt   = (int32_t)SERCOM5_1_IRQn,
+    .intSources.multi.usartTxReadyInt      = (int32_t)SERCOM5_0_IRQn,
+    .intSources.multi.usartRxCompleteInt   = (int32_t)SERCOM5_2_IRQn,
+    .intSources.multi.usartErrorInt        = (int32_t)SERCOM5_56_IRQn,
 };
 
-const DRV_USART_INIT drvUsart0InitData =
+static const DRV_USART_INIT drvUsart0InitData =
 {
     .usartPlib = &drvUsart0PlibAPI,
 
@@ -411,6 +396,7 @@ const DRV_USART_INIT drvUsart0InitData =
 };
 
 // </editor-fold>
+
 
 
 // *****************************************************************************
@@ -495,7 +481,7 @@ const DRV_USBHS_INIT drvUSBInit =
 // *****************************************************************************
 // <editor-fold defaultstate="collapsed" desc="SYS_TIME Initialization Data">
 
-const SYS_TIME_PLIB_INTERFACE sysTimePlibAPI = {
+static const SYS_TIME_PLIB_INTERFACE sysTimePlibAPI = {
     .timerCallbackSet = (SYS_TIME_PLIB_CALLBACK_REGISTER)RTC_Timer32CallbackRegister,
     .timerStart = (SYS_TIME_PLIB_START)RTC_Timer32Start,
     .timerStop = (SYS_TIME_PLIB_STOP)RTC_Timer32Stop,
@@ -503,7 +489,7 @@ const SYS_TIME_PLIB_INTERFACE sysTimePlibAPI = {
     .timerPeriodSet = (SYS_TIME_PLIB_PERIOD_SET)NULL,
 };
 
-const SYS_TIME_INIT sysTimeInitData =
+static const SYS_TIME_INIT sysTimeInitData =
 {
     .timePlib = &sysTimePlibAPI,
     .hwTimerIntNum = RTC_IRQn,
@@ -519,7 +505,7 @@ const SYS_TIME_INIT sysTimeInitData =
 // *****************************************************************************
 // *****************************************************************************
 
-
+/* MISRAC 2012 deviation block end */
 
 /*******************************************************************************
   Function:
@@ -533,6 +519,7 @@ const SYS_TIME_INIT sysTimeInitData =
 
 void SYS_Initialize ( void* data )
 {
+
     /* MISRAC 2012 deviation block start */
     /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
 
@@ -554,10 +541,21 @@ void SYS_Initialize ( void* data )
 
 	BSP_Initialize();
 
+
+    /* MISRAC 2012 deviation block start */
+    /* Following MISRA-C rules deviated in this block  */
+    /* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
+    /* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
+
     sysObj.drvUsart0 = DRV_USART_Initialize(DRV_USART_INDEX_0, (SYS_MODULE_INIT *)&drvUsart0InitData);
 
 
+    /* MISRA C-2012 Rule 11.3, 11.8 deviated below. Deviation record ID -  
+    H3_MISRAC_2012_R_11_3_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
+        
     sysObj.sysTime = SYS_TIME_Initialize(SYS_TIME_INDEX_0, (SYS_MODULE_INIT *)&sysTimeInitData);
+    
+    /* MISRAC 2012 deviation block end */
 
 	/* Initialize USB Driver */ 
     sysObj.drvUSBHSObject = DRV_USBHS_Initialize(DRV_USBHS_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);	
@@ -566,14 +564,15 @@ void SYS_Initialize ( void* data )
     sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );	
 
 
+    /* MISRAC 2012 deviation block end */
     APP_Initialize();
 
 
     NVIC_Initialize();
 
+
     /* MISRAC 2012 deviation block end */
 }
-
 
 /*******************************************************************************
  End of File
