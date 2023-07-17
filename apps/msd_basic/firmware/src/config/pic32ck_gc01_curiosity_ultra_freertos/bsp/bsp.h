@@ -40,8 +40,8 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef _BSP_H
-#define _BSP_H
+#ifndef BSP_H
+#define BSP_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -60,16 +60,19 @@
 // Section: BSP Macros
 // *****************************************************************************
 // *****************************************************************************
+#define pic32ck_gc01_curiosity_ultra
+#define BSP_NAME             "pic32ck_gc01_curiosity_ultra"
+
 
 
 /*** LED Macros for LED ***/
-#define LED_Toggle()     (PORT_REGS->GROUP[1].PORT_OUTTGL = 1 << 25)
-#define LED_On()         (PORT_REGS->GROUP[1].PORT_OUTCLR = 1 << 25)
-#define LED_Off()        (PORT_REGS->GROUP[1].PORT_OUTSET = 1 << 25)
+#define LED_Toggle()     (PORT_REGS->GROUP[1].PORT_OUTTGL = 1UL << 25)
+#define LED_On()         (PORT_REGS->GROUP[1].PORT_OUTCLR = 1UL << 25)
+#define LED_Off()        (PORT_REGS->GROUP[1].PORT_OUTSET = 1UL << 25)
 /*** LED Macros for LED0 ***/
-#define LED0_Toggle()     (PORT_REGS->GROUP[3].PORT_OUTTGL = 1 << 20)
-#define LED0_On()         (PORT_REGS->GROUP[3].PORT_OUTCLR = 1 << 20)
-#define LED0_Off()        (PORT_REGS->GROUP[3].PORT_OUTSET = 1 << 20)
+#define LED0_Toggle()     (PORT_REGS->GROUP[3].PORT_OUTTGL = 1UL << 20)
+#define LED0_On()         (PORT_REGS->GROUP[3].PORT_OUTCLR = 1UL << 20)
+#define LED0_Off()        (PORT_REGS->GROUP[3].PORT_OUTSET = 1UL << 20)
 
 /*** SWITCH Macros for SW0 ***/
 #define SW0_Get()     ((PORT_REGS->GROUP[1].PORT_IN >> 26) & 0x01)
@@ -81,8 +84,8 @@
 #define SW1_STATE_RELEASED  1
 
 /*** VBUS Macros for VBUS_AH ***/
-#define VBUS_AH_PowerEnable()         (PORT_REGS->GROUP[0].PORT_OUTSET = 1 << 27)
-#define VBUS_AH_PowerDisable()        (PORT_REGS->GROUP[0].PORT_OUTCLR = 1 << 27)
+#define VBUS_AH_PowerEnable()         (PORT_REGS->GROUP[0].PORT_OUTSET = 1UL << 27)
+#define VBUS_AH_PowerDisable()        (PORT_REGS->GROUP[0].PORT_OUTCLR = 1UL << 27)
 
 
 
@@ -116,7 +119,6 @@
 
   Example:
     <code>
-    //Initialize the BSP
     BSP_Initialize();
     </code>
 
@@ -126,7 +128,7 @@
 
 void BSP_Initialize(void);
 
-#endif // _BSP_H
+#endif // BSP_H
 
 /*******************************************************************************
  End of File

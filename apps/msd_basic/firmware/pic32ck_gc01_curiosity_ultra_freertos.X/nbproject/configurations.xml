@@ -149,6 +149,7 @@
           <itemPath>../src/config/pic32ck_gc01_curiosity_ultra_freertos/FreeRTOSConfig.h</itemPath>
           <itemPath>../src/config/pic32ck_gc01_curiosity_ultra_freertos/configuration.h</itemPath>
           <itemPath>../src/config/pic32ck_gc01_curiosity_ultra_freertos/toolchain_specifics.h</itemPath>
+          <itemPath>../src/config/pic32ck_gc01_curiosity_ultra_freertos/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
@@ -179,6 +180,7 @@
                 <logicalFolder name="non_secure" displayName="non_secure" projectFiles="true">
                   <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM33_NTZ/non_secure/portmacro.h</itemPath>
                   <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM33_NTZ/non_secure/portasm.h</itemPath>
+                  <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM33_NTZ/non_secure/portmacrocommon.h</itemPath>
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
@@ -470,7 +472,7 @@
         <targetDevice>PIC32CK2051GC01144</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>4.21</languageToolchainVersion>
         <platform>3</platform>
