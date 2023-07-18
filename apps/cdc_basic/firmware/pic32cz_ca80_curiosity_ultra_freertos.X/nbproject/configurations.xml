@@ -121,6 +121,7 @@
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra_freertos/device.h</itemPath>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra_freertos/configuration.h</itemPath>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra_freertos/device_vectors.h</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra_freertos/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
@@ -591,6 +592,11 @@
         <property key="stack-smashing" value=""/>
         <property key="wpo-lto" value="false"/>
       </C32Global>
+      <pkob4hybrid>
+        <property key="memories.programmemory.ranges" value="0-9fffffff"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/harmony_dev/usb_apps_host/apps/cdc_basic/firmware/pic32cz_ca80_curiosity_ultra_freertos.X/debug/pic32cz_ca80_curiosity_ultra_freertos/pic32cz_ca80_curiosity_ultra_freertos_ptg"/>
+      </pkob4hybrid>
     </conf>
   </confs>
 </configurationDescriptor>
