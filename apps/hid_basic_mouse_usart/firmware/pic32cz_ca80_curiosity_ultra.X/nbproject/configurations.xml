@@ -133,6 +133,7 @@
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/definitions.h</itemPath>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/interrupts.h</itemPath>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/device.h</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
@@ -378,7 +379,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.10</languageToolchainVersion>
+        <languageToolchainVersion>4.30</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>

@@ -145,7 +145,7 @@ extern "C" {
 #define USB_HOST_DEVICES_NUMBER                             1 
 
 /* Number of Target peripheral list (TPL) entries. */
-#define  USB_HOST_TPL_ENTRIES                               1 
+#define  USB_HOST_TPL_ENTRIES                               0 
 
 /* Maximum number of interfaces per device. */
 #define USB_HOST_DEVICE_INTERFACES_NUMBER                   5  
