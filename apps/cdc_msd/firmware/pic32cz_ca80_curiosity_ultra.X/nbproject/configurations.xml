@@ -145,6 +145,7 @@
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/device_vectors.h</itemPath>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/configuration.h</itemPath>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/toolchain_specifics.h</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
@@ -398,7 +399,7 @@
         <targetDevice>PIC32CZ8110CA80208</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>4.10</languageToolchainVersion>
         <platform>3</platform>
