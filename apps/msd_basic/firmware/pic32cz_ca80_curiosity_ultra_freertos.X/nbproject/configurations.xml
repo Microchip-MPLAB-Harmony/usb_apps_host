@@ -143,6 +143,7 @@
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra_freertos/definitions.h</itemPath>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra_freertos/interrupts.h</itemPath>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra_freertos/configuration.h</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra_freertos/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
@@ -452,7 +453,7 @@
         <targetDevice>PIC32CZ8110CA80208</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>4.10</languageToolchainVersion>
         <platform>3</platform>
