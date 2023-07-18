@@ -142,6 +142,7 @@
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/user.h</itemPath>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/device.h</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
@@ -601,6 +602,8 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-9fffffff"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Harmony_Unicorn/usb_apps_host/apps/msd_basic/firmware/pic32cz_ca80_curiosity_ultra.X/debug/pic32cz_ca80_curiosity_ultra/pic32cz_ca80_curiosity_ultra_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
