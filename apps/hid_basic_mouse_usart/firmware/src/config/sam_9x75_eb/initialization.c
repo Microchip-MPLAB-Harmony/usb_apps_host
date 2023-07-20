@@ -48,7 +48,6 @@
 #include "device.h"
 
 
-
 // ****************************************************************************
 // ****************************************************************************
 // Section: Configuration Bits
@@ -62,6 +61,10 @@
 // Section: Driver Initialization Data
 // *****************************************************************************
 // *****************************************************************************
+/* Following MISRA-C rules are deviated in the below code block */
+/* MISRA C-2012 Rule 11.1 */
+/* MISRA C-2012 Rule 11.3 */
+/* MISRA C-2012 Rule 11.8 */
 // <editor-fold defaultstate="collapsed" desc="DRV_USART Instance 0 Initialization Data">
 
 static DRV_USART_CLIENT_OBJ drvUSART0ClientObjPool[DRV_USART_CLIENTS_NUMBER_IDX0];
@@ -69,35 +72,35 @@ static DRV_USART_CLIENT_OBJ drvUSART0ClientObjPool[DRV_USART_CLIENTS_NUMBER_IDX0
 /* USART transmit/receive transfer objects pool */
 static DRV_USART_BUFFER_OBJ drvUSART0BufferObjPool[DRV_USART_QUEUE_SIZE_IDX0];
 
-const DRV_USART_PLIB_INTERFACE drvUsart0PlibAPI = {
+static const DRV_USART_PLIB_INTERFACE drvUsart0PlibAPI = {
     .readCallbackRegister = (DRV_USART_PLIB_READ_CALLBACK_REG)DBGU_ReadCallbackRegister,
-    .read = (DRV_USART_PLIB_READ)DBGU_Read,
+    .read_t = (DRV_USART_PLIB_READ)DBGU_Read,
     .readIsBusy = (DRV_USART_PLIB_READ_IS_BUSY)DBGU_ReadIsBusy,
     .readCountGet = (DRV_USART_PLIB_READ_COUNT_GET)DBGU_ReadCountGet,
     .readAbort = (DRV_USART_PLIB_READ_ABORT)DBGU_ReadAbort,
     .writeCallbackRegister = (DRV_USART_PLIB_WRITE_CALLBACK_REG)DBGU_WriteCallbackRegister,
-    .write = (DRV_USART_PLIB_WRITE)DBGU_Write,
+    .write_t = (DRV_USART_PLIB_WRITE)DBGU_Write,
     .writeIsBusy = (DRV_USART_PLIB_WRITE_IS_BUSY)DBGU_WriteIsBusy,
     .writeCountGet = (DRV_USART_PLIB_WRITE_COUNT_GET)DBGU_WriteCountGet,
     .errorGet = (DRV_USART_PLIB_ERROR_GET)DBGU_ErrorGet,
     .serialSetup = (DRV_USART_PLIB_SERIAL_SETUP)DBGU_SerialSetup
 };
 
-const uint32_t drvUsart0remapDataWidth[] = { 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0, 0xFFFFFFFF };
-const uint32_t drvUsart0remapParity[] = { 0x800, 0x0, 0x200, 0x600, 0x400, 0xFFFFFFFF };
-const uint32_t drvUsart0remapStopBits[] = { 0x0, 0xFFFFFFFF, 0xFFFFFFFF };
-const uint32_t drvUsart0remapError[] = { 0x20, 0x80, 0x40 };
+static const uint32_t drvUsart0remapDataWidth[] = { 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0x0, 0xFFFFFFFFU };
+static const uint32_t drvUsart0remapParity[] = { 0x800, 0x0, 0x200, 0x600, 0x400, 0xFFFFFFFFU };
+static const uint32_t drvUsart0remapStopBits[] = { 0x0, 0xFFFFFFFFU, 0xFFFFFFFFU };
+static const uint32_t drvUsart0remapError[] = { 0x20, 0x80, 0x40 };
 
-const DRV_USART_INTERRUPT_SOURCES drvUSART0InterruptSources =
+static const DRV_USART_INTERRUPT_SOURCES drvUSART0InterruptSources =
 {
     /* Peripheral has single interrupt vector */
     .isSingleIntSrc                        = true,
 
     /* Peripheral interrupt line */
-    .intSources.usartInterrupt             = DBGU_IRQn,
+    .intSources.usartInterrupt             = (int32_t)DBGU_IRQn,
 };
 
-const DRV_USART_INIT drvUsart0InitData =
+static const DRV_USART_INIT drvUsart0InitData =
 {
     .usartPlib = &drvUsart0PlibAPI,
 
@@ -129,6 +132,7 @@ const DRV_USART_INIT drvUsart0InitData =
 // </editor-fold>
 
 
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: System Data
@@ -152,7 +156,7 @@ void DRV_USB_VBUSPowerEnable(uint8_t port, bool enable)
        In MHC Pin Settings select the pin used as VBUS Power Enable as output and 
        name it to "VBUS_AH". If you a see a build error from this function either 
        you have not configured the VBUS Power Enable in MHC pin settings or the 
-       Pin name entered in MHC is not "VBUS_AH". */ 
+       Pin name entered in MHC is not "VBUS_AH". */
     if (enable == true)
     {
         /* Enable the VBUS */
@@ -178,7 +182,7 @@ DRV_USB_EHCI_INIT drvUSBEHCIInit =
     /* Ports Selection */ 
     .bmPortSelect = 0x02,
 
-    /* USB Host Power Enable. USB Driver uses this function to Enable the VBUS */ 
+    /* USB Host Power Enable. USB Driver uses this function to Enable the VBUS */
     .portPowerEnable = DRV_USB_VBUSPowerEnable,
     
     /* Root hub available current in milliamperes */
@@ -198,10 +202,10 @@ DRV_USB_OHCI_INIT drvUSBOHCIInit =
      /* Ports Selection */ 
     .bmPortSelect = 0x02,
     
-    /* USB Host Power Enable. USB Driver uses this function to Enable the VBUS */ 
+    /* USB Host Power Enable. USB Driver uses this function to Enable the VBUS */
     .portPowerEnable = DRV_USB_VBUSPowerEnable,
     
-    /* Root hub available current in milliamperes */    
+    /* Root hub available current in milliamperes */
     .rootHubAvailableCurrent = 500
 };
 
@@ -214,7 +218,7 @@ DRV_USB_OHCI_INIT drvUSBOHCIInit =
 // *****************************************************************************
 // <editor-fold defaultstate="collapsed" desc="SYS_TIME Initialization Data">
 
-const SYS_TIME_PLIB_INTERFACE sysTimePlibAPI = {
+static const SYS_TIME_PLIB_INTERFACE sysTimePlibAPI = {
     .timerCallbackSet = (SYS_TIME_PLIB_CALLBACK_REGISTER)TC0_CH0_TimerCallbackRegister,
     .timerStart = (SYS_TIME_PLIB_START)TC0_CH0_TimerStart,
     .timerStop = (SYS_TIME_PLIB_STOP)TC0_CH0_TimerStop ,
@@ -224,7 +228,7 @@ const SYS_TIME_PLIB_INTERFACE sysTimePlibAPI = {
     .timerCounterGet = (SYS_TIME_PLIB_COUNTER_GET)TC0_CH0_TimerCounterGet,
 };
 
-const SYS_TIME_INIT sysTimeInitData =
+static const SYS_TIME_INIT sysTimeInitData =
 {
     .timePlib = &sysTimePlibAPI,
     .hwTimerIntNum = TC0_IRQn,
@@ -297,7 +301,7 @@ static void SYSC_Disable( void )
 }
 
 
-
+/* MISRAC 2012 deviation block end */
 
 /*******************************************************************************
   Function:
@@ -311,6 +315,7 @@ static void SYSC_Disable( void )
 
 void SYS_Initialize ( void* data )
 {
+
     /* MISRAC 2012 deviation block start */
     /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
 
@@ -323,7 +328,6 @@ void SYS_Initialize ( void* data )
 
 
 
-	BSP_Initialize();
     MMU_Initialize();
 
     AIC_INT_Initialize();
@@ -337,13 +341,25 @@ void SYS_Initialize ( void* data )
     TC0_CH0_TimerInitialize(); 
      
     
+	BSP_Initialize();
+
+
+    /* MISRAC 2012 deviation block start */
+    /* Following MISRA-C rules deviated in this block  */
+    /* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
+    /* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
 
     sysObj.drvUsart0 = DRV_USART_Initialize(DRV_USART_INDEX_0, (SYS_MODULE_INIT *)&drvUsart0InitData);
 
 
+    /* MISRA C-2012 Rule 11.3, 11.8 deviated below. Deviation record ID -  
+    H3_MISRAC_2012_R_11_3_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
+        
     sysObj.sysTime = SYS_TIME_Initialize(SYS_TIME_INDEX_0, (SYS_MODULE_INIT *)&sysTimeInitData);
+    
+    /* MISRAC 2012 deviation block end */
 
-	/* Initialize the USB Host layer */
+    /* Initialize the USB Host layer */
     sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );	
 
      /* Initialize USB Driver */ 
@@ -351,13 +367,14 @@ void SYS_Initialize ( void* data )
     sysObj.drvUSBOHCIObject = DRV_USB_OHCI_Initialize (DRV_USB_OHCI_INDEX_0, (SYS_MODULE_INIT *) &drvUSBOHCIInit);
 
 
+    /* MISRAC 2012 deviation block end */
     APP_Initialize();
+
 
 
 
     /* MISRAC 2012 deviation block end */
 }
-
 
 /*******************************************************************************
  End of File

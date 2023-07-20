@@ -106,6 +106,7 @@
           <itemPath>../src/config/sam_9x75_eb/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/sam_9x75_eb/device_cache.h</itemPath>
           <itemPath>../src/config/sam_9x75_eb/user.h</itemPath>
+          <itemPath>../src/config/sam_9x75_eb/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
@@ -114,7 +115,6 @@
             <itemPath>../src/packs/SAM9X75_DFP/component/ssc.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/component/i2smcc.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/component/shdwc.h</itemPath>
-            <itemPath>../src/packs/SAM9X75_DFP/component/uhpfs.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/component/wdt.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/component/flexcom.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/component/gpbr.h</itemPath>
@@ -191,7 +191,6 @@
             <itemPath>../src/packs/SAM9X75_DFP/instance/pit.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/xdmac.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/flexcom2.h</itemPath>
-            <itemPath>../src/packs/SAM9X75_DFP/instance/uhphs_ohci.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/sckc.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/flexcom9.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/matrix.h</itemPath>
@@ -228,6 +227,8 @@
             <itemPath>../src/packs/SAM9X75_DFP/instance/pwm.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/aic.h</itemPath>
             <itemPath>../src/packs/SAM9X75_DFP/instance/pit64b0.h</itemPath>
+            <itemPath>../src/packs/SAM9X75_DFP/instance/csi.h</itemPath>
+            <itemPath>../src/packs/SAM9X75_DFP/instance/dsi.h</itemPath>
           </logicalFolder>
           <logicalFolder name="pio" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/SAM9X75_DFP/pio/sam9x75.h</itemPath>
@@ -338,11 +339,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.10</languageToolchainVersion>
+        <languageToolchainVersion>4.30</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAM9X7_DEV_DFP" vendor="Microchip" version="0.0.19"/>
+        <pack name="SAM9X7_DFP" vendor="Microchip" version="1.0.1"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="boot.load_adr" value=""/>

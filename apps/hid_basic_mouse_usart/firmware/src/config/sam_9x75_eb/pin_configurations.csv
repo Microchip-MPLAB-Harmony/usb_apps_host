@@ -1,7 +1,7 @@
 "Pin Number","Pin ID","Custom Name","Function","Direction","Latch","Open Drain","PIO Interrupt","Pull Up","Pull Down","Glitch/Debounce Filter",Slew Rate Control,Drive Strength
 A2,PC8,,Available,In,,,,,,,,
 A3,PC20,LED_BLUE,LED_AH,n/a,n/a,No,Disabled,No,No,Disabled,No,Low
-A4,PC24,SWITCH,SWITCH_AL,n/a,n/a,No,Disabled,No,No,Disabled,No,Low
+A4,PC24,SWITCH,SWITCH_AL,n/a,n/a,No,Disabled,Yes,No,Disabled,No,Low
 A5,PC28,,Available,In,,,,,,,,
 A6,PC2,,Available,In,,,,,,,,
 A7,PC4,,Available,In,,,,,,,,
