@@ -349,7 +349,7 @@
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
-      <itemPath>root_hub_dual_sam_9x75_eb.mc3</itemPath>
+      <itemPath>root_hub_dual_msd_sam_9x75_eb.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
