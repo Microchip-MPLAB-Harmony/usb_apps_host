@@ -48,19 +48,18 @@
 #include "device.h"
 
 
-
 // ****************************************************************************
 // ****************************************************************************
 // Section: Configuration Bits
 // ****************************************************************************
 // ****************************************************************************
 #pragma config BOD33_DIS = SET
-#pragma config BOD33USERLEVEL = 0x1c
+#pragma config BOD33USERLEVEL = 0x1cU
 #pragma config BOD33_ACTION = RESET
-#pragma config BOD33_HYST = 0x2
+#pragma config BOD33_HYST = 0x2U
 #pragma config NVMCTRL_BOOTPROT = 0
-#pragma config NVMCTRL_SEESBLK = 0x0
-#pragma config NVMCTRL_SEEPSZ = 0x0
+#pragma config NVMCTRL_SEESBLK = 0x0U
+#pragma config NVMCTRL_SEEPSZ = 0x0U
 #pragma config RAMECC_ECCDIS = SET
 #pragma config WDT_ENABLE = CLEAR
 #pragma config WDT_ALWAYSON = CLEAR
@@ -68,7 +67,7 @@
 #pragma config WDT_WINDOW = CYC8192
 #pragma config WDT_EWOFFSET = CYC8192
 #pragma config WDT_WEN = CLEAR
-#pragma config NVMCTRL_REGION_LOCKS = 0xffffffff
+#pragma config NVMCTRL_REGION_LOCKS = 0xffffffffU
 
 
 
@@ -78,6 +77,11 @@
 // Section: Driver Initialization Data
 // *****************************************************************************
 // *****************************************************************************
+/* Following MISRA-C rules are deviated in the below code block */
+/* MISRA C-2012 Rule 11.1 */
+/* MISRA C-2012 Rule 11.3 */
+/* MISRA C-2012 Rule 11.8 */
+
 
 
 // *****************************************************************************
@@ -95,7 +99,7 @@ SYSTEM_OBJECTS sysObj;
 // *****************************************************************************
 // <editor-fold defaultstate="collapsed" desc="File System Initialization Data">
 
-const SYS_FS_MEDIA_MOUNT_DATA sysfsMountTable[SYS_FS_VOLUME_NUMBER] =
+ const SYS_FS_MEDIA_MOUNT_DATA sysfsMountTable[SYS_FS_VOLUME_NUMBER] =
 {
     {
         .mountName = SYS_FS_MEDIA_IDX0_MOUNT_NAME_VOLUME_IDX0,
@@ -106,12 +110,12 @@ const SYS_FS_MEDIA_MOUNT_DATA sysfsMountTable[SYS_FS_VOLUME_NUMBER] =
 };
 
 
-const SYS_FS_FUNCTIONS FatFsFunctions =
+static const SYS_FS_FUNCTIONS FatFsFunctions =
 {
     .mount             = FATFS_mount,
     .unmount           = FATFS_unmount,
     .open              = FATFS_open,
-    .read              = FATFS_read,
+    .read_t              = FATFS_read,
     .close             = FATFS_close,
     .seek              = FATFS_lseek,
     .fstat             = FATFS_stat,
@@ -123,17 +127,17 @@ const SYS_FS_FUNCTIONS FatFsFunctions =
     .closeDir          = FATFS_closedir,
     .chdir             = FATFS_chdir,
     .chdrive           = FATFS_chdrive,
-    .write             = FATFS_write,
+    .write_t             = FATFS_write,
     .tell              = FATFS_tell,
     .eof               = FATFS_eof,
     .size              = FATFS_size,
     .mkdir             = FATFS_mkdir,
-    .remove            = FATFS_unlink,
+    .remove_t            = FATFS_unlink,
     .setlabel          = FATFS_setlabel,
     .truncate          = FATFS_truncate,
     .chmode            = FATFS_chmod,
     .chtime            = FATFS_utime,
-    .rename            = FATFS_rename,
+    .rename_t            = FATFS_rename,
     .sync              = FATFS_sync,
     .putchr            = FATFS_putc,
     .putstrn           = FATFS_puts,
@@ -146,15 +150,14 @@ const SYS_FS_FUNCTIONS FatFsFunctions =
 
 
 
-const SYS_FS_REGISTRATION_TABLE sysFSInit [ SYS_FS_MAX_FILE_SYSTEM_TYPE ] =
+
+static const SYS_FS_REGISTRATION_TABLE sysFSInit [ SYS_FS_MAX_FILE_SYSTEM_TYPE ] =
 {
     {
         .nativeFileSystemType = FAT,
         .nativeFileSystemFunctions = &FatFsFunctions
-    },
+    }
 };
-
-
 // </editor-fold>
 
 /******************************************************
@@ -162,29 +165,28 @@ const SYS_FS_REGISTRATION_TABLE sysFSInit [ SYS_FS_MAX_FILE_SYSTEM_TYPE ] =
  ******************************************************/
  
 
-
 const DRV_USBFSV1_INIT drvUSBInit =
 {
-	/* Interrupt Source for USB module */
-	.interruptSource = USB_OTHER_IRQn,
+    /* Interrupt Source for USB module */
+    .interruptSource = USB_OTHER_IRQn,
  
-	/* Interrupt Source for USB module */
-	.interruptSource1 = USB_SOF_HSOF_IRQn,
+    /* Interrupt Source for USB module */
+    .interruptSource1 = USB_SOF_HSOF_IRQn,
  
-	/* Interrupt Source for USB module */
-	.interruptSource2 = USB_TRCPT0_IRQn,
+    /* Interrupt Source for USB module */
+    .interruptSource2 = USB_TRCPT0_IRQn,
  
-	/* Interrupt Source for USB module */
-	.interruptSource3 = USB_TRCPT1_IRQn,
+    /* Interrupt Source for USB module */
+    .interruptSource3 = USB_TRCPT1_IRQn,
 
     /* System module initialization */
     .moduleInit = {0},
 
-	/* USB Controller to operate as USB Host */
+    /* USB Controller to operate as USB Host */
     .operationMode = DRV_USBFSV1_OPMODE_HOST,
 
     /* USB Full Speed Operation */
-	.operationSpeed = USB_SPEED_FULL,
+    .operationSpeed = USB_SPEED_FULL,
     
     /* Stop in idle */
     .runInStandby = true,
@@ -194,13 +196,13 @@ const DRV_USBFSV1_INIT drvUSBInit =
 
     /* Identifies peripheral (PLIB-level) ID */
     .usbID = USB_REGS,
-	
-	/* Function to check for VBus */
+
+    /* Function to check for VBus */
     .vbusComparator = NULL,
        
-	/* USB Host Power Enable */ 
+    /* USB Host Power Enable */ 
     .portPowerEnable = NULL,
-	
+
     /* Root hub available current in milliamperes */
     .rootHubAvailableCurrent = 500,
 };
@@ -215,7 +217,7 @@ const DRV_USBFSV1_INIT drvUSBInit =
 // *****************************************************************************
 // <editor-fold defaultstate="collapsed" desc="SYS_TIME Initialization Data">
 
-const SYS_TIME_PLIB_INTERFACE sysTimePlibAPI = {
+static const SYS_TIME_PLIB_INTERFACE sysTimePlibAPI = {
     .timerCallbackSet = (SYS_TIME_PLIB_CALLBACK_REGISTER)TC0_TimerCallbackRegister,
     .timerStart = (SYS_TIME_PLIB_START)TC0_TimerStart,
     .timerStop = (SYS_TIME_PLIB_STOP)TC0_TimerStop,
@@ -225,7 +227,7 @@ const SYS_TIME_PLIB_INTERFACE sysTimePlibAPI = {
     .timerCounterGet = (SYS_TIME_PLIB_COUNTER_GET)TC0_Timer16bitCounterGet,
 };
 
-const SYS_TIME_INIT sysTimeInitData =
+static const SYS_TIME_INIT sysTimeInitData =
 {
     .timePlib = &sysTimePlibAPI,
     .hwTimerIntNum = TC0_IRQn,
@@ -241,7 +243,7 @@ const SYS_TIME_INIT sysTimeInitData =
 // *****************************************************************************
 // *****************************************************************************
 
-
+/* MISRAC 2012 deviation block end */
 
 /*******************************************************************************
   Function:
@@ -255,6 +257,9 @@ const SYS_TIME_INIT sysTimeInitData =
 
 void SYS_Initialize ( void* data )
 {
+
+    /* MISRAC 2012 deviation block start */
+    /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
 
     NVMCTRL_Initialize( );
 
@@ -273,25 +278,38 @@ void SYS_Initialize ( void* data )
 	BSP_Initialize();
 
 
-    sysObj.sysTime = SYS_TIME_Initialize(SYS_TIME_INDEX_0, (SYS_MODULE_INIT *)&sysTimeInitData);
+    /* MISRAC 2012 deviation block start */
+    /* Following MISRA-C rules deviated in this block  */
+    /* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
+    /* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
 
-	/* Initialize the USB Host layer */
+
+    /* MISRA C-2012 Rule 11.3, 11.8 deviated below. Deviation record ID -  
+    H3_MISRAC_2012_R_11_3_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
+        
+    sysObj.sysTime = SYS_TIME_Initialize(SYS_TIME_INDEX_0, (SYS_MODULE_INIT *)&sysTimeInitData);
+    
+    /* MISRAC 2012 deviation block end */
+
+    /* Initialize the USB Host layer */
     sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );	
 
     /*** File System Service Initialization Code ***/
-    SYS_FS_Initialize( (const void *) sysFSInit );
+    (void) SYS_FS_Initialize( (const void *) sysFSInit );
 
-	/* Initialize USB Driver */ 
-    sysObj.drvUSBFSV1Object = DRV_USBFSV1_Initialize(DRV_USBFSV1_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);	
+    /* Initialize USB Driver */ 
+    sysObj.drvUSBFSV1Object = DRV_USBFSV1_Initialize(DRV_USBFSV1_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);
 
 
+    /* MISRAC 2012 deviation block end */
     APP_Initialize();
 
 
     NVIC_Initialize();
 
-}
 
+    /* MISRAC 2012 deviation block end */
+}
 
 /*******************************************************************************
  End of File
