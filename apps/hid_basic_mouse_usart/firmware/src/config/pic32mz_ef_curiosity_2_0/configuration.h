@@ -120,7 +120,7 @@ extern "C" {
 
 /* Disable Device Support */
 #define DRV_USBHS_DEVICE_SUPPORT                          false
-	
+
 /* Enable Host Support */
 #define DRV_USBHS_HOST_SUPPORT                            true
 
@@ -138,8 +138,10 @@ extern "C" {
 
 
 
+
 /* Alignment for buffers that are submitted to USB Driver*/ 
 #define USB_ALIGN  CACHE_ALIGN  __ALIGNED(16)
+
 
 // *****************************************************************************
 // *****************************************************************************
