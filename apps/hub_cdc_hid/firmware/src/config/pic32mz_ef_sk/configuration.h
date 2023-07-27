@@ -113,7 +113,7 @@ extern "C" {
 
 /* Disable Device Support */
 #define DRV_USBHS_DEVICE_SUPPORT                          false
-	
+
 /* Enable Host Support */
 #define DRV_USBHS_HOST_SUPPORT                            true
 
@@ -131,8 +131,10 @@ extern "C" {
 
 
 
+
 /* Alignment for buffers that are submitted to USB Driver*/ 
 #define USB_ALIGN  CACHE_ALIGN  __ALIGNED(16)
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -163,7 +165,7 @@ extern "C" {
 /* Number of HUB Function driver instances in the application */
 #define USB_HOST_HUB_SUPPORT                  true
 #define USB_HOST_HUB_INSTANCES_NUMBER         1
-#define USB_HOST_HUB_PORTS_NUMBER			  4
+#define USB_HOST_HUB_PORTS_NUMBER             4
 
 /* Number of CDC Function driver instances in the application */
 #define USB_HOST_CDC_INSTANCES_NUMBER         1
