@@ -78,6 +78,8 @@ bool DBGU_TransmitterIsReady(void);
 
 bool DBGU_ReceiverIsReady(void);
 
+bool DBGU_TransmitComplete(void);
+
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
 

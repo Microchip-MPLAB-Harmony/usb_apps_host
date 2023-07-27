@@ -1,22 +1,5 @@
 /*******************************************************************************
- Debug Console Source file
-
-  Company:
-    Microchip Technology Inc.
-
-  File Name:
-    xc32_monitor.c
-
-  Summary:
-    debug console Source File
-
-  Description:
-    None
-
-*******************************************************************************/
-
-/*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -36,38 +19,44 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
-#include <stddef.h>
-#include "definitions.h"
+ *******************************************************************************/
+#include <stdint.h>
+#include <stdbool.h>
 
-extern int read(int handle, void *buffer, unsigned int len);
-extern int write(int handle, void * buffer, size_t count);
+void undefined_instruction_irq_handler (void);
+void software_interrupt_irq_handler(void);
+void data_abort_irq_handler(void);
+void prefetch_abort_irq_handler(void);
 
-
-int read(int handle, void *buffer, unsigned int len)
+void __attribute((weak, noreturn)) undefined_instruction_irq_handler (void)
 {
-    int nChars = 0;
-    bool success = false;
-    if ((handle == 0)  && (len > 0U))
+    while(true)
     {
-        do
-        {
-            success = DBGU_Read(buffer, 1);
-        }while( !success);
-        nChars = 1;
+        /* Spin forever */
     }
-    return nChars;
 }
 
-int write(int handle, void * buffer, size_t count)
+void __attribute((weak, noreturn)) software_interrupt_irq_handler(void)
 {
-   bool success = false;
-   if (handle == 1)
-   {
-       do
-       {
-           success = DBGU_Write(buffer, count);
-       }while( !success);
-   }
-   return (int)count;
+    while(true)
+    {
+        /* Spin forever */
+    }
 }
+
+void __attribute((weak, noreturn)) data_abort_irq_handler(void)
+{
+    while(true)
+    {
+        /* Spin forever */
+    }
+}
+
+void __attribute((weak, noreturn)) prefetch_abort_irq_handler(void)
+{
+    while(true)
+    {
+        /* Spin forever */
+    }
+}
+

@@ -40,8 +40,8 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef _BSP_H
-#define _BSP_H
+#ifndef BSP_H
+#define BSP_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -60,31 +60,34 @@
 // Section: BSP Macros
 // *****************************************************************************
 // *****************************************************************************
+#define sam_9x60_ek
+#define BSP_NAME             "sam_9x60_ek"
+
 /*** LED Macros for LED_BLUE ***/
-#define LED_BLUE_Toggle() (PIOB_REGS->PIO_ODSR ^= (1<<13))
-#define LED_BLUE_On() (PIOB_REGS->PIO_SODR = (1<<13))
-#define LED_BLUE_Off() (PIOB_REGS->PIO_CODR = (1<<13))
+#define LED_BLUE_Toggle() (PIOB_REGS->PIO_ODSR ^= (1UL<<13))
+#define LED_BLUE_On() (PIOB_REGS->PIO_SODR = (1UL<<13))
+#define LED_BLUE_Off() (PIOB_REGS->PIO_CODR = (1UL<<13))
 /*** LED Macros for LED1 ***/
-#define LED1_Toggle() (PIOB_REGS->PIO_ODSR ^= (1<<12))
-#define LED1_On() (PIOB_REGS->PIO_SODR = (1<<12))
-#define LED1_Off() (PIOB_REGS->PIO_CODR = (1<<12))
+#define LED1_Toggle() (PIOB_REGS->PIO_ODSR ^= (1UL<<12))
+#define LED1_On() (PIOB_REGS->PIO_SODR = (1UL<<12))
+#define LED1_Off() (PIOB_REGS->PIO_CODR = (1UL<<12))
 /*** LED Macros for LED_RED ***/
-#define LED_RED_Toggle() (PIOB_REGS->PIO_ODSR ^= (1<<11))
-#define LED_RED_On() (PIOB_REGS->PIO_SODR = (1<<11))
-#define LED_RED_Off() (PIOB_REGS->PIO_CODR = (1<<11))
+#define LED_RED_Toggle() (PIOB_REGS->PIO_ODSR ^= (1UL<<11))
+#define LED_RED_On() (PIOB_REGS->PIO_SODR = (1UL<<11))
+#define LED_RED_Off() (PIOB_REGS->PIO_CODR = (1UL<<11))
 /*** SWITCH Macros for SW1 ***/
 #define SW1_Get() ((PIOD_REGS->PIO_PDSR >> 18) & 0x1)
 #define SW1_STATE_PRESSED 0
 #define SW1_STATE_RELEASED 1
 /*** VBUS Macros for VBUS_AH_PD14 ***/
-#define VBUS_AH_PD14_PowerEnable() (PIOD_REGS->PIO_SODR = (1<<14))
-#define VBUS_AH_PD14_PowerDisable() (PIOD_REGS->PIO_CODR = (1<<14))
+#define VBUS_AH_PD14_PowerEnable() (PIOD_REGS->PIO_SODR = (1UL<<14))
+#define VBUS_AH_PD14_PowerDisable() (PIOD_REGS->PIO_CODR = (1UL<<14))
 /*** VBUS Macros for VBUS_AH_PD16 ***/
-#define VBUS_AH_PD16_PowerEnable() (PIOD_REGS->PIO_SODR = (1<<16))
-#define VBUS_AH_PD16_PowerDisable() (PIOD_REGS->PIO_CODR = (1<<16))
+#define VBUS_AH_PD16_PowerEnable() (PIOD_REGS->PIO_SODR = (1UL<<16))
+#define VBUS_AH_PD16_PowerDisable() (PIOD_REGS->PIO_CODR = (1UL<<16))
 /*** VBUS Macros for VBUS_AH_PD15 ***/
-#define VBUS_AH_PD15_PowerEnable() (PIOD_REGS->PIO_SODR = (1<<15))
-#define VBUS_AH_PD15_PowerDisable() (PIOD_REGS->PIO_CODR = (1<<15))
+#define VBUS_AH_PD15_PowerEnable() (PIOD_REGS->PIO_SODR = (1UL<<15))
+#define VBUS_AH_PD15_PowerDisable() (PIOD_REGS->PIO_CODR = (1UL<<15))
 
 
 
@@ -118,7 +121,6 @@
 
   Example:
     <code>
-    //Initialize the BSP
     BSP_Initialize();
     </code>
 
@@ -128,7 +130,7 @@
 
 void BSP_Initialize(void);
 
-#endif // _BSP_H
+#endif // BSP_H
 
 /*******************************************************************************
  End of File
