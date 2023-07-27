@@ -47,7 +47,7 @@ USB_HOST_HID_USAGE_DRIVER_INTERFACE usageDriverInterfaceMouse =
 };
 USB_HOST_HID_USAGE_DRIVER_TABLE_ENTRY usageDriverTableEntry[3] =
 {
-	{
+    {
         .usage = (USB_HID_USAGE_PAGE_GENERIC_DESKTOP_CONTROLS << 16) | USB_HID_USAGE_MOUSE,
         .initializeData = NULL,
         .interface = &usageDriverInterfaceMouse
@@ -64,7 +64,7 @@ USB_HOST_HID_INIT hidInitData =
 
 const USB_HOST_TPL_ENTRY USBTPList[1] = 
 {
-	TPL_INTERFACE_CLASS(0x03,&hidInitData,  USB_HOST_HID_INTERFACE) ,
+    TPL_INTERFACE_CLASS(0x03,&hidInitData,  USB_HOST_HID_INTERFACE) ,
 
 
 };
