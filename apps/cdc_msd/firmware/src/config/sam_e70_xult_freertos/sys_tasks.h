@@ -1,19 +1,23 @@
- /*******************************************************************************
-  USB Host Initialization File
+/*******************************************************************************
+ System Tasks Header File
 
   File Name:
-    usb_host_init_data.c
+    sys_tasks.h
 
   Summary:
-    This file contains source code necessary to initialize USB Host Stack.
+    This file contains declarations for task handles.
 
   Description:
-    This file contains source code necessary to initialize USB Host Stack.
+    Task handles declared in this header file can be used by the application
+    to control the behavior of the tasks.
+
+  Remarks:
+    None
  *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2023 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -35,33 +39,28 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
  *******************************************************************************/
 // DOM-IGNORE-END
+
+#ifndef SYS_TASKS_H
+#define SYS_TASKS_H
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Included Files
+// *****************************************************************************
+// *****************************************************************************
+
 #include "configuration.h"
-#include "definitions.h" 
+#include "definitions.h"
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: RTOS "Tasks" Handles
+// *****************************************************************************
+// *****************************************************************************
+/* Declaration of  APP_Tasks task handle */
+extern TaskHandle_t xAPP_Tasks;
 
 
-const USB_HOST_TPL_ENTRY USBTPList[2] = 
-{
-    TPL_INTERFACE_CLASS_SUBCLASS_PROTOCOL(0x08, 0x06, 0x50, NULL,  USB_HOST_MSD_INTERFACE) ,
-
-    TPL_INTERFACE_CLASS(0x02, NULL,  USB_HOST_CDC_INTERFACE),
 
 
-};
-
-const USB_HOST_HCD hcdTable = 
-{
-    /* Index of the USB Driver used by the Host Layer */
-    .drvIndex = DRV_USBHSV1_INDEX_0,
-
-    /* Pointer to the USB Driver Functions. */
-    .hcdInterface = DRV_USBHSV1_HOST_INTERFACE,
-
-};
-
-const USB_HOST_INIT usbHostInitData = 
-{
-    .nTPLEntries = 2 ,
-    .tplList = (USB_HOST_TPL_ENTRY *)USBTPList,
-    .hostControllerDrivers = (USB_HOST_HCD *)&hcdTable    
-};
-// </editor-fold>
+#endif //SYS_TASKS_H
