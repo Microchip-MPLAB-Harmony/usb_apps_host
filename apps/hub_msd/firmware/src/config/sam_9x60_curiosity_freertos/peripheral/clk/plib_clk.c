@@ -34,13 +34,13 @@ Generate Software delay (in multiples of microsecond units)
 static void swDelayUs(uint32_t delay)
 {
     uint32_t i, count;
-
     /* delay * (CPU_FREQ/1000000) / 6 */
-    count = delay *  (600000000/1000000)/6;
-
-    /* 6 CPU cycles per iteration */
+    count = delay *  (600000000U/1000000U)/6U;
     for (i = 0; i < count; i++)
+    {
+        /* 6 CPU cycles per iteration */
         __NOP();
+    }
 }
 
 /*********************************************************************************
@@ -49,18 +49,18 @@ Initialize UPLL
 static void initUPLLCLK(void)
 {
     /* STEP 1: PMC_PLL_UPDT to target UPLL, startup time of 150us and update disabled */
-    PMC_REGS->PMC_PLL_UPDT = PMC_PLL_UPDT_STUPTIM(0x6) |\
-                             PMC_PLL_UPDT_UPDATE(0x0) |\
+    PMC_REGS->PMC_PLL_UPDT = PMC_PLL_UPDT_STUPTIM(0x6U) |\
+                             PMC_PLL_UPDT_UPDATE(0x0U) |\
                              PMC_PLL_UPDT_ID(PLL_ID_UPLL);
 
     /* STEP 2: Set the Analog controls to the values recommended by data sheet */
-    PMC_REGS->PMC_PLL_ACR = PMC_PLL_ACR_LOOP_FILTER(0x1B) |\
-                            PMC_PLL_ACR_LOCK_THR(0x4) |\
-                            PMC_PLL_ACR_CONTROL(0x10);
+    PMC_REGS->PMC_PLL_ACR = PMC_PLL_ACR_LOOP_FILTER(0x1BU) |\
+                            PMC_PLL_ACR_LOCK_THR(0x4U) |\
+                            PMC_PLL_ACR_CONTROL(0x10U);
 
     /* STEP 3: Set loop paramaters for the fractional PLL */
-    PMC_REGS->PMC_PLL_CTRL1 = PMC_PLL_CTRL1_MUL(39) |\
-                              PMC_PLL_CTRL1_FRACR(0);
+    PMC_REGS->PMC_PLL_CTRL1 = PMC_PLL_CTRL1_MUL(39U) |\
+                              PMC_PLL_CTRL1_FRACR(0U);
 
     /* STEP 4: Enable UTMI Bandgap */
     PMC_REGS->PMC_PLL_ACR |= PMC_PLL_ACR_UTMIBG_Msk;
@@ -83,7 +83,10 @@ static void initUPLLCLK(void)
                               PMC_PLL_CTRL0_ENPLLCK_Msk;
 
     /* STEP 10: Wait for the lock bit to rise by polling the PMC_PLL_ISR0 */
-    while ((PMC_REGS->PMC_PLL_ISR0 & PMC_PLL_ISR0_LOCKU_Msk) != PMC_PLL_ISR0_LOCKU_Msk);
+    while ((PMC_REGS->PMC_PLL_ISR0 & PMC_PLL_ISR0_LOCKU_Msk) != PMC_PLL_ISR0_LOCKU_Msk)
+    {
+        /* Wait for PLL lock to rise */
+    }
 }
 
 /*********************************************************************************
@@ -99,6 +102,7 @@ Initialize Peripheral clocks
 *********************************************************************************/
 static void initPeriphClk(void)
 {
+    const uint8_t EOL_MARKER = ((uint8_t)ID_PERIPH_MAX + 1U);
     struct {
         uint8_t id;
         uint8_t clken;
@@ -113,13 +117,13 @@ static void initPeriphClk(void)
         { ID_TC0, 1, 0, 0, 0},
         { ID_UHPHS_EHCI, 1, 0, 0, 0},
         { ID_PIOD, 1, 0, 0, 0},
-        { ID_PERIPH_MAX + 1U, 0, 0, 0, 0}//end of list marker
+        { EOL_MARKER, 0, 0, 0, 0}//end of list marker
     };
 
     uint32_t count = sizeof(periphList)/sizeof(periphList[0]);
     for (uint32_t i = 0; i < count; i++)
     {
-        if (periphList[i].id == (ID_PERIPH_MAX + 1U))
+        if (periphList[i].id == EOL_MARKER)
         {
             break;
         }
@@ -140,7 +144,7 @@ Initialize USB OHCI clocks
 static void initUSBClk ( void )
 {
     /* Configure USB OHCI clock source and divider */
-    PMC_REGS->PMC_USB = PMC_USB_USBDIV(9) | PMC_USB_USBS_UPLL;
+    PMC_REGS->PMC_USB = PMC_USB_USBDIV(9U) | PMC_USB_USBS_UPLL;
 
     /* Enable UHP48M and UHP12M OHCI clocks */
     PMC_REGS->PMC_SCER |= PMC_SCER_UHP_Msk;
@@ -164,5 +168,4 @@ void CLK_Initialize( void )
 
     /* Initialize USB Clock */
     initUSBClk();
-
 }
