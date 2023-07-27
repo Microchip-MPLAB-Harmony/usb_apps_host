@@ -2,13 +2,13 @@
   USB Host Initialization File
 
   File Name:
-    usb_host_intit_data.c
+    usb_host_init_data.c
 
   Summary:
-    This file contains source code necessary to initialize USB Host Stack.
+    This file contains the source code required to initialise the USB Host Stack.
 
   Description:
-    This file contains source code necessary to initialize USB Host Stack.
+    This file contains the source code required to initialise the USB Host Stack.
  *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
@@ -41,7 +41,7 @@
 
 const USB_HOST_TPL_ENTRY USBTPList[1] = 
 {
-	TPL_INTERFACE_CLASS_SUBCLASS_PROTOCOL(0x08, 0x06, 0x50, NULL,  USB_HOST_MSD_INTERFACE) ,
+    TPL_INTERFACE_CLASS_SUBCLASS_PROTOCOL(0x08, 0x06, 0x50, NULL,  USB_HOST_MSD_INTERFACE) ,
 
 
 };

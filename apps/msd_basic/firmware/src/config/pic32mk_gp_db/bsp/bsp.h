@@ -40,8 +40,8 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef _BSP_H
-#define _BSP_H
+#ifndef BSP_H
+#define BSP_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -60,36 +60,39 @@
 // Section: BSP Macros
 // *****************************************************************************
 // *****************************************************************************
+#define pic32mk_gp_db
+#define BSP_NAME             "pic32mk_gp_db"
+
 /*** LED Macros for LED3 ***/
-#define LED3_Toggle() (LATGINV = (1<<14))
-#define LED3_Get() ((PORTG >> 14) & 0x1)
-#define LED3_On() (LATGSET = (1<<14))
-#define LED3_Off() (LATGCLR = (1<<14))
+#define LED3_Toggle() (LATGINV = (1UL<<14))
+#define LED3_Get() ((PORTG >> 14) & 0x1U)
+#define LED3_On() (LATGSET = (1UL<<14))
+#define LED3_Off() (LATGCLR = (1UL<<14))
 /*** LED Macros for LED ***/
-#define LED_Toggle() (LATGINV = (1<<12))
-#define LED_Get() ((PORTG >> 12) & 0x1)
-#define LED_On() (LATGSET = (1<<12))
-#define LED_Off() (LATGCLR = (1<<12))
+#define LED_Toggle() (LATGINV = (1UL<<12))
+#define LED_Get() ((PORTG >> 12) & 0x1U)
+#define LED_On() (LATGSET = (1UL<<12))
+#define LED_Off() (LATGCLR = (1UL<<12))
 /*** LED Macros for LED2 ***/
-#define LED2_Toggle() (LATGINV = (1<<13))
-#define LED2_Get() ((PORTG >> 13) & 0x1)
-#define LED2_On() (LATGSET = (1<<13))
-#define LED2_Off() (LATGCLR = (1<<13))
+#define LED2_Toggle() (LATGINV = (1UL<<13))
+#define LED2_Get() ((PORTG >> 13) & 0x1U)
+#define LED2_On() (LATGSET = (1UL<<13))
+#define LED2_Off() (LATGCLR = (1UL<<13))
 /*** SWITCH Macros for SWITCH ***/
-#define SWITCH_Get() ((PORTG >> 11) & 0x1)
-#define SWITCH_STATE_PRESSED 0
-#define SWITCH_STATE_RELEASED 1
+#define SWITCH_Get() ((PORTG >> 11) & 0x1U)
+#define SWITCH_STATE_PRESSED 0U
+#define SWITCH_STATE_RELEASED 1U
 /*** SWITCH Macros for SWITCH2 ***/
-#define SWITCH2_Get() ((PORTF >> 13) & 0x1)
-#define SWITCH2_STATE_PRESSED 0
-#define SWITCH2_STATE_RELEASED 1
+#define SWITCH2_Get() ((PORTF >> 13) & 0x1U)
+#define SWITCH2_STATE_PRESSED 0U
+#define SWITCH2_STATE_RELEASED 1U
 /*** SWITCH Macros for SWITCH3 ***/
-#define SWITCH3_Get() ((PORTF >> 12) & 0x1)
-#define SWITCH3_STATE_PRESSED 0
-#define SWITCH3_STATE_RELEASED 1
+#define SWITCH3_Get() ((PORTF >> 12) & 0x1U)
+#define SWITCH3_STATE_PRESSED 0U
+#define SWITCH3_STATE_RELEASED 1U
 /*** VBUS Macros for VBUS_AH ***/
-#define VBUS_AH_PowerEnable() (LATBSET = (1<<5))
-#define VBUS_AH_PowerDisable() (LATBCLR = (1<<5))
+#define VBUS_AH_PowerEnable() (LATBSET = (1UL<<5))
+#define VBUS_AH_PowerDisable() (LATBCLR = (1UL<<5))
 
 
 
@@ -123,7 +126,6 @@
 
   Example:
     <code>
-    //Initialize the BSP
     BSP_Initialize();
     </code>
 
@@ -133,7 +135,7 @@
 
 void BSP_Initialize(void);
 
-#endif // _BSP_H
+#endif // BSP_H
 
 /*******************************************************************************
  End of File
