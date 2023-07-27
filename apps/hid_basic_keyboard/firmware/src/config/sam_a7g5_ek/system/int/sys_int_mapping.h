@@ -50,11 +50,15 @@
 // *****************************************************************************
 // *****************************************************************************
 
+/* MISRA C-2012 Rule 5.8 deviated:6 Deviation record ID -  H3_MISRAC_2012_R_5_8_DR_1 */
+
 #define SYS_INT_IsEnabled()                 ((CPSR_I_Msk & __get_CPSR()) == 0)
 #define SYS_INT_SourceEnable( source )      GIC_EnableIRQ( source )
 #define SYS_INT_SourceIsEnabled( source )   GIC_GetEnableIRQ( source )
 #define SYS_INT_SourceStatusGet( source )   GIC_GetPendingIRQ( source )
 #define SYS_INT_SourceStatusSet( source )   GIC_SetPendingIRQ( source )
 #define SYS_INT_SourceStatusClear( source ) GIC_ClearPendingIRQ( source )
+
+/* MISRAC 2012 deviation block end */
 
 #endif // SYS_INT_MAPPING_H

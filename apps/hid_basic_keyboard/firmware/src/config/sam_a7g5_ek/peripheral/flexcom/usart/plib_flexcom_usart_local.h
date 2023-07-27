@@ -72,17 +72,16 @@
 // *****************************************************************************
 
 /* FLEXCOM USART Errors */
-typedef enum
-{
-    FLEXCOM_USART_ERROR_NONE = 0,
-    FLEXCOM_USART_ERROR_OVERRUN = FLEX_US_CSR_OVRE_Msk,
-    FLEXCOM_USART_ERROR_PARITY = FLEX_US_CSR_PARE_Msk,
-    FLEXCOM_USART_ERROR_FRAMING = FLEX_US_CSR_FRAME_Msk,
 
-    /* Force the compiler to reserve 32-bit memory for each enum */
-    FLEXCOM_USART_ERROR_INVALID = 0xFFFFFFFF
+#define     FLEXCOM_USART_ERROR_NONE       (0U)
+#define     FLEXCOM_USART_ERROR_OVERRUN    (FLEX_US_CSR_OVRE_Msk)
+#define     FLEXCOM_USART_ERROR_PARITY     (FLEX_US_CSR_PARE_Msk)
+#define     FLEXCOM_USART_ERROR_FRAMING    (FLEX_US_CSR_FRAME_Msk)
 
-} FLEXCOM_USART_ERROR;
+/* Force the compiler to reserve 32-bit memory for each enum */
+#define     FLEXCOM_USART_ERROR_INVALID    (0xFFFFFFFFU)
+
+typedef uint32_t FLEXCOM_USART_ERROR;
 
 /* FLEXCOM USART Data Width */
 typedef enum
@@ -148,20 +147,20 @@ typedef void (*FLEXCOM_USART_CALLBACK)( uintptr_t context );
 /* FLEXCOM USART Object */
 typedef struct
 {
-    uint8_t *               txBuffer;
+    void *                  txBuffer;
     size_t                  txSize;
-    volatile size_t         txProcessedSize;
+    size_t                  txProcessedSize;
     FLEXCOM_USART_CALLBACK  txCallback;
     uintptr_t               txContext;
     bool                    txBusyStatus;
 
-    uint8_t *               rxBuffer;
+    void *                  rxBuffer;
     size_t                  rxSize;
-    volatile size_t         rxProcessedSize;
+    size_t                  rxProcessedSize;
     FLEXCOM_USART_CALLBACK  rxCallback;
     uintptr_t               rxContext;
-    volatile bool           rxBusyStatus;
-    volatile FLEXCOM_USART_ERROR errorStatus;
+    bool                    rxBusyStatus;
+    FLEXCOM_USART_ERROR errorStatus;
 
 } FLEXCOM_USART_OBJECT ;
 
@@ -173,7 +172,7 @@ typedef enum
     /* Receive ring buffer is full. Application must read the data out to avoid missing data on the next RX interrupt. */
     FLEXCOM_USART_EVENT_READ_BUFFER_FULL,
 
-    /* USART error. Application must call the USARTx_ErrorGet API to get the type of error and clear the error. */
+    /* USART error. Application must call the FLEXCOMx_USART_ErrorGet API to get the type of error and clear the error. */
     FLEXCOM_USART_EVENT_READ_ERROR,
 
     /* Threshold number of free space is available in the transmit ring buffer */
@@ -218,9 +217,9 @@ typedef struct
 
     uintptr_t                                               wrContext;
 
-    volatile uint32_t                                       wrInIndex;
+    uint32_t                                                wrInIndex;
 
-    volatile uint32_t                                       wrOutIndex;
+    uint32_t                                                wrOutIndex;
 
     bool                                                    isWrNotificationEnabled;
 
@@ -234,9 +233,9 @@ typedef struct
 
     uintptr_t                                               rdContext;
 
-    volatile uint32_t                                       rdInIndex;
+    uint32_t                                                rdInIndex;
 
-    volatile uint32_t                                       rdOutIndex;
+    uint32_t                                                rdOutIndex;
 
     bool                                                    isRdNotificationEnabled;
 
@@ -248,7 +247,7 @@ typedef struct
 
     bool                                                    isInterruptActive;
 
-    volatile FLEXCOM_USART_ERROR                            errorStatus;
+    FLEXCOM_USART_ERROR                                     errorStatus;
 
 } FLEXCOM_USART_RING_BUFFER_OBJECT;
 
