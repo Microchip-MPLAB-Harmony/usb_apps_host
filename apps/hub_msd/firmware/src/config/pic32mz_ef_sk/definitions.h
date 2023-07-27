@@ -67,11 +67,11 @@
 #include "peripheral/cache/plib_cache.h"
 #include "peripheral/evic/plib_evic.h"
 #include "bsp/bsp.h"
+#include "system/time/sys_time.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "system/time/sys_time.h"
 #include "app.h"
 
 
@@ -83,6 +83,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "PIC32MZ2048EFH144"
+#define DEVICE_ARCH			 "MIPS"
+#define DEVICE_FAMILY		 "PIC32MZEF"
+#define DEVICE_SERIES		 "PIC32MZ"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 200000000
@@ -199,7 +205,7 @@ typedef struct
 {
 	SYS_MODULE_OBJ  drvUSBHSObject;
 
-	SYS_MODULE_OBJ  usbHostObject0;
+    SYS_MODULE_OBJ  usbHostObject0;
 
     SYS_MODULE_OBJ  sysTime;
 
