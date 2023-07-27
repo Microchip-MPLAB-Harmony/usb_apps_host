@@ -52,6 +52,7 @@
 
 #include "configuration.h"
 #include "definitions.h"
+#include "sys_tasks.h"
 
 
 // *****************************************************************************
@@ -59,6 +60,16 @@
 // Section: RTOS "Tasks" Routine
 // *****************************************************************************
 // *****************************************************************************
+void _USB_HOST_Tasks(  void *pvParameters  )
+{
+    while(1)
+    {
+        /* USB Host layer tasks routine */ 
+        USB_HOST_Tasks(sysObj.usbHostObject0);
+        vTaskDelay(10 / portTICK_PERIOD_MS);
+    }
+}
+
 void _DRV_USB_HOST_Tasks(  void *pvParameters  )
 {
     while(1)
@@ -71,22 +82,12 @@ void _DRV_USB_HOST_Tasks(  void *pvParameters  )
     }
 }
 
-void _USB_HOST_Tasks(  void *pvParameters  )
-{
-    while(1)
-    {
-        /* USB Host layer tasks routine */ 
-        USB_HOST_Tasks(sysObj.usbHostObject0);
-        vTaskDelay(10 / portTICK_PERIOD_MS);
-    }
-}
-
 /* Handle for the APP_Tasks. */
 TaskHandle_t xAPP_Tasks;
 
-void _APP_Tasks(  void *pvParameters  )
+static void lAPP_Tasks(  void *pvParameters  )
 {   
-    while(1)
+    while(true)
     {
         APP_Tasks();
     }
@@ -117,18 +118,18 @@ void SYS_Tasks ( void )
     
 
     /* Maintain Middleware & Other Libraries */
-        /* Create OS Thread for USB Driver Tasks. */
-    xTaskCreate( _DRV_USB_HOST_Tasks,
-        "DRV_USB_HOST_TASKS",
+        /* Create OS Thread for USB_HOST_Tasks. */
+    xTaskCreate( _USB_HOST_Tasks,
+        "USB_HOST_TASKS",
         1024,
         (void*)NULL,
         1,
         (TaskHandle_t*)NULL
     );
 
-    /* Create OS Thread for USB_HOST_Tasks. */
-    xTaskCreate( _USB_HOST_Tasks,
-        "USB_HOST_TASKS",
+    /* Create OS Thread for USB Driver Tasks. */
+    xTaskCreate( _DRV_USB_HOST_Tasks,
+        "DRV_USB_HOST_TASKS",
         1024,
         (void*)NULL,
         1,
@@ -139,7 +140,7 @@ void SYS_Tasks ( void )
 
     /* Maintain the application's state machine. */
         /* Create OS Thread for APP_Tasks. */
-    xTaskCreate((TaskFunction_t) _APP_Tasks,
+    (void) xTaskCreate((TaskFunction_t) lAPP_Tasks,
                 "APP_Tasks",
                 1024,
                 NULL,
