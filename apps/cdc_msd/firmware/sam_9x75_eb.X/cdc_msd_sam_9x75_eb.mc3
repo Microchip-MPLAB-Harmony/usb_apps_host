@@ -47,7 +47,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -7717,12 +7717,12 @@
          <hash>541f31582d9304249c253b266ae5a4b6b924196fc5b5cfede5b88fadd4779f90</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x75_eb\usb\usb_hub.h</file>
-         <hash>f07eb653a11355424adb96ff0fec6796f6b95c8924ac93fb9207f888d130bc7d</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_9x75_eb\usb\src\usb_host.c</file>
          <hash>e9afbc75c1f0bc723355daa67ae3e8016428e3ac5365a83b6bd4d58c6b0c76d9</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x75_eb\usb\usb_hub.h</file>
+         <hash>f07eb653a11355424adb96ff0fec6796f6b95c8924ac93fb9207f888d130bc7d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\user.h</file>
@@ -8298,7 +8298,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\definitions.h</file>
-         <hash>f3f3460e264b26e5539513b0639437e7c770a281668b63daf393a83ae7491238</hash>
+         <hash>0ae866e515a75f1519f43fa85b95030cc287d68f637402481fde113f8fe8267f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\peripheral\mmu\plib_mmu.c</file>
@@ -8450,7 +8450,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\initialization.c</file>
-         <hash>9000d8773b02f47186cf7c89969086c3973a302cdf5843f6df10be26736b10e6</hash>
+         <hash>e35352afa59c683ac0df20d100075ed5c998bdb2af6e055554c89ae209dc6198</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\isc.h</file>
@@ -8478,7 +8478,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\configuration.h</file>
-         <hash>4fd2286c7f520aedc9fc8ae211db50340d23f6d5055add56b1940952b4581b9b</hash>
+         <hash>b80dede8e94f5200f09787a86b7462f05a60d4cdd52c3e4bac44dd75ba27d82c</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\shdwc.h</file>
@@ -8534,7 +8534,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\tasks.c</file>
-         <hash>9a3adf7f1d8f2e4d8f475f1f28efba4a8500b56551812119d917f0739b94b555</hash>
+         <hash>d1e231740eae7643b29673d60d6f72a4c040fed8c76fce15dddb73057f34d3a7</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\udphs.h</file>
