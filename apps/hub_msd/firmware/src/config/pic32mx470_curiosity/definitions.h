@@ -52,10 +52,10 @@
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_host.h"
 #include "usb/usb_host_hub.h"
+#include "bsp/bsp.h"
 #include "usb/usb_msd.h"
 #include "usb/usb_host_msd.h"
 #include "usb/usb_host_scsi.h"
-#include "bsp/bsp.h"
 #include "system/fs/sys_fs.h"
 #include "system/fs/sys_fs_media_manager.h"
 #include "system/fs/sys_fs_fat_interface.h"
@@ -66,10 +66,10 @@
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/evic/plib_evic.h"
 #include "driver/usb/usbfs/drv_usbfs.h"
+#include "system/time/sys_time.h"
 #include "system/int/sys_int.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "system/time/sys_time.h"
 #include "app.h"
 
 
@@ -81,6 +81,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "PIC32MX470F512H"
+#define DEVICE_ARCH			 "MIPS"
+#define DEVICE_FAMILY		 "PIC32MX1185"
+#define DEVICE_SERIES		 "PIC32MX"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 96000000
@@ -195,7 +201,7 @@ Remarks:
 
 typedef struct
 {
-	SYS_MODULE_OBJ  usbHostObject0;
+    SYS_MODULE_OBJ  usbHostObject0;
 
 	SYS_MODULE_OBJ  drvUSBFSObject;
 
