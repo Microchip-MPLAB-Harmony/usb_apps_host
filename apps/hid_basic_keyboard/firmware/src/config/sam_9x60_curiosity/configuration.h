@@ -114,7 +114,7 @@ extern "C" {
 // Section: USB Host Layer Configuration
 // *****************************************************************************
 // **************************************************************************
-	
+
 /* Number of Endpoints used */
 
 /* Total number of devices to be supported */
