@@ -1,22 +1,23 @@
 /*******************************************************************************
-  UART1 PLIB
-
-  Company:
-    Microchip Technology Inc.
+ System Tasks Header File
 
   File Name:
-    plib_uart1.h
+    sys_tasks.h
 
   Summary:
-    UART1 PLIB Header File
+    This file contains declarations for task handles.
 
   Description:
+    Task handles declared in this header file can be used by the application
+    to control the behavior of the tasks.
+
+  Remarks:
     None
+ *******************************************************************************/
 
-*******************************************************************************/
-
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2023 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -36,64 +37,20 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
-
-#ifndef PLIB_UART1_H
-#define PLIB_UART1_H
-
-#include "plib_uart_common.h"
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-    extern "C" {
-
-#endif
+ *******************************************************************************/
 // DOM-IGNORE-END
 
+#ifndef SYS_TASKS_H
+#define SYS_TASKS_H
+
 // *****************************************************************************
 // *****************************************************************************
-// Section: Interface
+// Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
 
-#define UART1_FrequencyGet()    (uint32_t)(83000000UL)
-
-/****************************** UART1 API *********************************/
-
-void UART1_Initialize( void );
-
-UART_ERROR UART1_ErrorGet( void );
-
-bool UART1_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq );
-
-bool UART1_Write( void *buffer, const size_t size );
-
-bool UART1_Read( void *buffer, const size_t size );
-
-bool UART1_WriteIsBusy( void );
-
-bool UART1_ReadIsBusy( void );
-
-size_t UART1_WriteCountGet( void );
-
-size_t UART1_ReadCountGet( void );
-
-bool UART1_ReadAbort(void);
-
-void UART1_WriteCallbackRegister( UART_CALLBACK callback, uintptr_t context );
-
-void UART1_ReadCallbackRegister( UART_CALLBACK callback, uintptr_t context );
+#include "configuration.h"
+#include "definitions.h"
 
 
-bool UART1_TransmitComplete( void );
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-    }
-
-#endif
-
-// DOM-IGNORE-END
-#endif // PLIB_UART1_H
+#endif //SYS_TASKS_H
