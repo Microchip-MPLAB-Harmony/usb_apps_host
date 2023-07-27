@@ -63,7 +63,6 @@
     #endif 
 #endif 
 #endif /* End of #ifndef _DRV_USB_EXTERNAL_DEPENDENCIES_H */ 
-
 /*******************************************************************************
  End of File
 */
