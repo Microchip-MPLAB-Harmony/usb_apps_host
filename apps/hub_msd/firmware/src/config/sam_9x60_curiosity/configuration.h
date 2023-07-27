@@ -142,6 +142,36 @@ extern "C" {
 // Section: Middleware & Other Library Configuration
 // *****************************************************************************
 // *****************************************************************************
+// *****************************************************************************
+// *****************************************************************************
+// Section: USB Host Layer Configuration
+// *****************************************************************************
+// **************************************************************************
+
+/* Number of Endpoints used */
+
+/* Total number of devices to be supported */
+#define USB_HOST_DEVICES_NUMBER                             3 
+
+/* Target peripheral list entries */
+#define  USB_HOST_TPL_ENTRIES                               2 
+
+/* Maximum number of configurations supported per device */
+#define USB_HOST_DEVICE_INTERFACES_NUMBER                   5    
+
+#define USB_HOST_CONTROLLERS_NUMBER                         2
+
+#define USB_HOST_TRANSFERS_NUMBER                           10
+
+/* Provides Host pipes number */
+#define USB_HOST_PIPES_NUMBER                               10
+
+
+/* Number of HUB Function driver instances in the application */
+#define USB_HOST_HUB_SUPPORT                  true
+#define USB_HOST_HUB_INSTANCES_NUMBER         1
+#define USB_HOST_HUB_PORTS_NUMBER             4
+
 	
 /*** USB EHCI Driver Configurations ***/
 
@@ -184,36 +214,6 @@ extern "C" {
 #ifndef USB_ALIGN
 #define USB_ALIGN __ALIGNED(32)
 #endif 
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: USB Host Layer Configuration
-// *****************************************************************************
-// **************************************************************************
-
-/* Number of Endpoints used */
-
-/* Total number of devices to be supported */
-#define USB_HOST_DEVICES_NUMBER                             3 
-
-/* Target peripheral list entries */
-#define  USB_HOST_TPL_ENTRIES                               2 
-
-/* Maximum number of configurations supported per device */
-#define USB_HOST_DEVICE_INTERFACES_NUMBER                   5    
-
-#define USB_HOST_CONTROLLERS_NUMBER                         2
-
-#define USB_HOST_TRANSFERS_NUMBER                           10
-
-/* Provides Host pipes number */
-#define USB_HOST_PIPES_NUMBER                               10
-
-
-/* Number of HUB Function driver instances in the application */
-#define USB_HOST_HUB_SUPPORT                  true
-#define USB_HOST_HUB_INSTANCES_NUMBER         1
-#define USB_HOST_HUB_PORTS_NUMBER             4
 
 /* Number of MSD Function driver instances in the application */
 #define USB_HOST_MSD_INSTANCES_NUMBER         2
