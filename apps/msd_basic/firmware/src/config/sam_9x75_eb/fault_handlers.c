@@ -20,11 +20,24 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
  *******************************************************************************/
-#include <stdio.h>
 #include <stdint.h>
+#include <stdbool.h>
+#include <stdio.h>
 
-/* IFSR status */
-static const char* prefetch_abort_status[32] = {
+void undefined_instruction_irq_handler (void);
+void software_interrupt_irq_handler(void);
+void data_abort_irq_handler(void);
+void prefetch_abort_irq_handler(void);
+
+/* MISRAC 2012 deviation block start */
+/* MISRA C-2012 Rule 21.6 deviated 30 times.  Deviation record ID -  H3_MISRAC_2012_R_21_6_DR_1 */
+
+#define READ_DFSR(x) asm("mrc p15, 0, %0, c5, c0, 0" : "=r"(x))
+#define READ_DFAR(x) asm("mrc p15, 0, %0, c6, c0, 0" : "=r"(x))
+#define READ_IFSR(x) asm("mrc p15, 0, %0, c5, c0, 1" : "=r"(x))
+#define READ_IFAR(x) asm("mrc p15, 0, %0, c6, c0, 2" : "=r"(x))
+
+static const char* prefetch_abort_status[16] = {
     NULL,
     NULL,
     "debug event",
@@ -44,7 +57,7 @@ static const char* prefetch_abort_status[32] = {
 };
 
 /* DFSR status */
-static const char* data_abort_status[32] = {
+static const char* data_abort_status[16] = {
     NULL,
     "alignment fault",
     "debug event",
@@ -60,29 +73,22 @@ static const char* data_abort_status[32] = {
     "1st level translation, synchronous external abort",
     "permission fault, section",
     "2nd level translation, synchronous external abort",
-    "permission fault, page",
-    NULL,
-    NULL,
-    NULL,
-    NULL,
-    NULL,
-    NULL,
-    "asynchronous external abort"
+    "permission fault, page"
 };
 
 void __attribute((weak, noreturn)) undefined_instruction_irq_handler (void)
 {
-    while(1)
+    while(true)
     {
-        // Do Nothing
+        /* Spin forever */
     }
 }
 
 void __attribute((weak, noreturn)) software_interrupt_irq_handler(void)
 {
-    while(1)
+    while(true)
     {
-        // Do Nothing
+        /* Spin forever */
     }
 }
 
@@ -90,28 +96,28 @@ void __attribute((weak, noreturn)) data_abort_irq_handler(void)
 {
     uint32_t v1, v2, dfsr;
 
-    asm("mrc p15, 0, %0, c5, c0, 0" : "=r"(v1));
-    asm("mrc p15, 0, %0, c6, c0, 0" : "=r"(v2));
+    READ_DFSR(v1);
+    READ_DFAR(v2);
 
-    printf("\r\n");
-    printf("####################\r\n");
+    (void)printf("\r\n");
+    (void)printf("####################\r\n");
     dfsr = ((v1 >> 4U) & 0x0FU);
-    printf("Data Fault occured in %x domain\r\n", (unsigned int)dfsr);
-    dfsr = (((v1 & 0x400U) >> 6U) | (v1 & 0x0FU));
-    if (data_abort_status[dfsr])
+    (void)printf("Data Fault occured in %x domain\r\n", (unsigned int)dfsr);
+    dfsr = ((v1 & 0x0FU));
+    if (data_abort_status[dfsr] != NULL)
     {
-        printf("Data Fault reason is: %s\r\n", data_abort_status[dfsr]);
+        (void)printf("Data Fault reason is: %s\r\n", data_abort_status[dfsr]);
     }
     else
     {
-        printf("Data Fault reason is unknown\r\n");
+        (void)printf("Data Fault reason is unknown\r\n");
     }
-    printf("Data Fault occured at address: 0x%08x\r\n", (unsigned int)v2);
-    printf("Data Fault status register value: 0x%x\r\n", (unsigned int)v1);
-    printf("####################\n\r");
-    while(1)
+    (void)printf("Data Fault occured at address: 0x%08x\r\n", (unsigned int)v2);
+    (void)printf("Data Fault status register value: 0x%x\r\n", (unsigned int)v1);
+    (void)printf("####################\n\r");
+    while(true)
     {
-        // Do Nothing
+        /* Spin forever */
     }
 }
 
@@ -119,25 +125,27 @@ void __attribute((weak, noreturn)) prefetch_abort_irq_handler(void)
 {
     uint32_t v1, v2, ifsr;
 
-    asm("mrc p15, 0, %0, c5, c0, 1" : "=r"(v1));
-    asm("mrc p15, 0, %0, c6, c0, 2" : "=r"(v2));
+    READ_IFSR(v1);
+    READ_IFAR(v2);
 
-    printf("\r\n");
-    printf("####################\r\n");
-    ifsr = (((v1 & 0x400U) >> 6U) | (v1 & 0x0FU));
-    if (prefetch_abort_status[ifsr])
+    (void)printf("\r\n");
+    (void)printf("####################\r\n");
+    ifsr = (v1 & 0x0FU);
+    if (prefetch_abort_status[ifsr] != NULL)
     {
-        printf("Prefetch Fault reason is: %s\r\n", prefetch_abort_status[ifsr]);
+        (void)printf("Prefetch Fault reason is: %s\r\n", prefetch_abort_status[ifsr]);
     }
     else
     {
-        printf("Prefetch Fault reason is unknown\r\n");
+        (void)printf("Prefetch Fault reason is unknown\r\n");
     }
-    printf("prefetch Fault occured at address: 0x%08x\r\n", (unsigned int)v2);
-    printf("Prefetch Fault status register value: 0x%x\r\n", (unsigned int)v1);
-    printf("####################\n\r");
-    while(1)
+    (void)printf("prefetch Fault occured at address: 0x%08x\r\n", (unsigned int)v2);
+    (void)printf("Prefetch Fault status register value: 0x%x\r\n", (unsigned int)v1);
+    (void)printf("####################\n\r");
+    while(true)
     {
-        // Do Nothing
+        /* Spin forever */
     }
 }
+
+/* MISRAC 2012 deviation block end */
