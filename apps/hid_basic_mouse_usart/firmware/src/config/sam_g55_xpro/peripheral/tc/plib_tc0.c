@@ -61,7 +61,7 @@
 
 
 /* Callback object for channel 0 */
-TC_TIMER_CALLBACK_OBJECT TC0_CH0_CallbackObj;
+volatile static TC_TIMER_CALLBACK_OBJECT TC0_CH0_CallbackObj;
 
 /* Initialize channel in timer mode */
 void TC0_CH0_TimerInitialize (void)
@@ -93,7 +93,7 @@ void TC0_CH0_TimerStop (void)
 
 uint32_t TC0_CH0_TimerFrequencyGet( void )
 {
-    return (uint32_t)(59998208UL);
+    return (uint32_t)(50003968UL);
 }
 
 /* Configure timer period */
@@ -111,13 +111,13 @@ void TC0_CH0_TimerCompareSet (uint16_t compare)
 /* Read timer period */
 uint16_t TC0_CH0_TimerPeriodGet (void)
 {
-    return TC0_REGS->TC_CHANNEL[0].TC_RC;
+    return (uint16_t)TC0_REGS->TC_CHANNEL[0].TC_RC;
 }
 
 /* Read timer counter value */
 uint16_t TC0_CH0_TimerCounterGet (void)
 {
-    return TC0_REGS->TC_CHANNEL[0].TC_CV;
+    return (uint16_t)TC0_REGS->TC_CHANNEL[0].TC_CV;
 }
 
 /* Register callback for period interrupt */
@@ -128,13 +128,17 @@ void TC0_CH0_TimerCallbackRegister(TC_TIMER_CALLBACK callback, uintptr_t context
 }
 
 /* Interrupt handler for Channel 0 */
-void TC0_CH0_InterruptHandler(void)
+void __attribute__((used)) TC0_CH0_InterruptHandler(void)
 {
     TC_TIMER_STATUS timer_status = (TC_TIMER_STATUS)(TC0_REGS->TC_CHANNEL[0].TC_SR & TC_TIMER_STATUS_MSK);
+
+    /* Additional temporary variable used to prevent MISRA violations (Rule 13.x) */
+    uintptr_t context = TC0_CH0_CallbackObj.context;
+
     /* Call registered callback function */
-    if ((TC_TIMER_NONE != timer_status) && TC0_CH0_CallbackObj.callback_fn != NULL)
+    if ((TC0_CH0_CallbackObj.callback_fn != NULL) && (TC_TIMER_NONE != timer_status))
     {
-        TC0_CH0_CallbackObj.callback_fn(timer_status, TC0_CH0_CallbackObj.context);
+        TC0_CH0_CallbackObj.callback_fn(timer_status, context);
     }
 }
 
