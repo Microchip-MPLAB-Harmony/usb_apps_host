@@ -47,7 +47,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -7603,7 +7603,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\task.h</file>
-         <hash>85a11a834d04120402087ac61190566f893480e9d6c8fe903218330dc4ea7d30</hash>
+         <hash>45f2245c914ed25ab26a1ea78ddd4ac74cb6522e1b26ac5c44b614ca4c8cee99</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\otpc.h</file>
@@ -7611,11 +7611,11 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\timers.c</file>
-         <hash>dae8ab1093eed0eebd86eef7f4e777e3d249d98b75528ff3841d41ce1c8f3fa6</hash>
+         <hash>24962ef361f396aaa5e6e33776eeeddaf2fb251c87b6fe50602acc56c537b093</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\stream_buffer.h</file>
-         <hash>43bd2a4bf5d6495e04c8409187d8f31dfaee58d8f94d7e3a4fd9830e5d7e68dc</hash>
+         <hash>b876d839460197d94d0f95fb93c6aeb457f6fc572d32258480fed7d4de686b6b</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\gpbr.h</file>
@@ -7631,7 +7631,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\list.h</file>
-         <hash>f288a68b8559a1913dd663136711f7adcaf8b3430627d7102978be4d808a02eb</hash>
+         <hash>dc572f54391c0407fc25db360d912fca9118cddae7bd2e3099eb13f18804e5a9</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\pioa.h</file>
@@ -7639,11 +7639,11 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\croutine.h</file>
-         <hash>b6da8ad0cb09303c87eb634679b97f56001c14f45acd1378103504699a95cad4</hash>
+         <hash>cf52c15fa26a8d4f82b55909b75ebfe2aab25468ba7780748912ddead9812b4e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\system\time\sys_time.h</file>
-         <hash>f21b100d8f0b8b79af9217315098d51df855d9015f05a7e25ad77414cd19b2c3</hash>
+         <hash>6357468f7670698b16bfb6439d9919ed38eba99d4f03277a8b43ac34586fa1b3</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\trng.h</file>
@@ -7675,7 +7675,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\osal\osal.h</file>
-         <hash>d42702188d00d3e1d7219d7eef030485896bf8b5ebe55318656e82f0fbb89788</hash>
+         <hash>8404fbe44807fa0484ffb38843a72cb9af8e31c9c30bd1b2594e609b8ea317d9</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\classd.h</file>
@@ -7687,15 +7687,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\system\time\src\sys_time_local.h</file>
-         <hash>d3ef06b59d9a89efe9e8eb54fcf3b75120d56156cc21f6847ca4f9e902eb7c9d</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60D1G_DFP\instance\pit64b.h</file>
-         <hash>89850cf98cb6eab392f3d0596a565d9d2128e58eb4996dce308a75c5608cb8af</hash>
+         <hash>df56f970664902417d798760e44978cf4b84c108cf0761647a383e91db76980c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\usb\usb_host_cdc.h</file>
          <hash>b43d66be63443bad351378adb0f049219dd14b6ed4ecc2497919bd8e93001030</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60D1G_DFP\instance\pit64b.h</file>
+         <hash>89850cf98cb6eab392f3d0596a565d9d2128e58eb4996dce308a75c5608cb8af</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\pio\plib_pio.h</file>
@@ -7723,7 +7723,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\mpu_prototypes.h</file>
-         <hash>783d9a41c90817eec55d9317475cc2663a785fc9a955c06d3207fcee6e0ec080</hash>
+         <hash>2b46a2511ce5d23a56bc83079333d8d0a2e33763e5829c9383252806887a3dc0</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\aes.h</file>
@@ -7731,7 +7731,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>f2a71e2e2fe9d833b6edc7db929d3c2416363c02c89aaed514668dde46ca4e9b</hash>
+         <hash>b8ee0faabd8f350f3b0a1afd4853910ecbe51c1a02526a5d29a03b761c810233</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\rstc.h</file>
@@ -7739,11 +7739,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\system\int\sys_int_mapping.h</file>
-         <hash>a88ed061ebd75cff98fc9703d2dbd3c868a729737c0d00afff3e0755ab4f8910</hash>
+         <hash>652a7ea6c065e3a4cbcbfaef7c3519fca207fa36de25351875c3ba746dff242b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\mmu\plib_mmu.h</file>
-         <hash>a777af67221ce686baec242376d2cccad707ed3e197c3b049b7d9fd5519e3dfe</hash>
+         <hash>7fb6e6b8ad6a80b7fc04c0264b7cdf49e6d6b887e4f3c5aa394eda88e32e0116</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\shdwc.h</file>
@@ -7755,11 +7755,11 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\FreeRTOS.h</file>
-         <hash>c8d9b7a52d092f37b4c3b821806bd6e8a30dbcc600960f9aed2b2f10f965c09f</hash>
+         <hash>03e9c94aba57e3cf7f4f73bc2d3eb4a96ae38f3425eedb5450622ca286475a0b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\usb_host_init_data.c</file>
-         <hash>b36128c7023e5453be005b3a4970afc9bdbdd38cfc95ed639d99e21b20a5d848</hash>
+         <hash>f1cecebc918f337e91bb447c6312831faa2b0601c909ed3d4bd209647074ea01</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\usb\src\usb_host_cdc_acm.c</file>
@@ -7779,7 +7779,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\definitions.h</file>
-         <hash>e85aed88c2a7436e9db4e35e2bcc7a8685d7bee4f473e4af984be22c14ea6648</hash>
+         <hash>c358104c2009d0b4e2cffd34cbfd99af034d25728d34d333a1c803c7604d2851</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\flexcom12.h</file>
@@ -7819,7 +7819,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\mmu\plib_mmu.c</file>
-         <hash>7ef66d78f0234e1889fc9cb8fb94616eb51fa7517881f86270c68856d7072b5d</hash>
+         <hash>8850b951d047f69283a6961301dfa7333cd338c9f27278bee79dcfd36ad1076e</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\udphs.h</file>
@@ -7831,15 +7831,15 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\deprecated_definitions.h</file>
-         <hash>1947473678873963f3193497280d907f59a5936f92df6395327f7ca684cb1aa6</hash>
+         <hash>35000a143464bbbd8df7c9a6f066a64598a24da5174a7be33972e62bfbd75f4d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\clk\plib_clk.c</file>
-         <hash>d6b41b23cd17fc1def26df50fba6e6c0e0e6ad6f20588c07dfa95761a9fd44cf</hash>
+         <hash>b25509baab8e407d66ac965bce124edb0992cbd3197fe601fbcfee4f450dcda7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\initialization.c</file>
-         <hash>6c760b861c3ff161a1983debae5d6e0654abec6252db8daeb95b23266cdfdadc</hash>
+         <hash>70f43b9cf10a04d272b0879d18ecde6b6f8a785933a79ce1be9167aaa21d2b39</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\xdmac.h</file>
@@ -7859,7 +7859,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\system\int\src\sys_int.c</file>
-         <hash>f188fc9be907b9be357e526fbba7eb3a14b5fa936d029c3e33d324298aa77548</hash>
+         <hash>5a683ab50cabf3aa131d76d12f4715e103de0e5cce67d22ab26d11665c38614f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\usb\usb_common.h</file>
@@ -7875,7 +7875,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\aic\plib_aic.c</file>
-         <hash>30e5b7f3a5259938cd4534624854beb942b8fccd9aa0f5d69175d8b663536abe</hash>
+         <hash>615c24e0be333cedf3cd02ce8db51f9272d6a1d8de7f33bd11d4f8a3864b84bc</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\sfr.h</file>
@@ -7883,7 +7883,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\timers.h</file>
-         <hash>2bf5b5f5d83684c1e6d90e5bd17da9de41d38ed61ec0410f94595ff343f89174</hash>
+         <hash>ee0f596a54137e26ca806ebf067c4c6219a61348f1cbae8861a43d2d4891e1f9</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\pioc.h</file>
@@ -7895,7 +7895,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\FreeRTOSConfig.h</file>
-         <hash>e3235aab533540c47f65e0003720f17eb84feacad54d9e6467242881c10d8670</hash>
+         <hash>f5e4c02f4cf6cc74859a47637c11c1da042e1ba9a1c5bdbcd56fbf4bbb425496</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\pmc.h</file>
@@ -7915,19 +7915,19 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\interrupts.c</file>
-         <hash>3a1e9a2c443c62c98c86477116ba16b9e66da3962fb3af23dd16e6d3ead83c4a</hash>
+         <hash>fe4cdb3717277d50350b8321d0e14fcbf7728381a8f5d5a669091d78a7690402</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\aic\plib_aic.h</file>
-         <hash>3744d8f5ae1843ce5b3b78bbae13a22a7f22b2f0584db476b657b40cb7850809</hash>
+         <hash>9ff729f3819887a6769c1a4386db9727e6e88fe6bee25960985d9ccd09229a7d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\interrupts.h</file>
-         <hash>91abdb8d191ae865fc6082f30783c3d6cca8aa8d5aca823a7fb2cc65e3a57d24</hash>
+         <hash>8678ee48ca221c0839069e43f836a20f30c4ca977af743a73a04edeeba5f8777</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\tc\plib_tc_common.h</file>
-         <hash>444f1845776c5bbdd53278a60d8f2101e23eb3605b8b3950811ef24f9fd05ec0</hash>
+         <hash>aa07077b6355fa1dc9e938cb4def1c725bffddf452ffc55e4f982f83d3988a9e</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\tc.h</file>
@@ -7935,7 +7935,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\portable\MemMang\heap_1.c</file>
-         <hash>d03a08079e678cc6e6a1e2105684ab0082d190bbb731f6807d75e1aca260e98f</hash>
+         <hash>286e3fee81c9107fc6dec40405f500cabdca56836d29747c182f0899bb8997fd</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\sdmmc.h</file>
@@ -7947,7 +7947,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\system\system_module.h</file>
-         <hash>981fac23277aa77f682e7a9a28d436f892006cd5b4c7f23f50941b6d9a30e740</hash>
+         <hash>96c74368801b0a7aaa25aec3ec2cb0d483250385f103ffc1ff64089b4ca2c6d9</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\tdes.h</file>
@@ -7955,7 +7955,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\stack_macros.h</file>
-         <hash>06b5b66a9b98ad4998c82d353c0108b9db1a846951b8865cbdeeef90c5bbe2fe</hash>
+         <hash>3cddf2b3d47ae387e376ac75eb468f9d8ffb575d68c143e08d54af4087474cce</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\driver\usb\uhp\src\drv_usb_uhp_ohci_registers.h</file>
@@ -7963,7 +7963,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\system\cache\sys_cache.h</file>
-         <hash>3407ecac4da455d4b8ba70043f10c20b10e1304e92402db824ca5efa6a2f8402</hash>
+         <hash>b4b3a4e7434759c9bbcd3c6a0ab97558eb2a007f083a4eb76dbedcb2e2c3d86b</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\flexcom10.h</file>
@@ -7971,11 +7971,11 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\portable\XC32\SAM\ARM926\portmacro.h</file>
-         <hash>ea05d57c2c727164da422dc46de5dcb0c6bf8f260510583b855009ecceef83d8</hash>
+         <hash>884127bac6f0fc6deefe603f00fae80561bbee702ff90aca48a0ee2cea26d542</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\system\cache\sys_cache.c</file>
-         <hash>96e3cf05b3e24641f89f3726e0f900a28002ae53ccebb23c8cf27563c59d3076</hash>
+         <hash>9754314ec0e099723a3604ecfe12fb6e682cf64cddf01c968ca931d26c448f0e</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\pit.h</file>
@@ -8003,7 +8003,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\queue.c</file>
-         <hash>4452e3b0e6446b74c7d010d308072ba0a35c1f92bcf3882a54bf3796a72517aa</hash>
+         <hash>5cdf4fa35fe059446effff5bf20deaf83ddffb08921bc198fda106b1d17dd894</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\flexcom1.h</file>
@@ -8015,7 +8015,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\portable\XC32\SAM\ARM926\port.c</file>
-         <hash>62f46758cdcae89798e9bbb89ecc2d90f143fce3496d1a2b34fbd2a66d9ca2e6</hash>
+         <hash>524377933fb3d399e21d706fbf29311197bd55bed5df0b201b2baa5dca7874a4</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\pmerrloc.h</file>
@@ -8030,12 +8030,16 @@
          <hash>b7de69d3802f1569f2d0863333f72f09189d3aac15721eb30e5667ba7140ba14</hash>
       </entry>
       <entry>
+         <file>..\src\config\sam_9x60_curiosity_freertos\sys_tasks.h</file>
+         <hash>8e1a48dc226e9af26c57fc69ba76d2de0279f4bbc96e071a57fd0911a782545d</hash>
+      </entry>
+      <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\sckc.h</file>
          <hash>cff51c6896a853491977ae87f3dfc616b51b771dd7ffa00ef2b1c4ba6953b1c5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\system\time\src\sys_time.c</file>
-         <hash>b722ac0c5d955d289bd906609ab6f302342166c5ba66f87b30cac17ac6bfdcd9</hash>
+         <hash>fa2d85ab967b80157caf8483f6e28a23b12b548844a1d80f2fef760cd9b99271</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\aic.h</file>
@@ -8059,11 +8063,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\system\time\sys_time_definitions.h</file>
-         <hash>904195d4340ba6b97cf19c25b9695d2a9f37ed67cf6abdf8ee1ee839506e2801</hash>
+         <hash>46537746b1d12ece6b682c9be1c8f3f219663c638c21a51a973762b7b393afe6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\tc\plib_tc0.c</file>
-         <hash>31be478f89108b048d6ad4c0dfb9a8d973a950f18def476cc985b832ce10ca3b</hash>
+         <hash>c9bf7dc22d3246852f35ef21424a686d58bc801ade85fd2cc3c9d54092f68b15</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\uhphs_ohci.h</file>
@@ -8075,7 +8079,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\toolchain_specifics.h</file>
-         <hash>943f2c097f75062855ef1434b1b63a84e68ac691a93097a46016a699601a3306</hash>
+         <hash>d93ab2a56ea91cac163fc49b5e3f3491fe3c8ada3bd2f72c752b286f280b40ef</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\rstc.h</file>
@@ -8111,11 +8115,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\pit\plib_pit.h</file>
-         <hash>c1e2125a63c08db040346f6ce8ac8f36bd7709f32685eb30363dba03276b7c82</hash>
+         <hash>0f84aaa0b7cb585d5f8952f68f9fa89f04c20bb66a403839aea2d37306ad4beb</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\fault_handlers.c</file>
-         <hash>34134ba54c0becfbe75cd670be15133f2a10dea081d9fa5fab75f17afc1109ba</hash>
+         <hash>931e951cf7431d3d70d6ab81bcd265ff0ac8b3f473b73cd7a541f59d49786b7c</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\pmc.h</file>
@@ -8127,7 +8131,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\system\debug\sys_debug.h</file>
-         <hash>222cdc284bd651e83188b9641cc57c133cf86563dbeb5d5523766d4a36087165</hash>
+         <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\trng.h</file>
@@ -8139,11 +8143,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\system\system_common.h</file>
-         <hash>0dbf2f60b29c97426e70187bc59c652ab5a355f51cfbe3f195ff1c8c6c0b1602</hash>
+         <hash>c9f34bd226f8efab12f5766e77f8355996cd0430b50e0f6ee30258664c494984</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\croutine.c</file>
-         <hash>4566d5abfceea128a553ecf2bbb22b9d7c9c8a1d3c1f02f9091182b5290d02fc</hash>
+         <hash>ebf0cdce261dc4a256c06c0d4ad2582e6026a6da0e973d4cb92092e94ce8f370</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\sfr.h</file>
@@ -8167,7 +8171,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\portable.h</file>
-         <hash>c95eb0d549ff1c20edebfec41d73584b5a20d21df20a724084200954b9e8d252</hash>
+         <hash>7ade8f368002778c723b3c4e14084910b7225cd36363ed0c948e9ea36c6f251f</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\uhphs_ehci.h</file>
@@ -8183,11 +8187,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\pit\plib_pit.c</file>
-         <hash>9481af15946465a3ae3ddee1def73ca13e58d7e2d308d990c34a7777b1af9b4b</hash>
+         <hash>664bd3b7feaa1b6405ed5de0f342f144197d3ccd4414071d2ef577b4392ddd91</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\list.c</file>
-         <hash>21fe8dd565f9610e1ff4a6bf7bebbd16842af13d3d2294f1dc67ad279fb01d22</hash>
+         <hash>db5c169cf3efd68da1c6a923ac84eebc724d602c940bde0b9b5f01f05028fde4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\usb\usb_cdc.h</file>
@@ -8235,7 +8239,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\queue.h</file>
-         <hash>ff7a2139380ad0e2695bbc0d068db7a3b7e54ec41387b4c77acbe1aaa2921b7c</hash>
+         <hash>1b61c1669091e59798a34c32c0f1e234d3f6a645f47641753eceeb7e1d9ce628</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\stdio\xc32_monitor.c</file>
@@ -8243,7 +8247,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\tasks.c</file>
-         <hash>43964f5cae69db2af725c4363a9b94253b98694b28ffa95007672f91d6573727</hash>
+         <hash>ea0d1c23564bd7ebb54bea963758ef4e0639337cdaf60269325d2dea7de4a394</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\flexcom7.h</file>
@@ -8295,7 +8299,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\semphr.h</file>
-         <hash>6bc571df5182f06bcafe5280fdf762bbba2bf1dbb7867ae3721ce2d7e3e51dae</hash>
+         <hash>c624e8cdfc07844d4cf35382f3cc908c872375c7a3048482bdc110bda88cc4f2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\usb\src\usb_host_local.h</file>
@@ -8303,7 +8307,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\FreeRTOS_tasks.c</file>
-         <hash>f97f4e54a7511e5aea34f583061c628bf718b1024af6ec4cff55cb50365305da</hash>
+         <hash>14020d617b96dd2814e1211f6e3b645bcf5e2bd3179c23fe7dd16bc666fe9463</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\matrix.h</file>
@@ -8311,7 +8315,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\event_groups.c</file>
-         <hash>82542c835466f2abd0eeb2988a0bcecf3d6a14c9dd87ad4a7ca325b15afbce95</hash>
+         <hash>76e967b14d231e4f31f014f1564f359a7bfd36bfa263ee6f437afa8c056df657</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\pit.h</file>
@@ -8319,7 +8323,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\configuration.h</file>
-         <hash>1ee37a2c3e5c9a0ad3bc2f1fed15724b64c78150ba0d230e1bbfe06cb37cfc25</hash>
+         <hash>b4e4bd702e473bd87eaae550aa6f90568d7645153ed3e6a9bacea25b16a87933</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\pmerrloc.h</file>
@@ -8363,11 +8367,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\system\int\sys_int.h</file>
-         <hash>71e36331ee689ae305b3d8ec49948e3dde0324b65f51bf38f4472b900a421ed6</hash>
+         <hash>dc104ae181fd5309e1bb42896246644fae95915a8e639b23ecfccc8840850274</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\osal\osal_definitions.h</file>
-         <hash>6dc49e317b4557c5516a172c1437125874abd98ffcc7260e3422966078dcef7f</hash>
+         <hash>af2f2336fac0fd5b49fb2d1c8f81baa4f554101b06f130aaa608cd9685c4ac35</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\usb\usb_ehci.h</file>
@@ -8375,7 +8379,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\osal\osal_freertos.c</file>
-         <hash>6f35cfd335587dd112d0ac648ae99539a5acbb98ba80ce6e8c7c855e7b8d7465</hash>
+         <hash>8092bb557d244984ab601e36d3dc25408c8b57f3c8f090aac491891b4a32cb28</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\mpddrc.h</file>
@@ -8383,15 +8387,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\pio\plib_pio.c</file>
-         <hash>4525941e2df6ea982c9fc835e7c892602fc654152d739bad11cfcc38f281a9ce</hash>
+         <hash>c0b110dc17e3f835b0b0b3bd2fd466ef912e61d38215684e99311f1f72dc929c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\freertos_hooks.c</file>
-         <hash>1c31f7febed38afbcb09d11b002c5dddda98c7ed7aba9ff8f8e32b8c5f288a47</hash>
+         <hash>ee4a4dfc44aa3d45b99065a3d972818fcbd019d39450a67f168aa7f047f55149</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\projdefs.h</file>
-         <hash>292c78c91dbf63a6aa028f381b1dd548d549949f4fb9fcfd97f949569e013d76</hash>
+         <hash>8faf4220ded25b00fd72424a2fa4e63e154713ae7b42f7270f1e3289362a6312</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\usb\src\usb_host_hub_mapping.h</file>
@@ -8403,7 +8407,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\osal\osal_freertos.h</file>
-         <hash>ca5e502b9f076c4bdc8d97ac2e4cfdfa5d1b49f7d64222c353fac4dcd794bc7c</hash>
+         <hash>7ad9faa903d8587bab9490660328f134b8e027f9c24bca47201f3f96f3b99474</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\device_cache.h</file>
@@ -8411,7 +8415,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\message_buffer.h</file>
-         <hash>0f5a90e8303d9aa2a9c897d6b90da50df21776c6bde7bf8c792cacffa3048c8d</hash>
+         <hash>9a8141d3d6c8044a57d7e448180c9bd2ed32e45ded32be288d095a39dced91ab</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\lcdc.h</file>
@@ -8423,7 +8427,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\event_groups.h</file>
-         <hash>a73c0b319370116d5981d5dacbabad3a775f85ae540ef70b4ced1c99c9ac6cd5</hash>
+         <hash>7b3dd12a50d649c124c1af8be742671b9965b6f924310bda7984fe1b65c7f54a</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\lcdc.h</file>
@@ -8431,7 +8435,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\mpu_wrappers.h</file>
-         <hash>0f7a750669b24c41af51482eb76c867a1ed11c14dd4877d07433db3953d9a792</hash>
+         <hash>5014408cc33f0f616215f2b48c67b0d47ccc35bfd5f0044ac653b5bbc6cf5778</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\mpddrc.h</file>
@@ -8463,7 +8467,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\mmu\cp15.h</file>
-         <hash>24907eff18f34ad82252c89fde571ebd0f51da7ca4b9f72c8810e9c3d6485edb</hash>
+         <hash>d927deee45b9b50351c5513daf446ae3278f5fa85915c06c434b24c7eb61b64b</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\matrix.h</file>
@@ -8471,7 +8475,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\stream_buffer.c</file>
-         <hash>a62731cd211dd9caf70958b229d4a3a607ef12e6fbfec573a0d089f21c45f34f</hash>
+         <hash>0ec303ba296caca5de955dc470bcadd134fb15b192ddf61c9afc92070bc1039a</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\pwm.h</file>
@@ -8479,7 +8483,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\bsp\bsp.h</file>
-         <hash>589a458bd7b5a05cb9d472d2eb1f92f204edf8b39d812b65a0b9f110380e4090</hash>
+         <hash>a061560000c12a481fab4ee52cb14558cc7cd99611441c1b3e52dd9debcb6b4c</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>

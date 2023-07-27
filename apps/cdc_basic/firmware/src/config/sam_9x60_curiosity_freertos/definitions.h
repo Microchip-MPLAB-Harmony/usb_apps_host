@@ -60,14 +60,14 @@
 #include "usb/usb_host_cdc.h"
 #include "usb/usb_cdc.h"
 #include "peripheral/tc/plib_tc0.h"
-#include "bsp/bsp.h"
 #include "FreeRTOS.h"
 #include "task.h"
-#include "system/time/sys_time.h"
+#include "bsp/bsp.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
+#include "system/time/sys_time.h"
 #include "app.h"
 
 
@@ -79,6 +79,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "SAM9X60D1G"
+#define DEVICE_ARCH			 "ARM926EJ-S"
+#define DEVICE_FAMILY		 "SAM9"
+#define DEVICE_SERIES		 "SAM9X"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 600000000
