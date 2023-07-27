@@ -102,38 +102,6 @@ extern "C" {
 // Section: Middleware & Other Library Configuration
 // *****************************************************************************
 // *****************************************************************************
-/*** USB Driver Configuration ***/
-
-/* Maximum USB driver instances */
-#define DRV_USBHS_INSTANCES_NUMBER                        1
-
-/* Interrupt mode enabled */
-#define DRV_USBHS_INTERRUPT_MODE                          true
-
-
-/* Disable Device Support */
-#define DRV_USBHS_DEVICE_SUPPORT                          false
-	
-/* Enable Host Support */
-#define DRV_USBHS_HOST_SUPPORT                            true
-
-/* Number of NAKs to wait before returning transfer failure */ 
-#define DRV_USBHS_HOST_NAK_LIMIT                          2000 
-
-/* Maximum Number of pipes */
-#define DRV_USBHS_HOST_PIPES_NUMBER                       10 
-
-/* Attach Debounce duration in milli Seconds */ 
-#define DRV_USBHS_HOST_ATTACH_DEBOUNCE_DURATION           500
-
-/* Reset duration in milli Seconds */ 
-#define DRV_USBHS_HOST_RESET_DURATION                     100
-
-
-
-/* Alignment for buffers that are submitted to USB Driver*/ 
-#define USB_ALIGN  CACHE_ALIGN  __ALIGNED(16)
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: USB Host Layer Configuration
@@ -158,6 +126,40 @@ extern "C" {
 
 /* Provides Host pipes number */
 #define USB_HOST_PIPES_NUMBER                               10
+
+
+/*** USB Driver Configuration ***/
+
+/* Maximum USB driver instances */
+#define DRV_USBHS_INSTANCES_NUMBER                        1
+
+/* Interrupt mode enabled */
+#define DRV_USBHS_INTERRUPT_MODE                          true
+
+
+/* Disable Device Support */
+#define DRV_USBHS_DEVICE_SUPPORT                          false
+
+/* Enable Host Support */
+#define DRV_USBHS_HOST_SUPPORT                            true
+
+/* Number of NAKs to wait before returning transfer failure */ 
+#define DRV_USBHS_HOST_NAK_LIMIT                          2000 
+
+/* Maximum Number of pipes */
+#define DRV_USBHS_HOST_PIPES_NUMBER                       10 
+
+/* Attach Debounce duration in milli Seconds */ 
+#define DRV_USBHS_HOST_ATTACH_DEBOUNCE_DURATION           500
+
+/* Reset duration in milli Seconds */ 
+#define DRV_USBHS_HOST_RESET_DURATION                     100
+
+
+
+
+/* Alignment for buffers that are submitted to USB Driver*/ 
+#define USB_ALIGN  CACHE_ALIGN  __ALIGNED(16)
 
 
 /* Number of CDC Function driver instances in the application */

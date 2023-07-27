@@ -48,10 +48,10 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "peripheral/coretimer/plib_coretimer.h"
-#include "driver/usb/usbhs/drv_usbhs.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_host.h"
+#include "driver/usb/usbhs/drv_usbhs.h"
+#include "peripheral/coretimer/plib_coretimer.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/evic/plib_evic.h"
@@ -73,6 +73,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "PIC32MZ2048EFM144"
+#define DEVICE_ARCH			 "MIPS"
+#define DEVICE_FAMILY		 "PIC32MZEF"
+#define DEVICE_SERIES		 "PIC32MZ"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 198000000
@@ -187,9 +193,9 @@ Remarks:
 
 typedef struct
 {
-	SYS_MODULE_OBJ  drvUSBHSObject;
+    SYS_MODULE_OBJ  usbHostObject0;
 
-	SYS_MODULE_OBJ  usbHostObject0;
+	SYS_MODULE_OBJ  drvUSBHSObject;
 
     SYS_MODULE_OBJ  sysTime;
 
