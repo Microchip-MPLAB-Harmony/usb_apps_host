@@ -40,6 +40,7 @@
 
 #include "device.h"
 #include "plib_dbgu.h"
+#include "interrupts.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -56,7 +57,7 @@ void static DBGU_ErrorClear(void)
     /* Flush existing error bytes from the RX FIFO */
     while (DBGU_SR_RXRDY_Msk == (DBGU_REGS->DBGU_SR & DBGU_SR_RXRDY_Msk))
     {
-        dummyData = (DBGU_REGS->DBGU_RHR & DBGU_RHR_RXCHR_Msk);
+        dummyData = (uint8_t)(DBGU_REGS->DBGU_RHR & DBGU_RHR_RXCHR_Msk);
     }
 
     /* Ignore the warning */
@@ -74,10 +75,10 @@ void DBGU_Initialize(void)
     DBGU_REGS->DBGU_CR = (DBGU_CR_TXEN_Msk | DBGU_CR_RXEN_Msk);
 
     /* Configure DBGU mode */
-    DBGU_REGS->DBGU_MR = (DBGU_MR_BRSRCCK(0) | (DBGU_MR_PAR_NO) | (0 << DBGU_MR_FILTER_Pos));
+    DBGU_REGS->DBGU_MR = (DBGU_MR_BRSRCCK(0U) | (DBGU_MR_PAR_NO) | (0U << DBGU_MR_FILTER_Pos));
 
     /* Configure DBGU Baud Rate */
-    DBGU_REGS->DBGU_BRGR = DBGU_BRGR_CD(108);
+    DBGU_REGS->DBGU_BRGR = DBGU_BRGR_CD(108U);
 
     return;
 }
@@ -101,27 +102,29 @@ DBGU_ERROR DBGU_ErrorGet(void)
 bool DBGU_SerialSetup(DBGU_SERIAL_SETUP *setup, uint32_t srcClkFreq)
 {
     bool status = false;
-    uint32_t baud = setup->baudRate;
+    uint32_t baud;
     uint32_t brgVal = 0;
     uint32_t dbguMode;
 
     if (setup != NULL)
     {
-        if (srcClkFreq == 0)
+        baud = setup->baudRate;
+
+        if (srcClkFreq == 0U)
         {
             srcClkFreq = DBGU_FrequencyGet();
         }
 
         /* Calculate BRG value */
-        brgVal = srcClkFreq / (16 * baud);
+        brgVal = srcClkFreq / (16U * baud);
 
         /* If the target baud rate is acheivable using this clock */
-        if (brgVal <= 65535)
+        if (brgVal <= 65535U)
         {
             /* Configure DBGU mode */
             dbguMode = DBGU_REGS->DBGU_MR;
             dbguMode &= ~DBGU_MR_PAR_Msk;
-            DBGU_REGS->DBGU_MR = dbguMode | setup->parity ;
+            DBGU_REGS->DBGU_MR = dbguMode | (uint32_t)setup->parity ;
 
             /* Configure DBGU Baud Rate */
             DBGU_REGS->DBGU_BRGR = DBGU_BRGR_CD(brgVal);
@@ -138,28 +141,35 @@ bool DBGU_Read(void *buffer, const size_t size)
     bool status = false;
     uint32_t errorStatus = 0;
     size_t processedSize = 0;
+    DBGU_ERROR errors = DBGU_ERROR_NONE;
 
     uint8_t * lBuffer = (uint8_t *)buffer;
 
     if (NULL != lBuffer)
     {
-        /* Clear errors before submitting the request.
-         * ErrorGet clears errors internally. */
-        DBGU_ErrorGet();
+        /* Clear errors before submitting the request */
+
+        errors = (DBGU_ERROR)(DBGU_REGS->DBGU_SR & (DBGU_SR_OVRE_Msk | DBGU_SR_PARE_Msk | DBGU_SR_FRAME_Msk));
+
+        if (errors != DBGU_ERROR_NONE)
+        {
+            DBGU_ErrorClear();
+        }
 
         while (size > processedSize)
         {
             /* Error status */
             errorStatus = (DBGU_REGS->DBGU_SR & (DBGU_SR_OVRE_Msk | DBGU_SR_FRAME_Msk | DBGU_SR_PARE_Msk));
 
-            if (errorStatus != 0)
+            if (errorStatus != 0U)
             {
                 break;
             }
 
             if (DBGU_SR_RXRDY_Msk == (DBGU_REGS->DBGU_SR & DBGU_SR_RXRDY_Msk))
             {
-                *lBuffer++ = (DBGU_REGS->DBGU_RHR & DBGU_RHR_RXCHR_Msk);
+                *lBuffer = (uint8_t)(DBGU_REGS->DBGU_RHR & DBGU_RHR_RXCHR_Msk);
+                lBuffer++;
                 processedSize++;
             }
         }
@@ -183,9 +193,10 @@ bool DBGU_Write(void *buffer, const size_t size)
     {
         while (size > processedSize)
         {
-            if (DBGU_SR_TXEMPTY_Msk == (DBGU_REGS->DBGU_SR & DBGU_SR_TXEMPTY_Msk))
+            if (DBGU_SR_TXRDY_Msk == (DBGU_REGS->DBGU_SR & DBGU_SR_TXRDY_Msk))
             {
-                DBGU_REGS->DBGU_THR = (DBGU_THR_TXCHR(*lBuffer++) & DBGU_THR_TXCHR_Msk);
+                DBGU_REGS->DBGU_THR = (DBGU_THR_TXCHR((uint32_t)(*lBuffer)) & DBGU_THR_TXCHR_Msk);
+                lBuffer++;
                 processedSize++;
             }
         }
@@ -198,18 +209,21 @@ bool DBGU_Write(void *buffer, const size_t size)
 
 uint8_t DBGU_ReadByte(void)
 {
-    return (DBGU_REGS->DBGU_RHR & DBGU_RHR_RXCHR_Msk);
+    return (uint8_t)(DBGU_REGS->DBGU_RHR & DBGU_RHR_RXCHR_Msk);
 }
 
 void DBGU_WriteByte(uint8_t data)
 {
-    while ((DBGU_REGS->DBGU_SR & DBGU_SR_TXEMPTY_Msk) != DBGU_SR_TXEMPTY_Msk);
-    DBGU_REGS->DBGU_THR = (DBGU_THR_TXCHR(data) & DBGU_THR_TXCHR_Msk);
+    while ((DBGU_REGS->DBGU_SR & DBGU_SR_TXRDY_Msk) != DBGU_SR_TXRDY_Msk)
+    {
+        /* Wait to be ready */
+    }
+    DBGU_REGS->DBGU_THR = (DBGU_THR_TXCHR((uint32_t)data) & DBGU_THR_TXCHR_Msk);
 }
 
 bool DBGU_TransmitterIsReady(void)
 {
-    return ((DBGU_REGS->DBGU_SR & DBGU_SR_TXEMPTY_Msk) == DBGU_SR_TXEMPTY_Msk);
+    return ((DBGU_REGS->DBGU_SR & DBGU_SR_TXRDY_Msk) == DBGU_SR_TXRDY_Msk);
 }
 
 bool DBGU_ReceiverIsReady(void)
@@ -217,3 +231,8 @@ bool DBGU_ReceiverIsReady(void)
     return ((DBGU_REGS->DBGU_SR & DBGU_SR_RXRDY_Msk) == DBGU_SR_RXRDY_Msk);
 }
 
+
+bool DBGU_TransmitComplete(void)
+{
+    return ((DBGU_REGS->DBGU_SR & DBGU_SR_TXEMPTY_Msk) == DBGU_SR_TXEMPTY_Msk);
+}

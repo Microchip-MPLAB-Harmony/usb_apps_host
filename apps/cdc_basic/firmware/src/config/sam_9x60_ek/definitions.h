@@ -49,10 +49,10 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include "driver/usb/uhp/drv_usb_ehci.h"
-#include "driver/usb/uhp/drv_usb_ohci.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_host.h"
+#include "driver/usb/uhp/drv_usb_ehci.h"
+#include "driver/usb/uhp/drv_usb_ohci.h"
 #include "bsp/bsp.h"
 #include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/clk/plib_clk.h"
@@ -60,8 +60,8 @@
 #include "peripheral/aic/plib_aic.h"
 #include "usb/usb_host_cdc.h"
 #include "usb/usb_cdc.h"
-#include "peripheral/dbgu/plib_dbgu.h"
 #include "peripheral/tc/plib_tc0.h"
+#include "peripheral/dbgu/plib_dbgu.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
@@ -78,6 +78,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "SAM9X60"
+#define DEVICE_ARCH			 "ARM926EJ-S"
+#define DEVICE_FAMILY		 "SAM9"
+#define DEVICE_SERIES		 "SAM9X"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 600000000
@@ -192,10 +198,10 @@ Remarks:
 
 typedef struct
 {
+    SYS_MODULE_OBJ  usbHostObject0;
+
     SYS_MODULE_OBJ  drvUSBEHCIObject;
     SYS_MODULE_OBJ  drvUSBOHCIObject;
-
-	SYS_MODULE_OBJ  usbHostObject0;
 
     SYS_MODULE_OBJ  sysTime;
 
