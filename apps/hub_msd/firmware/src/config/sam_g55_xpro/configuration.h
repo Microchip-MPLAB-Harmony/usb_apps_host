@@ -82,24 +82,25 @@ extern "C" {
 
 /* File System Service Configuration */
 
-#define SYS_FS_MEDIA_NUMBER               2
-#define SYS_FS_VOLUME_NUMBER              2
+#define SYS_FS_MEDIA_NUMBER               (2U)
+#define SYS_FS_VOLUME_NUMBER              (2U)
 
 #define SYS_FS_AUTOMOUNT_ENABLE           true
-#define SYS_FS_CLIENT_NUMBER              2
-#define SYS_FS_MAX_FILES                  2
-#define SYS_FS_MAX_FILE_SYSTEM_TYPE       1
-#define SYS_FS_MEDIA_MAX_BLOCK_SIZE       512
-#define SYS_FS_MEDIA_MANAGER_BUFFER_SIZE  2048
-#define SYS_FS_USE_LFN                    1
-#define SYS_FS_FILE_NAME_LEN              255
-#define SYS_FS_CWD_STRING_LEN             1024
+#define SYS_FS_CLIENT_NUMBER              2U
+#define SYS_FS_MAX_FILES                  (2U)
+#define SYS_FS_MAX_FILE_SYSTEM_TYPE       (1U)
+#define SYS_FS_MEDIA_MAX_BLOCK_SIZE       (512U)
+#define SYS_FS_MEDIA_MANAGER_BUFFER_SIZE  (2048U)
+#define SYS_FS_USE_LFN                    (1)
+#define SYS_FS_FILE_NAME_LEN              (255U)
+#define SYS_FS_CWD_STRING_LEN             (1024)
 
 
-#define SYS_FS_FAT_VERSION                "v0.14a"
+#define SYS_FS_FAT_VERSION                "v0.15"
 #define SYS_FS_FAT_READONLY               false
 #define SYS_FS_FAT_CODE_PAGE              437
 #define SYS_FS_FAT_MAX_SS                 SYS_FS_MEDIA_MAX_BLOCK_SIZE
+
 
 
 
@@ -123,8 +124,8 @@ extern "C" {
 #define SYS_TIME_HW_COUNTER_WIDTH                   (16)
 #define SYS_TIME_HW_COUNTER_PERIOD                  (65535U)
 #define SYS_TIME_HW_COUNTER_HALF_PERIOD             (SYS_TIME_HW_COUNTER_PERIOD>>1)
-#define SYS_TIME_CPU_CLOCK_FREQUENCY                (119996416)
-#define SYS_TIME_COMPARE_UPDATE_EXECUTION_CYCLES    (188)
+#define SYS_TIME_CPU_CLOCK_FREQUENCY                (100007936)
+#define SYS_TIME_COMPARE_UPDATE_EXECUTION_CYCLES    (232)
 
 
 
@@ -140,34 +141,6 @@ extern "C" {
 // Section: Middleware & Other Library Configuration
 // *****************************************************************************
 // *****************************************************************************
-
-/* EHCI Driver is not used */  
-#define DRV_USB_EHCI_INSTANCES_NUMBER                     0
-	
-
-
-/*** USB OHCI Driver Configurations ***/
-
-#define DRV_USB_OHCI_INSTANCES_NUMBER                        1
-
-/* Attach Debounce duration in milli Seconds */ 
-#define DRV_USB_OHCI_ATTACH_DEBOUNCE_DURATION           500
-
-/* Reset duration in milli Seconds */ 
-#define DRV_USB_OHCI_RESET_DURATION                     100
-
-/* Maximum Control Transfer Size */
-#define DRV_USB_OHCI_CONTROL_TRANSFER_BUFFER_SIZE 512
-
-/* Maximum Non Control Transfer Size */ 
-#define DRV_USB_OHCI_TRANSFER_BUFFER_SIZE  512
-
-
-/* Alignment for buffers that are submitted to USB Driver*/ 
-#ifndef USB_ALIGN
-#define USB_ALIGN __ALIGNED(32)
-#endif 
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: USB Host Layer Configuration
@@ -196,7 +169,35 @@ extern "C" {
 /* Number of HUB Function driver instances in the application */
 #define USB_HOST_HUB_SUPPORT                  true
 #define USB_HOST_HUB_INSTANCES_NUMBER         1
-#define USB_HOST_HUB_PORTS_NUMBER			  4
+#define USB_HOST_HUB_PORTS_NUMBER             4
+
+
+/* EHCI Driver is not used */  
+#define DRV_USB_EHCI_INSTANCES_NUMBER                     0
+	
+
+
+/*** USB OHCI Driver Configurations ***/
+
+#define DRV_USB_OHCI_INSTANCES_NUMBER                        1
+
+/* Attach Debounce duration in milli Seconds */ 
+#define DRV_USB_OHCI_ATTACH_DEBOUNCE_DURATION           500
+
+/* Reset duration in milli Seconds */ 
+#define DRV_USB_OHCI_RESET_DURATION                     100
+
+/* Maximum Control Transfer Size */
+#define DRV_USB_OHCI_CONTROL_TRANSFER_BUFFER_SIZE 512
+
+/* Maximum Non Control Transfer Size */ 
+#define DRV_USB_OHCI_TRANSFER_BUFFER_SIZE  512
+
+
+/* Alignment for buffers that are submitted to USB Driver*/ 
+#ifndef USB_ALIGN
+#define USB_ALIGN __ALIGNED(32)
+#endif 
 
 /* Number of MSD Function driver instances in the application */
 #define USB_HOST_MSD_INSTANCES_NUMBER         2
