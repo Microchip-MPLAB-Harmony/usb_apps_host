@@ -142,7 +142,7 @@ extern "C" {
 
 /* Disable Device Support */
 #define DRV_USBFSV1_DEVICE_SUPPORT                          false
-	
+
 /* Enable Host Support */
 #define DRV_USBFSV1_HOST_SUPPORT                            true
 
