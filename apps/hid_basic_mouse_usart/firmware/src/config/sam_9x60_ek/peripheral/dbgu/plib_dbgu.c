@@ -40,6 +40,7 @@
 
 #include "device.h"
 #include "plib_dbgu.h"
+#include "interrupts.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -47,19 +48,25 @@
 // *****************************************************************************
 // *****************************************************************************
 
-DBGU_OBJECT dbguObj;
+volatile static DBGU_OBJECT dbguObj;
 
-void static DBGU_ISR_RX_Handler(void)
+void static __attribute__((used)) DBGU_ISR_RX_Handler(void)
 {
     if (dbguObj.rxBusyStatus == true)
     {
-        while ((DBGU_SR_RXRDY_Msk == (DBGU_REGS->DBGU_SR & DBGU_SR_RXRDY_Msk)) && (dbguObj.rxSize > dbguObj.rxProcessedSize) )
+        size_t rxProcessedSize = dbguObj.rxProcessedSize;
+        size_t rxSize = dbguObj.rxSize;
+
+        while ((DBGU_SR_RXRDY_Msk == (DBGU_REGS->DBGU_SR & DBGU_SR_RXRDY_Msk)) && (rxSize > rxProcessedSize) )
         {
-            dbguObj.rxBuffer[dbguObj.rxProcessedSize++] = (DBGU_REGS->DBGU_RHR & DBGU_RHR_RXCHR_Msk);
+            dbguObj.rxBuffer[rxProcessedSize] = (uint8_t)(DBGU_REGS->DBGU_RHR & DBGU_RHR_RXCHR_Msk);
+            rxProcessedSize++;
         }
 
+        dbguObj.rxProcessedSize = rxProcessedSize;
+
         /* Check if the buffer is done */
-        if (dbguObj.rxProcessedSize >= dbguObj.rxSize)
+        if (dbguObj.rxProcessedSize >= rxSize)
         {
             dbguObj.rxBusyStatus = false;
 
@@ -68,7 +75,9 @@ void static DBGU_ISR_RX_Handler(void)
 
             if (dbguObj.rxCallback != NULL)
             {
-                dbguObj.rxCallback(dbguObj.rxContext);
+                uintptr_t rxContext = dbguObj.rxContext;
+
+                dbguObj.rxCallback(rxContext);
             }
         }
     }
@@ -81,24 +90,32 @@ void static DBGU_ISR_RX_Handler(void)
     return;
 }
 
-void static DBGU_ISR_TX_Handler(void)
+void static __attribute__((used)) DBGU_ISR_TX_Handler(void)
 {
     if (dbguObj.txBusyStatus == true)
     {
-        while ((DBGU_SR_TXEMPTY_Msk == (DBGU_REGS->DBGU_SR & DBGU_SR_TXEMPTY_Msk)) && (dbguObj.txSize > dbguObj.txProcessedSize) )
+        size_t txProcessedSize = dbguObj.txProcessedSize;
+        size_t txSize = dbguObj.txSize;
+
+        while ((DBGU_SR_TXRDY_Msk == (DBGU_REGS->DBGU_SR & DBGU_SR_TXRDY_Msk)) && (txSize > txProcessedSize) )
         {
-            DBGU_REGS->DBGU_THR = dbguObj.txBuffer[dbguObj.txProcessedSize++];
+            DBGU_REGS->DBGU_THR = dbguObj.txBuffer[txProcessedSize];
+            txProcessedSize++;
         }
 
+        dbguObj.txProcessedSize = txProcessedSize;
+
         /* Check if the buffer is done */
-        if (dbguObj.txProcessedSize >= dbguObj.txSize)
+        if (dbguObj.txProcessedSize >= txSize)
         {
             dbguObj.txBusyStatus = false;
-            DBGU_REGS->DBGU_IDR = DBGU_IDR_TXEMPTY_Msk;
+            DBGU_REGS->DBGU_IDR = DBGU_IDR_TXRDY_Msk;
 
             if (dbguObj.txCallback != NULL)
             {
-                dbguObj.txCallback(dbguObj.txContext);
+                uintptr_t txContext = dbguObj.txContext;
+
+                dbguObj.txCallback(txContext);
             }
         }
     }
@@ -111,12 +128,12 @@ void static DBGU_ISR_TX_Handler(void)
     return;
 }
 
-void DBGU_InterruptHandler(void)
+void __attribute__((used)) DBGU_InterruptHandler(void)
 {
     /* Error status */
     uint32_t errorStatus = (DBGU_REGS->DBGU_SR & (DBGU_SR_OVRE_Msk | DBGU_SR_FRAME_Msk | DBGU_SR_PARE_Msk));
 
-    if (errorStatus != 0)
+    if (errorStatus != 0U)
     {
         /* Client must call DBGUx_ErrorGet() function to clear the errors */
 
@@ -129,7 +146,8 @@ void DBGU_InterruptHandler(void)
          * receiver callback */
         if (dbguObj.rxCallback != NULL)
         {
-            dbguObj.rxCallback(dbguObj.rxContext);
+            uintptr_t rxContext = dbguObj.rxContext;
+            dbguObj.rxCallback(rxContext);
         }
     }
 
@@ -140,7 +158,7 @@ void DBGU_InterruptHandler(void)
     }
 
     /* Transmitter status */
-    if (DBGU_SR_TXEMPTY_Msk == (DBGU_REGS->DBGU_SR & DBGU_SR_TXEMPTY_Msk))
+    if (DBGU_SR_TXRDY_Msk == (DBGU_REGS->DBGU_SR & DBGU_SR_TXRDY_Msk))
     {
         DBGU_ISR_TX_Handler();
     }
@@ -158,7 +176,7 @@ void static DBGU_ErrorClear(void)
     /* Flush existing error bytes from the RX FIFO */
     while (DBGU_SR_RXRDY_Msk == (DBGU_REGS->DBGU_SR & DBGU_SR_RXRDY_Msk))
     {
-        dummyData = (DBGU_REGS->DBGU_RHR & DBGU_RHR_RXCHR_Msk);
+        dummyData = (uint8_t)(DBGU_REGS->DBGU_RHR & DBGU_RHR_RXCHR_Msk);
     }
 
     /* Ignore the warning */
@@ -176,10 +194,10 @@ void DBGU_Initialize(void)
     DBGU_REGS->DBGU_CR = (DBGU_CR_TXEN_Msk | DBGU_CR_RXEN_Msk);
 
     /* Configure DBGU mode */
-    DBGU_REGS->DBGU_MR = (DBGU_MR_BRSRCCK(0) | (DBGU_MR_PAR_NO) | (0 << DBGU_MR_FILTER_Pos));
+    DBGU_REGS->DBGU_MR = (DBGU_MR_BRSRCCK(0U) | (DBGU_MR_PAR_NO) | (0U << DBGU_MR_FILTER_Pos));
 
     /* Configure DBGU Baud Rate */
-    DBGU_REGS->DBGU_BRGR = DBGU_BRGR_CD(108);
+    DBGU_REGS->DBGU_BRGR = DBGU_BRGR_CD(108U);
 
     /* Initialize instance object */
     dbguObj.rxBuffer = NULL;
@@ -215,32 +233,39 @@ DBGU_ERROR DBGU_ErrorGet(void)
 bool DBGU_SerialSetup(DBGU_SERIAL_SETUP *setup, uint32_t srcClkFreq)
 {
     bool status = false;
-    uint32_t baud = setup->baudRate;
+    uint32_t baud;
     uint32_t brgVal = 0;
     uint32_t dbguMode;
 
-    if ((dbguObj.rxBusyStatus == true) || (dbguObj.txBusyStatus == true))
+    if (dbguObj.rxBusyStatus == true)
+    {
+        /* Transaction is in progress, so return without updating settings */
+        return false;
+    }
+    if (dbguObj.txBusyStatus == true)
     {
         /* Transaction is in progress, so return without updating settings */
         return false;
     }
     if (setup != NULL)
     {
-        if (srcClkFreq == 0)
+        baud = setup->baudRate;
+
+        if (srcClkFreq == 0U)
         {
             srcClkFreq = DBGU_FrequencyGet();
         }
 
         /* Calculate BRG value */
-        brgVal = srcClkFreq / (16 * baud);
+        brgVal = srcClkFreq / (16U * baud);
 
         /* If the target baud rate is acheivable using this clock */
-        if (brgVal <= 65535)
+        if (brgVal <= 65535U)
         {
             /* Configure DBGU mode */
             dbguMode = DBGU_REGS->DBGU_MR;
             dbguMode &= ~DBGU_MR_PAR_Msk;
-            DBGU_REGS->DBGU_MR = dbguMode | setup->parity ;
+            DBGU_REGS->DBGU_MR = dbguMode | (uint32_t)setup->parity ;
 
             /* Configure DBGU Baud Rate */
             DBGU_REGS->DBGU_BRGR = DBGU_BRGR_CD(brgVal);
@@ -255,14 +280,20 @@ bool DBGU_SerialSetup(DBGU_SERIAL_SETUP *setup, uint32_t srcClkFreq)
 bool DBGU_Read(void *buffer, const size_t size)
 {
     bool status = false;
+    DBGU_ERROR errors = DBGU_ERROR_NONE;
 
     uint8_t * lBuffer = (uint8_t *)buffer;
 
     if (NULL != lBuffer)
     {
-        /* Clear errors before submitting the request.
-         * ErrorGet clears errors internally. */
-        DBGU_ErrorGet();
+        /* Clear errors before submitting the request */
+
+        errors = (DBGU_ERROR)(DBGU_REGS->DBGU_SR & (DBGU_SR_OVRE_Msk | DBGU_SR_PARE_Msk | DBGU_SR_FRAME_Msk));
+
+        if (errors != DBGU_ERROR_NONE)
+        {
+            DBGU_ErrorClear();
+        }
 
         /* Check if receive request is in progress */
         if (dbguObj.rxBusyStatus == false)
@@ -298,13 +329,13 @@ bool DBGU_Write(void *buffer, const size_t size)
             status = true;
 
             /* Initiate the transfer by sending first byte */
-            if (DBGU_SR_TXEMPTY_Msk == (DBGU_REGS->DBGU_SR & DBGU_SR_TXEMPTY_Msk))
+            if (DBGU_SR_TXRDY_Msk == (DBGU_REGS->DBGU_SR & DBGU_SR_TXRDY_Msk))
             {
-                DBGU_REGS->DBGU_THR = (DBGU_THR_TXCHR(*lBuffer) & DBGU_THR_TXCHR_Msk);
+                DBGU_REGS->DBGU_THR = (DBGU_THR_TXCHR((uint32_t)(*lBuffer)) & DBGU_THR_TXCHR_Msk);
                 dbguObj.txProcessedSize++;
             }
 
-            DBGU_REGS->DBGU_IER = DBGU_IER_TXEMPTY_Msk;
+            DBGU_REGS->DBGU_IER = DBGU_IER_TXRDY_Msk;
         }
     }
 
@@ -314,17 +345,17 @@ bool DBGU_Write(void *buffer, const size_t size)
 bool DBGU_ReadAbort(void)
 {
     if (dbguObj.rxBusyStatus == true)
-    {        
+    {
         /* Disable Read, Overrun, Parity and Framing error interrupts */
         DBGU_REGS->DBGU_IDR = (DBGU_IDR_RXRDY_Msk | DBGU_IDR_FRAME_Msk | DBGU_IDR_PARE_Msk | DBGU_IDR_OVRE_Msk);
-        
-        dbguObj.rxBusyStatus = false;                                
-        
-		/* If required application should read the num bytes processed prior to calling the read abort API */
+
+        dbguObj.rxBusyStatus = false;
+
+        /* If required application should read the num bytes processed prior to calling the read abort API */
         dbguObj.rxSize = 0;
-		dbguObj.rxProcessedSize = 0;
+        dbguObj.rxProcessedSize = 0;
     }
-    
+
     return true;
 }
 
@@ -362,3 +393,8 @@ size_t DBGU_ReadCountGet(void)
     return dbguObj.rxProcessedSize;
 }
 
+
+bool DBGU_TransmitComplete(void)
+{
+    return ((DBGU_REGS->DBGU_SR & DBGU_SR_TXEMPTY_Msk) == DBGU_SR_TXEMPTY_Msk);
+}
