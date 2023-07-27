@@ -86,6 +86,8 @@ void DBGU_ReadCallbackRegister(DBGU_CALLBACK callback, uintptr_t context);
 bool DBGU_ReadAbort(void);
 
 
+bool DBGU_TransmitComplete(void);
+
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
 
