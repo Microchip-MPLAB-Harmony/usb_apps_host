@@ -40,8 +40,8 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef _PLIB_L2CC_H
-#define _PLIB_L2CC_H
+#ifndef PLIB_L2CC_H
+#define PLIB_L2CC_H
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 
@@ -166,7 +166,7 @@ extern void PLIB_L2CC_CleanInvalidateCache(void);
 
 // *****************************************************************************
 /* Function:
-    void PLIB_L2CC_InvalidateCacheByAddr(uint32_t *addr, uint32_t size);
+    void PLIB_L2CC_InvalidateCacheByAddr(volatile void *pAddr, int32_t size);
 
   Summary:
     Invalidates L2 cache entries.
@@ -192,11 +192,11 @@ extern void PLIB_L2CC_CleanInvalidateCache(void);
     </code>
 
 */
-extern void PLIB_L2CC_InvalidateCacheByAddr(uint32_t *addr, uint32_t size);
+extern void PLIB_L2CC_InvalidateCacheByAddr(volatile void *pAddr, int32_t size);
 
 // *****************************************************************************
 /* Function:
-    void PLIB_L2CC_CleanCacheByAddr(uint32_t *addr, uint32_t size);
+    void PLIB_L2CC_CleanCacheByAddr(volatile void *pAddr, int32_t size);
 
   Summary:
     Flushes L2 cache entries.
@@ -222,11 +222,11 @@ extern void PLIB_L2CC_InvalidateCacheByAddr(uint32_t *addr, uint32_t size);
     </code>
 
 */
-extern void PLIB_L2CC_CleanCacheByAddr(uint32_t *addr, uint32_t size);
+extern void PLIB_L2CC_CleanCacheByAddr(volatile void *pAddr, int32_t size);
 
 // *****************************************************************************
 /* Function:
-    void PLIB_L2CC_CleanInvalidateCacheByAddr(uint32_t *addr, uint32_t size);
+    void PLIB_L2CC_CleanInvalidateCacheByAddr(volatile void *pAddr, int32_t size);
 
   Summary:
     Cleans and Invalidates L2 cache entries.
@@ -252,7 +252,7 @@ extern void PLIB_L2CC_CleanCacheByAddr(uint32_t *addr, uint32_t size);
     </code>
 
 */
-extern void PLIB_L2CC_CleanInvalidateCacheByAddr(uint32_t *addr, uint32_t size);
+extern void PLIB_L2CC_CleanInvalidateCacheByAddr(volatile void *pAddr, int32_t size);
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 
