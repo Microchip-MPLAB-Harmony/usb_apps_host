@@ -58,9 +58,9 @@
 #include "peripheral/efc/plib_efc.h"
 #include "peripheral/tc/plib_tc0.h"
 #include "system/time/sys_time.h"
-#include "driver/usb/uhp/drv_usb_ohci.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_host.h"
+#include "driver/usb/uhp/drv_usb_ohci.h"
 #include "bsp/bsp.h"
 #include "system/fs/sys_fs.h"
 #include "system/fs/sys_fs_media_manager.h"
@@ -86,8 +86,14 @@ extern "C" {
 #endif
 // DOM-IGNORE-END
 
+/* Device Information */
+#define DEVICE_NAME			 "ATSAMG55J19"
+#define DEVICE_ARCH			 "CORTEX-M4"
+#define DEVICE_FAMILY		 "SAMG"
+#define DEVICE_SERIES		 "SAMG55"
+
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 119996416
+#define CPU_CLOCK_FREQUENCY 100007936
 
 // *****************************************************************************
 // *****************************************************************************
@@ -200,9 +206,9 @@ Remarks:
 typedef struct
 {
     SYS_MODULE_OBJ  sysTime;
-    SYS_MODULE_OBJ  drvUSBOHCIObject;
+    SYS_MODULE_OBJ  usbHostObject0;
 
-	SYS_MODULE_OBJ  usbHostObject0;
+    SYS_MODULE_OBJ  drvUSBOHCIObject;
 
 
 } SYSTEM_OBJECTS;
