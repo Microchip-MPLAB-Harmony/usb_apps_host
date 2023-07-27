@@ -83,6 +83,12 @@ extern "C" {
 #endif
 // DOM-IGNORE-END
 
+/* Device Information */
+#define DEVICE_NAME			 "PIC32MK1024GPE100"
+#define DEVICE_ARCH			 "MIPS"
+#define DEVICE_FAMILY		 "PIC32MK1402"
+#define DEVICE_SERIES		 "PIC32MK"
+
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 120000000
 
@@ -201,7 +207,7 @@ typedef struct
 
 
     SYS_MODULE_OBJ  sysTime;
-	SYS_MODULE_OBJ  usbHostObject0;
+    SYS_MODULE_OBJ  usbHostObject0;
 
 
 } SYSTEM_OBJECTS;
