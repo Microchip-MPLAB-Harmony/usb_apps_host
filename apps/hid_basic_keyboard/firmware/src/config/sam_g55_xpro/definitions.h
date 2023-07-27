@@ -80,6 +80,12 @@ extern "C" {
 #endif
 // DOM-IGNORE-END
 
+/* Device Information */
+#define DEVICE_NAME			 "ATSAMG55J19"
+#define DEVICE_ARCH			 "CORTEX-M4"
+#define DEVICE_FAMILY		 "SAMG"
+#define DEVICE_SERIES		 "SAMG55"
+
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 119996416
 
@@ -197,7 +203,7 @@ typedef struct
     SYS_MODULE_OBJ  drvUsart0;
     SYS_MODULE_OBJ  drvUSBOHCIObject;
 
-	SYS_MODULE_OBJ  usbHostObject0;
+    SYS_MODULE_OBJ  usbHostObject0;
 
 
 } SYSTEM_OBJECTS;
