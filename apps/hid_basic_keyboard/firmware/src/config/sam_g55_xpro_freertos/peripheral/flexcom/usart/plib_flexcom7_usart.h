@@ -68,7 +68,7 @@
 // *****************************************************************************
 // *****************************************************************************
 
-#define FLEXCOM7_USART_FrequencyGet()    (uint32_t)(119996416UL)
+#define FLEXCOM7_USART_FrequencyGet()    (uint32_t)(100007936UL)
 
 /****************************** FLEXCOM7 USART API *********************************/
 
@@ -78,9 +78,9 @@ FLEXCOM_USART_ERROR FLEXCOM7_USART_ErrorGet( void );
 
 bool FLEXCOM7_USART_SerialSetup( FLEXCOM_USART_SERIAL_SETUP *setup, uint32_t srcClkFreq );
 
-bool FLEXCOM7_USART_Write( void *buffer, const size_t size );
+bool FLEXCOM7_USART_Write( void *pBuffer, const size_t size );
 
-bool FLEXCOM7_USART_Read( void *buffer, const size_t size );
+bool FLEXCOM7_USART_Read( void *pBuffer, const size_t size );
 
 bool FLEXCOM7_USART_WriteIsBusy( void );
 
@@ -96,6 +96,8 @@ void FLEXCOM7_USART_WriteCallbackRegister( FLEXCOM_USART_CALLBACK callback, uint
 
 void FLEXCOM7_USART_ReadCallbackRegister( FLEXCOM_USART_CALLBACK callback, uintptr_t context );
 
+
+bool FLEXCOM7_USART_TransmitComplete( void );
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
