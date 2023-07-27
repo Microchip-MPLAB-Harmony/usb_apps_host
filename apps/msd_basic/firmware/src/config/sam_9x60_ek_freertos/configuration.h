@@ -82,28 +82,29 @@ extern "C" {
 
 /* File System Service Configuration */
 
-#define SYS_FS_MEDIA_NUMBER               1
-#define SYS_FS_VOLUME_NUMBER              1
+#define SYS_FS_MEDIA_NUMBER               (1U)
+#define SYS_FS_VOLUME_NUMBER              (1U)
 
 #define SYS_FS_AUTOMOUNT_ENABLE           true
-#define SYS_FS_CLIENT_NUMBER              1
-#define SYS_FS_MAX_FILES                  1
-#define SYS_FS_MAX_FILE_SYSTEM_TYPE       1
-#define SYS_FS_MEDIA_MAX_BLOCK_SIZE       512
-#define SYS_FS_MEDIA_MANAGER_BUFFER_SIZE  2048
-#define SYS_FS_USE_LFN                    1
-#define SYS_FS_FILE_NAME_LEN              255
-#define SYS_FS_CWD_STRING_LEN             1024
+#define SYS_FS_CLIENT_NUMBER              1U
+#define SYS_FS_MAX_FILES                  (1U)
+#define SYS_FS_MAX_FILE_SYSTEM_TYPE       (1U)
+#define SYS_FS_MEDIA_MAX_BLOCK_SIZE       (512U)
+#define SYS_FS_MEDIA_MANAGER_BUFFER_SIZE  (2048U)
+#define SYS_FS_USE_LFN                    (1)
+#define SYS_FS_FILE_NAME_LEN              (255U)
+#define SYS_FS_CWD_STRING_LEN             (1024)
 
 /* File System RTOS Configurations*/
 #define SYS_FS_STACK_SIZE                 1024
 #define SYS_FS_PRIORITY                   1
 
-#define SYS_FS_FAT_VERSION                "v0.14a"
+#define SYS_FS_FAT_VERSION                "v0.15"
 #define SYS_FS_FAT_READONLY               false
 #define SYS_FS_FAT_CODE_PAGE              437
 #define SYS_FS_FAT_MAX_SS                 SYS_FS_MEDIA_MAX_BLOCK_SIZE
 #define SYS_FS_FAT_ALIGNED_BUFFER_LEN     512
+
 
 
 
@@ -138,6 +139,31 @@ extern "C" {
 // Section: Middleware & Other Library Configuration
 // *****************************************************************************
 // *****************************************************************************
+// *****************************************************************************
+// *****************************************************************************
+// Section: USB Host Layer Configuration
+// *****************************************************************************
+// **************************************************************************
+
+/* Number of Endpoints used */
+
+/* Total number of devices to be supported */
+#define USB_HOST_DEVICES_NUMBER                             1 
+
+/* Target peripheral list entries */
+#define  USB_HOST_TPL_ENTRIES                               1 
+
+/* Maximum number of configurations supported per device */
+#define USB_HOST_DEVICE_INTERFACES_NUMBER                   5    
+
+#define USB_HOST_CONTROLLERS_NUMBER                         2
+
+#define USB_HOST_TRANSFERS_NUMBER                           10
+
+/* Provides Host pipes number */
+#define USB_HOST_PIPES_NUMBER                               10
+
+
 	
 /*** USB EHCI Driver Configurations ***/
 
@@ -180,31 +206,6 @@ extern "C" {
 #ifndef USB_ALIGN
 #define USB_ALIGN __ALIGNED(32)
 #endif 
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: USB Host Layer Configuration
-// *****************************************************************************
-// **************************************************************************
-
-/* Number of Endpoints used */
-
-/* Total number of devices to be supported */
-#define USB_HOST_DEVICES_NUMBER                             1 
-
-/* Target peripheral list entries */
-#define  USB_HOST_TPL_ENTRIES                               1 
-
-/* Maximum number of configurations supported per device */
-#define USB_HOST_DEVICE_INTERFACES_NUMBER                   5    
-
-#define USB_HOST_CONTROLLERS_NUMBER                         2
-
-#define USB_HOST_TRANSFERS_NUMBER                           10
-
-/* Provides Host pipes number */
-#define USB_HOST_PIPES_NUMBER                               10
-
 
 /* Number of MSD Function driver instances in the application */
 #define USB_HOST_MSD_INSTANCES_NUMBER         1
