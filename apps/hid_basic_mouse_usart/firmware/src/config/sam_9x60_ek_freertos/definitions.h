@@ -84,6 +84,12 @@ extern "C" {
 #endif
 // DOM-IGNORE-END
 
+/* Device Information */
+#define DEVICE_NAME			 "SAM9X60"
+#define DEVICE_ARCH			 "ARM926EJ-S"
+#define DEVICE_FAMILY		 "SAM9"
+#define DEVICE_SERIES		 "SAM9X"
+
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 600000000
 
@@ -202,7 +208,7 @@ typedef struct
     SYS_MODULE_OBJ  drvUSBEHCIObject;
     SYS_MODULE_OBJ  drvUSBOHCIObject;
 
-	SYS_MODULE_OBJ  usbHostObject0;
+    SYS_MODULE_OBJ  usbHostObject0;
 
 
 } SYSTEM_OBJECTS;
