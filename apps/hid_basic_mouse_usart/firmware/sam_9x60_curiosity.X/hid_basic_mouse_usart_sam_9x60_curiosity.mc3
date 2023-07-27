@@ -51,7 +51,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -7708,7 +7708,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\configuration.h</file>
-         <hash>7fa055c5730e5565f1c7cbaf999db7bd1d2c205a496d5afa13757c1fd5d99187</hash>
+         <hash>ab3103140d1d1a6fd3a66aed3be50b64ba463e7cdafd7801c4383264db035aec</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\uhphs_ohci.h</file>
@@ -7984,7 +7984,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\initialization.c</file>
-         <hash>27d511433a36c6b73c5fda91385285d18d7e3419ff747bb98a03e0ddfdd58b6c</hash>
+         <hash>d5b65c26b88ce26fd59b60b782073eb845a02727ed678c2b553268b032bc56f4</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\isi.h</file>
@@ -8056,7 +8056,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\definitions.h</file>
-         <hash>71e54520878d8e34d14de9a4e7a37512e7494ebcf4e52decdd4e7990173a38d7</hash>
+         <hash>210fe90cd1074466f80429010f8f3aba70faafa4e4bde44141470607d6c38b13</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\sha.h</file>
@@ -8072,7 +8072,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\tasks.c</file>
-         <hash>1e0ce44cb20e6b7c2bc86ada2e3c5e10eb1249d25965a75a5255535b3c43da77</hash>
+         <hash>8afc96c365d4778505b9e7b9b2819984bb538e5fe19c555e06171d0854b04bad</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\flexcom5.h</file>
