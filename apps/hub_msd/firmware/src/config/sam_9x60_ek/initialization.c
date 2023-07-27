@@ -48,7 +48,6 @@
 #include "device.h"
 
 
-
 // ****************************************************************************
 // ****************************************************************************
 // Section: Configuration Bits
@@ -62,6 +61,11 @@
 // Section: Driver Initialization Data
 // *****************************************************************************
 // *****************************************************************************
+/* Following MISRA-C rules are deviated in the below code block */
+/* MISRA C-2012 Rule 11.1 */
+/* MISRA C-2012 Rule 11.3 */
+/* MISRA C-2012 Rule 11.8 */
+
 
 
 // *****************************************************************************
@@ -87,7 +91,7 @@ void DRV_USB_VBUSPowerEnable(uint8_t port, bool enable)
        In MHC Pin Settings select the pin used as VBUS Power Enable as output and 
        name it to "VBUS_AH". If you a see a build error from this function either 
        you have not configured the VBUS Power Enable in MHC pin settings or the 
-       Pin name entered in MHC is not "VBUS_AH". */ 
+       Pin name entered in MHC is not "VBUS_AH". */
     if (enable == true)
     {
         /* Enable the VBUS */
@@ -107,7 +111,7 @@ void DRV_USB_VBUSPowerEnable(uint8_t port, bool enable)
 DRV_USB_EHCI_INIT drvUSBEHCIInit =
 {
     /* Interrupt Source for USB module */
-    .interruptSource = (INT_SOURCE)22,
+    .interruptSource = (INT_SOURCE)UHPHS_IRQn,
 
     /* USB base address */
     .usbID = ((uhphs_registers_t*)UHPHS_EHCI_ADDR),
@@ -115,7 +119,7 @@ DRV_USB_EHCI_INIT drvUSBEHCIInit =
     /* Ports Selection */ 
     .bmPortSelect = 0x02,
 
-    /* USB Host Power Enable. USB Driver uses this function to Enable the VBUS */ 
+    /* USB Host Power Enable. USB Driver uses this function to Enable the VBUS */
     .portPowerEnable = DRV_USB_VBUSPowerEnable,
     
     /* Root hub available current in milliamperes */
@@ -127,23 +131,24 @@ DRV_USB_EHCI_INIT drvUSBEHCIInit =
 DRV_USB_OHCI_INIT drvUSBOHCIInit =
 {
     /* Interrupt Source for USB module */
-    .interruptSource = (INT_SOURCE)22,
+    .interruptSource = (INT_SOURCE)UHPHS_IRQn,
+
     /* USB base address */
     .usbID = ((UhpOhci*)UHPHS_OHCI_ADDR),
 
      /* Ports Selection */ 
     .bmPortSelect = 0x02,
     
-    /* USB Host Power Enable. USB Driver uses this function to Enable the VBUS */ 
+    /* USB Host Power Enable. USB Driver uses this function to Enable the VBUS */
     .portPowerEnable = DRV_USB_VBUSPowerEnable,
     
-    /* Root hub available current in milliamperes */    
+    /* Root hub available current in milliamperes */
     .rootHubAvailableCurrent = 500
 };
 
 // <editor-fold defaultstate="collapsed" desc="File System Initialization Data">
 
-const SYS_FS_MEDIA_MOUNT_DATA sysfsMountTable[SYS_FS_VOLUME_NUMBER] =
+ const SYS_FS_MEDIA_MOUNT_DATA sysfsMountTable[SYS_FS_VOLUME_NUMBER] =
 {
     {
         .mountName = SYS_FS_MEDIA_IDX0_MOUNT_NAME_VOLUME_IDX0,
@@ -160,12 +165,12 @@ const SYS_FS_MEDIA_MOUNT_DATA sysfsMountTable[SYS_FS_VOLUME_NUMBER] =
 };
 
 
-const SYS_FS_FUNCTIONS FatFsFunctions =
+static const SYS_FS_FUNCTIONS FatFsFunctions =
 {
     .mount             = FATFS_mount,
     .unmount           = FATFS_unmount,
     .open              = FATFS_open,
-    .read              = FATFS_read,
+    .read_t              = FATFS_read,
     .close             = FATFS_close,
     .seek              = FATFS_lseek,
     .fstat             = FATFS_stat,
@@ -177,17 +182,17 @@ const SYS_FS_FUNCTIONS FatFsFunctions =
     .closeDir          = FATFS_closedir,
     .chdir             = FATFS_chdir,
     .chdrive           = FATFS_chdrive,
-    .write             = FATFS_write,
+    .write_t             = FATFS_write,
     .tell              = FATFS_tell,
     .eof               = FATFS_eof,
     .size              = FATFS_size,
     .mkdir             = FATFS_mkdir,
-    .remove            = FATFS_unlink,
+    .remove_t            = FATFS_unlink,
     .setlabel          = FATFS_setlabel,
     .truncate          = FATFS_truncate,
     .chmode            = FATFS_chmod,
     .chtime            = FATFS_utime,
-    .rename            = FATFS_rename,
+    .rename_t            = FATFS_rename,
     .sync              = FATFS_sync,
     .putchr            = FATFS_putc,
     .putstrn           = FATFS_puts,
@@ -200,15 +205,14 @@ const SYS_FS_FUNCTIONS FatFsFunctions =
 
 
 
-const SYS_FS_REGISTRATION_TABLE sysFSInit [ SYS_FS_MAX_FILE_SYSTEM_TYPE ] =
+
+static const SYS_FS_REGISTRATION_TABLE sysFSInit [ SYS_FS_MAX_FILE_SYSTEM_TYPE ] =
 {
     {
         .nativeFileSystemType = FAT,
         .nativeFileSystemFunctions = &FatFsFunctions
-    },
+    }
 };
-
-
 // </editor-fold>
 
 
@@ -220,7 +224,7 @@ const SYS_FS_REGISTRATION_TABLE sysFSInit [ SYS_FS_MAX_FILE_SYSTEM_TYPE ] =
 // *****************************************************************************
 // <editor-fold defaultstate="collapsed" desc="SYS_TIME Initialization Data">
 
-const SYS_TIME_PLIB_INTERFACE sysTimePlibAPI = {
+static const SYS_TIME_PLIB_INTERFACE sysTimePlibAPI = {
     .timerCallbackSet = (SYS_TIME_PLIB_CALLBACK_REGISTER)TC0_CH0_TimerCallbackRegister,
     .timerStart = (SYS_TIME_PLIB_START)TC0_CH0_TimerStart,
     .timerStop = (SYS_TIME_PLIB_STOP)TC0_CH0_TimerStop ,
@@ -230,7 +234,7 @@ const SYS_TIME_PLIB_INTERFACE sysTimePlibAPI = {
     .timerCounterGet = (SYS_TIME_PLIB_COUNTER_GET)TC0_CH0_TimerCounterGet,
 };
 
-const SYS_TIME_INIT sysTimeInitData =
+static const SYS_TIME_INIT sysTimeInitData =
 {
     .timePlib = &sysTimePlibAPI,
     .hwTimerIntNum = TC0_IRQn,
@@ -303,7 +307,7 @@ static void SYSC_Disable( void )
 }
 
 
-
+/* MISRAC 2012 deviation block end */
 
 /*******************************************************************************
   Function:
@@ -317,6 +321,9 @@ static void SYSC_Disable( void )
 
 void SYS_Initialize ( void* data )
 {
+
+    /* MISRAC 2012 deviation block start */
+    /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
 
 	SYSC_Disable( );
 
@@ -341,25 +348,38 @@ void SYS_Initialize ( void* data )
     
 
 
+    /* MISRAC 2012 deviation block start */
+    /* Following MISRA-C rules deviated in this block  */
+    /* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
+    /* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
+
+
+    /* MISRA C-2012 Rule 11.3, 11.8 deviated below. Deviation record ID -  
+    H3_MISRAC_2012_R_11_3_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
+        
     sysObj.sysTime = SYS_TIME_Initialize(SYS_TIME_INDEX_0, (SYS_MODULE_INIT *)&sysTimeInitData);
+    
+    /* MISRAC 2012 deviation block end */
 
      /* Initialize USB Driver */ 
     sysObj.drvUSBEHCIObject = DRV_USB_EHCI_Initialize (DRV_USB_EHCI_INDEX_0, (SYS_MODULE_INIT *) &drvUSBEHCIInit);
     sysObj.drvUSBOHCIObject = DRV_USB_OHCI_Initialize (DRV_USB_OHCI_INDEX_0, (SYS_MODULE_INIT *) &drvUSBOHCIInit);
 
-	/* Initialize the USB Host layer */
+    /* Initialize the USB Host layer */
     sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );	
 
     /*** File System Service Initialization Code ***/
-    SYS_FS_Initialize( (const void *) sysFSInit );
+    (void) SYS_FS_Initialize( (const void *) sysFSInit );
 
 
+    /* MISRAC 2012 deviation block end */
     APP_Initialize();
 
 
 
-}
 
+    /* MISRAC 2012 deviation block end */
+}
 
 /*******************************************************************************
  End of File
