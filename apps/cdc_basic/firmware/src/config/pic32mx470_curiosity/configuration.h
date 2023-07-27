@@ -128,6 +128,12 @@ extern "C" {
 #define USB_HOST_PIPES_NUMBER                               10
 
 
+/* Number of CDC Function driver instances in the application */
+#define USB_HOST_CDC_INSTANCES_NUMBER         1
+
+/* Number of CDC Attach Listeners */ 
+#define USB_HOST_CDC_ATTACH_LISTENERS_NUMBER        1
+
 /*** USB Driver Configuration ***/
 
 /* Maximum USB driver instances */
@@ -139,7 +145,7 @@ extern "C" {
 
 /* Disable Device Support */
 #define DRV_USBFS_DEVICE_SUPPORT                          false
-	
+
 /* Enable Host Support */
 #define DRV_USBFS_HOST_SUPPORT                            true
 
@@ -156,14 +162,9 @@ extern "C" {
 #define DRV_USBFS_HOST_RESET_DURATION                     100
 
 
+
 /* Alignment for buffers that are submitted to USB Driver*/ 
 #define USB_ALIGN  CACHE_ALIGN
-
-/* Number of CDC Function driver instances in the application */
-#define USB_HOST_CDC_INSTANCES_NUMBER         1
-
-/* Number of CDC Attach Listeners */ 
-#define USB_HOST_CDC_ATTACH_LISTENERS_NUMBER        1
 
 
 
