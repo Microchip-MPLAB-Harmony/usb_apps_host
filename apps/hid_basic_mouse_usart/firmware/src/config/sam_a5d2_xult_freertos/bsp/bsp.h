@@ -40,8 +40,8 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef _BSP_H
-#define _BSP_H
+#ifndef BSP_H
+#define BSP_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -60,36 +60,40 @@
 // Section: BSP Macros
 // *****************************************************************************
 // *****************************************************************************
+#define sam_a5d2_xult
+#define BSP_NAME             "sam_a5d2_xult"
 
-#define PIOA_REGS       ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[0])))
-#define PIOB_REGS       ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[1])))
-#define PIOC_REGS       ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[2])))
-#define PIOD_REGS       ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[3])))
-
-
+/*PIOA base address */
+#define PIOA_REGS   ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[0])))
+/*PIOB base address */
+#define PIOB_REGS   ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[1])))
+/*PIOC base address */
+#define PIOC_REGS   ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[2])))
+/*PIOD base address */
+#define PIOD_REGS   ((pio_group_registers_t*)(&(PIO_REGS->PIO_GROUP[3])))
 
 /*** LED Macros for LED1 ***/
-#define LED1_Toggle() do { PIOB_REGS->PIO_MSKR = (1U<<5); (PIOB_REGS->PIO_ODSR ^= (1U<<5)); } while (0)
+#define LED1_Toggle() do { PIOB_REGS->PIO_MSKR = (1UL<<5); (PIOB_REGS->PIO_ODSR ^= (1UL<<5)); } while (0)
 #define LED1_Get() ((PIOB_REGS->PIO_PDSR >> 5) & 0x1)
-#define LED1_On() (PIOB_REGS->PIO_CODR = (1U<<5))
-#define LED1_Off() (PIOB_REGS->PIO_SODR = (1U<<5))
+#define LED1_On() (PIOB_REGS->PIO_CODR = (1UL<<5))
+#define LED1_Off() (PIOB_REGS->PIO_SODR = (1UL<<5))
 /*** LED Macros for LED_RED ***/
-#define LED_RED_Toggle() do { PIOB_REGS->PIO_MSKR = (1U<<6); (PIOB_REGS->PIO_ODSR ^= (1U<<6)); } while (0)
+#define LED_RED_Toggle() do { PIOB_REGS->PIO_MSKR = (1UL<<6); (PIOB_REGS->PIO_ODSR ^= (1UL<<6)); } while (0)
 #define LED_RED_Get() ((PIOB_REGS->PIO_PDSR >> 6) & 0x1)
-#define LED_RED_On() (PIOB_REGS->PIO_CODR = (1U<<6))
-#define LED_RED_Off() (PIOB_REGS->PIO_SODR = (1U<<6))
+#define LED_RED_On() (PIOB_REGS->PIO_CODR = (1UL<<6))
+#define LED_RED_Off() (PIOB_REGS->PIO_SODR = (1UL<<6))
 /*** LED Macros for LED_BLUE ***/
-#define LED_BLUE_Toggle() do { PIOB_REGS->PIO_MSKR = (1U<<0); (PIOB_REGS->PIO_ODSR ^= (1U<<0)); } while (0)
+#define LED_BLUE_Toggle() do { PIOB_REGS->PIO_MSKR = (1UL<<0); (PIOB_REGS->PIO_ODSR ^= (1UL<<0)); } while (0)
 #define LED_BLUE_Get() ((PIOB_REGS->PIO_PDSR >> 0) & 0x1)
-#define LED_BLUE_On() (PIOB_REGS->PIO_CODR = (1U<<0))
-#define LED_BLUE_Off() (PIOB_REGS->PIO_SODR = (1U<<0))
+#define LED_BLUE_On() (PIOB_REGS->PIO_CODR = (1UL<<0))
+#define LED_BLUE_Off() (PIOB_REGS->PIO_SODR = (1UL<<0))
 /*** SWITCH Macros for PB_USER ***/
 #define PB_USER_Get() ((PIOB_REGS->PIO_PDSR >> 9) & 0x1)
 #define PB_USER_STATE_PRESSED 0
 #define PB_USER_STATE_RELEASED 1
 /*** VBUS Macros for VBUS_AH ***/
-#define VBUS_AH_PowerEnable() (PIOB_REGS->PIO_SODR = (1U<<10))
-#define VBUS_AH_PowerDisable() (PIOB_REGS->PIO_CODR = (1U<<10))
+#define VBUS_AH_PowerEnable() (PIOB_REGS->PIO_SODR = (1UL<<10))
+#define VBUS_AH_PowerDisable() (PIOB_REGS->PIO_CODR = (1UL<<10))
 
 
 
@@ -123,7 +127,6 @@
 
   Example:
     <code>
-    //Initialize the BSP
     BSP_Initialize();
     </code>
 
@@ -133,7 +136,7 @@
 
 void BSP_Initialize(void);
 
-#endif // _BSP_H
+#endif // BSP_H
 
 /*******************************************************************************
  End of File
