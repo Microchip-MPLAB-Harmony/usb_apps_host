@@ -43,7 +43,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -7699,7 +7699,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\usb_host_init_data.c</file>
-         <hash>b1383f329489f705fc44cf13f8600ca2b71c463b63aea3624d285256614f8262</hash>
+         <hash>c65238fc1c2f00a8dd2f1fed222ad7625ee857cf9d57d72e04f511971f500343</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\system\system_module.h</file>
@@ -7787,7 +7787,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\system\fs\src\sys_fs.c</file>
-         <hash>1a3a748db44841ca27bff5f8fd1d9ca886603949e91d6599063853d0cb73dda6</hash>
+         <hash>9fddd0e0f98f78690226049c454d1f1f05f1b24f89b37da043f7fd2522a49502</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\aes.h</file>
@@ -8111,7 +8111,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\configuration.h</file>
-         <hash>b98a4e803293bd577ae6b94a4f18d1ed8f7ed8e9c785e6629bc8e1e2ea182e96</hash>
+         <hash>8b21df7224a5a668205065afa26ecbf4f779c0bfe9b6be3132f7c0bc069f4db7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\system\fs\fat_fs\file_system\ff.h</file>
@@ -8395,7 +8395,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\initialization.c</file>
-         <hash>b7b46a15034315e86153fdbab8de489b3240d108532fa71a789dc073067a7c45</hash>
+         <hash>cd9ac6945e79aa908add080e471fdf429743866ce901a245cf1077a4e510acc4</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\isi.h</file>

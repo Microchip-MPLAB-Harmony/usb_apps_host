@@ -146,7 +146,7 @@ DRV_USB_OHCI_INIT drvUSBOHCIInit =
 
 // <editor-fold defaultstate="collapsed" desc="File System Initialization Data">
 
-const SYS_FS_MEDIA_MOUNT_DATA sysfsMountTable[SYS_FS_VOLUME_NUMBER] =
+ const SYS_FS_MEDIA_MOUNT_DATA sysfsMountTable[SYS_FS_VOLUME_NUMBER] =
 {
     {
         .mountName = SYS_FS_MEDIA_IDX0_MOUNT_NAME_VOLUME_IDX0,
@@ -356,7 +356,7 @@ void SYS_Initialize ( void* data )
     H3_MISRAC_2012_R_11_3_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
         
     sysObj.sysTime = SYS_TIME_Initialize(SYS_TIME_INDEX_0, (SYS_MODULE_INIT *)&sysTimeInitData);
-
+    
     /* MISRAC 2012 deviation block end */
 
      /* Initialize USB Driver */ 
