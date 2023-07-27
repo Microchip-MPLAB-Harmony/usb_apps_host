@@ -64,11 +64,11 @@
 #include "peripheral/tc/plib_tc0.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "system/time/sys_time.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "system/time/sys_time.h"
 #include "app.h"
 
 
@@ -80,6 +80,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "ATSAMA5D27CLD2G"
+#define DEVICE_ARCH			 "CORTEX-A5"
+#define DEVICE_FAMILY		 "SAMA5"
+#define DEVICE_SERIES		 "SAMA5D2"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 492000000
@@ -197,7 +203,7 @@ typedef struct
     SYS_MODULE_OBJ  drvUSBEHCIObject;
     SYS_MODULE_OBJ  drvUSBOHCIObject;
 
-	SYS_MODULE_OBJ  usbHostObject0;
+    SYS_MODULE_OBJ  usbHostObject0;
 
     SYS_MODULE_OBJ  sysTime;
 
