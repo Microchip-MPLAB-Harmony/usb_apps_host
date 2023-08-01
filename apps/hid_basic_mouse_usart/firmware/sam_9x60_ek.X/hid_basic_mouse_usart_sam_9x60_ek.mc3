@@ -562,7 +562,8 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;GraphSettings canvasHeight=&quot;505&quot; canvasWidth=&quot;470&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_SAM_9X60_Evaluation_Kit&quot; x=&quot;154&quot; y=&quot;44&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;HarmonyCore&quot; x=&quot;11&quot; y=&quot;12&quot;/&gt;
@@ -577,7 +578,6 @@
         &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;usb_host_hid&quot; x=&quot;326&quot; y=&quot;392&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
-    &lt;GraphSettings canvasHeight=&quot;505&quot; canvasWidth=&quot;470&quot; dnOrder=&quot;1&quot;/&gt;
   &lt;/UserData&gt;
 &lt;/UserData&gt;
 </value>
@@ -4661,12 +4661,12 @@
          <hash>01573b1b16c5f876de2e18f679be66c25a2797d7c1bf24201db3c06562f8ad60</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x60_ek\driver\usb\drv_usb_external_dependencies.h</file>
-         <hash>9c425976fc28dee4877b6dc97e3d85c69d99a3bbacf7813ea324948a6c9e8431</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_9x60_ek\usb\usb_chapter_9.h</file>
          <hash>86a258d763c7f0f563122ccd4ec0bbef422fd4e2f523402bb89be10568cecf3f</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\driver\usb\drv_usb_external_dependencies.h</file>
+         <hash>9c425976fc28dee4877b6dc97e3d85c69d99a3bbacf7813ea324948a6c9e8431</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\sckc.h</file>
@@ -4766,7 +4766,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\initialization.c</file>
-         <hash>434a5c12bed10ca3e22866ace85b359037d55c223a1e9fe49fec3fd24c87eeb0</hash>
+         <hash>a071fb9d8ecce5eaa3e85ac21fd480183809e0d04fdb47ac5c83f7f1f541505a</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\syscwp.h</file>
@@ -4838,7 +4838,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\tasks.c</file>
-         <hash>8afc96c365d4778505b9e7b9b2819984bb538e5fe19c555e06171d0854b04bad</hash>
+         <hash>1e0ce44cb20e6b7c2bc86ada2e3c5e10eb1249d25965a75a5255535b3c43da77</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\usb\src\usb_external_dependencies.h</file>
@@ -5006,7 +5006,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\definitions.h</file>
-         <hash>9b9d8e883c7f0f795eb3a1b1c58722abe7cfdd500013985cc6787bea80b3fb05</hash>
+         <hash>bcbd28a8cee3e94eb061b0907298538c2bfad0937a2dbcfe30dd7dc08d043bd2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\system\time\src\sys_time_local.h</file>
@@ -5150,7 +5150,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\configuration.h</file>
-         <hash>ab3103140d1d1a6fd3a66aed3be50b64ba463e7cdafd7801c4383264db035aec</hash>
+         <hash>7fa055c5730e5565f1c7cbaf999db7bd1d2c205a496d5afa13757c1fd5d99187</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\system\debug\sys_debug.h</file>

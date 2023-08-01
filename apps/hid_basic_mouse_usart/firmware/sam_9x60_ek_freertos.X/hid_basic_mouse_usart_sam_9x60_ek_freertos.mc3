@@ -642,7 +642,8 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;GraphSettings canvasHeight=&quot;457&quot; canvasWidth=&quot;551&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_SAM_9X60_Evaluation_Kit&quot; x=&quot;160&quot; y=&quot;69&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;FreeRTOS&quot; x=&quot;17&quot; y=&quot;106&quot;/&gt;
@@ -659,7 +660,6 @@
         &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;usb_host_hid&quot; x=&quot;320&quot; y=&quot;342&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
-    &lt;GraphSettings canvasHeight=&quot;457&quot; canvasWidth=&quot;551&quot; dnOrder=&quot;1&quot;/&gt;
   &lt;/UserData&gt;
 &lt;/UserData&gt;
 </value>
@@ -4885,7 +4885,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\tasks.c</file>
-         <hash>508c2a3b4c49fec26179ac8c5370ca2cf0f739f2be8cad7a87a64d6184bbafc4</hash>
+         <hash>5cac849a488b6c981dd7ff35929d8797c68b589d9946d3475d8631ebd745752b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\system\int\sys_int_mapping.h</file>
@@ -5329,7 +5329,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\definitions.h</file>
-         <hash>3a294025fa796783fd351ad5d3ca872171782e33ffac3dcb0c92e4326347577c</hash>
+         <hash>57997fa34952e67d8f8531d8c1c4663f5a5354357230f87fed36c545ef243b0f</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\uhphs_ohci.h</file>
@@ -5473,7 +5473,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\initialization.c</file>
-         <hash>4dc0fc89f07dad98c7d4ef194309061ed86fb3080645a9641a6820050dc9e6ad</hash>
+         <hash>ccb49b92d68f565b640cae31868a56e4f3403592c2a49236f12fe3fae2281ea5</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\gpbr.h</file>
@@ -5573,7 +5573,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\configuration.h</file>
-         <hash>f9c337a45e6d99794c188fe6f1daa86955f4dfaada3ecba428a8c443057cc6a1</hash>
+         <hash>68256334f493ab3fec2156f62bf84795e9a80b56029c8869f8e3864f061091c1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\usb\usb_host_hid_mouse.h</file>

@@ -59,10 +59,10 @@
 #include "usb/usb_cdc.h"
 #include "peripheral/tc/plib_tc0.h"
 #include "system/time/sys_time.h"
-#include "usb/usb_chapter_9.h"
-#include "usb/usb_host.h"
 #include "driver/usb/uhp/drv_usb_ehci.h"
 #include "driver/usb/uhp/drv_usb_ohci.h"
+#include "usb/usb_chapter_9.h"
+#include "usb/usb_host.h"
 #include "peripheral/dbgu/plib_dbgu.h"
 #include "FreeRTOS.h"
 #include "task.h"
@@ -202,10 +202,10 @@ Remarks:
 typedef struct
 {
     SYS_MODULE_OBJ  sysTime;
-    SYS_MODULE_OBJ  usbHostObject0;
-
     SYS_MODULE_OBJ  drvUSBEHCIObject;
     SYS_MODULE_OBJ  drvUSBOHCIObject;
+
+    SYS_MODULE_OBJ  usbHostObject0;
 
 
 } SYSTEM_OBJECTS;

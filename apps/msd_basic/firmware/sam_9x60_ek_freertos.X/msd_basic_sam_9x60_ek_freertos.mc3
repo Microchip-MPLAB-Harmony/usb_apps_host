@@ -4554,7 +4554,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\tasks.c</file>
-         <hash>0c29a5029b0c1249f281c95cbf198585d96bc124d4fd009a084b94e2db7f59a9</hash>
+         <hash>0b1953fb9cfb601dd399f70a282c97febca19cf9abc6e77fa8df69914285769e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\system\int\sys_int_mapping.h</file>
@@ -5018,7 +5018,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\definitions.h</file>
-         <hash>902d0567fa5347287dfca632be7e3b8b64fff0417c13d826dc5148ebac683c3d</hash>
+         <hash>3d6497abe50509bac49f70c02b390fb78112735352c13e6ee5c60b5e6c338cad</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\uhphs_ohci.h</file>
@@ -5154,7 +5154,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\initialization.c</file>
-         <hash>050e01b3e5fa7049629d3727c390fdd13fae3eb4ef0f548ea28f4eef095746a5</hash>
+         <hash>086d30d7bb287b540b0d39aa89bc5878025e442a2958c808aa59bc90e773a261</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\gpbr.h</file>
@@ -5266,7 +5266,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\configuration.h</file>
-         <hash>3e66da522783438c55d23d85c441af13e829c856326938c01d234bf82fdde932</hash>
+         <hash>5f6936c6e4393bfc34a9e0e666f8a93b47e78e1ed8700d1c72cc6ff254d2535e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\peripheral\mmu\plib_mmu.c</file>

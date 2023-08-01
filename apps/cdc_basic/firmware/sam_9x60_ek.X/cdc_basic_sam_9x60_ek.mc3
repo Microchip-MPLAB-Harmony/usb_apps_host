@@ -4198,12 +4198,12 @@
          <hash>b836f5aa03c45968aa92a8c66ceb7e5276a70876e707ee5dd0d90aa82dc443d6</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\flexcom10.h</file>
-         <hash>1845cfcdd931f3faf6c31827bbfc886da72bdd7ea7ca2eca0c412d0f6df1b1c0</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_9x60_ek\usb\usb_cdc.h</file>
          <hash>8d8e17f16340e1400d60e6552273d11b5ea1ede1d80faf220d6a4dacc5b41634</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\flexcom10.h</file>
+         <hash>1845cfcdd931f3faf6c31827bbfc886da72bdd7ea7ca2eca0c412d0f6df1b1c0</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\device.h</file>
@@ -4438,12 +4438,12 @@
          <hash>451e0878e9fcf6cf9fab046c1452ea662757988346c7f39e6bc98478ca25f995</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\uhphs_ohci.h</file>
-         <hash>1ec5b51e62d9230c8da9dc082d9137b20493502c4332ecd29593a45a33bfe491</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_9x60_ek\usb\usb_host_cdc.h</file>
          <hash>b43d66be63443bad351378adb0f049219dd14b6ed4ecc2497919bd8e93001030</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\uhphs_ohci.h</file>
+         <hash>1ec5b51e62d9230c8da9dc082d9137b20493502c4332ecd29593a45a33bfe491</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\aes.h</file>
@@ -4495,7 +4495,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\definitions.h</file>
-         <hash>8b901404fe1edc60ead0111b15af6f158017dcf59ab2df7d544190932110e19d</hash>
+         <hash>c38b41ee748d61b7578a01c036ffc7780b8caae8a5b9d12386417114dd1cece9</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\syscwp.h</file>
@@ -4594,12 +4594,12 @@
          <hash>01573b1b16c5f876de2e18f679be66c25a2797d7c1bf24201db3c06562f8ad60</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x60_ek\usb\usb_chapter_9.h</file>
-         <hash>86a258d763c7f0f563122ccd4ec0bbef422fd4e2f523402bb89be10568cecf3f</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_9x60_ek\driver\usb\drv_usb_external_dependencies.h</file>
          <hash>9c425976fc28dee4877b6dc97e3d85c69d99a3bbacf7813ea324948a6c9e8431</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\usb\usb_chapter_9.h</file>
+         <hash>86a258d763c7f0f563122ccd4ec0bbef422fd4e2f523402bb89be10568cecf3f</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\sckc.h</file>
@@ -4775,15 +4775,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\configuration.h</file>
-         <hash>ee33e0f6e2b167789224739aaa6314ff0f08bd4cd16e357072f3830cc50677eb</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAM9X60_DFP\instance\pit.h</file>
-         <hash>3bf821c9be19ce77d9e617fb96e8622bbf3dc70f876bb06dd601086b73d40fac</hash>
+         <hash>b4e4bd702e473bd87eaae550aa6f90568d7645153ed3e6a9bacea25b16a87933</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\usb\src\usb_host_cdc_local.h</file>
          <hash>b264931f9d8a3bf90bff889d8941ed3108dbc0981f8082bfe5e0b7b7836ecbb3</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60_DFP\instance\pit.h</file>
+         <hash>3bf821c9be19ce77d9e617fb96e8622bbf3dc70f876bb06dd601086b73d40fac</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\uhphs_ehci.h</file>
@@ -4799,7 +4799,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\initialization.c</file>
-         <hash>c87f64a35b8ea466ad0d96086ac1dcf31cb4e1095136d1725ec27523db3d01ed</hash>
+         <hash>65b60613955c2a2b75d7daa4e75f4be523749d4ad2a44cfb292eb0f5b2b76e5f</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\pmecc.h</file>
@@ -4955,7 +4955,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\tasks.c</file>
-         <hash>1e0ce44cb20e6b7c2bc86ada2e3c5e10eb1249d25965a75a5255535b3c43da77</hash>
+         <hash>8afc96c365d4778505b9e7b9b2819984bb538e5fe19c555e06171d0854b04bad</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
