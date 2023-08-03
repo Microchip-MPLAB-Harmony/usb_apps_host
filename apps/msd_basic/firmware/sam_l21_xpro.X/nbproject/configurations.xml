@@ -127,6 +127,7 @@
             <itemPath>../src/packs/ATSAML21J18B_DFP/component/dsu.h</itemPath>
             <itemPath>../src/packs/ATSAML21J18B_DFP/component/eic.h</itemPath>
             <itemPath>../src/packs/ATSAML21J18B_DFP/component/evsys.h</itemPath>
+            <itemPath>../src/packs/ATSAML21J18B_DFP/component/fuses.h</itemPath>
             <itemPath>../src/packs/ATSAML21J18B_DFP/component/gclk.h</itemPath>
             <itemPath>../src/packs/ATSAML21J18B_DFP/component/mclk.h</itemPath>
             <itemPath>../src/packs/ATSAML21J18B_DFP/component/mtb.h</itemPath>
@@ -158,6 +159,7 @@
             <itemPath>../src/packs/ATSAML21J18B_DFP/instance/dsu.h</itemPath>
             <itemPath>../src/packs/ATSAML21J18B_DFP/instance/eic.h</itemPath>
             <itemPath>../src/packs/ATSAML21J18B_DFP/instance/evsys.h</itemPath>
+            <itemPath>../src/packs/ATSAML21J18B_DFP/instance/fuses.h</itemPath>
             <itemPath>../src/packs/ATSAML21J18B_DFP/instance/gclk.h</itemPath>
             <itemPath>../src/packs/ATSAML21J18B_DFP/instance/mclk.h</itemPath>
             <itemPath>../src/packs/ATSAML21J18B_DFP/instance/mtb.h</itemPath>
