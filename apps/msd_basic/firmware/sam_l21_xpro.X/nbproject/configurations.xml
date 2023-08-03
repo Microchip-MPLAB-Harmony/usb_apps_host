@@ -109,6 +109,7 @@
           <itemPath>../src/config/sam_l21_xpro/definitions.h</itemPath>
           <itemPath>../src/config/sam_l21_xpro/user.h</itemPath>
           <itemPath>../src/config/sam_l21_xpro/configuration.h</itemPath>
+          <itemPath>../src/config/sam_l21_xpro/sys_tasks.h</itemPath>
           <itemPath>../src/config/sam_l21_xpro/device.h</itemPath>
           <itemPath>../src/config/sam_l21_xpro/interrupts.h</itemPath>
           <itemPath>../src/config/sam_l21_xpro/device_vectors.h</itemPath>
@@ -328,6 +329,7 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
+      <itemPath>../src/config/sam_l21_xpro/pin_configurations.csv</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

@@ -118,6 +118,7 @@
           <itemPath>../src/config/sam_9x60_curiosity_freertos/definitions.h</itemPath>
           <itemPath>../src/config/sam_9x60_curiosity_freertos/interrupts.h</itemPath>
           <itemPath>../src/config/sam_9x60_curiosity_freertos/configuration.h</itemPath>
+          <itemPath>../src/config/sam_9x60_curiosity_freertos/sys_tasks.h</itemPath>
           <itemPath>../src/config/sam_9x60_curiosity_freertos/user.h</itemPath>
         </logicalFolder>
       </logicalFolder>

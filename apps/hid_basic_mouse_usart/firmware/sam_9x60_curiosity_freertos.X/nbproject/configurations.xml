@@ -101,6 +101,7 @@
             <itemPath>../src/config/sam_9x60_curiosity_freertos/usb/usb_common.h</itemPath>
           </logicalFolder>
           <itemPath>../src/config/sam_9x60_curiosity_freertos/configuration.h</itemPath>
+          <itemPath>../src/config/sam_9x60_curiosity_freertos/sys_tasks.h</itemPath>
           <itemPath>../src/config/sam_9x60_curiosity_freertos/user.h</itemPath>
           <itemPath>../src/config/sam_9x60_curiosity_freertos/device_cache.h</itemPath>
           <itemPath>../src/config/sam_9x60_curiosity_freertos/toolchain_specifics.h</itemPath>

@@ -95,6 +95,7 @@
           <itemPath>../src/config/sam_9x60_curiosity_freertos/device.h</itemPath>
           <itemPath>../src/config/sam_9x60_curiosity_freertos/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/sam_9x60_curiosity_freertos/configuration.h</itemPath>
+          <itemPath>../src/config/sam_9x60_curiosity_freertos/sys_tasks.h</itemPath>
           <itemPath>../src/config/sam_9x60_curiosity_freertos/user.h</itemPath>
           <itemPath>../src/config/sam_9x60_curiosity_freertos/FreeRTOSConfig.h</itemPath>
         </logicalFolder>

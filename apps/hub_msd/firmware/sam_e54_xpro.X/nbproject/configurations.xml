@@ -113,6 +113,7 @@
           <itemPath>../src/config/sam_e54_xpro/device_vectors.h</itemPath>
           <itemPath>../src/config/sam_e54_xpro/definitions.h</itemPath>
           <itemPath>../src/config/sam_e54_xpro/configuration.h</itemPath>
+          <itemPath>../src/config/sam_e54_xpro/sys_tasks.h</itemPath>
           <itemPath>../src/config/sam_e54_xpro/user.h</itemPath>
           <itemPath>../src/config/sam_e54_xpro/device_cache.h</itemPath>
           <itemPath>../src/config/sam_e54_xpro/interrupts.h</itemPath>
