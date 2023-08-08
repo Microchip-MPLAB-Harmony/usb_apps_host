@@ -852,7 +852,8 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;GraphSettings canvasHeight=&quot;376&quot; canvasWidth=&quot;456&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_SAM_A5D2_Xplained_Ultra&quot; x=&quot;146&quot; y=&quot;67&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;FreeRTOS&quot; x=&quot;3&quot; y=&quot;103&quot;/&gt;
@@ -862,14 +863,13 @@
         &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;dfp&quot; x=&quot;146&quot; y=&quot;41&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;drv_usbhs_v1&quot; x=&quot;7&quot; y=&quot;260&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;pit&quot; x=&quot;134&quot; y=&quot;102&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;sys_fs&quot; x=&quot;442&quot; y=&quot;260&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;sys_fs&quot; x=&quot;442&quot; y=&quot;261&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;sys_time&quot; x=&quot;256&quot; y=&quot;131&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;tc0&quot; x=&quot;7&quot; y=&quot;177&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;usb_host&quot; x=&quot;179&quot; y=&quot;260&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;usb_host_msd&quot; x=&quot;308&quot; y=&quot;260&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
-    &lt;GraphSettings canvasHeight=&quot;376&quot; canvasWidth=&quot;456&quot; dnOrder=&quot;1&quot;/&gt;
   &lt;/UserData&gt;
 &lt;/UserData&gt;
 </value>
@@ -4074,6 +4074,33 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_FAT_EXFAT_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_FAT_EXFAT_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_LFN_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_LFN_ENABLE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_fs&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_MEDIA_DEVICE_1_NAME_IDX0"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_MEDIA_DEVICE_1_NAME_IDX0&quot;&gt;
@@ -5310,7 +5337,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\system\fs\fat_fs\file_system\ffconf.h</file>
-         <hash>eb42d88a772858dbd895386063ff6fa76df37a06bf8ee6da1bf3a43a8d9584e4</hash>
+         <hash>a2dc75b0fcbc740c3c9d99afe0d0f72b7161643bf50e2af2feaddd5913a7b6a3</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\component\sckc.h</file>
@@ -5426,7 +5453,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\tasks.c</file>
-         <hash>0b1953fb9cfb601dd399f70a282c97febca19cf9abc6e77fa8df69914285769e</hash>
+         <hash>0c29a5029b0c1249f281c95cbf198585d96bc124d4fd009a084b94e2db7f59a9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\usb\usb_host.h</file>
@@ -5434,7 +5461,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\configuration.h</file>
-         <hash>9b4d321478d3f9bb5a727dc22e18df4351b6777bea10666ec9b1863ef2206c9a</hash>
+         <hash>68bc8b098d06faf9c1d1110f08762348eea060c552b032eb42419dd58d3a768a</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\component\trng.h</file>
@@ -5486,7 +5513,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\system\fs\sys_fs.h</file>
-         <hash>4ca0bf61b93d1b4335bad8755bfeeed6dfda8a7eb3f2eabfcd9239a0b78e01af</hash>
+         <hash>5161c95024f6736400bcfd7d534651c867cd447549fa73d9d9be7044c576bbcd</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\instance\sfrbu.h</file>
@@ -5642,7 +5669,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\initialization.c</file>
-         <hash>08a0ad83dc276ed8f2bb359b16a1a58bd5761e433d2c631a34bc591c31014880</hash>
+         <hash>8c784bcad9c0c21f2f820f7fa72acfc732dcce8593d5d4e3069fb6a460680541</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\component\pio.h</file>
@@ -5774,7 +5801,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\definitions.h</file>
-         <hash>c0195fa0eae7b7ac040bb4948369231672ee970d78edfb31d1ab93026fcf6f4c</hash>
+         <hash>e5ab0dbd00a3109cc4b5d8c2f226b099622d316bc27ce2ee0e662a5ae1690e9f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\peripheral\matrix\plib_matrix.c</file>
