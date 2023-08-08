@@ -3338,6 +3338,17 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_FAT_EXFAT_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_FAT_EXFAT_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_IDX0"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_IDX0&quot;&gt;
@@ -3392,6 +3403,22 @@
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_INSTANCES_NUMBER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;User dnOrder=&quot;0&quot; value=&quot;2&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_LFN_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_LFN_ENABLE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_fs&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sys_fs&gt;
 &lt;/sys_fs&gt;
@@ -4332,7 +4359,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\system\fs\sys_fs.h</file>
-         <hash>4ca0bf61b93d1b4335bad8755bfeeed6dfda8a7eb3f2eabfcd9239a0b78e01af</hash>
+         <hash>5161c95024f6736400bcfd7d534651c867cd447549fa73d9d9be7044c576bbcd</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\pin_configurations.csv</file>
@@ -4340,7 +4367,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\system\fs\fat_fs\file_system\ffconf.h</file>
-         <hash>4b18e8ce0011ac7b0914aa6de52c456333b08a6d02b0d6953fed80ed67f5d2fa</hash>
+         <hash>e3021a3bb2a5968b7c23b09d411df4ff723696c8344b73870b6901ea3b1ee95a</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\udphs.h</file>
@@ -4375,12 +4402,12 @@
          <hash>8d463cfac1f59387de6f932be156fac58a6c20c582ac50f6e7c90ece73567ee6</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x60_ek\usb\usb_msd.h</file>
-         <hash>411e51784fd839785fa33a6b5c5fd26b446947816cc1c96b6f5e9d3b3ac65559</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_9x60_ek\bsp\bsp.h</file>
          <hash>25e1411b407242e817facc59c9386c7ba9f886b114dafa4df899ba2f90396888</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\usb\usb_msd.h</file>
+         <hash>411e51784fd839785fa33a6b5c5fd26b446947816cc1c96b6f5e9d3b3ac65559</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\usb\usb_common.h</file>
@@ -4483,12 +4510,12 @@
          <hash>01573b1b16c5f876de2e18f679be66c25a2797d7c1bf24201db3c06562f8ad60</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x60_ek\usb\usb_chapter_9.h</file>
-         <hash>86a258d763c7f0f563122ccd4ec0bbef422fd4e2f523402bb89be10568cecf3f</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_9x60_ek\driver\usb\drv_usb_external_dependencies.h</file>
          <hash>9c425976fc28dee4877b6dc97e3d85c69d99a3bbacf7813ea324948a6c9e8431</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\usb\usb_chapter_9.h</file>
+         <hash>86a258d763c7f0f563122ccd4ec0bbef422fd4e2f523402bb89be10568cecf3f</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\sckc.h</file>
@@ -4580,7 +4607,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\initialization.c</file>
-         <hash>c5572ea17c216145e948f3e35841af710a602c6ce5f2d8c0dc49e31ac9286f7f</hash>
+         <hash>eb341d319205e03110d94e1bb110584c79d887d1a0369de4359e2a38c7d27548</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\syscwp.h</file>
@@ -4664,7 +4691,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\tasks.c</file>
-         <hash>d1e231740eae7643b29673d60d6f72a4c040fed8c76fce15dddb73057f34d3a7</hash>
+         <hash>9a3adf7f1d8f2e4d8f475f1f28efba4a8500b56551812119d917f0739b94b555</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\usb\src\usb_host_scsi_local.h</file>
@@ -4828,7 +4855,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\definitions.h</file>
-         <hash>2400c622727829c6d537b933e85337e6a9af446357694d85ded7dc1600ab7749</hash>
+         <hash>c83187fd872d5a834496599931dc2affd718858ff520f082f295ca6494c6bdee</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\system\time\src\sys_time_local.h</file>
@@ -4992,7 +5019,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\configuration.h</file>
-         <hash>cf95741047fdeada6b5bd6c3d9e00a72d43e4cfd12f3f690f0e5f7ae989d43f1</hash>
+         <hash>8b21df7224a5a668205065afa26ecbf4f779c0bfe9b6be3132f7c0bc069f4db7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\system\debug\sys_debug.h</file>

@@ -116,7 +116,6 @@
           <itemPath>../src/config/sam_9x60_ek/user.h</itemPath>
           <itemPath>../src/config/sam_9x60_ek/configuration.h</itemPath>
           <itemPath>../src/config/sam_9x60_ek/sys_tasks.h</itemPath>
-          <itemPath>../src/config/sam_9x60_ek/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="packs" projectFiles="true">
@@ -354,7 +353,6 @@
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
       <itemPath>../src/config/sam_9x60_ek/pin_configurations.csv</itemPath>
-      <itemPath>../src/config/sam_9x60_ek/pin_configurations.csv</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -437,7 +435,7 @@
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
         <property key="appendMe"
-                  value="-Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wmissing-noreturn "/>
+                  value="-Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wredundant-decls -Wnested-externs -Wunreachable-code -Wmissing-noreturn"/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
