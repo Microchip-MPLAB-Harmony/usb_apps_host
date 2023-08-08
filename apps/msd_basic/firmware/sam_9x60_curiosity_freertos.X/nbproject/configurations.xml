@@ -1,9 +1,13 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="65">
   <logicalFolder name="root" displayName="root" projectFiles="true">
-    <logicalFolder name="HeaderFiles" displayName="Header Files" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="sam_9x60_curiosity_freertos" displayName="sam_9x60_curiosity_freertos" projectFiles="true">
+        <logicalFolder name="sam_9x60_curiosity_freertos"
+                       displayName="sam_9x60_curiosity_freertos"
+                       projectFiles="true">
           <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
             <itemPath>../src/config/sam_9x60_curiosity_freertos/bsp/bsp.h</itemPath>
           </logicalFolder>
@@ -64,7 +68,9 @@
                   <itemPath>../src/config/sam_9x60_curiosity_freertos/system/fs/fat_fs/file_system/ff.h</itemPath>
                   <itemPath>../src/config/sam_9x60_curiosity_freertos/system/fs/fat_fs/file_system/ffconf.h</itemPath>
                 </logicalFolder>
-                <logicalFolder name="hardware_access" displayName="hardware_access" projectFiles="true">
+                <logicalFolder name="hardware_access"
+                               displayName="hardware_access"
+                               projectFiles="true">
                   <itemPath>../src/config/sam_9x60_curiosity_freertos/system/fs/fat_fs/hardware_access/diskio.h</itemPath>
                 </logicalFolder>
               </logicalFolder>
@@ -152,7 +158,9 @@
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
-        <logicalFolder name="SAM9X60D1G_DFP" displayName="SAM9X60D1G_DFP" projectFiles="true">
+        <logicalFolder name="SAM9X60D1G_DFP"
+                       displayName="SAM9X60D1G_DFP"
+                       projectFiles="true">
           <logicalFolder name="component" displayName="component" projectFiles="true">
             <itemPath>../src/packs/SAM9X60D1G_DFP/component/rstc.h</itemPath>
             <itemPath>../src/packs/SAM9X60D1G_DFP/component/bsc.h</itemPath>
@@ -274,16 +282,24 @@
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
-    <logicalFolder name="LinkerScript" displayName="Linker Files" projectFiles="true">
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="sam_9x60_curiosity_freertos" displayName="sam_9x60_curiosity_freertos" projectFiles="true">
+        <logicalFolder name="sam_9x60_curiosity_freertos"
+                       displayName="sam_9x60_curiosity_freertos"
+                       projectFiles="true">
           <itemPath>../src/config/sam_9x60_curiosity_freertos/ddram.ld</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
-    <logicalFolder name="SourceFiles" displayName="Source Files" projectFiles="true">
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="sam_9x60_curiosity_freertos" displayName="sam_9x60_curiosity_freertos" projectFiles="true">
+        <logicalFolder name="sam_9x60_curiosity_freertos"
+                       displayName="sam_9x60_curiosity_freertos"
+                       projectFiles="true">
           <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
             <itemPath>../src/config/sam_9x60_curiosity_freertos/bsp/bsp.c</itemPath>
           </logicalFolder>
@@ -333,7 +349,9 @@
                   <itemPath>../src/config/sam_9x60_curiosity_freertos/system/fs/fat_fs/file_system/ffunicode.c</itemPath>
                   <itemPath>../src/config/sam_9x60_curiosity_freertos/system/fs/fat_fs/file_system/ff.c</itemPath>
                 </logicalFolder>
-                <logicalFolder name="hardware_access" displayName="hardware_access" projectFiles="true">
+                <logicalFolder name="hardware_access"
+                               displayName="hardware_access"
+                               projectFiles="true">
                   <itemPath>../src/config/sam_9x60_curiosity_freertos/system/fs/fat_fs/hardware_access/diskio.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
@@ -393,7 +411,9 @@
       <itemPath>../src/config/sam_9x60_curiosity_freertos/pin_configurations.csv</itemPath>
       <itemPath>../src/main.c</itemPath>
     </logicalFolder>
-    <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="false">
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
       <itemPath>Makefile</itemPath>
       <itemPath>msd_basic_sam_9x60_curiosity_freertos.mc3</itemPath>
     </logicalFolder>
@@ -404,8 +424,8 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>SAM9X60D1G</targetDevice>
-        <targetHeader/>
-        <targetPluginBoard/>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
         <platformTool>samice</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>4.30</languageToolchainVersion>
@@ -418,7 +438,8 @@
         <ScriptingSetting key="boot.load_adr" value=""/>
         <ScriptingSetting key="boot.use" value="true"/>
         <ScriptingSetting key="boot.entry_adr" value=""/>
-        <ScriptingSetting key="boot.path" value="${ProjectDir}\..\..\..\..\deps\at91bootstrap_sam_9x60_binaries\at91bootstrap.elf"/>
+        <ScriptingSetting key="boot.path"
+                          value="${ProjectDir}\..\..\..\..\deps\at91bootstrap_sam_9x60_binaries\at91bootstrap.elf"/>
         <ScriptingSetting key="boot.prj" value=""/>
       </ScriptingSettings>
       <compileType>
@@ -431,7 +452,7 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile/>
+          <alternateLoadableFile></alternateLoadableFile>
         </loading>
         <subordinates>
         </subordinates>
@@ -439,7 +460,7 @@
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeUseCleanTarget>false</makeUseCleanTarget>
-        <makeCustomizationPreStep/>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep>${MP_CC_DIR}/xc32-objcopy -O binary ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.elf ${DISTDIR}/harmony.bin </makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
@@ -449,12 +470,14 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value="../src;../src/config/sam_9x60_curiosity_freertos;../src/config/sam_9x60_curiosity_freertos/system/fs/fat_fs/file_system;../src/config/sam_9x60_curiosity_freertos/system/fs/fat_fs/hardware_access;../src/packs/SAM9X60D1G_DFP;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/ARM926"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/sam_9x60_curiosity_freertos;../src/config/sam_9x60_curiosity_freertos/system/fs/fat_fs/file_system;../src/config/sam_9x60_curiosity_freertos/system/fs/fat_fs/hardware_access;../src/packs/SAM9X60D1G_DFP;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/ARM926"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -504,6 +527,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -543,6 +567,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -551,7 +576,8 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value="../src;../src/config/sam_9x60_curiosity_freertos;../src/config/sam_9x60_curiosity_freertos/system/fs/fat_fs/file_system;../src/config/sam_9x60_curiosity_freertos/system/fs/fat_fs/hardware_access;../src/packs/SAM9X60D1G_DFP;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/ARM926"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/sam_9x60_curiosity_freertos;../src/config/sam_9x60_curiosity_freertos/system/fs/fat_fs/file_system;../src/config/sam_9x60_curiosity_freertos/system/fs/fat_fs/hardware_access;../src/packs/SAM9X60D1G_DFP;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/ARM926"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -599,13 +625,15 @@
         <property key="memories.eeprom" value="true"/>
         <property key="memories.id" value="true"/>
         <property key="memories.instruction.ram" value="true"/>
-        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges.default}"/>
+        <property key="memories.instruction.ram.ranges"
+                  value="${memories.instruction.ram.ranges.default}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0x300000-0x4fffff"/>
         <property key="programoptions.eraseb4program" value="false"/>
         <property key="programoptions.preservebootflash" value="false"/>
         <property key="programoptions.preserveprogrammemory" value="false"/>
-        <property key="programoptions.preserveprogramrange.ranges" value="0x300000-0x4fffff"/>
+        <property key="programoptions.preserveprogramrange.ranges"
+                  value="0x300000-0x4fffff"/>
         <property key="programoptions.resetafterprogram" value="true"/>
         <property key="script.has_reset" value="true"/>
         <property key="script.log_level" value="1"/>
@@ -629,13 +657,15 @@
         <property key="memories.eeprom" value="true"/>
         <property key="memories.id" value="true"/>
         <property key="memories.instruction.ram" value="true"/>
-        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges.default}"/>
+        <property key="memories.instruction.ram.ranges"
+                  value="${memories.instruction.ram.ranges.default}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0x300000-0x4fffff"/>
         <property key="programoptions.eraseb4program" value="false"/>
         <property key="programoptions.preservebootflash" value="false"/>
         <property key="programoptions.preserveprogrammemory" value="false"/>
-        <property key="programoptions.preserveprogramrange.ranges" value="0x300000-0x4fffff"/>
+        <property key="programoptions.preserveprogramrange.ranges"
+                  value="0x300000-0x4fffff"/>
         <property key="programoptions.resetafterprogram" value="true"/>
         <property key="script.has_reset" value="true"/>
         <property key="script.log_level" value="1"/>
