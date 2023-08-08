@@ -3595,6 +3595,33 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_FAT_EXFAT_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_FAT_EXFAT_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_LFN_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_LFN_ENABLE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_fs&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_MEDIA_DEVICE_1_NAME_IDX0"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_MEDIA_DEVICE_1_NAME_IDX0&quot;&gt;
@@ -4459,7 +4486,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\tasks.c</file>
-         <hash>9a3adf7f1d8f2e4d8f475f1f28efba4a8500b56551812119d917f0739b94b555</hash>
+         <hash>d1e231740eae7643b29673d60d6f72a4c040fed8c76fce15dddb73057f34d3a7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\system\fs\src\sys_fs_media_manager.c</file>
@@ -4627,7 +4654,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\system\fs\sys_fs.h</file>
-         <hash>4ca0bf61b93d1b4335bad8755bfeeed6dfda8a7eb3f2eabfcd9239a0b78e01af</hash>
+         <hash>5161c95024f6736400bcfd7d534651c867cd447549fa73d9d9be7044c576bbcd</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\instance\lcdc.h</file>
@@ -4739,7 +4766,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\initialization.c</file>
-         <hash>90aa077cb3e2a126615f831e858433c4e00f69108c1b149b6f421c95514e275d</hash>
+         <hash>531291b2421a93c6a4cada4d4eff317979bb31ed4aced31ba93cbf4d7953cf79</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\component\acc.h</file>
@@ -4763,7 +4790,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\system\fs\fat_fs\file_system\ffconf.h</file>
-         <hash>eb42d88a772858dbd895386063ff6fa76df37a06bf8ee6da1bf3a43a8d9584e4</hash>
+         <hash>a2dc75b0fcbc740c3c9d99afe0d0f72b7161643bf50e2af2feaddd5913a7b6a3</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\peripheral\clk\plib_clk.c</file>
@@ -4839,7 +4866,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\configuration.h</file>
-         <hash>c1ed822d2193b634412c26110b93e6ee5ce7a10092b510dba593a26f1e91fdc0</hash>
+         <hash>056ac69e1328de513c65bc6fc6edf7a2b2d85ee6c77f2a4604371878a67fb044</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\instance\pit.h</file>
@@ -4867,7 +4894,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\definitions.h</file>
-         <hash>87180cf64bdbced058ad01554ecf40c9a2baa3bb4d9be05f6b6d3d5bec1c90a2</hash>
+         <hash>d950c21a6d29d2db5fb68e81a611b4ab659e06123c04bd484d07d77104654c5c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\peripheral\mmu\plib_mmu.h</file>
@@ -5110,12 +5137,12 @@
          <hash>3210e659c2fe88af837a7e98dbda6bde304c87b5136fddb2bc260c846def855d</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a5d2_xult\system\time\src\sys_time.c</file>
-         <hash>fa2d85ab967b80157caf8483f6e28a23b12b548844a1d80f2fef760cd9b99271</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_a5d2_xult\osal\osal_impl_basic.h</file>
          <hash>67ce72d34fd1e4dee0b6937fa026ab2c7bd285f82a24da09742c68333adaf0fc</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a5d2_xult\system\time\src\sys_time.c</file>
+         <hash>fa2d85ab967b80157caf8483f6e28a23b12b548844a1d80f2fef760cd9b99271</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\instance\xdmac0.h</file>
