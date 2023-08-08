@@ -2086,6 +2086,33 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_FAT_EXFAT_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_FAT_EXFAT_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_LFN_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_LFN_ENABLE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_fs&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_MEDIA_DEVICE_1_NAME_IDX0"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_MEDIA_DEVICE_1_NAME_IDX0&quot;&gt;
@@ -2445,7 +2472,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\definitions.h</file>
-         <hash>42fae6aae5a2be7dc23a064b6b0c5c6b06fee8d574dd44e259b6a848781f3745</hash>
+         <hash>a67465ca919c6df4e2189788a403f78c0a9f21399244fa9eac4406791077c3cf</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAML21J18B_DFP\component\mclk.h</file>
@@ -2468,12 +2495,12 @@
          <hash>dcd0934ccdae5042e64f7789e943bfd3af9bfd5cda1b258f73476b8cf03d9b2b</hash>
       </entry>
       <entry>
-         <file>..\src\packs\ATSAML21J18B_DFP\component\pm.h</file>
-         <hash>dc4de1c477bbc8d55e4a8e3254999da6b9b1d3d5bb6e718bbdcac0ac4b258146</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_l21_xpro\usb\usb_host_client_driver.h</file>
          <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\ATSAML21J18B_DFP\component\pm.h</file>
+         <hash>dc4de1c477bbc8d55e4a8e3254999da6b9b1d3d5bb6e718bbdcac0ac4b258146</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAML21J18B_DFP\component\opamp.h</file>
@@ -2649,7 +2676,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\system\fs\sys_fs.h</file>
-         <hash>4ca0bf61b93d1b4335bad8755bfeeed6dfda8a7eb3f2eabfcd9239a0b78e01af</hash>
+         <hash>5161c95024f6736400bcfd7d534651c867cd447549fa73d9d9be7044c576bbcd</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAML21J18B_DFP\component\usb.h</file>
@@ -2853,7 +2880,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\system\fs\fat_fs\file_system\ffconf.h</file>
-         <hash>eb42d88a772858dbd895386063ff6fa76df37a06bf8ee6da1bf3a43a8d9584e4</hash>
+         <hash>a2dc75b0fcbc740c3c9d99afe0d0f72b7161643bf50e2af2feaddd5913a7b6a3</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</file>
@@ -2952,12 +2979,12 @@
          <hash>a4f1774c6f1f8c6cd522567536c9e9d75ca63259b868015ac9b0fb0aeeffe1f4</hash>
       </entry>
       <entry>
-         <file>..\src\packs\ATSAML21J18B_DFP\instance\evsys.h</file>
-         <hash>16a7bb8770b2da2a9f1da8d0d4d857879ad396ce067614e6c3560aeb49d5533d</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_l21_xpro\usb\usb_hub.h</file>
          <hash>f07eb653a11355424adb96ff0fec6796f6b95c8924ac93fb9207f888d130bc7d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\ATSAML21J18B_DFP\instance\evsys.h</file>
+         <hash>16a7bb8770b2da2a9f1da8d0d4d857879ad396ce067614e6c3560aeb49d5533d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\usb\usb_host_msd.h</file>
@@ -3000,12 +3027,12 @@
          <hash>0d02d31a460074717ce25b506a1a9be2db4740e0aeab9159c65b5556aba63922</hash>
       </entry>
       <entry>
-         <file>..\src\packs\ATSAML21J18B_DFP\instance\trng.h</file>
-         <hash>687f7d4aecb51053128342ceb5ad8e56a84adcec99953fa45b650ce5733a14ba</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_l21_xpro\driver\usb\drv_usb_external_dependencies.h</file>
          <hash>9c425976fc28dee4877b6dc97e3d85c69d99a3bbacf7813ea324948a6c9e8431</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\ATSAML21J18B_DFP\instance\trng.h</file>
+         <hash>687f7d4aecb51053128342ceb5ad8e56a84adcec99953fa45b650ce5733a14ba</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\system\int\sys_int_mapping.h</file>
