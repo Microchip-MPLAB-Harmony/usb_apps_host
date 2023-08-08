@@ -532,7 +532,7 @@
         &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;core&quot; x=&quot;168&quot; y=&quot;21&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;dfp&quot; x=&quot;171&quot; y=&quot;49&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;drv_usbhs_v1&quot; x=&quot;24&quot; y=&quot;248&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;sys_fs&quot; x=&quot;468&quot; y=&quot;248&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;sys_fs&quot; x=&quot;469&quot; y=&quot;248&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;sys_time&quot; x=&quot;187&quot; y=&quot;110&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;tc0&quot; x=&quot;28&quot; y=&quot;156&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;usb_host&quot; x=&quot;199&quot; y=&quot;250&quot;/&gt;
@@ -3580,6 +3580,33 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_FAT_EXFAT_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_FAT_EXFAT_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_LFN_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_LFN_ENABLE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_fs&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_MEDIA_DEVICE_1_NAME_IDX0"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_MEDIA_DEVICE_1_NAME_IDX0&quot;&gt;
@@ -4340,7 +4367,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\initialization.c</file>
-         <hash>cb97b4debf4afe179b37f98df4362714468078a6783e61391a746c7aca8fb31f</hash>
+         <hash>2fd0155171deefe2d2ab6cdaf21833b288402b9319c860fb209ae9898ae47c02</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\usb\usb_host_client_driver.h</file>
@@ -4652,7 +4679,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\system\fs\fat_fs\file_system\ffconf.h</file>
-         <hash>eb42d88a772858dbd895386063ff6fa76df37a06bf8ee6da1bf3a43a8d9584e4</hash>
+         <hash>a2dc75b0fcbc740c3c9d99afe0d0f72b7161643bf50e2af2feaddd5913a7b6a3</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\driver\usb\uhp\src\drv_usb_ehci.c</file>
@@ -4800,7 +4827,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\tasks.c</file>
-         <hash>9a3adf7f1d8f2e4d8f475f1f28efba4a8500b56551812119d917f0739b94b555</hash>
+         <hash>d1e231740eae7643b29673d60d6f72a4c040fed8c76fce15dddb73057f34d3a7</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAMA7G54_DFP\instance\sfr.h</file>
@@ -4824,7 +4851,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\configuration.h</file>
-         <hash>e8c443ebe273d004823e2ed06f9059ebd38b0a791fddd5418b11e3c3e00aa259</hash>
+         <hash>f13fa73c081c63e60f6a1311d60e8c7e8047f817437fd564e965305ed3558bc1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\interrupts.c</file>
@@ -4832,7 +4859,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\definitions.h</file>
-         <hash>a681bab4a7a457e78c138c3e8a5ef9eb80c3823d96d4b4af9969affc5486c313</hash>
+         <hash>e3d43f8780ec076962c35d7561ec4462eb033bd4e891b3b30e66574852caeb38</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAMA7G54_DFP\instance\pit64b2.h</file>
@@ -5148,7 +5175,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\system\fs\sys_fs.h</file>
-         <hash>4ca0bf61b93d1b4335bad8755bfeeed6dfda8a7eb3f2eabfcd9239a0b78e01af</hash>
+         <hash>5161c95024f6736400bcfd7d534651c867cd447549fa73d9d9be7044c576bbcd</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\usb\usb_common.h</file>
