@@ -169,12 +169,6 @@ extern "C" {
 #define USB_HOST_MSD_LUN_NUMBERS              1
 
 
-/* Number of CDC Function driver instances in the application */
-#define USB_HOST_CDC_INSTANCES_NUMBER         1
-
-/* Number of CDC Attach Listeners */ 
-#define USB_HOST_CDC_ATTACH_LISTENERS_NUMBER        1
-
 /*** USB Driver Configuration ***/
 
 /* Maximum USB driver instances */
@@ -206,6 +200,12 @@ extern "C" {
 
 /* Alignment for buffers that are submitted to USB Driver*/ 
 #define USB_ALIGN  CACHE_ALIGN
+
+/* Number of CDC Function driver instances in the application */
+#define USB_HOST_CDC_INSTANCES_NUMBER         1
+
+/* Number of CDC Attach Listeners */ 
+#define USB_HOST_CDC_ATTACH_LISTENERS_NUMBER        1
 
 
 
