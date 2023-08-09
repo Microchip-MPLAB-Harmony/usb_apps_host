@@ -552,7 +552,7 @@
         &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;dfp&quot; x=&quot;152&quot; y=&quot;13&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;drv_usbhs_v1&quot; x=&quot;0&quot; y=&quot;237&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;efc&quot; x=&quot;0&quot; y=&quot;98&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;sys_fs&quot; x=&quot;446&quot; y=&quot;245&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;sys_fs&quot; x=&quot;446&quot; y=&quot;246&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;sys_time&quot; x=&quot;294&quot; y=&quot;356&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;tc0&quot; x=&quot;0&quot; y=&quot;402&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;usb_host&quot; x=&quot;166&quot; y=&quot;237&quot;/&gt;
@@ -5124,6 +5124,33 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_FAT_EXFAT_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_FAT_EXFAT_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_LFN_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_LFN_ENABLE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_fs&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_MEDIA_DEVICE_1_NAME_IDX0"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_MEDIA_DEVICE_1_NAME_IDX0&quot;&gt;
@@ -5874,7 +5901,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\definitions.h</file>
-         <hash>cfe00876033e816f4ed4f657b0a4e8eaecf4fa87473f1889716e2ebc2b64ffc4</hash>
+         <hash>433782869d62e684ebe852ef9e29702aa0a99d12520281a938b43a57bc48c5b4</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\fuses.h</file>
@@ -5906,7 +5933,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\initialization.c</file>
-         <hash>809ff27821d901fea23c431478ebd6a9dfa35f36637ae511fcd85f4ba7fb258b</hash>
+         <hash>2b881c111afe1aeadb59b3753a40cd6fdf7978b68e0d1b12712daf9b06f7263f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\system\system.h</file>
@@ -6086,7 +6113,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\system\fs\sys_fs.h</file>
-         <hash>4ca0bf61b93d1b4335bad8755bfeeed6dfda8a7eb3f2eabfcd9239a0b78e01af</hash>
+         <hash>5161c95024f6736400bcfd7d534651c867cd447549fa73d9d9be7044c576bbcd</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\usb\src\usb_host_cdc_acm.c</file>
@@ -6330,7 +6357,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\system\fs\fat_fs\file_system\ffconf.h</file>
-         <hash>eb42d88a772858dbd895386063ff6fa76df37a06bf8ee6da1bf3a43a8d9584e4</hash>
+         <hash>a2dc75b0fcbc740c3c9d99afe0d0f72b7161643bf50e2af2feaddd5913a7b6a3</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\system\int\sys_int_mapping.h</file>
@@ -6462,7 +6489,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\tasks.c</file>
-         <hash>f24fea9dc146682b8f4064b368cca338ca0554649ec65307a1f6da3606d9abf9</hash>
+         <hash>51073566cacc974d12e79e307d8484844c42dc159b892d48d3bc6f2cbde25a30</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\rtt.h</file>
@@ -6642,7 +6669,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\configuration.h</file>
-         <hash>939428fb69141c6e79de8a144a382afdeec874c7fc9176a083ed645b205ce51e</hash>
+         <hash>4688fcb4520e3dda76736dde2e8491907a093c075da2694673419f19425a5639</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\uart3.h</file>
