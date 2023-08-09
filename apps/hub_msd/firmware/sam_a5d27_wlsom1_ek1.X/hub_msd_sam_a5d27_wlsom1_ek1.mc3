@@ -4524,6 +4524,17 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_FAT_EXFAT_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_FAT_EXFAT_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_IDX0"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_IDX0&quot;&gt;
@@ -4578,6 +4589,22 @@
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_INSTANCES_NUMBER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;User dnOrder=&quot;0&quot; value=&quot;2&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_LFN_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_LFN_ENABLE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_fs&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sys_fs&gt;
 &lt;/sys_fs&gt;
@@ -5792,7 +5819,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\configuration.h</file>
-         <hash>1977b6d8ed9abfc1d28fc1c4daa95abb49ac736edd76c41c6e3599f1a4fbbaa5</hash>
+         <hash>60ca2ad29ee10784398d901a300efd623ab7c7be9b780ff1e99d8d2c13a5f767</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\usb\src\usb_host_hub.c</file>
@@ -5852,7 +5879,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\definitions.h</file>
-         <hash>4eadc85e38c310dc39f98c0a82868e3e070970bc2a71ac1dc98cc6aab850a79c</hash>
+         <hash>84313b3fd248ca5e6a62a9e764aa298ad12bf8e2101db76880567c1d4b69a91b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\driver\usb\uhp\src\drv_usb_ohci.c</file>
@@ -5880,7 +5907,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\tasks.c</file>
-         <hash>d1e231740eae7643b29673d60d6f72a4c040fed8c76fce15dddb73057f34d3a7</hash>
+         <hash>9a3adf7f1d8f2e4d8f475f1f28efba4a8500b56551812119d917f0739b94b555</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\device_cache.h</file>
@@ -6128,7 +6155,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\initialization.c</file>
-         <hash>7168271ac1f18cb7fb8f6aebca386c50c5900a8fe1ab26afbf39e115c770de22</hash>
+         <hash>4872ba05af93fe97e6ebd7b683d54c0ccf899ac73ae0a8c1a33587a9a8541bed</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\usb\usb_chapter_9.h</file>
@@ -6284,7 +6311,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\system\fs\sys_fs.h</file>
-         <hash>4ca0bf61b93d1b4335bad8755bfeeed6dfda8a7eb3f2eabfcd9239a0b78e01af</hash>
+         <hash>5161c95024f6736400bcfd7d534651c867cd447549fa73d9d9be7044c576bbcd</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CLD2G_DFP\instance\sfr.h</file>
@@ -6468,7 +6495,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\system\fs\fat_fs\file_system\ffconf.h</file>
-         <hash>4b18e8ce0011ac7b0914aa6de52c456333b08a6d02b0d6953fed80ed67f5d2fa</hash>
+         <hash>e3021a3bb2a5968b7c23b09d411df4ff723696c8344b73870b6901ea3b1ee95a</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CLD2G_DFP\instance\flexcom2.h</file>
