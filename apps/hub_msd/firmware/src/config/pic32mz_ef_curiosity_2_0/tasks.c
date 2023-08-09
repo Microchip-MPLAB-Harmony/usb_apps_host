@@ -82,11 +82,11 @@ SYS_FS_Tasks();
     
 
     /* Maintain Middleware & Other Libraries */
-        /* USBHS Driver Task Routine */ 
-    DRV_USBHS_Tasks(sysObj.drvUSBHSObject);
-
-    /* USB Host Task Routine */ 
+        /* USB Host Task Routine */ 
     USB_HOST_Tasks(sysObj.usbHostObject0);
+
+    /* USBHS Driver Task Routine */ 
+    DRV_USBHS_Tasks(sysObj.drvUSBHSObject);
 
 
 
