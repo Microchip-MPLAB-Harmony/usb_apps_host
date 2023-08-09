@@ -503,7 +503,7 @@
         &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;drv_usbfs_v1&quot; x=&quot;12&quot; y=&quot;348&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;evsys&quot; x=&quot;307&quot; y=&quot;18&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;nvmctrl&quot; x=&quot;438&quot; y=&quot;7&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;sys_fs&quot; x=&quot;462&quot; y=&quot;344&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;sys_fs&quot; x=&quot;464&quot; y=&quot;347&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;sys_time&quot; x=&quot;173&quot; y=&quot;140&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;tc3&quot; x=&quot;15&quot; y=&quot;182&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;usb_host&quot; x=&quot;181&quot; y=&quot;343&quot;/&gt;
@@ -2422,6 +2422,17 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_FAT_EXFAT_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_FAT_EXFAT_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_IDX0"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_IDX0&quot;&gt;
@@ -2476,6 +2487,22 @@
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_INSTANCES_NUMBER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;User dnOrder=&quot;0&quot; value=&quot;2&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_LFN_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_LFN_ENABLE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_fs&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sys_fs&gt;
 &lt;/sys_fs&gt;
@@ -3198,12 +3225,12 @@
          <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
       </entry>
       <entry>
-         <file>..\src\packs\ATSAMD21J18A_DFP\instance\dmac.h</file>
-         <hash>143f6112c912d481ba6a7fc2c611aa74a8940e0de4c8986e6cfea46f914cccd3</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_d21_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_host.c</file>
          <hash>7413265d5020a5f665ac280d2cb3952b6ec5b029d96bf1a241b189edbf24877c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\ATSAMD21J18A_DFP\instance\dmac.h</file>
+         <hash>143f6112c912d481ba6a7fc2c611aa74a8940e0de4c8986e6cfea46f914cccd3</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMD21J18A_DFP\component\wdt.h</file>
@@ -3315,7 +3342,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\definitions.h</file>
-         <hash>ef5278fd4fa469a076e6c14dbc0ac9dc78d5b4aa98fafa5d0aad5e47144dfd8c</hash>
+         <hash>25ee7d8a795c1d7d406ed354fe0c146bf85eacccbfb8bc195155704e7afdf437</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armcc.h</file>
@@ -3335,7 +3362,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\system\fs\fat_fs\file_system\ffconf.h</file>
-         <hash>4b18e8ce0011ac7b0914aa6de52c456333b08a6d02b0d6953fed80ed67f5d2fa</hash>
+         <hash>e3021a3bb2a5968b7c23b09d411df4ff723696c8344b73870b6901ea3b1ee95a</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMD21J18A_DFP\component\adc.h</file>
@@ -3526,12 +3553,12 @@
          <hash>397cd4bfd90e8de41af56735747ebb53b64eb04edde9975a3bb0fd8e7c94daf6</hash>
       </entry>
       <entry>
-         <file>..\src\packs\ATSAMD21J18A_DFP\instance\tcc0.h</file>
-         <hash>cf4b20b2f4571ce3c12f5514890ba07a029b296f945494bf6e3a861f5c374e95</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_d21_xpro\driver\usb\drv_usb_external_dependencies.h</file>
          <hash>9c425976fc28dee4877b6dc97e3d85c69d99a3bbacf7813ea324948a6c9e8431</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\ATSAMD21J18A_DFP\instance\tcc0.h</file>
+         <hash>cf4b20b2f4571ce3c12f5514890ba07a029b296f945494bf6e3a861f5c374e95</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMD21J18A_DFP\instance\sercom4.h</file>
@@ -3659,7 +3686,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\system\fs\sys_fs.h</file>
-         <hash>4ca0bf61b93d1b4335bad8755bfeeed6dfda8a7eb3f2eabfcd9239a0b78e01af</hash>
+         <hash>5161c95024f6736400bcfd7d534651c867cd447549fa73d9d9be7044c576bbcd</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMD21J18A_DFP\instance\rtc.h</file>
