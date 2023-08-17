@@ -417,7 +417,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMG_DFP" vendor="Microchip" version="3.7.83"/>
+        <pack name="SAMG_DFP" vendor="Microchip" version="3.8.197"/>
         <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
       </packs>
       <ScriptingSettings>
