@@ -576,7 +576,7 @@ void APP_HID_Tasks ( void )
             break;
 
         case APP_HID_STATE_DEVICE_DETACHED:
-            LED1_Off();
+            
             break;
         
         case APP_STATE_ERROR:
@@ -607,6 +607,8 @@ void APP_USBHostHIDMouseEventHandler(USB_HOST_HID_MOUSE_HANDLE handle,
         case USB_HOST_HID_MOUSE_EVENT_DETACH:
             appHIDData.handle = handle;
             appHIDData.state = APP_HID_STATE_DEVICE_DETACHED;
+			/* Switch off LED  */
+            LED1_Off();
             break;
 
         case USB_HOST_HID_MOUSE_EVENT_REPORT_RECEIVED:
