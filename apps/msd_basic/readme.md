@@ -144,8 +144,9 @@ Following table gives the details of project configurations, target device used,
 - Jumper J205 must be shorted.
 - Connect the USB device to the "TARGET USB" connector using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit).
 - The LED D204 indicates the file write is complete.
-
-    ![Curiosity PIC32MZ W1 Development board](images/usb_apps_host_figure_1.png)
+- J205 must be shorted for the Device Functionality
+- Jumper on the pin J211 must be placed between pin 1 and pin 2
+   ![Curiosity PIC32MZ W1 Development Board](images/PIC32MZW1.png)
 
 ### <a name="config_9"></a> [SAM9X60-EK Evaluation Board](https://www.microchip.com/developmenttools/ProductDetails/DT100126)
 
