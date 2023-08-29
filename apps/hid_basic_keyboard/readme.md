@@ -66,7 +66,7 @@ Following table gives the details of project configurations, target device used,
 ### <a name="config_22"></a> [SAM9X75-DDR3-EB Evaluation Board]()
 
 - Powered the board with an external power supply (or use the micro AB connector).
-- Setup the SD card 
+- Setup the SD card (Note: exFAT formatted SD Cards are not supported) 
     - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x75_eb.X/build/binaries/boot.bin).
     - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
     - Insert the SD card into the SDMMC connector (SDMMC0) on the board.
@@ -116,7 +116,7 @@ Following table gives the details of project configurations, target device used,
 ### <a name="config_9"></a> [SAM9X60-EK Evaluation Board](https://www.microchip.com/developmenttools/ProductDetails/DT100126)
 
 - A commercially available USB Keyboard is required to run this demonstration application.
-- Setup the SD card 
+- Setup the SD card (Note: exFAT formatted SD Cards are not supported) 
     - Download harmony MPU bootstrap loader from this [location](../../deps/at91bootstrap_sam_9x60_binaries/boot.bin).
     - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
     - Insert the SD card into the SDMMC connector J4 on the board.
@@ -133,7 +133,7 @@ Following table gives the details of project configurations, target device used,
     **Note: Reset push button on SAM9X60 EK is labeled as SW3**
 
 ### <a name="#config_sam9x60_curiosity"></a> [SAM9X60-Curiosity Board](https://www.microchip.com/en-us/development-tool/EV40E67A)
-- Setup the SD card 
+- Setup the SD card (Note: exFAT formatted SD Cards are not supported) 
     - Download harmony MPU bootstrap loader from this [location](../../deps/at91bootstrap_sam_9x60_binaries/boot.bin).
     - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
     - Insert the SD card into the SDMMC0 connector J3 on the board.
@@ -148,7 +148,7 @@ Following table gives the details of project configurations, target device used,
 ### <a name="config_10"></a> [SAMA5D2 Xplained Ultra Board](https://www.microchip.com/Developmenttools/ProductDetails/ATSAMA5D2C-XULT)
 
 - A commercially available USB Keyboard is required to run this demonstration application.
-- Setup the SD card 
+- Setup the SD card (Note: exFAT formatted SD Cards are not supported) 
     - Download harmony MPU bootstrap loader from this [location](../../deps/at91bootstrap_sam_a5d2_binaries/boot.bin).
     - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
     - Insert the SD card into the SDMMC1 slot on the board.
@@ -168,7 +168,7 @@ Following table gives the details of project configurations, target device used,
 ### <a name="config_18"></a> [SAMA5D27 SOM1 Kit1](https://www.microchip.com/developmenttools/ProductDetails/atsama5d27-som1-ek1)
 
 - A commercially available USB Keyboard is required to run this demonstration application.
-- Setup the SD card
+- Setup the SD card (Note: exFAT formatted SD Cards are not supported)
     - Jumper J9 must be removed to have the JTAG-CDC enable.
     - Download harmony MPU bootstrap loader from this [location](../../deps/at91bootstrap_sam_a5d27_som1_binaries/boot.bin).
     - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
@@ -184,7 +184,7 @@ Following table gives the details of project configurations, target device used,
 ### <a name="config_19"></a> [ATSAMA5D27-WLSOM1 Evaluation Kit ](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320117)
 
 - A commercially available USB Keyboard is required to run this demonstration application.
-- Setup the SD card 
+- Setup the SD card (Note: exFAT formatted SD Cards are not supported) 
     - Download harmony MPU bootstrap loader from this [location](../../deps/at91bootstrap_sam_a5d27_wlsom1_binaries/boot.bin).
     - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
     - Insert the SD card into the SDMMC0 Card Connector (J9) on the board.
@@ -200,7 +200,7 @@ Following table gives the details of project configurations, target device used,
 
 - A commercially available USB Keyboard is required to run this demonstration application.
 - Powered the board with an external power supply (J1).
-- Setup the SD card 
+- Setup the SD card (Note: exFAT formatted SD Cards are not supported) 
     - Download harmony MPU bootstrap loader from this [location](../../deps/at91bootstrap_sam_a7g5_binaries/boot.bin).
     - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
     - Insert the SD card into the SD Card Connector (J4) on the board.

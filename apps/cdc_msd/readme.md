@@ -55,7 +55,7 @@ Following table gives the details of project configurations, target device used,
 ### <a name="config_22"></a> [SAM9X75-DDR3-EB Evaluation Board]()
 
 - Powered the board with an external power supply (or use the micro AB connector).
-- Setup the SD card 
+- Setup the SD card (Note: exFAT formatted SD Cards are not supported) 
     - Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_9x75_eb.X/build/binaries/boot.bin).
     - Copy the downloaded boot loader binary (boot.bin) and generated application binary (harmony.bin) into the SD card.
     - Insert the SD card into the SDMMC connector (SDMMC0) on the board.
