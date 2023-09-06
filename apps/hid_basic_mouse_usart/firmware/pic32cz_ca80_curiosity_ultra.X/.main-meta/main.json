@@ -4,27 +4,27 @@
 	"content": {
 		"metaDataVersion": "1.3.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_host_hid_basic_mouse_usart_pic32cz_ca80_curiosity_ultra",
-		"version": "3.5.0-E1",
+		"version": "3.5.0",
 		"displayName": "HID Basic Mouse USART Example (hid_basic_mouse_usart) Example for PIC32CZ_CA Family",
 		"projectName": "hid_basic_mouse_usart_pic32cz_ca80_curiosity_ultra",
 		"shortDescription": "This application uses the USB Host layer, HID Client driver and HID Mouse Usage driver to enumerate a USB Mouse and detect Mouse button press release events. The Mouse events are displayed using a terminal emulator on a personal computer.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=6.05.0"
+			"semverRange": ">=6.15.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=4.2.0"
+				"semverRange": ">=4.3.0"
 			}
 		],
 		"dfp": {
 			"name": "PIC32CZ-CA80_DFP",
-			"semverRange": "^1.0.17"
+			"semverRange": "^1.2.150"
 		},
 		"configurator": {
 			"name": "MCC",
-			"semverRange": ">=5.2.2"
+			"semverRange": ">=5.3.7"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",
