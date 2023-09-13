@@ -4330,7 +4330,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\mpddrc.h</file>
@@ -4349,12 +4349,12 @@
          <hash>8d463cfac1f59387de6f932be156fac58a6c20c582ac50f6e7c90ece73567ee6</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x60_ek\bsp\bsp.h</file>
-         <hash>25e1411b407242e817facc59c9386c7ba9f886b114dafa4df899ba2f90396888</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_9x60_ek\usb\usb_msd.h</file>
          <hash>411e51784fd839785fa33a6b5c5fd26b446947816cc1c96b6f5e9d3b3ac65559</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_ek\bsp\bsp.h</file>
+         <hash>25e1411b407242e817facc59c9386c7ba9f886b114dafa4df899ba2f90396888</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\usb\usb_common.h</file>
@@ -4802,7 +4802,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\definitions.h</file>
-         <hash>3b174aea4d842407789de066370c22cfd594cd873b0c20b6ad297a7c159ec117</hash>
+         <hash>bd7592f2982a27755b06fc640eb11948c5e528a006e0668e4e744f236655745a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\system\time\src\sys_time_local.h</file>

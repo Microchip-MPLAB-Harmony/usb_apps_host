@@ -2472,7 +2472,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\definitions.h</file>
-         <hash>a67465ca919c6df4e2189788a403f78c0a9f21399244fa9eac4406791077c3cf</hash>
+         <hash>42fae6aae5a2be7dc23a064b6b0c5c6b06fee8d574dd44e259b6a848781f3745</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAML21J18B_DFP\component\mclk.h</file>
@@ -2496,7 +2496,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAML21J18B_DFP\component\pm.h</file>

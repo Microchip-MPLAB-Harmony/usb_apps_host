@@ -2946,12 +2946,12 @@
          <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
       </entry>
       <entry>
-         <file>..\src\packs\ATSAMD21J18A_DFP\instance\dmac.h</file>
-         <hash>143f6112c912d481ba6a7fc2c611aa74a8940e0de4c8986e6cfea46f914cccd3</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_d21_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_host.c</file>
          <hash>7413265d5020a5f665ac280d2cb3952b6ec5b029d96bf1a241b189edbf24877c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\ATSAMD21J18A_DFP\instance\dmac.h</file>
+         <hash>143f6112c912d481ba6a7fc2c611aa74a8940e0de4c8986e6cfea46f914cccd3</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMD21J18A_DFP\component\wdt.h</file>
@@ -3131,7 +3131,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\system\fs\src\sys_fs_media_manager.c</file>
@@ -3282,12 +3282,12 @@
          <hash>397cd4bfd90e8de41af56735747ebb53b64eb04edde9975a3bb0fd8e7c94daf6</hash>
       </entry>
       <entry>
-         <file>..\src\packs\ATSAMD21J18A_DFP\instance\tcc0.h</file>
-         <hash>cf4b20b2f4571ce3c12f5514890ba07a029b296f945494bf6e3a861f5c374e95</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_d21_xpro\driver\usb\drv_usb_external_dependencies.h</file>
          <hash>9c425976fc28dee4877b6dc97e3d85c69d99a3bbacf7813ea324948a6c9e8431</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\ATSAMD21J18A_DFP\instance\tcc0.h</file>
+         <hash>cf4b20b2f4571ce3c12f5514890ba07a029b296f945494bf6e3a861f5c374e95</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMD21J18A_DFP\instance\sercom4.h</file>

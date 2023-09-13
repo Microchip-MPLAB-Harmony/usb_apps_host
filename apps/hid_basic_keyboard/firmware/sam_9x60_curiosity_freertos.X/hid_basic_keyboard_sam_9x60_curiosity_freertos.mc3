@@ -8475,7 +8475,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\definitions.h</file>
-         <hash>3b305ed3a3d9b8703e4368e927db9af357aa4cbdbd832e952168d1418b9a050f</hash>
+         <hash>fceb16c819069640229f6cf147dc08890bcecb102bb8e6cb09f8a177a36d59d1</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\flexcom12.h</file>
@@ -8535,7 +8535,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\initialization.c</file>
-         <hash>d194066e96f95611f6d82f88f891b53b188249cbde797ca6ec3bc52525b193f9</hash>
+         <hash>a428eb294e115d6079d2f0996d714438e37201929d974091aabce1028209590e</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\xdmac.h</file>
@@ -8575,7 +8575,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\sfr.h</file>
@@ -8963,7 +8963,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\tasks.c</file>
-         <hash>5cac849a488b6c981dd7ff35929d8797c68b589d9946d3475d8631ebd745752b</hash>
+         <hash>508c2a3b4c49fec26179ac8c5370ca2cf0f739f2be8cad7a87a64d6184bbafc4</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\flexcom7.h</file>
@@ -9043,7 +9043,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\configuration.h</file>
-         <hash>5acb2dfd703130263def3975707a71ceb9b5acfc677664ee01587db276ff90be</hash>
+         <hash>8ea2b69bc639c4c96357db028355fb7424bece485abffed52e3d28da35ce5c96</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\pmerrloc.h</file>

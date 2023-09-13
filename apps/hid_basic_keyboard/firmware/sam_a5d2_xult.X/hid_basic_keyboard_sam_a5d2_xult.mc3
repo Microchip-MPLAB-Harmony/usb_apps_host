@@ -5046,7 +5046,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\instance\flexcom0.h</file>
@@ -5306,7 +5306,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\definitions.h</file>
-         <hash>1569b31b71a840face51b5dffd0389be9653976087d539b683e0cadf611b5dd3</hash>
+         <hash>3958ed50c6c7185ebbbea40d1df81149b0ae2445ce5ef1520a81d920f6a7c541</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\peripheral\mmu\plib_mmu.h</file>

@@ -50,9 +50,9 @@
 #include <stdbool.h>
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_host.h"
+#include "bsp/bsp.h"
 #include "driver/usb/uhp/drv_usb_ehci.h"
 #include "driver/usb/uhp/drv_usb_ohci.h"
-#include "bsp/bsp.h"
 #include "peripheral/pit/plib_pit.h"
 #include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/matrix/plib_matrix.h"

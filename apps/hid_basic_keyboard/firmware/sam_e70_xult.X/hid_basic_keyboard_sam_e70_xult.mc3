@@ -9548,7 +9548,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\definitions.h</file>
-         <hash>eaf0cdce367023c10cf025736e0cfef86d27ce102e5d4112a1423e5d4397a1c6</hash>
+         <hash>739cac6213ba85e9ac9befe0d221fad8e89a07c8501a8dc7902491c714904f82</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\fuses.h</file>
@@ -9596,11 +9596,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\initialization.c</file>
-         <hash>1155b5ebcc4fbb6c8aff61ad727f0aebd190e5cb6e45911cf6020e411a2f40cd</hash>
+         <hash>7f327ccc347a62f1f868a4a87b1b840177351afab6e2b188229933fd281b4171</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\peripheral\pio\plib_pio.h</file>
@@ -9880,7 +9880,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\tasks.c</file>
-         <hash>30b9d11fcbd4a8575b9d545b1499262817b93f5f38c5ae927af4bd26df110d5b</hash>
+         <hash>56f122302aeed1a56019ee4fceaba7d20239f8dc2d2b91fde25f28bc70ddf155</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\rtt.h</file>
@@ -10248,7 +10248,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\configuration.h</file>
-         <hash>2b055356b89c1b1c97e811a52fa7af900224477105aa8332b65bb7356c977c82</hash>
+         <hash>25a6ced11606a277a3f2db5ab23ae8ed3aee7c4f8e958f07f662a7f439162083</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\uart3.h</file>

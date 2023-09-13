@@ -2835,7 +2835,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_UOEMonitor_Unsupported.h</file>
@@ -3095,7 +3095,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\definitions.h</file>
-         <hash>a5f98aa3d08773888948e74bf39ff6fb00c2a3e5fb6027892d02f25f7a6df1e7</hash>
+         <hash>0117fba96f38252517994cc0a241489cef05494e345854ce385bdf8812ee494b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\driver\usb\usbfs\src\templates\usb_LiveJState_Unsupported.h</file>

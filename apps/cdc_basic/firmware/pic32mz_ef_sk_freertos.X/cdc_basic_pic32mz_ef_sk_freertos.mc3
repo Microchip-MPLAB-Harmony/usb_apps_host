@@ -5960,7 +5960,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\configuration.h</file>
-         <hash>6ef163aa5c94e1ccd2894277aa936b1f6f0bd0b49bc8e74fcc71017c473fcca7</hash>
+         <hash>2f30d4e845e4f84da298fedf35407bc2c5b717e5970b1983ad5c75276c55b303</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\usb\src\usb_host_cdc_acm.c</file>
@@ -6012,7 +6012,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\initialization.c</file>
-         <hash>d55f4887ef8dcc91ea9463236d2e7a33e37a97876858940780b0bfb2810e4751</hash>
+         <hash>277e5035743d566b576329a6cc81ce515661a6171780460b22845733733a735b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\driver\usb\usbhs\src\templates\usbhs_EndpointFIFO_Unsupported.h</file>
@@ -6100,7 +6100,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\definitions.h</file>
-         <hash>f5e8f019d91aa6229bf37f8e54c5204971fc1dfa4b556cc7d3a7b0e1a637d70e</hash>
+         <hash>b8f9851c5f3fd6131c8315353c73e4e0c4dc4c1a72b3171b3466da19c5f0d1b4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\usb\usb_cdc.h</file>
@@ -6128,7 +6128,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\peripheral\gpio\plib_gpio.h</file>
@@ -6195,12 +6195,12 @@
          <hash>7690f172b3cbb636cd9e79bbb48a4b05e98cf74ab854e8c519d8de7fc3c70518</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mz_ef_sk_freertos\peripheral\coretimer\plib_coretimer.h</file>
-         <hash>d88929a1d7d6d0428c517cb789359c574c42d52c3c8a04bb267990255ad81706</hash>
-      </entry>
-      <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\usb\usb_hub.h</file>
          <hash>f07eb653a11355424adb96ff0fec6796f6b95c8924ac93fb9207f888d130bc7d</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mz_ef_sk_freertos\peripheral\coretimer\plib_coretimer.h</file>
+         <hash>d88929a1d7d6d0428c517cb789359c574c42d52c3c8a04bb267990255ad81706</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\peripheral\clk\plib_clk.h</file>
@@ -6408,7 +6408,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\tasks.c</file>
-         <hash>8023f0c9e7129025e8b01440ba90b556e333a8dc8320694adf346a6caab89cd7</hash>
+         <hash>3f6f1ac2f8c31e98ea08ce40c92d0d2f0feba011dee3704e46efaf7be97dddf5</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\stream_buffer.c</file>

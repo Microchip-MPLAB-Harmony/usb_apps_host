@@ -48,9 +48,9 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include "driver/usb/usbhs/drv_usbhs.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_host.h"
-#include "driver/usb/usbhs/drv_usbhs.h"
 #include "peripheral/coretimer/plib_coretimer.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gpio/plib_gpio.h"
@@ -58,10 +58,10 @@
 #include "usb/usb_host_cdc.h"
 #include "usb/usb_cdc.h"
 #include "bsp/bsp.h"
+#include "system/time/sys_time.h"
 #include "system/int/sys_int.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "system/time/sys_time.h"
 #include "app.h"
 
 
@@ -193,9 +193,9 @@ Remarks:
 
 typedef struct
 {
-    SYS_MODULE_OBJ  usbHostObject0;
-
 	SYS_MODULE_OBJ  drvUSBHSObject;
+
+    SYS_MODULE_OBJ  usbHostObject0;
 
     SYS_MODULE_OBJ  sysTime;
 

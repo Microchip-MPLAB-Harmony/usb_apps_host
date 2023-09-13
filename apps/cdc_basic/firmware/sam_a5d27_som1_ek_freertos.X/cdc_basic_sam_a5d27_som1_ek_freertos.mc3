@@ -5540,7 +5540,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\configuration.h</file>
-         <hash>fe211377501f38352698a1101469d85e53ded0798905b74ebcd5febfd2f06dbe</hash>
+         <hash>5eca8d32e38ecb7bb08b2ccbf2e3413f423ac0663436bd4396b3e76ba370679f</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\instance\gmac.h</file>
@@ -5588,7 +5588,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\initialization.c</file>
-         <hash>be829d7d41cabe16a2bf2c5f7a58500d44e81e9939ee3f69f1cd446a5cf4dd4d</hash>
+         <hash>d63155b222f44d55a1ac7977266b8b70d85c72c1fe10045e1933faf5825bb6a0</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\component\matrix.h</file>
@@ -5744,7 +5744,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\definitions.h</file>
-         <hash>b0ac21fd97ad85d472a3683fb3b84826e1f69cc0b5550aca6c445031da5cc86b</hash>
+         <hash>d86ea998fd7a3aacbf9e1da20708314188dabcd5ff167b2534fd9a0152da2820</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\core_ca.h</file>
@@ -5940,7 +5940,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\component\gmac.h</file>
@@ -6127,12 +6127,12 @@
          <hash>f7f37a8b072223ed02d9941eeb37769d04f4e8c960e84bb173082d5c5ddcf2dd</hash>
       </entry>
       <entry>
-         <file>..\src\packs\ATSAMA5D27CD1G_DFP\instance\adc.h</file>
-         <hash>6e7733973822e43a63638de381a73d63357e620512f84fe6d52d31338155fb59</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\usb_host_cdc.h</file>
          <hash>b43d66be63443bad351378adb0f049219dd14b6ed4ecc2497919bd8e93001030</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\ATSAMA5D27CD1G_DFP\instance\adc.h</file>
+         <hash>6e7733973822e43a63638de381a73d63357e620512f84fe6d52d31338155fb59</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\system\cache\sys_cache.c</file>
@@ -6264,7 +6264,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\tasks.c</file>
-         <hash>508c2a3b4c49fec26179ac8c5370ca2cf0f739f2be8cad7a87a64d6184bbafc4</hash>
+         <hash>5cac849a488b6c981dd7ff35929d8797c68b589d9946d3475d8631ebd745752b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\osal\osal.h</file>
@@ -6283,12 +6283,12 @@
          <hash>f61fbc378d020b38f5de57ab5b0baea67963eea234581af49ee3b3a3ffc749af</hash>
       </entry>
       <entry>
-         <file>..\src\packs\ATSAMA5D27CD1G_DFP\component\twihs.h</file>
-         <hash>cb55e2ae8eb4185d735f40e823a6cfdba53cf48a02c0766fbeeecca628d865a6</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\usb_cdc.h</file>
          <hash>8d8e17f16340e1400d60e6552273d11b5ea1ede1d80faf220d6a4dacc5b41634</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\ATSAMA5D27CD1G_DFP\component\twihs.h</file>
+         <hash>cb55e2ae8eb4185d735f40e823a6cfdba53cf48a02c0766fbeeecca628d865a6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\peripheral\mmu\plib_mmu.c</file>

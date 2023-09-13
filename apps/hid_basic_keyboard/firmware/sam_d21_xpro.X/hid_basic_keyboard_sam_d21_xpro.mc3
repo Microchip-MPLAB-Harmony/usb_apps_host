@@ -3751,7 +3751,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\definitions.h</file>
-         <hash>9822031e2f8b3fa1a4e4d1025cffcf8b4c8be76f8926ec31e5d025cc41ec7d00</hash>
+         <hash>173490bac0553c5ec43047b090b116b5136cbd8cf07c6457772fe0ea08b8caf4</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armcc.h</file>
@@ -3815,7 +3815,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMD21J18A_DFP\component\dsu.h</file>

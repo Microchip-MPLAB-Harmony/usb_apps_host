@@ -5718,7 +5718,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\usb\usb_hub.h</file>
@@ -5890,7 +5890,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\tasks.c</file>
-         <hash>508c2a3b4c49fec26179ac8c5370ca2cf0f739f2be8cad7a87a64d6184bbafc4</hash>
+         <hash>5cac849a488b6c981dd7ff35929d8797c68b589d9946d3475d8631ebd745752b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\usb\usb_host.h</file>
@@ -5898,7 +5898,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\configuration.h</file>
-         <hash>7f364898cc58301c1eb624ce90980476e74679a808b2b0583e1d413eff87005d</hash>
+         <hash>3774d29c53ebf5e48ae966ba386e5846a5d74ba8717f6b1465ca96f79ec0cef2</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\component\trng.h</file>
@@ -6090,7 +6090,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\initialization.c</file>
-         <hash>89926e1b02c04ce99826ac91091b98b2fdbca9f3d3e229acb1b0f905107a58a5</hash>
+         <hash>b5d6cbb9cea07d02e92a4d24215f161868b163f47012d0077f607da0c4b34100</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\component\pio.h</file>
@@ -6222,7 +6222,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\definitions.h</file>
-         <hash>d3a5fadd03fbd34ddec3d442344beb628a8004d86aacc320f48b705232d04b98</hash>
+         <hash>a593fe4de11312298fbb87fe719b8997b1ad879cbbf852f53126e31c1a4978bf</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\peripheral\matrix\plib_matrix.c</file>

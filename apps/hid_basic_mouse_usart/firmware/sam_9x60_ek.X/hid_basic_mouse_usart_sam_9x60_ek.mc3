@@ -4538,7 +4538,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\mpddrc.h</file>
@@ -5006,7 +5006,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\definitions.h</file>
-         <hash>bcbd28a8cee3e94eb061b0907298538c2bfad0937a2dbcfe30dd7dc08d043bd2</hash>
+         <hash>5a7fc54033160ab035073b63571bc9f066d3481fddb27edc311c849cae8dba82</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\system\time\src\sys_time_local.h</file>

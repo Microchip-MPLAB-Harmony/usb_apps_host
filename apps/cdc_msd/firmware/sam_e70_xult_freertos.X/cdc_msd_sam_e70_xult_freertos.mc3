@@ -6053,7 +6053,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\ssc.h</file>
@@ -6101,7 +6101,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\initialization.c</file>
-         <hash>2b881c111afe1aeadb59b3753a40cd6fdf7978b68e0d1b12712daf9b06f7263f</hash>
+         <hash>809ff27821d901fea23c431478ebd6a9dfa35f36637ae511fcd85f4ba7fb258b</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\afec1.h</file>
@@ -6405,7 +6405,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\definitions.h</file>
-         <hash>de860944ae2a73fbcd6d104a254bf144a1fc575a9ddcf0f9ff43100a07b20e17</hash>
+         <hash>29ef16de7c968000e4a76bba091dafc3f86a045a1e9dcab4dda96ef65ac48fb4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\usb\src\usb_host_cdc_local.h</file>
@@ -6693,7 +6693,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\tasks.c</file>
-         <hash>33ba6af3e208c8dceb86d9a10aaba6e0adf8d142538b7fdb6ce1b3045deda552</hash>
+         <hash>079eb55758c9dc57001844d4fa046cf0e50fc94b394a92ea9c5282e6be3d8776</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\FreeRTOS_tasks.c</file>
@@ -6737,7 +6737,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\configuration.h</file>
-         <hash>71c1e26d5db7eea245065d081a32e7ea98c4631e8ba20069ddbf8c3a9fc532d8</hash>
+         <hash>d3d21fcb95e5b85c0915574a07fbd64e42a260476e7a1bb7304b1ecbbe31b747</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\system\fs\sys_fs_fat_interface.h</file>

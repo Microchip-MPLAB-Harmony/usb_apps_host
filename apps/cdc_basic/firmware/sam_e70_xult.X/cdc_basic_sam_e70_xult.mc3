@@ -5499,7 +5499,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\definitions.h</file>
-         <hash>8b304807205ed618eeec52c7a82aeaf4611957ad31e2f46c94c3d6558c0849be</hash>
+         <hash>52f808e0acda68138248437f51ca11e6f80dd910366a865d721fc314624a13af</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\fuses.h</file>
@@ -5547,11 +5547,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\initialization.c</file>
-         <hash>9ce310322210801aec4092ceba45ec22f580228df489e87efb571f04c12a8039</hash>
+         <hash>98d0ff3de08b3a17996979c19075009978b65c782b14091cd3ae71aa33e08c84</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\peripheral\pio\plib_pio.h</file>
@@ -5807,7 +5807,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\tasks.c</file>
-         <hash>56f122302aeed1a56019ee4fceaba7d20239f8dc2d2b91fde25f28bc70ddf155</hash>
+         <hash>30b9d11fcbd4a8575b9d545b1499262817b93f5f38c5ae927af4bd26df110d5b</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\rtt.h</file>
@@ -5942,12 +5942,12 @@
          <hash>b31bab9c825f737c852fe21c29275e49532abe929b4e390645fa63fed40dc257</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_e70_xult\system\time\src\sys_time.c</file>
-         <hash>fa2d85ab967b80157caf8483f6e28a23b12b548844a1d80f2fef760cd9b99271</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_e70_xult\osal\osal.h</file>
          <hash>8404fbe44807fa0484ffb38843a72cb9af8e31c9c30bd1b2594e609b8ea317d9</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_e70_xult\system\time\src\sys_time.c</file>
+         <hash>fa2d85ab967b80157caf8483f6e28a23b12b548844a1d80f2fef760cd9b99271</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\matrix.h</file>
@@ -6151,7 +6151,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\configuration.h</file>
-         <hash>4b554fd59d89b60fc6a417ceab649fc603d71cd3f574e723a356595839158e87</hash>
+         <hash>e5a48c26a73edebabcb9fb98f49b32bc5ddf7ea34948678b46211e88df2734b4</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\uart3.h</file>

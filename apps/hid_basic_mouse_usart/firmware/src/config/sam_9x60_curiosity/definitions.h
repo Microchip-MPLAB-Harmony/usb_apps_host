@@ -48,10 +48,10 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "driver/usb/uhp/drv_usb_ehci.h"
-#include "driver/usb/uhp/drv_usb_ohci.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_host.h"
+#include "driver/usb/uhp/drv_usb_ehci.h"
+#include "driver/usb/uhp/drv_usb_ohci.h"
 #include "driver/usart/drv_usart.h"
 #include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/clk/plib_clk.h"
@@ -60,8 +60,8 @@
 #include "usb/usb_host_hid.h"
 #include "usb/usb_hid.h"
 #include "usb/usb_host_hid_mouse.h"
-#include "peripheral/dbgu/plib_dbgu.h"
 #include "peripheral/tc/plib_tc0.h"
+#include "peripheral/dbgu/plib_dbgu.h"
 #include "bsp/bsp.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
@@ -199,10 +199,10 @@ Remarks:
 
 typedef struct
 {
+    SYS_MODULE_OBJ  usbHostObject0;
+
     SYS_MODULE_OBJ  drvUSBEHCIObject;
     SYS_MODULE_OBJ  drvUSBOHCIObject;
-
-    SYS_MODULE_OBJ  usbHostObject0;
 
     SYS_MODULE_OBJ  drvUsart0;
     SYS_MODULE_OBJ  sysTime;

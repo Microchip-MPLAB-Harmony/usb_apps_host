@@ -8307,7 +8307,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\definitions.h</file>
-         <hash>0ae866e515a75f1519f43fa85b95030cc287d68f637402481fde113f8fe8267f</hash>
+         <hash>d96a86e0299221b726799dfd574a16fc460f72bee6f3623fb6b328d48d4f4f00</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\peripheral\mmu\plib_mmu.c</file>
@@ -8375,7 +8375,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\system\system_common.h</file>

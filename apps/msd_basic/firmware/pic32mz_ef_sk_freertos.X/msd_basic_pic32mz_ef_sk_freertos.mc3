@@ -6311,7 +6311,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\configuration.h</file>
-         <hash>5f24558b593a11e53806e58a6e6c771d7c88de53dd989b3aae669b56864ffb3f</hash>
+         <hash>a263bb71f2c2cb0bb970e73e86befb1a5c2f2e35fd71800503d2dfd347f11d2e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\driver\usb\usbhs\src\templates\usbhs_TxEPStatus_Default.h</file>
@@ -6371,7 +6371,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\initialization.c</file>
-         <hash>f232a9a84b5a220faefee5af8e7f62aadc5987489236eb8eb5de0bfdbfa9096a</hash>
+         <hash>62fa08e6d2bd751758ac30fa00d992c2e698a17c04db099a02e771500ea5bd20</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\driver\usb\usbhs\src\templates\usbhs_EndpointFIFO_Unsupported.h</file>
@@ -6467,7 +6467,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\definitions.h</file>
-         <hash>e769f1cf0dc8db4f37fcd97b7584fffb873d8d4e913805d41db61369f0743b2a</hash>
+         <hash>0b6dc9a1ea32c4be27d3599c0cd94fb46895316c8da8d5a23d734cd6117ae790</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\usb\usb_host_scsi.h</file>
@@ -6495,7 +6495,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\peripheral\gpio\plib_gpio.h</file>
@@ -6851,7 +6851,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\tasks.c</file>
-         <hash>927052accb25a417d3d8165db41d5345c7e1bc124214bfbd522a243b6b0b5b56</hash>
+         <hash>6ab80aa836fbee132d2c0b87340dbb2cb395bac2170a52731cd8816b4238919c</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\stream_buffer.c</file>

@@ -4477,11 +4477,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\initialization.c</file>
-         <hash>ae1ddc8ff3561f0cc0d93bb535a397aa9691f337267aa2ce1f65b4ada16b53a0</hash>
+         <hash>6b8e9af6f560c3ea78c2b7d3941eb6b4a46e57b7026e12018182b7341940acf8</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\system\fs\fat_fs\file_system\ff.c</file>
@@ -4937,7 +4937,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\tasks.c</file>
-         <hash>d1e231740eae7643b29673d60d6f72a4c040fed8c76fce15dddb73057f34d3a7</hash>
+         <hash>9a3adf7f1d8f2e4d8f475f1f28efba4a8500b56551812119d917f0739b94b555</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAMA7G54_DFP\instance\sfr.h</file>
@@ -4961,7 +4961,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\configuration.h</file>
-         <hash>f4dde8b6f94c8da41ccc068c062e8ecc5ce39125eadf6ab66471d5b465170caa</hash>
+         <hash>07b3aca622bf47f239c14185b971dc5488e12a499d3a6444d0e1105b12928205</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\interrupts.c</file>
@@ -4969,7 +4969,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\definitions.h</file>
-         <hash>5f701c70d2dc8443a2f402b3245ceb2af6458d7aabac80048ded72f71bdd56da</hash>
+         <hash>a681bab4a7a457e78c138c3e8a5ef9eb80c3823d96d4b4af9969affc5486c313</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAMA7G54_DFP\instance\pit64b2.h</file>
@@ -5020,12 +5020,12 @@
          <hash>8ac8c4e6dff311eeda4989e174f9b43776ce2eca9238c7231ba5dca80350b506</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\system\time\sys_time_definitions.h</file>
-         <hash>46537746b1d12ece6b682c9be1c8f3f219663c638c21a51a973762b7b393afe6</hash>
-      </entry>
-      <entry>
          <file>..\src\app.c</file>
          <hash>632c78c323cb9f8c6359f20337440c08f8461eb4b0304552b6a3cfd5c4052620</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a7g5_ek\system\time\sys_time_definitions.h</file>
+         <hash>46537746b1d12ece6b682c9be1c8f3f219663c638c21a51a973762b7b393afe6</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAMA7G54_DFP\instance\ddrumctl.h</file>

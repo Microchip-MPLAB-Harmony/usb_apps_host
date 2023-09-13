@@ -9989,7 +9989,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\ssc.h</file>
@@ -10325,7 +10325,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\definitions.h</file>
-         <hash>234ac1b9b4ea24767cf6943b49b94d9c3df394dae7c70f32bbe6298b280d3218</hash>
+         <hash>a1724ba73b641cca15d2a69f8ea2896084fb0ad800da9de025dfa86e1ba0d687</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\tc0.h</file>

@@ -5159,7 +5159,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\usb\usb_hub.h</file>
@@ -5655,7 +5655,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\definitions.h</file>
-         <hash>716cce8d750984a98b2b9f0466baa6864b5a683e404864c99e66d0105f5b69cb</hash>
+         <hash>db08f0275c081d7bf08044f40493eca76e86d0c40367a3791c59e7430a3b4af0</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\peripheral\matrix\plib_matrix.c</file>

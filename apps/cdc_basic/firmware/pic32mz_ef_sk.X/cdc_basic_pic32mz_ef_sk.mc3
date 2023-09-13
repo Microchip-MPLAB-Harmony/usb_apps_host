@@ -5587,12 +5587,12 @@
          <hash>e58d6320d3a2a4f86c2dc61d22eeb7c18a0a189ad48bf7309d7630e0ff447b0a</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mz_ef_sk\driver\usb\usbhs\src\templates\usbhs_TxEPStatus_Default.h</file>
-         <hash>bd9510257a05e11b643ef86410402e5c320922ef719e5bc278593cd52fd0db99</hash>
-      </entry>
-      <entry>
          <file>..\src\config\pic32mz_ef_sk\peripheral\coretimer\plib_coretimer.c</file>
          <hash>2f636a8a90403a73ce55b8397c9ea548bb1e4ef7c022796ec2b3dffe7f97e96c</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mz_ef_sk\driver\usb\usbhs\src\templates\usbhs_TxEPStatus_Default.h</file>
+         <hash>bd9510257a05e11b643ef86410402e5c320922ef719e5bc278593cd52fd0db99</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\bsp\bsp.c</file>
@@ -5684,7 +5684,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\tasks.c</file>
@@ -5720,7 +5720,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\definitions.h</file>
-         <hash>04306d9616da5067d4054edd928a3cf62a1166ce27c2516be6d48eacb3247b1f</hash>
+         <hash>892737f231cb3a383f28b4146d4c8510b6a6d0d0fc9ab56d91fc234e7b17b5d4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\driver\usb\usbhs\src\templates\usbhs_EndpointOperations_Unsupported.h</file>

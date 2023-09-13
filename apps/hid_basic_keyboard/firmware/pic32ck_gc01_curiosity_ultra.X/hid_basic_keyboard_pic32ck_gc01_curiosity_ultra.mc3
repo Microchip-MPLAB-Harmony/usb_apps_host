@@ -9488,7 +9488,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\definitions.h</file>
-         <hash>57745641be22370c0d1d83e1b797927b1ab11e83ef28021f8dbf266b71108de2</hash>
+         <hash>a4fb4498f71ed4355e69a60f6518c1ca5588727bae87e2a7ed4b32c39d8731a4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\bsp\bsp.c</file>
@@ -9656,7 +9656,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\usb\src\usb_host_hub_mapping.h</file>

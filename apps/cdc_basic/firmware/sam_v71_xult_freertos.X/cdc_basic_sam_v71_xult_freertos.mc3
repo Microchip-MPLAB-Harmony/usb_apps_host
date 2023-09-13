@@ -5318,7 +5318,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\configuration.h</file>
-         <hash>4b554fd59d89b60fc6a417ceab649fc603d71cd3f574e723a356595839158e87</hash>
+         <hash>e5a48c26a73edebabcb9fb98f49b32bc5ddf7ea34948678b46211e88df2734b4</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\gmac.h</file>
@@ -5426,7 +5426,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\definitions.h</file>
-         <hash>0ca58524469547e122a3a5e7bee1fb1db180bc5a8e2fd84e396574104c1f5868</hash>
+         <hash>a7f4bcd66e9180848cb921353dca50d643acb92e7a25c6b88a87bdaf02e17394</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\ATSAMV71Q21B.ld</file>
@@ -5498,7 +5498,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\tasks.c</file>
-         <hash>c2b52812bac8cfbe627faa9a4cbf50c46f722e008af9034d3cca88c422cd5140</hash>
+         <hash>3c17d6ef0d4993437fdc58d66495bc78dd237a551cd2dc86bdd1bbe57d5c5abd</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\instance\pmc.h</file>
@@ -5806,7 +5806,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\usb\usb_chapter_9.h</file>
@@ -5950,7 +5950,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\initialization.c</file>
-         <hash>50ad0763c52ef73c561e27948cdfb362e90f5ca87e5ad469d2b0f15040fe47e1</hash>
+         <hash>2a478ae01de47291a81805670b6e061cc8814ea87e49a72b924e2d530e4c9c27</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMV71Q21B_DFP\component\chipid.h</file>

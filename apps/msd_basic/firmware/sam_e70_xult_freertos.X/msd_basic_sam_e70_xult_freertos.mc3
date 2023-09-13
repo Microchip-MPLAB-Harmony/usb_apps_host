@@ -9381,7 +9381,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\ssc.h</file>
@@ -9429,7 +9429,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\initialization.c</file>
-         <hash>2b881c111afe1aeadb59b3753a40cd6fdf7978b68e0d1b12712daf9b06f7263f</hash>
+         <hash>809ff27821d901fea23c431478ebd6a9dfa35f36637ae511fcd85f4ba7fb258b</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\afec1.h</file>
@@ -9729,7 +9729,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\definitions.h</file>
-         <hash>05ce2e16762fc4490601164dcddcdcbbcd295396f3dbeba1c89320d67f239124</hash>
+         <hash>bed8ba2dab7582f6d4ebdb9004ac9338a1a75b122b8386420fd6264d3e6e10c8</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\tc0.h</file>
@@ -10001,7 +10001,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\tasks.c</file>
-         <hash>33ba6af3e208c8dceb86d9a10aaba6e0adf8d142538b7fdb6ce1b3045deda552</hash>
+         <hash>079eb55758c9dc57001844d4fa046cf0e50fc94b394a92ea9c5282e6be3d8776</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\FreeRTOS_tasks.c</file>
@@ -10045,7 +10045,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\configuration.h</file>
-         <hash>553437e71893b81b3674ef70bff4c37e47660eb2a2d39b564a189329526a9cbc</hash>
+         <hash>8f36d1733630057eb56851dc175c69c1368217fafac0c88e947805562e8f5d77</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\system\fs\sys_fs_fat_interface.h</file>

@@ -5815,7 +5815,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\ssc.h</file>
@@ -5863,7 +5863,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\initialization.c</file>
-         <hash>98d0ff3de08b3a17996979c19075009978b65c782b14091cd3ae71aa33e08c84</hash>
+         <hash>9ce310322210801aec4092ceba45ec22f580228df489e87efb571f04c12a8039</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\afec1.h</file>
@@ -6131,7 +6131,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\definitions.h</file>
-         <hash>4a34e477e9c64cabaaf666bb0097857b1fe8dbaf737f18fbcff5083726d23ea3</hash>
+         <hash>e7801ffadb7e42e85db14911d811cb38714be59465933cf8fe2dd2518a34d355</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\usb\src\usb_host_cdc_local.h</file>
@@ -6403,7 +6403,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\tasks.c</file>
-         <hash>3c17d6ef0d4993437fdc58d66495bc78dd237a551cd2dc86bdd1bbe57d5c5abd</hash>
+         <hash>c2b52812bac8cfbe627faa9a4cbf50c46f722e008af9034d3cca88c422cd5140</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\FreeRTOS_tasks.c</file>
@@ -6439,7 +6439,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\configuration.h</file>
-         <hash>e5a48c26a73edebabcb9fb98f49b32bc5ddf7ea34948678b46211e88df2734b4</hash>
+         <hash>4b554fd59d89b60fc6a417ceab649fc603d71cd3f574e723a356595839158e87</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\portable\GCC\SAM\CM7\portmacro.h</file>

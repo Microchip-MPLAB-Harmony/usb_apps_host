@@ -4638,7 +4638,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\instance\flexcom0.h</file>
@@ -4894,7 +4894,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\definitions.h</file>
-         <hash>d950c21a6d29d2db5fb68e81a611b4ab659e06123c04bd484d07d77104654c5c</hash>
+         <hash>babf681cb85c112271efcebb3b2095a8cc1768398382b2857aecf42dbe4fc44a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\peripheral\mmu\plib_mmu.h</file>
@@ -5137,12 +5137,12 @@
          <hash>3210e659c2fe88af837a7e98dbda6bde304c87b5136fddb2bc260c846def855d</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a5d2_xult\osal\osal_impl_basic.h</file>
-         <hash>67ce72d34fd1e4dee0b6937fa026ab2c7bd285f82a24da09742c68333adaf0fc</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_a5d2_xult\system\time\src\sys_time.c</file>
          <hash>fa2d85ab967b80157caf8483f6e28a23b12b548844a1d80f2fef760cd9b99271</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a5d2_xult\osal\osal_impl_basic.h</file>
+         <hash>67ce72d34fd1e4dee0b6937fa026ab2c7bd285f82a24da09742c68333adaf0fc</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\instance\xdmac0.h</file>

@@ -4846,12 +4846,12 @@
          <hash>6e7733973822e43a63638de381a73d63357e620512f84fe6d52d31338155fb59</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a5d27_wlsom1_ek1\usb\usb_cdc.h</file>
-         <hash>8d8e17f16340e1400d60e6552273d11b5ea1ede1d80faf220d6a4dacc5b41634</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\ATSAMA5D27CLD2G_DFP\instance\xdmac1.h</file>
          <hash>8bbddb1e3803fa6fde6ebac3dc57e77bcb402b790ee5154109422e5a5df4e9ab</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a5d27_wlsom1_ek1\usb\usb_cdc.h</file>
+         <hash>8d8e17f16340e1400d60e6552273d11b5ea1ede1d80faf220d6a4dacc5b41634</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CLD2G_DFP\component\qspi.h</file>
@@ -5003,7 +5003,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CLD2G_DFP\instance\chipid.h</file>
@@ -5011,7 +5011,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\definitions.h</file>
-         <hash>2f08e9195d988137d69b2a7c3f1a10b7cc9e57f8d50ceba0f96589eaa0d9ac47</hash>
+         <hash>a92e5758e454a388c3d845e0052d46232259c31afce12084866d0e86ad237259</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\driver\usb\uhp\src\drv_usb_ohci.c</file>
@@ -5090,12 +5090,12 @@
          <hash>b264931f9d8a3bf90bff889d8941ed3108dbc0981f8082bfe5e0b7b7836ecbb3</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a5d27_wlsom1_ek1\usb\usb_host_cdc.h</file>
-         <hash>b43d66be63443bad351378adb0f049219dd14b6ed4ecc2497919bd8e93001030</hash>
-      </entry>
-      <entry>
          <file>..\src\packs\ATSAMA5D27CLD2G_DFP\component\sfrbu.h</file>
          <hash>54fc3836d7d3154ba61e55a55a41984365ab82854d9bc8392f7e016874498916</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a5d27_wlsom1_ek1\usb\usb_host_cdc.h</file>
+         <hash>b43d66be63443bad351378adb0f049219dd14b6ed4ecc2497919bd8e93001030</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\toolchain_specifics.h</file>

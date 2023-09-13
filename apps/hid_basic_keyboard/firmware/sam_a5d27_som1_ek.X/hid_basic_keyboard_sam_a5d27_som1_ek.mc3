@@ -5469,7 +5469,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\tasks.c</file>
-         <hash>1e0ce44cb20e6b7c2bc86ada2e3c5e10eb1249d25965a75a5255535b3c43da77</hash>
+         <hash>8afc96c365d4778505b9e7b9b2819984bb538e5fe19c555e06171d0854b04bad</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\system\time\sys_time.h</file>
@@ -5501,7 +5501,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\definitions.h</file>
-         <hash>c14fefa30d881d174a2fdcabec307cf8f4be5faa2f3eada85f4807bbcc6ea56a</hash>
+         <hash>2c6421c4b316f1d7f92c05343a6c425eaa5f83978c174d275dda728a10196dad</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\instance\gmac.h</file>
@@ -5737,7 +5737,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\configuration.h</file>
-         <hash>46f17d6757f629fc382fa152269c84ca33fdf72490945fc7987e7a153cc252d6</hash>
+         <hash>877232cddcca303e68332a8d72539295753485ef0c55923cd1c567fd0351eae0</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\instance\twihs1.h</file>
@@ -5889,7 +5889,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\usb_host_hid_keyboard.h</file>
@@ -6177,7 +6177,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\initialization.c</file>
-         <hash>73eaf67d2064928df6915f69ee5c22a6efe778f47356ffd65fa313cbdd62099e</hash>
+         <hash>d0c3b88d5385e63fc0206fe1765c0dd08b81631dc8465e778d1ba4fee9a2bb36</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\driver\usb\uhp\src\drv_usb_ehci_local.h</file>

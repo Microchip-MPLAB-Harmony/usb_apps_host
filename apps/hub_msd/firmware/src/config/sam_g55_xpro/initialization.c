@@ -279,10 +279,10 @@ void SYS_Initialize ( void* data )
     
     /* MISRAC 2012 deviation block end */
 
-    sysObj.drvUSBOHCIObject = DRV_USB_OHCI_Initialize (DRV_USB_OHCI_INDEX_0, (SYS_MODULE_INIT *) &drvUSBOHCIInit);
-
     /* Initialize the USB Host layer */
     sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );	
+
+    sysObj.drvUSBOHCIObject = DRV_USB_OHCI_Initialize (DRV_USB_OHCI_INDEX_0, (SYS_MODULE_INIT *) &drvUSBOHCIInit);
 
     /*** File System Service Initialization Code ***/
     (void) SYS_FS_Initialize( (const void *) sysFSInit );

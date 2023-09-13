@@ -4087,7 +4087,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_curiosity_2\definitions.h</file>
-         <hash>be41964be7b38a45fe97256f5adedcfbe184cf4159428480b5373fb54efa843b</hash>
+         <hash>b0ef54a701c8d9215f9c442f32aa09d0bbed0115a705fcbdfc2e774964b102a1</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_curiosity_2\p32MZ2048EFM144.ld</file>
@@ -4159,7 +4159,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_curiosity_2\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_curiosity_2\system\fs\src\sys_fs_fat_interface.c</file>

@@ -8835,7 +8835,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\definitions.h</file>
-         <hash>67e07db30efbfc00929f22095a7bfa1710d8f0965a3a78e49e537a16994ccfd9</hash>
+         <hash>03694e7772a193d206f8a53a25b8fbed3cb1118ccd7e01e263f48308e9d704bc</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\instance\flexcom12.h</file>
@@ -8939,7 +8939,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\peripheral\aic\plib_aic.c</file>

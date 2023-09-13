@@ -4585,7 +4585,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\system\fs\fat_fs\file_system\ff.c</file>
@@ -5077,7 +5077,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\definitions.h</file>
-         <hash>9d9b11e5c38df85061ad173443db1c7ef8b239d9ed5e348c249d80424c6a3d7d</hash>
+         <hash>75ceb714fb2f48e293dd987ceabf4efcbe2b06444b106baf7125c2c20f11d42a</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAMA7G54_DFP\instance\pit64b2.h</file>
@@ -5128,12 +5128,12 @@
          <hash>8ac8c4e6dff311eeda4989e174f9b43776ce2eca9238c7231ba5dca80350b506</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\system\time\sys_time_definitions.h</file>
-         <hash>46537746b1d12ece6b682c9be1c8f3f219663c638c21a51a973762b7b393afe6</hash>
-      </entry>
-      <entry>
          <file>..\src\app.c</file>
          <hash>632c78c323cb9f8c6359f20337440c08f8461eb4b0304552b6a3cfd5c4052620</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a7g5_ek\system\time\sys_time_definitions.h</file>
+         <hash>46537746b1d12ece6b682c9be1c8f3f219663c638c21a51a973762b7b393afe6</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAMA7G54_DFP\instance\ddrumctl.h</file>

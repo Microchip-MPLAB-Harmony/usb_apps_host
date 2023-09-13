@@ -7100,12 +7100,12 @@
          <hash>8713dad40fd5a868e5615de4083d822c44b1be214855248e31643fff2f19da33</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x60_curiosity\system\time\sys_time.h</file>
-         <hash>6357468f7670698b16bfb6439d9919ed38eba99d4f03277a8b43ac34586fa1b3</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_9x60_curiosity\sys_tasks.h</file>
          <hash>21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x60_curiosity\system\time\sys_time.h</file>
+         <hash>6357468f7670698b16bfb6439d9919ed38eba99d4f03277a8b43ac34586fa1b3</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\pit64b.h</file>
@@ -7164,12 +7164,12 @@
          <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAM9X60D1G_DFP\component\pmc.h</file>
-         <hash>ec1bbcec5446a05122fe5d92882e197618a5e11fa3da1af012fb9c4b4ed59334</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_9x60_curiosity\usb\usb_host_cdc.h</file>
          <hash>b43d66be63443bad351378adb0f049219dd14b6ed4ecc2497919bd8e93001030</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAM9X60D1G_DFP\component\pmc.h</file>
+         <hash>ec1bbcec5446a05122fe5d92882e197618a5e11fa3da1af012fb9c4b4ed59334</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\system\time\src\sys_time_local.h</file>
@@ -7245,7 +7245,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\driver\usb\uhp\src\drv_usb_ohci.c</file>
@@ -7365,7 +7365,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\definitions.h</file>
-         <hash>03dbf5a26c7734f3f9a76392f4178152fb2f537b48f3d54021d58f60553d63c5</hash>
+         <hash>6f64505016a676c2c6f5a818683bb6fcea10b5ac2f60c848e86cf30cc927f97c</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60D1G_DFP\component\uhpfs.h</file>
