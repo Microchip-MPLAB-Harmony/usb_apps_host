@@ -37,14 +37,15 @@ The following applications are provided to demonstrate the typical or interestin
 
 | Name                      | Description            |
 | ------------------------- | ---------------------- |
-| CDC Basic                 | This application uses the USB Host Layer and CDC Client driver to enumerate a standard CDC USB device. The demonstration host application then operates and uses the functionality of the attached CDC Device. |
-| CDC MSD                   | This application creates a USB Host that can recognize and enumerate a CDC USB Device and MSC USB Device. |
-| HID Basic Keyboard        | This application creates a USB Host application that uses the USB Host Layer, HID Client driver and HID Keyboard Usage driver to enumerate a USB keyboard and understand keyboard press release events. The keyboard events are displayed using a terminal emulator on a personal computer. |
-| HID Basic Mouse USART     | This application uses the USB Host layer, HID Client driver and HID Mouse Usage driver to enumerate a USB Mouse and detect Mouse button press release events. The Mouse events are displayed using a terminal emulator on a personal computer. |
-| HUB CDC HID               | This application creates a USB Host that can recognize and enumerate a CDC Emulator USB Device and a HID USB Mouse connected via an external Hub. The host will demonstrate the communication from the CDC emulator device and the HID mouse. |
-| HUB MSD                   | This application uses USB Host stack and the Harmony Filesystem Service to copy a file from a source USB pen drive to a target USB pen drive. |
-| MSD Basic                 | This application demonstrates the use of the MSD Host Class Driver to write a file to a USB Flash drive. The application uses the USB Host_layer , MSD class driver and the MPLAB Harmony File System Framework to enumerate a USB Flash drive and to write a file to it. |
-| ROOT HUB DUAL MSD         | This application demonstrates the use of the root hub of the host.
+| [CDC Basic](apps/cdc_basic/readme.md)                 | This application uses the USB Host Layer and CDC Client driver to enumerate a standard CDC USB device. The demonstration host application then operates and uses the functionality of the attached CDC Device. |
+| [CDC MSD](apps/cdc_msd/readme.md)                   | This application creates a USB Host that can recognize and enumerate a CDC USB Device and MSC USB Device. |
+| [HID Basic Keyboard](apps/hid_basic_keyboard/readme.md)        | This application creates a USB Host application that uses the USB Host Layer, HID Client driver and HID Keyboard Usage driver to enumerate a USB keyboard and understand keyboard press release events. The keyboard events are displayed using a terminal emulator on a personal computer. |
+| [HID Basic Mouse USART](apps/hid_basic_mouse_usart/readme.md)     | This application uses the USB Host layer, HID Client driver and HID Mouse Usage driver to enumerate a USB Mouse and detect Mouse button press release events. The Mouse events are displayed using a terminal emulator on a personal computer. |
+| [HUB CDC HID](apps/hub_cdc_hid/readme.md)               | This application creates a USB Host that can recognize and enumerate a CDC Emulator USB Device and a HID USB Mouse connected via an external Hub. The host will demonstrate the communication from the CDC emulator device and the HID mouse. |
+| [HUB MSD](apps/hub_msd/readme.md)                   | This application uses USB Host stack and the Harmony Filesystem Service to copy a file from a source USB pen drive to a target USB pen drive. |
+| [MSD Basic](apps/msd_basic/readme.md)                 | This application demonstrates the use of the MSD Host Class Driver to write a file to a USB Flash drive. The application uses the USB Host_layer , MSD class driver and the MPLAB Harmony File System Framework to enumerate a USB Flash drive and to write a file to it. |
+| [ROOT HUB DUAL MSD](apps/root_hub_dual_msd/readme.md)        | This application demonstrates the use of the root hub of the host.|
+| [Vendor](apps/vendor/readme.md)        | This application demonstrates how to interface with a USB device using the generic host client driver. The application includes a generic client driver example for a vendor-specific USB device.
 ____
 
 [![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/usb_apps_host/blob/master/mplab_harmony_license.md)
