@@ -39,8 +39,8 @@
  *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef _USB_HOST_SCSI_H
-#define _USB_HOST_SCSI_H
+#ifndef USB_HOST_SCSI_H
+#define USB_HOST_SCSI_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -175,6 +175,8 @@ typedef enum
 } USB_HOST_SCSI_EVENT;
 
 // *****************************************************************************
+/* MISRA C-2012 Rule 5.2 deviated:8 Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
+
 /* SCSI Driver Error Codes.
 
    Summary
@@ -312,6 +314,7 @@ typedef enum
 
 } USB_HOST_SCSI_ERROR_CODE;
 
+/* MISRAC 2012 deviation block end */
 // *****************************************************************************
 /* USB Host SCSI Client Driver Attach Event Handler Function Pointer Type.
 
@@ -386,13 +389,13 @@ typedef void (* USB_HOST_SCSI_ATTACH_EVENT_HANDLER)
         {
             case USB_HOST_SCSI_EVENT_COMMAND_COMPLETE:
 
-                // Handle the completed buffer. 
+                
                 break;
             
             case USB_HOST_SCSI_EVENT_COMMAND_ERROR:
             default:
 
-                // Handle error.
+                
                 break;
         }
     }
@@ -624,7 +627,7 @@ void USB_HOST_SCSI_Close
 (
     USB_HOST_SCSI_HANDLE scsiHandle
 );
-					
+                    
 // ******************************************************************************
 /* Function:
     bool USB_HOST_SCSI_MediaStatusGet 
