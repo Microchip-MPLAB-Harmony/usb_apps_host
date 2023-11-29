@@ -357,7 +357,7 @@ static const SYS_FS_REGISTRATION_TABLE sysFSInit [ SYS_FS_MAX_FILE_SYSTEM_TYPE ]
  * USB Driver Initialization
  ******************************************************/
 
-void DRV_USB_VBUSPowerEnable0(uint8_t port, bool enable)
+static void DRV_USB_VBUSPowerEnable0(uint8_t port, bool enable)
 {
     /* Note: When operating in Host mode, the application can specify a Root 
        hub port enable function. The USB Host Controller driver initi data 
@@ -380,7 +380,7 @@ void DRV_USB_VBUSPowerEnable0(uint8_t port, bool enable)
     }
 }
 
-const DRV_USBHS_INIT drvUSBHSInit0 =
+static const DRV_USBHS_INIT drvUSBHSInit0 =
 {
 
     /* Interrupt Source for USB module */
@@ -495,13 +495,13 @@ void SYS_Initialize ( void* data )
     /* MISRAC 2012 deviation block end */
 
     /* Initialize the USB Host layer */
-    sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );	
+    sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );    
 
     /*** File System Service Initialization Code ***/
     (void) SYS_FS_Initialize( (const void *) sysFSInit );
 
     /* Initialize USB Driver */ 
-    sysObj.drvUSBHSObject0 = DRV_USBHS_Initialize(DRV_USBHS_INDEX_0, (SYS_MODULE_INIT *) &drvUSBHSInit0);	
+    sysObj.drvUSBHSObject0 = DRV_USBHS_Initialize(DRV_USBHS_INDEX_0, (SYS_MODULE_INIT *) &drvUSBHSInit0);    
 
 
     /* MISRAC 2012 deviation block end */
