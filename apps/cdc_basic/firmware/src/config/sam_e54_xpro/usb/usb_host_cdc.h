@@ -39,8 +39,8 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
  *******************************************************************************/
-#ifndef _USB_HOST_CDC_H_
-#define _USB_HOST_CDC_H_
+#ifndef USB_HOST_CDC_H_
+#define USB_HOST_CDC_H_
 
 //DOM-IGNORE-END
 
@@ -68,6 +68,8 @@
 // ****************************************************************************
 // ****************************************************************************
 
+/* MISRA C-2012 Rule 5.2, and 8.6 deviated below. Deviation record ID -  
+    H3_MISRAC_2012_R_5_2_DR_1, H3_MISRAC_2012_R_8_6_DR_1 */
 // *****************************************************************************
 /* USB Host CDC Client Driver Handle 
  
@@ -1012,6 +1014,8 @@ USB_HOST_CDC_RESULT USB_HOST_CDC_ACM_ControlLineStateSet
 );
 
 
+
+/* MISRAC 2012 deviation block end */
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus
 }
