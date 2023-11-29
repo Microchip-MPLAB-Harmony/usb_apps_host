@@ -168,7 +168,7 @@ extern "C" {
 
 
 /* Number Full Speed USB Driver instances */ 
-#define DRV_USBFS_INSTANCES_NUMBER                       1
+#define DRV_USBFS_INSTANCES_NUMBER                       1U
 
 /* Interrupt mode enabled */
 #define DRV_USBFS_INTERRUPT_MODE                          true
@@ -176,7 +176,7 @@ extern "C" {
 /* Disable Device Support */
 #define DRV_USBFS_DEVICE_SUPPORT                          false
 
-#define DRV_USBFS_ENDPOINTS_NUMBER                        1
+#define DRV_USBFS_ENDPOINTS_NUMBER                        1U
 
 /* Enable Host Support */
 #define DRV_USBFS_HOST_SUPPORT                            true
@@ -188,10 +188,10 @@ extern "C" {
 #define DRV_USBFS_HOST_PIPES_NUMBER                       10  
 
 /* Attach Debounce duration in milli Seconds */ 
-#define DRV_USBFS_HOST_ATTACH_DEBOUNCE_DURATION           500
+#define DRV_USBFS_HOST_ATTACH_DEBOUNCE_DURATION           500U
 
 /* Reset duration in milli Seconds */ 
-#define DRV_USBFS_HOST_RESET_DURATION                     100
+#define DRV_USBFS_HOST_RESET_DURATION                     100U
 
 /* Alignment for buffers that are submitted to USB Driver*/ 
 #define USB_ALIGN  CACHE_ALIGN
