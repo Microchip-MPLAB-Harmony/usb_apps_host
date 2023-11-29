@@ -148,7 +148,7 @@ extern "C" {
 
 
 /* Number High Speed USB Driver instances */ 
-#define DRV_USBHS_INSTANCES_NUMBER                       1
+#define DRV_USBHS_INSTANCES_NUMBER                       1U
 
 /* Interrupt mode enabled */
 #define DRV_USBHS_INTERRUPT_MODE                          true
@@ -156,7 +156,7 @@ extern "C" {
 /* Disable Device Support */
 #define DRV_USBHS_DEVICE_SUPPORT                          false
 
-#define DRV_USBHS_ENDPOINTS_NUMBER                        1
+#define DRV_USBHS_ENDPOINTS_NUMBER                        1U
 
 /* Enable Host Support */
 #define DRV_USBHS_HOST_SUPPORT                            true
