@@ -145,10 +145,10 @@ extern "C" {
 
 
 /* Number of CDC Function driver instances in the application */
-#define USB_HOST_CDC_INSTANCES_NUMBER         1
+#define USB_HOST_CDC_INSTANCES_NUMBER         1U
 
 /* Number of CDC Attach Listeners */ 
-#define USB_HOST_CDC_ATTACH_LISTENERS_NUMBER        1
+#define USB_HOST_CDC_ATTACH_LISTENERS_NUMBER        1U
 
 // *****************************************************************************
 // *****************************************************************************
@@ -157,10 +157,10 @@ extern "C" {
 // **************************************************************************
 
 /* Number of Endpoints used */
-#define DRV_USBHSV1_ENDPOINTS_NUMBER                        1
+#define DRV_USBHSV1_ENDPOINTS_NUMBER                        1U
 
 /* Total number of devices to be supported */
-#define USB_HOST_DEVICES_NUMBER                             1 
+#define USB_HOST_DEVICES_NUMBER                             1U
 
 /* Target peripheral list entries */
 #define  USB_HOST_TPL_ENTRIES                               2 
@@ -168,25 +168,25 @@ extern "C" {
 /* Maximum number of configurations supported per device */
 #define USB_HOST_DEVICE_INTERFACES_NUMBER                   5    
 
-#define USB_HOST_CONTROLLERS_NUMBER                         1
+#define USB_HOST_CONTROLLERS_NUMBER                         1U
 
-#define USB_HOST_TRANSFERS_NUMBER                           10
+#define USB_HOST_TRANSFERS_NUMBER                           10U
 
 /* Provides Host pipes number */
-#define USB_HOST_PIPES_NUMBER                               10
+#define USB_HOST_PIPES_NUMBER                               10U
 
 
 /*** USB Driver Configuration ***/
 
 /* Maximum USB driver instances */
-#define DRV_USBHSV1_INSTANCES_NUMBER                        1
+#define DRV_USBHSV1_INSTANCES_NUMBER                        1U
 
 /* Interrupt mode enabled */
 #define DRV_USBHSV1_INTERRUPT_MODE                          true
 
 /* Disable Device Support */
 #define DRV_USBHSV1_DEVICE_SUPPORT                          false
-	
+    
 /* Enable Host Support */
 #define DRV_USBHSV1_HOST_SUPPORT                            true
 
