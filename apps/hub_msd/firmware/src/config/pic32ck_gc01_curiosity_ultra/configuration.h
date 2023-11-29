@@ -150,7 +150,7 @@ extern "C" {
 /*** USB Driver Configuration ***/
 
 /* Maximum USB driver instances */
-#define DRV_USBHS_INSTANCES_NUMBER                        1
+#define DRV_USBHS_INSTANCES_NUMBER                        1U
 
 /* Interrupt mode enabled */
 #define DRV_USBHS_INTERRUPT_MODE                          true
@@ -176,7 +176,7 @@ extern "C" {
 
 
 
-#define DRV_USBHS_ENDPOINTS_NUMBER                        1
+#define DRV_USBHS_ENDPOINTS_NUMBER                        1U
 
 /* Alignment for buffers that are submitted to USB Driver*/ 
 #define USB_ALIGN  CACHE_ALIGN  __ALIGNED(16)
