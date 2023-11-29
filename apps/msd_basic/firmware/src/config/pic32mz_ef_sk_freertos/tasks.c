@@ -60,23 +60,23 @@
 // Section: RTOS "Tasks" Routine
 // *****************************************************************************
 // *****************************************************************************
-void _USB_HOST_Tasks(  void *pvParameters  )
+static void F_DRV_USBHS_Tasks(  void *pvParameters  )
 {
-    while(1)
+    while(true)
     {
-        /* USB Host layer tasks routine */ 
-        USB_HOST_Tasks(sysObj.usbHostObject0);
-        vTaskDelay(10 / portTICK_PERIOD_MS);
+                 /* USB FS Driver Task Routine */
+        DRV_USBHS_Tasks(sysObj.drvUSBHSObject);
+        vTaskDelay(10U / portTICK_PERIOD_MS);
     }
 }
 
-void _DRV_USBHS_Tasks(  void *pvParameters  )
+static void F_USB_HOST_Tasks(  void *pvParameters  )
 {
-    while(1)
+    while(true)
     {
-				 /* USB FS Driver Task Routine */
-        DRV_USBHS_Tasks(sysObj.drvUSBHSObject);
-        vTaskDelay(10 / portTICK_PERIOD_MS);
+        /* USB Host layer tasks routine */ 
+        USB_HOST_Tasks(sysObj.usbHostObject0);
+        vTaskDelay(10U / portTICK_PERIOD_MS);
     }
 }
 
@@ -136,18 +136,18 @@ void SYS_Tasks ( void )
     
 
     /* Maintain Middleware & Other Libraries */
-        /* Create OS Thread for USB_HOST_Tasks. */
-    xTaskCreate( _USB_HOST_Tasks,
-        "USB_HOST_TASKS",
+        /* Create OS Thread for USB Driver Tasks. */
+    (void) xTaskCreate( F_DRV_USBHS_Tasks,
+        "DRV_USBHS_TASKS",
         1024,
         (void*)NULL,
         1,
         (TaskHandle_t*)NULL
     );
 
-	/* Create OS Thread for USB Driver Tasks. */
-    xTaskCreate( _DRV_USBHS_Tasks,
-        "DRV_USBHS_TASKS",
+    /* Create OS Thread for USB_HOST_Tasks. */
+    (void) xTaskCreate( F_USB_HOST_Tasks,
+        "USB_HOST_TASKS",
         1024,
         (void*)NULL,
         1,
