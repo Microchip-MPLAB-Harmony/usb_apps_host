@@ -5714,7 +5714,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\src\usb_host.c</file>
-         <hash>e9afbc75c1f0bc723355daa67ae3e8016428e3ac5365a83b6bd4d58c6b0c76d9</hash>
+         <hash>5e3274284da6c42d8e7bd006531e400a5a7f212da086baea5c2d3697243816e1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\peripheral\mmu\plib_mmu.h</file>
@@ -5754,7 +5754,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\src\usb_host_local.h</file>
-         <hash>b88bec2e0b5ffff726f431dd161e587256256a9eb6fc3a953d5087989dcd9514</hash>
+         <hash>bfe0fbac566e72c15e890d8e91ad4332d697e53db841526c8c5c43a7805d4cf2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\tasks.c</file>
@@ -5790,7 +5790,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\definitions.h</file>
-         <hash>0e5c85bc8f7a4be6f4f225a71b8d53c54630b39a627d1f705afe79a422df8fd3</hash>
+         <hash>edae0cb6edfc9ab3500c7f6a29fc2c6cd62b366be33bd0d8a72e375075f8c941</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\instance\gmac.h</file>
@@ -5818,7 +5818,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\usb_ehci.h</file>
-         <hash>e87151d3a3a46c1628e43fdd989f915e8b91bd25cb16562e97878eba2149aa45</hash>
+         <hash>3c6fa3dec84e28fb9d95c9999eb9ea19ba430d3b75bb4324caaf139d88b47709</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\component\icm.h</file>
@@ -5826,7 +5826,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\src\usb_host_hub_mapping.h</file>
-         <hash>397cd4bfd90e8de41af56735747ebb53b64eb04edde9975a3bb0fd8e7c94daf6</hash>
+         <hash>5febd19aa53a3acb9cd3d6f7e5e3ab254c52d45b9db1e12547778f1b0febc8af</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\driver\driver_common.h</file>
@@ -5842,11 +5842,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\src\usb_external_dependencies.h</file>
-         <hash>5110f718908d8f79253ce5b4b44172288cc179ff61d18e387f9e90ae9afbb1b6</hash>
+         <hash>b12fd8f239e37735d34cbd777cd98b448b9ad8bc4fde516bf6ca8a5c1120163f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\driver\usb\uhp\src\drv_usb_ehci.c</file>
-         <hash>8af355cb6ba0dd5f4cc24a5d121d005fb9fe723f96f083b934854c25064584a8</hash>
+         <hash>c5472f70e6042e2217a51d8fcce8ccb98d3b8c09f2d60a4845c028c13b8bdd8e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\system\cache\sys_cache.c</file>
@@ -5866,7 +5866,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\usb_host.h</file>
-         <hash>4ec16dee42ae6b1bad8a7199b44750ccf0c5fa3aee5e44766e7b6dffc9979e83</hash>
+         <hash>1fd7a53f3b04f3a63013a3350d1f6b1c15aa9f162e9c5acf31b111c27987ad89</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\component\rtc.h</file>
@@ -5902,7 +5902,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\usb_chapter_9.h</file>
-         <hash>86a258d763c7f0f563122ccd4ec0bbef422fd4e2f523402bb89be10568cecf3f</hash>
+         <hash>e5e4a9cd868fa4b90113a0bd3ae76d176c7d21d791e7ea9891f1bf9d981da54c</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\instance\matrix0.h</file>
@@ -5914,7 +5914,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\usb_msd.h</file>
-         <hash>411e51784fd839785fa33a6b5c5fd26b446947816cc1c96b6f5e9d3b3ac65559</hash>
+         <hash>9c7259ddc5267502757b62cc46ceb970037f37b27ab875e686d60319dea4a8d0</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\instance\sfrbu.h</file>
@@ -5962,11 +5962,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\src\usb_host_msd.c</file>
-         <hash>13a40e06e4c87aadc5891e994910453879a2da7a4e9cb6a2fbc404a290e3f11b</hash>
+         <hash>cfb1472e2d51443b93a149242a348112826ac7889427afc6eb1358c010b5852e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\src\usb_host_scsi_local.h</file>
-         <hash>36efa24b4985d33916cc9cd4f9c78dd898527178ea46ed93dc43027c514b50cf</hash>
+         <hash>bb588dd44d94263d148cdd6f1b350395a3ad488f5ebb9555a2992c8d9bf939d4</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\component\aic.h</file>
@@ -5978,7 +5978,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\driver\usb\drv_usb.h</file>
-         <hash>dce0fe53973e23d87ee16fec7ef65f171b537ac80e14eaa2ca43962156f1c6e7</hash>
+         <hash>ee59efb38b1cf87e1c4bb6e833a9c9be0c106005daa6c1ccd90fca9fb5c17b44</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\driver\driver.h</file>
@@ -5998,7 +5998,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\driver\usb\uhp\drv_usb_ehci.h</file>
-         <hash>495d52290b5dcae6b545477caca59937cf03a32a1fe7d60834968d0ff4ebc128</hash>
+         <hash>c5563e8e5d3749798351c300289d4e4269349361fc856df37de63f5a65bc6ee0</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\instance\sfr.h</file>
@@ -6014,7 +6014,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\configuration.h</file>
-         <hash>60ca2ad29ee10784398d901a300efd623ab7c7be9b780ff1e99d8d2c13a5f767</hash>
+         <hash>d15fd274dfb2c53198e1b070a5cbb782d50ed5a6548968f35ad64ff4aeef833f</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\instance\twihs1.h</file>
@@ -6034,7 +6034,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\usb_host_hub.h</file>
-         <hash>4ebf13c88d41e472ab799f49838481c2e912e0d1b735b7ef7b751a0ec44787f9</hash>
+         <hash>2bf5ad9a51c8897d511ae538ad53b9e433f42b742096f8927333bdcc62f49f33</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\instance\sdmmc0.h</file>
@@ -6086,7 +6086,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\usb_host_scsi.h</file>
-         <hash>184c512bd4c8510578666fac667467b3fbfb09b7505b9f90967ca324db308836</hash>
+         <hash>4cb33db1f10cd6ca895b31553f7c76ce9492511063e55f0d3e1d1683cbf05f33</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\peripheral\pio\plib_pio.h</file>
@@ -6138,7 +6138,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\usb_ohci.h</file>
-         <hash>e21050f41399a81ff223988334de45be96d61055284578d812ac40b17e52f748</hash>
+         <hash>8473159e3cdb858e0d0b7afefea4e18ee08497e826108d20c15558166f1429b6</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\component\mcan.h</file>
@@ -6162,7 +6162,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\driver\usb\uhp\src\drv_usb_ohci_local.h</file>
-         <hash>061904e5dba218b67c032aad6d165c474b3beb8a39ed50f2f0daf4fff201c3f4</hash>
+         <hash>a82037e76cfa4eca5023da77fbd67218bed0676919e97c76bc1d33abe6dd88eb</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\component\tdes.h</file>
@@ -6190,7 +6190,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\usb_host_client_driver.h</file>
-         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
+         <hash>38b5d7e5fee9b09db48b48b52d9b2773f458b09dc2d659c703a075fc90f32490</hash>
       </entry>
       <entry>
          <file>..\src\app.h</file>
@@ -6202,7 +6202,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\driver\usb\uhp\src\drv_usb_ohci.c</file>
-         <hash>2f534ad88c69a4cc9c24c36150405311528c27765ac0f4e758eaa37516e5f188</hash>
+         <hash>a75799196e483ed92e569d2ed3c8c35b206b943e2f9722bf8d95f3bc03af01e2</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\component\gmac.h</file>
@@ -6242,11 +6242,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\driver\usb\uhp\src\drv_usb_uhp_ohci_registers.h</file>
-         <hash>c725673d883b62d6a26a42737c20c47d01b606353359d8ca41f83e7170c086ec</hash>
+         <hash>f34d534fda59425f76ca8d468852d7476fe7927ad31569c6bba4a72df7a2b1f4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\usb_host_msd.h</file>
-         <hash>1ae07bfff501e5b7bd0327e3632934fe7684e530298444001226af15c9c7710c</hash>
+         <hash>d8081f19c1b4e8596877c52fd5e430b52de3226fa491c85cf3d86ee44f0c5602</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\component\acc.h</file>
@@ -6254,7 +6254,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\usb_common.h</file>
-         <hash>fc9f44df7ab465084d1522901685e5bfad10548e44563a7460d7e089e6276ded</hash>
+         <hash>8e8a0115a555330065b8569621173186a2a2815758125026b02596e0d0278c56</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\component\sdmmc.h</file>
@@ -6318,7 +6318,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\usb_hub.h</file>
-         <hash>f07eb653a11355424adb96ff0fec6796f6b95c8924ac93fb9207f888d130bc7d</hash>
+         <hash>733473045c756b6184188c2cf000d8f187f530a9e048dabefaecee347c05e4db</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\instance\aic.h</file>
@@ -6334,7 +6334,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb_host_init_data.c</file>
-         <hash>a4226de2c864b7246c61d8eacd04be71288c146b285c0fdaae11748fa33fd856</hash>
+         <hash>86dbf1845222515ddef5516cae75f0a9ce04797adda17b01ef5485754315d186</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\system\fs\fat_fs\file_system\ff.c</file>
@@ -6374,11 +6374,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\src\usb_host_hub_local.h</file>
-         <hash>c8acf4928c0f1803637462de23df61502e1efb57078bfe936f41a2249fc96d65</hash>
+         <hash>56d87c3a1954aad59f713d2abe0e7e96f9a014a6f3b1badb85b18a62587ea9f4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\driver\usb\uhp\drv_usb_ohci.h</file>
-         <hash>ac372eb36a6930529667760b84b730fd9002caa6969e345badea9569c061abbc</hash>
+         <hash>2605ada8b321f65ad4d8ed3c3736a87d5270188c390ba9582846b30ac9bb6f20</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\system\system_module.h</file>
@@ -6394,7 +6394,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\scsi.h</file>
-         <hash>4b6a4b8b638039002cde563fb508b72a0b2fa68c20a98d01eaa2464a1cb5c41a</hash>
+         <hash>f27c8e740061441ffd0030bde5ee09ab7d96509d931c2c6319c944a2e86e85b4</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\component\secumod.h</file>
@@ -6406,7 +6406,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\src\usb_host_msd_local.h</file>
-         <hash>0800407f96ffa4dc6bf367b5afe2fd85fd8f785fa8f0f9c238339038347df54b</hash>
+         <hash>e23a31fbb886b4d879c06331f89c86913a96401d6b639db9c2616950f35b5db5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\peripheral\clk\plib_clk.h</file>
@@ -6442,7 +6442,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\src\usb_host_scsi.c</file>
-         <hash>90b32c914bd112ed062761b6a4facccc855463bd36ec2c2320b8de9813a0aa29</hash>
+         <hash>4718c3e9e9235e5f6db6e9e95aebf1feef213dd811428a6e38aa7cdbe5aa0a5b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\peripheral\l2cc\plib_l2cc.h</file>
@@ -6450,7 +6450,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\driver\usb\drv_usb_external_dependencies.h</file>
-         <hash>9c425976fc28dee4877b6dc97e3d85c69d99a3bbacf7813ea324948a6c9e8431</hash>
+         <hash>347035feb1b3460c279e58f4210d0e22e5d1505ec60a69f78375ac81db5e95e8</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\peripheral\l2cc\plib_l2cc.c</file>
@@ -6470,7 +6470,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\usb_host_hub_interface.h</file>
-         <hash>9db9028cdb085f4ed90d06c8d0013e5b9d300be9b49f0933094c373552193645</hash>
+         <hash>bcd95afaa026ab8559047e85ac157597452ab0ceee4e96612e5273ec324f1ef9</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\component\sfr.h</file>
@@ -6486,7 +6486,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\usb\src\usb_host_hub.c</file>
-         <hash>0f9297ae89ec50b0d54307a3aaf3bcedb01df1b0454bb5a8bdd3642f8c42b6a5</hash>
+         <hash>969c16580a88e07a70cf0e9e470e16bf0493a35f878a4e7cf3aa634e839b7dba</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\instance\saic.h</file>
@@ -6498,11 +6498,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\initialization.c</file>
-         <hash>db860e9a29b3fb168336a0e5b66c4e6ee2580c9888b87719786f314b2ce9ac9d</hash>
+         <hash>e0fef8c154b0afaefa2a80feb7ea6d26b2732ff3ac11fadd2949ee6c1fa9abf4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>b8ee0faabd8f350f3b0a1afd4853910ecbe51c1a02526a5d29a03b761c810233</hash>
+         <hash>480bba57d1693ba9dbd176146d48cdb7b2e804f02de71e5d3742eb409a1bd099</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27CD1G_DFP\component\xdmac.h</file>
