@@ -82,7 +82,7 @@ void SYS_Tasks ( void )
         /* USB Host Task Routine */ 
     USB_HOST_Tasks(sysObj.usbHostObject0);
 
-	/* USB HS Driver Task Routine */ 
+    /* USB HS Driver Task Routine */ 
     DRV_USBHSV1_Tasks(sysObj.drvUSBHSV1Object);
 
 
