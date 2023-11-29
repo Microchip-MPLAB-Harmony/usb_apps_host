@@ -53,7 +53,7 @@
  * This data section is volatile.
  */
 
-volatile COMPILER_WORD_ALIGNED usb_descriptor_host_registers_t pipeDescriptorTable[DRV_USBFSV1_INSTANCES_NUMBER][7];
+static volatile COMPILER_WORD_ALIGNED usb_descriptor_host_registers_t pipeDescriptorTable[DRV_USBFSV1_INSTANCES_NUMBER][7];
 
 /**********************************************************
  * This structure is a set of pointer to the USBFSV1 driver
@@ -70,7 +70,7 @@ DRV_USB_HOST_INTERFACE gDrvUSBFSV1HostInterface =
     .hostPipeSetup = DRV_USBFSV1_HOST_PipeSetup,
     .hostPipeClose = DRV_USBFSV1_HOST_PipeClose,
     .hostEventsDisable = DRV_USBFSV1_HOST_EventsDisable,
-	.endpointToggleClear = DRV_USBFSV1_HOST_EndpointToggleClear,
+    .endpointToggleClear = DRV_USBFSV1_HOST_EndpointToggleClear,
     .hostEventsEnable = DRV_USBFSV1_HOST_EventsEnable,
     .rootHubInterface.rootHubPortInterface.hubPortReset = DRV_USBFSV1_HOST_ROOT_HUB_PortReset,
     .rootHubInterface.rootHubPortInterface.hubPortSpeedGet = DRV_USBFSV1_HOST_ROOT_HUB_PortSpeedGet,
@@ -89,12 +89,7 @@ DRV_USB_HOST_INTERFACE gDrvUSBFSV1HostInterface =
  * Global Variable used as Pool of pipe objects 
  * that is used by all driver instances.
  *****************************************************/
-DRV_USBFSV1_HOST_PIPE_OBJ gDrvUSBFSV1HostPipeObj[DRV_USBFSV1_HOST_PIPES_NUMBER];
-
-/****************************************
- * The driver object
- ****************************************/
-extern DRV_USBFSV1_OBJ gDrvUSBObj[];
+static DRV_USBFSV1_HOST_PIPE_OBJ gDrvUSBFSV1HostPipeObj[DRV_USBFSV1_HOST_PIPES_NUMBER];
 
 /******************************************************************************
  * This matrix provides a mapping of the amount of bandwidth left in a frame for
@@ -103,7 +98,7 @@ extern DRV_USBFSV1_OBJ gDrvUSBObj[];
  * size. The first entry is for payload size 1, the second for payload size of
  * 2, the third for payload size of 8 and so on.
  ******************************************************************************/
-const unsigned int gDrvUSBFSTableBW[4][11] =
+static const uint32_t gDrvUSBFSTableBW[4][11] =
 {
     {3, 3, 3, 4, 4, 5, 7, 0, 0,  0,  0},    /* Control Transfers    */
     {1, 1, 1, 1, 2, 3, 5, 0, 0,  0,  0},    /* Interrupt Transfers  */
@@ -111,7 +106,7 @@ const unsigned int gDrvUSBFSTableBW[4][11] =
     {1, 1, 1, 1, 2, 3, 5, 9, 18, 35, 69}    /* Isochronous Transfer */
 };      
 
-const unsigned int gDrvUSBLSTableBW[2][4] =
+static const uint32_t gDrvUSBLSTableBW[2][4] =
 {
     {26, 27, 28,30},    /* Control Transfers    */
     {11, 11, 12, 14}    /* Interrupt Transfers  */
@@ -123,10 +118,16 @@ const unsigned int gDrvUSBLSTableBW[2][4] =
 // ****************************************************************************
 // ****************************************************************************
 
-void _DRV_USBFSV1_HOST_AttachDetachStateMachine (DRV_USBFSV1_OBJ * hDriver)
+/* MISRA C-2012 Rule 10.4 False Positive:20 Deviation record ID -  H3_MISRAC_2012_R_10_4_DR_1 */
+
+/* MISRA C-2012 Rule 10.4(False Positive), and 20.7 deviated below. Deviation record ID -  
+    H3_MISRAC_2012_R_10_4_DR_1, H3_MISRAC_2012_R_20_7_DR_1 */
+
+
+void F_DRV_USBFSV1_HOST_AttachDetachStateMachine (DRV_USBFSV1_OBJ * hDriver)
 {
     usb_host_registers_t * HOST = &hDriver->usbID->HOST;
-    _DRV_USBFSV1_DECLARE_BOOL_VARIABLE(interruptState);
+    M_DRV_USBFSV1_DECLARE_BOOL_VARIABLE(interruptState);
 
     switch(hDriver->attachState)
     {
@@ -165,7 +166,7 @@ void _DRV_USBFSV1_HOST_AttachDetachStateMachine (DRV_USBFSV1_OBJ * hDriver)
                  * see if this is not SE0. If so, then we know that the device
                  * is still attached. */
 
-                if((HOST->USB_STATUS & USB_HOST_STATUS_LINESTATE_Msk) != 0)
+                if((HOST->USB_STATUS & USB_HOST_STATUS_LINESTATE_Msk) != 0U)
                 {
                     /* Device is still attached.Clear the detach flag immediately
                      * if it was set because of debounce. Clear the attach flag
@@ -173,9 +174,9 @@ void _DRV_USBFSV1_HOST_AttachDetachStateMachine (DRV_USBFSV1_OBJ * hDriver)
                     
                     HOST->USB_INTFLAG = USB_HOST_INTFLAG_DCONN_Msk | USB_HOST_INTFLAG_DDISC_Msk;
                     
-                    _DRV_USBFSV1_SYS_INT_SourceDisableSave(interruptState, hDriver->interruptSource,
-                            interruptState1, hDriver->interruptSource1,interruptState2, hDriver->interruptSource2,
-                            interruptState3, hDriver->interruptSource3)
+                    M_DRV_USBFSV1_SYS_INT_SourceDisableSave(interruptState, (IRQn_Type)hDriver->interruptSource,
+                            interruptState1, (IRQn_Type)hDriver->interruptSource1,interruptState2, (IRQn_Type)hDriver->interruptSource2,
+                            interruptState3, (IRQn_Type)hDriver->interruptSource3)
                     
                     /* Enumerate from root hub port 0 */
                     hDriver->attachedDeviceObjHandle = USB_HOST_DeviceEnumerate(hDriver->usbHostDeviceInfo, 0);
@@ -185,9 +186,9 @@ void _DRV_USBFSV1_HOST_AttachDetachStateMachine (DRV_USBFSV1_OBJ * hDriver)
                     HOST->USB_INTENSET = USB_HOST_INTFLAG_DDISC_Msk;
                     
                     /* Enable the global USB Interrupt */
-                    _DRV_USBFSV1_SYS_INT_SourceEnableRestore(interruptState, hDriver->interruptSource,
-                            interruptState1, hDriver->interruptSource1,interruptState2, hDriver->interruptSource2,
-                            interruptState3, hDriver->interruptSource3);
+                    M_DRV_USBFSV1_SYS_INT_SourceEnableRestore(interruptState, (IRQn_Type)hDriver->interruptSource,
+                            interruptState1, (IRQn_Type)hDriver->interruptSource1,interruptState2, (IRQn_Type)hDriver->interruptSource2,
+                            interruptState3, (IRQn_Type)hDriver->interruptSource3);
                     
                     hDriver->attachState = DRV_USBFSV1_HOST_ATTACH_STATE_IDLE;
                 }
@@ -225,13 +226,17 @@ void _DRV_USBFSV1_HOST_AttachDetachStateMachine (DRV_USBFSV1_OBJ * hDriver)
             break;
 
         default:
+             /* Do Nothing */
             break;
     }
 }
 
 // *****************************************************************************
+/* MISRA C-2012 Rule 11.3, 11.6 and 11.8 deviated below. Deviation record ID -  
+    H3_MISRAC_2012_R_11_3_DR_1, H3_MISRAC_2012_R_11_6_DR_1 and H3_MISRAC_2012_R_11_8_DR_1*/
+
 /* Function:
-    void _DRV_USBFSV1_HOST_Initialize
+    void F_DRV_USBFSV1_HOST_Initialize
     (
         DRV_USBFSV1_OBJ * const pUSBDrvObj,
         const SYS_MODULE_INDEX index
@@ -252,7 +257,7 @@ void _DRV_USBFSV1_HOST_AttachDetachStateMachine (DRV_USBFSV1_OBJ * hDriver)
     This is a local function and should not be called directly by the
     application.
 */
-void _DRV_USBFSV1_HOST_Initialize
+void F_DRV_USBFSV1_HOST_Initialize
 (
     DRV_USBFSV1_OBJ * drvObj, 
     SYS_MODULE_INDEX index,
@@ -288,11 +293,11 @@ void _DRV_USBFSV1_HOST_Initialize
     drvObj->usbID->HOST.USB_CTRLB |= USB_HOST_CTRLB_VBUSOK_Msk;
 
     /* Clear and enabled the global USB Interrupt here. */
-    _DRV_USBFSV1_SYS_INT_SourceStatusClear(usbInit->interruptSource, usbInit->interruptSource1,
-            usbInit->interruptSource2, usbInit->interruptSource3);
+    M_DRV_USBFSV1_SYS_INT_SourceStatusClear((IRQn_Type)usbInit->interruptSource, (IRQn_Type)usbInit->interruptSource1,
+            (IRQn_Type)usbInit->interruptSource2, (IRQn_Type)usbInit->interruptSource3);
 
-    _DRV_USBFSV1_SYS_INT_SourceEnable(usbInit->interruptSource, usbInit->interruptSource1,
-            usbInit->interruptSource2, usbInit->interruptSource3);
+    M_DRV_USBFSV1_SYS_INT_SourceEnable((IRQn_Type)usbInit->interruptSource, (IRQn_Type)usbInit->interruptSource1,
+            (IRQn_Type)usbInit->interruptSource2, (IRQn_Type)usbInit->interruptSource3);
 }
 
 // *****************************************************************************
@@ -324,7 +329,7 @@ USB_ERROR DRV_USBFSV1_HOST_IRPSubmit
 )
 {
     USB_HOST_IRP_LOCAL * pIRPIterator = (USB_HOST_IRP_LOCAL *)NULL;
-    _DRV_USBFSV1_DECLARE_BOOL_VARIABLE(interruptState);
+    M_DRV_USBFSV1_DECLARE_BOOL_VARIABLE(interruptState);
     USB_HOST_IRP_LOCAL * pIRP = (USB_HOST_IRP_LOCAL *)pInputIRP;
     DRV_USBFSV1_HOST_PIPE_OBJ * pPipe = (DRV_USBFSV1_HOST_PIPE_OBJ *)hPipe;
     DRV_USBFSV1_OBJ * pUSBDrvObj = (DRV_USBFSV1_OBJ *)NULL;
@@ -338,7 +343,7 @@ USB_ERROR DRV_USBFSV1_HOST_IRPSubmit
         pIRP->pipe = hPipe;
 
         /* Clear up any temporary state */
-        pIRP->tempState = 0;
+        pIRP->tempState = (DRV_USBFSV1_HOST_IRP_STATE)0;
 
         /* Control transfer IRPs have to be implemented in states. These sub states
          * are maintained in the tempState member of the IRP. A control transfer IRP
@@ -367,9 +372,9 @@ USB_ERROR DRV_USBFSV1_HOST_IRPSubmit
             if(OSAL_MUTEX_Lock(&pUSBDrvObj->mutexID, OSAL_WAIT_FOREVER) == OSAL_RESULT_TRUE)
             {
                 /* Disable the interrupt */
-                _DRV_USBFSV1_SYS_INT_SourceDisableSave(interruptState, pUSBDrvObj->interruptSource,
-                        interruptState1, pUSBDrvObj->interruptSource1, interruptState2, pUSBDrvObj->interruptSource2,
-                        interruptState3, pUSBDrvObj->interruptSource3);
+                M_DRV_USBFSV1_SYS_INT_SourceDisableSave(interruptState, (IRQn_Type)pUSBDrvObj->interruptSource,
+                        interruptState1, (IRQn_Type)pUSBDrvObj->interruptSource1, interruptState2, (IRQn_Type)pUSBDrvObj->interruptSource2,
+                        interruptState3, (IRQn_Type)pUSBDrvObj->interruptSource3);
             }
             else
             {
@@ -417,11 +422,11 @@ USB_ERROR DRV_USBFSV1_HOST_IRPSubmit
                  * release the mutex. Any thread that is blocked on this mutex will be
                  * able to now manipulate the interrupt and submit the IRP */
 
-                _DRV_USBFSV1_SYS_INT_SourceEnableRestore(interruptState, pUSBDrvObj->interruptSource,
-                        interruptState1, pUSBDrvObj->interruptSource1, interruptState2, pUSBDrvObj->interruptSource2,
-                        interruptState3, pUSBDrvObj->interruptSource3);
+                M_DRV_USBFSV1_SYS_INT_SourceEnableRestore(interruptState, (IRQn_Type)pUSBDrvObj->interruptSource,
+                        interruptState1, (IRQn_Type)pUSBDrvObj->interruptSource1, interruptState2, (IRQn_Type)pUSBDrvObj->interruptSource2,
+                        interruptState3, (IRQn_Type)pUSBDrvObj->interruptSource3);
 
-                OSAL_MUTEX_Unlock(&pUSBDrvObj->mutexID);
+                (void) OSAL_MUTEX_Unlock(&pUSBDrvObj->mutexID);
             }
         }
     }
@@ -460,7 +465,7 @@ void DRV_USBFSV1_HOST_IRPCancel
 
     USB_HOST_IRP_LOCAL * irp = (USB_HOST_IRP_LOCAL *) inputIRP;
     USB_HOST_IRP_LOCAL * pIteratorIRP = NULL;
-    _DRV_USBFSV1_DECLARE_BOOL_VARIABLE(interruptState);
+    M_DRV_USBFSV1_DECLARE_BOOL_VARIABLE(interruptState);
     DRV_USBFSV1_OBJ * hDriver;
     DRV_USBFSV1_HOST_PIPE_OBJ * pipe;
     bool thereWasAnError = false;
@@ -469,7 +474,7 @@ void DRV_USBFSV1_HOST_IRPCancel
     if(inputIRP != NULL)
     {
         /* IRP is not NULL. Continue */
-        if((irp->pipe != DRV_USBFSV1_HOST_PIPE_HANDLE_INVALID) && ((DRV_USBFSV1_HOST_PIPE_OBJ *)(irp->pipe))!= NULL)
+        if((irp->pipe != DRV_USBFSV1_HOST_PIPE_HANDLE_INVALID) && (((DRV_USBFSV1_HOST_PIPE_OBJ *)(irp->pipe))!= NULL))
         {
             /* Pipe appears valid. Lets Continue */
 
@@ -480,9 +485,9 @@ void DRV_USBFSV1_HOST_IRPCancel
             {
                 if(OSAL_MUTEX_Lock(&(hDriver->mutexID), OSAL_WAIT_FOREVER) == OSAL_RESULT_TRUE)
                 {
-                    _DRV_USBFSV1_SYS_INT_SourceDisableSave(interruptState, hDriver->interruptSource,
-                        interruptState1, hDriver->interruptSource1, interruptState2, hDriver->interruptSource2,
-                        interruptState3, hDriver->interruptSource3);
+                    M_DRV_USBFSV1_SYS_INT_SourceDisableSave(interruptState, (IRQn_Type)hDriver->interruptSource,
+                        interruptState1, (IRQn_Type)hDriver->interruptSource1, interruptState2, (IRQn_Type)hDriver->interruptSource2,
+                        interruptState3, (IRQn_Type)hDriver->interruptSource3);
                 }
                 else
                 {
@@ -560,11 +565,11 @@ void DRV_USBFSV1_HOST_IRPCancel
             if(!hDriver->isInInterruptContext)
             {
                 /* Restore the interrupt and release the mutex */
-                _DRV_USBFSV1_SYS_INT_SourceEnableRestore(interruptState, hDriver->interruptSource,
-                        interruptState1, hDriver->interruptSource1, interruptState2, hDriver->interruptSource2,
-                        interruptState3, hDriver->interruptSource3);
+                M_DRV_USBFSV1_SYS_INT_SourceEnableRestore(interruptState, (IRQn_Type)hDriver->interruptSource,
+                        interruptState1, (IRQn_Type)hDriver->interruptSource1, interruptState2, (IRQn_Type)hDriver->interruptSource2,
+                        interruptState3, (IRQn_Type)hDriver->interruptSource3);
 
-                OSAL_MUTEX_Unlock(&(hDriver->mutexID));
+                (void) OSAL_MUTEX_Unlock(&(hDriver->mutexID));
             }
         }
         else
@@ -584,7 +589,7 @@ void DRV_USBFSV1_HOST_IRPCancel
 
   Summary:
     Closes an open pipe.
-	
+    
   Description:
     This function closes an open pipe. Any IRPs scheduled on the pipe will be
     aborted and IRP callback functions will be called with the status as
@@ -602,7 +607,7 @@ void DRV_USBFSV1_HOST_PipeClose
 {
     /* This function closes an open pipe */
 
-    _DRV_USBFSV1_DECLARE_BOOL_VARIABLE(interruptState);
+    M_DRV_USBFSV1_DECLARE_BOOL_VARIABLE(interruptState);
 
     DRV_USBFSV1_OBJ * hDriver = NULL;
     USB_HOST_IRP_LOCAL * irp = NULL;
@@ -612,7 +617,7 @@ void DRV_USBFSV1_HOST_PipeClose
     bool thereWasAnError = false;
 
     /* Make sure we have a valid pipe */
-    if(( pipeHandle != 0 ) && (pipeHandle != DRV_USBFSV1_HOST_PIPE_HANDLE_INVALID))
+    if(( pipeHandle != 0U ) && (pipeHandle != DRV_USBFSV1_HOST_PIPE_HANDLE_INVALID))
     {
         pipe = (DRV_USBFSV1_HOST_PIPE_OBJ*) pipeHandle;
 
@@ -627,9 +632,9 @@ void DRV_USBFSV1_HOST_PipeClose
             {
                 if(OSAL_MUTEX_Lock(&hDriver->mutexID, OSAL_WAIT_FOREVER) == OSAL_RESULT_TRUE)
                 {
-                    _DRV_USBFSV1_SYS_INT_SourceDisableSave(interruptState, hDriver->interruptSource,
-                            interruptState1, hDriver->interruptSource1, interruptState2, hDriver->interruptSource2,
-                            interruptState3, hDriver->interruptSource3);
+                    M_DRV_USBFSV1_SYS_INT_SourceDisableSave(interruptState, (IRQn_Type)hDriver->interruptSource,
+                            interruptState1, (IRQn_Type)hDriver->interruptSource1, interruptState2, (IRQn_Type)hDriver->interruptSource2,
+                            interruptState3, (IRQn_Type)hDriver->interruptSource3);
                 }
                 else
                 {
@@ -730,11 +735,11 @@ void DRV_USBFSV1_HOST_PipeClose
                     /* Restore the interrupts */
                     if(!(hDriver->isInInterruptContext))
                     {
-                        _DRV_USBFSV1_SYS_INT_SourceEnableRestore(interruptState, hDriver->interruptSource,
-                          interruptState1, hDriver->interruptSource1, interruptState2, hDriver->interruptSource2,
-                          interruptState3, hDriver->interruptSource3);
+                        M_DRV_USBFSV1_SYS_INT_SourceEnableRestore(interruptState, (IRQn_Type)hDriver->interruptSource,
+                          interruptState1, (IRQn_Type)hDriver->interruptSource1, interruptState2, (IRQn_Type)hDriver->interruptSource2,
+                          interruptState3, (IRQn_Type)hDriver->interruptSource3);
 
-                        OSAL_MUTEX_Unlock(&hDriver->mutexID);
+                        (void) OSAL_MUTEX_Unlock(&hDriver->mutexID);
                     }
                 }
             }
@@ -751,6 +756,8 @@ void DRV_USBFSV1_HOST_PipeClose
 }
 
 // *****************************************************************************
+/* MISRA C-2012 Rule 16.1, and 16.3 deviated below. Deviation record ID -  
+    H3_MISRAC_2012_R_16_1_DR_1, H3_MISRAC_2012_R_16_3_DR_1 */
 /* Function:
     DRV_USBFSV1_HOST_PIPE_HANDLE DRV_USBFSV1_HOST_PipeSetup
     (
@@ -767,7 +774,7 @@ void DRV_USBFSV1_HOST_PipeClose
 
   Summary:
     Open a pipe with the specified attributes.
-	
+    
   Description:
     This function opens a communication pipe between the Host and the device
     endpoint. The transfer type and other attributes are specified through the
@@ -796,8 +803,8 @@ DRV_USBFSV1_HOST_PIPE_HANDLE DRV_USBFSV1_HOST_PipeSetup
     DRV_USBFSV1_OBJ * pUSBDrvObj = (DRV_USBFSV1_OBJ *)client;
     DRV_USBFSV1_HOST_PIPE_HANDLE returnValue = DRV_USBFSV1_HOST_PIPE_HANDLE_INVALID;
     DRV_USBFSV1_HOST_PIPE_GROUP * pPipeGroup = (DRV_USBFSV1_HOST_PIPE_GROUP *)NULL;
-    unsigned int pipeGroupIndex = 0;
-    unsigned int bandwidthTableIndex = 0;
+    uint32_t pipeGroupIndex = 0;
+    uint32_t bandwidthTableIndex = 0;
     uint8_t pipeCount = 0;
     uint8_t bitSetCount = 0;
     bool thereWasAnError = false;
@@ -857,19 +864,19 @@ DRV_USBFSV1_HOST_PIPE_HANDLE DRV_USBFSV1_HOST_PipeSetup
 
                         case USB_TRANSFER_TYPE_ISOCHRONOUS:
                             bandwidthTableIndex = 3;
-                            pipeGroupIndex = (endpointAndDirection & 0x80) == 0x80 ? DRV_USBFSV1_HOST_HW_PIPE_ISOC_IN : DRV_USBFSV1_HOST_HW_PIPE_ISOC_OUT;
+                            pipeGroupIndex = ((endpointAndDirection & 0x80U) == 0x80U) ? ((uint32_t)DRV_USBFSV1_HOST_HW_PIPE_ISOC_IN) : ((uint32_t)DRV_USBFSV1_HOST_HW_PIPE_ISOC_OUT);
                             pPipe->pckSize = 0x7;
                             break;
 
                         case USB_TRANSFER_TYPE_BULK:
                             bandwidthTableIndex = 2;
-                            pipeGroupIndex = (endpointAndDirection & 0x80) == 0x80 ? DRV_USBFSV1_HOST_HW_PIPE_BULK_IN : DRV_USBFSV1_HOST_HW_PIPE_BULK_OUT;
+                            pipeGroupIndex = ((endpointAndDirection & 0x80U) == 0x80U) ? ((uint32_t)DRV_USBFSV1_HOST_HW_PIPE_BULK_IN) : ((uint32_t)DRV_USBFSV1_HOST_HW_PIPE_BULK_OUT);
                             pPipe->pckSize = 3;
                             break;
 
                         case USB_TRANSFER_TYPE_INTERRUPT:
                             bandwidthTableIndex = 1;
-                            pipeGroupIndex = (endpointAndDirection & 0x80) == 0x80 ? DRV_USBFSV1_HOST_HW_PIPE_INT_IN : DRV_USBFSV1_HOST_HW_PIPE_INT_OUT;
+                            pipeGroupIndex = ((endpointAndDirection & 0x80U) == 0x80U) ? ((uint32_t)DRV_USBFSV1_HOST_HW_PIPE_INT_IN) : ((uint32_t)DRV_USBFSV1_HOST_HW_PIPE_INT_OUT);
                             
                             /* The pipe max packet size as defined by the hardware */
                             pPipe->pckSize = 3;
@@ -885,40 +892,44 @@ DRV_USBFSV1_HOST_PIPE_HANDLE DRV_USBFSV1_HOST_PipeSetup
                     
                     /* Update the pipe group index in the pipe object. This
                      * simplifies code at the time of pipe close. */
-                    pPipe->pipeGroupIndex = pipeGroupIndex;
+                    pPipe->pipeGroupIndex = (uint8_t)pipeGroupIndex;
                     
                     /* In a case where the max packet size is a multiple of 2,
                      * find calculate the log2n. */
-                    if((wMaxPacketSize <= 512) && (wMaxPacketSize != 0))
+                    if((wMaxPacketSize <= 512U) && (wMaxPacketSize != 0U))
                     {
-                        for(bitSetCount = 0; bitSetCount < 10; bitSetCount++)
+                        for(bitSetCount = 0U; bitSetCount < 10U; bitSetCount++)
                         {
-                            if((wMaxPacketSize & 0x00000001) == 0x00000001)
+                            if((wMaxPacketSize & 0x00000001U) == 0x00000001U)
                             {
                                 break;
                             }
                             wMaxPacketSize = wMaxPacketSize >> 1;
                         }
                     }
-                    else if((wMaxPacketSize != 0))
+                    else if((wMaxPacketSize != 0U))
                     {
                         /* This means the max packet size is greater than 512. This
                          * is possible for Isochronous transfers */
 
                         bitSetCount = 10;
                     }
+                    else
+                    {
+                        /* Do Nothing */
+                    }
 
                     /* The bandwidth required per transaction is calculated up
                      * front so that we dont have to calculate this in the
                      * interrupt context when the transaction is in progress */
 
-                    if(bitSetCount != 10)
+                    if(bitSetCount != 10U)
                     {
                         if(pPipe->speed == USB_SPEED_LOW)
                         {
-                            if((pPipe->pipeType == USB_TRANSFER_TYPE_INTERRUPT) || (pPipe->pipeType == USB_TRANSFER_TYPE_CONTROL))
+                            if(((pPipe->pipeType == USB_TRANSFER_TYPE_INTERRUPT) || (pPipe->pipeType == USB_TRANSFER_TYPE_CONTROL)) && (bitSetCount < 4))
                             {
-                                pPipe->bwPerTransaction = gDrvUSBLSTableBW[bandwidthTableIndex][bitSetCount];
+                                pPipe->bwPerTransaction = (uint8_t)(gDrvUSBLSTableBW[bandwidthTableIndex][bitSetCount]);
                             }
                             else
                             {
@@ -929,13 +940,13 @@ DRV_USBFSV1_HOST_PIPE_HANDLE DRV_USBFSV1_HOST_PipeSetup
                         }
                         else
                         {
-                            pPipe->bwPerTransaction = gDrvUSBFSTableBW[bandwidthTableIndex][bitSetCount];
+                            pPipe->bwPerTransaction = (uint8_t)(gDrvUSBFSTableBW[bandwidthTableIndex][bitSetCount]);
                         }
                     }
-                    else if(bitSetCount == 10 && pPipe->pipeType == USB_TRANSFER_TYPE_ISOCHRONOUS && pPipe->speed == USB_SPEED_FULL)
+                    else if((pPipe->pipeType == USB_TRANSFER_TYPE_ISOCHRONOUS) && (pPipe->speed == USB_SPEED_FULL))
                     {
                         /* Bandwidth for Isochronous transfers */
-                        pPipe->bwPerTransaction = gDrvUSBFSTableBW[bandwidthTableIndex][bitSetCount];
+                        pPipe->bwPerTransaction = (uint8_t)(gDrvUSBFSTableBW[bandwidthTableIndex][bitSetCount]);
                     }
                     else
                     {
@@ -994,7 +1005,7 @@ DRV_USBFSV1_HOST_PIPE_HANDLE DRV_USBFSV1_HOST_PipeSetup
             }
 
             /* Release the mutex */
-            OSAL_MUTEX_Unlock(&pUSBDrvObj->mutexID);
+            (void) OSAL_MUTEX_Unlock(&pUSBDrvObj->mutexID);
         }
         else
         {
@@ -1010,15 +1021,18 @@ DRV_USBFSV1_HOST_PIPE_HANDLE DRV_USBFSV1_HOST_PipeSetup
 }
 
 // *****************************************************************************
+/* MISRA C-2012 Rule 5.1, 5.2 and 21.15 deviated below. Deviation record ID -  
+    H3_MISRAC_2012_R_5_1_DR_1, H3_MISRAC_2012_R_5_2_DR_1 and H3_MISRAC_2012_R_21_15_DR_1*/
+
 /* Function:
-    void _DRV_USBFSV1_HOST_ControlTransferDataStageSend(DRV_USBFSV1_OBJ * hDriver)
+    void F_DRV_USBFSV1_HOST_ControlTransferDataStageSend(DRV_USBFSV1_OBJ * hDriver)
 
   Summary:
     This function will process transfer the data stage of the control transfer.
-	
+    
   Description:
     Thsi function will transfer the data stage of the control transfer. It is
-    called by the _DRV_USBFSV1_HOST_ControlTransferProcess function. The
+    called by the F_DRV_USBFSV1_HOST_ControlTransferProcess function. The
     function will look at the status of the IRP at index 0 of the Frame IRP list
     and will schedule the next transaction. There will always be a transaction
     launched on the bus at the end of this function.
@@ -1028,32 +1042,34 @@ DRV_USBFSV1_HOST_PIPE_HANDLE DRV_USBFSV1_HOST_PipeSetup
     application.
 */
 
-void _DRV_USBFSV1_HOST_ControlTransferDataStageSend(DRV_USBFSV1_OBJ * hDriver)
+void F_DRV_USBFSV1_HOST_ControlTransferDataStageSend(DRV_USBFSV1_OBJ * hDriver)
 {
     DRV_USBFSV1_HOST_PIPE_GROUP * pipeGroup = &hDriver->pipeGroup[DRV_USBFSV1_HOST_HW_PIPE_CONTROL];
     DRV_USBFSV1_HOST_PIPE_OBJ * pipe = pipeGroup->currentPipe;
     USB_HOST_IRP_LOCAL * pIRP = pipeGroup->currentIRP;
-    int size = 0;
+    int32_t size = 0;
     usb_host_registers_t * HOST = &hDriver->usbID->HOST;
     usb_host_desc_bank_registers_t * controlPipeDesc = &hDriver->hostPipeDescTable[DRV_USBFSV1_HOST_HW_PIPE_CONTROL].HOST_DESC_BANK[0];
     usb_host_pipe_registers_t * controlPipe = &HOST->HOST_PIPE[DRV_USBFSV1_HOST_HW_PIPE_CONTROL]; 
+    uint32_t temp_32;
     
     /* How much data do we need to send */
     if((pIRP->tempSize - pIRP->completedBytesInThisFrame) >= pipe->endpointSize)
     {
         /* Cap the size in case we have too much to send */
-        size = pipe->endpointSize;
+        size = (int32_t)(pipe->endpointSize);
     }
     else
     {
-        size = pIRP->tempSize - pIRP->completedBytesInThisFrame;
+        temp_32 = (pIRP->tempSize - pIRP->completedBytesInThisFrame);
+        size = (int32_t)temp_32;
     }
    
     /* Set up the buffer address and the packet size. Prep the token type field
      * and then enable the transfer interrupt. Set the bank 0 ready bit. */
     controlPipeDesc->USB_ADDR = (uint32_t)(hDriver->hostTransactionBuffer);
     controlPipeDesc->USB_CTRL_PIPE &= ~(USB_HOST_CTRL_PIPE_PDADDR_Msk);
-    controlPipeDesc->USB_CTRL_PIPE |= (pipe->deviceAddress << USB_HOST_CTRL_PIPE_PDADDR_Pos);
+    controlPipeDesc->USB_CTRL_PIPE |= (((uint16_t)pipe->deviceAddress) << USB_HOST_CTRL_PIPE_PDADDR_Pos);
     controlPipeDesc->USB_PCKSIZE = 0;
     controlPipeDesc->USB_PCKSIZE = (USB_HOST_PCKSIZE_MULTI_PACKET_SIZE(0)|USB_HOST_PCKSIZE_BYTE_COUNT(size)
                     |USB_HOST_PCKSIZE_AUTO_ZLP(0)|USB_HOST_PCKSIZE_SIZE(pipe->pckSize));
@@ -1065,7 +1081,7 @@ void _DRV_USBFSV1_HOST_ControlTransferDataStageSend(DRV_USBFSV1_OBJ * hDriver)
                     USB_HOST_PINTENSET_STALL_Msk|USB_HOST_PINTENSET_TRFAIL_Msk|USB_HOST_PINTENSET_TRCPT0_Msk;
     
     /* Update the data toggle */
-    if(pipe->dataToggle == 1)
+    if(pipe->dataToggle == true)
     {
         controlPipe->USB_PSTATUSSET = USB_HOST_PSTATUSSET_DTGL_Msk;
     }
@@ -1075,19 +1091,19 @@ void _DRV_USBFSV1_HOST_ControlTransferDataStageSend(DRV_USBFSV1_OBJ * hDriver)
     }
     
     /* Check the direction and set the token type */
-    if((pipe->endpointAndDirection & 0x80) != 0)
+    if((pipe->endpointAndDirection & 0x80U) != 0U)
     {
         /* Bank 0 is ready to receive data */
         controlPipe->USB_PSTATUSCLR = USB_HOST_PSTATUSCLR_BK0RDY_Msk;
-        controlPipe->USB_PCFG |= DRV_USBFSV1_HOST_PIPE_TOKEN_IN;
+        controlPipe->USB_PCFG |= (uint8_t)DRV_USBFSV1_HOST_PIPE_TOKEN_IN;
     }
     else
     {
         /* Bank 0 contains the data. User data must be copied to the host
          * control transfer data buffer. */
-        memcpy(hDriver->hostTransactionBuffer, ( ( uint8_t * )pIRP->data + pIRP->completedBytes), size);
+        (void) memcpy(hDriver->hostTransactionBuffer, ( ( uint8_t * )pIRP->data + pIRP->completedBytes), (uint32_t)size);
         controlPipe->USB_PSTATUSSET = USB_HOST_PSTATUSSET_BK0RDY_Msk;
-        controlPipe->USB_PCFG |= DRV_USBFSV1_HOST_PIPE_TOKEN_OUT;
+        controlPipe->USB_PCFG |= (uint8_t)DRV_USBFSV1_HOST_PIPE_TOKEN_OUT;
     }
     
     /* Unfreeze the pipe. This launches the token */
@@ -1096,14 +1112,14 @@ void _DRV_USBFSV1_HOST_ControlTransferDataStageSend(DRV_USBFSV1_OBJ * hDriver)
 
 // *****************************************************************************
 /* Function:
-    bool _DRV_USBFSV1_HOST_ControlTransferProcess
+    bool F_DRV_USBFSV1_HOST_ControlTransferProcess
     (
         DRV_USBFSV1_OBJ * hDriver
     )
 
   Summary:
     Control Transfer Process.
-	
+    
   Description:
     This function is called to start and continue the processing of a control
     transfer in the frame IRP list. It is either called from the SOF interrupt
@@ -1113,7 +1129,7 @@ void _DRV_USBFSV1_HOST_ControlTransferDataStageSend(DRV_USBFSV1_OBJ * hDriver)
     This is a local function and should not be called by the application.
 */
 
-bool _DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
+bool F_DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
 {
     /* This function returns true if a token was sent at the time when the
      * function exits. Get the pointer to the control transfer. This is always 
@@ -1124,10 +1140,11 @@ bool _DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
     DRV_USBFSV1_HOST_PIPE_OBJ * pipe = pipeGroup->currentPipe;
     bool tokenSent = false;
     bool endIRP = false;
-    int byteCount = 0;
+    uint32_t byteCount = 0;
     usb_host_registers_t * HOST = &hDriver->usbID->HOST;
     usb_host_desc_bank_registers_t * controlPipeDesc = &hDriver->hostPipeDescTable[DRV_USBFSV1_HOST_HW_PIPE_CONTROL].HOST_DESC_BANK[0];
     usb_host_pipe_registers_t * controlPipe = &HOST->HOST_PIPE[DRV_USBFSV1_HOST_HW_PIPE_CONTROL]; 
+    uint32_t temp_32;
     
     if(pIRP->tempState == DRV_USBFSV1_HOST_IRP_STATE_ABORTED)
     {
@@ -1180,16 +1197,16 @@ bool _DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
                  * the direction specified in the setup packet. This is stored in
                  * the pipe object itself. */
 
-                if((((uint8_t *)(pIRP->setup))[0] & 0x80) != 0)
+                if((((uint8_t *)(pIRP->setup))[0] & 0x80U) != 0U)
                 {
                     /* Data stage direction is from device to host */
-                    pipe->endpointAndDirection |= (USB_DATA_DIRECTION_DEVICE_TO_HOST << 7);
+                    pipe->endpointAndDirection |= ((uint8_t)USB_DATA_DIRECTION_DEVICE_TO_HOST << 7);
                 }
                 else
                 {
                     /* Data stage direction is from host to device */
-                    pipe->endpointAndDirection &= 0xF;
-                    pipe->endpointAndDirection |= (USB_DATA_DIRECTION_HOST_TO_DEVICE << 7);
+                    pipe->endpointAndDirection &= 0xFU;
+                    pipe->endpointAndDirection |= ((uint8_t)USB_DATA_DIRECTION_HOST_TO_DEVICE << 7);
                 }
                 
                 /* Keep track of the transaction */
@@ -1202,8 +1219,8 @@ bool _DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
                 controlPipe->USB_PSTATUSSET = USB_HOST_PSTATUSCLR_DTGL_Msk;
                 controlPipe->USB_PCFG &= (~USB_HOST_PCFG_PTOKEN_Msk);
                 controlPipeDesc->USB_CTRL_PIPE &= ~(USB_HOST_CTRL_PIPE_PDADDR_Msk);
-                controlPipeDesc->USB_CTRL_PIPE |= (pipe->deviceAddress << USB_HOST_CTRL_PIPE_PDADDR_Pos);
-                memcpy(hDriver->hostTransactionBuffer, pIRP->setup, 8);
+                controlPipeDesc->USB_CTRL_PIPE |= (((uint16_t)pipe->deviceAddress) << USB_HOST_CTRL_PIPE_PDADDR_Pos);
+                (void) memcpy(hDriver->hostTransactionBuffer, pIRP->setup, 8);
                 controlPipeDesc->USB_ADDR = (uint32_t)hDriver->hostTransactionBuffer;
                 controlPipeDesc->USB_PCKSIZE = 0;
                 controlPipeDesc->USB_PCKSIZE = (USB_HOST_PCKSIZE_MULTI_PACKET_SIZE(0)|USB_HOST_PCKSIZE_BYTE_COUNT(8)
@@ -1237,7 +1254,7 @@ bool _DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
                             = USB_HOST_PINTFLAG_TXSTP_Msk;
                     
                     /* Check if a data stage is required */
-                    if((pIRP->data == NULL) || (pIRP->size == 0))
+                    if((pIRP->data == NULL) || (pIRP->size == 0U))
                     {
                         /* There is no data stage required. We can send the 
                          * status stage in the next frame. */
@@ -1279,7 +1296,7 @@ bool _DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
                 pIRP->tempState = DRV_USBFSV1_HOST_IRP_STATE_DATA_STAGE_SENT;
                 
                 /* This function will the IRP and launch the token*/
-                _DRV_USBFSV1_HOST_ControlTransferDataStageSend(hDriver);
+                F_DRV_USBFSV1_HOST_ControlTransferDataStageSend(hDriver);
                 tokenSent = true;
                 break;
                 
@@ -1327,7 +1344,7 @@ bool _DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
                          * fields.*/ 
                         byteCount = controlPipeDesc->USB_PCKSIZE & USB_HOST_PCKSIZE_BYTE_COUNT_Msk;
 
-                        if((pipe->endpointAndDirection & 0x80) != 0)
+                        if((pipe->endpointAndDirection & 0x80U) != 0U)
                         {
                             /* While reading data from the device, the host uses the host control transfer
                              * buffer to receive the data. The data must then be transferred from this
@@ -1336,7 +1353,7 @@ bool _DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
                              * that the USB DMA will write a minimum of 4 bytes. This can prove dangerous at
                              * the client level. */
 
-                            memcpy(( ( uint8_t * )pIRP->data + pIRP->completedBytes), hDriver->hostTransactionBuffer, byteCount);
+                            (void) memcpy(( ( uint8_t * )pIRP->data + pIRP->completedBytes), hDriver->hostTransactionBuffer, byteCount);
                             pIRP->completedBytes += byteCount;
                             pIRP->completedBytesInThisFrame += byteCount;
 
@@ -1360,13 +1377,14 @@ bool _DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
                                  * frame. */
 
                                 pIRP->status = USB_HOST_IRP_STATUS_IN_PROGRESS;
-                                pipe->dataToggle ^= 0x1;
+                                temp_32 = (((uint32_t)pipe->dataToggle) ^ 0x1U);
+                                pipe->dataToggle = (bool)temp_32;
 
                                 if(pIRP->tempSize > pIRP->completedBytesInThisFrame)
                                 {
                                     /* More transactions are required in this frame */
                                     pIRP->tempState = DRV_USBFSV1_HOST_IRP_STATE_DATA_STAGE_SENT;
-                                    _DRV_USBFSV1_HOST_ControlTransferDataStageSend(hDriver);
+                                    F_DRV_USBFSV1_HOST_ControlTransferDataStageSend(hDriver);
                                     tokenSent = true;
                                 }
                                 else
@@ -1378,6 +1396,10 @@ bool _DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
                                     endIRP = false;
                                 }
                                 break; 
+                            }
+                            else
+                            {
+                                 /* Do Nothing */
                             }
                         }
                         else
@@ -1400,13 +1422,14 @@ bool _DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
                             else if((byteCount == pIRP->tempSize) || (byteCount == pipe->endpointSize))
                             {
                                 pIRP->status = USB_HOST_IRP_STATUS_IN_PROGRESS;
-                                pipe->dataToggle ^= 0x1;
+                                temp_32 = (((uint32_t)pipe->dataToggle) ^ 0x1U);
+                                pipe->dataToggle = (bool)temp_32;
 
                                 if(pIRP->tempSize > pIRP->completedBytesInThisFrame)
                                 {
                                     /* More transactions are required in this frame */
                                     pIRP->tempState = DRV_USBFSV1_HOST_IRP_STATE_DATA_STAGE_SENT;
-                                   _DRV_USBFSV1_HOST_ControlTransferDataStageSend(hDriver);
+                                   F_DRV_USBFSV1_HOST_ControlTransferDataStageSend(hDriver);
                                     tokenSent = true;
                                 }
                                 else
@@ -1420,6 +1443,10 @@ bool _DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
                                     endIRP = false;
                                 }
                                 break;
+                            }
+                            else
+                            {
+                                 /* Do Nothing */
                             }
                         }
                     }
@@ -1442,6 +1469,10 @@ bool _DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
                         }
                         break;
                     }
+                    else
+                    {
+                        /* Do Nothing */
+                    }
                 }
   
             case DRV_USBFSV1_HOST_IRP_STATE_HANDSHAKE:
@@ -1456,7 +1487,7 @@ bool _DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
                 controlPipe->USB_PSTATUSSET = USB_HOST_PSTATUSSET_DTGL_Msk;
                 controlPipeDesc->USB_ADDR = (uint32_t)(pIRP->data);
                 controlPipeDesc->USB_CTRL_PIPE &= ~(USB_HOST_CTRL_PIPE_PDADDR_Msk);
-                controlPipeDesc->USB_CTRL_PIPE |= (pipe->deviceAddress << USB_HOST_CTRL_PIPE_PDADDR_Pos);
+                controlPipeDesc->USB_CTRL_PIPE |= (((uint16_t)pipe->deviceAddress) << USB_HOST_CTRL_PIPE_PDADDR_Pos);
                 controlPipeDesc->USB_PCKSIZE = 0;
                 controlPipeDesc->USB_PCKSIZE = (USB_HOST_PCKSIZE_MULTI_PACKET_SIZE(0)|USB_HOST_PCKSIZE_BYTE_COUNT(0)
                                 |USB_HOST_PCKSIZE_AUTO_ZLP(0)|USB_HOST_PCKSIZE_SIZE(pipe->pckSize));
@@ -1468,13 +1499,13 @@ bool _DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
                     USB_HOST_PINTENSET_STALL_Msk|USB_HOST_PINTENSET_TRFAIL_Msk|USB_HOST_PINTENSET_TRCPT0_Msk;
 
                 /* Check the direction and set the token type */
-                if((pipe->endpointAndDirection & 0x80) == 0)
+                if((pipe->endpointAndDirection & 0x80U) == 0U)
                 {
                     /* If the data stage was from host to device, then the status
                      * stage should be an IN token. Bank 0 is ready to receive 
                      * data but we are not expecting any data */
                     controlPipe->USB_PSTATUSCLR = USB_HOST_PSTATUSCLR_BK0RDY_Msk;
-                    controlPipe->USB_PCFG |= DRV_USBFSV1_HOST_PIPE_TOKEN_IN;
+                    controlPipe->USB_PCFG |= (uint8_t)DRV_USBFSV1_HOST_PIPE_TOKEN_IN;
                 }
                 else
                 {
@@ -1482,7 +1513,7 @@ bool _DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
                      * stage should be an OUT token. Bank 0 is ready to send 
                      * data but we will not send any data.  */
                     controlPipe->USB_PSTATUSSET = USB_HOST_PSTATUSSET_BK0RDY_Msk;
-                    controlPipe->USB_PCFG |= DRV_USBFSV1_HOST_PIPE_TOKEN_OUT;
+                    controlPipe->USB_PCFG |= (uint8_t)DRV_USBFSV1_HOST_PIPE_TOKEN_OUT;
                 }
 
                 /* Unfreeze the pipe. This launches the token */
@@ -1521,7 +1552,7 @@ bool _DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
                         controlPipe->USB_PINTFLAG = USB_HOST_PINTFLAG_TRCPT0_Msk|USB_HOST_PINTFLAG_TRFAIL_Msk;
                         pIRP->tempState = DRV_USBFSV1_HOST_IRP_STATE_COMPLETE;
                         pIRP->status = USB_HOST_IRP_STATUS_COMPLETED;
-                        if(((pipe->endpointAndDirection & 0x80) != 0) && (pIRP->size > pIRP->completedBytes))
+                        if(((pipe->endpointAndDirection & 0x80U) != 0U) && (pIRP->size > pIRP->completedBytes))
                         {
                             /* While moving data from device to host, if we received
                              * less data from the device than expected, then indicate a
@@ -1549,6 +1580,11 @@ bool _DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
                             pIRP->tempState = DRV_USBFSV1_HOST_IRP_STATE_HANDSHAKE;
                         }
                     }
+                    else
+                    {
+                         /* Do Nothing */
+                    }
+                 
                 }
                             
                 break;
@@ -1559,6 +1595,7 @@ bool _DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
                 break;
                 
             default:
+                 /* Do Nothing */
                 break;
         }
         
@@ -1593,13 +1630,14 @@ bool _DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
     return(tokenSent);
 }
 
+/* MISRAC 2012 deviation block end */
 // *****************************************************************************
 /* Function:
-    void _DRV_USBFSV1_HOST_NonControlTransferDataSend(DRV_USBFSV1_OBJ * hDriver)
+    void F_DRV_USBFSV1_HOST_NonControlTransferDataSend(DRV_USBFSV1_OBJ * hDriver)
 
   Summary:
     This function transfers data for a non control transfer.
-	
+    
   Description:
     This function will transfer data for current or the next transfer in the
     frame IRP list. The transfer to be process is pointed to by the
@@ -1617,29 +1655,31 @@ bool _DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
     This is a local function and should not be called by the application.
 */
 
-void _DRV_USBFSV1_HOST_NonControlTransferDataSend(DRV_USBFSV1_OBJ * hDriver)
+void F_DRV_USBFSV1_HOST_NonControlTransferDataSend(DRV_USBFSV1_OBJ * hDriver)
 {
     /* Get the pipe and IRP to be processed. The currentFrameIRPIndex will point
      * to the IRP that needs to be processed */
     DRV_USBFSV1_HOST_FRAME_IRP * frameIRP = &hDriver->frameIRPList[hDriver->currentFrameIRPIndex];
     USB_HOST_IRP_LOCAL * pIRP = frameIRP->pIRP;
     DRV_USBFSV1_HOST_PIPE_OBJ * pipe = (DRV_USBFSV1_HOST_PIPE_OBJ *)pIRP->pipe;
-    int hardwarePipeIndex = frameIRP->hardwarePipeType;
-    int size = 0;
+    int32_t hardwarePipeIndex = frameIRP->hardwarePipeType;
+    int32_t size = 0;
     usb_host_registers_t * HOST = &hDriver->usbID->HOST;
     usb_host_desc_bank_registers_t * hardwarePipeDesc = &hDriver->hostPipeDescTable[hardwarePipeIndex].HOST_DESC_BANK[0];
     usb_host_pipe_registers_t * hardwarePipe = &HOST->HOST_PIPE[hardwarePipeIndex]; 
+    uint32_t temp_32;
 
     if((pIRP->tempSize - pIRP->completedBytesInThisFrame) >= pipe->endpointSize)
     {
         /* If the pending bytes is more than endpoint size, then cap the size to
          * endpoint size */
-        size = pipe->endpointSize;
+        size = (int32_t)pipe->endpointSize;
     }
     else
     {
         /* Else we can request all the pending data */
-        size = pIRP->tempSize - pIRP->completedBytesInThisFrame;
+        temp_32 = (pIRP->tempSize - pIRP->completedBytesInThisFrame);
+        size = (int32_t)temp_32;
     } 
 
     /* Setup the pipe descriptor entry for this pipe */
@@ -1656,8 +1696,8 @@ void _DRV_USBFSV1_HOST_NonControlTransferDataSend(DRV_USBFSV1_OBJ * hDriver)
 
     /* Clear the CTRL Pipe register */
     hardwarePipeDesc->USB_CTRL_PIPE = 0;
-    hardwarePipeDesc->USB_CTRL_PIPE = ((pipe->deviceAddress << USB_HOST_CTRL_PIPE_PDADDR_Pos)
-            |((pipe->endpointAndDirection & 0xF) << USB_HOST_CTRL_PIPE_PEPNUM_Pos));
+    hardwarePipeDesc->USB_CTRL_PIPE = ((((uint16_t)pipe->deviceAddress) << USB_HOST_CTRL_PIPE_PDADDR_Pos)
+            |((((uint16_t)pipe->endpointAndDirection) & 0xFU) << USB_HOST_CTRL_PIPE_PEPNUM_Pos));
     hardwarePipeDesc->USB_PCKSIZE = 0;
     hardwarePipeDesc->USB_PCKSIZE = (USB_HOST_PCKSIZE_MULTI_PACKET_SIZE(0)|USB_HOST_PCKSIZE_BYTE_COUNT(size)
          |USB_HOST_PCKSIZE_AUTO_ZLP(0)|USB_HOST_PCKSIZE_SIZE(pipe->pckSize));
@@ -1672,7 +1712,7 @@ void _DRV_USBFSV1_HOST_NonControlTransferDataSend(DRV_USBFSV1_OBJ * hDriver)
         USB_HOST_PINTENSET_TRFAIL_Msk | USB_HOST_PINTENSET_PERR_Msk | USB_HOST_PINTENSET_STALL_Msk;
 
     /* Update the data toggle */
-    if(pipe->dataToggle == 1)
+    if(pipe->dataToggle == true)
     {
         hardwarePipe->USB_PSTATUSSET = USB_HOST_PSTATUSSET_DTGL_Msk;
     }
@@ -1682,11 +1722,11 @@ void _DRV_USBFSV1_HOST_NonControlTransferDataSend(DRV_USBFSV1_OBJ * hDriver)
     }
 
     /* Check the direction and set the token type */
-    if((pipe->endpointAndDirection & 0x80) != 0)
+    if((pipe->endpointAndDirection & 0x80U) != 0U)
     {
         /* Bank 0 is ready to receive data */
         hardwarePipe->USB_PSTATUSCLR = USB_HOST_PSTATUSCLR_BK0RDY_Msk;
-        hardwarePipe->USB_PCFG |= DRV_USBFSV1_HOST_PIPE_TOKEN_IN;
+        hardwarePipe->USB_PCFG |= (uint8_t)DRV_USBFSV1_HOST_PIPE_TOKEN_IN;
     }
     else
     {
@@ -1696,11 +1736,11 @@ void _DRV_USBFSV1_HOST_NonControlTransferDataSend(DRV_USBFSV1_OBJ * hDriver)
         
         if(pipe->pipeType != USB_TRANSFER_TYPE_ISOCHRONOUS)
         {
-            memcpy(hDriver->hostTransactionBuffer, ( ( uint8_t * )pIRP->data + pIRP->completedBytes), size);
+            (void) memcpy(hDriver->hostTransactionBuffer, ( ( uint8_t * )pIRP->data + pIRP->completedBytes), (uint32_t)size);
         }
 
         hardwarePipe->USB_PSTATUSSET = USB_HOST_PSTATUSSET_BK0RDY_Msk;
-        hardwarePipe->USB_PCFG |= DRV_USBFSV1_HOST_PIPE_TOKEN_OUT;
+        hardwarePipe->USB_PCFG |= (uint8_t)DRV_USBFSV1_HOST_PIPE_TOKEN_OUT;
     }
 
     /* Unfreeze the pipe. This launches the token */
@@ -1709,7 +1749,7 @@ void _DRV_USBFSV1_HOST_NonControlTransferDataSend(DRV_USBFSV1_OBJ * hDriver)
 
 // *****************************************************************************
 /* Function:
-    void _DRV_USBFSV1_HOST_NonControlTransferProcess
+    void F_DRV_USBFSV1_HOST_NonControlTransferProcess
     (
         DRV_USBFSV1_OBJ * hDriver
         bool checkTransactionResult
@@ -1717,7 +1757,7 @@ void _DRV_USBFSV1_HOST_NonControlTransferDataSend(DRV_USBFSV1_OBJ * hDriver)
 
   Summary:
     Non Control Transfer Process.
-	
+    
   Description:
     This function processes non-zero endpoint transfers which
     could be any of bulk, interrupt and isochronous transfers
@@ -1725,7 +1765,7 @@ void _DRV_USBFSV1_HOST_NonControlTransferDataSend(DRV_USBFSV1_OBJ * hDriver)
   Remarks:
 */
 
-static bool _DRV_USBFSV1_HOST_NonControlTransferProcess
+static bool F_DRV_USBFSV1_HOST_NonControlTransferProcess
 (
     DRV_USBFSV1_OBJ * hDriver,
     bool checkTransactionResult
@@ -1743,11 +1783,12 @@ static bool _DRV_USBFSV1_HOST_NonControlTransferProcess
     DRV_USBFSV1_HOST_PIPE_OBJ * pipe = (DRV_USBFSV1_HOST_PIPE_OBJ *)pIRP->pipe;
     bool tokenSent = false;
     bool endIRP = false;
-    int hardwarePipeIndex = frameIRP->hardwarePipeType;
-    int byteCount = 0;
+    int32_t hardwarePipeIndex = frameIRP->hardwarePipeType;
+    uint32_t byteCount = 0;
     usb_host_registers_t * HOST = &hDriver->usbID->HOST;
     usb_host_pipe_registers_t * hardwarePipe = &HOST->HOST_PIPE[hardwarePipeIndex]; 
-
+    uint32_t temp_32;
+    
     if(pIRP->tempState == DRV_USBFSV1_HOST_IRP_STATE_ABORTED)
     {
         /* This means that this IRP was aborted by the application while it was
@@ -1767,7 +1808,7 @@ static bool _DRV_USBFSV1_HOST_NonControlTransferProcess
     }
     else
     {
-        if(!checkTransactionResult)
+        if(checkTransactionResult == false)
         {
            /* This means the first transaction has to be freshly launched.
             * Update the status of the IRP and then set the current IRP of the
@@ -1775,7 +1816,7 @@ static bool _DRV_USBFSV1_HOST_NonControlTransferProcess
             pIRP->status = USB_HOST_IRP_STATUS_IN_PROGRESS;
             hDriver->pipeGroup[hardwarePipeIndex].currentIRP = pIRP;
             tokenSent = true;
-            _DRV_USBFSV1_HOST_NonControlTransferDataSend(hDriver);
+            F_DRV_USBFSV1_HOST_NonControlTransferDataSend(hDriver);
         }
         else
         {
@@ -1818,16 +1859,17 @@ static bool _DRV_USBFSV1_HOST_NonControlTransferProcess
                         /* If the data was to be received from the device, then
                          * this data is currently in the driver transaction
                          * buffer. Copy this into the application buffer */
-                        if((pipe->endpointAndDirection & 0x80) != 0)
+                        if((pipe->endpointAndDirection & 0x80U) != 0U)
                         {
                             /* Data has been received from the device */
-                            memcpy(( ( uint8_t * )pIRP->data + pIRP->completedBytes), hDriver->hostTransactionBuffer, byteCount);
+                            (void) memcpy(( ( uint8_t * )pIRP->data + pIRP->completedBytes), hDriver->hostTransactionBuffer, byteCount);
                         }
 
                         /* Now update the byte counters */
                         pIRP->completedBytes += byteCount;
                         pIRP->completedBytesInThisFrame += byteCount;
-                        pipe->dataToggle ^= 0x1;
+                        temp_32 = (((uint32_t)pipe->dataToggle)^ 0x1U);
+                        pipe->dataToggle = (bool)temp_32;
                         if((byteCount < pipe->endpointSize) || (pIRP->size <= pIRP->completedBytes))
                         {
                             /* We received data less than endpoint size.  So we
@@ -1849,7 +1891,7 @@ static bool _DRV_USBFSV1_HOST_NonControlTransferProcess
                             {
                                 /* Some more transactions are required in this frame */
                                 pIRP->status = USB_HOST_IRP_STATUS_IN_PROGRESS;
-                                _DRV_USBFSV1_HOST_NonControlTransferDataSend(hDriver);
+                                F_DRV_USBFSV1_HOST_NonControlTransferDataSend(hDriver);
                                 tokenSent = true;
                             }
                             else
@@ -1862,6 +1904,10 @@ static bool _DRV_USBFSV1_HOST_NonControlTransferProcess
                                 tokenSent = false;
                             }
                         }
+                        else
+                        {
+                             /* Do Nothing */
+                        }
                     }
                     else if ((hardwarePipe->USB_PINTFLAG & USB_HOST_PINTFLAG_TRFAIL_Msk) == USB_HOST_PINTFLAG_TRFAIL_Msk)
                     {
@@ -1870,6 +1916,10 @@ static bool _DRV_USBFSV1_HOST_NonControlTransferProcess
                          * get deferred to the next SOF. */
 
                         hardwarePipe->USB_PINTFLAG = USB_HOST_PINTFLAG_TRFAIL_Msk;
+                    }
+                    else
+                    {
+                         /* Do Nothing */
                     }
                 }
             }
@@ -1893,13 +1943,15 @@ static bool _DRV_USBFSV1_HOST_NonControlTransferProcess
     return(tokenSent);
 }
 
+
+/* MISRAC 2012 deviation block end */
 // *****************************************************************************
 /* Function:
-    void _DRV_USBFSV1_HOST_ControlTransferBW(DRV_USBFSV1_OBJ * hDriver)
+    void F_DRV_USBFSV1_HOST_ControlTransferBW(DRV_USBFSV1_OBJ * hDriver)
   
   Summary:
     This function calculates the bus bandwidth required for a control transfer.
-	
+    
   Description:
     This function calculates the bus bandwidth required for a control transfer.
     The global consumed bandwidth is decremented by the amount of bandwidth
@@ -1910,14 +1962,14 @@ static bool _DRV_USBFSV1_HOST_NonControlTransferProcess
     application.
 */
 
-void _DRV_USBFSV1_HOST_ControlTransferBW(DRV_USBFSV1_OBJ * hDriver)
+void F_DRV_USBFSV1_HOST_ControlTransferBW(DRV_USBFSV1_OBJ * hDriver)
 {
     /* If this function is being called, this means we have a valid
      * current pipe and IRP in the control pipe group. */
 
-    int maxControlTransferBW = 0;
-    int nTransactions = 0;
-    int nPossibleTransactions = 0;
+    uint32_t maxControlTransferBW = 0;
+    uint32_t nTransactions = 0;
+    uint32_t nPossibleTransactions = 0;
     DRV_USBFSV1_HOST_PIPE_OBJ * currentPipe = hDriver->pipeGroup[DRV_USBFSV1_HOST_HW_PIPE_CONTROL].currentPipe;
     USB_HOST_IRP_LOCAL * currentIRP = hDriver->pipeGroup[DRV_USBFSV1_HOST_HW_PIPE_CONTROL].currentIRP;
 
@@ -1940,11 +1992,15 @@ void _DRV_USBFSV1_HOST_ControlTransferBW(DRV_USBFSV1_OBJ * hDriver)
     {
         nTransactions = 1;
     }
-    else if((currentIRP->size - currentIRP->completedBytes) % (currentPipe->endpointSize) != 0)
+    else if(((currentIRP->size - currentIRP->completedBytes) % (currentPipe->endpointSize)) != 0U)
     {
         /* The code will come here only when the HOST is required to send or
          * receive multiple transactions ending with SHORT PACKET */
         nTransactions++;
+    }
+    else
+    {
+         /* Do Nothing */
     }
 
     /* Figure out how many transactions are possible and then cap if required */
@@ -1973,19 +2029,19 @@ void _DRV_USBFSV1_HOST_ControlTransferBW(DRV_USBFSV1_OBJ * hDriver)
     currentIRP->completedBytesInThisFrame = 0;
 
     /* Update the global bandwidth */
-    hDriver->globalBWConsumed += (nTransactions * currentPipe->bwPerTransaction);
+    hDriver->globalBWConsumed += (uint8_t)(nTransactions * currentPipe->bwPerTransaction);
 }
 
 // *****************************************************************************
 /* Function:
-    USB_HOST_IRP_LOCAL * _DRV_USBFSV1_HOST_PipeGroupGetNextIRP
+    USB_HOST_IRP_LOCAL * F_DRV_USBFSV1_HOST_PipeGroupGetNextIRP
     (
         DRV_USBFSV1_HOST_PIPE_GROUP * pipeGroup
     )
   
   Summary:
     This function will update the current pipe in the pipe group.
-	
+    
   Description:
     This function will update the current pipe in the pipe group to the next
     pipe. If the end of the pipe group is reached, then current pipe will be
@@ -1998,10 +2054,10 @@ void _DRV_USBFSV1_HOST_ControlTransferBW(DRV_USBFSV1_OBJ * hDriver)
     application.
 */
 
-USB_HOST_IRP_LOCAL * _DRV_USBFSV1_HOST_PipeGroupGetNextIRP(DRV_USBFSV1_HOST_PIPE_GROUP * pipeGroup)
+USB_HOST_IRP_LOCAL * F_DRV_USBFSV1_HOST_PipeGroupGetNextIRP(DRV_USBFSV1_HOST_PIPE_GROUP * pipeGroup)
 {
     USB_HOST_IRP_LOCAL * returnValue = NULL;
-    int iterator = 0;
+    uint32_t iterator = 0;
 
     for (iterator = 0; iterator < pipeGroup->nPipes; iterator ++)
     {
@@ -2027,7 +2083,7 @@ USB_HOST_IRP_LOCAL * _DRV_USBFSV1_HOST_PipeGroupGetNextIRP(DRV_USBFSV1_HOST_PIPE
 
 // *****************************************************************************
 /* Function:
-    bool _DRV_USBFSV1_HOST_NonControlTransferBW
+    bool F_DRV_USBFSV1_HOST_NonControlTransferBW
     (
         DRV_USBFSV1_OBJ * hDriver, USB_HOST_IRP_LOCAL * irp
     )
@@ -2035,7 +2091,7 @@ USB_HOST_IRP_LOCAL * _DRV_USBFSV1_HOST_PipeGroupGetNextIRP(DRV_USBFSV1_HOST_PIPE
   Summary:
     This function calculates the bus bandwidth required for a non control
     transfer.
-	
+    
   Description:
     This function calculates the bus bandwidth required for a non control
     transfer. The global bus bandwidth will be updated based on bandwidth
@@ -2047,17 +2103,19 @@ USB_HOST_IRP_LOCAL * _DRV_USBFSV1_HOST_PipeGroupGetNextIRP(DRV_USBFSV1_HOST_PIPE
     application.
 */
 
-bool _DRV_USBFSV1_HOST_NonControlTransferBW(DRV_USBFSV1_OBJ * hDriver, USB_HOST_IRP_LOCAL * irp)
+bool F_DRV_USBFSV1_HOST_NonControlTransferBW(DRV_USBFSV1_OBJ * hDriver, USB_HOST_IRP_LOCAL * irp)
 {
     DRV_USBFSV1_HOST_PIPE_OBJ * pipe = (DRV_USBFSV1_HOST_PIPE_OBJ *)irp->pipe;
     bool returnValue = false;
-    unsigned int bwPerTransaction = 0;
-    unsigned int bwAvailable = 0;
-    unsigned int nTransactions = 0;
-    unsigned int nPossibleTransactions = 0;
+    uint32_t bwPerTransaction = 0;
+    uint32_t bwAvailable = 0;
+    uint32_t nTransactions = 0;
+    uint32_t nPossibleTransactions = 0;
+    uint8_t temp_8;
     
     /* Check how much bandwidth is available */
-    bwAvailable = (DRV_USBFSV1_MAX_BANDWIDTH_PER_FRAME - hDriver->globalBWConsumed);
+    temp_8 = ((uint8_t)DRV_USBFSV1_MAX_BANDWIDTH_PER_FRAME - hDriver->globalBWConsumed);
+    bwAvailable = (uint32_t)temp_8;
     bwPerTransaction = pipe->bwPerTransaction;
 
     /* Compare the bandwidth available to the bandwidth per transaction */
@@ -2066,18 +2124,23 @@ bool _DRV_USBFSV1_HOST_NonControlTransferBW(DRV_USBFSV1_OBJ * hDriver, USB_HOST_
         /* Transactions are possible. */
         nTransactions = (irp->size - irp->completedBytes)/pipe->endpointSize;
 
-        if (nTransactions == 0)
+        if (nTransactions == 0U)
         {
             /* If the number of pending bytes is less than endpoint size, then
              * we need atleast one transaction. */
             nTransactions = 1;
         }
-        else if (((irp->size - irp->completedBytes) % (pipe->endpointSize)) != 0)
+        else if (((irp->size - irp->completedBytes) % (pipe->endpointSize)) != 0U)
         {
             /* In case the pending bytes is not a multiple of endppoint size.
              * We will need one additional transaction */
             nTransactions ++;
         }
+        else
+        {
+             /* Do Nothing */
+        }
+       
 
         /* Check how many possible transactions we can do */
         nPossibleTransactions = bwAvailable/bwPerTransaction;
@@ -2085,7 +2148,7 @@ bool _DRV_USBFSV1_HOST_NonControlTransferBW(DRV_USBFSV1_OBJ * hDriver, USB_HOST_
 
         /* Update the global consumed bandwidth and set the temporary IRP size
          * to what can be processed in this frame. */
-        hDriver->globalBWConsumed += (nTransactions * bwPerTransaction);
+        hDriver->globalBWConsumed += (uint8_t)(nTransactions * bwPerTransaction);
         irp->tempSize = nTransactions * pipe->endpointSize;
 
         /* Adjust the temporary size in case this is the last transaction of the
@@ -2105,11 +2168,11 @@ bool _DRV_USBFSV1_HOST_NonControlTransferBW(DRV_USBFSV1_OBJ * hDriver, USB_HOST_
 
 // *****************************************************************************
 /* Function:
-    void _DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
+    void F_DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
   
   Summary:
     This function will create the frame IRP list. 
-	
+    
   Description:
     This function will create the frame IRP list. This is a list of all IRPs
     that will processed in the current frame. This function is called from the
@@ -2125,16 +2188,16 @@ bool _DRV_USBFSV1_HOST_NonControlTransferBW(DRV_USBFSV1_OBJ * hDriver, USB_HOST_
     application.
 */
 
-void _DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
+void F_DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
 {
-    int iterator = 0;
-    int frameIRPListIndex = 0;
-    int nBulkOutPipesChecked = 0;
-    int nBulkInPipesChecked = 0;
-    int nInterruptOutPipesChecked = 0;
-    int nInterruptInPipesChecked = 0;
-    int nIsocOutPipesChecked = 0;
-    int nIsocInPipesChecked = 0;
+    uint32_t iterator = 0;
+    uint32_t frameIRPListIndex = 0;
+    int32_t nBulkOutPipesChecked = 0;
+    int32_t nBulkInPipesChecked = 0;
+    int32_t nInterruptOutPipesChecked = 0;
+    int32_t nInterruptInPipesChecked = 0;
+    int32_t nIsocOutPipesChecked = 0;
+    int32_t nIsocInPipesChecked = 0;
     bool allBulkInPipesChecked = false;
     bool allBulkOutPipesChecked = false;
     bool allInterruptInPipesChecked = false;
@@ -2179,7 +2242,7 @@ void _DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
              * of the pipes in this group have any IRPs. The function update the
              * current pipe if an IRP is found. */
             
-            controlPipeGroup->currentIRP = _DRV_USBFSV1_HOST_PipeGroupGetNextIRP(controlPipeGroup);
+            controlPipeGroup->currentIRP = F_DRV_USBFSV1_HOST_PipeGroupGetNextIRP(controlPipeGroup);
         }
         
         /* This means we found an IRP to work on. */
@@ -2187,7 +2250,7 @@ void _DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
         {
             /* Update the global consumed BW with the bandwidth required for this
              * control transaction. */
-            _DRV_USBFSV1_HOST_ControlTransferBW(hDriver);
+            F_DRV_USBFSV1_HOST_ControlTransferBW(hDriver);
             hDriver->frameIRPList[0].pIRP = controlPipeGroup->currentIRP;
         }
         else
@@ -2202,24 +2265,24 @@ void _DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
     frameIRPListIndex = 1;
 
     /* Check the isochronous pipes and service any IRPs */
-    while((hDriver->globalBWConsumed < DRV_USBFSV1_MAX_BANDWIDTH_PER_FRAME) && (frameIRPListIndex < DRV_USBFSV1_HOST_IRP_PER_FRAME_NUMBER) 
-            && ((!allIsocInPipesChecked) || (!allIsocOutPipesChecked)))
+    while((hDriver->globalBWConsumed < (uint8_t)DRV_USBFSV1_MAX_BANDWIDTH_PER_FRAME) && (frameIRPListIndex < DRV_USBFSV1_HOST_IRP_PER_FRAME_NUMBER) 
+            && ((allIsocInPipesChecked == false) || (allIsocOutPipesChecked == false)))
     {
         /* Check the isochronous out pipes */
         if(isocOutPipeGroup->nPipes != 0)
         {
-            if(!allIsocOutPipesChecked)
+            if(allIsocOutPipesChecked == false)
             {
                 /* We have a isoc pipe to check. This is a periodic pipe. So
                  * update the interval count */
-                if(isocOutPipeGroup->currentPipe->intervalCounter != 0)
+                if(isocOutPipeGroup->currentPipe->intervalCounter != 0U)
                 {
                     isocOutPipeGroup->currentPipe->intervalCounter --;
                 }
 
                 /* If the interval is zero, then we should launch a transaction
                  * */
-                if(isocOutPipeGroup->currentPipe->intervalCounter == 0)
+                if(isocOutPipeGroup->currentPipe->intervalCounter == 0U)
                 {
                     /* The pipe interval counter is zero. Check if we have an
                      * IRP on the pipe */
@@ -2227,7 +2290,7 @@ void _DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
                     {
                         /* We do an IRP. Lets see if this can be processed */
                         isocOutPipeGroup->currentIRP = isocOutPipeGroup->currentPipe->irpQueueHead;
-                        if(_DRV_USBFSV1_HOST_NonControlTransferBW(hDriver, isocOutPipeGroup->currentIRP) == true)
+                        if(F_DRV_USBFSV1_HOST_NonControlTransferBW(hDriver, isocOutPipeGroup->currentIRP) == true)
                         {
                             /* We have bandwidth for this IRP. Update the frame
                              * IRP list */
@@ -2277,19 +2340,19 @@ void _DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
         {
             /* We have some ISOC IN pipes to check. Check if we have enough
              * banddwith and slots in the Frame IRP list */
-            if(!allIsocInPipesChecked && (frameIRPListIndex < DRV_USBFSV1_HOST_IRP_PER_FRAME_NUMBER) && 
-                   (hDriver->globalBWConsumed < DRV_USBFSV1_MAX_BANDWIDTH_PER_FRAME))
+            if((allIsocInPipesChecked == false) && (frameIRPListIndex < DRV_USBFSV1_HOST_IRP_PER_FRAME_NUMBER) && 
+                   (hDriver->globalBWConsumed < (uint8_t)DRV_USBFSV1_MAX_BANDWIDTH_PER_FRAME))
             {
                 /* We have a isoc pipe to check. This is a periodic pipe. So
                  * update the interval count */
-                if(isocInPipeGroup->currentPipe->intervalCounter != 0)
+                if(isocInPipeGroup->currentPipe->intervalCounter != 0U)
                 {
                     isocInPipeGroup->currentPipe->intervalCounter --;
                 }
 
                 /* If the interval is zero, then we should launch a transaction
                  * */
-                if(isocInPipeGroup->currentPipe->intervalCounter == 0)
+                if(isocInPipeGroup->currentPipe->intervalCounter == 0U)
                 {
                     /* The pipe interval counter is zero. Check if we have an
                      * IRP on the pipe */
@@ -2297,7 +2360,7 @@ void _DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
                     {
                         /* We do an IRP. Lets see if this can be processed */
                         isocInPipeGroup->currentIRP = isocInPipeGroup->currentPipe->irpQueueHead;
-                        if(_DRV_USBFSV1_HOST_NonControlTransferBW(hDriver, isocInPipeGroup->currentIRP) == true)
+                        if(F_DRV_USBFSV1_HOST_NonControlTransferBW(hDriver, isocInPipeGroup->currentIRP) == true)
                         {
                             /* We have bandwidth for this IRP. Update the frame
                              * IRP list */
@@ -2345,8 +2408,8 @@ void _DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
     }
         
     /* Check the interrupt pipes and service any IRPs */
-    while((hDriver->globalBWConsumed < DRV_USBFSV1_MAX_BANDWIDTH_PER_FRAME) && (frameIRPListIndex < DRV_USBFSV1_HOST_IRP_PER_FRAME_NUMBER) 
-            && ((!allInterruptInPipesChecked) || (!allInterruptOutPipesChecked)))
+    while((hDriver->globalBWConsumed < (uint8_t)DRV_USBFSV1_MAX_BANDWIDTH_PER_FRAME) && (frameIRPListIndex < DRV_USBFSV1_HOST_IRP_PER_FRAME_NUMBER) 
+            && ((allInterruptInPipesChecked == false) || (allInterruptOutPipesChecked == false)))
     {
         /* Check the interrupt IN pipes first */
 
@@ -2358,12 +2421,12 @@ void _DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
                  * current pipe. Check if the interval is zero, which means we
                  * have to process the IRP on this pipe. */
 
-                if(interruptInPipeGroup->currentPipe->intervalCounter != 0)
+                if(interruptInPipeGroup->currentPipe->intervalCounter != 0U)
                 {
                     interruptInPipeGroup->currentPipe->intervalCounter --;
                 }
                 
-                if(interruptInPipeGroup->currentPipe->intervalCounter == 0)
+                if(interruptInPipeGroup->currentPipe->intervalCounter == 0U)
                 {
                     /* The pipe interval counter is zero. Check if we have an
                      * IRP on the pipe */
@@ -2371,7 +2434,7 @@ void _DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
                     {
                         /* We do an IRP. Lets see if this can be processed */
                         interruptInPipeGroup->currentIRP = interruptInPipeGroup->currentPipe->irpQueueHead;
-                        if(_DRV_USBFSV1_HOST_NonControlTransferBW(hDriver, interruptInPipeGroup->currentIRP) == true)
+                        if(F_DRV_USBFSV1_HOST_NonControlTransferBW(hDriver, interruptInPipeGroup->currentIRP) == true)
                         {
                             /* We have bandwidth for this IRP. Update the frame
                              * IRP list */
@@ -2426,18 +2489,18 @@ void _DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
         if(interruptOutPipeGroup->nPipes != 0)
         {
             if(!allInterruptOutPipesChecked && (frameIRPListIndex < DRV_USBFSV1_HOST_IRP_PER_FRAME_NUMBER) && 
-                   (hDriver->globalBWConsumed < DRV_USBFSV1_MAX_BANDWIDTH_PER_FRAME))
+                   (hDriver->globalBWConsumed < (uint8_t)DRV_USBFSV1_MAX_BANDWIDTH_PER_FRAME))
             {
                 /* We have more interrupt OUT pipes to check. Stat with the
                  * current pipe. Check if the interval is zero, which means we
                  * have to process the IRP on this pipe. */
 
-                if(interruptOutPipeGroup->currentPipe->intervalCounter != 0)
+                if(interruptOutPipeGroup->currentPipe->intervalCounter != 0U)
                 {
                     interruptOutPipeGroup->currentPipe->intervalCounter --;
                 }
                 
-                if(interruptOutPipeGroup->currentPipe->intervalCounter == 0)
+                if(interruptOutPipeGroup->currentPipe->intervalCounter == 0U)
                 {
                     /* The pipe interval counter is zero. Check if we have an
                      * IRP on the pipe */
@@ -2445,7 +2508,7 @@ void _DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
                     {
                         /* We do an IRP. Lets see if this can be processed */
                         interruptOutPipeGroup->currentIRP = interruptOutPipeGroup->currentPipe->irpQueueHead;
-                        if(_DRV_USBFSV1_HOST_NonControlTransferBW(hDriver, interruptOutPipeGroup->currentIRP) == true)
+                        if(F_DRV_USBFSV1_HOST_NonControlTransferBW(hDriver, interruptOutPipeGroup->currentIRP) == true)
                         {
                             /* We have bandwidth for this IRP. Update the frame
                              * IRP list */
@@ -2502,7 +2565,7 @@ void _DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
      * checked, then we stop. If all global bandwidth has been consumed, then
      * we stop. If the frame IRP list is full, then we stop. */
 
-    while((hDriver->globalBWConsumed < DRV_USBFSV1_MAX_BANDWIDTH_PER_FRAME) && (frameIRPListIndex < DRV_USBFSV1_HOST_IRP_PER_FRAME_NUMBER) 
+    while((hDriver->globalBWConsumed < (uint8_t)DRV_USBFSV1_MAX_BANDWIDTH_PER_FRAME) && (frameIRPListIndex < DRV_USBFSV1_HOST_IRP_PER_FRAME_NUMBER) 
             && ((!allBulkInPipesChecked) || (!allBulkOutPipesChecked)))
     {
         if(bulkOutPipeGroup->nPipes != 0)
@@ -2521,7 +2584,7 @@ void _DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
                      * been reached, then reset to the start of the group */
                     bulkOutPipeGroup->currentIRP = bulkOutPipeGroup->currentPipe->irpQueueHead;
                     
-                    if ((_DRV_USBFSV1_HOST_NonControlTransferBW(hDriver, bulkOutPipeGroup->currentIRP)) == true)
+                    if ((F_DRV_USBFSV1_HOST_NonControlTransferBW(hDriver, bulkOutPipeGroup->currentIRP)) == true)
                     {
                         /* Bandwidth for this transaction is available and global
                          * bandwidth has been updated. Update the frame IRP list
@@ -2556,8 +2619,8 @@ void _DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
         
         if(bulkInPipeGroup->nPipes != 0)
         {
-            if((!allBulkInPipesChecked) && (frameIRPListIndex < DRV_USBFSV1_HOST_IRP_PER_FRAME_NUMBER) && 
-                   (hDriver->globalBWConsumed < DRV_USBFSV1_MAX_BANDWIDTH_PER_FRAME))
+            if((allBulkInPipesChecked == false) && (frameIRPListIndex < DRV_USBFSV1_HOST_IRP_PER_FRAME_NUMBER) && 
+                   (hDriver->globalBWConsumed < (uint8_t)DRV_USBFSV1_MAX_BANDWIDTH_PER_FRAME))
             {
                 /* We have not checked all the bulk IN pipes and have space in the
                  * frame IRP list and also have available bandwidth. Continue
@@ -2571,7 +2634,7 @@ void _DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
                      * the next pipe in the pipe group. If the end of the group has
                      * been reached, then reset to the start of the group */
                     bulkInPipeGroup->currentIRP = bulkInPipeGroup->currentPipe->irpQueueHead;
-                    if((_DRV_USBFSV1_HOST_NonControlTransferBW(hDriver, bulkInPipeGroup->currentIRP)) == true)
+                    if((F_DRV_USBFSV1_HOST_NonControlTransferBW(hDriver, bulkInPipeGroup->currentIRP)) == true)
                     {
                         hDriver->frameIRPList[frameIRPListIndex].pIRP = bulkInPipeGroup->currentIRP;
                         hDriver->frameIRPList[frameIRPListIndex].hardwarePipeType = DRV_USBFSV1_HOST_HW_PIPE_BULK_IN;
@@ -2599,10 +2662,10 @@ void _DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
     if(hDriver->frameIRPList[0].pIRP != NULL)
     {
         /* Some stage has to be initiated. */
-        tokenSent = _DRV_USBFSV1_HOST_ControlTransferProcess(hDriver);
+        tokenSent = F_DRV_USBFSV1_HOST_ControlTransferProcess(hDriver);
     }
 
-    if(!tokenSent)
+    if(tokenSent == false)
     {
         /* We process the next transfer here if a token was not sent. We cycle
          * through the frame IRP list. If any IRP transaction was possible then
@@ -2618,8 +2681,8 @@ void _DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
                  * will be needed in the pipe interrupt handling to know which 
                  * IRP in the Frame IRP List was being serviced.  */
                 
-                hDriver->currentFrameIRPIndex = iterator;
-                tokenSent = _DRV_USBFSV1_HOST_NonControlTransferProcess(hDriver, false);
+                hDriver->currentFrameIRPIndex = (uint8_t)iterator;
+                tokenSent = F_DRV_USBFSV1_HOST_NonControlTransferProcess(hDriver, false);
                 if(tokenSent)
                 {
                     /* If a token was sent then stop */
@@ -2632,13 +2695,13 @@ void _DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
 
 // *****************************************************************************
 /* Function:
-    void _DRV_USBFSV1_HOST_Tasks_ISR(DRV_USBFSV1_OBJ * pUSBDrvObj)
+    void F_DRV_USBFSV1_HOST_Tasks_ISR(DRV_USBFSV1_OBJ * pUSBDrvObj)
 
   Summary:
-    Dynamic implementation of _DRV_USBFSV1_HOST_Tasks_ISR function.
+    Dynamic implementation of F_DRV_USBFSV1_HOST_Tasks_ISR function.
 
   Description:
-    This is the dynamic implementation of _DRV_USBFSV1_HOST_Tasks_ISR internal
+    This is the dynamic implementation of F_DRV_USBFSV1_HOST_Tasks_ISR internal
     function. Function is an interrupt handler which does necessary processing
     based on the interrupt.
 
@@ -2647,10 +2710,10 @@ void _DRV_USBFSV1_HOST_CreateFrameIRPList(DRV_USBFSV1_OBJ * hDriver)
 
 */
 
-void _DRV_USBFSV1_HOST_Tasks_ISR(DRV_USBFSV1_OBJ * hDriver)
+void F_DRV_USBFSV1_HOST_Tasks_ISR(DRV_USBFSV1_OBJ * hDriver)
 {
-    int iterator;
-    bool tokenSent = false;
+    uint32_t iterator;
+    bool tokenSent = false;    
 
     /* Create a local pointer to the HOST Register set */ 
     usb_host_registers_t * HOST = &hDriver->usbID->HOST;
@@ -2686,14 +2749,16 @@ void _DRV_USBFSV1_HOST_Tasks_ISR(DRV_USBFSV1_OBJ * hDriver)
         HOST->USB_INTFLAG = USB_HOST_INTFLAG_DDISC_Msk|USB_HOST_INTFLAG_DCONN_Msk;
         HOST->USB_INTENCLR = USB_HOST_INTENCLR_DDISC_Msk;
 
-        for (iterator = 0; iterator < 7; iterator ++)
+        for (iterator = 0; iterator < 7U; iterator ++)
         {
             /* Freeze the pipe */
             HOST->HOST_PIPE[iterator].USB_PSTATUSSET = USB_HOST_PSTATUSSET_PFREEZE_Msk;
-            while((HOST->HOST_PIPE[iterator].USB_PSTATUS & USB_HOST_PSTATUS_PFREEZE_Msk) == 0);
+            while((HOST->HOST_PIPE[iterator].USB_PSTATUS & USB_HOST_PSTATUS_PFREEZE_Msk) == 0U)
+            {
+                /* Do Nothing */
+            }
             
-            /* Disable the pipe. Clear the interrupts and disable them.
-             *  */
+            /* Disable the pipe. Clear the interrupts and disable them. */
             HOST->HOST_PIPE[iterator].USB_PCFG &= (~USB_HOST_PCFG_PTYPE_Msk);
             HOST->HOST_PIPE[iterator].USB_PINTFLAG = USB_HOST_PINTFLAG_Msk;
             HOST->HOST_PIPE[iterator].USB_PINTENCLR = USB_HOST_PINTENCLR_Msk;
@@ -2742,11 +2807,11 @@ void _DRV_USBFSV1_HOST_Tasks_ISR(DRV_USBFSV1_OBJ * hDriver)
         HOST->USB_INTENCLR = USB_HOST_INTENCLR_RST_Msk;
 
         /* We can now read the device speed */
-        if ((HOST->USB_STATUS & USB_HOST_STATUS_SPEED_Msk) == 0x0)
+        if ((HOST->USB_STATUS & USB_HOST_STATUS_SPEED_Msk) == 0x0U)
         {
             hDriver->deviceSpeed = USB_SPEED_FULL;
         }
-        else if ((HOST->USB_STATUS & USB_HOST_STATUS_SPEED_Msk) == 0x4)
+        else if ((HOST->USB_STATUS & USB_HOST_STATUS_SPEED_Msk) == 0x4U)
         {
             hDriver->deviceSpeed = USB_SPEED_LOW;
         }
@@ -2756,56 +2821,55 @@ void _DRV_USBFSV1_HOST_Tasks_ISR(DRV_USBFSV1_OBJ * hDriver)
         }
 
         /* Clear up the pipe descriptor table */
-        memset(hDriver->hostPipeDescTable, 0, (sizeof(usb_descriptor_host_registers_t) * 7));
+        (void) memset(hDriver->hostPipeDescTable, 0, (sizeof(usb_descriptor_host_registers_t) * 7U));
         
         /* The pipe configuration gets reset after a Reset signal.
          * Reconfigure the hardware pipes. Start with the control pipe. 
          * The transaction interrupts are enabled when the transaction is
-         * scheduled */
-
-        controlPipe->USB_PCFG = (DRV_USBFSV1_HOST_PIPE_TYPE_CONTROL|DRV_USBFSV1_HOST_PIPE_BANK_SINGLE|DRV_USBFSV1_HOST_PIPE_TOKEN_SETUP);
+         * scheduled */        
+        controlPipe->USB_PCFG = ((uint8_t)DRV_USBFSV1_HOST_PIPE_TYPE_CONTROL|(uint8_t)DRV_USBFSV1_HOST_PIPE_BANK_SINGLE|(uint8_t)DRV_USBFSV1_HOST_PIPE_TOKEN_SETUP);
         controlPipe->USB_BINTERVAL = 0; 
         controlPipe->USB_PINTENCLR = USB_HOST_PINTENCLR_Msk;
 
         /* Pipe 1 is configured for ISOC IN */
-        isocInPipe->USB_PCFG = (DRV_USBFSV1_HOST_PIPE_TYPE_ISOC|DRV_USBFSV1_HOST_PIPE_BANK_SINGLE|DRV_USBFSV1_HOST_PIPE_TOKEN_IN);
+        isocInPipe->USB_PCFG = ((uint8_t)DRV_USBFSV1_HOST_PIPE_TYPE_ISOC|(uint8_t)DRV_USBFSV1_HOST_PIPE_BANK_SINGLE|(uint8_t)DRV_USBFSV1_HOST_PIPE_TOKEN_IN);
         isocInPipe->USB_BINTERVAL = 0;
         isocInPipe->USB_PINTENCLR = USB_HOST_PINTENCLR_Msk;
 
         /* Pipe 2 is configured for ISOC OUT */
-        isocOutPipe->USB_PCFG = (DRV_USBFSV1_HOST_PIPE_TYPE_ISOC|DRV_USBFSV1_HOST_PIPE_BANK_SINGLE|DRV_USBFSV1_HOST_PIPE_TOKEN_OUT);
+        isocOutPipe->USB_PCFG = ((uint8_t)DRV_USBFSV1_HOST_PIPE_TYPE_ISOC|(uint8_t)DRV_USBFSV1_HOST_PIPE_BANK_SINGLE|(uint8_t)DRV_USBFSV1_HOST_PIPE_TOKEN_OUT);
         isocOutPipe->USB_BINTERVAL = 0;
         isocOutPipe->USB_PINTENCLR = USB_HOST_PINTENCLR_Msk;
 
         /* Pipe 3 is configured for Interrupt IN but we set this to bulk type in
          * the hardware so that we can control the polling interval in software. */
-        interruptInPipe->USB_PCFG = (DRV_USBFSV1_HOST_PIPE_TYPE_BULK|DRV_USBFSV1_HOST_PIPE_BANK_SINGLE|DRV_USBFSV1_HOST_PIPE_TOKEN_IN);
+        interruptInPipe->USB_PCFG = ((uint8_t)DRV_USBFSV1_HOST_PIPE_TYPE_BULK|(uint8_t)DRV_USBFSV1_HOST_PIPE_BANK_SINGLE|(uint8_t)DRV_USBFSV1_HOST_PIPE_TOKEN_IN);
         interruptInPipe->USB_BINTERVAL = 0;
         interruptInPipe->USB_PINTENCLR = USB_HOST_PINTENCLR_Msk;
 
         /* Pipe 4 is configured for Interrupt OUT but we set this to bulk type
          * in the hardware so that we can control the polling interval in
          * software. */
-        interruptOutPipe->USB_PCFG = (DRV_USBFSV1_HOST_PIPE_TYPE_BULK|DRV_USBFSV1_HOST_PIPE_BANK_SINGLE|DRV_USBFSV1_HOST_PIPE_TOKEN_OUT);
+        interruptOutPipe->USB_PCFG = ((uint8_t)DRV_USBFSV1_HOST_PIPE_TYPE_BULK|(uint8_t)DRV_USBFSV1_HOST_PIPE_BANK_SINGLE|(uint8_t)DRV_USBFSV1_HOST_PIPE_TOKEN_OUT);
         interruptOutPipe->USB_BINTERVAL = 0;
         interruptOutPipe->USB_PINTENCLR = USB_HOST_PINTENCLR_Msk;
 
         /* Pipe 5 is configured for Bulk IN. Disable all pipe interrupts. These
          * will be enabled only when a transaction has been scheduled on the
          * pipe */
-        bulkInPipe->USB_PCFG = (DRV_USBFSV1_HOST_PIPE_TYPE_BULK|DRV_USBFSV1_HOST_PIPE_BANK_SINGLE|DRV_USBFSV1_HOST_PIPE_TOKEN_IN);
+        bulkInPipe->USB_PCFG = ((uint8_t)DRV_USBFSV1_HOST_PIPE_TYPE_BULK|(uint8_t)DRV_USBFSV1_HOST_PIPE_BANK_SINGLE|(uint8_t)DRV_USBFSV1_HOST_PIPE_TOKEN_IN);
         bulkInPipe->USB_BINTERVAL = 0;
         bulkInPipe->USB_PINTENCLR = USB_HOST_PINTENCLR_Msk;
 
         /* Pipe 6 is configured for Bulk OUT. Disable all pipe interrupts. These
          * will be enabled only when a transaction has been scheduled on the
          * pipe. */
-        bulkOutPipe->USB_PCFG = (DRV_USBFSV1_HOST_PIPE_TYPE_BULK|DRV_USBFSV1_HOST_PIPE_BANK_SINGLE|DRV_USBFSV1_HOST_PIPE_TOKEN_OUT);
+        bulkOutPipe->USB_PCFG = ((uint8_t)DRV_USBFSV1_HOST_PIPE_TYPE_BULK|(uint8_t)DRV_USBFSV1_HOST_PIPE_BANK_SINGLE|(uint8_t)DRV_USBFSV1_HOST_PIPE_TOKEN_OUT);
         bulkOutPipe->USB_BINTERVAL = 0;
         bulkOutPipe->USB_PINTENCLR = USB_HOST_PINTENCLR_Msk;
 
         /* Reset the host pipe group */
-        for (iterator = 0; iterator < 7; iterator ++)
+        for (iterator = 0; iterator < 7U; iterator ++)
         {
             hDriver->pipeGroup[iterator].currentPipe = NULL;
             hDriver->pipeGroup[iterator].nPipes = 0;
@@ -2832,28 +2896,31 @@ void _DRV_USBFSV1_HOST_Tasks_ISR(DRV_USBFSV1_OBJ * hDriver)
         /* The following function will create the list of IRPs to be processed
          * in this frame and will launch the first token */
 
-        _DRV_USBFSV1_HOST_CreateFrameIRPList(hDriver);
+        F_DRV_USBFSV1_HOST_CreateFrameIRPList(hDriver);
     }
 
     /* Handle Pipe Events */
-    if(HOST->USB_PINTSMRY != 0)
+    if(HOST->USB_PINTSMRY != 0U)
     {
-        if((HOST->USB_PINTSMRY & (0x1 << DRV_USBFSV1_HOST_HW_PIPE_CONTROL)) != 0)
+        if((HOST->USB_PINTSMRY & (0x1UL << DRV_USBFSV1_HOST_HW_PIPE_CONTROL)) != 0U)
         {
             /* Freeze the pipe first so that we dont have any more transactions
              * on the bus. Wait till the pipe is frozen. Disable all pipe
              * interrupts. */
            
             controlPipe->USB_PSTATUSSET = USB_HOST_PSTATUSSET_PFREEZE_Msk;
-            while((controlPipe->USB_PSTATUS & USB_HOST_PSTATUS_PFREEZE_Msk) != USB_HOST_PSTATUS_PFREEZE_Msk);
+            while((controlPipe->USB_PSTATUS & USB_HOST_PSTATUS_PFREEZE_Msk) != USB_HOST_PSTATUS_PFREEZE_Msk)
+            {
+                /* Do Nothing */
+            }
             controlPipe->USB_PINTENCLR = USB_HOST_PINTENCLR_Msk;
             
             /* This means a HW pipe 0 event had occurred. This is control 
              * transfer pipe. Handle control transfer events. */
-            tokenSent = _DRV_USBFSV1_HOST_ControlTransferProcess(hDriver);
+            tokenSent = F_DRV_USBFSV1_HOST_ControlTransferProcess(hDriver);
         }
         
-        if((HOST->USB_PINTSMRY & (0x1 << DRV_USBFSV1_HOST_HW_PIPE_ISOC_IN)) != 0)
+        if((HOST->USB_PINTSMRY & (0x1UL << DRV_USBFSV1_HOST_HW_PIPE_ISOC_IN)) != 0U)
         {
             /* This means we have some activity on the ISOC IN hardware pipe.
              * Stop all interaction on the pipe. Disable all interrupts. While
@@ -2862,13 +2929,16 @@ void _DRV_USBFSV1_HOST_Tasks_ISR(DRV_USBFSV1_OBJ * hDriver)
              * capture the status of the last transaction on the bus. */
             isocInPipe->USB_PINTENCLR = USB_HOST_PINTENCLR_Msk;
             isocInPipe->USB_PSTATUSSET = USB_HOST_PSTATUSSET_PFREEZE_Msk;
-            while((isocInPipe->USB_PSTATUS & USB_HOST_PSTATUS_PFREEZE_Msk) != USB_HOST_PSTATUS_PFREEZE_Msk);
+            while((isocInPipe->USB_PSTATUS & USB_HOST_PSTATUS_PFREEZE_Msk) != USB_HOST_PSTATUS_PFREEZE_Msk)
+            {
+                /* Do nothing */
+            }
 
             /* Process the response of this transaction */ 
-            tokenSent = _DRV_USBFSV1_HOST_NonControlTransferProcess(hDriver, true);
+            tokenSent = F_DRV_USBFSV1_HOST_NonControlTransferProcess(hDriver, true);
         }
 
-        if((HOST->USB_PINTSMRY & (0x1 << DRV_USBFSV1_HOST_HW_PIPE_ISOC_OUT)) != 0)
+        if((HOST->USB_PINTSMRY & (0x1UL << DRV_USBFSV1_HOST_HW_PIPE_ISOC_OUT)) != 0U)
         {
             /* This means we have some activity on the ISOC OUT hardware pipe.
              * Stop all interaction on the pipe. Disable all interrupts. While
@@ -2877,13 +2947,16 @@ void _DRV_USBFSV1_HOST_Tasks_ISR(DRV_USBFSV1_OBJ * hDriver)
              * capture the status of the last transaction on the bus. */
             isocOutPipe->USB_PINTENCLR = USB_HOST_PINTENCLR_Msk;
             isocOutPipe->USB_PSTATUSSET = USB_HOST_PSTATUSSET_PFREEZE_Msk;
-            while((isocOutPipe->USB_PSTATUS & USB_HOST_PSTATUS_PFREEZE_Msk) != USB_HOST_PSTATUS_PFREEZE_Msk);
+            while((isocOutPipe->USB_PSTATUS & USB_HOST_PSTATUS_PFREEZE_Msk) != USB_HOST_PSTATUS_PFREEZE_Msk)
+            {
+                /* Do nothing */
+            }
 
             /* Process the response of this transaction */ 
-            tokenSent = _DRV_USBFSV1_HOST_NonControlTransferProcess(hDriver, true);
+            tokenSent = F_DRV_USBFSV1_HOST_NonControlTransferProcess(hDriver, true);
         }
 
-        if((HOST->USB_PINTSMRY & (0x1 << DRV_USBFSV1_HOST_HW_PIPE_INT_IN)) != 0)
+        if((HOST->USB_PINTSMRY & (0x1UL << DRV_USBFSV1_HOST_HW_PIPE_INT_IN)) != 0U)
         {
             /* This means we have some activity on the Interrupt IN hardware pipe.
              * Stop all interaction on the pipe. Disable all interrupts. While
@@ -2892,13 +2965,16 @@ void _DRV_USBFSV1_HOST_Tasks_ISR(DRV_USBFSV1_OBJ * hDriver)
              * capture the status of the last transaction on the bus. */
             interruptInPipe->USB_PINTENCLR = USB_HOST_PINTENCLR_Msk;
             interruptInPipe->USB_PSTATUSSET = USB_HOST_PSTATUSSET_PFREEZE_Msk;
-            while((interruptInPipe->USB_PSTATUS & USB_HOST_PSTATUS_PFREEZE_Msk) != USB_HOST_PSTATUS_PFREEZE_Msk);
+            while((interruptInPipe->USB_PSTATUS & USB_HOST_PSTATUS_PFREEZE_Msk) != USB_HOST_PSTATUS_PFREEZE_Msk)
+            {
+                /* Do nothing */
+            }
 
             /* Process the response of this transaction */ 
-            tokenSent = _DRV_USBFSV1_HOST_NonControlTransferProcess(hDriver, true);
+            tokenSent = F_DRV_USBFSV1_HOST_NonControlTransferProcess(hDriver, true);
         }
         
-        if((HOST->USB_PINTSMRY & (0x1 << DRV_USBFSV1_HOST_HW_PIPE_INT_OUT)) != 0)
+        if((HOST->USB_PINTSMRY & (0x1UL << DRV_USBFSV1_HOST_HW_PIPE_INT_OUT)) != 0U)
         {
             /* This means we have some activity on the Interrupt OUT hardware pipe.
              * Stop all interaction on the pipe. Disable all interrupts. While
@@ -2907,13 +2983,16 @@ void _DRV_USBFSV1_HOST_Tasks_ISR(DRV_USBFSV1_OBJ * hDriver)
              * capture the status of the last transaction on the bus. */
             interruptOutPipe->USB_PINTENCLR = USB_HOST_PINTENCLR_Msk;
             interruptOutPipe->USB_PSTATUSSET = USB_HOST_PSTATUSSET_PFREEZE_Msk;
-            while((interruptOutPipe->USB_PSTATUS & USB_HOST_PSTATUS_PFREEZE_Msk) != USB_HOST_PSTATUS_PFREEZE_Msk);
+            while((interruptOutPipe->USB_PSTATUS & USB_HOST_PSTATUS_PFREEZE_Msk) != USB_HOST_PSTATUS_PFREEZE_Msk)
+            {
+                /* Do nothing */
+            }
 
             /* Process the response of this transaction */ 
-            tokenSent = _DRV_USBFSV1_HOST_NonControlTransferProcess(hDriver, true);
+            tokenSent = F_DRV_USBFSV1_HOST_NonControlTransferProcess(hDriver, true);
         }
 
-        if((HOST->USB_PINTSMRY & (0x1 << DRV_USBFSV1_HOST_HW_PIPE_BULK_OUT)) != 0)
+        if((HOST->USB_PINTSMRY & (0x1UL << DRV_USBFSV1_HOST_HW_PIPE_BULK_OUT)) != 0U)
         {
             /* This means we have some activity on the bulk out hardware pipe.
              * Stop all interaction on the pipe. Disable all interrupts. While
@@ -2922,24 +3001,30 @@ void _DRV_USBFSV1_HOST_Tasks_ISR(DRV_USBFSV1_OBJ * hDriver)
              * capture the status of the last transaction on the bus. */
             bulkOutPipe->USB_PINTENCLR = USB_HOST_PINTENCLR_Msk;
             bulkOutPipe->USB_PSTATUSSET = USB_HOST_PSTATUSSET_PFREEZE_Msk;
-            while((bulkOutPipe->USB_PSTATUS & USB_HOST_PSTATUS_PFREEZE_Msk) != USB_HOST_PSTATUS_PFREEZE_Msk);
+            while((bulkOutPipe->USB_PSTATUS & USB_HOST_PSTATUS_PFREEZE_Msk) != USB_HOST_PSTATUS_PFREEZE_Msk)
+            {
+               /* Do Nothing */
+            }
 
             /* Process the response of this transaction */ 
-            tokenSent = _DRV_USBFSV1_HOST_NonControlTransferProcess(hDriver, true);
+            tokenSent = F_DRV_USBFSV1_HOST_NonControlTransferProcess(hDriver, true);
         }
 
-        if((HOST->USB_PINTSMRY & (0x1 << DRV_USBFSV1_HOST_HW_PIPE_BULK_IN)) != 0)
+        if((HOST->USB_PINTSMRY & (0x1UL << DRV_USBFSV1_HOST_HW_PIPE_BULK_IN)) != 0U)
         {
             /* This means we have some activity on the bulk out hardware pipe.
              * Stop all interaction on the pipe. Disable all interrupt on the
              * pipe */
             bulkInPipe->USB_PINTENCLR = USB_HOST_PINTENCLR_Msk;
             bulkInPipe->USB_PSTATUSSET = USB_HOST_PSTATUSSET_PFREEZE_Msk;
-            while((bulkInPipe->USB_PSTATUS & USB_HOST_PSTATUS_PFREEZE_Msk) != USB_HOST_PSTATUS_PFREEZE_Msk);
-            tokenSent = _DRV_USBFSV1_HOST_NonControlTransferProcess(hDriver, true);
+            while((bulkInPipe->USB_PSTATUS & USB_HOST_PSTATUS_PFREEZE_Msk) != USB_HOST_PSTATUS_PFREEZE_Msk)
+            {
+                /* Do Nothing */
+            }
+            tokenSent = F_DRV_USBFSV1_HOST_NonControlTransferProcess(hDriver, true);
         }
 
-        if(!tokenSent)
+        if(tokenSent == false)
         {
             /* This means no token was sent after the pipe interrupts was
              * processed. We can process the next transfer in the frame IRP list
@@ -2952,7 +3037,7 @@ void _DRV_USBFSV1_HOST_Tasks_ISR(DRV_USBFSV1_OBJ * hDriver)
                 {
                     if(hDriver->frameIRPList[hDriver->currentFrameIRPIndex].pIRP != NULL)
                     {
-                        tokenSent = _DRV_USBFSV1_HOST_NonControlTransferProcess(hDriver, false);
+                        tokenSent = F_DRV_USBFSV1_HOST_NonControlTransferProcess(hDriver, false);
                         if (tokenSent)
                         {
                             /* If a token was sent, then we stop here */
@@ -3068,7 +3153,7 @@ bool DRV_USBFSV1_HOST_EventsDisable
     DRV_USBFSV1_OBJ * hDriver = (DRV_USBFSV1_OBJ *)handle;
     bool interruptState = false;
 
-    if((DRV_HANDLE_INVALID != handle) && (0 != handle) && (hDriver->inUse == true))
+    if((DRV_HANDLE_INVALID != handle) && (0U != handle) && (hDriver->inUse == true))
     {
         /* The ATSAMD21 controller has 1 USB interrupt while the SAME54 has 4
          * interrupts. The function signature allows us to only return the
@@ -3076,11 +3161,11 @@ bool DRV_USBFSV1_HOST_EventsDisable
          * interrupt. This is okay because we will always enable  and disable
          * all interrupts together. */
 
-        interruptState = SYS_INT_SourceDisable(hDriver->interruptSource); 
+        interruptState = SYS_INT_SourceDisable((IRQn_Type)hDriver->interruptSource); 
 #if (DRV_USBFSV1_MULTIPLE_ISR_AVAILABLE == true)
-        SYS_INT_SourceDisable(hDriver->interruptSource1);
-        SYS_INT_SourceDisable(hDriver->interruptSource2);
-        SYS_INT_SourceDisable(hDriver->interruptSource3);
+        (void) SYS_INT_SourceDisable((IRQn_Type)hDriver->interruptSource1);
+        (void) SYS_INT_SourceDisable((IRQn_Type)hDriver->interruptSource2);
+        (void) SYS_INT_SourceDisable((IRQn_Type)hDriver->interruptSource3);
 #endif
     }
     else
@@ -3119,15 +3204,17 @@ void DRV_USBFSV1_HOST_EventsEnable
 {
     DRV_USBFSV1_OBJ * hDriver = (DRV_USBFSV1_OBJ *)handle;
    
-    if((DRV_HANDLE_INVALID != handle) && (0 != handle) && (hDriver->inUse == true))
+    if((DRV_HANDLE_INVALID != handle) && (0U != handle) && (hDriver->inUse == true))
     {
         /* All interrupts are either enabled or disabled */
-        _DRV_USBFSV1_SYS_INT_SourceEnableRestore(eventContext, hDriver->interruptSource,
-                eventContext, hDriver->interruptSource1,eventContext, hDriver->interruptSource2,
-                eventContext, hDriver->interruptSource3);
+        M_DRV_USBFSV1_SYS_INT_SourceEnableRestore((int)eventContext, (IRQn_Type)hDriver->interruptSource,
+                eventContext, (IRQn_Type)hDriver->interruptSource1,eventContext, (IRQn_Type)hDriver->interruptSource2,
+                eventContext, (IRQn_Type)hDriver->interruptSource3);
     }
 }
 
+
+/* MISRAC 2012 deviation block end */
 // *****************************************************************************
 // *****************************************************************************
 // Root Hub Driver Routines
@@ -3162,17 +3249,17 @@ void DRV_USBFSV1_HOST_ROOT_HUB_OperationEnable(DRV_HANDLE handle, bool enable)
     else
     {
         if(false == enable)
-        {	
+        {    
              /* If the root hub operation is disable, we disable detach and
              * attached event and switch off the port power. */
-	
+    
             SYS_INT_SourceStatusClear((INT_SOURCE)pUSBDrvObj->interruptSource);
             /* Let the host layer know that root hub operation is disabled */
 
             pUSBDrvObj->operationEnabled = false;
-			
-			/* Disable USB port by turning off VBUS */ 
-			if(pUSBDrvObj->rootHubInfo.portPowerEnable != NULL)
+            
+            /* Disable USB port by turning off VBUS */ 
+            if(pUSBDrvObj->rootHubInfo.portPowerEnable != NULL)
             {   
                pUSBDrvObj->rootHubInfo.portPowerEnable(0 /* Port 0 */, false); 
             }
@@ -3188,13 +3275,13 @@ void DRV_USBFSV1_HOST_ROOT_HUB_OperationEnable(DRV_HANDLE handle, bool enable)
         }
         else
         {
-			/* Enable USB port */ 
-			if(pUSBDrvObj->rootHubInfo.portPowerEnable != NULL)
-			{
-				pUSBDrvObj->rootHubInfo.portPowerEnable(0 /* Port 0 */, true);
-			}
-			
-			/* The USB Global interrupt and USB module is already enabled at
+            /* Enable USB port */ 
+            if(pUSBDrvObj->rootHubInfo.portPowerEnable != NULL)
+            {
+                pUSBDrvObj->rootHubInfo.portPowerEnable(0 /* Port 0 */, true);
+            }
+            
+            /* The USB Global interrupt and USB module is already enabled at
              * this point. We enable the attach interrupt to detect attach
              */
             pUSBDrvObj->operationEnabled = true;
@@ -3262,7 +3349,7 @@ void DRV_USBFSV1_HOST_ROOT_HUB_Initialize
 {
     DRV_USBFSV1_OBJ * pUSBDrvObj = (DRV_USBFSV1_OBJ *)handle;
 
-    memset((uint8_t *)&pipeDescriptorTable[0], 0, sizeof(pipeDescriptorTable[0]));
+    (void) memset((uint8_t *)&pipeDescriptorTable[0], 0, sizeof(pipeDescriptorTable[0]));
 
     if(DRV_HANDLE_INVALID == handle)
     {
@@ -3488,6 +3575,7 @@ bool DRV_USBFSV1_HOST_ROOT_HUB_PortResetIsComplete
     return(result);
 }
 
+/* MISRAC 2012 deviation block end */
 // ****************************************************************************
 /* Function:
     void DRV_USBFSV1_ROOT_HUB_PortReset(DRV_HANDLE handle, uint8_t port );
@@ -3618,7 +3706,7 @@ void DRV_USBFSV1_HOST_EndpointToggleClear
 {
     DRV_USBFSV1_HOST_PIPE_OBJ * pipe = NULL;
 
-    if((pipeHandle != 0) && (pipeHandle != DRV_USBFSV1_HOST_PIPE_HANDLE_INVALID))
+    if((pipeHandle != 0U) && (pipeHandle != DRV_USBFSV1_HOST_PIPE_HANDLE_INVALID))
     {
         pipe = (DRV_USBFSV1_HOST_PIPE_OBJ *) pipeHandle;
         if(pipe->inUse)
@@ -3632,3 +3720,6 @@ void DRV_USBFSV1_HOST_EndpointToggleClear
         SYS_DEBUG_MESSAGE(SYS_ERROR_INFO, "\r\nDRV_USBHSV1: Invalid Pipe Handle");
     }
 } 
+
+
+/* MISRAC 2012 deviation block end */
