@@ -152,7 +152,7 @@ SYSTEM_OBJECTS sysObj;
 /******************************************************
  * USB Driver Initialization
  ******************************************************/
-void DRV_USB_VBUSPowerEnable(uint8_t port, bool enable)
+static void DRV_USB_VBUSPowerEnable(uint8_t port, bool enable)
 {
     /* Note: USB Host applications should have a way for Enabling/Disabling the 
        VBUS. Applications can use a GPIO to turn VBUS on/off through a switch. 
@@ -171,7 +171,7 @@ void DRV_USB_VBUSPowerEnable(uint8_t port, bool enable)
 }
 
 
-DRV_USB_OHCI_INIT drvUSBOHCIInit =
+static DRV_USB_OHCI_INIT drvUSBOHCIInit =
 {
     /* Interrupt Source for USB module */
     .interruptSource = (INT_SOURCE)UHP_IRQn,
@@ -280,7 +280,7 @@ void SYS_Initialize ( void* data )
     /* MISRAC 2012 deviation block end */
 
     /* Initialize the USB Host layer */
-    sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );	
+    sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );    
 
     sysObj.drvUSBOHCIObject = DRV_USB_OHCI_Initialize (DRV_USB_OHCI_INDEX_0, (SYS_MODULE_INIT *) &drvUSBOHCIInit);
 

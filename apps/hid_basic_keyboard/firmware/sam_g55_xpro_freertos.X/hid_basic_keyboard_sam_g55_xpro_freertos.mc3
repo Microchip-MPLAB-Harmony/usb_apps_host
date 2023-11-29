@@ -3274,7 +3274,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\usb\usb_host_client_driver.h</file>
-         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
+         <hash>38b5d7e5fee9b09db48b48b52d9b2773f458b09dc2d659c703a075fc90f32490</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\timers.c</file>
@@ -3298,7 +3298,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\initialization.c</file>
-         <hash>efc19887501c244b431fa9223aaef6c7eba277cded0488603922dc7c99c04797</hash>
+         <hash>8820ca1f4e2d8e07030417fa4785a17ae27265e10dfb5f0c77890cce2578c389</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\flexcom3.h</file>
@@ -3318,7 +3318,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\usb\usb_host.h</file>
-         <hash>4ec16dee42ae6b1bad8a7199b44750ccf0c5fa3aee5e44766e7b6dffc9979e83</hash>
+         <hash>1fd7a53f3b04f3a63013a3350d1f6b1c15aa9f162e9c5acf31b111c27987ad89</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\spi0.h</file>
@@ -3362,7 +3362,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\usb\src\usb_host.c</file>
-         <hash>e9afbc75c1f0bc723355daa67ae3e8016428e3ac5365a83b6bd4d58c6b0c76d9</hash>
+         <hash>5e3274284da6c42d8e7bd006531e400a5a7f212da086baea5c2d3697243816e1</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\mpu_prototypes.h</file>
@@ -3370,7 +3370,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\tasks.c</file>
-         <hash>c5d27fd129f2ff4f2e2b98d454a48f387d367b7c3f6a4df336a5e45457adb1f9</hash>
+         <hash>fe6210847094dff41e409403c3d3f6cd7cbbb045d00d5427e2e8e41739d8b226</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\usart4.h</file>
@@ -3378,7 +3378,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\usb\usb_chapter_9.h</file>
-         <hash>86a258d763c7f0f563122ccd4ec0bbef422fd4e2f523402bb89be10568cecf3f</hash>
+         <hash>e5e4a9cd868fa4b90113a0bd3ae76d176c7d21d791e7ea9891f1bf9d981da54c</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\mpu_armv7.h</file>
@@ -3402,7 +3402,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\usb\src\usb_host_hid_local.h</file>
-         <hash>5524e691b13c427840d4fc7c1f98bae5f37304478d5c68ce31237bf917b48cb3</hash>
+         <hash>661f6cae3d2eca33042bfe7fdbaf7a9b34d164535a62b3b61baa31a2682cec95</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\i2sc0.h</file>
@@ -3422,7 +3422,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\driver\usb\uhp\src\drv_usb_ohci.c</file>
-         <hash>2f534ad88c69a4cc9c24c36150405311528c27765ac0f4e758eaa37516e5f188</hash>
+         <hash>a75799196e483ed92e569d2ed3c8c35b206b943e2f9722bf8d95f3bc03af01e2</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\flexcom4.h</file>
@@ -3570,11 +3570,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\usb\src\usb_host_hid_keyboard_local.h</file>
-         <hash>c0318478c4245f31015c7cbe2479ee92830f73d8dea9d5812a6ff64b81dee4ad</hash>
+         <hash>3c98709ba9d1d88a326684ff5f012771c30fc1b9957a9f6cfe2806348f861539</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\usb\usb_hub.h</file>
-         <hash>f07eb653a11355424adb96ff0fec6796f6b95c8924ac93fb9207f888d130bc7d</hash>
+         <hash>733473045c756b6184188c2cf000d8f187f530a9e048dabefaecee347c05e4db</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\usart2.h</file>
@@ -3594,7 +3594,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\usb\usb_host_hid_keyboard.h</file>
-         <hash>351f0481238e7b94a5e32a625371dd4d4644fbc7d248234e6a793c544ad9f105</hash>
+         <hash>596e0fbc610bc81e36b04dfee62209c58e50ada6798a02d8b8bdb23d76dd69b6</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\twi6.h</file>
@@ -3610,7 +3610,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\usb\src\usb_host_hid_keyboard.c</file>
-         <hash>b2b57d9e287f19bee1e6c9229a88b8fbc439d65b2f7a3ff1c29b988e945a0a3f</hash>
+         <hash>e3b654bf6b5c1642f794d3c95811dce1d568cbd432e8f9bf6dfe5540974fb42b</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\queue.c</file>
@@ -3654,7 +3654,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\driver\usb\uhp\src\drv_usb_ohci_local.h</file>
-         <hash>061904e5dba218b67c032aad6d165c474b3beb8a39ed50f2f0daf4fff201c3f4</hash>
+         <hash>a82037e76cfa4eca5023da77fbd67218bed0676919e97c76bc1d33abe6dd88eb</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\portable\GCC\SAM\ARM_CM4F\port.c</file>
@@ -3670,7 +3670,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\driver\usb\drv_usb.h</file>
-         <hash>dce0fe53973e23d87ee16fec7ef65f171b537ac80e14eaa2ca43962156f1c6e7</hash>
+         <hash>ee59efb38b1cf87e1c4bb6e833a9c9be0c106005daa6c1ccd90fca9fb5c17b44</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\rtc.h</file>
@@ -3722,7 +3722,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\usb\usb_common.h</file>
-         <hash>fc9f44df7ab465084d1522901685e5bfad10548e44563a7460d7e089e6276ded</hash>
+         <hash>8e8a0115a555330065b8569621173186a2a2815758125026b02596e0d0278c56</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\flexcom7.h</file>
@@ -3766,7 +3766,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\usb\usb_hid.h</file>
-         <hash>7bf5db6ff39b841993597cb91717a4b22d187f437863ae4c5da83b983217f249</hash>
+         <hash>c55841d2ce5c249f72306d11914abccede9a3084239d294612f0e902db98e628</hash>
       </entry>
       <entry>
          <file>..\src\app.h</file>
@@ -3778,7 +3778,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\configuration.h</file>
-         <hash>616d512911ab2be87af5b5b995edf11274fafc88977e46a91a345bf1106ee7f4</hash>
+         <hash>12894fc9526d7e6bd99f80ce3f46038c284e8d9b355d4edce75350fffa5736b1</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\usart0.h</file>
@@ -3790,7 +3790,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\usb\src\usb_host_hub_mapping.h</file>
-         <hash>397cd4bfd90e8de41af56735747ebb53b64eb04edde9975a3bb0fd8e7c94daf6</hash>
+         <hash>5febd19aa53a3acb9cd3d6f7e5e3ab254c52d45b9db1e12547778f1b0febc8af</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\matrix.h</file>
@@ -3802,7 +3802,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\usb\usb_host_hub_interface.h</file>
-         <hash>9db9028cdb085f4ed90d06c8d0013e5b9d300be9b49f0933094c373552193645</hash>
+         <hash>bcd95afaa026ab8559047e85ac157597452ab0ceee4e96612e5273ec324f1ef9</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\piob.h</file>
@@ -3830,7 +3830,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\usb_host_init_data.c</file>
-         <hash>c97f66d2157302b750901bb1708bd1b8d3b3c7a3de6287ddcb2a315af5af2348</hash>
+         <hash>7c6f693a405a631b0df37ce52df6cfcc59d8807c1ff078b7ecfd8073afc221dd</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\tc0.h</file>
@@ -3846,7 +3846,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\usb\usb_ohci.h</file>
-         <hash>e21050f41399a81ff223988334de45be96d61055284578d812ac40b17e52f748</hash>
+         <hash>8473159e3cdb858e0d0b7afefea4e18ee08497e826108d20c15558166f1429b6</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\adc.h</file>
@@ -3870,7 +3870,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\driver\usb\uhp\drv_usb_ohci.h</file>
-         <hash>ac372eb36a6930529667760b84b730fd9002caa6969e345badea9569c061abbc</hash>
+         <hash>2605ada8b321f65ad4d8ed3c3736a87d5270188c390ba9582846b30ac9bb6f20</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\usart5.h</file>
@@ -3970,7 +3970,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\driver\usb\uhp\src\drv_usb_uhp_ohci_registers.h</file>
-         <hash>c725673d883b62d6a26a42737c20c47d01b606353359d8ca41f83e7170c086ec</hash>
+         <hash>f34d534fda59425f76ca8d468852d7476fe7927ad31569c6bba4a72df7a2b1f4</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\fuses.h</file>
@@ -4002,7 +4002,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\usb\src\usb_host_local.h</file>
-         <hash>b88bec2e0b5ffff726f431dd161e587256256a9eb6fc3a953d5087989dcd9514</hash>
+         <hash>bfe0fbac566e72c15e890d8e91ad4332d697e53db841526c8c5c43a7805d4cf2</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\event_groups.h</file>
@@ -4018,7 +4018,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\usb\src\usb_external_dependencies.h</file>
-         <hash>5110f718908d8f79253ce5b4b44172288cc179ff61d18e387f9e90ae9afbb1b6</hash>
+         <hash>b12fd8f239e37735d34cbd777cd98b448b9ad8bc4fde516bf6ca8a5c1120163f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\pin_configurations.csv</file>
@@ -4050,7 +4050,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\usb\usb_host_hid.h</file>
-         <hash>3a3beb6321cb7007029a074ed327d1697c38e6a9ef9f09cf90ead10a630a70ab</hash>
+         <hash>c05848dd00ee8d42a80b3f97003b7f2969fd4b950f5d3e2b3036e603e23fe805</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\system\int\sys_int_mapping.h</file>
@@ -4058,7 +4058,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\usb\src\usb_host_hid.c</file>
-         <hash>651bde77cd992320aa6ddba23a57fcc715f09b28fbeea42c232151be38c2020f</hash>
+         <hash>ec8ea42dbbb2adcd18a7bbe6e8bf0426e29a9f4f75398eca9a57a929f2d16e3d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\peripheral\clock\plib_clock.h</file>
@@ -4090,7 +4090,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\driver\usb\drv_usb_external_dependencies.h</file>
-         <hash>9c425976fc28dee4877b6dc97e3d85c69d99a3bbacf7813ea324948a6c9e8431</hash>
+         <hash>347035feb1b3460c279e58f4210d0e22e5d1505ec60a69f78375ac81db5e95e8</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
