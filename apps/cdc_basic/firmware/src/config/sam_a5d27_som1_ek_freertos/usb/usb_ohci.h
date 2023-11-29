@@ -38,8 +38,8 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
  *******************************************************************************/
-#ifndef _USB_OHCI_H_
-#define _USB_OHCI_H_
+#ifndef USB_OHCI_H_
+#define USB_OHCI_H_
 
 #include <stdint.h>
 
@@ -50,6 +50,7 @@
 // *****************************************************************************
 
 // *****************************************************************************
+/* MISRA C-2012 Rule 6.1 deviated:23 Deviation record ID -  H3_MISRAC_2012_R_6_1_DR_1 */
 /* OHCI Endpoint Descriptor Type
 
   Summary:
@@ -127,6 +128,7 @@ typedef struct __attribute__((packed)) USB_OHCI_TD
 
 } USB_OHCI_TD;
 
+/* MISRAC 2012 deviation block end */
 // *****************************************************************************
 /* HCCA Type
 
@@ -165,18 +167,18 @@ typedef struct __attribute__((packed)) USB_OHCI_HCCA
     None.
 */
 
-#define USB_OHCI_CC_NO_ERROR                0
+#define USB_OHCI_CC_NO_ERROR                0U
 #define USB_OHCI_CC_CRC                     1
 #define USB_OHCI_CC_BIT_STUFFING            2
 #define USB_OHCI_CC_DATA_TOGGLE_MISMATCH    3
-#define USB_OHCI_CC_STALL                   4
+#define USB_OHCI_CC_STALL                   4U
 #define USB_OHCI_CC_DEVICE_NOT_RESPONDING   5
 #define USB_OHCI_CC_PID_CHECK_FAILURE       6
 #define USB_OHCI_CC_UNEXPECTED_PID          7
 #define USB_OHCI_CC_DATA_OVERRUN            8
-#define USB_OHCI_CC_DATA_UNDERRUN           9
+#define USB_OHCI_CC_DATA_UNDERRUN           9U
 #define USB_OHCI_CC_BUFFER_OVERRUN          0xC
-#define USB_OHCI_CC_BUFFER_UNDERRUN         0xD
+#define USB_OHCI_CC_BUFFER_UNDERRUN         0xDU
 #define USB_OHCI_CC_NOT_ACCESSED            0xF
 
 // *****************************************************************************
@@ -193,10 +195,10 @@ typedef struct __attribute__((packed)) USB_OHCI_HCCA
     None.
 */
 
-#define USB_OHCI_FUNCTIONAL_STATE_RESET 0
-#define USB_OHCI_FUNCTIONAL_STATE_RESUME 1
-#define USB_OHCI_FUNCTIONAL_STATE_OPERATIONAL 2
-#define USB_OHCI_FUNCTIONAL_STATE_SUSPEND 3
+#define USB_OHCI_FUNCTIONAL_STATE_RESET        0U
+#define USB_OHCI_FUNCTIONAL_STATE_RESUME       1U
+#define USB_OHCI_FUNCTIONAL_STATE_OPERATIONAL  2U
+#define USB_OHCI_FUNCTIONAL_STATE_SUSPEND      3U
 
 // *****************************************************************************
 /* OHCI Endpoint Descriptor Direction Constants
@@ -211,9 +213,9 @@ typedef struct __attribute__((packed)) USB_OHCI_HCCA
     None.
 */
 
-#define USB_OHCI_ED_DIRECTION_OUT       1
-#define USB_OHCI_ED_DIRECTION_IN        2
-#define USB_OHCI_ED_DIRECTION_FROM_TD   3  
+#define USB_OHCI_ED_DIRECTION_OUT       1U
+#define USB_OHCI_ED_DIRECTION_IN        2U
+#define USB_OHCI_ED_DIRECTION_FROM_TD   3U  
 
 // *****************************************************************************
 /* OHCI Endpoint Descriptor Speed Constants
@@ -228,8 +230,8 @@ typedef struct __attribute__((packed)) USB_OHCI_HCCA
     None.
 */
 
-#define USB_OHCI_ED_SPEED_FULL  0
-#define USB_OHCI_ED_SPEED_LOW   1
+#define USB_OHCI_ED_SPEED_FULL  0U
+#define USB_OHCI_ED_SPEED_LOW   1U  
 
 // *****************************************************************************
 /* OHCI Endpoint Descriptor Format Constants
@@ -293,8 +295,8 @@ typedef struct __attribute__((packed)) USB_OHCI_HCCA
     None.
 */
 
-#define USB_OHCI_TD_USE_ED_TOGGLE_VALUE  0
-#define USB_OHCI_TD_USE_TD_TOGGLE_VALUE  2
+#define USB_OHCI_TD_USE_ED_TOGGLE_VALUE  0U
+#define USB_OHCI_TD_USE_TD_TOGGLE_VALUE  2U
 #define USB_OHCI_TD_TOGGLE_VALUE(x) (x)
 
 
