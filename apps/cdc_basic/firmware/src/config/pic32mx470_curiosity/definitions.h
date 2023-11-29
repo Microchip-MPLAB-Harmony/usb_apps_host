@@ -48,16 +48,16 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include "peripheral/coretimer/plib_coretimer.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_host.h"
-#include "peripheral/coretimer/plib_coretimer.h"
 #include "bsp/bsp.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/evic/plib_evic.h"
+#include "driver/usb/usbfs/drv_usbfs.h"
 #include "usb/usb_host_cdc.h"
 #include "usb/usb_cdc.h"
-#include "driver/usb/usbfs/drv_usbfs.h"
 #include "system/int/sys_int.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
@@ -195,7 +195,7 @@ typedef struct
 {
     SYS_MODULE_OBJ  usbHostObject0;
 
-	SYS_MODULE_OBJ  drvUSBFSObject;
+    SYS_MODULE_OBJ  drvUSBFSObject;
 
     SYS_MODULE_OBJ  sysTime;
 
