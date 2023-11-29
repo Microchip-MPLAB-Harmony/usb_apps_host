@@ -151,7 +151,7 @@ extern "C" {
 /* Number of Endpoints used */
 
 /* Total number of devices to be supported */
-#define USB_HOST_DEVICES_NUMBER                             3 
+#define USB_HOST_DEVICES_NUMBER                             3U
 
 /* Target peripheral list entries */
 #define  USB_HOST_TPL_ENTRIES                               2 
@@ -159,12 +159,12 @@ extern "C" {
 /* Maximum number of configurations supported per device */
 #define USB_HOST_DEVICE_INTERFACES_NUMBER                   5    
 
-#define USB_HOST_CONTROLLERS_NUMBER                         2
+#define USB_HOST_CONTROLLERS_NUMBER                         2U
 
-#define USB_HOST_TRANSFERS_NUMBER                           10
+#define USB_HOST_TRANSFERS_NUMBER                           10U
 
 /* Provides Host pipes number */
-#define USB_HOST_PIPES_NUMBER                               10
+#define USB_HOST_PIPES_NUMBER                               10U
 
 
 /* Number of HUB Function driver instances in the application */
@@ -172,11 +172,11 @@ extern "C" {
 #define USB_HOST_HUB_INSTANCES_NUMBER         1
 #define USB_HOST_HUB_PORTS_NUMBER             4
 
-	
+    
 /*** USB EHCI Driver Configurations ***/
 
 /* Maximum USB driver instances */
-#define DRV_USB_EHCI_INSTANCES_NUMBER                     1
+#define DRV_USB_EHCI_INSTANCES_NUMBER                     1U
 
 /* Attach Debounce duration in milli Seconds */ 
 #define DRV_USB_EHCI_ATTACH_DEBOUNCE_DURATION           500
@@ -185,17 +185,17 @@ extern "C" {
 #define DRV_USB_EHCI_RESET_DURATION                     100
 
 /* Maximum Control Transfer Size */
-#define DRV_USB_EHCI_CONTROL_TRANSFER_BUFFER_SIZE 512
+#define DRV_USB_EHCI_CONTROL_TRANSFER_BUFFER_SIZE 512U
 
 /* Maximum Non Control Transfer Size */ 
 #define DRV_USB_EHCI_TRANSFER_BUFFER_SIZE  512
 
-	
+    
 
 
 /*** USB OHCI Driver Configurations ***/
 
-#define DRV_USB_OHCI_INSTANCES_NUMBER                        1
+#define DRV_USB_OHCI_INSTANCES_NUMBER                        1U
 
 /* Attach Debounce duration in milli Seconds */ 
 #define DRV_USB_OHCI_ATTACH_DEBOUNCE_DURATION           500
@@ -204,10 +204,10 @@ extern "C" {
 #define DRV_USB_OHCI_RESET_DURATION                     100
 
 /* Maximum Control Transfer Size */
-#define DRV_USB_OHCI_CONTROL_TRANSFER_BUFFER_SIZE 512
+#define DRV_USB_OHCI_CONTROL_TRANSFER_BUFFER_SIZE 512U
 
 /* Maximum Non Control Transfer Size */ 
-#define DRV_USB_OHCI_TRANSFER_BUFFER_SIZE  512
+#define DRV_USB_OHCI_TRANSFER_BUFFER_SIZE  512U
 
 
 /* Alignment for buffers that are submitted to USB Driver*/ 

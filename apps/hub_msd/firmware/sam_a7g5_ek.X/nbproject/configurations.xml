@@ -426,11 +426,11 @@
         <targetPluginBoard/>
         <platformTool>jlink</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.30</languageToolchainVersion>
+        <languageToolchainVersion>4.35</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMA7G5_DFP" vendor="Microchip" version="1.1.173"/>
+        <pack name="SAMA7G5_DFP" vendor="Microchip" version="1.2.178"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="boot.load_adr" value=""/>
