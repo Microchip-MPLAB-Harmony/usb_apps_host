@@ -39,8 +39,8 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
  *******************************************************************************/
-#ifndef _USB_HOST_HID_KEYBOARD_H_
-#define _USB_HOST_HID_KEYBOARD_H_
+#ifndef USB_HOST_HID_KEYBOARD_H_
+#define USB_HOST_HID_KEYBOARD_H_
 
 
 // *****************************************************************************
@@ -65,6 +65,7 @@
 // *****************************************************************************
 // *****************************************************************************
 
+/* MISRA C-2012 Rule 6.1 deviated:8 Deviation record ID -  H3_MISRAC_2012_R_6_1_DR_1 */
 // *****************************************************************************
 /* USB Host HID Keyboard Driver Result Minimum Constant
 
@@ -187,13 +188,13 @@ typedef struct
 typedef struct
 {
     uint8_t leftControl :1;
-	uint8_t leftShift :1;
-	uint8_t leftAlt :1;
-	uint8_t leftGui :1;
-	uint8_t rightControl :1;
-	uint8_t rightShift :1;
-	uint8_t rightAlt :1;
-	uint8_t rightGui :1;
+    uint8_t leftShift :1;
+    uint8_t leftAlt :1;
+    uint8_t leftGui :1;
+    uint8_t rightControl :1;
+    uint8_t rightShift :1;
+    uint8_t rightAlt :1;
+    uint8_t rightGui :1;
     
 } USB_HID_KEYBOARD_MODIFIER_KEYS_DATA;
 
@@ -213,17 +214,17 @@ typedef struct
 typedef struct
 {
     /* This holds the key state for all modifier Keys Data. On key press,
-	 * event will be USB_HID_KEY_PRESS. On key release USB_HID_KEY_RELEASE
-	 * will be notified as event value. */
-	USB_HID_KEYBOARD_MODIFIER_KEYS_DATA modifierKeysData;
-	/* This value determines how many instances of nonModifierKeysData[]
-	 * is valid. */
+     * event will be USB_HID_KEY_PRESS. On key release USB_HID_KEY_RELEASE
+     * will be notified as event value. */
+    USB_HID_KEYBOARD_MODIFIER_KEYS_DATA modifierKeysData;
+    /* This value determines how many instances of nonModifierKeysData[]
+     * is valid. */
     size_t nNonModifierKeysData;
-	/* This holds all the non modifier keys state that has been changed
+    /* This holds all the non modifier keys state that has been changed
      * from the last time USB_HOST_HID_KEYBOARD_EVENT_REPORT_RECEIVED event
-	 * was notified. If a non modifier key has been kept pressed
-	 * continuously, that key will also be reported here. */
-	USB_HOST_HID_KEYBOARD_NON_MODIFIER_KEYS_DATA nonModifierKeysData[6];
+     * was notified. If a non modifier key has been kept pressed
+     * continuously, that key will also be reported here. */
+    USB_HOST_HID_KEYBOARD_NON_MODIFIER_KEYS_DATA nonModifierKeysData[6];
 
 } USB_HOST_HID_KEYBOARD_DATA;
 
@@ -251,12 +252,12 @@ typedef void (*USB_HOST_HID_KEYBOARD_EVENT_HANDLER)
     USB_HOST_HID_KEYBOARD_HANDLE handle,
     /* Associated event type */
     USB_HOST_HID_KEYBOARD_EVENT event,
-	/* Associated event data. For USB_HOST_HID_KEYBOARD_EVENT_ATTACH
+    /* Associated event data. For USB_HOST_HID_KEYBOARD_EVENT_ATTACH
        and USB_HOST_HID_KEYBOARD_EVENT_DETACH this will be NULL.
        For USB_HOST_HID_KEYBOARD_EVENT_REPORT_RECEIVED event, this
-	   will be USB_HOST_HID_KEYBOARD_DATA data type
-	 */
-	void * data
+       will be USB_HOST_HID_KEYBOARD_DATA data type
+     */
+    void * data
 );
 
 // *****************************************************************************
@@ -267,8 +268,8 @@ typedef void (*USB_HOST_HID_KEYBOARD_EVENT_HANDLER)
 // *****************************************************************************
 
 
-void _USB_HOST_HID_KEYBOARD_Task(USB_HOST_HID_OBJ_HANDLE handle);
-void _USB_HOST_HID_KEYBOARD_EventHandler
+void USB_HOST_HID_KEYBOARD_Task(USB_HOST_HID_OBJ_HANDLE handle);
+void USB_HOST_HID_KEYBOARD_EventHandler
 (
     USB_HOST_HID_OBJ_HANDLE handle,
     USB_HOST_HID_EVENT event,
@@ -306,8 +307,7 @@ void _USB_HOST_HID_KEYBOARD_EventHandler
     
   Example:
     <code>
-    // This code snippet shows an example of registering event handler
-   
+       
     </code>
 
   Remarks:
@@ -353,8 +353,7 @@ USB_HOST_HID_KEYBOARD_RESULT USB_HOST_HID_KEYBOARD_EventHandlerSet
     
   Example:
     <code>
-    // This code snippet shows an example of sending Report
-   
+      
     </code>
 
   Remarks:
@@ -367,6 +366,8 @@ USB_HOST_HID_KEYBOARD_RESULT USB_HOST_HID_KEYBOARD_ReportSend
     uint8_t outputReport
 );
 
+
+/* MISRAC 2012 deviation block end */
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus
 }
