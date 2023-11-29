@@ -55,9 +55,9 @@
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/evic/plib_evic.h"
-#include "bsp/bsp.h"
 #include "usb/usb_host_cdc.h"
 #include "usb/usb_cdc.h"
+#include "bsp/bsp.h"
 #include "FreeRTOS.h"
 #include "task.h"
 #include "system/int/sys_int.h"
@@ -195,7 +195,7 @@ Remarks:
 
 typedef struct
 {
-	SYS_MODULE_OBJ  drvUSBHSObject;
+    SYS_MODULE_OBJ  drvUSBHSObject;
 
     SYS_MODULE_OBJ  usbHostObject0;
 
