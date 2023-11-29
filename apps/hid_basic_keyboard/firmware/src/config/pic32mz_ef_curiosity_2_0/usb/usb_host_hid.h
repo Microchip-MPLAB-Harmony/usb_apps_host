@@ -41,8 +41,8 @@
  *******************************************************************************/
 //DOM-IGNORE-END
 
-#ifndef _USB_HOST_HID_H_
-#define _USB_HOST_HID_H_
+#ifndef USB_HOST_HID_H_
+#define USB_HOST_HID_H_
 
 
 // *****************************************************************************
@@ -80,7 +80,7 @@
 // Section: USB HID Client Driver Data Structures
 // *****************************************************************************
 // *****************************************************************************
-
+/* MISRA C-2012 Rule 5.5 deviated:6 Deviation record ID -  H3_MISRAC_2012_R_5_5_DR_1 */
 // *****************************************************************************
 /* USB Host HID Result Minimum Constant
 
@@ -202,7 +202,7 @@ typedef uintptr_t USB_HOST_HID_REQUEST_HANDLE;
   Remarks:
     None.
 */
-typedef struct _USB_HOST_HID_GLOBAL_ITEM
+typedef struct S_USB_HOST_HID_GLOBAL_ITEM
 {
     USB_HID_USAGE_PAGE usagePage; /* Specifies the current usage page */
     int32_t  logicalMinimum; /* Minimum value that will be reported */
@@ -228,7 +228,7 @@ typedef struct _USB_HOST_HID_GLOBAL_ITEM
   Remarks:
     None.
 */
-typedef struct _USB_HOST_HID_LOCAL_ITEM
+typedef struct S_USB_HOST_HID_LOCAL_ITEM
 {
     struct
     {
@@ -282,7 +282,7 @@ typedef struct _USB_HOST_HID_LOCAL_ITEM
   Remarks:
     None.
 */
-typedef struct _USB_HOST_HID_MAIN_ITEM
+typedef struct S_USB_HOST_HID_MAIN_ITEM
 {
     /* Main item tag */
     USB_HID_REPORT_TYPE tag;
@@ -550,8 +550,7 @@ typedef struct
     
   Example:
     <code>
-    // This code snippet shows an example of obtaining Field information
-   
+       
     </code>
 
   Remarks:
@@ -606,8 +605,7 @@ USB_HOST_HID_RESULT USB_HOST_HID_MainItemGet
     
   Example:
     <code>
-    // This code snippet shows an example of sending OUTPUT REPORT
-   
+       
     </code>
 
   Remarks:
@@ -667,7 +665,7 @@ USB_HOST_HID_RESULT USB_HOST_HID_ReportSend
     
   Example:
     <code>
-    // This code snippet shows an example of sending OUTPUT REPORT
+    This code snippet shows an example of sending OUTPUT REPORT
    
     </code>
 
@@ -734,7 +732,7 @@ USB_HOST_HID_RESULT USB_HOST_HID_ReportGet
     
   Example:
     <code>
-    // This code snippet shows an example of setting IDLE time.
+    This code snippet shows an example of setting IDLE time.
    
     </code>
 
@@ -787,8 +785,7 @@ USB_HOST_HID_RESULT USB_HOST_HID_IdleTimeSet
     
   Example:
     <code>
-    // This code snippet shows an example of setting HID PROTOCOL.
-   
+       
     </code>
 
   Remarks:
@@ -842,8 +839,7 @@ USB_HOST_HID_RESULT USB_HOST_HID_ProtocolSet
     
   Example:
     <code>
-    // This code snippet shows an example of getting HID PROTOCOL.
-   
+       
     </code>
 
   Remarks:
@@ -903,8 +899,7 @@ USB_HOST_HID_RESULT USB_HOST_HID_ProtocolGet
     
   Example:
     <code>
-    // This code snippet shows an example of getting IDLE RATE.
-   
+       
     </code>
 
   Remarks:
@@ -956,8 +951,7 @@ USB_HOST_HID_RESULT USB_HOST_HID_IdleTimeGet
     
   Example:
     <code>
-    // This code snippet shows an example of getting extended usage.
-   
+       
     </code>
 
   Remarks:
@@ -1011,8 +1005,7 @@ USB_HOST_HID_RESULT USB_HOST_HID_UsageGet
     
   Example:
     <code>
-    // This code snippet shows an example of getting string index.
-   
+       
     </code>
 
   Remarks:
@@ -1067,8 +1060,7 @@ USB_HOST_HID_RESULT USB_HOST_HID_StringIndexGet
     
   Example:
     <code>
-    // This code snippet shows an example of getting designator index.
-   
+       
     </code>
 
   Remarks:
@@ -1082,6 +1074,8 @@ USB_HOST_HID_RESULT USB_HOST_HID_DesignatorIndexGet
     uint32_t fieldIndex,
     uint32_t *physicalDescriptorDesignatorIndex
 );
+
+/* MISRAC 2012 deviation block end */
 
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus
