@@ -116,10 +116,10 @@ extern "C" {
 // **************************************************************************
 
 /* Number of Endpoints used */
-#define DRV_USBFSV1_ENDPOINTS_NUMBER                        1
+#define DRV_USBFSV1_ENDPOINTS_NUMBER                        1U
 
 /* Total number of devices to be supported */
-#define USB_HOST_DEVICES_NUMBER                             1 
+#define USB_HOST_DEVICES_NUMBER                             1U
 
 /* Target peripheral list entries */
 #define  USB_HOST_TPL_ENTRIES                               1 
@@ -127,18 +127,18 @@ extern "C" {
 /* Maximum number of configurations supported per device */
 #define USB_HOST_DEVICE_INTERFACES_NUMBER                   5    
 
-#define USB_HOST_CONTROLLERS_NUMBER                         1
+#define USB_HOST_CONTROLLERS_NUMBER                         1U
 
-#define USB_HOST_TRANSFERS_NUMBER                           10
+#define USB_HOST_TRANSFERS_NUMBER                           10U
 
 /* Provides Host pipes number */
-#define USB_HOST_PIPES_NUMBER                               10
+#define USB_HOST_PIPES_NUMBER                               10U
 
 
 /*** USB Driver Configuration ***/
 
 /* Maximum USB driver instances */
-#define DRV_USBFSV1_INSTANCES_NUMBER                        1
+#define DRV_USBFSV1_INSTANCES_NUMBER                        1U
 
 
 /* Disable Device Support */
@@ -148,10 +148,10 @@ extern "C" {
 #define DRV_USBFSV1_HOST_SUPPORT                            true
 
 /* Number of NAKs to wait before returning transfer failure */ 
-#define DRV_USBFSV1_HOST_NAK_LIMIT                          2000 
+#define DRV_USBFSV1_HOST_NAK_LIMIT                          2000U 
 
 /* Maximum Number of pipes */
-#define DRV_USBFSV1_HOST_PIPES_NUMBER                       10  
+#define DRV_USBFSV1_HOST_PIPES_NUMBER                       10U  
 
 /* Attach Debounce duration in milli Seconds */ 
 #define DRV_USBFSV1_HOST_ATTACH_DEBOUNCE_DURATION           500
@@ -163,17 +163,17 @@ extern "C" {
 #define USB_ALIGN  __ALIGNED(CACHE_LINE_SIZE)
 
 /* Number of HID Client driver instances in the application */
-#define USB_HOST_HID_INSTANCES_NUMBER        1
+#define USB_HOST_HID_INSTANCES_NUMBER        1U
 
 /* Maximum number of INTERRUPT IN endpoints supported per HID interface */
-#define USB_HOST_HID_INTERRUPT_IN_ENDPOINTS_NUMBER 1
+#define USB_HOST_HID_INTERRUPT_IN_ENDPOINTS_NUMBER 1U
 
 /* Number of total usage driver instances registered with HID client driver */
-#define USB_HOST_HID_USAGE_DRIVER_SUPPORT_NUMBER  1
+#define USB_HOST_HID_USAGE_DRIVER_SUPPORT_NUMBER  1U
 
 /* Maximum number PUSH items that can be saved in the Global item queue per field
  * per HID interface */
-#define USB_HID_GLOBAL_PUSH_POP_STACK_SIZE 1
+#define USB_HID_GLOBAL_PUSH_POP_STACK_SIZE        1U
 
 
 
