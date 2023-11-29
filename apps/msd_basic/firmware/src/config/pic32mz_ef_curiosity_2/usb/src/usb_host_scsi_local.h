@@ -39,8 +39,8 @@
  *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef _USB_HOST_SCSI_LOCAL_H
-#define _USB_HOST_SCSI_LOCAL_H
+#ifndef USB_HOST_SCSI_LOCAL_H
+#define USB_HOST_SCSI_LOCAL_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -61,23 +61,23 @@
     #if (USB_HOST_SCSI_FILE_SYSTEM_REGISTER == false)
 
         /* The file system register and deregister functions are set to empty */
-        #define _USB_HOST_SCSI_FILE_SYSTEM_REGISTER(w,x,y,z) (SYS_FS_MEDIA_HANDLE_INVALID)
-        #define _USB_HOST_SCSI_FILE_SYSTEM_DEREGISTER(w) 
+        #define M_USB_HOST_SCSI_FILE_SYSTEM_REGISTER(w,x,y,z) (SYS_FS_MEDIA_HANDLE_INVALID)
+        #define M_USB_HOST_SCSI_FILE_SYSTEM_DEREGISTER(w) 
 
     #else
 
         /* The file system register and deregister functions are set to
          * the SYS_FS_MEDIA_MANAGER_Register and SYS_FS_MEDIA_MANAGER_DeRegister functions. */
-        #define _USB_HOST_SCSI_FILE_SYSTEM_REGISTER(w,x,y,z) SYS_FS_MEDIA_MANAGER_Register(w, x, y, z);
-        #define _USB_HOST_SCSI_FILE_SYSTEM_DEREGISTER(w) SYS_FS_MEDIA_MANAGER_DeRegister(w)
+        #define M_USB_HOST_SCSI_FILE_SYSTEM_REGISTER(w,x,y,z) SYS_FS_MEDIA_MANAGER_Register(w, x, y, z);
+        #define M_USB_HOST_SCSI_FILE_SYSTEM_DEREGISTER(w) SYS_FS_MEDIA_MANAGER_DeRegister(w)
     #endif
 
 #else
 
     /* This is the default behavior. The file system register and deregister functions 
      * are set to the SYS_FS_MEDIA_MANAGER_Register and SYS_FS_MEDIA_MANAGER_DeRegister functions. */
-    #define _USB_HOST_SCSI_FILE_SYSTEM_REGISTER(w,x,y,z) SYS_FS_MEDIA_MANAGER_Register(w, x, y, z)
-    #define _USB_HOST_SCSI_FILE_SYSTEM_DEREGISTER(w) SYS_FS_MEDIA_MANAGER_DeRegister(w)
+    #define M_USB_HOST_SCSI_FILE_SYSTEM_REGISTER(w,x,y,z) SYS_FS_MEDIA_MANAGER_Register(w, x, y, z)
+    #define M_USB_HOST_SCSI_FILE_SYSTEM_DEREGISTER(w) SYS_FS_MEDIA_MANAGER_DeRegister(w)
     
 #endif
 
@@ -95,15 +95,15 @@
 
 #if defined(USB_HOST_SCSI_ERROR_CALLBACK)
     #if (USB_HOST_SCSI_ERROR_CALLBACK == true)
-        #define _USB_HOST_SCSI_ERROR_CALLBACK_DECLARE extern void USB_HOST_SCSI_ErrorCallback(uintptr_t objIdentifier, USB_HOST_SCSI_ERROR_CODE errorCode);
-        #define _USB_HOST_SCSI_ERROR_CALLBACK(x, y) USB_HOST_SCSI_ErrorCallback(x, y)
+        #define M_USB_HOST_SCSI_ERROR_CALLBACK_DECLARE extern void USB_HOST_SCSI_ErrorCallback(uintptr_t objIdentifier, USB_HOST_SCSI_ERROR_CODE errorCode);
+        #define M_USB_HOST_SCSI_ERROR_CALLBACK(x, y) USB_HOST_SCSI_ErrorCallback(x, y)
     #else
-        #define _USB_HOST_SCSI_ERROR_CALLBACK_DECLARE
-        #define _USB_HOST_SCSI_ERROR_CALLBACK(x, y) 
+        #define M_USB_HOST_SCSI_ERROR_CALLBACK_DECLARE
+        #define M_USB_HOST_SCSI_ERROR_CALLBACK(x, y) 
     #endif
 #else
-    #define _USB_HOST_SCSI_ERROR_CALLBACK_DECLARE
-    #define _USB_HOST_SCSI_ERROR_CALLBACK(x, y)
+    #define M_USB_HOST_SCSI_ERROR_CALLBACK_DECLARE
+    #define M_USB_HOST_SCSI_ERROR_CALLBACK(x, y)
 #endif
 
 
@@ -145,6 +145,9 @@ typedef struct
 /*****************************************************************************
 *  SCSI Task state
 *****************************************************************************/
+/* MISRA C-2012 Rule 5.2 deviated:15 Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
+
+
 typedef enum
 {
     /* The unit is in an error state */
@@ -254,6 +257,7 @@ typedef enum
 
 } USB_HOST_SCSI_DETACH_TASK_STATE;
 
+/* MISRAC 2012 deviation block end */
 /******************************************************
  * SCSI Command object
  ******************************************************/
@@ -374,16 +378,16 @@ typedef struct
 /*****************************************************************************
 *  SCSI Transparent Command Set Sub-class code
 *****************************************************************************/
-#define USB_SCSI_INQUIRY 				    0x12
-#define USB_SCSI_READ_FORMAT_CAPACITY 		0x23
-#define USB_SCSI_READ_CAPACITY 				0x25
-#define USB_SCSI_READ_10 				    0x28
-#define USB_SCSI_WRITE_10 				    0x2a
-#define USB_SCSI_REQUEST_SENSE 				0x03
-#define USB_SCSI_MODE_SENSE  				0x1a
-#define USB_SCSI_TEST_UNIT_READY 			0x00
-#define USB_SCSI_VERIFY 					0x2f
-#define USB_SCSI_STOP_START 				0x1b
+#define USB_SCSI_INQUIRY                     0x12
+#define USB_SCSI_READ_FORMAT_CAPACITY         0x23
+#define USB_SCSI_READ_CAPACITY                 0x25
+#define USB_SCSI_READ_10                     0x28
+#define USB_SCSI_WRITE_10                     0x2a
+#define USB_SCSI_REQUEST_SENSE                 0x03
+#define USB_SCSI_MODE_SENSE                  0x1a
+#define USB_SCSI_TEST_UNIT_READY             0x00
+#define USB_SCSI_VERIFY                     0x2f
+#define USB_SCSI_STOP_START                 0x1b
 
 #define USB_SCSI_PREVENT_ALLOW_MEDIUM_REMOVAL   0x1E
 
@@ -404,8 +408,9 @@ typedef struct
 // *****************************************************************************
 
 // ******************************************************************************
+/* MISRA C-2012 Rule 8.6 deviated:2 Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
 /* Function:
-    void _USB_HOST_SCSI_TransferCallback 
+    void F_USB_HOST_SCSI_TransferCallback 
     (
         USB_HOST_MSD_LUN_HANDLE lunHandle,
         USB_HOST_MSD_TRANSFER_HANDLE transferHandle,
@@ -425,7 +430,7 @@ typedef struct
     application.
 */
 
-void _USB_HOST_SCSI_TransferCallback 
+void F_USB_HOST_SCSI_TransferCallback 
 (
     USB_HOST_MSD_LUN_HANDLE lunHandle,
     USB_HOST_MSD_TRANSFER_HANDLE transferHandle,
@@ -436,7 +441,7 @@ void _USB_HOST_SCSI_TransferCallback
 
 // ******************************************************************************
 /* Function:
-    void _USB_HOST_SCSI_InquiryResponseCommand 
+    void F_USB_HOST_SCSI_InquiryResponseCommand 
     (
         USB_HOST_MSD_COMMAND * msdCommand
     )
@@ -452,11 +457,11 @@ void _USB_HOST_SCSI_TransferCallback
     application.
 */
 
-void _USB_HOST_SCSI_InquiryResponseCommand (uint8_t * scsiCommand );
+void F_USB_HOST_SCSI_InquiryResponseCommand (uint8_t * scsiCommand );
 
 // ******************************************************************************
 /* Function:
-    void _USB_HOST_SCSI_ReadFormatCapacityCommand
+    void F_USB_HOST_SCSI_ReadFormatCapacityCommand
     (
         USB_HOST_MSD_COMMAND * msdCommand
     )
@@ -472,11 +477,13 @@ void _USB_HOST_SCSI_InquiryResponseCommand (uint8_t * scsiCommand );
     application.
 */
 
-void _USB_HOST_SCSI_ReadFormatCapacityCommand (uint8_t * scsiCommand );
+void F_USB_HOST_SCSI_ReadFormatCapacityCommand (uint8_t * scsiCommand );
 
+
+/* MISRAC 2012 deviation block end */
 // ******************************************************************************
 /* Function:
-    int _USB_HOST_SCSI_LUNHandleToSCSIInstance 
+    int F_USB_HOST_SCSI_LUNHandleToSCSIInstance 
     (
         USB_HOST_MSD_LUN_HANDLE lunHandle
     )
@@ -493,14 +500,14 @@ void _USB_HOST_SCSI_ReadFormatCapacityCommand (uint8_t * scsiCommand );
     application.
 */
 
-int _USB_HOST_SCSI_LUNHandleToSCSIInstance
+int F_USB_HOST_SCSI_LUNHandleToSCSIInstance
 (
     USB_HOST_MSD_LUN_HANDLE lunHandle
 );
 
 // ******************************************************************************
 /* Function:
-    void _USB_HOST_SCSI_ReadCapacityCommand
+    void F_USB_HOST_SCSI_ReadCapacityCommand
     (
         USB_HOST_MSD_COMMAND * msdCommand
     )
@@ -516,11 +523,11 @@ int _USB_HOST_SCSI_LUNHandleToSCSIInstance
     application.
 */
 
-void _USB_HOST_SCSI_ReadCapacityCommand (uint8_t * scsiCommand );
+void F_USB_HOST_SCSI_ReadCapacityCommand (uint8_t * scsiCommand );
 
 // ******************************************************************************
 /* Function:
-    void _USB_HOST_SCSI_RequestSenseCommand 
+    void F_USB_HOST_SCSI_RequestSenseCommand 
     (
         USB_HOST_MSD_COMMAND * msdCommand
     )
@@ -536,11 +543,11 @@ void _USB_HOST_SCSI_ReadCapacityCommand (uint8_t * scsiCommand );
     application.
 */
 
-void _USB_HOST_SCSI_RequestSenseCommand (uint8_t * scsiCommand );
+void F_USB_HOST_SCSI_RequestSenseCommand (uint8_t * scsiCommand );
 
 // ******************************************************************************
 /* Function:
-    void _USB_HOST_SCSI_BlockTransferCallback 
+    void F_USB_HOST_SCSI_BlockTransferCallback 
     (
         USB_HOST_MSD_LUN_HANDLE lunHandle,
         USB_HOST_MSD_TRANSFER_HANDLE transferHandle,
@@ -560,7 +567,7 @@ void _USB_HOST_SCSI_RequestSenseCommand (uint8_t * scsiCommand );
     application.
 */
 
-void _USB_HOST_SCSI_BlockTransferCallback 
+void F_USB_HOST_SCSI_BlockTransferCallback 
 (
     USB_HOST_MSD_LUN_HANDLE lunHandle,
     USB_HOST_MSD_TRANSFER_HANDLE transferHandle,
@@ -571,7 +578,7 @@ void _USB_HOST_SCSI_BlockTransferCallback
 
 // ******************************************************************************
 /* Function:
-    void _USB_HOST_SCSI_DetachDetectTasks(int scsiObjIndex);
+    void F_USB_HOST_SCSI_DetachDetectTasks(int scsiObjIndex);
 
   Summary:
     This function is called periodically by the USB_HOST_SCSI_Tasks() function
@@ -587,11 +594,11 @@ void _USB_HOST_SCSI_BlockTransferCallback
     None.
 */
 
-void _USB_HOST_SCSI_DetachDetectTasks(int scsiObjIndex);
+void F_USB_HOST_SCSI_DetachDetectTasks(int scsiObjIndex);
 
 // *****************************************************************************
 /* Function:
-    void * _USB_HOST_SCSI_TimerCallback
+    void * F_USB_HOST_SCSI_TimerCallback
     (
        uint32_t context
     )
@@ -607,6 +614,31 @@ void _USB_HOST_SCSI_DetachDetectTasks(int scsiObjIndex);
     application.
 */    
 
-void _USB_HOST_SCSI_TimerCallback(uintptr_t context);
+void F_USB_HOST_SCSI_TimerCallback(uintptr_t context);
+
+void F_USB_HOST_SCSI_Transfer 
+(
+    USB_HOST_SCSI_HANDLE scsiHandle,
+    USB_HOST_MSD_TRANSFER_HANDLE * transferHandle,
+    uint32_t startSector,
+    uint32_t nSectors,
+    void * buffer,
+    USB_HOST_MSD_TRANSFER_DIRECTION direction
+);
+
+void F_USB_HOST_SCSI_CommandCallback 
+(
+    USB_HOST_MSD_LUN_HANDLE lunHandle,
+    USB_HOST_MSD_TRANSFER_HANDLE transferHandle,
+    USB_HOST_MSD_RESULT result,
+    size_t size,
+    uintptr_t context
+);
+
+void F_USB_HOST_SCSI_TestUnitReadyCommand (uint8_t * scsiCommand );
+
+void F_USB_HOST_SCSI_ModeSense (uint8_t * scsiCommand );
+
+void F_USB_HOST_SCSI_TasksByIndex(int scsiObjIndex);
 #endif
 
