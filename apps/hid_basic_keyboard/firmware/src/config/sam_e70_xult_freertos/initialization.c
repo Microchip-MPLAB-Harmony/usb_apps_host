@@ -155,7 +155,7 @@ SYSTEM_OBJECTS sysObj;
  ******************************************************/
  
 
-const DRV_USBHSV1_INIT drvUSBInit =
+static const DRV_USBHSV1_INIT drvUSBInit =
 {
     /* Interrupt Source for USB module */
     .interruptSource = USBHS_IRQn,
@@ -163,7 +163,7 @@ const DRV_USBHSV1_INIT drvUSBInit =
     /* System module initialization */
     .moduleInit = {0},
 
-	/* USB Controller to operate as USB Host */
+    /* USB Controller to operate as USB Host */
     .operationMode = DRV_USBHSV1_OPMODE_HOST,
 
     /* To operate in USB Normal Mode */
@@ -171,7 +171,7 @@ const DRV_USBHSV1_INIT drvUSBInit =
 
     /* Identifies peripheral (PLIB-level) ID */
     .usbID = USBHS_REGS,
-	
+    
    .portPowerEnable = NULL,
 
             
@@ -271,11 +271,11 @@ void SYS_Initialize ( void* data )
     
     /* MISRAC 2012 deviation block end */
 
-	/* Initialize USB Driver */ 
-    sysObj.drvUSBHSV1Object = DRV_USBHSV1_Initialize(DRV_USBHSV1_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);	
-
     /* Initialize the USB Host layer */
-    sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );	
+    sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );    
+
+    /* Initialize USB Driver */ 
+    sysObj.drvUSBHSV1Object = DRV_USBHSV1_Initialize(DRV_USBHSV1_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);    
 
 
     /* MISRAC 2012 deviation block end */
