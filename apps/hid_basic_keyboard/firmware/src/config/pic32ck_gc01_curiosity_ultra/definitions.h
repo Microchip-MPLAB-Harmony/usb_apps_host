@@ -60,8 +60,8 @@
 #include "system/time/sys_time.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_host.h"
-#include "driver/usart/drv_usart.h"
 #include "bsp/bsp.h"
+#include "driver/usart/drv_usart.h"
 #include "usb/usb_host_hid.h"
 #include "usb/usb_hid.h"
 #include "usb/usb_host_hid_keyboard.h"
@@ -200,7 +200,7 @@ Remarks:
 
 typedef struct
 {
-	SYS_MODULE_OBJ  drvUSBHSObject;
+    SYS_MODULE_OBJ  drvUSBHSObject;
 
     SYS_MODULE_OBJ  sysTime;
     SYS_MODULE_OBJ  drvUsart0;
