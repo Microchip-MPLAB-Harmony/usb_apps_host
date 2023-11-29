@@ -174,7 +174,7 @@ SYSTEM_OBJECTS sysObj;
  
 
 
-void _DRV_USB_VBUSPowerEnable(uint8_t port, bool enable)
+static void F_DRV_USB_VBUSPowerEnable(uint8_t port, bool enable)
 {
     /* Note: When operating in Host mode, the application can specify a Root 
        hub port enable function. The USB Host Controller driver initialize data 
@@ -196,7 +196,7 @@ void _DRV_USB_VBUSPowerEnable(uint8_t port, bool enable)
         VBUS_AH_PowerDisable();
     }
 }
-const DRV_USBFSV1_INIT drvUSBInit =
+static const DRV_USBFSV1_INIT drvUSBInit =
 {
     /* Interrupt Source for USB module */ 
     .interruptSource = USB_IRQn,
@@ -223,7 +223,7 @@ const DRV_USBFSV1_INIT drvUSBInit =
     .vbusComparator = NULL,
        
     /* USB Host Power Enable. USB Driver uses this function to Enable the VBUS */ 
-    .portPowerEnable = _DRV_USB_VBUSPowerEnable,
+    .portPowerEnable = F_DRV_USB_VBUSPowerEnable,
 
     /* Root hub available current in milliamperes */
     .rootHubAvailableCurrent = 500,
@@ -321,7 +321,7 @@ void SYS_Initialize ( void* data )
     /* MISRAC 2012 deviation block end */
 
     /* Initialize the USB Host layer */
-    sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );	
+    sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );    
 
     /* Initialize USB Driver */ 
     sysObj.drvUSBFSV1Object = DRV_USBFSV1_Initialize(DRV_USBFSV1_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);
