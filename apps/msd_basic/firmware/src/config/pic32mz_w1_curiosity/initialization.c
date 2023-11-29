@@ -230,56 +230,56 @@ static const SYS_FS_REGISTRATION_TABLE sysFSInit [ SYS_FS_MAX_FILE_SYSTEM_TYPE ]
  * USB Driver Initialization
  ******************************************************/
  
-uint8_t __attribute__((aligned(512))) USB_ALIGN endPointTable1[DRV_USBFS_ENDPOINTS_NUMBER * 32];
+static uint8_t __attribute__((aligned(512))) USB_ALIGN endPointTable1[DRV_USBFS_ENDPOINTS_NUMBER * 32];
 
-void DRV_USB_VBUSPowerEnable(uint8_t port, bool enable)
+static void DRV_USB_VBUSPowerEnable(uint8_t port, bool enable)
 {
-	/* Note: USB Host applications should have a way for Enabling/Disabling the 
-	   VBUS. Applications can use a GPIO to turn VBUS on/off through a switch. 
-	   In MHC Pin Settings select the pin used as VBUS Power Enable as output and 
-	   name it to "VBUS_AH". If you a see a build error from this function either 
-	   you have not configured the VBUS Power Enable in MHC pin settings or the 
-	   Pin name entered in MHC is not "VBUS_AH". */ 
+    /* Note: USB Host applications should have a way for Enabling/Disabling the 
+       VBUS. Applications can use a GPIO to turn VBUS on/off through a switch. 
+       In MHC Pin Settings select the pin used as VBUS Power Enable as output and 
+       name it to "VBUS_AH". If you a see a build error from this function either 
+       you have not configured the VBUS Power Enable in MHC pin settings or the 
+       Pin name entered in MHC is not "VBUS_AH". */ 
     if (enable == true)
-	{
-		/* Enable the VBUS */
-		VBUS_AH_PowerEnable();
-	}
-	else
-	{
-		/* Disable the VBUS */
-		VBUS_AH_PowerDisable();
-	}
+    {
+        /* Enable the VBUS */
+        VBUS_AH_PowerEnable();
+    }
+    else
+    {
+        /* Disable the VBUS */
+        VBUS_AH_PowerDisable();
+    }
 }
 
-const DRV_USBFS_INIT drvUSBFSInit =
+static const DRV_USBFS_INIT drvUSBFSInit =
 {
-	 /* Assign the endpoint table */
+     /* Assign the endpoint table */
     .endpointTable= endPointTable1,
 
 
 
 
-	/* Interrupt Source for USB module */
-	.interruptSource = INT_SOURCE_USB,
+    /* Interrupt Source for USB module */
+    .interruptSource = INT_SOURCE_USB,
     
-	/* USB Controller to operate as USB Host */
+    /* USB Controller to operate as USB Host */
     .operationMode = DRV_USBFS_OPMODE_HOST,
-	
-	.operationSpeed = USB_SPEED_FULL,
+    
+    .operationSpeed = USB_SPEED_FULL,
  
-	/* Stop in idle */
+    /* Stop in idle */
     .stopInIdle = false,
-	
-	    /* Suspend in sleep */
+    
+        /* Suspend in sleep */
     .suspendInSleep = false,
  
     /* Identifies peripheral (PLIB-level) ID */
     .usbID = USB_ID_1,
-	
-	/* USB Host Power Enable. USB Driver uses this function to Enable the VBUS */ 
-	.portPowerEnable = DRV_USB_VBUSPowerEnable,
-	
+    
+    /* USB Host Power Enable. USB Driver uses this function to Enable the VBUS */ 
+    .portPowerEnable = DRV_USB_VBUSPowerEnable,
+    
     /* Root hub available current in milliamperes */
     .rootHubAvailableCurrent = 500,
 
@@ -375,13 +375,13 @@ void SYS_Initialize ( void* data )
     /* MISRAC 2012 deviation block end */
 
     /* Initialize the USB Host layer */
-    sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );	
+    sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );    
 
     /*** File System Service Initialization Code ***/
     (void) SYS_FS_Initialize( (const void *) sysFSInit );
 
-	/* Initialize USB Driver */ 
-    sysObj.drvUSBFSObject = DRV_USBFS_Initialize(DRV_USBFS_INDEX_0, (SYS_MODULE_INIT *) &drvUSBFSInit);	
+    /* Initialize USB Driver */ 
+    sysObj.drvUSBFSObject = DRV_USBFS_Initialize(DRV_USBFS_INDEX_0, (SYS_MODULE_INIT *) &drvUSBFSInit);    
 
 
     /* MISRAC 2012 deviation block end */

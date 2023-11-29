@@ -143,10 +143,10 @@ extern "C" {
 // **************************************************************************
 
 /* Number of Endpoints used */
-#define DRV_USBFS_ENDPOINTS_NUMBER                          1
+#define DRV_USBFS_ENDPOINTS_NUMBER                          1U
 
 /* Total number of devices to be supported */
-#define USB_HOST_DEVICES_NUMBER                             1 
+#define USB_HOST_DEVICES_NUMBER                             1U
 
 /* Target peripheral list entries */
 #define  USB_HOST_TPL_ENTRIES                               1 
@@ -154,12 +154,12 @@ extern "C" {
 /* Maximum number of configurations supported per device */
 #define USB_HOST_DEVICE_INTERFACES_NUMBER                   5    
 
-#define USB_HOST_CONTROLLERS_NUMBER                         1
+#define USB_HOST_CONTROLLERS_NUMBER                         1U
 
-#define USB_HOST_TRANSFERS_NUMBER                           10
+#define USB_HOST_TRANSFERS_NUMBER                           10U
 
 /* Provides Host pipes number */
-#define USB_HOST_PIPES_NUMBER                               10
+#define USB_HOST_PIPES_NUMBER                               10U
 
 
 /* Number of MSD Function driver instances in the application */
@@ -173,7 +173,7 @@ extern "C" {
 /*** USB Driver Configuration ***/
 
 /* Maximum USB driver instances */
-#define DRV_USBFS_INSTANCES_NUMBER                        1
+#define DRV_USBFS_INSTANCES_NUMBER                        1U
 
 /* Interrupt mode enabled */
 #define DRV_USBFS_INTERRUPT_MODE                          true
@@ -186,16 +186,16 @@ extern "C" {
 #define DRV_USBFS_HOST_SUPPORT                            true
 
 /* Number of NAKs to wait before returning transfer failure */ 
-#define DRV_USBFS_HOST_NAK_LIMIT                          2000 
+#define DRV_USBFS_HOST_NAK_LIMIT                          2000U 
 
 /* Maximum Number of pipes */
-#define DRV_USBFS_HOST_PIPES_NUMBER                       10  
+#define DRV_USBFS_HOST_PIPES_NUMBER                       10U 
 
 /* Attach Debounce duration in milli Seconds */ 
-#define DRV_USBFS_HOST_ATTACH_DEBOUNCE_DURATION           500
+#define DRV_USBFS_HOST_ATTACH_DEBOUNCE_DURATION           500U
 
 /* Reset duration in milli Seconds */ 
-#define DRV_USBFS_HOST_RESET_DURATION                     100
+#define DRV_USBFS_HOST_RESET_DURATION                     100U
 
 
 
