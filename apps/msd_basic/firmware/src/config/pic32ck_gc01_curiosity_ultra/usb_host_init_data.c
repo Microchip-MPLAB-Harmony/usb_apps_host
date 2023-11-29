@@ -38,15 +38,21 @@
 #include "configuration.h"
 #include "definitions.h" 
 
-
-const USB_HOST_TPL_ENTRY USBTPList[1] = 
+static const USB_HOST_TPL_ENTRY USBTPList[1] = 
 {
-    TPL_INTERFACE_CLASS_SUBCLASS_PROTOCOL(0x08, 0x06, 0x50, NULL,  USB_HOST_MSD_INTERFACE) ,
+    TPL_INTERFACE_CLASS_SUBCLASS_PROTOCOL
+    (
+        USB_MSD_CLASS_CODE, 
+        USB_MSD_SUBCLASS_CODE_SCSI_TRANSPARENT_COMMAND_SET, 
+        USB_MSD_PROTOCOL, 
+        NULL,  
+        USB_HOST_MSD_INTERFACE
+    ),
 
 
 };
 
-const USB_HOST_HCD hcdTable[1] = 
+static const USB_HOST_HCD hcdTable[1] = 
 {
     {
         /* Index of the USB Driver used by the Host Layer */
@@ -65,4 +71,6 @@ const USB_HOST_INIT usbHostInitData =
     .tplList = (USB_HOST_TPL_ENTRY *)USBTPList,
     .hostControllerDrivers = (USB_HOST_HCD *)&hcdTable    
 };
+/* MISRAC 2012 deviation block end */
+
 // </editor-fold>
