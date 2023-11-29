@@ -102,6 +102,34 @@ extern "C" {
 // Section: Middleware & Other Library Configuration
 // *****************************************************************************
 // *****************************************************************************
+
+/* EHCI Driver is not used */  
+#define DRV_USB_EHCI_INSTANCES_NUMBER                     0U
+    
+
+
+/*** USB OHCI Driver Configurations ***/
+
+#define DRV_USB_OHCI_INSTANCES_NUMBER                        1U
+
+/* Attach Debounce duration in milli Seconds */ 
+#define DRV_USB_OHCI_ATTACH_DEBOUNCE_DURATION           500
+
+/* Reset duration in milli Seconds */ 
+#define DRV_USB_OHCI_RESET_DURATION                     100
+
+/* Maximum Control Transfer Size */
+#define DRV_USB_OHCI_CONTROL_TRANSFER_BUFFER_SIZE 512U
+
+/* Maximum Non Control Transfer Size */ 
+#define DRV_USB_OHCI_TRANSFER_BUFFER_SIZE  512U
+
+
+/* Alignment for buffers that are submitted to USB Driver*/ 
+#ifndef USB_ALIGN
+#define USB_ALIGN __ALIGNED(32)
+#endif 
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: USB Host Layer Configuration
@@ -111,7 +139,7 @@ extern "C" {
 /* Number of Endpoints used */
 
 /* Total number of devices to be supported */
-#define USB_HOST_DEVICES_NUMBER                             3 
+#define USB_HOST_DEVICES_NUMBER                             3U
 
 /* Target peripheral list entries */
 #define  USB_HOST_TPL_ENTRIES                               3 
@@ -119,12 +147,12 @@ extern "C" {
 /* Maximum number of configurations supported per device */
 #define USB_HOST_DEVICE_INTERFACES_NUMBER                   5    
 
-#define USB_HOST_CONTROLLERS_NUMBER                         1
+#define USB_HOST_CONTROLLERS_NUMBER                         1U
 
-#define USB_HOST_TRANSFERS_NUMBER                           10
+#define USB_HOST_TRANSFERS_NUMBER                           10U
 
 /* Provides Host pipes number */
-#define USB_HOST_PIPES_NUMBER                               10
+#define USB_HOST_PIPES_NUMBER                               10U
 
 
 /* Number of HUB Function driver instances in the application */
@@ -132,52 +160,24 @@ extern "C" {
 #define USB_HOST_HUB_INSTANCES_NUMBER         1
 #define USB_HOST_HUB_PORTS_NUMBER             4
 
-
-/* EHCI Driver is not used */  
-#define DRV_USB_EHCI_INSTANCES_NUMBER                     0
-	
-
-
-/*** USB OHCI Driver Configurations ***/
-
-#define DRV_USB_OHCI_INSTANCES_NUMBER                        1
-
-/* Attach Debounce duration in milli Seconds */ 
-#define DRV_USB_OHCI_ATTACH_DEBOUNCE_DURATION           500
-
-/* Reset duration in milli Seconds */ 
-#define DRV_USB_OHCI_RESET_DURATION                     100
-
-/* Maximum Control Transfer Size */
-#define DRV_USB_OHCI_CONTROL_TRANSFER_BUFFER_SIZE 512
-
-/* Maximum Non Control Transfer Size */ 
-#define DRV_USB_OHCI_TRANSFER_BUFFER_SIZE  512
-
-
-/* Alignment for buffers that are submitted to USB Driver*/ 
-#ifndef USB_ALIGN
-#define USB_ALIGN __ALIGNED(32)
-#endif 
-
 /* Number of CDC Function driver instances in the application */
-#define USB_HOST_CDC_INSTANCES_NUMBER         1
+#define USB_HOST_CDC_INSTANCES_NUMBER         1U
 
 /* Number of CDC Attach Listeners */ 
-#define USB_HOST_CDC_ATTACH_LISTENERS_NUMBER        1
+#define USB_HOST_CDC_ATTACH_LISTENERS_NUMBER        1U
 
 /* Number of HID Client driver instances in the application */
-#define USB_HOST_HID_INSTANCES_NUMBER        1
+#define USB_HOST_HID_INSTANCES_NUMBER        1U
 
 /* Maximum number of INTERRUPT IN endpoints supported per HID interface */
-#define USB_HOST_HID_INTERRUPT_IN_ENDPOINTS_NUMBER 1
+#define USB_HOST_HID_INTERRUPT_IN_ENDPOINTS_NUMBER 1U
 
 /* Number of total usage driver instances registered with HID client driver */
-#define USB_HOST_HID_USAGE_DRIVER_SUPPORT_NUMBER  1
+#define USB_HOST_HID_USAGE_DRIVER_SUPPORT_NUMBER  1U
 
 /* Maximum number PUSH items that can be saved in the Global item queue per field
  * per HID interface */
-#define USB_HID_GLOBAL_PUSH_POP_STACK_SIZE 1
+#define USB_HID_GLOBAL_PUSH_POP_STACK_SIZE        1U
 
 /* Maximum number Mouse buttons whose value will be captured per HID Mouse device */
 #define USB_HOST_HID_MOUSE_BUTTONS_NUMBER 5
