@@ -102,10 +102,41 @@ extern "C" {
 // Section: Middleware & Other Library Configuration
 // *****************************************************************************
 // *****************************************************************************
+// *****************************************************************************
+// *****************************************************************************
+// Section: USB Host Layer Configuration
+// *****************************************************************************
+// **************************************************************************
+
+/* Number of Endpoints used */
+#define DRV_USBHS_ENDPOINTS_NUMBER                          1U
+
+/* Total number of devices to be supported */
+#define USB_HOST_DEVICES_NUMBER                             3U
+
+/* Target peripheral list entries */
+#define  USB_HOST_TPL_ENTRIES                               3 
+
+/* Maximum number of configurations supported per device */
+#define USB_HOST_DEVICE_INTERFACES_NUMBER                   5    
+
+#define USB_HOST_CONTROLLERS_NUMBER                         1U
+
+#define USB_HOST_TRANSFERS_NUMBER                           10U
+
+/* Provides Host pipes number */
+#define USB_HOST_PIPES_NUMBER                               10U
+
+
+/* Number of HUB Function driver instances in the application */
+#define USB_HOST_HUB_SUPPORT                  true
+#define USB_HOST_HUB_INSTANCES_NUMBER         1
+#define USB_HOST_HUB_PORTS_NUMBER             4
+
 /*** USB Driver Configuration ***/
 
 /* Maximum USB driver instances */
-#define DRV_USBHS_INSTANCES_NUMBER                        1
+#define DRV_USBHS_INSTANCES_NUMBER                        1U
 
 /* Interrupt mode enabled */
 #define DRV_USBHS_INTERRUPT_MODE                          true
@@ -136,55 +167,24 @@ extern "C" {
 #define USB_ALIGN  CACHE_ALIGN  __ALIGNED(16)
 
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: USB Host Layer Configuration
-// *****************************************************************************
-// **************************************************************************
-
-/* Number of Endpoints used */
-#define DRV_USBHS_ENDPOINTS_NUMBER                          1
-
-/* Total number of devices to be supported */
-#define USB_HOST_DEVICES_NUMBER                             3 
-
-/* Target peripheral list entries */
-#define  USB_HOST_TPL_ENTRIES                               3 
-
-/* Maximum number of configurations supported per device */
-#define USB_HOST_DEVICE_INTERFACES_NUMBER                   5    
-
-#define USB_HOST_CONTROLLERS_NUMBER                         1
-
-#define USB_HOST_TRANSFERS_NUMBER                           10
-
-/* Provides Host pipes number */
-#define USB_HOST_PIPES_NUMBER                               10
-
-
-/* Number of HUB Function driver instances in the application */
-#define USB_HOST_HUB_SUPPORT                  true
-#define USB_HOST_HUB_INSTANCES_NUMBER         1
-#define USB_HOST_HUB_PORTS_NUMBER             4
-
 /* Number of CDC Function driver instances in the application */
-#define USB_HOST_CDC_INSTANCES_NUMBER         1
+#define USB_HOST_CDC_INSTANCES_NUMBER         1U
 
 /* Number of CDC Attach Listeners */ 
-#define USB_HOST_CDC_ATTACH_LISTENERS_NUMBER        1
+#define USB_HOST_CDC_ATTACH_LISTENERS_NUMBER        1U
 
 /* Number of HID Client driver instances in the application */
-#define USB_HOST_HID_INSTANCES_NUMBER        1
+#define USB_HOST_HID_INSTANCES_NUMBER        1U
 
 /* Maximum number of INTERRUPT IN endpoints supported per HID interface */
-#define USB_HOST_HID_INTERRUPT_IN_ENDPOINTS_NUMBER 1
+#define USB_HOST_HID_INTERRUPT_IN_ENDPOINTS_NUMBER 1U
 
 /* Number of total usage driver instances registered with HID client driver */
-#define USB_HOST_HID_USAGE_DRIVER_SUPPORT_NUMBER  1
+#define USB_HOST_HID_USAGE_DRIVER_SUPPORT_NUMBER  1U
 
 /* Maximum number PUSH items that can be saved in the Global item queue per field
  * per HID interface */
-#define USB_HID_GLOBAL_PUSH_POP_STACK_SIZE 1
+#define USB_HID_GLOBAL_PUSH_POP_STACK_SIZE        1U
 
 /* Maximum number Mouse buttons whose value will be captured per HID Mouse device */
 #define USB_HOST_HID_MOUSE_BUTTONS_NUMBER 5
