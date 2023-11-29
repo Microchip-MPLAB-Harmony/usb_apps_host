@@ -170,7 +170,7 @@ SYSTEM_OBJECTS sysObj;
  ******************************************************/
  
 
-const DRV_USBFSV1_INIT drvUSBInit =
+static const DRV_USBFSV1_INIT drvUSBInit =
 {
     /* Interrupt Source for USB module */
     .interruptSource = USB_OTHER_IRQn,
@@ -301,7 +301,7 @@ void SYS_Initialize ( void* data )
     /* MISRAC 2012 deviation block end */
 
     /* Initialize the USB Host layer */
-    sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );	
+    sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );    
 
     /* Initialize USB Driver */ 
     sysObj.drvUSBFSV1Object = DRV_USBFSV1_Initialize(DRV_USBFSV1_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);

@@ -204,7 +204,7 @@ typedef struct
     SYS_MODULE_OBJ  drvUsart0;
     SYS_MODULE_OBJ  usbHostObject0;
 
-	SYS_MODULE_OBJ  drvUSBFSV1Object;
+    SYS_MODULE_OBJ  drvUSBFSV1Object;
 
 
 } SYSTEM_OBJECTS;
