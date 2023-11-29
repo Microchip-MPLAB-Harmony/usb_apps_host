@@ -38,14 +38,22 @@
 #include "configuration.h"
 #include "definitions.h" 
 
-USB_HOST_HID_USAGE_DRIVER_INTERFACE usageDriverInterfaceMouse =
+/* MISRA C-2012 Rule 11.8 deviated:2 and 20.7 devaited:4 deviated below. Deviation record ID -  
+    H3_MISRAC_2012_R_11_8_DR_1, H3_MISRAC_2012_R_20_7_DR_1 */
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunknown-pragmas"
+#pragma coverity compliance block \
+(deviate:3 "MISRA C-2012 Rule 11.8" "H3_MISRAC_2012_R_11_1_DR_1" )\
+(deviate:4 "MISRA C-2012 Rule 20.7" "H3_MISRAC_2012_R_20_7_DR_1" )
+
+static USB_HOST_HID_USAGE_DRIVER_INTERFACE usageDriverInterfaceMouse =
 {
   .initialize = NULL,
   .deinitialize = NULL,
-  .usageDriverEventHandler = _USB_HOST_HID_MOUSE_EventHandler,
-  .usageDriverTask = _USB_HOST_HID_MOUSE_Task
+  .usageDriverEventHandler = USB_HOST_HID_MOUSE_EventHandler,
+  .usageDriverTask = USB_HOST_HID_MOUSE_Task
 };
-USB_HOST_HID_USAGE_DRIVER_TABLE_ENTRY usageDriverTableEntry[1] =
+static USB_HOST_HID_USAGE_DRIVER_TABLE_ENTRY usageDriverTableEntry[1] =
 {
     {
         .usage = (USB_HID_USAGE_PAGE_GENERIC_DESKTOP_CONTROLS << 16) | USB_HID_USAGE_MOUSE,
@@ -54,7 +62,7 @@ USB_HOST_HID_USAGE_DRIVER_TABLE_ENTRY usageDriverTableEntry[1] =
     },
 };
 
-USB_HOST_HID_INIT hidInitData =
+static USB_HOST_HID_INIT hidInitData =
 {
     .nUsageDriver = 1,
     .usageDriverTable = usageDriverTableEntry
@@ -62,14 +70,14 @@ USB_HOST_HID_INIT hidInitData =
 
 
 
-const USB_HOST_TPL_ENTRY USBTPList[1] = 
+static const USB_HOST_TPL_ENTRY USBTPList[1] = 
 {
     TPL_INTERFACE_CLASS(0x03,&hidInitData,  USB_HOST_HID_INTERFACE) ,
 
 
 };
 
-const USB_HOST_HCD hcdTable = 
+static const USB_HOST_HCD hcdTable = 
 {
     /* Index of the USB Driver used by the Host Layer */
     .drvIndex = DRV_USBHS_INDEX_0,
@@ -85,4 +93,6 @@ const USB_HOST_INIT usbHostInitData =
     .tplList = (USB_HOST_TPL_ENTRY *)USBTPList,
     .hostControllerDrivers = (USB_HOST_HCD *)&hcdTable    
 };
+/* MISRAC 2012 deviation block end */
+
 // </editor-fold>
