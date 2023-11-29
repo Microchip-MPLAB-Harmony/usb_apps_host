@@ -38,15 +38,23 @@
 #include "configuration.h"
 #include "definitions.h" 
 
+/* MISRA C-2012 Rule 11.8 deviated:2 and 20.7 devaited:4 deviated below. Deviation record ID -  
+    H3_MISRAC_2012_R_11_8_DR_1, H3_MISRAC_2012_R_20_7_DR_1 */
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunknown-pragmas"
+#pragma coverity compliance block \
+(deviate:3 "MISRA C-2012 Rule 11.8" "H3_MISRAC_2012_R_11_1_DR_1" )\
+(deviate:4 "MISRA C-2012 Rule 20.7" "H3_MISRAC_2012_R_20_7_DR_1" )
 
-const USB_HOST_TPL_ENTRY USBTPList[1] = 
+
+static const USB_HOST_TPL_ENTRY USBTPList[1] = 
 {
     TPL_INTERFACE_CLASS(0x02, NULL,  USB_HOST_CDC_INTERFACE),
 
 
 };
 
-const USB_HOST_HCD hcdTable = 
+static const USB_HOST_HCD hcdTable = 
 {
     /* Index of the USB Driver used by the Host Layer */
     .drvIndex = DRV_USB_OHCI_INDEX_0,
@@ -62,4 +70,6 @@ const USB_HOST_INIT usbHostInitData =
     .tplList = (USB_HOST_TPL_ENTRY *)USBTPList,
     .hostControllerDrivers = (USB_HOST_HCD *)&hcdTable    
 };
+/* MISRAC 2012 deviation block end */
+
 // </editor-fold>
