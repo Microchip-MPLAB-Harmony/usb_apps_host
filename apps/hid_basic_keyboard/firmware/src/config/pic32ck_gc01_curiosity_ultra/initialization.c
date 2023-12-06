@@ -533,9 +533,9 @@ void SYS_Initialize ( void* data )
 
     EVSYS_Initialize();
 
-    PM_Initialize();
-
     SERCOM5_USART_Initialize();
+
+    PM_Initialize();
 
     RTC_Initialize();
 
