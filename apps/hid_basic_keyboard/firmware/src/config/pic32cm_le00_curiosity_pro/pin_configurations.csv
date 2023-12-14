@@ -48,7 +48,7 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,D
 57,PC17,,Available,,,,,,NORMAL
 58,PC18,,Available,,,,,,NORMAL
 59,PC19,LED1,LED_AL,Digital,Out,High,,,NORMAL
-60,PC20,SWITCH,SWITCH_AL,Digital,In,n/a,Yes,No,NORMAL
+60,PC20,SW0,SWITCH_AL,Digital,In,n/a,Yes,No,NORMAL
 61,PC21,VBUS_AL,VBUS_AL,Digital,Out,High,,,NORMAL
 64,PB16,,Available,,,,,,NORMAL
 65,PB17,,Available,,,,,,NORMAL
@@ -56,7 +56,7 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,D
 67,PB19,,Available,,,,,,NORMAL
 68,PB20,,SERCOM3_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
 69,PB21,,SERCOM3_PAD1,Digital,High Impedance,n/a,No,No,NORMAL
-70,PA20,VBUS_AH,VBUS_AH,Digital,Out,Low,,,NORMAL
+70,PA20,,Available,,,,,,NORMAL
 71,PA21,,Available,,,,,,NORMAL
 72,PA22,,Available,,,,,,NORMAL
 73,PA23,,Available,,,,,,NORMAL
@@ -69,7 +69,7 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,D
 82,PC24,,Available,,,,,,NORMAL
 83,PC25,,Available,,,,,,NORMAL
 84,PC26,,Available,,,,,,NORMAL
-85,PC27,LED2,LED_AL,Digital,Out,High,,,NORMAL
+85,PC27,,Available,,Out,,,,NORMAL
 86,PC28,SW1,SWITCH_AL,Digital,In,n/a,Yes,No,NORMAL
 93,PA30,,Available,,,,,,NORMAL
 94,PA31,,Available,,,,,,NORMAL

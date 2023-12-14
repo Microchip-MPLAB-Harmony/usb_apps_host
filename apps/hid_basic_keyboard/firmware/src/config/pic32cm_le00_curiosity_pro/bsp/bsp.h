@@ -69,15 +69,11 @@
 #define LED1_Toggle()     (PORT_REGS->GROUP[2].PORT_OUTTGL = 1UL << 19)
 #define LED1_On()         (PORT_REGS->GROUP[2].PORT_OUTCLR = 1UL << 19)
 #define LED1_Off()        (PORT_REGS->GROUP[2].PORT_OUTSET = 1UL << 19)
-/*** LED Macros for LED2 ***/
-#define LED2_Toggle()     (PORT_REGS->GROUP[2].PORT_OUTTGL = 1UL << 27)
-#define LED2_On()         (PORT_REGS->GROUP[2].PORT_OUTCLR = 1UL << 27)
-#define LED2_Off()        (PORT_REGS->GROUP[2].PORT_OUTSET = 1UL << 27)
 
-/*** SWITCH Macros for SWITCH ***/
-#define SWITCH_Get()     ((PORT_REGS->GROUP[2].PORT_IN >> 20) & 0x01)
-#define SWITCH_STATE_PRESSED   0
-#define SWITCH_STATE_RELEASED  1
+/*** SWITCH Macros for SW0 ***/
+#define SW0_Get()     ((PORT_REGS->GROUP[2].PORT_IN >> 20) & 0x01)
+#define SW0_STATE_PRESSED   0
+#define SW0_STATE_RELEASED  1
 /*** SWITCH Macros for SW1 ***/
 #define SW1_Get()     ((PORT_REGS->GROUP[2].PORT_IN >> 28) & 0x01)
 #define SW1_STATE_PRESSED   0
@@ -86,9 +82,6 @@
 /*** VBUS Macros for VBUS_AL ***/
 #define VBUS_AL_PowerEnable()         (PORT_REGS->GROUP[2].PORT_OUTCLR = 1UL << 21)
 #define VBUS_AL_PowerDisable()        (PORT_REGS->GROUP[2].PORT_OUTSET = 1UL << 21)
-/*** VBUS Macros for VBUS_AH ***/
-#define VBUS_AH_PowerEnable()         (PORT_REGS->GROUP[0].PORT_OUTSET = 1UL << 20)
-#define VBUS_AH_PowerDisable()        (PORT_REGS->GROUP[0].PORT_OUTCLR = 1UL << 20)
 
 
 

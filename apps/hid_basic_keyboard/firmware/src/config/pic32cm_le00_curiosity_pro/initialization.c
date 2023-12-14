@@ -188,12 +188,12 @@ static void F_DRV_USB_VBUSPowerEnable(uint8_t port, bool enable)
     if (enable == true)
     {
         /* Enable the VBUS */
-        VBUS_AH_PowerEnable();
+        VBUS_AL_PowerEnable();
     }
     else
     {
         /* Disable the VBUS */
-        VBUS_AH_PowerDisable();
+        VBUS_AL_PowerDisable();
     }
 }
 static const DRV_USBFSV1_INIT drvUSBInit =
