@@ -1642,7 +1642,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drv_usbhs_v1&gt;
   &lt;drv_usbhs_v1 dnOrder=&quot;0&quot; id=&quot;USB_DRV_HOST_EHCI_PORTS_SELECTION&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;0x07&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;0x06&quot;/&gt;
     &lt;/Values&gt;
   &lt;/drv_usbhs_v1&gt;
 &lt;/drv_usbhs_v1&gt;
@@ -1653,7 +1653,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drv_usbhs_v1&gt;
   &lt;drv_usbhs_v1 dnOrder=&quot;0&quot; id=&quot;USB_DRV_HOST_OHCI_PORTS_SELECTION&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;0x07&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;0x06&quot;/&gt;
     &lt;/Values&gt;
   &lt;/drv_usbhs_v1&gt;
 &lt;/drv_usbhs_v1&gt;
@@ -2878,7 +2878,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\initialization.c</file>
-         <hash>91fe37815b7a1fccb0ee5aa82dd6fbac7a10496bb7feb530ad6566b36473daf5</hash>
+         <hash>cc0b1f8a3060c0fa5a60c31e82c775a3ed4b5c7f859239ebc97c0015034dd91d</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\isc.h</file>
