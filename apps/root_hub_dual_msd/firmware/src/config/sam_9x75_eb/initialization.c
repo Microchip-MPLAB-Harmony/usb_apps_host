@@ -115,7 +115,7 @@ static DRV_USB_EHCI_INIT drvUSBEHCIInit =
     .usbID = ((uhphs_registers_t*)UHPHS_EHCI_ADDR),
     
     /* Ports Selection */ 
-    .bmPortSelect = 0x07,
+    .bmPortSelect = 0x06,
 
     /* USB Host Power Enable. USB Driver uses this function to Enable the VBUS */
     .portPowerEnable = DRV_USB_VBUSPowerEnable,
@@ -135,7 +135,7 @@ static DRV_USB_OHCI_INIT drvUSBOHCIInit =
     .usbID = ((UhpOhci*)UHPHS_OHCI_ADDR),
 
      /* Ports Selection */ 
-    .bmPortSelect = 0x07,
+    .bmPortSelect = 0x06,
     
     /* USB Host Power Enable. USB Driver uses this function to Enable the VBUS */
     .portPowerEnable = DRV_USB_VBUSPowerEnable,
@@ -359,12 +359,12 @@ void SYS_Initialize ( void* data )
     
     /* MISRAC 2012 deviation block end */
 
+    /* Initialize the USB Host layer */
+    sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );    
+
      /* Initialize USB Driver */ 
     sysObj.drvUSBEHCIObject = DRV_USB_EHCI_Initialize (DRV_USB_EHCI_INDEX_0, (SYS_MODULE_INIT *) &drvUSBEHCIInit);
     sysObj.drvUSBOHCIObject = DRV_USB_OHCI_Initialize (DRV_USB_OHCI_INDEX_0, (SYS_MODULE_INIT *) &drvUSBOHCIInit);
-
-    /* Initialize the USB Host layer */
-    sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );    
 
     /*** File System Service Initialization Code ***/
     (void) SYS_FS_Initialize( (const void *) sysFSInit );
