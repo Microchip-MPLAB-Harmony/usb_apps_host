@@ -4864,7 +4864,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drv_usbhs_v1&gt;
   &lt;drv_usbhs_v1 dnOrder=&quot;0&quot; id=&quot;USB_DRV_HOST_EHCI_PORTS_SELECTION&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;0x07&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;0x06&quot;/&gt;
     &lt;/Values&gt;
   &lt;/drv_usbhs_v1&gt;
 &lt;/drv_usbhs_v1&gt;
@@ -4893,7 +4893,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drv_usbhs_v1&gt;
   &lt;drv_usbhs_v1 dnOrder=&quot;0&quot; id=&quot;USB_DRV_HOST_OHCI_PORTS_SELECTION&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;0x07&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;0x06&quot;/&gt;
     &lt;/Values&gt;
   &lt;/drv_usbhs_v1&gt;
 &lt;/drv_usbhs_v1&gt;
@@ -8307,7 +8307,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\definitions.h</file>
-         <hash>6357f0d645d47ae7843e7c2896c07c2bb4499c16c20ce47712ad9fc4366b2138</hash>
+         <hash>f3f3460e264b26e5539513b0639437e7c770a281668b63daf393a83ae7491238</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\peripheral\mmu\plib_mmu.c</file>
@@ -8459,7 +8459,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\initialization.c</file>
-         <hash>edb6f71fd11655bc87660649458055ad7cddbd16c20f4176a68554157e08b0c1</hash>
+         <hash>e3491fbba4157b6567aa7973f6ce718ac6ee1b9250e4e77d38f3795105d46a8f</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\isc.h</file>
