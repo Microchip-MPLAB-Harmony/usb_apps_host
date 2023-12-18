@@ -5475,7 +5475,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="drv_usbhs_v1" name="USB_DRV_HOST_EHCI_PORTS_SELECTION"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drv_usbhs_v1&gt;
   &lt;drv_usbhs_v1 dnOrder=&quot;0&quot; id=&quot;USB_DRV_HOST_EHCI_PORTS_SELECTION&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;0x06&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/drv_usbhs_v1&gt;
 &lt;/drv_usbhs_v1&gt;
 </value>
@@ -5502,7 +5504,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="drv_usbhs_v1" name="USB_DRV_HOST_OHCI_PORTS_SELECTION"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drv_usbhs_v1&gt;
   &lt;drv_usbhs_v1 dnOrder=&quot;0&quot; id=&quot;USB_DRV_HOST_OHCI_PORTS_SELECTION&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;0x06&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/drv_usbhs_v1&gt;
 &lt;/drv_usbhs_v1&gt;
 </value>
@@ -7404,12 +7408,12 @@
          <hash>541f31582d9304249c253b266ae5a4b6b924196fc5b5cfede5b88fadd4779f90</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_9x75_eb\usb\usb_hub.h</file>
-         <hash>733473045c756b6184188c2cf000d8f187f530a9e048dabefaecee347c05e4db</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_9x75_eb\usb\src\usb_host.c</file>
          <hash>5e3274284da6c42d8e7bd006531e400a5a7f212da086baea5c2d3697243816e1</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_9x75_eb\usb\usb_hub.h</file>
+         <hash>733473045c756b6184188c2cf000d8f187f530a9e048dabefaecee347c05e4db</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\user.h</file>
@@ -7945,7 +7949,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\definitions.h</file>
-         <hash>915ef63593a637e50ce0b9757ad81019f1051ea88eaf9c9ad45e9ea6b7bf1210</hash>
+         <hash>7dcff66dcaf741dec4e6b28d932997120714523f33ad9fcc2e406aa84dd3758d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\peripheral\mmu\plib_mmu.c</file>
@@ -8077,7 +8081,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\initialization.c</file>
-         <hash>0355cf8b8039f8a3298d0f18c0df240c47d2c5c71cb04bfa487f0bc11e57fd41</hash>
+         <hash>475b664f80343de71611ff74c6bbe60ab1d43686ace53c47a53a058b80b22731</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\isc.h</file>
@@ -8105,7 +8109,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\configuration.h</file>
-         <hash>7f4b9be24c4279772f2b48368d4393cd469bc44e5934c7485088ecf7f6d963ed</hash>
+         <hash>67f93c5c56e2404c7fc26279543b337c20e4ab659e30b238bcaac8674c6f83d2</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\shdwc.h</file>
@@ -8173,7 +8177,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\tasks.c</file>
-         <hash>8afc96c365d4778505b9e7b9b2819984bb538e5fe19c555e06171d0854b04bad</hash>
+         <hash>1e0ce44cb20e6b7c2bc86ada2e3c5e10eb1249d25965a75a5255535b3c43da77</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X75_DFP\instance\udphs.h</file>
