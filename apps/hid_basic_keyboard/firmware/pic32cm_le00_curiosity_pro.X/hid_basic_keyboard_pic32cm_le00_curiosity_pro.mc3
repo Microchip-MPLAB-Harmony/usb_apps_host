@@ -67,7 +67,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.0"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -3743,7 +3743,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\bsp\bsp.h</file>
-         <hash>525d44e48cfe421619afd641e06a64877399739cc9b3846e4a3b94cc511aa304</hash>
+         <hash>bf6b341fc316ad7abbefc61ae70bfcdf61e8d9dd8984e559d7e8efb851148d3e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\configuration.h</file>
@@ -3827,11 +3827,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\interrupts.c</file>
-         <hash>2bae17377aaaee415a6d422e5ec66c3a796564c15e73c05bebbadcb567c341cb</hash>
+         <hash>8c33d83532855e8191e412d86f649476cd464e2b9ac744f87bb768dde3ec8dc5</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\interrupts.h</file>
-         <hash>d6d61ecd68bf1ac1e2ea71592addd965eeffa28e81640b952447603b93b733c3</hash>
+         <hash>778e4688c733031a4d74b1b1e57c023ca7a74ec85dec1e6d12ee5749c5ef4ddf</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\libc_syscalls.c</file>
@@ -3851,11 +3851,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\peripheral\clock\plib_clock.c</file>
-         <hash>8fb52666f7253811c1f54e3e6cd26183ca45ecde89eb392282dc4dbed5ef83e8</hash>
+         <hash>fdc213b9dd3b187ee7a3cc6297266375cdbb288c31a8e4f7d347b6052fcca634</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\peripheral\clock\plib_clock.h</file>
-         <hash>721136c42046a932de696b169a84343465a44ea204bae3fb8c620a7778dcbf57</hash>
+         <hash>1a671eda1e5221757651ef842e8339c1002a3359e4fd674b0b5431599060b8a3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\peripheral\evsys\plib_evsys.c</file>
@@ -3867,7 +3867,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\peripheral\nvic\plib_nvic.c</file>
-         <hash>4e321d4ae67bd1fb3442108767be62c49769f6f69e3ffa07e4596adc417e0437</hash>
+         <hash>a494f3cee5cbe46400d55a9fb4a1d70ebfe2c771973db79b99cdb44adfc5dce0</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\peripheral\nvic\plib_nvic.h</file>
@@ -3923,7 +3923,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\pin_configurations.csv</file>
-         <hash>b4ed0301b8880df0e833702c3d2b15a1b02dbf93505895e80f2ae4953ef8dbff</hash>
+         <hash>b743edee134a172618da454fedb8fc01ed5bac8e5c67493c2ad0f8d8d8fd208b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_curiosity_pro\startup_xc32.c</file>

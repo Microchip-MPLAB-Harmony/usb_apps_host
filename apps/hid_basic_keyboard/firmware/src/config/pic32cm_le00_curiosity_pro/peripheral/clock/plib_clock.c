@@ -44,6 +44,16 @@
 
 
 
+typedef struct
+{
+    OSC32KCTRL_CFD_CALLBACK   callback;
+    uintptr_t        context;
+} OSC32KCTRL_OBJECT;
+
+/* Reference Object created for the OSCCTRL */
+volatile static OSC32KCTRL_OBJECT osc32kctrlObj;
+
+
 
 static void OSCCTRL_Initialize(void)
 {
@@ -68,6 +78,9 @@ static void OSC32KCTRL_Initialize(void)
 
     /* Configure 32K External Oscillator */
     OSC32KCTRL_REGS->OSC32KCTRL_XOSC32K = OSC32KCTRL_XOSC32K_STARTUP(0) | OSC32KCTRL_XOSC32K_ENABLE_Msk ;
+
+    /* Enable clock failure detection */
+    OSC32KCTRL_REGS->OSC32KCTRL_CFDCTRL |= OSC32KCTRL_CFDCTRL_CFDEN_Msk  ;
 
 
     while(!((OSC32KCTRL_REGS->OSC32KCTRL_STATUS & OSC32KCTRL_STATUS_XOSC32KRDY_Msk) == OSC32KCTRL_STATUS_XOSC32KRDY_Msk))
@@ -176,7 +189,34 @@ void CLOCK_Initialize (void)
     }
 
 
+    /* Enabling the Clock Failure Interrupt */
+    OSC32KCTRL_REGS->OSC32KCTRL_INTENSET = OSC32KCTRL_INTENSET_CLKFAIL_Msk;
+
 }
 
 
+
+void OSC32KCTRL_CallbackRegister (OSC32KCTRL_CFD_CALLBACK callback, uintptr_t context)
+{
+    osc32kctrlObj.callback = callback;
+    osc32kctrlObj.context = context;
+}
+
+void __attribute__((used)) OSC32KCTRL_InterruptHandler(void)
+{
+    uintptr_t context_var;
+
+    /* Checking for the Clock Failure status */
+    if ((OSC32KCTRL_REGS->OSC32KCTRL_STATUS & OSC32KCTRL_STATUS_CLKFAIL_Msk) == OSC32KCTRL_STATUS_CLKFAIL_Msk)
+    {
+        /* Clearing the Clock Fail Interrupt */
+        OSC32KCTRL_REGS->OSC32KCTRL_INTFLAG = OSC32KCTRL_INTFLAG_CLKFAIL_Msk;
+
+        if(osc32kctrlObj.callback != NULL)
+        {
+            context_var = osc32kctrlObj.context;
+            osc32kctrlObj.callback(context_var);
+        }
+    }
+}
 
