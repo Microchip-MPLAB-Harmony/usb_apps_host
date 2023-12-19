@@ -354,11 +354,11 @@ void SYS_Initialize ( void* data )
     
     /* MISRAC 2012 deviation block end */
 
-    /* Initialize the USB Host layer */
-    sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );    
-
     /* Initialize USB Driver */ 
     sysObj.drvUSBHSObject = DRV_USBHS_Initialize(DRV_USBHS_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);    
+
+    /* Initialize the USB Host layer */
+    sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );    
 
 
     /* MISRAC 2012 deviation block end */
