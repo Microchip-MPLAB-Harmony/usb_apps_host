@@ -602,6 +602,8 @@ void APP_USBHostHIDMouseEventHandler(USB_HOST_HID_MOUSE_HANDLE handle,
         case USB_HOST_HID_MOUSE_EVENT_ATTACH:
             appHIDData.handle = handle;
             appHIDData.state =  APP_HID_STATE_DEVICE_ATTACHED;
+            /* Switch on LED  */
+            LED1_On();
             break;
 
         case USB_HOST_HID_MOUSE_EVENT_DETACH:
