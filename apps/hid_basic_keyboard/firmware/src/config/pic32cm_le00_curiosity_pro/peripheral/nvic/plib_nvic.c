@@ -57,8 +57,6 @@ void NVIC_Initialize( void )
 
     /* Enable the interrupt sources and configure the priorities as configured
      * from within the "Interrupt Manager" of MHC. */
-    NVIC_SetPriority(OSC32KCTRL_IRQn, 3);
-    NVIC_EnableIRQ(OSC32KCTRL_IRQn);
     NVIC_SetPriority(USB_IRQn, 3);
     NVIC_EnableIRQ(USB_IRQn);
     NVIC_SetPriority(SERCOM3_0_IRQn, 3);
