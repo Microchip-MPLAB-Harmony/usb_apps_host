@@ -16,7 +16,7 @@ Following table provides number of USB Host demo applications available for<br /
 
 |Development Kits|MPLAB X applications|
 |----------------|--------------------|
-|[PIC32CX SG41 Curiosity Ultra Board](https://www.microchip.com/en-us/development-tool/ev06x38a)|8|
+|[PIC32CX SG41 Curiosity Ultra Board](https://www.microchip.com/en-us/development-tool/ev06x38a)|6|
 |[PIC32CK-GC01 Curiosity Ultra board](https://www.microchip.com/en-us/development-tool/ea23j82a)|8|
 |[PIC32CZ-CA80 Curiosity Ultra board](https://www.microchip.com/en-us/development-tool/ea61x20a)|9|
 |[PIC32CM LE00 Curiosity Pro Evaluation Kit](https://www.microchip.com/en-us/development-tool/ev80p12a)|3|

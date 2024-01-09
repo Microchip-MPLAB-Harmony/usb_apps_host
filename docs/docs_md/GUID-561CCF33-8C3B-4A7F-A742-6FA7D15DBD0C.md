@@ -38,6 +38,7 @@ Following table gives the details of project configurations, target device used,
 |sam\_g55\_xpro\_freertos.X|MPLABX|ATSAMG55J19|SAMG55 Xplained Pro Board|
 |pic32cz\_ca80\_curiosity\_ultra.X|MPLABX|PIC32CZ8110CA80208|PIC32CZ Curiosity Development Board|
 |pic32ck\_gc01\_curiosity\_ultra\_freertos.X|MPLABX|PIC32CK2051GC01144|PIC32CK GC Curiosity Ultra Development Board|
+|pic32cx\_sg41\_curiosity\_ultra.X|MPLABX|PIC32CX1025SG41128|PIC32CX SG41 Curiosity Ultra Evaluation Board|
 
 ## **Configuring the Hardware**
 
@@ -47,6 +48,14 @@ Following table gives the details of project configurations, target device used,
 -   Connect the USB Keyboard to the connector \(J102\) using a USB Type-A Female to micro-B male cable \(This cable is not included in the kit\).
 -   The demonstration uses the PKOB4 Serial Interface to transfer messages on a PC.
 -   LED0 indicates a Device Connection. \(Attached device has been successfully enumerated and configured\).
+-   The LED on the keyboard toggles on Keyboard "CapsLock" press event.
+
+[**__PIC32CK GC Curiosity Ultra Developmen__**](https://www.microchip.com/en-us/development-tool/EV06X38A)
+
+-   A commercially available USB Keyboard is required to run this demonstration application.
+-   Connect the USB Keyboard to the connector \(J200\) using a USB Type-A Female to micro-B male cable \(This cable is not included in the kit\).
+-   The demonstration uses the PKOB4 Serial Interface to transfer messages on a PC.
+-   LED1 indicates a Device Connection. \(Attached device has been successfully enumerated and configured\).
 -   The LED on the keyboard toggles on Keyboard "CapsLock" press event.
 
 [**PIC32CK GC Curiosity Ultra Development Board**](https://www.microchip.com/en-us/development-tool/ea23j82a)
