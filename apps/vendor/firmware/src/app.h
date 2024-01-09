@@ -33,7 +33,7 @@
 #include <stdlib.h>
 #include "configuration.h"
 #include "usb/usb_host_generic.h"
-#include "config/sam_e54_xpro/system/time/sys_time.h"
+#include "system/time/sys_time.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
