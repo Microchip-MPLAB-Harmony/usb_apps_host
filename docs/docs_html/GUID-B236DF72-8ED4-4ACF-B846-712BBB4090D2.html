@@ -311,7 +311,10 @@ License</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-
             the board to connect the USB Device to the the USB Host. A USB micro AB to type A USB
             Host receptacle converter will be needed to connect the device.</li>
           <li dir="lro" class="- topic/li li" id="GUID-B236DF72-8ED4-4ACF-B846-712BBB4090D2__GUID-5474A5FA-D26F-4CE3-8C93-2F22C63B5002" data-ofbid="GUID-B236DF72-8ED4-4ACF-B846-712BBB4090D2__GUID-5474A5FA-D26F-4CE3-8C93-2F22C63B5002">LED0 on the demonstration
-            board will illuminate to indicate completion of the file transfer.</li>
+            board will illuminate to indicate completion of the file transfer.<p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Note:</strong> Note:
+              An unexpected behavior may be observed if the attached USB device draws an excess
+              amount of current from the board and the Vdd voltage drops below 2.7 volts. The demo
+              has the wait states (NVM_CTRLB &lt;RWS[3:0]&gt;) value set to '1'.</p></li>
         </ul><strong class="+ topic/ph hi-d/b ph b"><a class="- topic/xref xref" href="https://www.microchip.com/developmenttools/productdetails/atsame54-xpro" target="_blank" rel="external noopener">SAME54 Xplained Pro Board</a></strong><ul class="- topic/ul ul">
           <li dir="lro" class="- topic/li li" id="GUID-B236DF72-8ED4-4ACF-B846-712BBB4090D2__GUID-DCCF5DA3-E2EC-4B4D-B4CD-862BD48B587D" data-ofbid="GUID-B236DF72-8ED4-4ACF-B846-712BBB4090D2__GUID-DCCF5DA3-E2EC-4B4D-B4CD-862BD48B587D">Connect the Debug USB port on
             the board to the computer using a micro USB cable</li>

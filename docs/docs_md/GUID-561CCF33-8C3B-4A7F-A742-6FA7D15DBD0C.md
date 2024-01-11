@@ -89,6 +89,9 @@ Following table gives the details of project configurations, target device used,
     -   The demonstration uses the EDBG Serial Interface to transfer demonstration application messages on a PC.
     -   LED0 indicates a Device Connection. \(Attached device has been successfully enumerated and configured\).
     -   The LED on the keyboard toggles on Keyboard "CapsLock" press event.
+
+        **Note:** Note: An unexpected behavior<br /> may be observed if the attached USB device draws an excess amount of current<br /> from the board and the Vdd voltage drops below 2.7 volts. The demo has the wait<br /> states \(NVM\_CTRLB <RWS\[3:0\]\>\) value set to '1'.
+
     **[SAME54 Xplained Pro Board](https://www.microchip.com/developmenttools/productdetails/atsame54-xpro)**
 
     -   A commercially available USB Keyboard is required to run this demonstration application.
