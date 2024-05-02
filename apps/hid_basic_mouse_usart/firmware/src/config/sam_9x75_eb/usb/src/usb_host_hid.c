@@ -1904,7 +1904,7 @@ USB_HOST_HID_RESULT USB_HOST_HID_IdleTimeGet
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 4.12, and 21.3 deviated below. Deviation record ID -  
-    H3_MISRAC_2012_R_4_12_DR_1, H3_MISRAC_2012_R_21_3_DR_1 */
+    H3_USB_MISRAC_2012_R_4_12_DR_1, H3_USB_MISRAC_2012_R_21_3_DR_1 */
 /* Function:
     USB_HOST_HID_RESULT F_USB_HOST_HID_ReportDescriptorGet
     (
@@ -2017,7 +2017,7 @@ USB_HOST_HID_RESULT F_USB_HOST_HID_ReportDescriptorGet
 /* MISRAC 2012 deviation block end */
 // ******************************************************************************
 /* MISRA C-2012 Rule 11.3, and 11.8 deviated below. Deviation record ID -  
-    H3_MISRAC_2012_R_11_3_DR_1, H3_MISRAC_2012_R_11_8_DR_1 */
+    H3_USB_MISRAC_2012_R_11_3_DR_1, H3_USB_MISRAC_2012_R_11_8_DR_1 */
 /* Function:
     USB_HOST_HID_RESULT USB_HOST_HID_ReportSend
     (
