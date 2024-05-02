@@ -116,7 +116,7 @@
 
 #define USB_HOST_DeviceIsRootHub(deviceObjHandle)  ((gUSBHostDeviceList[USB_HOST_DEVICE_INDEX(deviceObjHandle)].deviceAddress == USB_HOST_ROOT_HUB_ADDRESS) ? true : false)
 
-/* MISRA C-2012 Rule 8.6 deviated:1 Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
+/* MISRA C-2012 Rule 8.6 deviated:1 Deviation record ID -  H3_USB_MISRAC_2012_R_8_6_DR_1 */
 
  bool   L_IS_PARENT_ROOT_HUB( USB_HOST_DEVICE_OBJ_HANDLE  parentDeviceIdentifier );
 
@@ -152,7 +152,7 @@ typedef void *  USB_HOST_IRP_CALLBACK;
 #endif 
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 5.2 deviated:15 Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
+/* MISRA C-2012 Rule 5.2 deviated:15 Deviation record ID -  H3_USB_MISRAC_2012_R_5_2_DR_1 */
 
 /*  USB Host Layer Device State Enumeration
 
