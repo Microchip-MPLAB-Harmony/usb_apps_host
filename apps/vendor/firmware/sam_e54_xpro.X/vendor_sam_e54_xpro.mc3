@@ -1,4 +1,4 @@
-<config configName="sam_e54_xpro" projectName="vendor_sam_e54_xpro" configVersion="1.1" device="ATSAME54P20A" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="sam_e54_xpro" projectName="vendor_sam_e54_xpro" configVersion="1.1" device="ATSAME54P20A" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -63,7 +63,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.0"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -8173,23 +8173,23 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\driver\usb\usbfsv1\drv_usbfsv1.h</file>
-         <hash>82d9d2035acbfd1d810e7b6a8a98f26200e3adeb32346e1a2364d5200749ba40</hash>
+         <hash>fb20628f02e63a59b444e3e961160de118146a508a6cdbdfabcd5719d742f06f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\driver\usb\usbfsv1\src\drv_usbfsv1.c</file>
-         <hash>a9970e50fdc89995a77dd35faa91ef95372b1ff131dbc0be4384b8679c7b887e</hash>
+         <hash>2bb54dc91524d0ac7bb2b36649d1163076c89bdecee169368772d66eec18df0b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_host.c</file>
-         <hash>0cc698c9f88d33266fe3675addc36f96828b237556fcc26f52ff782984fc9790</hash>
+         <hash>458063c6278240b6515b176ea672b146dd3658327771cdf3584f046bd9fcc606</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_local.h</file>
-         <hash>89b541d7200c57301a25795fea32890e2c5f5a26c2cf682e6708a612eeb7001b</hash>
+         <hash>0834ca7f0d9b69a800638f56d7a01e445a0addcc84d97e2597309dfbb2861cb4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_variant_mapping.h</file>
-         <hash>c1299917c659f961d519b094264a06647030cb5c77db8511e7ab6311b6ea95d8</hash>
+         <hash>a1a268b8d64086c4d914372bb14d845f688f2d5e6de22b146cf9637516f9e2ee</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\exceptions.c</file>
@@ -8241,7 +8241,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\evsys\plib_evsys.c</file>
-         <hash>b2e1a8004049e687fc5544133f3346f743ced50cdaf860c8e3c7f58df3cc163f</hash>
+         <hash>171913270aa095f1e8ff9192995129ff7bab22e5c793c4223f9046802e69d1e6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\evsys\plib_evsys.h</file>
@@ -8345,7 +8345,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\system\debug\sys_debug.h</file>
-         <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
+         <hash>4162d9e1fab93b8b33f6c8a24726f5dc287ea05c31e3ab984c3c920c725d0882</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\system\int\src\sys_int.c</file>
@@ -8401,7 +8401,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\src\usb_host.c</file>
-         <hash>5e3274284da6c42d8e7bd006531e400a5a7f212da086baea5c2d3697243816e1</hash>
+         <hash>3a8c8e7510577dcac7db2c22fba75dda9af24362f5a2a170c095faef88ffcfd5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\src\usb_host_generic.c</file>
@@ -8417,23 +8417,23 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\src\usb_host_local.h</file>
-         <hash>bfe0fbac566e72c15e890d8e91ad4332d697e53db841526c8c5c43a7805d4cf2</hash>
+         <hash>aa9e60691421c11748a9659e71b4bce4b24f2aeb9cecd52f850b8868356584b5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\usb_chapter_9.h</file>
-         <hash>e5e4a9cd868fa4b90113a0bd3ae76d176c7d21d791e7ea9891f1bf9d981da54c</hash>
+         <hash>3d61e683d79bb62694e1133023063da31853e924dd3a2f27abda159876cd6b9e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\usb_common.h</file>
-         <hash>8e8a0115a555330065b8569621173186a2a2815758125026b02596e0d0278c56</hash>
+         <hash>62970f187809ea73ea9bc418b9101ccc0ab77a47cb11149c778e06a49a83bb51</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\usb_host.h</file>
-         <hash>1fd7a53f3b04f3a63013a3350d1f6b1c15aa9f162e9c5acf31b111c27987ad89</hash>
+         <hash>56c248da571d1a46c5d6b5b34e28a978b30b40ee1fb04fa4f2efdcb8a5a1039b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\usb_host_client_driver.h</file>
-         <hash>38b5d7e5fee9b09db48b48b52d9b2773f458b09dc2d659c703a075fc90f32490</hash>
+         <hash>274e72a8e34ccc3012d2bb4a100cec9d54ffd296091b35c0f7ec45b528cb34ac</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\usb_host_generic.h</file>
@@ -8445,11 +8445,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb\usb_hub.h</file>
-         <hash>733473045c756b6184188c2cf000d8f187f530a9e048dabefaecee347c05e4db</hash>
+         <hash>66a9362619640002d6c8fe6335e044dd7c9cd4fe834d1b2487aa172a08af644b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\usb_host_init_data.c</file>
-         <hash>745b63e17d9ac51a796b2b99f8f38a097022a6f9fc4c2c75be5cc8caa0b385e1</hash>
+         <hash>f64efdf5f89ef96ce203a6dc3fd4a43daa7024f53264f5d392b4bf7cb8f68e6f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\user.h</file>
