@@ -1,4 +1,4 @@
-<config configName="sam_a5d27_som1_ek_freertos" projectName="hid_basic_mouse_usart_sam_a5d27_som1_ek_freertos" configVersion="1.1" device="ATSAMA5D27CD1G" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="sam_a5d27_som1_ek_freertos" projectName="hid_basic_mouse_usart_sam_a5d27_som1_ek_freertos" configVersion="1.1" device="ATSAMA5D27CD1G" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -63,7 +63,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.0"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -5985,7 +5985,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\configuration.h</file>
-         <hash>e76fc2cd092d8eddabf45cd328ac48faf849f3eece4a0a24fa75637c72b9e618</hash>
+         <hash>018444869c779c27470da3d20a12f834d13dee1dd6f62843c26caa57479f77b7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\cstartup.S</file>
@@ -5997,7 +5997,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\definitions.h</file>
-         <hash>3a4f0628db9d9a339041bd911f766c8b1d37bbee2382329fff1c1530cdcba100</hash>
+         <hash>e4d24f6fb7f3a062c999dd678a8da8a03ee9df6b3f2ce39bd38372766cdb8143</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\device.h</file>
@@ -6041,31 +6041,31 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\driver\usb\uhp\drv_usb_ehci.h</file>
-         <hash>c5563e8e5d3749798351c300289d4e4269349361fc856df37de63f5a65bc6ee0</hash>
+         <hash>cd4ef1fc76c54ecb70c71d9f90678e080754f3996a7ea305aea5304279df9860</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\driver\usb\uhp\drv_usb_ohci.h</file>
-         <hash>2605ada8b321f65ad4d8ed3c3736a87d5270188c390ba9582846b30ac9bb6f20</hash>
+         <hash>a1ab00eb37e4cd23682e4a8fe540503579f28ba54d01463f3822c0b4e6d47c67</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\driver\usb\uhp\src\drv_usb_ehci.c</file>
-         <hash>c5472f70e6042e2217a51d8fcce8ccb98d3b8c09f2d60a4845c028c13b8bdd8e</hash>
+         <hash>5be2ea9e53302767da3d7fb34718e47a2d54834c879c1fa2baac858b4f1808ce</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>480bba57d1693ba9dbd176146d48cdb7b2e804f02de71e5d3742eb409a1bd099</hash>
+         <hash>0e68dfe6a94fa4fd8a6af04fce41c55b05953fffce15e654b93e4c85ee35a396</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\driver\usb\uhp\src\drv_usb_ohci.c</file>
-         <hash>a75799196e483ed92e569d2ed3c8c35b206b943e2f9722bf8d95f3bc03af01e2</hash>
+         <hash>5fb5b609f395e43e530addcbcec0ed1a6abddf6d38e1003d6a73b78e9e741052</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\driver\usb\uhp\src\drv_usb_ohci_local.h</file>
-         <hash>a82037e76cfa4eca5023da77fbd67218bed0676919e97c76bc1d33abe6dd88eb</hash>
+         <hash>e670cac6044d0e41a477f12aa474e27110963fc5c808c438eaba3c5459ae6efa</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\driver\usb\uhp\src\drv_usb_uhp_ohci_registers.h</file>
-         <hash>f34d534fda59425f76ca8d468852d7476fe7927ad31569c6bba4a72df7a2b1f4</hash>
+         <hash>c94373b073204b4ab88a4535b03e0c0599378719732a7fd1fbcb58baae077c98</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\fault_handlers.c</file>
@@ -6077,7 +6077,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\initialization.c</file>
-         <hash>1c212e8d1a30bda00971f8a8625bf23edc3ad4d1d6c36bd79d6d3913e7bda995</hash>
+         <hash>fafc104a64784a6bf4342931f78a0af73c94fc6dd03069f3d273c2394e425e23</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\interrupts.c</file>
@@ -6197,7 +6197,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\system\debug\sys_debug.h</file>
-         <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
+         <hash>4162d9e1fab93b8b33f6c8a24726f5dc287ea05c31e3ab984c3c920c725d0882</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\system\dma\sys_dma.c</file>
@@ -6253,7 +6253,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\tasks.c</file>
-         <hash>b6a43843cbdf0bc6cdc0428bd1fabf02fed020a1cc37e0b9741968d61b5fbf56</hash>
+         <hash>9ff05d338fa87980d5fa2e403fa0c74dba094b5e043557bf8f018a86e206240b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\toolchain_specifics.h</file>
@@ -6265,19 +6265,19 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\src\usb_host.c</file>
-         <hash>5e3274284da6c42d8e7bd006531e400a5a7f212da086baea5c2d3697243816e1</hash>
+         <hash>3a8c8e7510577dcac7db2c22fba75dda9af24362f5a2a170c095faef88ffcfd5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\src\usb_host_hid.c</file>
-         <hash>ec8ea42dbbb2adcd18a7bbe6e8bf0426e29a9f4f75398eca9a57a929f2d16e3d</hash>
+         <hash>09460b8a0ba18f9daa3ec94c9b61e744f56d93964abd6c3cbb30bdc2cc6637c6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\src\usb_host_hid_local.h</file>
-         <hash>661f6cae3d2eca33042bfe7fdbaf7a9b34d164535a62b3b61baa31a2682cec95</hash>
+         <hash>07ae412ac1534f43732d98ef226991e9527d915b7f92935fa0d6a61a5b40dc5c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\src\usb_host_hid_mouse.c</file>
-         <hash>2c33efe71d55dd6bfc5533e1b1cd7026a5123f00ea86664c4a35e635f12a45b7</hash>
+         <hash>b58fe852e6c3f81d027f0dad912682e4a43e4cd9f30f7c940b97fba2a4ad051f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\src\usb_host_hid_mouse_local.h</file>
@@ -6289,35 +6289,35 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\src\usb_host_local.h</file>
-         <hash>bfe0fbac566e72c15e890d8e91ad4332d697e53db841526c8c5c43a7805d4cf2</hash>
+         <hash>aa9e60691421c11748a9659e71b4bce4b24f2aeb9cecd52f850b8868356584b5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\usb_chapter_9.h</file>
-         <hash>e5e4a9cd868fa4b90113a0bd3ae76d176c7d21d791e7ea9891f1bf9d981da54c</hash>
+         <hash>3d61e683d79bb62694e1133023063da31853e924dd3a2f27abda159876cd6b9e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\usb_common.h</file>
-         <hash>8e8a0115a555330065b8569621173186a2a2815758125026b02596e0d0278c56</hash>
+         <hash>62970f187809ea73ea9bc418b9101ccc0ab77a47cb11149c778e06a49a83bb51</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\usb_ehci.h</file>
-         <hash>3c6fa3dec84e28fb9d95c9999eb9ea19ba430d3b75bb4324caaf139d88b47709</hash>
+         <hash>4ca8020fb40107ddfb6daa29564a698346508ada7827a8c1e4beb7e986c18bee</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\usb_hid.h</file>
-         <hash>c55841d2ce5c249f72306d11914abccede9a3084239d294612f0e902db98e628</hash>
+         <hash>9476f1bbb139fa59f8a1c858126ff1a81cb0acefff7f66be59dca3a9ef745508</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\usb_host.h</file>
-         <hash>1fd7a53f3b04f3a63013a3350d1f6b1c15aa9f162e9c5acf31b111c27987ad89</hash>
+         <hash>56c248da571d1a46c5d6b5b34e28a978b30b40ee1fb04fa4f2efdcb8a5a1039b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\usb_host_client_driver.h</file>
-         <hash>38b5d7e5fee9b09db48b48b52d9b2773f458b09dc2d659c703a075fc90f32490</hash>
+         <hash>274e72a8e34ccc3012d2bb4a100cec9d54ffd296091b35c0f7ec45b528cb34ac</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\usb_host_hid.h</file>
-         <hash>c05848dd00ee8d42a80b3f97003b7f2969fd4b950f5d3e2b3036e603e23fe805</hash>
+         <hash>336cb1913d002c94545c8116761fa8f8f4e8c151118dfdf8d029d154a8f8d364</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\usb_host_hid_mouse.h</file>
@@ -6329,15 +6329,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\usb_hub.h</file>
-         <hash>733473045c756b6184188c2cf000d8f187f530a9e048dabefaecee347c05e4db</hash>
+         <hash>66a9362619640002d6c8fe6335e044dd7c9cd4fe834d1b2487aa172a08af644b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\usb\usb_ohci.h</file>
-         <hash>8473159e3cdb858e0d0b7afefea4e18ee08497e826108d20c15558166f1429b6</hash>
+         <hash>6e333a4861c360fa58927cf7b2f43f5c565fabbc2d22eda0ea01b899ff413f48</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\usb_host_init_data.c</file>
-         <hash>4653e447388a5c6bb9c1b1d096e4e1d58ae1a882e76e17bcc4a96382dab4c548</hash>
+         <hash>a31864806fdbcc7736135ded6987954be4d0f81339a21ee1f3f295fa0001ed5e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\user.h</file>
