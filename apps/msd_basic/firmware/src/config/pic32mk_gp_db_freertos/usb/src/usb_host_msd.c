@@ -1038,7 +1038,7 @@ void F_USB_HOST_MSD_ResetPacketCreate
 }
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 11.3 deviated:4 Deviation record ID -  H3_MISRAC_2012_R_11_3_DR_1 */
+/* MISRA C-2012 Rule 11.3 deviated:4 Deviation record ID -  H3_USB_MISRAC_2012_R_11_3_DR_1 */
 
 
 /* Function:
@@ -1600,7 +1600,7 @@ void F_USB_HOST_MSD_InterfaceTasks
 }
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 20.7 False Positive:1 Deviation record ID -  H3_MISRAC_2012_R_20_7_DR_1 */
+/* MISRA C-2012 Rule 20.7 False Positive:1 Deviation record ID -  H3_USB_MISRAC_2012_R_20_7_DR_1 */
 /* Function:
    USB_HOST_MSD_RESULT USB_HOST_MSD_Transfer
    (
