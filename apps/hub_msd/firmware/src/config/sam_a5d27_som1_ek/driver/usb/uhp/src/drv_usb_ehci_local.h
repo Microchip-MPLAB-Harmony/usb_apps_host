@@ -169,7 +169,7 @@
  * HCD to track completion of a host IRP. This
  * is not the same as the public IRP status
  *********************************************/
- /* MISRA C-2012 Rule 5.2 deviated:14 Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
+ /* MISRA C-2012 Rule 5.2 deviated:14 Deviation record ID -  H3_USB_MISRAC_2012_R_5_2_DR_1 */
 
 typedef enum DRV_USB_EHCI_IRP_STATE
 {
@@ -230,7 +230,7 @@ typedef struct S_USB_HOST_IRP_LOCAL_
     void * next;
     DRV_USB_EHCI_PIPE_HANDLE  pipe;
 
-} USB_HOST_IRP_LOCAL;
+} USB_HOST_EHCI_IRP_LOCAL;
 
 /***********************************************
  * Port Attach State.
@@ -305,7 +305,7 @@ typedef struct DRV_USB_EHCI_QTD
     bool inUse;
 
     /* Pointer to the IRP connected to this qTD */
-    USB_HOST_IRP_LOCAL * irp;
+    USB_HOST_EHCI_IRP_LOCAL * irp;
 
     /* Transfer buffer that will be used by this qTD */
     uint8_t * transferBuffer;
@@ -434,7 +434,7 @@ typedef struct DRV_USB_EHCI_CONTROL_TRANSFER_QTD
     bool inUse;
 
     /* Pointer to the IRP associated with this object */
-    USB_HOST_IRP_LOCAL * irp;
+    USB_HOST_EHCI_IRP_LOCAL * irp;
 
     /* Padding required for alignment */
     uint8_t padding[12];

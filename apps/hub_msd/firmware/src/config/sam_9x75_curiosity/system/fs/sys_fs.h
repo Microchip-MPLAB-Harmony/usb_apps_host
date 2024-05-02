@@ -661,7 +661,7 @@ typedef void (* SYS_FS_EVENT_HANDLER)
 typedef struct 
 {
     /* File size */
-    uint64_t    fsize;
+    uint32_t    fsize;
     /* Last modified date */
     uint16_t    fdate;
     /* Last modified time */

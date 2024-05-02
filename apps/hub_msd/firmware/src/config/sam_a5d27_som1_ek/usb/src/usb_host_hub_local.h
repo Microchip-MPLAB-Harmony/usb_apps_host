@@ -93,7 +93,7 @@ typedef enum
  * Defines the possible states the Hub Device Task
  * Routine.
  ****************************************************/
-/* MISRA C-2012 Rule 5.2 deviated:40 Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
+/* MISRA C-2012 Rule 5.2 deviated:40 Deviation record ID -  H3_USB_MISRAC_2012_R_5_2_DR_1 */
 
 typedef enum
 {
