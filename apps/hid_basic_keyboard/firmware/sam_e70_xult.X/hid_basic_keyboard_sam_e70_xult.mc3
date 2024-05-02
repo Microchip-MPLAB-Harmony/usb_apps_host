@@ -1,4 +1,4 @@
-<config configName="sam_e70_xult" projectName="hid_basic_keyboard_sam_e70_xult" configVersion="1.1" device="ATSAME70Q21B" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="sam_e70_xult" projectName="hid_basic_keyboard_sam_e70_xult" configVersion="1.1" device="ATSAME70Q21B" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -59,7 +59,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.0"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -9564,7 +9564,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\definitions.h</file>
-         <hash>4dac92a2e068471fca4a142f62a7f3bc395bb551894405251f63bfbfa47332eb</hash>
+         <hash>e55e9bb27123f9c930615998d53d9102f9e10f81f90fe34fa096d09852bb5866</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\device.h</file>
@@ -9612,23 +9612,23 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\driver\usb\usbhsv1\drv_usbhsv1.h</file>
-         <hash>32bbed573c170491321b4408fcd12ba43cc13d2f9eff78c400c378cfbfc24f69</hash>
+         <hash>ad8ca867c5802433797c3e6834fb5ca94cbdfafc39479d8d8105628f1b09b3f3</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\driver\usb\usbhsv1\src\drv_usbhsv1.c</file>
-         <hash>f64d7b8e5bc42e2f372faa367ac232c4670093c3112b8b068520a58a621da23a</hash>
+         <hash>1cab676d57e77fed1e7b34676150fc3ab59c232424473cdf6cbbe1637cec0138</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\driver\usb\usbhsv1\src\drv_usbhsv1_host.c</file>
-         <hash>638c1edaea3d1249084eda7e5dae63bc10e4b5781475cf92b1bf778a6e7bea45</hash>
+         <hash>7b1e43835efc4301fae0523ef985cb401370fa9f29e84ee62501439cff144a82</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\driver\usb\usbhsv1\src\drv_usbhsv1_local.h</file>
-         <hash>5e074cecfb27f0e230921a21be59b0ef8a8e22b1365c2bf1b233b71cb047fbd6</hash>
+         <hash>a59d5383fca03e36f22e8a3cd4a9ed3b263509556caad4da3836a8652d5e59a4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\driver\usb\usbhsv1\src\drv_usbhsv1_variant_mapping.h</file>
-         <hash>83d39994f551b0da2eeb97f344d861f034f1d49ade3c4cecddbcc4a192d3cd48</hash>
+         <hash>5b4fce5376a794696c8d5d582de5c97d0cb3fa81ffe6022ba83b042d893385b7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\exceptions.c</file>
@@ -9744,7 +9744,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\system\debug\sys_debug.h</file>
-         <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
+         <hash>4162d9e1fab93b8b33f6c8a24726f5dc287ea05c31e3ab984c3c920c725d0882</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\system\dma\sys_dma.c</file>
@@ -9812,15 +9812,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\usb\src\usb_host.c</file>
-         <hash>5e3274284da6c42d8e7bd006531e400a5a7f212da086baea5c2d3697243816e1</hash>
+         <hash>3a8c8e7510577dcac7db2c22fba75dda9af24362f5a2a170c095faef88ffcfd5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\usb\src\usb_host_hid.c</file>
-         <hash>ec8ea42dbbb2adcd18a7bbe6e8bf0426e29a9f4f75398eca9a57a929f2d16e3d</hash>
+         <hash>09460b8a0ba18f9daa3ec94c9b61e744f56d93964abd6c3cbb30bdc2cc6637c6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\usb\src\usb_host_hid_keyboard.c</file>
-         <hash>e3b654bf6b5c1642f794d3c95811dce1d568cbd432e8f9bf6dfe5540974fb42b</hash>
+         <hash>1ef35126e22e8adb15c34a03cef726e31bb28314a370cfdfc55509f0a6f0c6bb</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\usb\src\usb_host_hid_keyboard_local.h</file>
@@ -9828,7 +9828,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\usb\src\usb_host_hid_local.h</file>
-         <hash>661f6cae3d2eca33042bfe7fdbaf7a9b34d164535a62b3b61baa31a2682cec95</hash>
+         <hash>07ae412ac1534f43732d98ef226991e9527d915b7f92935fa0d6a61a5b40dc5c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\usb\src\usb_host_hub_mapping.h</file>
@@ -9836,35 +9836,35 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\usb\src\usb_host_local.h</file>
-         <hash>bfe0fbac566e72c15e890d8e91ad4332d697e53db841526c8c5c43a7805d4cf2</hash>
+         <hash>aa9e60691421c11748a9659e71b4bce4b24f2aeb9cecd52f850b8868356584b5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\usb\usb_chapter_9.h</file>
-         <hash>e5e4a9cd868fa4b90113a0bd3ae76d176c7d21d791e7ea9891f1bf9d981da54c</hash>
+         <hash>3d61e683d79bb62694e1133023063da31853e924dd3a2f27abda159876cd6b9e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\usb\usb_common.h</file>
-         <hash>8e8a0115a555330065b8569621173186a2a2815758125026b02596e0d0278c56</hash>
+         <hash>62970f187809ea73ea9bc418b9101ccc0ab77a47cb11149c778e06a49a83bb51</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\usb\usb_hid.h</file>
-         <hash>c55841d2ce5c249f72306d11914abccede9a3084239d294612f0e902db98e628</hash>
+         <hash>9476f1bbb139fa59f8a1c858126ff1a81cb0acefff7f66be59dca3a9ef745508</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\usb\usb_host.h</file>
-         <hash>1fd7a53f3b04f3a63013a3350d1f6b1c15aa9f162e9c5acf31b111c27987ad89</hash>
+         <hash>56c248da571d1a46c5d6b5b34e28a978b30b40ee1fb04fa4f2efdcb8a5a1039b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\usb\usb_host_client_driver.h</file>
-         <hash>38b5d7e5fee9b09db48b48b52d9b2773f458b09dc2d659c703a075fc90f32490</hash>
+         <hash>274e72a8e34ccc3012d2bb4a100cec9d54ffd296091b35c0f7ec45b528cb34ac</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\usb\usb_host_hid.h</file>
-         <hash>c05848dd00ee8d42a80b3f97003b7f2969fd4b950f5d3e2b3036e603e23fe805</hash>
+         <hash>336cb1913d002c94545c8116761fa8f8f4e8c151118dfdf8d029d154a8f8d364</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\usb\usb_host_hid_keyboard.h</file>
-         <hash>596e0fbc610bc81e36b04dfee62209c58e50ada6798a02d8b8bdb23d76dd69b6</hash>
+         <hash>1bfa119b0a8f54f4c8ab822db7a756b490eaaeada3d4227b2c2f8c9f2ac68d1a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\usb\usb_host_hub_interface.h</file>
@@ -9872,11 +9872,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\usb\usb_hub.h</file>
-         <hash>733473045c756b6184188c2cf000d8f187f530a9e048dabefaecee347c05e4db</hash>
+         <hash>66a9362619640002d6c8fe6335e044dd7c9cd4fe834d1b2487aa172a08af644b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\usb_host_init_data.c</file>
-         <hash>7faed5eaed113969dcc0e86d878f0983c1443e0032e0caf7ebee9a9c1619ed58</hash>
+         <hash>e94fc80a12423f5118f8cd993888ebbe7fad79eb90ef0cc677931934420c35dc</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\user.h</file>
