@@ -50,7 +50,7 @@
 // *****************************************************************************
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 6.1 deviated:23 Deviation record ID -  H3_MISRAC_2012_R_6_1_DR_1 */
+/* MISRA C-2012 Rule 6.1 deviated:23 Deviation record ID -  H3_USB_MISRAC_2012_R_6_1_DR_1 */
 /* OHCI Endpoint Descriptor Type
 
   Summary:
