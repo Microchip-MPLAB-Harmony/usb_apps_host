@@ -26,7 +26,7 @@
 #define DA78_UHP_OHCI_COMPONENT_         /**< \deprecated  Backward compatibility for ASF */
 
 /* MISRA C-2012 Rule 5.4 deviate: 28, and 21.1 deviate:1. Deviation record ID -  
-    H3_MISRAC_2012_R_5_4_DR_1, H3_MISRAC_2012_R_21_1_DR_1 */
+    H3_USB_MISRAC_2012_R_5_4_DR_1, H3_USB_MISRAC_2012_R_21_1_DR_1 */
 
 #ifndef _UINT32_ 
 #  define _UINT32_(x)  ((uint32_t)(x))
