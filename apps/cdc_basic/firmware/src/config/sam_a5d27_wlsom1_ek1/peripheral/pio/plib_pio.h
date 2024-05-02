@@ -91,21 +91,21 @@
 
 
 /*** Macros for GPIO_PB3 pin ***/
-#define GPIO_PB3_Set()               (PIOB_REGS->PIO_SODR = (1<<3))
-#define GPIO_PB3_Clear()             (PIOB_REGS->PIO_CODR = (1<<3))
+#define GPIO_PB3_Set()               (PIOB_REGS->PIO_SODR = ((uint32_t)1U<<3U))
+#define GPIO_PB3_Clear()             (PIOB_REGS->PIO_CODR = ((uint32_t)1U<<3U))
 #define GPIO_PB3_Toggle()            do {\
-                                            PIOB_REGS->PIO_MSKR = (1<<3); \
-                                            PIOB_REGS->PIO_ODSR ^= (1<<3);\
+                                            PIOB_REGS->PIO_MSKR = ((uint32_t)1U<<3U); \
+                                            PIOB_REGS->PIO_ODSR ^= ((uint32_t)1U<<3U);\
                                         } while (0)
 #define GPIO_PB3_OutputEnable()      do {\
-                                            PIOB_REGS->PIO_MSKR = (1<<3); \
-                                            PIOB_REGS->PIO_CFGR |=(1 << PIO_CFGR_DIR_Pos);\
+                                            PIOB_REGS->PIO_MSKR = ((uint32_t)1U<<3U); \
+                                            PIOB_REGS->PIO_CFGR |=((uint32_t)1U << PIO_CFGR_DIR_Pos);\
                                         }while(0)
 #define GPIO_PB3_InputEnable()       do { \
-                                            PIOB_REGS->PIO_MSKR = (1<<3); \
-                                            PIOB_REGS->PIO_CFGR &= ~(1 << PIO_CFGR_DIR_Pos);\
+                                            PIOB_REGS->PIO_MSKR = ((uint32_t)1U<<3U); \
+                                            PIOB_REGS->PIO_CFGR &= ~((uint32_t)1U << PIO_CFGR_DIR_Pos);\
                                         } while (0)
-#define GPIO_PB3_Get()               ((PIOB_REGS->PIO_PDSR >> 3) & 0x1)
+#define GPIO_PB3_Get()               ((PIOB_REGS->PIO_PDSR >> 3U) & 0x1U)
 #define GPIO_PB3_PIN                  PIO_PIN_PB3
 // *****************************************************************************
 /* PIO Ports
