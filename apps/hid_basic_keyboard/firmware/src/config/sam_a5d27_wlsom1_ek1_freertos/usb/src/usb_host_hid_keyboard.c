@@ -79,7 +79,7 @@ static USB_HOST_HID_KEYBOARD_EVENT_HANDLER appKeyboardHandler;
 */
 // *****************************************************************************
 /* MISRA C-2012 Rule 5.1 deviate: 1
-  Deviation record ID - H3_MISRAC_2012_R_5_1_DR_1*/
+  Deviation record ID - H3_USB_MISRAC_2012_R_5_1_DR_1*/
 
 USB_HOST_HID_KEYBOARD_RESULT USB_HOST_HID_KEYBOARD_EventHandlerSet
 (
