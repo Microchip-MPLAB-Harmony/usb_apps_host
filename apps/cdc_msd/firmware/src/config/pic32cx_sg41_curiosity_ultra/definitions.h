@@ -48,12 +48,12 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include "peripheral/nvmctrl/plib_nvmctrl.h"
 #include "usb/usb_msd.h"
 #include "usb/usb_host_msd.h"
 #include "usb/usb_host_scsi.h"
-#include "peripheral/nvmctrl/plib_nvmctrl.h"
-#include "bsp/bsp.h"
 #include "peripheral/evsys/plib_evsys.h"
+#include "bsp/bsp.h"
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"

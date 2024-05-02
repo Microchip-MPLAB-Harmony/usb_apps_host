@@ -221,6 +221,8 @@ void F_DRV_USBFSV1_HOST_AttachDetachStateMachine (DRV_USBFSV1_OBJ * hDriver)
             if(!hDriver->deviceAttached)
             {
                 hDriver->attachState = DRV_USBFSV1_HOST_ATTACH_STATE_CHECK_FOR_DEVICE_ATTACH;
+                /* Get ready for next attach */
+                HOST->USB_INTENSET = USB_HOST_INTENSET_DCONN_Msk;
             }
             
             break;
@@ -1021,8 +1023,8 @@ DRV_USBFSV1_HOST_PIPE_HANDLE DRV_USBFSV1_HOST_PipeSetup
 }
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 5.1, 5.2 and 21.15 deviated below. Deviation record ID -  
-    H3_USB_MISRAC_2012_R_5_1_DR_1, H3_USB_MISRAC_2012_R_5_2_DR_1 and H3_USB_MISRAC_2012_R_21_15_DR_1*/
+/* MISRA C-2012 Rule 5.1 and 5.2  deviated below. Deviation record ID -  
+    H3_USB_MISRAC_2012_R_5_1_DR_1 and H3_USB_MISRAC_2012_R_5_2_DR_1 */
 
 /* Function:
     void F_DRV_USBFSV1_HOST_ControlTransferDataStageSend(DRV_USBFSV1_OBJ * hDriver)
@@ -1101,7 +1103,7 @@ void F_DRV_USBFSV1_HOST_ControlTransferDataStageSend(DRV_USBFSV1_OBJ * hDriver)
     {
         /* Bank 0 contains the data. User data must be copied to the host
          * control transfer data buffer. */
-        (void) memcpy(hDriver->hostTransactionBuffer, ( ( uint8_t * )pIRP->data + pIRP->completedBytes), (uint32_t)size);
+        (void) memcpy(( uint8_t * )hDriver->hostTransactionBuffer, ( ( uint8_t * )pIRP->data + pIRP->completedBytes), (uint32_t)size);
         controlPipe->USB_PSTATUSSET = USB_HOST_PSTATUSSET_BK0RDY_Msk;
         controlPipe->USB_PCFG |= (uint8_t)DRV_USBFSV1_HOST_PIPE_TOKEN_OUT;
     }
@@ -1220,7 +1222,7 @@ bool F_DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
                 controlPipe->USB_PCFG &= (~USB_HOST_PCFG_PTOKEN_Msk);
                 controlPipeDesc->USB_CTRL_PIPE &= ~(USB_HOST_CTRL_PIPE_PDADDR_Msk);
                 controlPipeDesc->USB_CTRL_PIPE |= (((uint16_t)pipe->deviceAddress) << USB_HOST_CTRL_PIPE_PDADDR_Pos);
-                (void) memcpy(hDriver->hostTransactionBuffer, pIRP->setup, 8);
+                (void) memcpy(( uint8_t * )hDriver->hostTransactionBuffer, ( uint8_t * )pIRP->setup, 8);
                 controlPipeDesc->USB_ADDR = (uint32_t)hDriver->hostTransactionBuffer;
                 controlPipeDesc->USB_PCKSIZE = 0;
                 controlPipeDesc->USB_PCKSIZE = (USB_HOST_PCKSIZE_MULTI_PACKET_SIZE(0)|USB_HOST_PCKSIZE_BYTE_COUNT(8)
@@ -1353,7 +1355,7 @@ bool F_DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
                              * that the USB DMA will write a minimum of 4 bytes. This can prove dangerous at
                              * the client level. */
 
-                            (void) memcpy(( ( uint8_t * )pIRP->data + pIRP->completedBytes), hDriver->hostTransactionBuffer, byteCount);
+                            (void) memcpy(( ( uint8_t * )pIRP->data + pIRP->completedBytes),( uint8_t * ) hDriver->hostTransactionBuffer, byteCount);
                             pIRP->completedBytes += byteCount;
                             pIRP->completedBytesInThisFrame += byteCount;
 
@@ -1736,7 +1738,7 @@ void F_DRV_USBFSV1_HOST_NonControlTransferDataSend(DRV_USBFSV1_OBJ * hDriver)
         
         if(pipe->pipeType != USB_TRANSFER_TYPE_ISOCHRONOUS)
         {
-            (void) memcpy(hDriver->hostTransactionBuffer, ( ( uint8_t * )pIRP->data + pIRP->completedBytes), (uint32_t)size);
+            (void) memcpy(( uint8_t * )hDriver->hostTransactionBuffer, ( ( uint8_t * )pIRP->data + pIRP->completedBytes), (uint32_t)size);
         }
 
         hardwarePipe->USB_PSTATUSSET = USB_HOST_PSTATUSSET_BK0RDY_Msk;
@@ -1862,7 +1864,7 @@ static bool F_DRV_USBFSV1_HOST_NonControlTransferProcess
                         if((pipe->endpointAndDirection & 0x80U) != 0U)
                         {
                             /* Data has been received from the device */
-                            (void) memcpy(( ( uint8_t * )pIRP->data + pIRP->completedBytes), hDriver->hostTransactionBuffer, byteCount);
+                            (void) memcpy(( ( uint8_t * )pIRP->data + pIRP->completedBytes), ( uint8_t * )hDriver->hostTransactionBuffer, byteCount);
                         }
 
                         /* Now update the byte counters */
@@ -2787,10 +2789,8 @@ void F_DRV_USBFSV1_HOST_Tasks_ISR(DRV_USBFSV1_OBJ * hDriver)
         }
 
         hDriver->attachedDeviceObjHandle = USB_HOST_DEVICE_OBJ_HANDLE_INVALID;        
-        
-        /* Clean up is complete. Get ready for next attach */
+        /* Clean up is complete */
         HOST->USB_INTFLAG  = USB_HOST_INTFLAG_DCONN_Msk;
-        HOST->USB_INTENSET = USB_HOST_INTENSET_DCONN_Msk;
     }
 
     /* Handle the reset done interrupt */

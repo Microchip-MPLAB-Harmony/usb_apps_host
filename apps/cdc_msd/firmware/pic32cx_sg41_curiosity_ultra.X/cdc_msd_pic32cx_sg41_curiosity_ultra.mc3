@@ -1,4 +1,4 @@
-<config configName="pic32cx_sg41_curiosity_ultra" projectName="cdc_msd_pic32cx_sg41_curiosity_ultra" configVersion="1.1" device="PIC32CX1025SG41128" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.0">
+<config configName="pic32cx_sg41_curiosity_ultra" projectName="cdc_msd_pic32cx_sg41_curiosity_ultra" configVersion="1.1" device="PIC32CX1025SG41128" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -59,7 +59,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -8065,7 +8065,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\definitions.h</file>
-         <hash>56c77614807dd427493483a2f5fb83912a675a2b35e14c9c5d4059d0b69741dd</hash>
+         <hash>1bb44ae9274a5754abfcacd29fd07e47bcdeb5e1a15f4460403565098da4b39c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\device.h</file>
@@ -8097,19 +8097,19 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\driver\usb\usbfsv1\drv_usbfsv1.h</file>
-         <hash>bb512cc5d190f4cdbfde21b36b7139fe7fc2b6c56a5b3d0143effc4bb4213394</hash>
+         <hash>fb20628f02e63a59b444e3e961160de118146a508a6cdbdfabcd5719d742f06f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\driver\usb\usbfsv1\src\drv_usbfsv1.c</file>
-         <hash>21ee528bf20dc681a82b8db85c62a325a016e55856fd46abe88351bd90d0bfae</hash>
+         <hash>2bb54dc91524d0ac7bb2b36649d1163076c89bdecee169368772d66eec18df0b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\driver\usb\usbfsv1\src\drv_usbfsv1_host.c</file>
-         <hash>e9acc220c41813842d802150c7f1a733dde8078af7d8f23ef509f5ffac046950</hash>
+         <hash>458063c6278240b6515b176ea672b146dd3658327771cdf3584f046bd9fcc606</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\driver\usb\usbfsv1\src\drv_usbfsv1_local.h</file>
-         <hash>49e8e1456d0b11a92b5fab3dcdd9c477402d64fda065543103232059074ef036</hash>
+         <hash>0834ca7f0d9b69a800638f56d7a01e445a0addcc84d97e2597309dfbb2861cb4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\driver\usb\usbfsv1\src\drv_usbfsv1_variant_mapping.h</file>
@@ -8121,7 +8121,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\initialization.c</file>
-         <hash>90deb4473d69ef615ec84308720fc54984a49ddb102428836f8a26999742fdea</hash>
+         <hash>4096c8b29e5c61bf24e79d3f0cee5b59c18494d294a1f003a0847ad425afb195</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\interrupts.c</file>
@@ -8165,7 +8165,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\peripheral\evsys\plib_evsys.c</file>
-         <hash>b2e1a8004049e687fc5544133f3346f743ced50cdaf860c8e3c7f58df3cc163f</hash>
+         <hash>171913270aa095f1e8ff9192995129ff7bab22e5c793c4223f9046802e69d1e6</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\peripheral\evsys\plib_evsys.h</file>
@@ -8233,7 +8233,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\system\debug\sys_debug.h</file>
-         <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
+         <hash>4162d9e1fab93b8b33f6c8a24726f5dc287ea05c31e3ab984c3c920c725d0882</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\system\fs\fat_fs\file_system\ff.c</file>
@@ -8477,7 +8477,7 @@
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</file>
-         <hash>8cda7ac3ff6f0eb5e83c4fe613dd195151b24da54167f5c3c007e599a03f1edc</hash>
+         <hash>2de01ae2556a38eb82c389de23c701805ec63308cfbcf3f84cb12141589b0858</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\core_cm4.h</file>
