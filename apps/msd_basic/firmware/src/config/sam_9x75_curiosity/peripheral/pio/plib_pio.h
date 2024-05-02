@@ -62,15 +62,6 @@
 // *****************************************************************************
 
 
-/*** Macros for SW1 pin ***/
-#define SW1_Set()               (PIOC_REGS->PIO_SODR = (1<<9))
-#define SW1_Clear()             (PIOC_REGS->PIO_CODR = (1<<9))
-#define SW1_Toggle()            (PIOC_REGS->PIO_ODSR ^= (1<<9))
-#define SW1_OutputEnable()      (PIOC_REGS->PIO_OER = (1<<9))
-#define SW1_InputEnable()       (PIOC_REGS->PIO_ODR = (1<<9))
-#define SW1_Get()               ((PIOC_REGS->PIO_PDSR >> 9) & 0x1)
-#define SW1_PIN                  PIO_PIN_PC9
-
 
 // *****************************************************************************
 /* PIO Port

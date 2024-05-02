@@ -117,7 +117,7 @@
                                                                                ((handle)->status) = (drvStatus);\
                                                                                ((handle)->taskState) = (drvState);\
                                                                            }
-#elif defined(_SAM9X70_H_) || defined(_SAM9X72_H_) || defined(_SAM9X75_H_) || defined(_SAM9X75D2G_H_)
+#elif defined(_SAM9X70_H_) || defined(_SAM9X72_H_) || defined(_SAM9X75_H_)
         /* Specific to SAM9X7 */
         #define PMC_UCKR_UPLLEN()   \
             UDPHS_REGS->UDPHS_CTRL &= ~UDPHS_CTRL_EN_UDPHS_Msk; \
@@ -230,7 +230,7 @@ typedef struct S_USB_HOST_IRP_LOCAL_
     void * next;
     DRV_USB_EHCI_PIPE_HANDLE  pipe;
 
-} USB_HOST_IRP_LOCAL;
+} USB_HOST_EHCI_IRP_LOCAL;
 
 /***********************************************
  * Port Attach State.
@@ -305,7 +305,7 @@ typedef struct DRV_USB_EHCI_QTD
     bool inUse;
 
     /* Pointer to the IRP connected to this qTD */
-    USB_HOST_IRP_LOCAL * irp;
+    USB_HOST_EHCI_IRP_LOCAL * irp;
 
     /* Transfer buffer that will be used by this qTD */
     uint8_t * transferBuffer;
@@ -434,7 +434,7 @@ typedef struct DRV_USB_EHCI_CONTROL_TRANSFER_QTD
     bool inUse;
 
     /* Pointer to the IRP associated with this object */
-    USB_HOST_IRP_LOCAL * irp;
+    USB_HOST_EHCI_IRP_LOCAL * irp;
 
     /* Padding required for alignment */
     uint8_t padding[12];
