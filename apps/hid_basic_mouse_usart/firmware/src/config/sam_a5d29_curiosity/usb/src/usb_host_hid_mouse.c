@@ -234,7 +234,7 @@ void USB_HOST_HID_MOUSE_EventHandler
 
 /* MISRAC 2012 deviation block end */
 // *****************************************************************************
-/* MISRA C-2012 Rule 21.15 deviated:1 Deviation record ID -  H3_USB_MISRAC_2012_R_11_3_DR_1 */
+
 /* Function:
     void USB_HOST_HID_MOUSE_Task(USB_HOST_HID_OBJ_HANDLE handle)
  
@@ -311,7 +311,7 @@ void USB_HOST_HID_MOUSE_Task(USB_HOST_HID_OBJ_HANDLE handle)
                     mouseData[mouseIndex].taskPingPong = true;
                     /* Keep a temp backup of the data */
                     (void) memcpy(&dataTemp,
-                            (const void *)mouseData[mouseIndex].dataPing, 64);
+                            (const uint8_t *)mouseData[mouseIndex].dataPing, 64);
                     /* Reset global items only once as they are applicable through out */
                     (void) memset(&globalItem, 0,
                             (size_t)sizeof(USB_HOST_HID_GLOBAL_ITEM));
@@ -325,7 +325,7 @@ void USB_HOST_HID_MOUSE_Task(USB_HOST_HID_OBJ_HANDLE handle)
                     mouseData[mouseIndex].taskPingPong = false;
                     /* Keep a temp backup of the data */
                     (void) memcpy(&dataTemp,
-                            (const void *)mouseData[mouseIndex].dataPong, 64);
+                            (const uint8_t *)mouseData[mouseIndex].dataPong, 64);
                     /* Reset global items only once as they are applicable through out */
                     (void) memset(&globalItem, 0,
                             (size_t)sizeof(USB_HOST_HID_GLOBAL_ITEM));
@@ -782,4 +782,4 @@ void USB_HOST_HID_MOUSE_Task(USB_HOST_HID_OBJ_HANDLE handle)
     }
 }/* End of USB_HOST_HID_MOUSE_Task() */
 
-/* MISRAC 2012 deviation block end */
+
