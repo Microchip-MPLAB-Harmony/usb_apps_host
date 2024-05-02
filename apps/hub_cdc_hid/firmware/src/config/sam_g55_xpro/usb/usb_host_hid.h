@@ -80,7 +80,7 @@
 // Section: USB HID Client Driver Data Structures
 // *****************************************************************************
 // *****************************************************************************
-/* MISRA C-2012 Rule 5.5 deviated:6 Deviation record ID -  H3_MISRAC_2012_R_5_5_DR_1 */
+/* MISRA C-2012 Rule 5.5 deviated:6 Deviation record ID -  H3_USB_MISRAC_2012_R_5_5_DR_1 */
 // *****************************************************************************
 /* USB Host HID Result Minimum Constant
 

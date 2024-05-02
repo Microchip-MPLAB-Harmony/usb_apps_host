@@ -341,7 +341,7 @@ SYS_MODULE_OBJ DRV_USB_OHCI_Initialize
 );
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 3.1 deviated:23 Deviation record ID -  H3_MISRAC_2012_R_3_1_DR_1 */
+/* MISRA C-2012 Rule 3.1 deviated:23 Deviation record ID -  H3_USB_MISRAC_2012_R_3_1_DR_1 */
 /* Function:
     SYS_STATUS DRV_USB_OHCI_Status ( SYS_MODULE_OBJ object )
 
