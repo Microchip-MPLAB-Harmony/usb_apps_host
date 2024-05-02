@@ -828,8 +828,8 @@ int F_USB_HOST_FindClassSubClassProtocolDriver
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 4.12 deviated:2, 11.3 deviated:24, 21.3 deviated:9 and 20.7 deviated:7.
-   Deviation record ID - H3_MISRAC_2012_R_4_12_DR_1, H3_MISRAC_2012_R_11_3_DR_1 ,
-   H3_MISRAC_2012_R_21_3_DR_1 & H3_MISRAC_2012_R_20_7_DR_1 */
+   Deviation record ID - H3_USB_MISRAC_2012_R_4_12_DR_1, H3_USB_MISRAC_2012_R_11_3_DR_1 ,
+   H3_USB_MISRAC_2012_R_21_3_DR_1 & H3_USB_MISRAC_2012_R_20_7_DR_1 */
 
 
 /* Function:
@@ -1242,7 +1242,7 @@ void F_USB_HOST_UpdateConfigurationState
 }
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 10.4 False Positive:11 Deviation record ID -  H3_MISRAC_2012_R_10_4_DR_1 */
+/* MISRA C-2012 Rule 10.4 False Positive:11 Deviation record ID -  H3_USB_MISRAC_2012_R_10_4_DR_1 */
 /* Function:
     void F_USB_HOST_UpdateDeviceOwnership
     (
@@ -1480,7 +1480,7 @@ void F_USB_HOST_UpdateDeviceOwnership
   Remarks:
     Refer to usb_host_client_driver.h for usage details.
 */
-/* MISRA C-2012 Rule 11.1 deviated:5 Deviation record ID -  H3_MISRAC_2012_R_11_1_DR_1 */
+/* MISRA C-2012 Rule 11.1 deviated:5 Deviation record ID -  H3_USB_MISRAC_2012_R_11_1_DR_1 */
 
 USB_HOST_RESULT USB_HOST_DeviceControlTransfer
 (
@@ -3118,7 +3118,7 @@ void  F_USB_HOST_DeviceControlTransferCallback( USB_HOST_IRP * irp )
 // *****************************************************************************
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 11.8 deviated:1 Deviation record ID -  H3_MISRAC_2012_R_11_8_DR_1 */
+/* MISRA C-2012 Rule 11.8 deviated:1 Deviation record ID -  H3_USB_MISRAC_2012_R_11_8_DR_1 */
 /* Function:
     SYS_MODULE_OBJ USB_HOST_Initialize
     (
@@ -4766,7 +4766,7 @@ USB_ENDPOINT_DESCRIPTOR * USB_HOST_DeviceEndpointDescriptorQuery
 }
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 18.3 deviated:1 Deviation record ID -  H3_MISRAC_2012_R_18_3_DR_1 */
+/* MISRA C-2012 Rule 18.3 deviated:1 Deviation record ID -  H3_USB_MISRAC_2012_R_18_3_DR_1 */
 /* Function:
     USB_INTERFACE_DESCRIPTOR * USB_HOST_DeviceInterfaceDescriptorQuery
     (
