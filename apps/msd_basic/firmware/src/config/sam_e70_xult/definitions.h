@@ -49,9 +49,9 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include "driver/usb/usbhsv1/drv_usbhsv1.h"
+#include "bsp/bsp.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_host.h"
-#include "bsp/bsp.h"
 #include "usb/usb_msd.h"
 #include "usb/usb_host_msd.h"
 #include "usb/usb_host_scsi.h"
