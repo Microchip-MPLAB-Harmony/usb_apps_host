@@ -222,9 +222,8 @@ void F_DRV_USBFS_HOST_Initialize
 }
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 10.1 deviate:3, Rule 10.4 deviate:10 and Rule 11.3 deviated:8. 
-   Deviation record ID - H3_MISRAC_2012_R_10_1_DR_1, H3_MISRAC_2012_R_10_4_DR_1 
-   and H3_MISRAC_2012_R_11_3_DR_1*/
+/* MISRA C-2012 Rule 11.3 deviated:8. 
+   Deviation record ID - H3_USB_MISRAC_2012_R_11_3_DR_1*/
 /* Function:
     USB_ERROR DRV_USBFS_HOST_IRPSubmit
     (
@@ -513,8 +512,8 @@ void DRV_USBFS_HOST_IRPCancel(USB_HOST_IRP * inputIRP)
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 11.6 deviate:12, Rule 16.1 deviate:2 and Rule 16.1:3. 
-   Deviation record ID - H3_MISRAC_2012_R_11_6_DR_1, H3_MISRAC_2012_R_16_1_DR_1 
-    and H3_MISRAC_2012_R_16_3_DR_1 */
+   Deviation record ID - H3_USB_MISRAC_2012_R_11_6_DR_1, H3_USB_MISRAC_2012_R_16_1_DR_1 
+    and H3_USB_MISRAC_2012_R_16_3_DR_1 */
 /* Function:
     bool F_DRV_USBFS_HOST_ControlXferProcess
     (
@@ -1678,7 +1677,7 @@ void F_DRV_USBFS_HOST_NonControlSendToken
     F_DRV_USBFS_SendTokenToAddress(usbID, deviceAddress, pid, endpoint, isLowSpeed);
 }
 
-/* MISRAC 2012 deviation block end */
+
 // *****************************************************************************
 /* Function:
     bool F_DRV_USBFS_HOST_NonControlIRPProcess
@@ -2861,9 +2860,12 @@ void F_DRV_USBFS_HOST_Tasks_ISR(DRV_USBFS_OBJ * pusbdrvObj)
             pusbdrvObj->detachDebounceCounter++;
             if(DRV_USBFS_POST_DETACH_DELAY <= pusbdrvObj->detachDebounceCounter)
             {
+                
+                /* Disable timer interrupt */
+                PLIB_USB_OTG_InterruptDisable(usbID, USB_OTG_INT_ONE_MS_TIMEOUT); 
+              
                 /* The post detach delay is completed. We can re-enable the
                  * attach interrupt now. */
-
                 pusbdrvObj->isDetachDebouncing = false;
                 PLIB_USB_InterruptFlagClear(usbID, USB_INT_ATTACH);
                 PLIB_USB_InterruptEnable(usbID, USB_INT_ATTACH);
@@ -3197,7 +3199,7 @@ void DRV_USBFS_HOST_ROOT_HUB_OperationEnable(DRV_HANDLE handle, bool enable)
 }
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 5.1 deviated:3 Deviation record ID -  H3_MISRAC_2012_R_5_1_DR_1 */
+/* MISRA C-2012 Rule 5.1 deviated:3 Deviation record ID -  H3_USB_MISRAC_2012_R_5_1_DR_1 */
 /* Function:
     bool DRV_USBFS_HOST_ROOT_HUB_OperationIsEnabled(DRV_HANDLE handle)
 

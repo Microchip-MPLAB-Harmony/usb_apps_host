@@ -145,7 +145,7 @@ typedef struct
 /*****************************************************************************
 *  SCSI Task state
 *****************************************************************************/
-/* MISRA C-2012 Rule 5.2 deviated:15 Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
+/* MISRA C-2012 Rule 5.2 deviated:15 Deviation record ID -  H3_USB_MISRAC_2012_R_5_2_DR_1 */
 
 
 typedef enum
@@ -408,7 +408,7 @@ typedef struct
 // *****************************************************************************
 
 // ******************************************************************************
-/* MISRA C-2012 Rule 8.6 deviated:2 Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
+/* MISRA C-2012 Rule 8.6 deviated:2 Deviation record ID -  H3_USB_MISRAC_2012_R_8_6_DR_1 */
 /* Function:
     void F_USB_HOST_SCSI_TransferCallback 
     (
