@@ -69,7 +69,7 @@
 // ****************************************************************************
 
 /* MISRA C-2012 Rule 5.2, and 8.6 deviated below. Deviation record ID -  
-    H3_MISRAC_2012_R_5_2_DR_1, H3_MISRAC_2012_R_8_6_DR_1 */
+    H3_USB_MISRAC_2012_R_5_2_DR_1, H3_USB_MISRAC_2012_R_8_6_DR_1 */
 // *****************************************************************************
 /* USB Host CDC Client Driver Handle 
  
