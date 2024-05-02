@@ -610,7 +610,7 @@ void F_USB_HOST_CDC_DeviceTasks
 }
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 11.3 deviated:4 Deviation record ID -  H3_MISRAC_2012_R_11_3_DR_1 */
+/* MISRA C-2012 Rule 11.3 deviated:4 Deviation record ID -  H3_USB_MISRAC_2012_R_11_3_DR_1 */
 /* Function:
     void F_USB_HOST_CDC_InterfaceAssign 
     (
