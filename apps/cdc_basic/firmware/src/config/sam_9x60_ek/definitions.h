@@ -49,10 +49,10 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include "usb/usb_chapter_9.h"
-#include "usb/usb_host.h"
 #include "driver/usb/uhp/drv_usb_ehci.h"
 #include "driver/usb/uhp/drv_usb_ohci.h"
+#include "usb/usb_chapter_9.h"
+#include "usb/usb_host.h"
 #include "bsp/bsp.h"
 #include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/clk/plib_clk.h"
@@ -198,10 +198,10 @@ Remarks:
 
 typedef struct
 {
-    SYS_MODULE_OBJ  usbHostObject0;
-
     SYS_MODULE_OBJ  drvUSBEHCIObject;
     SYS_MODULE_OBJ  drvUSBOHCIObject;
+
+    SYS_MODULE_OBJ  usbHostObject0;
 
     SYS_MODULE_OBJ  sysTime;
 
