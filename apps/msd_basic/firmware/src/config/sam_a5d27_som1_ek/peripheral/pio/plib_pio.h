@@ -91,21 +91,21 @@
 
 
 /*** Macros for USBB_OVCUR pin ***/
-#define USBB_OVCUR_Set()               (PIOD_REGS->PIO_SODR = (1<<19))
-#define USBB_OVCUR_Clear()             (PIOD_REGS->PIO_CODR = (1<<19))
+#define USBB_OVCUR_Set()               (PIOD_REGS->PIO_SODR = ((uint32_t)1U<<19U))
+#define USBB_OVCUR_Clear()             (PIOD_REGS->PIO_CODR = ((uint32_t)1U<<19U))
 #define USBB_OVCUR_Toggle()            do {\
-                                            PIOD_REGS->PIO_MSKR = (1<<19); \
-                                            PIOD_REGS->PIO_ODSR ^= (1<<19);\
+                                            PIOD_REGS->PIO_MSKR = ((uint32_t)1U<<19U); \
+                                            PIOD_REGS->PIO_ODSR ^= ((uint32_t)1U<<19U);\
                                         } while (0)
 #define USBB_OVCUR_OutputEnable()      do {\
-                                            PIOD_REGS->PIO_MSKR = (1<<19); \
-                                            PIOD_REGS->PIO_CFGR |=(1 << PIO_CFGR_DIR_Pos);\
+                                            PIOD_REGS->PIO_MSKR = ((uint32_t)1U<<19U); \
+                                            PIOD_REGS->PIO_CFGR |=((uint32_t)1U << PIO_CFGR_DIR_Pos);\
                                         }while(0)
 #define USBB_OVCUR_InputEnable()       do { \
-                                            PIOD_REGS->PIO_MSKR = (1<<19); \
-                                            PIOD_REGS->PIO_CFGR &= ~(1 << PIO_CFGR_DIR_Pos);\
+                                            PIOD_REGS->PIO_MSKR = ((uint32_t)1U<<19U); \
+                                            PIOD_REGS->PIO_CFGR &= ~((uint32_t)1U << PIO_CFGR_DIR_Pos);\
                                         } while (0)
-#define USBB_OVCUR_Get()               ((PIOD_REGS->PIO_PDSR >> 19) & 0x1)
+#define USBB_OVCUR_Get()               ((PIOD_REGS->PIO_PDSR >> 19U) & 0x1U)
 #define USBB_OVCUR_PIN                  PIO_PIN_PD19
 // *****************************************************************************
 /* PIO Ports
