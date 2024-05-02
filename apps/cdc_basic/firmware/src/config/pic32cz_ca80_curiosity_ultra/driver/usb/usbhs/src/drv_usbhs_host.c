@@ -671,9 +671,8 @@ unsigned int F_DRV_USBHS_HOST_IRPReceiveFIFOUnload
     return (count);
 }
 
-/* MISRA C-2012 Rule 11.3 deviated:9, 11.6 deviated:1 and 11.6 deviated:1 and 11.7 deviated:9 below. 
-   Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1, H3_MISRAC_2012_R_11_6_DR_1  and
-   H3_MISRAC_2012_R_11_7_DR_1 */
+/* MISRA C-2012 Rule 11.3 deviated:9, 11.6 deviated:1 and 11.6 deviated:1 below. 
+   Deviation record ID - H3_USB_MISRAC_2012_R_11_3_DR_1, H3_USB_MISRAC_2012_R_11_6_DR_1  */
 
 
 void F_DRV_USBHS_HOST_Initialize
@@ -746,7 +745,7 @@ void F_DRV_USBHS_HOST_Initialize
     drvObj->usbDrvHostObj.usbHostDeviceInfo = USB_HOST_DEVICE_OBJ_HANDLE_INVALID;
 }
 
-/* MISRA C-2012 Rule 10.4 False Positive:10 Deviation record ID -  H3_MISRAC_2012_R_10_4_DR_1 */
+/* MISRA C-2012 Rule 10.4 False Positive:10 Deviation record ID -  H3_USB_MISRAC_2012_R_10_4_DR_1 */
 
 USB_ERROR DRV_USBHS_HOST_IRPSubmit
 (
@@ -2795,7 +2794,7 @@ void DRV_USBHS_HOST_ROOT_HUB_OperationEnable
 } 
 
 // ****************************************************************************
-/* MISRA C-2012 Rule 5.1 deviated:3 Deviation record ID -  H3_MISRAC_2012_R_5_1_DR_1 */
+/* MISRA C-2012 Rule 5.1 deviated:3 Deviation record ID -  H3_USB_MISRAC_2012_R_5_1_DR_1 */
 
 /* Function:
     bool DRV_USBHS_HOST_ROOT_HUB_OperationIsEnabled
