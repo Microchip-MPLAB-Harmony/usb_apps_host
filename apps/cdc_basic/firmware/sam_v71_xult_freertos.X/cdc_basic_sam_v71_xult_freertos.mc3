@@ -1,4 +1,4 @@
-<config configName="sam_v71_xult_freertos" projectName="cdc_basic_sam_v71_xult_freertos" configVersion="1.1" device="ATSAMV71Q21B" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="sam_v71_xult_freertos" projectName="cdc_basic_sam_v71_xult_freertos" configVersion="1.1" device="ATSAMV71Q21B" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -51,7 +51,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.0"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -5234,11 +5234,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\configuration.h</file>
-         <hash>67be0780781e8400eee2acd3c58e63ca1e368d6f7ef8a203c00a68a873069fb9</hash>
+         <hash>c00c55b76575bc674710360ae8ddc6be42795d30044f49b7d5fe3176f31047d6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\definitions.h</file>
-         <hash>7874bbc0cb3e6f00a8cac83a497f51398af0cae6622a913e117ec0c259125b98</hash>
+         <hash>f400017e88bd7920ef38e500e825e20c3e14db0bdcae70946adc3d472dd8ad2d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\device.h</file>
@@ -5270,23 +5270,23 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\driver\usb\usbhsv1\drv_usbhsv1.h</file>
-         <hash>32bbed573c170491321b4408fcd12ba43cc13d2f9eff78c400c378cfbfc24f69</hash>
+         <hash>ad8ca867c5802433797c3e6834fb5ca94cbdfafc39479d8d8105628f1b09b3f3</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\driver\usb\usbhsv1\src\drv_usbhsv1.c</file>
-         <hash>f64d7b8e5bc42e2f372faa367ac232c4670093c3112b8b068520a58a621da23a</hash>
+         <hash>1cab676d57e77fed1e7b34676150fc3ab59c232424473cdf6cbbe1637cec0138</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\driver\usb\usbhsv1\src\drv_usbhsv1_host.c</file>
-         <hash>638c1edaea3d1249084eda7e5dae63bc10e4b5781475cf92b1bf778a6e7bea45</hash>
+         <hash>7b1e43835efc4301fae0523ef985cb401370fa9f29e84ee62501439cff144a82</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\driver\usb\usbhsv1\src\drv_usbhsv1_local.h</file>
-         <hash>5e074cecfb27f0e230921a21be59b0ef8a8e22b1365c2bf1b233b71cb047fbd6</hash>
+         <hash>a59d5383fca03e36f22e8a3cd4a9ed3b263509556caad4da3836a8652d5e59a4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\driver\usb\usbhsv1\src\drv_usbhsv1_variant_mapping.h</file>
-         <hash>83d39994f551b0da2eeb97f344d861f034f1d49ade3c4cecddbcc4a192d3cd48</hash>
+         <hash>5b4fce5376a794696c8d5d582de5c97d0cb3fa81ffe6022ba83b042d893385b7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\exceptions.c</file>
@@ -5298,7 +5298,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\initialization.c</file>
-         <hash>fda92b98e0fcf5bff31b4c0da370bd896be4bc487a1f7529df887756bcfacc9b</hash>
+         <hash>7caad4dc3ba9f378f3a22dc5ccee5781c5dfd24bc55a06a5d7b2fbe34ab359a0</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\interrupts.c</file>
@@ -5398,7 +5398,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\system\debug\sys_debug.h</file>
-         <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
+         <hash>4162d9e1fab93b8b33f6c8a24726f5dc287ea05c31e3ab984c3c920c725d0882</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\system\int\src\sys_int.c</file>
@@ -5442,7 +5442,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\tasks.c</file>
-         <hash>1ba03302be707b5a6f3e69e8d041603a4e1907d6cc026683c200dc9301c8f6da</hash>
+         <hash>6d1e880941fcfa23d58c0707f274a444429de18c64499d3daa0ea5c3b9125f6e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\toolchain_specifics.h</file>
@@ -5454,11 +5454,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\usb\src\usb_host.c</file>
-         <hash>5e3274284da6c42d8e7bd006531e400a5a7f212da086baea5c2d3697243816e1</hash>
+         <hash>3a8c8e7510577dcac7db2c22fba75dda9af24362f5a2a170c095faef88ffcfd5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\usb\src\usb_host_cdc.c</file>
-         <hash>356ff373a959ffb6c4986d58778df856ea52bd18930e336c1e83bb5e0cb98bd1</hash>
+         <hash>d6e7f71d25270280bf7615f09c112f28abbeabefa8ee5974a94adbda6953636b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\usb\src\usb_host_cdc_acm.c</file>
@@ -5474,31 +5474,31 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\usb\src\usb_host_local.h</file>
-         <hash>bfe0fbac566e72c15e890d8e91ad4332d697e53db841526c8c5c43a7805d4cf2</hash>
+         <hash>aa9e60691421c11748a9659e71b4bce4b24f2aeb9cecd52f850b8868356584b5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\usb\usb_cdc.h</file>
-         <hash>f3fd49fd45b33391baed03778ce573afaaed4d21400f418ad5524000d99473be</hash>
+         <hash>7156ab509a99e1532639ce0826dd8cde6c77581bbe07951e71ec17428deca6c3</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\usb\usb_chapter_9.h</file>
-         <hash>e5e4a9cd868fa4b90113a0bd3ae76d176c7d21d791e7ea9891f1bf9d981da54c</hash>
+         <hash>3d61e683d79bb62694e1133023063da31853e924dd3a2f27abda159876cd6b9e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\usb\usb_common.h</file>
-         <hash>8e8a0115a555330065b8569621173186a2a2815758125026b02596e0d0278c56</hash>
+         <hash>62970f187809ea73ea9bc418b9101ccc0ab77a47cb11149c778e06a49a83bb51</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\usb\usb_host.h</file>
-         <hash>1fd7a53f3b04f3a63013a3350d1f6b1c15aa9f162e9c5acf31b111c27987ad89</hash>
+         <hash>56c248da571d1a46c5d6b5b34e28a978b30b40ee1fb04fa4f2efdcb8a5a1039b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\usb\usb_host_cdc.h</file>
-         <hash>9d7856e2273b49c8d9dfeb7b02e603004cedc8a321eec5d7d931914c454d8e56</hash>
+         <hash>95e2a7c55b054e0461f41e0e55390f641c98c97f54072b2531f96cce27f87190</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\usb\usb_host_client_driver.h</file>
-         <hash>38b5d7e5fee9b09db48b48b52d9b2773f458b09dc2d659c703a075fc90f32490</hash>
+         <hash>274e72a8e34ccc3012d2bb4a100cec9d54ffd296091b35c0f7ec45b528cb34ac</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\usb\usb_host_hub_interface.h</file>
@@ -5506,11 +5506,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\usb\usb_hub.h</file>
-         <hash>733473045c756b6184188c2cf000d8f187f530a9e048dabefaecee347c05e4db</hash>
+         <hash>66a9362619640002d6c8fe6335e044dd7c9cd4fe834d1b2487aa172a08af644b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\usb_host_init_data.c</file>
-         <hash>88181e9ed9eaac33e6a8783d479839ec34d299f935660eca9bd234b684363169</hash>
+         <hash>a298ea3cd13200bc337c3da02e628cee9437c387e537443d8aebbbcedea8b623</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\user.h</file>
