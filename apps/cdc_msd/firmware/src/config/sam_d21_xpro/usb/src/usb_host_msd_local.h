@@ -122,7 +122,7 @@ typedef struct
 /********************************************
  * MSD Client Driver Transfer Error States
  *******************************************/
-/* MISRA C-2012 Rule 5.2 deviated:4 Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
+/* MISRA C-2012 Rule 5.2 deviated:4 Deviation record ID -  H3_USB_MISRAC_2012_R_5_2_DR_1 */
 
 
 
