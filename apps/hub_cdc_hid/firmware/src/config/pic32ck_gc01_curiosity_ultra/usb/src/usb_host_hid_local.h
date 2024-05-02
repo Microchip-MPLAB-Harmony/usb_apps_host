@@ -50,7 +50,7 @@
 // *****************************************************************************
 
 /* MISRA C-2012 Rule 11.1, and 11.8 deviated below. Deviation record ID -  
-    H3_MISRAC_2012_R_11_1_DR_1, H3_MISRAC_2012_R_11_8_DR_1 */
+    H3_USB_MISRAC_2012_R_11_1_DR_1, H3_USB_MISRAC_2012_R_11_8_DR_1 */
 
 #include "usb/usb_host_hid.h"
 #include "usb/src/usb_host_local.h"
