@@ -245,7 +245,7 @@ uint16_t F_DRV_USB_OHCI_GetUniqueKey (DRV_USB_OHCI_OBJ * hDriver)
 }
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 10.4 False Positive:6 Deviation record ID -  H3_MISRAC_2012_R_10_4_DR_1 */
+/* MISRA C-2012 Rule 10.4 False Positive:6 Deviation record ID -  H3_USB_MISRAC_2012_R_10_4_DR_1 */
 /* Function:
     void F_DRV_USB_OHCI_PipeCloseTask(DRV_USB_OHCI_OBJ * hDriver);
 
@@ -696,7 +696,7 @@ size_t F_DRV_USB_OHCI_DataTransferTD
 )
 {
     USB_OHCI_TD * td = &transfer->td;
-    USB_HOST_IRP_LOCAL * irp = transfer->irp;
+    USB_HOST_OHCI_IRP_LOCAL * irp = transfer->irp;
     uint32_t nBytes = 0;
     uint8_t * startAddress = NULL;
     
@@ -757,7 +757,7 @@ size_t F_DRV_USB_OHCI_ControlTransferTD
     USB_OHCI_TD * setupTD = &transfer->setupTD;
     USB_OHCI_TD * dataTD = &transfer->dataTD;
     USB_OHCI_TD * handshakeTD = &transfer->handshakeTD;
-    USB_HOST_IRP_LOCAL * irp = transfer->irp;
+    USB_HOST_OHCI_IRP_LOCAL * irp = transfer->irp;
     USB_DATA_DIRECTION direction = USB_DATA_DIRECTION_DEVICE_TO_HOST;
     size_t nBytes = 0;
 
@@ -834,8 +834,8 @@ size_t F_DRV_USB_OHCI_ControlTransferTD
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 11.3 deviate:15, Rule 11.6 deviate:6 and Rule 11.8 deviate:2. 
-   Deviation record ID -H3_MISRAC_2012_R_11_3_DR_1, H3_MISRAC_2012_R_11_6_DR_1 
-   and H3_MISRAC_2012_R_11_8_DR_1 */
+   Deviation record ID -H3_USB_MISRAC_2012_R_11_3_DR_1, H3_USB_MISRAC_2012_R_11_6_DR_1 
+   and H3_USB_MISRAC_2012_R_11_8_DR_1 */
 /* Function:
     void F_DRV_USB_OHCI_DataTransferProcess(void * pipeObj, void * driver)
 
@@ -858,7 +858,7 @@ void F_DRV_USB_OHCI_DataTransferProcess(void * pipeObj, void * driver)
     DRV_USB_OHCI_TD * placeHolderTD = NULL;
     DRV_USB_OHCI_TD * transfer = NULL;
     USB_OHCI_TD * td = &currentTD->td;
-    USB_HOST_IRP_LOCAL * irp = currentTD->irp;
+    USB_HOST_OHCI_IRP_LOCAL * irp = currentTD->irp;
     USB_OHCI_ED * ed = &pipe->ed;
     uint32_t bytesTransferred = 0;
     bool pipeWasEmpty = false;
@@ -1043,7 +1043,7 @@ void F_DRV_USB_OHCI_ControlTransferProcess(void * pipeObj, void * driver)
     DRV_USB_OHCI_OBJ * hDriver = (DRV_USB_OHCI_OBJ *)driver;
     DRV_USB_OHCI_CONTROL_TD * td = (DRV_USB_OHCI_CONTROL_TD *)pipe->currentTD;
     DRV_USB_OHCI_CONTROL_TD * placeHolderTD = NULL;
-    USB_HOST_IRP_LOCAL * irp = td->irp;
+    USB_HOST_OHCI_IRP_LOCAL * irp = td->irp;
     USB_OHCI_ED * ed = &pipe->ed;
     USB_OHCI_TD * setupTD = &td->setupTD;
     USB_OHCI_TD * dataTD = &td->dataTD;
@@ -1615,8 +1615,8 @@ USB_ERROR DRV_USB_OHCI_IRPSubmit
     DRV_USB_OHCI_OBJ * hDriver = NULL;
     DRV_USB_OHCI_ED * pipe = NULL;
     DRV_USB_OHCI_TD * transfer = NULL;
-    USB_HOST_IRP_LOCAL * pIRP = (USB_HOST_IRP_LOCAL *)pinputIRP;
-    USB_HOST_IRP_LOCAL * currentIRP = NULL;
+    USB_HOST_OHCI_IRP_LOCAL * pIRP = (USB_HOST_OHCI_IRP_LOCAL *)pinputIRP;
+    USB_HOST_OHCI_IRP_LOCAL * currentIRP = NULL;
     uint32_t i = 0;
   
     returnValue = USB_ERROR_HOST_PIPE_INVALID;
@@ -1868,7 +1868,7 @@ USB_ERROR DRV_USB_OHCI_IRPSubmit
  
 void DRV_USB_OHCI_IRPCancel(USB_HOST_IRP * inputIRP)
 {
-    USB_HOST_IRP_LOCAL * irp = (USB_HOST_IRP_LOCAL *)inputIRP;
+    USB_HOST_OHCI_IRP_LOCAL * irp = (USB_HOST_OHCI_IRP_LOCAL *)inputIRP;
     DRV_USB_OHCI_PIPE_HANDLE hPipe = DRV_USB_OHCI_PIPE_HANDLE_INVALID;
     DRV_USB_OHCI_OBJ * hDriver = NULL;
     DRV_USB_OHCI_ED * pipe = NULL;
@@ -1878,7 +1878,7 @@ void DRV_USB_OHCI_IRPCancel(USB_HOST_IRP * inputIRP)
     uint32_t drvIndex = 0;
     DRV_USB_OHCI_TD * currentTD = NULL;
     DRV_USB_OHCI_CONTROL_TD * controlTD = NULL;
-    USB_HOST_IRP_LOCAL * currentIRP = NULL;
+    USB_HOST_OHCI_IRP_LOCAL * currentIRP = NULL;
 
     if(irp != NULL)
     {
@@ -2037,7 +2037,7 @@ void DRV_USB_OHCI_PipeClose
     DRV_USB_OHCI_OBJ * hDriver = NULL;
     bool thereWasAnError = false; 
     bool interruptWasEnabled = false;
-    USB_HOST_IRP_LOCAL * irp = NULL;
+    USB_HOST_OHCI_IRP_LOCAL * irp = NULL;
       
     if(pipeObjIndex < (uint32_t)USB_HOST_PIPES_NUMBER)
     {

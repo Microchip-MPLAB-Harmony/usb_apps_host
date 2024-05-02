@@ -1,4 +1,4 @@
-<config configName="sam_9x60_ek_freertos" projectName="msd_basic_sam_9x60_ek_freertos" configVersion="1.1" device="SAM9X60" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="sam_9x60_ek_freertos" projectName="msd_basic_sam_9x60_ek_freertos" configVersion="1.1" device="SAM9X60" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -51,7 +51,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.0"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -4489,7 +4489,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\definitions.h</file>
-         <hash>12176b32d1a913c14880cc9d685b7002411600ae3310982389d8b753807c521a</hash>
+         <hash>3d6497abe50509bac49f70c02b390fb78112735352c13e6ee5c60b5e6c338cad</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\device.h</file>
@@ -4517,31 +4517,31 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\driver\usb\uhp\drv_usb_ehci.h</file>
-         <hash>c5563e8e5d3749798351c300289d4e4269349361fc856df37de63f5a65bc6ee0</hash>
+         <hash>cd4ef1fc76c54ecb70c71d9f90678e080754f3996a7ea305aea5304279df9860</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\driver\usb\uhp\drv_usb_ohci.h</file>
-         <hash>2605ada8b321f65ad4d8ed3c3736a87d5270188c390ba9582846b30ac9bb6f20</hash>
+         <hash>a1ab00eb37e4cd23682e4a8fe540503579f28ba54d01463f3822c0b4e6d47c67</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\driver\usb\uhp\src\drv_usb_ehci.c</file>
-         <hash>c5472f70e6042e2217a51d8fcce8ccb98d3b8c09f2d60a4845c028c13b8bdd8e</hash>
+         <hash>5be2ea9e53302767da3d7fb34718e47a2d54834c879c1fa2baac858b4f1808ce</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>480bba57d1693ba9dbd176146d48cdb7b2e804f02de71e5d3742eb409a1bd099</hash>
+         <hash>0e68dfe6a94fa4fd8a6af04fce41c55b05953fffce15e654b93e4c85ee35a396</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\driver\usb\uhp\src\drv_usb_ohci.c</file>
-         <hash>a75799196e483ed92e569d2ed3c8c35b206b943e2f9722bf8d95f3bc03af01e2</hash>
+         <hash>5fb5b609f395e43e530addcbcec0ed1a6abddf6d38e1003d6a73b78e9e741052</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\driver\usb\uhp\src\drv_usb_ohci_local.h</file>
-         <hash>a82037e76cfa4eca5023da77fbd67218bed0676919e97c76bc1d33abe6dd88eb</hash>
+         <hash>e670cac6044d0e41a477f12aa474e27110963fc5c808c438eaba3c5459ae6efa</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\driver\usb\uhp\src\drv_usb_uhp_ohci_registers.h</file>
-         <hash>f34d534fda59425f76ca8d468852d7476fe7927ad31569c6bba4a72df7a2b1f4</hash>
+         <hash>c94373b073204b4ab88a4535b03e0c0599378719732a7fd1fbcb58baae077c98</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\fault_handlers.c</file>
@@ -4657,7 +4657,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\system\debug\sys_debug.h</file>
-         <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
+         <hash>4162d9e1fab93b8b33f6c8a24726f5dc287ea05c31e3ab984c3c920c725d0882</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\system\fs\fat_fs\file_system\ff.c</file>
@@ -4769,7 +4769,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\usb\scsi.h</file>
-         <hash>f27c8e740061441ffd0030bde5ee09ab7d96509d931c2c6319c944a2e86e85b4</hash>
+         <hash>9e99b9d86e834bafccd799d6baff1bb38f1b0b466ad6b8ec7ce7823491f9d321</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\usb\src\usb_external_dependencies.h</file>
@@ -4777,7 +4777,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\usb\src\usb_host.c</file>
-         <hash>5e3274284da6c42d8e7bd006531e400a5a7f212da086baea5c2d3697243816e1</hash>
+         <hash>3a8c8e7510577dcac7db2c22fba75dda9af24362f5a2a170c095faef88ffcfd5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\usb\src\usb_host_hub_mapping.h</file>
@@ -4785,43 +4785,43 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\usb\src\usb_host_local.h</file>
-         <hash>bfe0fbac566e72c15e890d8e91ad4332d697e53db841526c8c5c43a7805d4cf2</hash>
+         <hash>aa9e60691421c11748a9659e71b4bce4b24f2aeb9cecd52f850b8868356584b5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\usb\src\usb_host_msd.c</file>
-         <hash>cfb1472e2d51443b93a149242a348112826ac7889427afc6eb1358c010b5852e</hash>
+         <hash>047745e8bc45c6d529c2d709d1da250d46f318bf8937fbcc656d09469e63eb0a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\usb\src\usb_host_msd_local.h</file>
-         <hash>e23a31fbb886b4d879c06331f89c86913a96401d6b639db9c2616950f35b5db5</hash>
+         <hash>18bdfbb5e7b71555902d9706ec66a24ef5e769902ede673f468aad671ae33074</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\usb\src\usb_host_scsi.c</file>
-         <hash>4718c3e9e9235e5f6db6e9e95aebf1feef213dd811428a6e38aa7cdbe5aa0a5b</hash>
+         <hash>a83c5aabc6fa20454568846156e8a2336bd6398a92827a255da0f9985ac2b5ed</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\usb\src\usb_host_scsi_local.h</file>
-         <hash>bb588dd44d94263d148cdd6f1b350395a3ad488f5ebb9555a2992c8d9bf939d4</hash>
+         <hash>7e4f9b3b29be6b6889a381b89f62cbf030b6edd5b8c89c4924fd4efe6b251f44</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\usb\usb_chapter_9.h</file>
-         <hash>e5e4a9cd868fa4b90113a0bd3ae76d176c7d21d791e7ea9891f1bf9d981da54c</hash>
+         <hash>3d61e683d79bb62694e1133023063da31853e924dd3a2f27abda159876cd6b9e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\usb\usb_common.h</file>
-         <hash>8e8a0115a555330065b8569621173186a2a2815758125026b02596e0d0278c56</hash>
+         <hash>62970f187809ea73ea9bc418b9101ccc0ab77a47cb11149c778e06a49a83bb51</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\usb\usb_ehci.h</file>
-         <hash>3c6fa3dec84e28fb9d95c9999eb9ea19ba430d3b75bb4324caaf139d88b47709</hash>
+         <hash>4ca8020fb40107ddfb6daa29564a698346508ada7827a8c1e4beb7e986c18bee</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\usb\usb_host.h</file>
-         <hash>1fd7a53f3b04f3a63013a3350d1f6b1c15aa9f162e9c5acf31b111c27987ad89</hash>
+         <hash>56c248da571d1a46c5d6b5b34e28a978b30b40ee1fb04fa4f2efdcb8a5a1039b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\usb\usb_host_client_driver.h</file>
-         <hash>38b5d7e5fee9b09db48b48b52d9b2773f458b09dc2d659c703a075fc90f32490</hash>
+         <hash>274e72a8e34ccc3012d2bb4a100cec9d54ffd296091b35c0f7ec45b528cb34ac</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\usb\usb_host_hub_interface.h</file>
@@ -4829,27 +4829,27 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\usb\usb_host_msd.h</file>
-         <hash>d8081f19c1b4e8596877c52fd5e430b52de3226fa491c85cf3d86ee44f0c5602</hash>
+         <hash>b4509abcdcf65138ebed541a9ef407c88d2543be6b9a9827832a2a8ac9fea8b5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\usb\usb_host_scsi.h</file>
-         <hash>4cb33db1f10cd6ca895b31553f7c76ce9492511063e55f0d3e1d1683cbf05f33</hash>
+         <hash>db0f6aca2a0b37c56ba9d7224786672a6888c2172544b2cb61726772f9947033</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\usb\usb_hub.h</file>
-         <hash>733473045c756b6184188c2cf000d8f187f530a9e048dabefaecee347c05e4db</hash>
+         <hash>66a9362619640002d6c8fe6335e044dd7c9cd4fe834d1b2487aa172a08af644b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\usb\usb_msd.h</file>
-         <hash>9c7259ddc5267502757b62cc46ceb970037f37b27ab875e686d60319dea4a8d0</hash>
+         <hash>ed0955bb37076b0194512792d88e109f36f3e23fb2869b43c30e0e1b36f8520e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\usb\usb_ohci.h</file>
-         <hash>8473159e3cdb858e0d0b7afefea4e18ee08497e826108d20c15558166f1429b6</hash>
+         <hash>6e333a4861c360fa58927cf7b2f43f5c565fabbc2d22eda0ea01b899ff413f48</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\usb_host_init_data.c</file>
-         <hash>65294684d6097441f38bf4334da9eda4624040982a0c7fed1cc53ba1c805f962</hash>
+         <hash>e32951e55017f7bae38e13f9a7d33d7adb487186e191b62da1f8aeda48f22850</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\user.h</file>
