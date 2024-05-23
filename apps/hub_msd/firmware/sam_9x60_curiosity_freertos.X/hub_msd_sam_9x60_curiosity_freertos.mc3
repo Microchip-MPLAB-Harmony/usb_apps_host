@@ -4050,8 +4050,11 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;GraphSettings canvasHeight=&quot;367&quot; canvasWidth=&quot;601&quot; dnOrder=&quot;0&quot;/&gt;
-    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;GraphSettings canvasHeight=&quot;389&quot; canvasWidth=&quot;599&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;PowerProfiles dnOrder=&quot;1&quot;&gt;
+      &lt;Profile dnOrder=&quot;0&quot; id=&quot;profile0&quot; name=&quot;Main&quot;/&gt;
+    &lt;/PowerProfiles&gt;
+    &lt;ComponentGraph dnOrder=&quot;2&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_SAM_9X60_Curiosity&quot; x=&quot;155&quot; y=&quot;68&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;FreeRTOS&quot; x=&quot;142&quot; y=&quot;106&quot;/&gt;
@@ -5487,7 +5490,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="drv_usbhs_v1" name="USB_DRIVER_RTOS_DELAY"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drv_usbhs_v1&gt;
   &lt;drv_usbhs_v1 dnOrder=&quot;0&quot; id=&quot;USB_DRIVER_RTOS_DELAY&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;1&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/drv_usbhs_v1&gt;
 &lt;/drv_usbhs_v1&gt;
 </value>
@@ -6403,7 +6408,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_RTOS_DELAY"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_RTOS_DELAY&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;1&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/sys_fs&gt;
 &lt;/sys_fs&gt;
 </value>
@@ -8572,7 +8579,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="usb_host" name="USB_HOST_RTOS_DELAY"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;usb_host&gt;
   &lt;usb_host dnOrder=&quot;0&quot; id=&quot;USB_HOST_RTOS_DELAY&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;1&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/usb_host&gt;
 &lt;/usb_host&gt;
 </value>
@@ -8663,7 +8672,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\configuration.h</file>
-         <hash>23aa4d8495bd27f0bf3dcdc25c2f4138b69bf3cac7d27b480d551840777624bb</hash>
+         <hash>c35cb55cab42a74d4025df04d372c84ea1a6d95d0971c5c9c0076c2f5237e0f1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\cstartup.S</file>
@@ -8675,7 +8684,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\definitions.h</file>
-         <hash>cfea50fb144eb12384c7fec28188034615d1b78ef1a36e5713a5216267f492e9</hash>
+         <hash>cb8869752af5793d639f7226e072011387020d9f55ff919531b66dd6749b76f2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\device.h</file>
@@ -8739,7 +8748,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\initialization.c</file>
-         <hash>7b493d23d56c3719f3ed8ca75d8ab1a64d440ae2afa417047214e3352c7abd8a</hash>
+         <hash>2cf89496d05ba9efec16261c06eacd587eeeb58942c6434b9ecb9114099b4f37</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\interrupts.c</file>
@@ -8947,7 +8956,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\tasks.c</file>
-         <hash>0f1ab3daeca98c8df57cc2354e4f5119349e9f1261bd0ba6c5871af9ac14b2e5</hash>
+         <hash>55b9cd71888e1822882e20affe1a327c9ee62bd8e1072cec581f327bc18e38e2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\toolchain_specifics.h</file>
