@@ -1,22 +1,30 @@
 /*******************************************************************************
-  DBGU PLIB
+  Driver Layer Interface Header
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_dbgu.h
+    driver.h
 
   Summary:
-    DBGU PLIB Header File
+    Driver layer data types and definitions.
 
   Description:
-    None
+    This file defines the common macros and definitions for the driver layer
+    modules.
 
-*******************************************************************************/
+  Remarks:
+    The parent directory to the "system" directory should be added to the
+    compiler's search path for header files such that the following include
+    statement will successfully include this file.
 
+    #include "system/system.h"
+ *******************************************************************************/
+
+//DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -36,63 +44,25 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
+ *******************************************************************************/
+//DOM-IGNORE-END
 
-#ifndef PLIB_DBGU_H
-#define PLIB_DBGU_H
+#ifndef SYSTEM_H
+#define SYSTEM_H
 
-#include "plib_dbgu_common.h"
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-    extern "C" {
-
-#endif
-// DOM-IGNORE-END
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Interface
+// Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-#define DBGU_FrequencyGet()    (uint32_t)(266666666UL)
 
-/****************************** DBGU API *********************************/
-
-void DBGU_Initialize(void);
-
-DBGU_ERROR DBGU_ErrorGet(void);
-
-bool DBGU_SerialSetup(DBGU_SERIAL_SETUP *setup, uint32_t srcClkFreq);
-
-bool DBGU_Write(void *buffer, const size_t size);
-
-bool DBGU_Read(void *buffer, const size_t size);
+#include "system/system_common.h"
+#include "system/system_module.h"
 
 
-bool DBGU_WriteIsBusy(void);
+#endif // SYSTEM_H
+/*******************************************************************************
+ End of File
+*/
 
-bool DBGU_ReadIsBusy(void);
-
-size_t DBGU_WriteCountGet(void);
-
-size_t DBGU_ReadCountGet(void);
-
-void DBGU_WriteCallbackRegister(DBGU_CALLBACK callback, uintptr_t context);
-
-void DBGU_ReadCallbackRegister(DBGU_CALLBACK callback, uintptr_t context);
-
-bool DBGU_ReadAbort(void);
-
-
-bool DBGU_TransmitComplete(void);
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-    }
-
-#endif
-// DOM-IGNORE-END
-#endif // PLIB_DBGU_H

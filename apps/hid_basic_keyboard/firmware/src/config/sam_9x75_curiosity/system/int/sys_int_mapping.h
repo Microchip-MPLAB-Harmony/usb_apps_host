@@ -1,22 +1,24 @@
 /*******************************************************************************
-  DBGU PLIB
+  Interrupt System Service Mapping File
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_dbgu.h
+    sys_int_mapping.h
 
   Summary:
-    DBGU PLIB Header File
+    Interrupt System Service mapping file.
 
   Description:
-    None
-
+    This header file contains the mapping of the APIs defined in the API header
+    to either the function implementations or macro implementation or the
+    specific variant implementation.
 *******************************************************************************/
 
-/*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+//DOM-IGNORE-BEGIN
+/******************************************************************************
+* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -37,62 +39,20 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
+//DOM-IGNORE-END
 
-#ifndef PLIB_DBGU_H
-#define PLIB_DBGU_H
-
-#include "plib_dbgu_common.h"
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-    extern "C" {
-
-#endif
-// DOM-IGNORE-END
+#ifndef SYS_INT_MAPPING_H
+#define SYS_INT_MAPPING_H
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Interface
+// Section: Interrupt System Service Mapping
 // *****************************************************************************
 // *****************************************************************************
-#define DBGU_FrequencyGet()    (uint32_t)(266666666UL)
 
-/****************************** DBGU API *********************************/
-
-void DBGU_Initialize(void);
-
-DBGU_ERROR DBGU_ErrorGet(void);
-
-bool DBGU_SerialSetup(DBGU_SERIAL_SETUP *setup, uint32_t srcClkFreq);
-
-bool DBGU_Write(void *buffer, const size_t size);
-
-bool DBGU_Read(void *buffer, const size_t size);
+/* MISRA C-2012 Rule 5.8 deviated:6 Deviation record ID -  H3_MISRAC_2012_R_5_8_DR_1 */
 
 
-bool DBGU_WriteIsBusy(void);
+/* MISRAC 2012 deviation block end */
 
-bool DBGU_ReadIsBusy(void);
-
-size_t DBGU_WriteCountGet(void);
-
-size_t DBGU_ReadCountGet(void);
-
-void DBGU_WriteCallbackRegister(DBGU_CALLBACK callback, uintptr_t context);
-
-void DBGU_ReadCallbackRegister(DBGU_CALLBACK callback, uintptr_t context);
-
-bool DBGU_ReadAbort(void);
-
-
-bool DBGU_TransmitComplete(void);
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-    }
-
-#endif
-// DOM-IGNORE-END
-#endif // PLIB_DBGU_H
+#endif // SYS_INT_MAPPING_H

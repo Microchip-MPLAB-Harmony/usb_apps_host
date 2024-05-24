@@ -243,6 +243,12 @@
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <itemPath>Makefile</itemPath>
+      <itemPath>hid_basic_keyboard_sam_9x75_curiosity.mc3</itemPath>
+    </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
@@ -330,12 +336,6 @@
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/config/sam_9x75_curiosity/pin_configurations.csv</itemPath>
     </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="false">
-      <itemPath>Makefile</itemPath>
-      <itemPath>hid_basic_keyboard_sam_9x75_curiosity.mc3</itemPath>
-    </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -345,9 +345,9 @@
         <targetDevice>SAM9X75D2G</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>j32</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.35</languageToolchainVersion>
+        <languageToolchainVersion>4.40</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -380,8 +380,8 @@
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
-        <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep></makeCustomizationPostStep>
+        <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
+        <makeCustomizationPostStep>${MP_CC_DIR}/xc32-objcopy -O binary ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.elf ${DISTDIR}/harmony.bin </makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
@@ -415,7 +415,7 @@
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
-        <appendMe value="-Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wmissing-noreturn"/>
+        <appendMe value="-Waggregate-return -Wbad-function-cast -Wlong-long -Wmissing-noreturn -Wnested-externs -Wno-deprecated-declarations -Wpointer-arith -Wredundant-decls -Wshadow -Wstrict-prototypes -Wundef -Wunreachable-code -Wwrite-strings -marm"/>
       </C32>
       <C32-AR>
         <property key="additional-options-chop-files" value="false"/>
@@ -538,6 +538,7 @@
         <property key="communication.speed" value="4"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="event.recorder.debugger.behavior" value="Running"/>
         <property key="event.recorder.enabled" value="false"/>
         <property key="event.recorder.scvd.files" value=""/>
         <property key="jlink.override" value=""/>
@@ -555,6 +556,8 @@
         <property key="programoptions.eraseb4program" value="false"/>
         <property key="programoptions.preservebootflash" value="false"/>
         <property key="programoptions.preserveprogrammemory" value="false"/>
+        <property key="programoptions.preserveprogrammemory.ranges"
+                  value="0x300000-0xeff00fff"/>
         <property key="programoptions.preserveprogramrange.ranges"
                   value="0x300000-0xeff00fff"/>
         <property key="programoptions.resetafterprogram" value="true"/>
@@ -571,6 +574,7 @@
         <property key="communication.speed" value="4"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="event.recorder.debugger.behavior" value="Running"/>
         <property key="event.recorder.enabled" value="false"/>
         <property key="event.recorder.scvd.files" value=""/>
         <property key="jlink.override" value=""/>
@@ -588,7 +592,7 @@
         <property key="programoptions.eraseb4program" value="false"/>
         <property key="programoptions.preservebootflash" value="false"/>
         <property key="programoptions.preserveprogrammemory" value="false"/>
-        <property key="programoptions.preserveprogramrange.ranges"
+        <property key="programoptions.preserveprogrammemory.ranges"
                   value="0x300000-0xeff00fff"/>
         <property key="programoptions.resetafterprogram" value="true"/>
         <property key="script.has_reset" value="true"/>

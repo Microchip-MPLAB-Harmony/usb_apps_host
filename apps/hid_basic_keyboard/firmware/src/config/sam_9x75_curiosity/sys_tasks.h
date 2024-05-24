@@ -1,22 +1,23 @@
 /*******************************************************************************
-  DBGU PLIB
-
-  Company:
-    Microchip Technology Inc.
+ System Tasks Header File
 
   File Name:
-    plib_dbgu.h
+    sys_tasks.h
 
   Summary:
-    DBGU PLIB Header File
+    This file contains declarations for task handles.
 
   Description:
+    Task handles declared in this header file can be used by the application
+    to control the behavior of the tasks.
+
+  Remarks:
     None
+ *******************************************************************************/
 
-*******************************************************************************/
-
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2023 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -36,63 +37,20 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
-
-#ifndef PLIB_DBGU_H
-#define PLIB_DBGU_H
-
-#include "plib_dbgu_common.h"
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-    extern "C" {
-
-#endif
+ *******************************************************************************/
 // DOM-IGNORE-END
 
+#ifndef SYS_TASKS_H
+#define SYS_TASKS_H
+
 // *****************************************************************************
 // *****************************************************************************
-// Section: Interface
+// Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-#define DBGU_FrequencyGet()    (uint32_t)(266666666UL)
 
-/****************************** DBGU API *********************************/
-
-void DBGU_Initialize(void);
-
-DBGU_ERROR DBGU_ErrorGet(void);
-
-bool DBGU_SerialSetup(DBGU_SERIAL_SETUP *setup, uint32_t srcClkFreq);
-
-bool DBGU_Write(void *buffer, const size_t size);
-
-bool DBGU_Read(void *buffer, const size_t size);
+#include "configuration.h"
+#include "definitions.h"
 
 
-bool DBGU_WriteIsBusy(void);
-
-bool DBGU_ReadIsBusy(void);
-
-size_t DBGU_WriteCountGet(void);
-
-size_t DBGU_ReadCountGet(void);
-
-void DBGU_WriteCallbackRegister(DBGU_CALLBACK callback, uintptr_t context);
-
-void DBGU_ReadCallbackRegister(DBGU_CALLBACK callback, uintptr_t context);
-
-bool DBGU_ReadAbort(void);
-
-
-bool DBGU_TransmitComplete(void);
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-    }
-
-#endif
-// DOM-IGNORE-END
-#endif // PLIB_DBGU_H
+#endif //SYS_TASKS_H
