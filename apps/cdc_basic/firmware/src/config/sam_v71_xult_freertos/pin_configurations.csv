@@ -35,7 +35,7 @@
 41,PC4,,Available,In,,,,,,,
 42,PA13,,Available,In,,,,,,,
 45,PA16,,Available,In,,,,,,,
-46,PA23,LED0,LED_AL,n/a,n/a,No,Disabled,No,No,Disabled,Low
+46,PA23,LED1,LED_AL,n/a,n/a,No,Disabled,No,No,Disabled,Low
 47,PD27,,Available,In,,,,,,,
 48,PC7,,Available,In,,,,,,,
 49,PA15,,Available,In,,,,,,,
@@ -68,7 +68,7 @@
 79,PB6,,Available,In,,,,,,,
 82,PC8,,Available,In,,,,,,,
 84,PD14,,Available,In,,,,,,,
-86,PC9,LED1,LED_AL,n/a,n/a,No,Disabled,No,No,Disabled,Low
+86,PC9,LED0,LED_AL,n/a,n/a,No,Disabled,No,No,Disabled,Low
 87,PB12,SWITCH1,SWITCH_AL,n/a,n/a,No,Disabled,Yes,No,Disabled,Low
 88,PD13,,Available,In,,,,,,,
 89,PB7,,Available,In,,,,,,,
