@@ -1,4 +1,4 @@
-<config configName="sam_9x75_curiosity" projectName="hid_basic_mouse_usart_sam_9x75_curiosity" configVersion="1.1" device="SAM9X75D2G" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="sam_9x75_curiosity" projectName="hid_basic_mouse_usart_sam_9x75_curiosity" configVersion="1.1" device="SAM9X75D2G" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.0">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -4210,7 +4210,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_40_DIR&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;Out&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4221,7 +4221,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_40_FUNCTION_NAME&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;VBUS_AH_PB18&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4232,7 +4232,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_40_FUNCTION_TYPE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;VBUS_AH&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4243,7 +4243,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_40_PERIPHERAL_FUNCTION&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;VBUS_AH&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4354,6 +4354,50 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_50_PERIPHERAL_FUNCTION&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;User dnOrder=&quot;0&quot; value=&quot;LED_AH&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_52_DIR"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_52_DIR&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;Out&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_52_FUNCTION_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_52_FUNCTION_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;VBUS_AH_PC29&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_52_FUNCTION_TYPE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_52_FUNCTION_TYPE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;VBUS_AH&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_52_PERIPHERAL_FUNCTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_52_PERIPHERAL_FUNCTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;VBUS_AH&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4628,7 +4672,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIOB_OER_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;262144&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4683,7 +4727,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIOC_OER_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;137887744&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;674758656&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -7677,15 +7721,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\bsp\bsp.c</file>
-         <hash>3e7f0a0511c3e48456bb42f2230101712a465cdc9e9207dfc21268c9ddb752e6</hash>
+         <hash>536d96e23ff5d06b423a81e3c58dfee95856598774a6ff8b84d14d45542b5256</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\bsp\bsp.h</file>
-         <hash>de6f4905165faf0c7ef2996e2dc3d5cc38d0f1574c49c23640eae0f187f4fa92</hash>
+         <hash>b6e96c6327b5d0acda372ab21e61ed3ace2930ac736f7def6ac61e4cd198196e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\configuration.h</file>
-         <hash>de8ecfa69121e9de27c14758b7f592732258554cc47efa42b4b4d3f00b98d4a2</hash>
+         <hash>502a1f2ee01a6b19a61c11f9807ebcbc79f9bedf74e335adeb6efa75769c8af1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\cstartup.S</file>
@@ -7697,7 +7741,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\definitions.h</file>
-         <hash>c2ea22f7004f77da47bf9415c59cd560ad5daa5c2252baeec45dc5bfe1896876</hash>
+         <hash>986061173c7b8f95f0b8b3ec7328bf9397ca074ed102e2e2ebc93ddf37cf4de3</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\device.h</file>
@@ -7749,19 +7793,19 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\driver\usb\uhp\src\drv_usb_ehci.c</file>
-         <hash>8f7769bd67ebb32b3b80591f9344c3e977e2fce50344be23e61fbc454fb52d80</hash>
+         <hash>5be2ea9e53302767da3d7fb34718e47a2d54834c879c1fa2baac858b4f1808ce</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>d5f696e02561881c9d87d98b3a055bc3a9c6864480ec47ee4fc19d908510c46d</hash>
+         <hash>0c89ab1018f60b9f0e4666f2874d874c370ba14e8ba613b5c85c48c82d7e8ded</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\driver\usb\uhp\src\drv_usb_ohci.c</file>
-         <hash>34bb9aeefb9c3516501b86bbc0ca35be4755dbfe1721b0ba1a115e0f291384c9</hash>
+         <hash>5fb5b609f395e43e530addcbcec0ed1a6abddf6d38e1003d6a73b78e9e741052</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\driver\usb\uhp\src\drv_usb_ohci_local.h</file>
-         <hash>6921c3286a0685b2f64d8ae18aa4c0b19e2075607416c6a195e2fab2b7632c14</hash>
+         <hash>e670cac6044d0e41a477f12aa474e27110963fc5c808c438eaba3c5459ae6efa</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\driver\usb\uhp\src\drv_usb_uhp_ohci_registers.h</file>
@@ -7773,7 +7817,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\initialization.c</file>
-         <hash>14a51b30fd8156ae124fe967befa72be4c3aa8ac2a8b0bb9eb1457a0ab0ecb15</hash>
+         <hash>cebcee9a5f780f143493299b8570daf971fba61c949332f7cb993c5ababfcae6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\interrupts.c</file>
@@ -7837,7 +7881,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\peripheral\pio\plib_pio.c</file>
-         <hash>b90c8b16a79c1c2215086498db774e70aa707c70d14c4226735e0e3bec869480</hash>
+         <hash>291b13d149ee356fd27270c6467bcf520673dd13ef7c420e5a4f2b2514d303cc</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\peripheral\pio\plib_pio.h</file>
@@ -7857,7 +7901,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\pin_configurations.csv</file>
-         <hash>dce482b8394d88ff3dbaf04d760d2e4ae7865ccb2a20a8ae0276c895556251dc</hash>
+         <hash>8fedc3d32ad56a6e78383aed6c30b904c08258193dbba9b099168c7358ff1b71</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\stdio\xc32_monitor.c</file>
@@ -7877,7 +7921,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\system\debug\sys_debug.h</file>
-         <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
+         <hash>4162d9e1fab93b8b33f6c8a24726f5dc287ea05c31e3ab984c3c920c725d0882</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\system\int\src\sys_int.c</file>
@@ -7921,7 +7965,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\tasks.c</file>
-         <hash>8afc96c365d4778505b9e7b9b2819984bb538e5fe19c555e06171d0854b04bad</hash>
+         <hash>1e0ce44cb20e6b7c2bc86ada2e3c5e10eb1249d25965a75a5255535b3c43da77</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\toolchain_specifics.h</file>
@@ -7945,7 +7989,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\usb\src\usb_host_hid_mouse.c</file>
-         <hash>9f071a7d09068c90fa61d35405f5a97efbac37f7e21dffe9b6595a04be385241</hash>
+         <hash>b58fe852e6c3f81d027f0dad912682e4a43e4cd9f30f7c940b97fba2a4ad051f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\usb\src\usb_host_hid_mouse_local.h</file>
