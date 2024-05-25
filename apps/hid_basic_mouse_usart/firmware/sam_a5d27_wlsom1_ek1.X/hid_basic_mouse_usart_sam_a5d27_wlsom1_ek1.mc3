@@ -5306,7 +5306,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\configuration.h</file>
-         <hash>018444869c779c27470da3d20a12f834d13dee1dd6f62843c26caa57479f77b7</hash>
+         <hash>e76fc2cd092d8eddabf45cd328ac48faf849f3eece4a0a24fa75637c72b9e618</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\cstartup.S</file>
@@ -5318,7 +5318,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\definitions.h</file>
-         <hash>c8c82034c1f4c6b68485a1ac0fbbd131c4dfb86d8dc752905e8173babbb7df72</hash>
+         <hash>bfcc039f68b10c56c35ac67fafc5f8cf048e182265433315ce8f5ed082750e22</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\device.h</file>
@@ -5374,7 +5374,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>0e68dfe6a94fa4fd8a6af04fce41c55b05953fffce15e654b93e4c85ee35a396</hash>
+         <hash>0c89ab1018f60b9f0e4666f2874d874c370ba14e8ba613b5c85c48c82d7e8ded</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\driver\usb\uhp\src\drv_usb_ohci.c</file>
@@ -5394,7 +5394,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\initialization.c</file>
-         <hash>b79e3292f0755f83d8a78751fcffe1b1d8d399d177aa8602556b412419e3203a</hash>
+         <hash>c74d668f49d724e510ad5121ea4da0e478000811dbfc2d8ded9af314f8ecf9b5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\interrupts.c</file>
@@ -5558,7 +5558,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\tasks.c</file>
-         <hash>1e0ce44cb20e6b7c2bc86ada2e3c5e10eb1249d25965a75a5255535b3c43da77</hash>
+         <hash>8afc96c365d4778505b9e7b9b2819984bb538e5fe19c555e06171d0854b04bad</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\toolchain_specifics.h</file>
