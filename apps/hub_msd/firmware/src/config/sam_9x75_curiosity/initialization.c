@@ -96,13 +96,14 @@ static void DRV_USB_VBUSPowerEnable(uint8_t port, bool enable)
     {
         /* Enable the VBUS */
         VBUS_AH_PC27_PowerEnable();
-        VBUS_AH_PC29_PowerEnable();
+        VBUS_AH_PB18_PowerEnable();
+
     }
     else
     {
         /* Disable the VBUS */
-        VBUS_AH_PC27_PowerDisable();
-        VBUS_AH_PC29_PowerDisable();
+        VBUS_AH_PC27_PowerEnable();
+        VBUS_AH_PB18_PowerEnable();
     }
 }
 
