@@ -3089,7 +3089,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\configuration.h</file>
-         <hash>502a1f2ee01a6b19a61c11f9807ebcbc79f9bedf74e335adeb6efa75769c8af1</hash>
+         <hash>de8ecfa69121e9de27c14758b7f592732258554cc47efa42b4b4d3f00b98d4a2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\cstartup.S</file>
@@ -3101,7 +3101,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\definitions.h</file>
-         <hash>9c622d648ff590db728b1d180451d83d3c57e1a4173fd2849702b04677956d17</hash>
+         <hash>6b432e747b1b91f84dbfbb1bfdda3075b6060683fb0766bf17d6671f42b4aa93</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\device.h</file>
@@ -3157,7 +3157,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>0e68dfe6a94fa4fd8a6af04fce41c55b05953fffce15e654b93e4c85ee35a396</hash>
+         <hash>0c89ab1018f60b9f0e4666f2874d874c370ba14e8ba613b5c85c48c82d7e8ded</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\driver\usb\uhp\src\drv_usb_ohci.c</file>
@@ -3177,7 +3177,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\initialization.c</file>
-         <hash>475b664f80343de71611ff74c6bbe60ab1d43686ace53c47a53a058b80b22731</hash>
+         <hash>f0afe0bbcbb3141b182e7f5d0f0a34674cdc2b0078eb5786cfec040b8a0f0e7c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\interrupts.c</file>
@@ -3325,7 +3325,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\tasks.c</file>
-         <hash>1e0ce44cb20e6b7c2bc86ada2e3c5e10eb1249d25965a75a5255535b3c43da77</hash>
+         <hash>8afc96c365d4778505b9e7b9b2819984bb538e5fe19c555e06171d0854b04bad</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\toolchain_specifics.h</file>
