@@ -7840,7 +7840,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\definitions.h</file>
-         <hash>3cdcc0ab5145fbe34d14c8f60a526dc940a17d6b7f26e21da5048af8ee51fc9b</hash>
+         <hash>0965e41ed4a077897759f8517f8173eb198a0378aeb43fc70cb812d15e2f4bc5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\device.h</file>
@@ -7880,7 +7880,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>0e68dfe6a94fa4fd8a6af04fce41c55b05953fffce15e654b93e4c85ee35a396</hash>
+         <hash>0c89ab1018f60b9f0e4666f2874d874c370ba14e8ba613b5c85c48c82d7e8ded</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\driver\usb\uhp\src\drv_usb_ohci.c</file>
