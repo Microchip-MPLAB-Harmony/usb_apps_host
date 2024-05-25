@@ -4452,7 +4452,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\configuration.h</file>
-         <hash>86ddecec35d2e130ef4bd94ed970a88d858d9f23b83cb04ca3d56a88606e98bf</hash>
+         <hash>a8486207c7a70c257a09217d624b8f143cead07b81c18b84d86f7f66bb111d7f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\cstartup.S</file>
@@ -4464,7 +4464,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\definitions.h</file>
-         <hash>d7bc15b0872d3ca627a06d211f2705aff9a3b8c2deda1f3d95c2773a4939ca55</hash>
+         <hash>b0d596d8f940f190c51f611234bc7869592511581004ad58101c2ec00f439e6a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\device.h</file>
@@ -4504,7 +4504,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>0e68dfe6a94fa4fd8a6af04fce41c55b05953fffce15e654b93e4c85ee35a396</hash>
+         <hash>0c89ab1018f60b9f0e4666f2874d874c370ba14e8ba613b5c85c48c82d7e8ded</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\driver\usb\uhp\src\drv_usb_ohci.c</file>
@@ -4528,7 +4528,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\initialization.c</file>
-         <hash>f86b7cdacd0e8f9a319897f5fb40f5a1a761fb11282815b79af0226e72757191</hash>
+         <hash>cebdd0523832b4596a6719b1b13a4dcfafe6127be8b2ec9ac02f18bca42eb0bb</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\interrupts.c</file>
@@ -4688,7 +4688,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\tasks.c</file>
-         <hash>9ff05d338fa87980d5fa2e403fa0c74dba094b5e043557bf8f018a86e206240b</hash>
+         <hash>b6a43843cbdf0bc6cdc0428bd1fabf02fed020a1cc37e0b9741968d61b5fbf56</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek_freertos\toolchain_specifics.h</file>
