@@ -43,7 +43,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -8430,7 +8430,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\configuration.h</file>
-         <hash>e400dd082f00c4ce47ecda7e986a6953fc8e0372a9024fcb0522c03d17e89871</hash>
+         <hash>21bbba3e11d5095435e9824f06f28be60c91590d9bd2daf0bf397629f634b417</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\cstartup.S</file>
@@ -8442,7 +8442,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\definitions.h</file>
-         <hash>523acedfc8b49bbf3d37efffbce50f922129bf9ce139d74f387e753696e4e936</hash>
+         <hash>497cfd2b23d9a83a36678a0cf71e77156b65565084596705e00ed046726ac8bf</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\device.h</file>
@@ -8502,7 +8502,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\initialization.c</file>
-         <hash>660c512039c219d3866de1113e5e6c6c08942832edfa9777f78beb96a8698c50</hash>
+         <hash>3ad87f8c817357860fe177ef503b87fc4ea4aa51e0089e0978332ca4b2d28616</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\interrupts.c</file>
@@ -8698,7 +8698,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\tasks.c</file>
-         <hash>d1e231740eae7643b29673d60d6f72a4c040fed8c76fce15dddb73057f34d3a7</hash>
+         <hash>9a3adf7f1d8f2e4d8f475f1f28efba4a8500b56551812119d917f0739b94b555</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\toolchain_specifics.h</file>
