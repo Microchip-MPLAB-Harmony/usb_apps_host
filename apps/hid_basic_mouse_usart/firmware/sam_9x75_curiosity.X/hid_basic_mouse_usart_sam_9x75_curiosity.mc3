@@ -51,7 +51,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -7741,7 +7741,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\definitions.h</file>
-         <hash>cd4d35245189b407604697dee8ceae8b9fa6bc904ac1ceb457ce55dda3e905a2</hash>
+         <hash>dc78a93283d0f8147530b88363be3c9341dbea69bd98c1ccd569c882a6ed77c4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\device.h</file>
@@ -7817,7 +7817,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\initialization.c</file>
-         <hash>a03d6572eab7ec035310a21d38f03e98ee3e60ee3a5b3d4d7dcd4a30cbf4a7d9</hash>
+         <hash>050e868456db0aa94964ef0ce5c22180fe8f33f8499e2509090389bd5ab5993b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\interrupts.c</file>
