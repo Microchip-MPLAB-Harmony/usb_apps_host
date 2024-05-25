@@ -8551,7 +8551,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\configuration.h</file>
-         <hash>984b92229f26f7276deaf70280e168d3ce8ab9b55e1afc77b8077708bc481cfc</hash>
+         <hash>b7b71da5eea960a363f870d4b371c925b21955c30a39755db75be21331cebcab</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\cstartup.S</file>
@@ -8563,7 +8563,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\definitions.h</file>
-         <hash>3a42991798aed93412c2c9bfa3ea049ef7be604d24e03e1771db1d96544c4db2</hash>
+         <hash>cc5554db5de989681fbc7d2c907b7454990fd05610f03eec63db0508197b9288</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\device.h</file>
@@ -8603,7 +8603,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>0e68dfe6a94fa4fd8a6af04fce41c55b05953fffce15e654b93e4c85ee35a396</hash>
+         <hash>0c89ab1018f60b9f0e4666f2874d874c370ba14e8ba613b5c85c48c82d7e8ded</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\driver\usb\uhp\src\drv_usb_ohci.c</file>
@@ -8627,7 +8627,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\initialization.c</file>
-         <hash>4a95bf862db2b4ff9de3f9dd568cb8bd2a95db1ec3f3ec21d0add8babf4e9b6b</hash>
+         <hash>92b8cfa94d9cf85bb2bba10fb197fd4e857310bc1371aefce33b643d61564913</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\interrupts.c</file>
@@ -8835,7 +8835,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\tasks.c</file>
-         <hash>2c575ac09a2b4eee852f6ed1c8dc24d6e6172a0d7b9310099f1c4568082664cc</hash>
+         <hash>0f1ab3daeca98c8df57cc2354e4f5119349e9f1261bd0ba6c5871af9ac14b2e5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\toolchain_specifics.h</file>
