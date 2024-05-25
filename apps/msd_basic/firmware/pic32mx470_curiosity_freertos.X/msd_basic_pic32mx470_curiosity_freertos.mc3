@@ -2681,7 +2681,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\definitions.h</file>
-         <hash>3f29d2c849549b184cc238052f30d6a1752603ebc97038d15245a95c174469da</hash>
+         <hash>72fc8ecd0bc7e83bb7732d3ca602a7ff39ae2ec541fbd071a68fcb7bba885004</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\device.h</file>
