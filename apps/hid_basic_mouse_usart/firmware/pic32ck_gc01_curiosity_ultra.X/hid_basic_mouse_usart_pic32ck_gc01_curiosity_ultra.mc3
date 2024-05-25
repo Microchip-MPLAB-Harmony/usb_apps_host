@@ -9229,7 +9229,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\definitions.h</file>
-         <hash>d99ce6d6c9af2a2eca82ca07e827c479f8955abd2006fa995cdaa00b576ac24d</hash>
+         <hash>0f0dd261d12da051e78136d88c208d3a80f93168ac6a74d7b0921843b96920cb</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\device.h</file>
@@ -9405,7 +9405,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\initialization.c</file>
-         <hash>521af1485357ed1c4eed2b7c12cd9da007f75f8af3480d687037c08799164947</hash>
+         <hash>e9ea2f053941a79ba9d7faa830bde5a024312d4779ee8ccc3d8167217b217132</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra\interrupts.c</file>
