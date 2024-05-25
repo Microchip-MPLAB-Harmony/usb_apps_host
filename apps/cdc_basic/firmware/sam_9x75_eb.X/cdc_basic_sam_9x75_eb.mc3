@@ -2290,7 +2290,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>0e68dfe6a94fa4fd8a6af04fce41c55b05953fffce15e654b93e4c85ee35a396</hash>
+         <hash>0c89ab1018f60b9f0e4666f2874d874c370ba14e8ba613b5c85c48c82d7e8ded</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\driver\usb\uhp\src\drv_usb_ohci.c</file>
@@ -2310,7 +2310,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\initialization.c</file>
-         <hash>cc0b1f8a3060c0fa5a60c31e82c775a3ed4b5c7f859239ebc97c0015034dd91d</hash>
+         <hash>a246d0a00ab566c981fda4c3859f9083a5ea4f8e18df5fc2329b5e301fa1c3a6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\interrupts.c</file>
