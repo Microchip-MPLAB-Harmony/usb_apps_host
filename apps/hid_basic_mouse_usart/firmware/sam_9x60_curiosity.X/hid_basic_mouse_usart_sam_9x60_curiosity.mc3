@@ -7344,7 +7344,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\definitions.h</file>
-         <hash>9cfa772411d87f504d2c898f67f303df276fb0d9fed7a3b096fc75a99c2037d0</hash>
+         <hash>210fe90cd1074466f80429010f8f3aba70faafa4e4bde44141470607d6c38b13</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\device.h</file>
@@ -7400,7 +7400,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>0e68dfe6a94fa4fd8a6af04fce41c55b05953fffce15e654b93e4c85ee35a396</hash>
+         <hash>0c89ab1018f60b9f0e4666f2874d874c370ba14e8ba613b5c85c48c82d7e8ded</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\driver\usb\uhp\src\drv_usb_ohci.c</file>
@@ -7420,7 +7420,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\initialization.c</file>
-         <hash>7b57f636f56304c290c001faba882b14a9e2a220b990250821ccfb0934eb9f33</hash>
+         <hash>fdd696ff68dc4cf9a0361ef4de8c14734f5bbe8feb77e0b9856f115596020cbd</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\interrupts.c</file>
