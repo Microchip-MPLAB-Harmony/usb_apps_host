@@ -7001,7 +7001,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\configuration.h</file>
-         <hash>0876bfc402ac830b05e292bff4be517d5997242d0bce74f9bfcb574562838f05</hash>
+         <hash>c1c8d412625f83370a17ef0f5b8c44adf5f1e6c8f5b1f8652ebab5ef66f30d48</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\cstartup.S</file>
@@ -7013,7 +7013,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\definitions.h</file>
-         <hash>2ce6e857a88bd9e8fd5bdef4a74a78720d2dbdd00cd27af436dfeb6ecc65e46c</hash>
+         <hash>d9cffb556ed8a83d07394327a5b236c2309f415f99344521b1d398c50e182934</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\device.h</file>
@@ -7069,7 +7069,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>0e68dfe6a94fa4fd8a6af04fce41c55b05953fffce15e654b93e4c85ee35a396</hash>
+         <hash>0c89ab1018f60b9f0e4666f2874d874c370ba14e8ba613b5c85c48c82d7e8ded</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\driver\usb\uhp\src\drv_usb_ohci.c</file>
@@ -7089,7 +7089,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\initialization.c</file>
-         <hash>77c530bae3c16ecff0cdc3e1c3a6a2ff3cc88024a1e26f23093c6e54adb05cee</hash>
+         <hash>6a766d44422ecd575d44174abdda72d4826f1f3dc2e4125efc2a445d95452e9b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\interrupts.c</file>
@@ -7241,7 +7241,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\tasks.c</file>
-         <hash>8afc96c365d4778505b9e7b9b2819984bb538e5fe19c555e06171d0854b04bad</hash>
+         <hash>1e0ce44cb20e6b7c2bc86ada2e3c5e10eb1249d25965a75a5255535b3c43da77</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d29_curiosity\toolchain_specifics.h</file>
