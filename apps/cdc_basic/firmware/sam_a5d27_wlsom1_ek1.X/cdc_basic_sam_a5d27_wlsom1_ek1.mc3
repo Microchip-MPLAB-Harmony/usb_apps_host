@@ -4871,7 +4871,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\definitions.h</file>
-         <hash>fdf4c079ba94553bfdd6d23f3bf27675bcde6f19c2c7fdfbc0208b5150fb3d15</hash>
+         <hash>753d714614a8b2b364ba60c4eb1dfc9c1e5cc78c8a4b49c06a47128e016a4bb0</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\device.h</file>
@@ -4911,7 +4911,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>0e68dfe6a94fa4fd8a6af04fce41c55b05953fffce15e654b93e4c85ee35a396</hash>
+         <hash>0c89ab1018f60b9f0e4666f2874d874c370ba14e8ba613b5c85c48c82d7e8ded</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\driver\usb\uhp\src\drv_usb_ohci.c</file>
