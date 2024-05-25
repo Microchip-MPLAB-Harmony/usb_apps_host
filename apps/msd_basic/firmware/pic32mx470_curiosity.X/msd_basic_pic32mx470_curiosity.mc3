@@ -2479,7 +2479,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\definitions.h</file>
-         <hash>38514848255decf0f7c1638990eebfd67cf81dc766075f003fa096567e40c2ab</hash>
+         <hash>f8b8ceb22753aa451041675eafa6698f3ca310d20480c5049bed18ea74c36f38</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\device.h</file>
