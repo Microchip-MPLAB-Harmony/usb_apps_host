@@ -6645,7 +6645,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\definitions.h</file>
-         <hash>8bc7f1e640c0359bf7006058c9c53d0ae992364054a922457109379b075f192d</hash>
+         <hash>e64206276e8386a763aa8b1c6b4c97fa996c413cbb3c0fdde796e7417b18b096</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\device.h</file>
