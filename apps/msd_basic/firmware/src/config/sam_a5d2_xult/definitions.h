@@ -48,9 +48,9 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include "bsp/bsp.h"
 #include "driver/usb/uhp/drv_usb_ehci.h"
 #include "driver/usb/uhp/drv_usb_ohci.h"
-#include "bsp/bsp.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_host.h"
 #include "usb/usb_msd.h"
@@ -68,11 +68,11 @@
 #include "peripheral/pio/plib_pio.h"
 #include "peripheral/aic/plib_aic.h"
 #include "peripheral/tc/plib_tc0.h"
-#include "system/time/sys_time.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
+#include "system/time/sys_time.h"
 #include "app.h"
 
 
