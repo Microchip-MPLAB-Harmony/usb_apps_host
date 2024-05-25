@@ -8593,7 +8593,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra_freertos\definitions.h</file>
-         <hash>065a72183d7db37d22e221494ff35c72d52deb7e9fbfce24e55bb7835ab6e951</hash>
+         <hash>f7b2aad9a3b254be1f77b25244aab1b7b2fe02cfb815432b916180e618e41a1e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32ck_gc01_curiosity_ultra_freertos\device.h</file>
