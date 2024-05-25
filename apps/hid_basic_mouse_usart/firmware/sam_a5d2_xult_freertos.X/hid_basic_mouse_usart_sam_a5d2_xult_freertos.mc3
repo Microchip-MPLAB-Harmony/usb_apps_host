@@ -5420,7 +5420,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\configuration.h</file>
-         <hash>5a09fc881fc05dc1659c9abed3bcb441a6cfbf309b8acbe16f85ae6a2c70274f</hash>
+         <hash>960a86afe7111ace878a62b392786415ebec71192da0e5c0660b4ef2f0186c83</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\cstartup.S</file>
@@ -5432,7 +5432,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\definitions.h</file>
-         <hash>9986b6f22c9c8bdf34e02137a75d4e5fca4f0c984e9030692fef9eef3bf7f8f7</hash>
+         <hash>d0c4b68ec71ffdca83d0e46f42611313a02dad01f0295ae1e51b32fb14ebc6f4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\device.h</file>
@@ -5488,7 +5488,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>0e68dfe6a94fa4fd8a6af04fce41c55b05953fffce15e654b93e4c85ee35a396</hash>
+         <hash>0c89ab1018f60b9f0e4666f2874d874c370ba14e8ba613b5c85c48c82d7e8ded</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\driver\usb\uhp\src\drv_usb_ohci.c</file>
@@ -5512,7 +5512,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\initialization.c</file>
-         <hash>08101ee8cf39bfaa9e820c871e717ec21dd57b1d2b5692599a98dc1065c80039</hash>
+         <hash>40c38de935806ebc77e6882086bda430019735bc6bf7c0242d59fcf72b43a7a0</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\interrupts.c</file>
@@ -5688,7 +5688,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\tasks.c</file>
-         <hash>b6a43843cbdf0bc6cdc0428bd1fabf02fed020a1cc37e0b9741968d61b5fbf56</hash>
+         <hash>9ff05d338fa87980d5fa2e403fa0c74dba094b5e043557bf8f018a86e206240b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\toolchain_specifics.h</file>
