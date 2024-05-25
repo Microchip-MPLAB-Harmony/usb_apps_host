@@ -3664,7 +3664,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\definitions.h</file>
-         <hash>b9d95022829f0c4680f7b5eb9a7a6bbc76d0e56fe94d0f12af977df52e4b4d40</hash>
+         <hash>fc34215ee5de32f924ab8e1be195d337338228f1c12ca11d147338c5edad04d9</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db_freertos\device.h</file>
