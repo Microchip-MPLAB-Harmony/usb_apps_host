@@ -6764,7 +6764,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\definitions.h</file>
-         <hash>c7f0e88d204bb1a902dd74b6398067d8e3f8865eaf5430eadf6d99f4a78e8674</hash>
+         <hash>b4bc314026329758ecac0075bf480a33fec32d78eec67ff9bc79009e4f462bd6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\device.h</file>
