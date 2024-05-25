@@ -4903,7 +4903,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\configuration.h</file>
-         <hash>eaac74f9397d9ac1fa8a3a694981e234cea65e1f7156593f1cc3674ca897222c</hash>
+         <hash>03f9cf71d2b026f09a865c852a7a4026cfa4cd4ad6b1f12338b25967c3b47bd3</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\cstartup.S</file>
@@ -4915,7 +4915,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\definitions.h</file>
-         <hash>2725aa94c60db8003290fbe7959c35b1abe1d34105b4e315d01d64ade5fb92f0</hash>
+         <hash>65098246a6366791b55ee7359f86c7616ddb9ed49897db42f7ca583ea739eaa1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\device.h</file>
@@ -4955,7 +4955,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>0e68dfe6a94fa4fd8a6af04fce41c55b05953fffce15e654b93e4c85ee35a396</hash>
+         <hash>0c89ab1018f60b9f0e4666f2874d874c370ba14e8ba613b5c85c48c82d7e8ded</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\driver\usb\uhp\src\drv_usb_ohci.c</file>
@@ -4975,7 +4975,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\initialization.c</file>
-         <hash>f0f46edea66ac17faf55a810c8af46521c8089a96605799e3a3fe277cc7d2e70</hash>
+         <hash>5900191af0463f229eeeb8c3d3b222dbef2cb030c88fc28f34f64207799dbae7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\interrupts.c</file>
@@ -5115,7 +5115,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\tasks.c</file>
-         <hash>8afc96c365d4778505b9e7b9b2819984bb538e5fe19c555e06171d0854b04bad</hash>
+         <hash>1e0ce44cb20e6b7c2bc86ada2e3c5e10eb1249d25965a75a5255535b3c43da77</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\toolchain_specifics.h</file>
