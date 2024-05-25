@@ -4989,7 +4989,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\configuration.h</file>
-         <hash>b57b649291ca2747ae505f95e685340a411cf6b995b268d6840f9d7cb38111f9</hash>
+         <hash>523061864fb40048314281f6ca71817016a7057ba99f4d30145b62a4ce80230f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\cstartup.S</file>
@@ -5001,7 +5001,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\definitions.h</file>
-         <hash>5ed6b303bddec29f78b76e36145794767e335640a298951e9d42f3a9841436f0</hash>
+         <hash>f1af8271f270d56926522c9468a70f3915eb051108dd66c546f375e7ec194779</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\device.h</file>
@@ -5057,7 +5057,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>0e68dfe6a94fa4fd8a6af04fce41c55b05953fffce15e654b93e4c85ee35a396</hash>
+         <hash>0c89ab1018f60b9f0e4666f2874d874c370ba14e8ba613b5c85c48c82d7e8ded</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\driver\usb\uhp\src\drv_usb_ohci.c</file>
@@ -5077,7 +5077,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\initialization.c</file>
-         <hash>176c79197132db9611c378b2439a3f867b0f1c752d03d2bc36a054af56143330</hash>
+         <hash>12b349cb562accead14cb95e91bd407e5be53f72eca305f0097e27703aeedd4f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\interrupts.c</file>
@@ -5237,7 +5237,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\tasks.c</file>
-         <hash>8afc96c365d4778505b9e7b9b2819984bb538e5fe19c555e06171d0854b04bad</hash>
+         <hash>1e0ce44cb20e6b7c2bc86ada2e3c5e10eb1249d25965a75a5255535b3c43da77</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\toolchain_specifics.h</file>
