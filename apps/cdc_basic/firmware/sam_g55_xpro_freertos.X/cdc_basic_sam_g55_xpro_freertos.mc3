@@ -2519,11 +2519,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\configuration.h</file>
-         <hash>ddfa9fb8a2494b588cdb9d03b75e973b3d09572f4e31189f2c918c62e55f5149</hash>
+         <hash>bd3934accb25cee631e382aab75b9dafb7ff830bf4f1d7a0651f675f6da29700</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\definitions.h</file>
-         <hash>360cef3afb3641b97f9a4687f744d9150a6da905eb17ef41511aed7cd371c2cb</hash>
+         <hash>e9deef057120635f91c46d21e00224b91ca7b014d47ca03d22d6fce53d27ee53</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\device.h</file>
@@ -2579,7 +2579,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\initialization.c</file>
-         <hash>9870d330c13612e0da212915edf3460d83a8c53520e5c92be48796834ab66505</hash>
+         <hash>888ba4710d9d475df15b14a0399b5ca6a8e3ccab7c37548c3ddea332575fc3d1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\interrupts.c</file>
@@ -2731,7 +2731,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\tasks.c</file>
-         <hash>4790b389c968b38a90fd8247c4ec5b05f4a2c532aa5d568de47dc1e8dc1fba42</hash>
+         <hash>fe6210847094dff41e409403c3d3f6cd7cbbb045d00d5427e2e8e41739d8b226</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro_freertos\toolchain_specifics.h</file>
