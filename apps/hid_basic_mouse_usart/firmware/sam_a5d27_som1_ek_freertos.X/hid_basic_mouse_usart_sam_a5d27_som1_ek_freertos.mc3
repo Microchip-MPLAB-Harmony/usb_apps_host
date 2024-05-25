@@ -5985,7 +5985,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\configuration.h</file>
-         <hash>018444869c779c27470da3d20a12f834d13dee1dd6f62843c26caa57479f77b7</hash>
+         <hash>e76fc2cd092d8eddabf45cd328ac48faf849f3eece4a0a24fa75637c72b9e618</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\cstartup.S</file>
@@ -5997,7 +5997,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\definitions.h</file>
-         <hash>e4d24f6fb7f3a062c999dd678a8da8a03ee9df6b3f2ce39bd38372766cdb8143</hash>
+         <hash>3a4f0628db9d9a339041bd911f766c8b1d37bbee2382329fff1c1530cdcba100</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\device.h</file>
@@ -6053,7 +6053,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>0e68dfe6a94fa4fd8a6af04fce41c55b05953fffce15e654b93e4c85ee35a396</hash>
+         <hash>0c89ab1018f60b9f0e4666f2874d874c370ba14e8ba613b5c85c48c82d7e8ded</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\driver\usb\uhp\src\drv_usb_ohci.c</file>
@@ -6077,7 +6077,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\initialization.c</file>
-         <hash>fafc104a64784a6bf4342931f78a0af73c94fc6dd03069f3d273c2394e425e23</hash>
+         <hash>1c212e8d1a30bda00971f8a8625bf23edc3ad4d1d6c36bd79d6d3913e7bda995</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\interrupts.c</file>
@@ -6253,7 +6253,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\tasks.c</file>
-         <hash>9ff05d338fa87980d5fa2e403fa0c74dba094b5e043557bf8f018a86e206240b</hash>
+         <hash>b6a43843cbdf0bc6cdc0428bd1fabf02fed020a1cc37e0b9741968d61b5fbf56</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\toolchain_specifics.h</file>
