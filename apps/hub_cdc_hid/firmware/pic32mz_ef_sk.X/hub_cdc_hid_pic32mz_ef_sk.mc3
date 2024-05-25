@@ -3416,11 +3416,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\configuration.h</file>
-         <hash>425490dbdd009899ca4be995b2b1c135d083b830018c4efdd3def3b3b4b3a2f2</hash>
+         <hash>e5ae9053351a121ef432eabb06364c7dd15015060a5a549161302a1568b6b27d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\definitions.h</file>
-         <hash>52121e00e6e18b1ae792f2d9650155f43fa1e71919cb0c802023e4c04005776d</hash>
+         <hash>f246b946078642c0e27764f86f651e4a2fcf00c04d44b791285e0ad0e58630c1</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\device.h</file>
@@ -3572,7 +3572,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\initialization.c</file>
-         <hash>70fe0bc4b768f8344caee3881cd7e705dfda41bc192f100529d2a7d2125c526b</hash>
+         <hash>bf5eb15a85ca5cd531771ceb3c661580053c67d98a6230b349fd83da4ffa9b70</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\interrupts.c</file>
@@ -3684,7 +3684,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\tasks.c</file>
-         <hash>048a05b5060fa543c45b40f4434a6de237bc810a92482fb9530a387f4ab691f1</hash>
+         <hash>71c1158d262caa4c0d9aa3486cd2b7bce1f0bbfdfecf3e2251a495b1b7f3bca7</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\toolchain_specifics.h</file>
