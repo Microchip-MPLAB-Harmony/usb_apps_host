@@ -2,14 +2,14 @@
 
 manifest_file_version: 1.0.0
 project: msd_basic_sam_9x75_curiosity
-creation_date: 2024-05-24T11:34:32.715+05:30[Asia/Calcutta]
+creation_date: 2024-05-25T09:45:50.627+05:30[Asia/Calcutta]
 operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.20
 device_name: SAM9X75D2G
 compiler: XC32 4.40
-mcc_version: 5.5.0
-mcc_core_version: 5.7.0
+mcc_version: 5.5.1
+mcc_core_version: 5.7.1
 content_manager_version: 5.0.0
 is_mcc_offline: false
 is_using_prerelease_versions: false

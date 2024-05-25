@@ -1,4 +1,4 @@
-<config configName="sam_9x75_curiosity" projectName="msd_basic_sam_9x75_curiosity" configVersion="1.1" device="SAM9X75D2G" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.0">
+<config configName="sam_9x75_curiosity" projectName="msd_basic_sam_9x75_curiosity" configVersion="1.1" device="SAM9X75D2G" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -4102,7 +4102,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_40_DIR&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;Out&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4113,7 +4113,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_40_FUNCTION_NAME&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;VBUS_AH_PB18&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4124,7 +4124,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_40_FUNCTION_TYPE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;VBUS_AH&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4135,7 +4135,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_40_PERIPHERAL_FUNCTION&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;VBUS_AH&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4256,7 +4256,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_52_DIR&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;Out&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4267,7 +4267,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_52_FUNCTION_NAME&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;VBUS_AH_PC29&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4278,7 +4278,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_52_FUNCTION_TYPE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;VBUS_AH&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4289,7 +4289,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_52_PERIPHERAL_FUNCTION&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;VBUS_AH&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4652,7 +4652,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIOB_OER_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;262144&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4707,7 +4707,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIOC_OER_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;674758656&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;137887744&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -8469,15 +8469,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\bsp\bsp.c</file>
-         <hash>536d96e23ff5d06b423a81e3c58dfee95856598774a6ff8b84d14d45542b5256</hash>
+         <hash>3e7f0a0511c3e48456bb42f2230101712a465cdc9e9207dfc21268c9ddb752e6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\bsp\bsp.h</file>
-         <hash>df2100ce43ab5fb275e650f291e65e5a0f738e370333ce663819f7e15ca62323</hash>
+         <hash>f9b13d1d3b81b8b39b98aa6442ddd02fe1d5ddd73fd8e9918c2fd021b4b210c4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\configuration.h</file>
-         <hash>0e4973330bdfe065e19e53e5b2f9197a87bc9071fb37b8301ea47d90f21c64b3</hash>
+         <hash>11ea6fac65436608c4d0bec2c2ec4f565b9826febf773e878db7462c4e1670af</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\cstartup.S</file>
@@ -8489,7 +8489,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\definitions.h</file>
-         <hash>7b7bc49b5784d2b68f83e95939540b87815d73757623963aa73dbacee0ebb57c</hash>
+         <hash>530e524e8923350d4e4790143dbeebd3e7c7dce0299ba6f36c94f1ce4d8e7f31</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\device.h</file>
@@ -8549,7 +8549,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\initialization.c</file>
-         <hash>c047d129298940e4eda9cc7e23eaddb6d9f290aa2a8459886d4910ad27ca7a46</hash>
+         <hash>c2de98caf30ea334a09b7fbfd84ad84422178d91cfdd19df0aaec7b40b3222da</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\interrupts.c</file>
@@ -8601,7 +8601,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\peripheral\pio\plib_pio.c</file>
-         <hash>2247a5f6b7a6d25535990f34a7b26d3945f9eaea47c3e0e98ed359e1100301b1</hash>
+         <hash>f39b789b5d93a0021432e82b6c090180f0fb81e57e93da9562295aa9d3aa154e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\peripheral\pio\plib_pio.h</file>
@@ -8621,7 +8621,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\pin_configurations.csv</file>
-         <hash>8d06447edc8dbe2e73a70b6fff8857990047bb746e6cccd2e174959240863984</hash>
+         <hash>fd51bbc240179d29c4ab32a6dbad82e60d69e96958198f97a034d36327d31705</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\stdio\xc32_monitor.c</file>
@@ -8745,7 +8745,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\tasks.c</file>
-         <hash>d1e231740eae7643b29673d60d6f72a4c040fed8c76fce15dddb73057f34d3a7</hash>
+         <hash>9a3adf7f1d8f2e4d8f475f1f28efba4a8500b56551812119d917f0739b94b555</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\toolchain_specifics.h</file>
