@@ -5183,7 +5183,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\definitions.h</file>
-         <hash>36c32185c3135cfec9911466126895912c631c9dbb9f9da0423396ef817a9d55</hash>
+         <hash>4613542e163cf9e306b9bad97fbb934c9f10fe66c2b26d88954e7435de548c71</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\device.h</file>
@@ -5223,7 +5223,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>0e68dfe6a94fa4fd8a6af04fce41c55b05953fffce15e654b93e4c85ee35a396</hash>
+         <hash>0c89ab1018f60b9f0e4666f2874d874c370ba14e8ba613b5c85c48c82d7e8ded</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\driver\usb\uhp\src\drv_usb_ohci.c</file>
