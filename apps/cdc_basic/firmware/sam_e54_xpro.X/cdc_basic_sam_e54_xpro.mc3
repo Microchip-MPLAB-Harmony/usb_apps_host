@@ -9115,11 +9115,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\configuration.h</file>
-         <hash>474828fd31e7583cfbd79e773da2714c533c4e5c6e56384b6ed39c611415cef8</hash>
+         <hash>d5ad8b32d7d235031b147da7c6f1c95bff143e28aaf4c8856bdb301b05594f55</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\definitions.h</file>
-         <hash>81739fe5e2d00c9ea063190336910920dc08b1485ddff79a1736a128706e4fcc</hash>
+         <hash>c8b65c75a91a6219ba4330b300613bf020469413e8022d9c93705745acf8a329</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\device.h</file>
