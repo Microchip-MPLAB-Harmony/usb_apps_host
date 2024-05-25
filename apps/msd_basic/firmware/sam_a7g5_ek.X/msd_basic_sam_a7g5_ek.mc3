@@ -4291,7 +4291,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\definitions.h</file>
-         <hash>2eef7ea374c8c3e2ace9faa7892d051cc5b15f4f1825d3cb726d98b0d7cd97ab</hash>
+         <hash>a681bab4a7a457e78c138c3e8a5ef9eb80c3823d96d4b4af9969affc5486c313</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\device.h</file>
@@ -4331,7 +4331,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>0e68dfe6a94fa4fd8a6af04fce41c55b05953fffce15e654b93e4c85ee35a396</hash>
+         <hash>0c89ab1018f60b9f0e4666f2874d874c370ba14e8ba613b5c85c48c82d7e8ded</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\driver\usb\uhp\src\drv_usb_ohci.c</file>
