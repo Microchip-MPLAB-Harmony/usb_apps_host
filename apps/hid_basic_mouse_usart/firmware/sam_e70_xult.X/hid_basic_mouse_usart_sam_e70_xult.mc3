@@ -6466,11 +6466,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\configuration.h</file>
-         <hash>fca67097d1d568f478f80439a80be9c60fefa448499fc94fff426702899fad6d</hash>
+         <hash>8078e4c9d11dbcb04bf04b94d9fe6f624d2fdcdbec0b79012e97c0d20dfa3c56</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\definitions.h</file>
-         <hash>3bd299932f24abb309e20de114b3cd2c7956802caf442ebeb4690af3720e7add</hash>
+         <hash>b4628af47de6a3c674a712fb9dd9419d5ae077b6eb05ce0212cadb1b3f9fc55f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\device.h</file>
@@ -6542,7 +6542,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\initialization.c</file>
-         <hash>b2b5ecc4537c13144946623493285f5da053fe231c3ef07b8cbaf6686839ee88</hash>
+         <hash>23fb15f614d59feaf76a5ab66f90a186e356dfd58faf1e28a7a1b3652ccd53af</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\interrupts.c</file>
@@ -6706,7 +6706,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\tasks.c</file>
-         <hash>b5a9d2a1c8219dcf60373e4827ddc79ef07db43da9a83f5141fb51ea4fb23b0d</hash>
+         <hash>6dad094f9be8f0cc9da6672f906f3bb858ab7da81d6139137a0be768802e505b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\toolchain_specifics.h</file>
