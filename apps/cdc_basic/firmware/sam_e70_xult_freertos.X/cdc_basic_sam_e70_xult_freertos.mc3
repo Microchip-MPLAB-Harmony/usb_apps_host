@@ -5759,7 +5759,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\definitions.h</file>
-         <hash>fb505069248dca4f76b75ff1db44745754b344b8d418f172812f5387cfaeffdf</hash>
+         <hash>cbf9abc580c5aca66c92cb7f64ed676204ae3a9537fbdacc483e5afc6bf58f6b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\device.h</file>
