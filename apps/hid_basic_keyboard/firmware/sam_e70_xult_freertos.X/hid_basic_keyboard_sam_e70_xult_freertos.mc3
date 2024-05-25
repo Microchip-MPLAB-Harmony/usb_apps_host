@@ -9925,11 +9925,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\configuration.h</file>
-         <hash>a91fa0f09e9f9155cf97b9767a152bc895aec0c5b4fd7e3976b457579ef5da8b</hash>
+         <hash>0080ac959bef3492f0ca35ccac64177db6c58b3d3a53ee919ffcd853e001b623</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\definitions.h</file>
-         <hash>a03fd0e7a9c7fdead1faadb895e907f901af64977e91c5e8024be3aaf605956b</hash>
+         <hash>27974d49c951d78b14df9607f2e7d6cf0569393bccc33338a8bb4661fa9e3a99</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\device.h</file>
@@ -10005,7 +10005,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\initialization.c</file>
-         <hash>23fb15f614d59feaf76a5ab66f90a186e356dfd58faf1e28a7a1b3652ccd53af</hash>
+         <hash>b2b5ecc4537c13144946623493285f5da053fe231c3ef07b8cbaf6686839ee88</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\interrupts.c</file>
@@ -10173,7 +10173,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\tasks.c</file>
-         <hash>1ba03302be707b5a6f3e69e8d041603a4e1907d6cc026683c200dc9301c8f6da</hash>
+         <hash>6d1e880941fcfa23d58c0707f274a444429de18c64499d3daa0ea5c3b9125f6e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult_freertos\toolchain_specifics.h</file>
