@@ -4319,7 +4319,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\definitions.h</file>
-         <hash>c83187fd872d5a834496599931dc2affd718858ff520f082f295ca6494c6bdee</hash>
+         <hash>635db611f82b9ff11662d4b09423f6d12f80d54e55189e46352d59e9dca6ac1b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\device.h</file>
@@ -4359,7 +4359,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>0e68dfe6a94fa4fd8a6af04fce41c55b05953fffce15e654b93e4c85ee35a396</hash>
+         <hash>0c89ab1018f60b9f0e4666f2874d874c370ba14e8ba613b5c85c48c82d7e8ded</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\driver\usb\uhp\src\drv_usb_ohci.c</file>
