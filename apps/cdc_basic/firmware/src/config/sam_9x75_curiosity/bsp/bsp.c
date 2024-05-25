@@ -75,8 +75,8 @@ void BSP_Initialize(void )
 
     /* Disable VBUS power */
 		VBUS_AH_PC27_PowerDisable(); 
+		VBUS_AH_PB18_PowerDisable(); 
 		VBUS_BLUE_PowerDisable(); 
-		VBUS_AH_PC29_PowerDisable(); 
 
     /* Switch off LEDs */
 		LED1_Off(); 
