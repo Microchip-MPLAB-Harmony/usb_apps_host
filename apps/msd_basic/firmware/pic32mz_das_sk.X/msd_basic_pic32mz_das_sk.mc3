@@ -6211,11 +6211,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\configuration.h</file>
-         <hash>d513690be9e12f90d6d68ff3fa10ed6c1870af95658c01d9b2e66945b894b149</hash>
+         <hash>acb56b2f36ab829fc4be812ab5f9e2acebf41adf779f316ae57343443e509164</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\definitions.h</file>
-         <hash>d37a59028ab1697b197e215c9f189766a3f10154fd88ae02328fd3b9c14a17a6</hash>
+         <hash>b90497b151d02254b3e42c0e947c4c9c91329d32979aac275e1627af7ca804d5</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\device.h</file>
@@ -6371,7 +6371,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\initialization.c</file>
-         <hash>bdb84aa8aef5f2d38ccd41590532a4e2dcc05776d50ee51f10f1178bd8ddb00a</hash>
+         <hash>1447603e2bfb3ea85bb72d5e785ea2dfc525eb917b901cfe98ede5957d8056b2</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\interrupts.c</file>
@@ -6571,7 +6571,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\tasks.c</file>
-         <hash>1132080f5f028a57bdb9b32553bc0951be365d93554edcc4d19301f0c70a7725</hash>
+         <hash>f6c88ba9a714a4c58235fe5dd8ca2804da3d63b9b004a9c12f02d77a1e7e55b0</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\toolchain_specifics.h</file>
