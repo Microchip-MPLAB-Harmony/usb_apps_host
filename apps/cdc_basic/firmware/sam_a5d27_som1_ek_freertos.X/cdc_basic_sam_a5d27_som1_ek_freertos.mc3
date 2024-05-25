@@ -5420,7 +5420,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\definitions.h</file>
-         <hash>1d1c11252b339fd3203d9511478b8b6d7d689d909ea64f15fcf14a0b2476cec9</hash>
+         <hash>b0ac21fd97ad85d472a3683fb3b84826e1f69cc0b5550aca6c445031da5cc86b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\device.h</file>
@@ -5460,7 +5460,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>0e68dfe6a94fa4fd8a6af04fce41c55b05953fffce15e654b93e4c85ee35a396</hash>
+         <hash>0c89ab1018f60b9f0e4666f2874d874c370ba14e8ba613b5c85c48c82d7e8ded</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek_freertos\driver\usb\uhp\src\drv_usb_ohci.c</file>
