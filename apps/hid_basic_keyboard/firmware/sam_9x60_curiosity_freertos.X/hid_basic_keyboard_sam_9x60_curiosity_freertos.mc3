@@ -8311,7 +8311,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\configuration.h</file>
-         <hash>06f601be3cb4f5c190f54f8f4311dfd39279e32bc04a9df6b63d7574e30781bb</hash>
+         <hash>8fd8d0c5a82289eb949ff457a705891bbc5163ac52ceb6ee28156ed1198187f0</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\cstartup.S</file>
@@ -8323,7 +8323,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\definitions.h</file>
-         <hash>f5ac880be52570e5b833a98559a23ed5d0d16094a94a084a6585ddf2f6431ac0</hash>
+         <hash>74fdea0d535b17e2b471cc0269290b3446012a3d3003380cb0c34d4d06ce1ce3</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\device.h</file>
@@ -8403,7 +8403,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\initialization.c</file>
-         <hash>b05c885ed916661f090cf02d88cbd31b18cec610e5595552ab84b94c5170856b</hash>
+         <hash>895a95a21ad087c02e022498aa65b1b35dc415d153a3c0f85e24b9995ee3dad9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\interrupts.c</file>
@@ -8563,7 +8563,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\tasks.c</file>
-         <hash>b6a43843cbdf0bc6cdc0428bd1fabf02fed020a1cc37e0b9741968d61b5fbf56</hash>
+         <hash>9ff05d338fa87980d5fa2e403fa0c74dba094b5e043557bf8f018a86e206240b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity_freertos\toolchain_specifics.h</file>
