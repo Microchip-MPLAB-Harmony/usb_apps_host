@@ -2098,11 +2098,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\configuration.h</file>
-         <hash>b06634684af3aa734cf1d6090a2a195c8a731d3342ff3da6377d96673eda25ec</hash>
+         <hash>3b592395a6957ed98652862857a74aae1269304e5bddd1c364fd69faccd72f40</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\definitions.h</file>
-         <hash>0aa7c7f27c9dda04677fd66412340e47b0d29206d2d2fb60316585a683a7ba39</hash>
+         <hash>b0d1e817d5d339b70c0eb7940e5483d327ca645669a7e3ee9bb6abd7e5ca3374</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\device.h</file>
