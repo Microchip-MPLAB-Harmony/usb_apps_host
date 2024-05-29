@@ -2535,11 +2535,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\configuration.h</file>
-         <hash>108a128a7e039b40558045780f21378c5e0a27088d357050bfbafded0405a7a1</hash>
+         <hash>74d16148087832f0c7105d5f3c25f3bf4df3df8b837e0635ab24ad8a0824eccb</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\definitions.h</file>
-         <hash>e61b4a70f547fd15acdf192482ca6163d5d2849079bd4f85464e33fb65e3ae34</hash>
+         <hash>c4ed148ce0f56850985e92ad9a620929e1001bcd8c6bac2b45e8c9d9c4d740a0</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\device.h</file>
@@ -2591,7 +2591,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\initialization.c</file>
-         <hash>9870d330c13612e0da212915edf3460d83a8c53520e5c92be48796834ab66505</hash>
+         <hash>888ba4710d9d475df15b14a0399b5ca6a8e3ccab7c37548c3ddea332575fc3d1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\interrupts.c</file>
@@ -2739,7 +2739,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\tasks.c</file>
-         <hash>ec8ec528fedf7b54e7a0d509831f358e56d9eba3a92627a2f7193f5b82c4573c</hash>
+         <hash>eaeb1042cd2f9b71f10fbb9b33aab0cbff62f3c242fbbab40469f9e01d3fa083</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\toolchain_specifics.h</file>

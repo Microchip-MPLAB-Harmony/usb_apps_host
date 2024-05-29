@@ -102,6 +102,31 @@ extern "C" {
 // Section: Middleware & Other Library Configuration
 // *****************************************************************************
 // *****************************************************************************
+// *****************************************************************************
+// *****************************************************************************
+// Section: USB Host Layer Configuration
+// *****************************************************************************
+// **************************************************************************
+
+/* Number of Endpoints used */
+
+/* Total number of devices to be supported */
+#define USB_HOST_DEVICES_NUMBER                             1U
+
+/* Target peripheral list entries */
+#define  USB_HOST_TPL_ENTRIES                               1 
+
+/* Maximum number of configurations supported per device */
+#define USB_HOST_DEVICE_INTERFACES_NUMBER                   5    
+
+#define USB_HOST_CONTROLLERS_NUMBER                         1U
+
+#define USB_HOST_TRANSFERS_NUMBER                           10U
+
+/* Provides Host pipes number */
+#define USB_HOST_PIPES_NUMBER                               10U
+
+
 
 /* EHCI Driver is not used */  
 #define DRV_USB_EHCI_INSTANCES_NUMBER                     0U
@@ -129,31 +154,6 @@ extern "C" {
 #ifndef USB_ALIGN
 #define USB_ALIGN __ALIGNED(32)
 #endif 
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: USB Host Layer Configuration
-// *****************************************************************************
-// **************************************************************************
-
-/* Number of Endpoints used */
-
-/* Total number of devices to be supported */
-#define USB_HOST_DEVICES_NUMBER                             1U
-
-/* Target peripheral list entries */
-#define  USB_HOST_TPL_ENTRIES                               1 
-
-/* Maximum number of configurations supported per device */
-#define USB_HOST_DEVICE_INTERFACES_NUMBER                   5    
-
-#define USB_HOST_CONTROLLERS_NUMBER                         1U
-
-#define USB_HOST_TRANSFERS_NUMBER                           10U
-
-/* Provides Host pipes number */
-#define USB_HOST_PIPES_NUMBER                               10U
-
 
 /* Number of CDC Function driver instances in the application */
 #define USB_HOST_CDC_INSTANCES_NUMBER         1U
