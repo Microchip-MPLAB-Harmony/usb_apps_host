@@ -8541,7 +8541,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\configuration.h</file>
-         <hash>1001b9ef00e8e27d1b0bb5a8553280ba29242e8d54a0ab165a95a1b8e2a966e6</hash>
+         <hash>d6e1f2529e755619007dbe4bb96870d4ff531d79ad8c5630323bac4e91642702</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\cstartup.S</file>
@@ -8553,7 +8553,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\definitions.h</file>
-         <hash>645af4b1df043adfdf9ce63e796ef2528e439994f0994604afff46c7d739f422</hash>
+         <hash>c100433db9c89a945d4e8afc939488397705a237527221d1d028bf16da7d88b1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\device.h</file>
@@ -8613,7 +8613,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\initialization.c</file>
-         <hash>3ad87f8c817357860fe177ef503b87fc4ea4aa51e0089e0978332ca4b2d28616</hash>
+         <hash>660c512039c219d3866de1113e5e6c6c08942832edfa9777f78beb96a8698c50</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\interrupts.c</file>
@@ -8809,7 +8809,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\tasks.c</file>
-         <hash>9a3adf7f1d8f2e4d8f475f1f28efba4a8500b56551812119d917f0739b94b555</hash>
+         <hash>d1e231740eae7643b29673d60d6f72a4c040fed8c76fce15dddb73057f34d3a7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\toolchain_specifics.h</file>
