@@ -3589,11 +3589,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_curiosity_2_0\configuration.h</file>
-         <hash>6f0767cb3c422632139c945add3e514c4f7f6571ace50043ddd083ace49cf14a</hash>
+         <hash>df42776dec4e34e1fd2c2c108e3c49ef6263ccd2713cb2e1e3285b2148b1c1e1</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_curiosity_2_0\definitions.h</file>
-         <hash>b1aa03da7233d04cfcd09e32e28b249df0cee6a36a9714f2df97f63dfa4651ae</hash>
+         <hash>9b8b28dbb46436c692b5ffc5ac33cc8455c0eff6b8c5d3af998fe8196dce9e23</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_curiosity_2_0\device.h</file>
@@ -3745,7 +3745,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_curiosity_2_0\initialization.c</file>
-         <hash>0d097cf4646531fe7248d21bd02dde65b8ef6d9373c865a474b7d82074b20d79</hash>
+         <hash>bca1a73fcfdb633f7d8d9b7d3a794caff3c3953297a37a7905058d9a79e12f59</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_curiosity_2_0\interrupts.c</file>
@@ -3857,7 +3857,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_curiosity_2_0\tasks.c</file>
-         <hash>71c1158d262caa4c0d9aa3486cd2b7bce1f0bbfdfecf3e2251a495b1b7f3bca7</hash>
+         <hash>048a05b5060fa543c45b40f4434a6de237bc810a92482fb9530a387f4ab691f1</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_curiosity_2_0\toolchain_specifics.h</file>
