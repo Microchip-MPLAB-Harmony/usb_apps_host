@@ -6291,11 +6291,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\configuration.h</file>
-         <hash>961694c675e769b7f5ed08a361d0942967014ab99a1d0da0d670cec96bdddb70</hash>
+         <hash>f2293fae2d510fc19777fb8c5ee96058ac150ea95f5bdb7270bac93a3e9c1703</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\definitions.h</file>
-         <hash>d43ddda514486e227096cc08abebc5b8ebe7e7965a5c8d94bb975233f1fcc2a4</hash>
+         <hash>842ef968bf49cce52091bcda536a5f42ef71e5249eab19e4474e37f9c5029529</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\device.h</file>
@@ -6455,7 +6455,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\initialization.c</file>
-         <hash>11b58fbf2e014d0eeb7dc9a62423ccd7e9ea80c48df0c5229d2126384551c05d</hash>
+         <hash>2a909c2e83c38188e0cb16b4177f82c4a60c0b96dcfa7d420c544eab5b47372b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\interrupts.c</file>
@@ -6663,7 +6663,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\tasks.c</file>
-         <hash>42cc32ec465cdbf33525c56c33a2272ae4b850e73644d9fc66ec80e1b9e76e66</hash>
+         <hash>eeee2799ec31f1fc11d4bc3f68ebbe91582d2ce25282d5548fba87355aedabbe</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk_freertos\toolchain_specifics.h</file>
