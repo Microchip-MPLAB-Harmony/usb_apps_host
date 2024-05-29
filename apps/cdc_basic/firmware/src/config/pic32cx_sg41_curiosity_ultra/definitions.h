@@ -51,8 +51,8 @@
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_host.h"
 #include "peripheral/nvmctrl/plib_nvmctrl.h"
-#include "peripheral/evsys/plib_evsys.h"
 #include "bsp/bsp.h"
+#include "peripheral/evsys/plib_evsys.h"
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
@@ -61,11 +61,11 @@
 #include "usb/usb_cdc.h"
 #include "driver/usb/usbfsv1/drv_usbfsv1.h"
 #include "peripheral/tc/plib_tc0.h"
+#include "system/time/sys_time.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "system/time/sys_time.h"
 #include "app.h"
 
 
