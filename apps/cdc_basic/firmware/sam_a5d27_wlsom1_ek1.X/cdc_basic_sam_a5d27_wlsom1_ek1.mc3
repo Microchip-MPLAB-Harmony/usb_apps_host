@@ -4859,7 +4859,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\configuration.h</file>
-         <hash>eaac74f9397d9ac1fa8a3a694981e234cea65e1f7156593f1cc3674ca897222c</hash>
+         <hash>03f9cf71d2b026f09a865c852a7a4026cfa4cd4ad6b1f12338b25967c3b47bd3</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\cstartup.S</file>
@@ -4871,7 +4871,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\definitions.h</file>
-         <hash>753d714614a8b2b364ba60c4eb1dfc9c1e5cc78c8a4b49c06a47128e016a4bb0</hash>
+         <hash>a92e5758e454a388c3d845e0052d46232259c31afce12084866d0e86ad237259</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\device.h</file>
@@ -4931,7 +4931,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\initialization.c</file>
-         <hash>06a79a8f1d5f324c9245881bba1d2c9abb564820904fbb088887047ed5804db3</hash>
+         <hash>3017e92a4c8973d2aa1db227f1f5a4d9c530c2092656d9d470bc76c1b96703f7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\interrupts.c</file>
@@ -5071,7 +5071,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\tasks.c</file>
-         <hash>8afc96c365d4778505b9e7b9b2819984bb538e5fe19c555e06171d0854b04bad</hash>
+         <hash>1e0ce44cb20e6b7c2bc86ada2e3c5e10eb1249d25965a75a5255535b3c43da77</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1\toolchain_specifics.h</file>
