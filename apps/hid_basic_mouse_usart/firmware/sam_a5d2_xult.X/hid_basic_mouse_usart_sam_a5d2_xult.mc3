@@ -4866,7 +4866,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\configuration.h</file>
-         <hash>960a86afe7111ace878a62b392786415ebec71192da0e5c0660b4ef2f0186c83</hash>
+         <hash>5a09fc881fc05dc1659c9abed3bcb441a6cfbf309b8acbe16f85ae6a2c70274f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\cstartup.S</file>
@@ -4878,7 +4878,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\definitions.h</file>
-         <hash>ebb5c7d645ea6862bb136537532d8041a0378f6f7eefc081f999d51573595880</hash>
+         <hash>f5b29e05ce9f3f8699f9691b9fb50386e26f96c2d03519d2336449b9ea949ebc</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\device.h</file>
@@ -4954,7 +4954,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\initialization.c</file>
-         <hash>c8a270b002a85b0140a0d50e06484be71dbefce6e65894cf0003dd9f93c226e0</hash>
+         <hash>ca6e81b89ab6019bb70a4796d334a1eb5e0ea3cc1976c238510cc152326e23b8</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\interrupts.c</file>
@@ -5118,7 +5118,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\tasks.c</file>
-         <hash>1e0ce44cb20e6b7c2bc86ada2e3c5e10eb1249d25965a75a5255535b3c43da77</hash>
+         <hash>8afc96c365d4778505b9e7b9b2819984bb538e5fe19c555e06171d0854b04bad</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\toolchain_specifics.h</file>
