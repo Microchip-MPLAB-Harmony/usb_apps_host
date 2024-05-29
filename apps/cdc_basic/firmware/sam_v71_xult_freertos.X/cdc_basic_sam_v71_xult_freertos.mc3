@@ -5413,11 +5413,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\configuration.h</file>
-         <hash>c00c55b76575bc674710360ae8ddc6be42795d30044f49b7d5fe3176f31047d6</hash>
+         <hash>67be0780781e8400eee2acd3c58e63ca1e368d6f7ef8a203c00a68a873069fb9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\definitions.h</file>
-         <hash>e70b16e9f55d34c6f4a4e8b6dea664411e38699afae730abe1f547671aba1d14</hash>
+         <hash>6e8c8fbab8aa7b71dd6e22724769987fdbe15ad20551ecdb8d03b6682179da07</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\device.h</file>
@@ -5477,7 +5477,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\initialization.c</file>
-         <hash>7caad4dc3ba9f378f3a22dc5ccee5781c5dfd24bc55a06a5d7b2fbe34ab359a0</hash>
+         <hash>fda92b98e0fcf5bff31b4c0da370bd896be4bc487a1f7529df887756bcfacc9b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\interrupts.c</file>
@@ -5621,7 +5621,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\tasks.c</file>
-         <hash>6d1e880941fcfa23d58c0707f274a444429de18c64499d3daa0ea5c3b9125f6e</hash>
+         <hash>1ba03302be707b5a6f3e69e8d041603a4e1907d6cc026683c200dc9301c8f6da</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_v71_xult_freertos\toolchain_specifics.h</file>
