@@ -7413,7 +7413,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\configuration.h</file>
-         <hash>67f93c5c56e2404c7fc26279543b337c20e4ab659e30b238bcaac8674c6f83d2</hash>
+         <hash>7f4b9be24c4279772f2b48368d4393cd469bc44e5934c7485088ecf7f6d963ed</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\cstartup.S</file>
@@ -7425,7 +7425,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\definitions.h</file>
-         <hash>0eb67392b497f31920d259a210b7c8be2bb6bf4d2a2a5e9f4098147a9ae887f1</hash>
+         <hash>400f43c7a5a8acbd25cfd32d1b4fbb2714d89872968e3e86845a05149b4c14fd</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\device.h</file>
@@ -7501,7 +7501,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\initialization.c</file>
-         <hash>0018a37cc7a1b9a479b558e60fc15e14293fec9715221989b26b5bc9eb6d29be</hash>
+         <hash>f0afe0bbcbb3141b182e7f5d0f0a34674cdc2b0078eb5786cfec040b8a0f0e7c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\interrupts.c</file>
@@ -7649,7 +7649,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\tasks.c</file>
-         <hash>1e0ce44cb20e6b7c2bc86ada2e3c5e10eb1249d25965a75a5255535b3c43da77</hash>
+         <hash>8afc96c365d4778505b9e7b9b2819984bb538e5fe19c555e06171d0854b04bad</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_eb\toolchain_specifics.h</file>
