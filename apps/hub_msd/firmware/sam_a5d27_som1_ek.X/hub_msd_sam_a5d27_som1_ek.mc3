@@ -5686,7 +5686,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\configuration.h</file>
-         <hash>d15fd274dfb2c53198e1b070a5cbb782d50ed5a6548968f35ad64ff4aeef833f</hash>
+         <hash>78568e2cc613ac7949388443fc4486707fb0e89f08c28f9f0df316d285846813</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\cstartup.S</file>
@@ -5698,7 +5698,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\definitions.h</file>
-         <hash>edae0cb6edfc9ab3500c7f6a29fc2c6cd62b366be33bd0d8a72e375075f8c941</hash>
+         <hash>c412f4bc4a7dd84ee08a7aeeb235da0b110bcae8f0b484be7fe2b35a66e23b08</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\device.h</file>
@@ -5758,7 +5758,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\initialization.c</file>
-         <hash>e0fef8c154b0afaefa2a80feb7ea6d26b2732ff3ac11fadd2949ee6c1fa9abf4</hash>
+         <hash>2effae345a0aee638a0e4fa62d8718ab110fc9d965ae479f598cff14a913a30a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\interrupts.c</file>
@@ -5966,7 +5966,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\tasks.c</file>
-         <hash>9a3adf7f1d8f2e4d8f475f1f28efba4a8500b56551812119d917f0739b94b555</hash>
+         <hash>d1e231740eae7643b29673d60d6f72a4c040fed8c76fce15dddb73057f34d3a7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_ek\toolchain_specifics.h</file>
