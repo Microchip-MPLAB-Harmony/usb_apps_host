@@ -4474,7 +4474,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\configuration.h</file>
-         <hash>d218fb01d8d8a3aa5d88e8716bb4b2da682bbd00a4e9198437e5e7a3fa7c8b2c</hash>
+         <hash>50fc94166e2b99e054819d215155d6a6d0c2e2cee7d78fbcc20ab5c569cb514f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\cstartup.S</file>
@@ -4486,7 +4486,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\definitions.h</file>
-         <hash>214297e5c9c2396f223f1a19aea18de1542515dc764706af55d879f16a8d49bd</hash>
+         <hash>0c9fc58aed80e8b4f4ab07b9f7d7e6d178e33920d60e95ba0bdfc243d5ebd2ae</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\device.h</file>
@@ -4562,7 +4562,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\initialization.c</file>
-         <hash>076e79922cd6125dbf50ef1957b5cf46f4067dd8b2573affd03f8a75c5d4d5e4</hash>
+         <hash>723b087f7694200e7c69ba9de0b12e0d73d79f12f89a507e5fc3d3aada6b97bb</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\interrupts.c</file>
@@ -4722,7 +4722,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\tasks.c</file>
-         <hash>1e0ce44cb20e6b7c2bc86ada2e3c5e10eb1249d25965a75a5255535b3c43da77</hash>
+         <hash>8afc96c365d4778505b9e7b9b2819984bb538e5fe19c555e06171d0854b04bad</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_ek\toolchain_specifics.h</file>

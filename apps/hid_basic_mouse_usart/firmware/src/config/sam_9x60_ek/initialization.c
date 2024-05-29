@@ -338,12 +338,12 @@ void SYS_Initialize ( void* data )
     /* Disable WDT   */
     WDT_REGS->WDT_MR = WDT_MR_WDDIS_Msk;
 
+    DBGU_Initialize();
+
  
     TC0_CH0_TimerInitialize(); 
      
     
-    DBGU_Initialize();
-
 
 
     /* MISRAC 2012 deviation block start */
@@ -361,12 +361,12 @@ void SYS_Initialize ( void* data )
     
     /* MISRAC 2012 deviation block end */
 
-    /* Initialize the USB Host layer */
-    sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );    
-
      /* Initialize USB Driver */ 
     sysObj.drvUSBEHCIObject = DRV_USB_EHCI_Initialize (DRV_USB_EHCI_INDEX_0, (SYS_MODULE_INIT *) &drvUSBEHCIInit);
     sysObj.drvUSBOHCIObject = DRV_USB_OHCI_Initialize (DRV_USB_OHCI_INDEX_0, (SYS_MODULE_INIT *) &drvUSBOHCIInit);
+
+    /* Initialize the USB Host layer */
+    sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );    
 
 
     /* MISRAC 2012 deviation block end */
