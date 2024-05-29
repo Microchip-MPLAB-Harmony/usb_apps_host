@@ -2565,7 +2565,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\definitions.h</file>
-         <hash>43c5a7ffbc8ffd4ef7688fcde65bc789311c8f25b1b26dd0be6207056a2a88e9</hash>
+         <hash>35dffb28d8a965e325d254fccbe388f2b639c68dd84ca8f4e4a71678a5975143</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\device.h</file>
