@@ -5858,7 +5858,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1_freertos\configuration.h</file>
-         <hash>e76fc2cd092d8eddabf45cd328ac48faf849f3eece4a0a24fa75637c72b9e618</hash>
+         <hash>018444869c779c27470da3d20a12f834d13dee1dd6f62843c26caa57479f77b7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1_freertos\cstartup.S</file>
@@ -5870,7 +5870,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1_freertos\definitions.h</file>
-         <hash>327a6635afa18210532625d3301902709179486536503cf4e3884d6db067674a</hash>
+         <hash>8e4fa66507d8f0783440bd835dfae2b5a3f8edce1b17c43da88665c0534147a9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1_freertos\device.h</file>
@@ -5950,7 +5950,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1_freertos\initialization.c</file>
-         <hash>a74f1e0740ffaad8e66c20f11d00e8ac0eccaab46ed0f93877bdc00c6dd26e30</hash>
+         <hash>4ab2a6f408a288c2d97a7ef85deb55be590c63e2f5824d2b8e570b24c52b772a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1_freertos\interrupts.c</file>
@@ -6126,7 +6126,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1_freertos\tasks.c</file>
-         <hash>b6a43843cbdf0bc6cdc0428bd1fabf02fed020a1cc37e0b9741968d61b5fbf56</hash>
+         <hash>9ff05d338fa87980d5fa2e403fa0c74dba094b5e043557bf8f018a86e206240b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_wlsom1_ek1_freertos\toolchain_specifics.h</file>
