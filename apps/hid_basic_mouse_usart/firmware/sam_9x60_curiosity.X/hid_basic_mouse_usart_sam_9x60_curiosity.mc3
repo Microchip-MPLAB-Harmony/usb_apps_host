@@ -7344,7 +7344,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\definitions.h</file>
-         <hash>210fe90cd1074466f80429010f8f3aba70faafa4e4bde44141470607d6c38b13</hash>
+         <hash>d8e68cbb2bb5017bc01dd95d8757ab52aeea1cfdc1ac7dcff03af7b86fc95bad</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\device.h</file>
@@ -7420,7 +7420,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\initialization.c</file>
-         <hash>fdd696ff68dc4cf9a0361ef4de8c14734f5bbe8feb77e0b9856f115596020cbd</hash>
+         <hash>7b57f636f56304c290c001faba882b14a9e2a220b990250821ccfb0934eb9f33</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x60_curiosity\interrupts.c</file>
