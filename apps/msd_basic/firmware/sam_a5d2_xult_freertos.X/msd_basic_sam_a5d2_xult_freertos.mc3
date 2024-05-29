@@ -4953,7 +4953,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\configuration.h</file>
-         <hash>6a48bbeee2a4dab013fb38c5d769c8d228243f1466ba79a80cc6c676074371fb</hash>
+         <hash>fff58bcb668134348cf18043bd1675926fc0c01058f35fd1aa37de4e8f900558</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\cstartup.S</file>
@@ -4965,7 +4965,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\definitions.h</file>
-         <hash>c0195fa0eae7b7ac040bb4948369231672ee970d78edfb31d1ab93026fcf6f4c</hash>
+         <hash>54071bcd48250c25863121d1e4d781cf5b5ada4ca696bc2db2eaa1b7e56ec7eb</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\device.h</file>
@@ -5029,7 +5029,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\initialization.c</file>
-         <hash>cbc094258b9c7805954a0b396a2a03b900493c2cd29df0bbf05476604341d3eb</hash>
+         <hash>d7084a2ecc8d84a051b31ea39f1ed7d1bbdcb06ac80abe3018dd79273e4b5de7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\interrupts.c</file>
@@ -5241,7 +5241,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\tasks.c</file>
-         <hash>0f1ab3daeca98c8df57cc2354e4f5119349e9f1261bd0ba6c5871af9ac14b2e5</hash>
+         <hash>2c575ac09a2b4eee852f6ed1c8dc24d6e6172a0d7b9310099f1c4568082664cc</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\toolchain_specifics.h</file>
