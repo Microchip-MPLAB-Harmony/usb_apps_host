@@ -4092,7 +4092,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\configuration.h</file>
-         <hash>55cfe16ab90217634ab5a1c6e57e42e192a92a24f4117788aa3acfeb37c86f8f</hash>
+         <hash>20fe863a98c480d392693c94c18cb3e2fb5fb652c75dadf31ba7ebe2e5cd8fba</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\cstartup.S</file>
@@ -4104,7 +4104,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\definitions.h</file>
-         <hash>53214702e76f6d3819683cf070b1c0246ad7e85c6b43b494e24119f1820f067e</hash>
+         <hash>bbec2b18186ae7432fa1222df608a12c963a5404523813d9d2f5e73453308628</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\device.h</file>
@@ -4164,7 +4164,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\initialization.c</file>
-         <hash>1bd90ffb836d27348cb8a5f6b5e516a87a5337263486112bd76c9473900527e5</hash>
+         <hash>63dcf8a7b992031960c60c5e93fd8ea639f3ffb19dfc3d97cd67662b114a460c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\interrupts.c</file>
@@ -4312,7 +4312,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\tasks.c</file>
-         <hash>8afc96c365d4778505b9e7b9b2819984bb538e5fe19c555e06171d0854b04bad</hash>
+         <hash>1e0ce44cb20e6b7c2bc86ada2e3c5e10eb1249d25965a75a5255535b3c43da77</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\toolchain_specifics.h</file>
