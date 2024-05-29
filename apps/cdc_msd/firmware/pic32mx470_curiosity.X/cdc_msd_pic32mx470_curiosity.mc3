@@ -2323,11 +2323,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\configuration.h</file>
-         <hash>599c83c11e71ada2921f9b59d560d9baf73c0143da5c84bee0f5db6e9984f855</hash>
+         <hash>7bb8ef9fbd419eb72c4343c6dd45dd5f2f4864d0752598d763788f8896295b88</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\definitions.h</file>
-         <hash>cb5ab672780e385bb8d7e1eb59f13503b1973ebd7dde7e59a13a8337494be483</hash>
+         <hash>e4c59562eef1d396655dc7dcc73e959b723ea519de5b4c130d3c9d99491ab412</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\device.h</file>
