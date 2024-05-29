@@ -7741,7 +7741,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\definitions.h</file>
-         <hash>85882c963471f38d84cc7968e1552b0dc45cb33e234e22015375b6b6da81ad13</hash>
+         <hash>041428a05bf19343d855edca97de81480ac4f97ddc2281c3098b0dad24f50018</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\device.h</file>
@@ -7817,7 +7817,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\initialization.c</file>
-         <hash>050e868456db0aa94964ef0ce5c22180fe8f33f8499e2509090389bd5ab5993b</hash>
+         <hash>a03d6572eab7ec035310a21d38f03e98ee3e60ee3a5b3d4d7dcd4a30cbf4a7d9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\interrupts.c</file>
