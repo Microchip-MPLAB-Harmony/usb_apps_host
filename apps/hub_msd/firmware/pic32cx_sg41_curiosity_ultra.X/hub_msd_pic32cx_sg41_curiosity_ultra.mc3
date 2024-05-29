@@ -8181,7 +8181,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\definitions.h</file>
-         <hash>b62e095f91770d007e9e092aa5bc1b11179efd6f397015ee19facf402f341b3f</hash>
+         <hash>54a87d73967a6b9d5afa22f87b84abec3a7776e96e6dd000625acfdcea92ee4d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\device.h</file>
@@ -8221,11 +8221,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\driver\usb\usbfsv1\src\drv_usbfsv1_host.c</file>
-         <hash>458063c6278240b6515b176ea672b146dd3658327771cdf3584f046bd9fcc606</hash>
+         <hash>e7404b47a161630b319458c688f719b265390de0cc60ddd4fa68bf263e05efd3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\driver\usb\usbfsv1\src\drv_usbfsv1_local.h</file>
-         <hash>0834ca7f0d9b69a800638f56d7a01e445a0addcc84d97e2597309dfbb2861cb4</hash>
+         <hash>43e52ea3bd0e33fe3d272e9ef610d6b1b9d4cf3395a80fd9eba16ba6986d96ee</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_curiosity_ultra\driver\usb\usbfsv1\src\drv_usbfsv1_variant_mapping.h</file>
