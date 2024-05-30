@@ -23,14 +23,14 @@ C4,PC25,,Available,In,,,,,,,,
 C5,PC27,VBUS_AH_PC27,VBUS_AH,n/a,n/a,No,Disabled,No,No,Disabled,No,Low
 C7,PB15,,Available,In,,,,,,,,
 C8,PB23,,Available,In,,,,,,,,
-C10,PB18,VBUS_AH_PB18,VBUS_AH,n/a,n/a,No,Disabled,No,No,Disabled,No,Low
+C10,PB18,,Available,In,,,,,,,,
 C11,PB26,,Available,In,,,,,,,,
 C17,PD5,,Available,In,,,,,,,,
 D1,PC20,VBUS_BLUE,VBUS_AH,n/a,n/a,No,Disabled,No,No,Disabled,No,Low
 D2,PC22,,Available,In,,,,,,,,
 D3,PC21,LED1,LED_AH,n/a,n/a,No,Disabled,No,No,Disabled,No,Low
 D5,PC29,,Available,In,,,,,,,,
-D7,PC31,,Available,In,,,,,,,,
+D7,PC31,VBUS_AH_PC31,VBUS_AH,n/a,n/a,No,Disabled,No,No,Disabled,No,Low
 D8,PB25,,Available,In,,,,,,,,
 D10,PB22,,Available,In,,,,,,,,
 D16,PD10,,Available,In,,,,,,,,

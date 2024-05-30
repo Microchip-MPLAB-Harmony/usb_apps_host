@@ -78,12 +78,12 @@
 /*** VBUS Macros for VBUS_AH_PC27 ***/
 #define VBUS_AH_PC27_PowerEnable() (PIOC_REGS->PIO_SODR = (1UL<<27))
 #define VBUS_AH_PC27_PowerDisable() (PIOC_REGS->PIO_CODR = (1UL<<27))
-/*** VBUS Macros for VBUS_AH_PB18 ***/
-#define VBUS_AH_PB18_PowerEnable() (PIOB_REGS->PIO_SODR = (1UL<<18))
-#define VBUS_AH_PB18_PowerDisable() (PIOB_REGS->PIO_CODR = (1UL<<18))
 /*** VBUS Macros for VBUS_BLUE ***/
 #define VBUS_BLUE_PowerEnable() (PIOC_REGS->PIO_SODR = (1UL<<20))
 #define VBUS_BLUE_PowerDisable() (PIOC_REGS->PIO_CODR = (1UL<<20))
+/*** VBUS Macros for VBUS_AH_PC31 ***/
+#define VBUS_AH_PC31_PowerEnable() (PIOC_REGS->PIO_SODR = (1UL<<31))
+#define VBUS_AH_PC31_PowerDisable() (PIOC_REGS->PIO_CODR = (1UL<<31))
 
 
 
