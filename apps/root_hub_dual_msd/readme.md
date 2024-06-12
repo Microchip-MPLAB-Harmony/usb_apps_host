@@ -1,9 +1,3 @@
----
-parent: Harmony 3 USB Host application examples
-title: Root Hub Dual MSD Example 
-has_children: false
-has_toc: false
----
 
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
