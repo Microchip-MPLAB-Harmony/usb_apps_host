@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<publication>
+   <title>USB Host application examples</title>
+   <urls>
+      <url>
+         <loc>GUID-4BEB4580-5653-4314-ABDE-36EF2BAAF53B.html</loc>
+         <lastmod>2023-09-21T09:24:48</lastmod>
+         <title>1 Harmony 3 USB Host application examples</title>
+         <description>MPLAB® Harmony 3 is an extension of the MPLAB® ecosystem for creating embedded firmware solutions for Microchip 32-bit SAM and PIC® microcontroller and microprocessor devices. Refer to the following ...</description>
+         <urls>
+            <url>
+               <loc>GUID-33CDA167-6389-4F4C-8831-2962F864C071.html</loc>
+               <lastmod>2024-06-27T09:34:14</lastmod>
+               <title>1.1 CDC Basic Example (cdc_basic)</title>
+               <description>This application demonstrates the ability of the MPLAB Harmony USB Host Stack CDC Client Driver to enumerate and operate a standard CDC USB Device. Description This application uses the USB Host ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-56031831-AE5D-43EC-8A2A-29478E2C1377.html</loc>
+               <lastmod>2024-06-27T09:34:27</lastmod>
+               <title>1.2 CDC MSD Example (cdc_msd)</title>
+               <description>This application demonstrates the ability of the MPLAB Harmony USB Host Stack to support more than one device type in a USB Host Application. Description This application creates a USB Host that can ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-561CCF33-8C3B-4A7F-A742-6FA7D15DBD0C.html</loc>
+               <lastmod>2024-06-27T08:52:19</lastmod>
+               <title>1.3 HID Basic Keyboard Example (hid_basic_keyboard)</title>
+               <description>This application demonstrates the ability of the MPLAB Harmony USB Host HID Client Driver to support to enumerate and operate a HID keyboard device. Description This application creates a USB Host ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-BFB19243-0DD7-4764-9673-AE5E1971B659.html</loc>
+               <lastmod>2024-06-27T08:52:20</lastmod>
+               <title>1.4 HID Basic Mouse USART Example (hid_basic_mouse_usart)</title>
+               <description>This application demonstrates the use of the USB HID Host Client Driver to enumerate and operate a HID USB Mouse device. Description This application uses the USB Host layer, HID Client driver and ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-3EF64A8C-1650-42DE-90B7-4A1818495A29.html</loc>
+               <lastmod>2023-12-11T09:41:18</lastmod>
+               <title>1.5 HUB CDC HID Example (hub_cdc_hid)</title>
+               <description>This application demonstrates the ability of the MPLAB Harmony USB Host Stack to access and manage multiple USB Devices through a Hub. Description This application creates a USB Host that can ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-B236DF72-8ED4-4ACF-B846-712BBB4090D2.html</loc>
+               <lastmod>2024-06-27T08:52:22</lastmod>
+               <title>1.6 HUB MSD Example (hub_msd)</title>
+               <description>This application demonstrates the ability of the MPLAB Harmony USB Host Stack to interact with more than one USB Mass Storage Device through a Hub. Description This application uses USB Host stack ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-F9D5AB11-B9C2-4E37-A971-FC12A540E307.html</loc>
+               <lastmod>2024-06-27T08:52:25</lastmod>
+               <title>1.7 MSD Basic Example (msd_basic)</title>
+               <description>This application demonstrates the ability of the MPLAB Harmony USB Host Stack to support MSD Host Class Driver . It demonstrates the feature with an application to read / write a file to a USB Flash ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-99CA2136-314F-430B-8F69-BB1A963654F5.html</loc>
+               <lastmod>2024-06-27T08:51:53</lastmod>
+               <title>1.8 Root Hub Dual MSD Example (root_hub_dual_msd)</title>
+               <description>This application demonstrates the ability of the MPLAB Harmony USB Host Stack to support MSD Host Class Driver . It demonstrates the feature with an application to read / write a file to a USB Flash ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-B4D087ED-51B2-4F4A-9929-A4093E0E1083.html</loc>
+               <lastmod>2024-01-09T05:01:46</lastmod>
+               <title>1.9 Vendor Example (vendor)</title>
+               <description>This application demonstrates how to interface with a USB device using the generic host client driver. The application includes a generic client driver example for a vendor-specific USB device. ...</description>
+               <urls/>
+            </url>
+         </urls>
+      </url>
+      <url>
+         <loc>GUID-0D60117D-9807-4F68-A280-D6014447ACB0.html</loc>
+         <lastmod>2024-06-27T09:34:37</lastmod>
+         <title>2 Microchip MPLAB® Harmony 3 Release Notes</title>
+         <description>Harmony 3 USB Host application examples v3.8.0 (June, 2024) Development kit and demo application support Following table provides number of USB Host demo applications available for different ...</description>
+         <urls/>
+      </url>
+      <url>
+         <loc>GUID-D3EEC4B6-AE45-45D3-ADD0-BF851C2C0CDF.html</loc>
+         <lastmod>2023-09-13T07:16:28</lastmod>
+         <title>3 License</title>
+         <description>MICROCHIP SOFTWARE IS PROVIDED SOLELY TO ASSIST YOU IN DEVELOPING PRODUCTS AND SYSTEMS THAT USE MICROCHIP PRODUCTS. DOWNLOAD AND/OR USE OF THE SOFTWARE REQUIRES THAT YOU ACCEPT THIS SOFTWARE LICENSE ...</description>
+         <urls/>
+      </url>
+      <url>
+         <loc>GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B.html</loc>
+         <lastmod>2022-04-04T12:20:47</lastmod>
+         <title> Microchip Information</title>
+         <description/>
+         <urls>
+            <url>
+               <loc>GUID-7551DC67-D79D-4F0C-B56F-7B17E12400E0.html</loc>
+               <lastmod>2022-07-05T07:23:16</lastmod>
+               <title> The Microchip Website</title>
+               <description>Microchip provides online support via our website at . This website is used to make files and information easily available to customers. Some of the content available includes:Product Support – Data ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-CDA512D8-0DE4-4672-8716-04CAC681CB38.html</loc>
+               <lastmod>2022-07-05T07:27:49</lastmod>
+               <title> Product Change Notification Service</title>
+               <description>Microchip’s product change notification service helps keep customers current on Microchip products. Subscribers will receive email notification whenever there are changes, updates, revisions or ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-F05182E4-B102-4775-A746-1FF37F465312.html</loc>
+               <lastmod>2022-07-05T07:29:30</lastmod>
+               <title> Customer Support</title>
+               <description>Users of Microchip products can receive assistance through several channels:Distributor or RepresentativeLocal Sales OfficeEmbedded Solutions Engineer (ESE)Technical Support Customers should contact ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-E8251634-7B15-4073-A103-5A5F128B8699.html</loc>
+               <lastmod>2021-09-15T14:48:25</lastmod>
+               <title> Microchip Devices Code Protection Feature</title>
+               <description>Note the following details of the code protection feature on Microchip products:Microchip products meet the specifications contained in their particular Microchip Data Sheet.Microchip believes that ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-125F1A93-76CC-4BD7-BACA-01844FBD5F4F.html</loc>
+               <lastmod>2024-06-13T17:02:57</lastmod>
+               <title> Legal Notice</title>
+               <description>This publication and the information herein may be used only with Microchip products, including to design, test, and integrate Microchip products with your application. Use of this information in any ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-21750586-F9F2-4E33-87FB-8F2994BF4744.html</loc>
+               <lastmod>2023-08-23T20:11:43</lastmod>
+               <title> Trademarks</title>
+               <description>The Microchip name and logo, the Microchip logo, Adaptec, AVR, AVR logo, AVR Freaks, BesTime, BitCloud, CryptoMemory, CryptoRF, dsPIC, flexPWR, HELDO, IGLOO, JukeBlox, KeeLoq, Kleer, LANCheck, ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-07985EED-D525-413B-AEFE-78B563328687.html</loc>
+               <lastmod>2022-07-05T07:33:24</lastmod>
+               <title> Quality Management System</title>
+               <description>For information regarding Microchip’s Quality Management Systems, please visit </description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-02A694CF-88A5-4ADA-8785-7EEEC62D66EA.html</loc>
+               <lastmod>2024-04-23T08:39:10</lastmod>
+               <title> Worldwide Sales and Service</title>
+               <description>AMERICASASIA/PACIFICASIA/PACIFICEUROPE Corporate Office 2355 West Chandler Blvd. Chandler, AZ 85224-6199 Tel: 480-792-7200 Fax: 480-792-7277 Technical Support: Web Address: Atlanta Duluth, GA Tel: ...</description>
+               <urls/>
+            </url>
+         </urls>
+      </url>
+   </urls>
+</publication>
