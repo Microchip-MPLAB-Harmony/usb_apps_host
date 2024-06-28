@@ -427,7 +427,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMA7D65_DFP" vendor="Microchip" version="0.0.28"/>
+        <pack name="SAMA7D65_DFP" vendor="Microchip" version="1.0.30"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="boot.load_adr" value=""/>
