@@ -272,12 +272,12 @@ void SYS_Initialize ( void* data )
 
 
 
+    FLEXCOM6_USART_Initialize();
+
  
     TC0_CH0_TimerInitialize(); 
      
     
-    FLEXCOM6_USART_Initialize();
-
 	BSP_Initialize();
 
 

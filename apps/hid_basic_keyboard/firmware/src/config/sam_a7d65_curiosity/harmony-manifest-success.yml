@@ -4,7 +4,7 @@
 
 
 project: hid_basic_keyboard
-creation_date: 2024-06-12T22:44:56.095+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2024-06-28T16:51:22.781+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.5.1
@@ -21,5 +21,5 @@ modules:
     - {name: "bsp", version: "v3.20.1"}
 
 packs:
-    - {name: "SAMA7D65_DFP", version: "0.0.28"}
+    - {name: "SAMA7D65_DFP", version: "1.0.30"}
 
