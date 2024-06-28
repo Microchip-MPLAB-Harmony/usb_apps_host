@@ -7865,7 +7865,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7d65_curiosity\driver\usb\uhp\src\drv_usb_ehci_local.h</file>
-         <hash>3da5572d010724a98a935842d2a940e3b237c2645b69d9ce0932e3d1aaf1a8b0</hash>
+         <hash>e007dc811526e0a273537fbca4528622effb014209f9a9bad6ebd666f88ac936</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7d65_curiosity\driver\usb\uhp\src\drv_usb_ohci.c</file>
@@ -7925,11 +7925,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7d65_curiosity\peripheral\gic\plib_gic.c</file>
-         <hash>f86e36235482d465cdf82ceaa099f7063edc46153599310cda364766a3078361</hash>
+         <hash>b41833d083c09314cfb82537647840d3d42b66ca5e4af62bcfd9af945288d9c2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7d65_curiosity\peripheral\gic\plib_gic.h</file>
-         <hash>92e447d1cb7ee981d456921c05de673482ee64824249201bb7543836b59386bb</hash>
+         <hash>e6e611db30d9530c6a4e5ccebb8db8b342a5b9a41dd16cc73c63b1f74b20fdc5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7d65_curiosity\peripheral\mmu\plib_mmu.c</file>
@@ -8205,23 +8205,23 @@
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\cmsis_compiler.h</file>
-         <hash>b08aae6acfc85751efbcb4307e49339a7ff65e3a00e993e9d2f7c1aa0e1ad6a8</hash>
+         <hash>5f314774edbd044865df8c2c2c98242bfa8ee8e671559b110d1e139776f45b7f</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\cmsis_cp15.h</file>
-         <hash>8a8c6118131eb018413f97f8b89bd83799b3a834a88ea8548c1b965e9303f556</hash>
+         <hash>5d0183058de6b2245dc949f13bb736cd1e8fe154fa76b643f9fb8947c1b3ee04</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\cmsis_gcc.h</file>
-         <hash>ab5f3200bf3f73e7989276e2c15650c73c9419f6fa6e76b4ba223d1a1aba895e</hash>
+         <hash>a720d18d2dd2921d8fe308d21c1f2e9c8174549ec1a34447927db3dcc9505aa9</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\cmsis_iccarm.h</file>
-         <hash>57a0bc166462914752931391c713963c7ecdb57c5add055c25d1911e6b61b93b</hash>
+         <hash>aede1a5428f7b7f4de414f596a2b2b8b1e38a94b7f9762a094ea6d88a7ea5729</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\core_ca.h</file>
-         <hash>cf568476b9a1a1e82071a68162b2b19937f619f8381f57a5030a9668057c671a</hash>
+         <hash>ba65df987ecd6e3692f49eda2a6be74d4e1f0a9a3595e7c15c9812c360591f85</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAMA7D65_DFP\component\acc.h</file>
