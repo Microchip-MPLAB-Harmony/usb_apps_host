@@ -72,9 +72,9 @@
 #define LED1_On() (PIOC_REGS->PIO_SODR = (1UL<<21))
 #define LED1_Off() (PIOC_REGS->PIO_CODR = (1UL<<21))
 /*** LED Macros for LED_RED ***/
-#define LED_RED_Toggle() (PIOC_REGS->PIO_ODSR ^= (1UL<<19))
-#define LED_RED_On() (PIOC_REGS->PIO_SODR = (1UL<<19))
-#define LED_RED_Off() (PIOC_REGS->PIO_CODR = (1UL<<19))
+#define LED_RED_Toggle() (PIOC_REGS->PIO_ODSR ^= (1UL<<14))
+#define LED_RED_On() (PIOC_REGS->PIO_SODR = (1UL<<14))
+#define LED_RED_Off() (PIOC_REGS->PIO_CODR = (1UL<<14))
 /*** VBUS Macros for VBUS_AH_PC27 ***/
 #define VBUS_AH_PC27_PowerEnable() (PIOC_REGS->PIO_SODR = (1UL<<27))
 #define VBUS_AH_PC27_PowerDisable() (PIOC_REGS->PIO_CODR = (1UL<<27))
