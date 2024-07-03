@@ -5,7 +5,7 @@
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
-## Harmony 3 USB Host application examples v3.8.0(June, 2024)
+## Harmony 3 USB Host application examples v3.8.0.
 
 ### Development kit and demo application support
 
