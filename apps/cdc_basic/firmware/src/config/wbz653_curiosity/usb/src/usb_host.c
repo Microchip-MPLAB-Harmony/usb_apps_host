@@ -87,13 +87,6 @@ static USB_HOST_BUS_OBJ  gUSBHostBusList[USB_HOST_CONTROLLERS_NUMBER];
  * array tracks the attached device. Additional device objects
  * are needed for root hubs.
  ************************************************************/
-
- /* Useful buffer */
-static uint8_t  USB_ALIGN DeviceListbuffer[ USB_HOST_CONTROLLERS_NUMBER + USB_HOST_DEVICES_NUMBER ][64];
- /* Device descriptor */
-static USB_DEVICE_DESCRIPTOR USB_ALIGN deviceAlignDescriptor[ USB_HOST_CONTROLLERS_NUMBER + USB_HOST_DEVICES_NUMBER];
-/* setup packet */
-static USB_SETUP_PACKET USB_ALIGN deviceSetupPacket[ USB_HOST_CONTROLLERS_NUMBER + USB_HOST_DEVICES_NUMBER ] ;
 static USB_HOST_DEVICE_OBJ  gUSBHostDeviceList [ USB_HOST_CONTROLLERS_NUMBER + USB_HOST_DEVICES_NUMBER ];
 
 /************************************************************
@@ -898,7 +891,7 @@ void F_USB_HOST_UpdateConfigurationState
                  * set */
 
                 F_USB_HOST_FillSetupPacket(
-                        (deviceObj->setupPacket),
+                        &(deviceObj->setupPacket),
                         ( USB_SETUP_DIRN_DEVICE_TO_HOST |
                           USB_SETUP_TYPE_STANDARD |
                           USB_SETUP_RECIPIENT_DEVICE ),
@@ -907,7 +900,7 @@ void F_USB_HOST_UpdateConfigurationState
 
                 /* Fill IRP */
                 deviceObj->controlTransferObj.controlIRP.data = ( void * )deviceObj->buffer;
-                deviceObj->controlTransferObj.controlIRP.setup = (deviceObj->setupPacket);
+                deviceObj->controlTransferObj.controlIRP.setup = &(deviceObj->setupPacket);
                 deviceObj->controlTransferObj.controlIRP.size = 9;
                 deviceObj->controlTransferObj.controlIRP.callback = NULL;
 
@@ -1065,13 +1058,13 @@ void F_USB_HOST_UpdateConfigurationState
                 {
                     /* Place a request for the full configuration descriptor */
                     F_USB_HOST_FillSetupPacket(
-                            (deviceObj->setupPacket), ( USB_SETUP_DIRN_DEVICE_TO_HOST | USB_SETUP_TYPE_STANDARD | USB_SETUP_RECIPIENT_DEVICE ),
-                            USB_REQUEST_GET_DESCRIPTOR, (uint16_t)(( USB_DESCRIPTOR_CONFIGURATION << 8 ) + deviceObj->requestedConfigurationNumber),
+                            &(deviceObj->setupPacket), ( USB_SETUP_DIRN_DEVICE_TO_HOST | USB_SETUP_TYPE_STANDARD | USB_SETUP_RECIPIENT_DEVICE ),
+                             USB_REQUEST_GET_DESCRIPTOR, (uint16_t)(( USB_DESCRIPTOR_CONFIGURATION << 8 ) + deviceObj->requestedConfigurationNumber),
                             0 ,configurationDescriptor->wTotalLength) ;
 
                     /* Create the IRP */
                     deviceObj->controlTransferObj.controlIRP.data = deviceObj->configDescriptorInfo.configurationDescriptor;
-                    deviceObj->controlTransferObj.controlIRP.setup = (deviceObj->setupPacket);
+                    deviceObj->controlTransferObj.controlIRP.setup = &(deviceObj->setupPacket);
                     deviceObj->controlTransferObj.controlIRP.size = configurationDescriptor->wTotalLength;
                     deviceObj->controlTransferObj.controlIRP.callback = NULL;
                     deviceObj->configurationState = USB_HOST_DEVICE_CONFIG_STATE_WAIT_FOR_CONFIG_DESCRIPTOR_GET;
@@ -1129,7 +1122,7 @@ void F_USB_HOST_UpdateConfigurationState
             case USB_HOST_DEVICE_CONFIG_STATE_CONFIGURATION_SET:
                  /* In this state, the host will set the configuration */
                 F_USB_HOST_FillSetupPacket(
-                        (deviceObj->setupPacket),
+                        &(deviceObj->setupPacket),
                         ( USB_SETUP_DIRN_HOST_TO_DEVICE |
                           USB_SETUP_TYPE_STANDARD |
                           USB_SETUP_RECIPIENT_DEVICE ),
@@ -1139,7 +1132,7 @@ void F_USB_HOST_UpdateConfigurationState
 
                 /* Fill IRP */
                 deviceObj->controlTransferObj.controlIRP.data = NULL;
-                deviceObj->controlTransferObj.controlIRP.setup = (deviceObj->setupPacket);
+                deviceObj->controlTransferObj.controlIRP.setup = &(deviceObj->setupPacket);
                 deviceObj->controlTransferObj.controlIRP.size = 0;
                 deviceObj->controlTransferObj.controlIRP.callback = NULL;
                 deviceObj->configurationState = USB_HOST_DEVICE_CONFIG_STATE_WAIT_FOR_CONFIGURATION_SET;
@@ -1293,7 +1286,7 @@ void F_USB_HOST_UpdateDeviceOwnership
     /* Check if the device is in a ready state. */
     if(deviceObj->deviceState == USB_HOST_DEVICE_STATE_READY)
     {
-        deviceDescriptor = (deviceObj->deviceDescriptor);
+        deviceDescriptor = &(deviceObj->deviceDescriptor);
 
         if(deviceObj->deviceClientDriver != NULL)
         {
@@ -1367,7 +1360,7 @@ void F_USB_HOST_UpdateDeviceOwnership
             {
                 /* This means a driver was found. Call the driver assign function */
                 SYS_DEBUG_PRINT(SYS_ERROR_INFO,"\r\nUSB Host Layer: Bus %d Assigning device level driver to device %d", busIndex, deviceObj->deviceAddress);
-                deviceObj->deviceClientDriver->deviceAssign(deviceObj->deviceClientHandle, deviceObj->deviceIdentifier, (deviceObj->deviceDescriptor));
+                deviceObj->deviceClientDriver->deviceAssign(deviceObj->deviceClientHandle, deviceObj->deviceIdentifier, &(deviceObj->deviceDescriptor));
             }
 
             /* Irrespective of the search result, we keep track of where the search 
@@ -1406,7 +1399,7 @@ void F_USB_HOST_UpdateDeviceOwnership
                         SYS_DEBUG_PRINT(SYS_ERROR_INFO,"\r\nUSB Host Layer: Bus %d Device %d. Assigning Device CL SC P Driver %d", 
                                 busIndex, deviceObj->deviceAddress, deviceObj->deviceClScPTried);
                         deviceObj->deviceClientDriver = (USB_HOST_CLIENT_DRIVER *)(gUSBHostObj.tpl[deviceObj->deviceClScPTried].hostClientDriver);
-                        deviceObj->deviceClientDriver->deviceAssign(deviceObj->deviceClientHandle, deviceObj->deviceIdentifier, (deviceObj->deviceDescriptor));
+                        deviceObj->deviceClientDriver->deviceAssign(deviceObj->deviceClientHandle, deviceObj->deviceIdentifier, &(deviceObj->deviceDescriptor));
                     }
                 }
             }
@@ -2039,7 +2032,7 @@ void F_USB_HOST_MakeDeviceReady
                     else
                     {
                         /* Create a setup command to get the device descriptor */
-                        F_USB_HOST_FillSetupPacket(  (deviceObj->setupPacket),
+                        F_USB_HOST_FillSetupPacket(  &(deviceObj->setupPacket),
                                 ( USB_SETUP_DIRN_DEVICE_TO_HOST | USB_SETUP_TYPE_STANDARD | USB_SETUP_RECIPIENT_DEVICE ),
                                 USB_REQUEST_GET_DESCRIPTOR, ( (uint16_t)USB_DESCRIPTOR_DEVICE << 8 ), 0 , 8 ) ;
 
@@ -2047,8 +2040,8 @@ void F_USB_HOST_MakeDeviceReady
                          * stage. We ask for the first 8 bytes of the device descriptor. */
 
                         deviceObj->controlTransferObj.inUse = true;
-                        deviceObj->controlTransferObj.controlIRP.data = (void *) ( deviceObj->deviceDescriptor );
-                        deviceObj->controlTransferObj.controlIRP.setup = (deviceObj->setupPacket ) ;
+                        deviceObj->controlTransferObj.controlIRP.data = (void *) &( deviceObj->deviceDescriptor );
+                        deviceObj->controlTransferObj.controlIRP.setup = &(deviceObj->setupPacket ) ;
                         deviceObj->controlTransferObj.controlIRP.size = 8 ;
                         deviceObj->controlTransferObj.controlIRP.callback = NULL;
 
@@ -2146,13 +2139,13 @@ void F_USB_HOST_MakeDeviceReady
                 deviceObj->deviceAddress = F_USB_HOST_GetNewAddress( busObj );
 
                 /* Create the setup request */
-                F_USB_HOST_FillSetupPacket(  (deviceObj->setupPacket),
+                F_USB_HOST_FillSetupPacket(  &(deviceObj->setupPacket),
                         ( USB_SETUP_DIRN_HOST_TO_DEVICE | USB_SETUP_TYPE_STANDARD | USB_SETUP_RECIPIENT_DEVICE ),
                         USB_REQUEST_SET_ADDRESS , deviceObj->deviceAddress , 0 , 0 ) ;
 
                 /* Create the IRP packet */
                 deviceObj->controlTransferObj.controlIRP.data = (void *) ( deviceObj->buffer );
-                deviceObj->controlTransferObj.controlIRP.setup = ( deviceObj->setupPacket ) ;
+                deviceObj->controlTransferObj.controlIRP.setup = &( deviceObj->setupPacket ) ;
                 deviceObj->controlTransferObj.controlIRP.size = 0 ;
                 deviceObj->controlTransferObj.controlIRP.callback = NULL;
 
@@ -2207,7 +2200,7 @@ void F_USB_HOST_MakeDeviceReady
                     deviceObj->controlPipeHandle = deviceObj->hcdInterface->hostPipeSetup( deviceObj->hcdHandle,
                             deviceObj->deviceAddress, 0 /* Endpoint */, deviceObj->hubAddress, deviceObj->devicePort,
                             USB_TRANSFER_TYPE_CONTROL/* Pipe type */, 0, /* bInterval */
-                            deviceObj->deviceDescriptor->bMaxPacketSize0, deviceObj->speed );
+                            deviceObj->deviceDescriptor.bMaxPacketSize0, deviceObj->speed );
 
                     if( DRV_USB_HOST_PIPE_HANDLE_INVALID == deviceObj->controlPipeHandle )
                     {
@@ -2315,13 +2308,13 @@ void F_USB_HOST_MakeDeviceReady
 
                 /* In the state the host layer requests for the full device
                  * descriptor. Create the setup packet. */
-                F_USB_HOST_FillSetupPacket( (deviceObj->setupPacket), ( USB_SETUP_DIRN_DEVICE_TO_HOST | USB_SETUP_TYPE_STANDARD | USB_SETUP_RECIPIENT_DEVICE ),
-                        USB_REQUEST_GET_DESCRIPTOR, ( (uint16_t)USB_DESCRIPTOR_DEVICE << 8 ), 0 , deviceObj->deviceDescriptor->bLength ) ;
+                F_USB_HOST_FillSetupPacket( &(deviceObj->setupPacket), ( USB_SETUP_DIRN_DEVICE_TO_HOST | USB_SETUP_TYPE_STANDARD | USB_SETUP_RECIPIENT_DEVICE ),
+                        USB_REQUEST_GET_DESCRIPTOR, ( (uint16_t)USB_DESCRIPTOR_DEVICE << 8 ), 0 , deviceObj->deviceDescriptor.bLength ) ;
 
                 /* Fill IRP */
-                deviceObj->controlTransferObj.controlIRP.data = (void *) ( deviceObj->deviceDescriptor );
-                deviceObj->controlTransferObj.controlIRP.setup = (deviceObj->setupPacket);
-                deviceObj->controlTransferObj.controlIRP.size = deviceObj->deviceDescriptor->bLength;
+                deviceObj->controlTransferObj.controlIRP.data = (void *) &( deviceObj->deviceDescriptor );
+                deviceObj->controlTransferObj.controlIRP.setup = &(deviceObj->setupPacket);
+                deviceObj->controlTransferObj.controlIRP.size = deviceObj->deviceDescriptor.bLength;
                 deviceObj->controlTransferObj.controlIRP.callback = NULL;
 
                 deviceObj->deviceState = USB_HOST_DEVICE_STATE_WAITING_FOR_GET_DEVICE_DESCRIPTOR_FULL;
@@ -2363,7 +2356,7 @@ void F_USB_HOST_MakeDeviceReady
                     deviceObj->enumerationFailCount = 0x00;
 
                     /* Update the number of configurations */
-                    deviceObj->nConfiguration = deviceObj->deviceDescriptor->bNumConfigurations;
+                    deviceObj->nConfiguration = deviceObj->deviceDescriptor.bNumConfigurations;
 
                     SYS_DEBUG_PRINT(SYS_ERROR_INFO, "\r\nUSB Host Layer: Bus %d Device %d contains %d configurations.", busIndex, deviceObj->deviceAddress, deviceObj->nConfiguration);
 
@@ -2423,12 +2416,12 @@ void F_USB_HOST_MakeDeviceReady
                  * header. This is needed so that we know what is the
                  * configuration descriptor size  */
 
-                F_USB_HOST_FillSetupPacket( (deviceObj->setupPacket), ( USB_SETUP_DIRN_DEVICE_TO_HOST | USB_SETUP_TYPE_STANDARD | USB_SETUP_RECIPIENT_DEVICE ), USB_REQUEST_GET_DESCRIPTOR,
+                F_USB_HOST_FillSetupPacket( &(deviceObj->setupPacket), ( USB_SETUP_DIRN_DEVICE_TO_HOST | USB_SETUP_TYPE_STANDARD | USB_SETUP_RECIPIENT_DEVICE ), USB_REQUEST_GET_DESCRIPTOR,
                         (uint16_t)(( USB_DESCRIPTOR_CONFIGURATION << 8 )+ deviceObj->configurationCheckCount) , 0 , 9 ) ;
 
                 /* Fill IRP */
                 deviceObj->controlTransferObj.controlIRP.data = ( void * )deviceObj->buffer;
-                deviceObj->controlTransferObj.controlIRP.setup = (deviceObj->setupPacket);
+                deviceObj->controlTransferObj.controlIRP.setup = &(deviceObj->setupPacket);
                 deviceObj->controlTransferObj.controlIRP.size = 9;
                 deviceObj->controlTransferObj.controlIRP.callback = NULL;
 
@@ -2545,7 +2538,7 @@ void F_USB_HOST_MakeDeviceReady
                 else
                 {
                     /* Place a request for the full configuration descriptor */
-                    F_USB_HOST_FillSetupPacket( (deviceObj->setupPacket), ( USB_SETUP_DIRN_DEVICE_TO_HOST | USB_SETUP_TYPE_STANDARD | USB_SETUP_RECIPIENT_DEVICE ),
+                    F_USB_HOST_FillSetupPacket( &(deviceObj->setupPacket), ( USB_SETUP_DIRN_DEVICE_TO_HOST | USB_SETUP_TYPE_STANDARD | USB_SETUP_RECIPIENT_DEVICE ),
                             USB_REQUEST_GET_DESCRIPTOR, (uint16_t)(( USB_DESCRIPTOR_CONFIGURATION << 8 ) + deviceObj->configurationCheckCount) ,
                             0 ,configurationDescriptor->wTotalLength) ;
 
@@ -2556,7 +2549,7 @@ void F_USB_HOST_MakeDeviceReady
                      * configuration descriptor has been checked for errors */
 
                     deviceObj->controlTransferObj.controlIRP.data = deviceObj->holdingConfigurationDescriptor;
-                    deviceObj->controlTransferObj.controlIRP.setup = (deviceObj->setupPacket);
+                    deviceObj->controlTransferObj.controlIRP.setup = &(deviceObj->setupPacket);
                     deviceObj->controlTransferObj.controlIRP.size = configurationDescriptor->wTotalLength;
                     deviceObj->controlTransferObj.controlIRP.callback = NULL;
                     deviceObj->deviceState = USB_HOST_DEVICE_STATE_WAITING_FOR_GET_CONFIGURATION_DESCRIPTOR_FULL;
@@ -4147,9 +4140,7 @@ USB_HOST_DEVICE_OBJ_HANDLE USB_HOST_DeviceEnumerate
 
             /* Completely clear up this object */
             (void) memset (newDeviceObj, 0, sizeof(USB_HOST_DEVICE_OBJ));
-            newDeviceObj->buffer = DeviceListbuffer[deviceCount];
-            newDeviceObj->setupPacket = &(deviceSetupPacket[deviceCount]);
-            newDeviceObj->deviceDescriptor = &( deviceAlignDescriptor[deviceCount] );
+
             /* Grab this object */
             newDeviceObj->inUse  = true;
             break;
@@ -5690,7 +5681,7 @@ USB_HOST_RESULT USB_HOST_DevicePipeHaltClear
 
                     /* Create the setup packet */
                     F_USB_HOST_FillSetupPacket(
-                            (deviceObj->setupPacket),
+                            &(deviceObj->setupPacket),
                             ( USB_SETUP_DIRN_HOST_TO_DEVICE |
                               USB_SETUP_TYPE_STANDARD |
                               USB_SETUP_RECIPIENT_ENDPOINT ),
@@ -5699,8 +5690,8 @@ USB_HOST_RESULT USB_HOST_DevicePipeHaltClear
 
                     controlTransferObj->requestType = USB_HOST_CONTROL_REQUEST_TYPE_PIPE_HALT_CLEAR;
                     controlTransferObj->controlIRP.data = NULL;
-                    controlTransferObj->controlIRP.setup = deviceObj->setupPacket;
-                    controlTransferObj->controlIRP.size = deviceObj->setupPacket->wLength;
+                    controlTransferObj->controlIRP.setup = &deviceObj->setupPacket;
+                    controlTransferObj->controlIRP.size = deviceObj->setupPacket.wLength;
                     controlTransferObj->controlIRP.callback = F_USB_HOST_DeviceControlTransferCallback;
                     controlTransferObj->controlIRP.userData = interfaceHandle;
                     controlTransferObj->context = context;
@@ -6280,7 +6271,7 @@ USB_HOST_RESULT USB_HOST_DeviceInterfaceSet
                         deviceObj->requestedAlternateSetting = alternateSetting;
 
                         F_USB_HOST_FillSetupPacket(
-                                (deviceObj->setupPacket),
+                                &(deviceObj->setupPacket),
                                 ( USB_SETUP_DIRN_HOST_TO_DEVICE |
                                   USB_SETUP_TYPE_STANDARD |
                                   USB_SETUP_RECIPIENT_INTERFACE ),
@@ -6288,8 +6279,8 @@ USB_HOST_RESULT USB_HOST_DeviceInterfaceSet
                                 alternateSetting , interfaceIndex  ,0 ) ;
 
                         controlTransferObj->controlIRP.data = NULL;
-                        controlTransferObj->controlIRP.setup = deviceObj->setupPacket;
-                        controlTransferObj->controlIRP.size = deviceObj->setupPacket->wLength;
+                        controlTransferObj->controlIRP.setup = &deviceObj->setupPacket;
+                        controlTransferObj->controlIRP.size = deviceObj->setupPacket.wLength;
                         controlTransferObj->controlIRP.callback = F_USB_HOST_DeviceControlTransferCallback;
                         controlTransferObj->controlIRP.userData = interfaceHandle;
                         controlTransferObj->context = context;
@@ -6432,21 +6423,21 @@ USB_HOST_RESULT USB_HOST_DeviceStringDescriptorGet
 
                                 /* Set the string index to the manufacture string
                                    index */
-                                stringIndex = deviceObj->deviceDescriptor->iManufacturer;
+                                stringIndex = deviceObj->deviceDescriptor.iManufacturer;
                                 break;
 
                             case USB_HOST_DEVICE_STRING_PRODUCT:
 
                                 /* Set the string index to the manufacture string
                                    index */
-                                stringIndex = deviceObj->deviceDescriptor->iProduct;
+                                stringIndex = deviceObj->deviceDescriptor.iProduct;
                                 break;
 
                             case USB_HOST_DEVICE_STRING_SERIAL_NUMBER:
 
                                 /* Set the string index to the manufacture string
                                    index */
-                                stringIndex = deviceObj->deviceDescriptor->iSerialNumber;
+                                stringIndex = deviceObj->deviceDescriptor.iSerialNumber;
                                 break;
 
                             default:
@@ -6506,7 +6497,7 @@ USB_HOST_RESULT USB_HOST_DeviceStringDescriptorGet
                                 controlTransferObj->requestType = USB_HOST_CONTROL_REQUEST_TYPE_STRING_DESCRIPTOR;
 
                                 F_USB_HOST_FillSetupPacket(
-                                        (deviceObj->setupPacket),
+                                        &(deviceObj->setupPacket),
                                         ( USB_SETUP_DIRN_DEVICE_TO_HOST |
                                           USB_SETUP_TYPE_STANDARD |
                                           USB_SETUP_RECIPIENT_DEVICE ),
@@ -6519,8 +6510,8 @@ USB_HOST_RESULT USB_HOST_DeviceStringDescriptorGet
                                  * transfer. */
 
                                 controlTransferObj->controlIRP.data = stringDescriptor;
-                                controlTransferObj->controlIRP.setup = deviceObj->setupPacket;
-                                controlTransferObj->controlIRP.size = deviceObj->setupPacket->wLength;
+                                controlTransferObj->controlIRP.setup = &deviceObj->setupPacket;
+                                controlTransferObj->controlIRP.size = deviceObj->setupPacket.wLength;
                                 controlTransferObj->controlIRP.callback = F_USB_HOST_DeviceControlTransferCallback;
                                 controlTransferObj->controlIRP.userData = deviceObjHandle ;
                                 controlTransferObj->context = context;
@@ -6721,7 +6712,7 @@ USB_HOST_RESULT USB_HOST_DeviceConfigurationDescriptorGet
 
                             /* Create the Setup packet */
                             F_USB_HOST_FillSetupPacket(
-                                    (deviceObj->setupPacket),
+                                    &(deviceObj->setupPacket),
                                     ( USB_SETUP_DIRN_DEVICE_TO_HOST |
                                       USB_SETUP_TYPE_STANDARD |
                                       USB_SETUP_RECIPIENT_DEVICE ),
@@ -6734,8 +6725,8 @@ USB_HOST_RESULT USB_HOST_DeviceConfigurationDescriptorGet
                             controlTransferObj->requestType = USB_HOST_CONTROL_REQUEST_TYPE_CONFIGURATION_DESCRIPTOR_GET;
 
                             controlTransferObj->controlIRP.data = buffer;
-                            controlTransferObj->controlIRP.setup = deviceObj->setupPacket;
-                            controlTransferObj->controlIRP.size = deviceObj->setupPacket->wLength;
+                            controlTransferObj->controlIRP.setup = &deviceObj->setupPacket;
+                            controlTransferObj->controlIRP.size = deviceObj->setupPacket.wLength;
                             controlTransferObj->controlIRP.callback = F_USB_HOST_DeviceControlTransferCallback;
                             controlTransferObj->controlIRP.userData = deviceHandle;
                             controlTransferObj->context = context;
