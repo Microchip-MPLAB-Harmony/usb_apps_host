@@ -8229,7 +8229,7 @@
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\definitions.h</file>
-         <hash>77afe7ba020925da8cb16b41a4a4d3e04e068c8b3294034c59711bddb762e71b</hash>
+         <hash>68726cc8b7dbba43712f40e2897fe423eccf9c98943844270224b10950458996</hash>
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\device.h</file>
@@ -8301,7 +8301,7 @@
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\initialization.c</file>
-         <hash>6d69b37e59cda49e3582b62b7c095e50e4c6a75147d003da4f0306b9be997828</hash>
+         <hash>98feb86ae3db1685453013360a059d39025e1ed47bfc3974961a99662255dd62</hash>
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\interrupts.c</file>
@@ -8465,7 +8465,7 @@
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\usb\src\usb_host.c</file>
-         <hash>4a7e8f800a5e21fc431c3d57d11028581458a5450d4b22c2f7850a95ac111242</hash>
+         <hash>3a8c8e7510577dcac7db2c22fba75dda9af24362f5a2a170c095faef88ffcfd5</hash>
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\usb\src\usb_host_hid.c</file>
@@ -8489,7 +8489,7 @@
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\usb\src\usb_host_local.h</file>
-         <hash>ebead4b299cf0376150d541aab5f70210f2f5d1b40127566d44b1149ac0e440d</hash>
+         <hash>aa9e60691421c11748a9659e71b4bce4b24f2aeb9cecd52f850b8868356584b5</hash>
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\usb\usb_chapter_9.h</file>

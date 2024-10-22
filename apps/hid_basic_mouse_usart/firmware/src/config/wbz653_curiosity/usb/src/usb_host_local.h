@@ -139,7 +139,7 @@ typedef void *  USB_HOST_IRP_CALLBACK;
 
 #ifndef USB_HOST_FREE
 /* Free memory */
-#define USB_HOST_FREE(ptr)         free(ptr)
+#define USB_HOST_FREE(ptr)          free(ptr)
 #endif
 
 #ifdef DRV_USB_UHP_INSTANCES_NUMBER
@@ -525,13 +525,13 @@ typedef struct  USB_HOST_DEVICE_OBJ_
     USB_SPEED  speed;
 
     /* Device descriptor */
-    USB_DEVICE_DESCRIPTOR *deviceDescriptor;
+    USB_DEVICE_DESCRIPTOR deviceDescriptor;
 
     /* Dynamically allocated buffer for client drivers to use */
     USB_CONFIGURATION_DESCRIPTOR * holdingConfigurationDescriptor;
     
     /* Useful buffer */
-    uint8_t  *buffer;
+    uint8_t  buffer[64];
     
     /* Number of configurations available in device */
     uint8_t nConfiguration;
@@ -541,7 +541,7 @@ typedef struct  USB_HOST_DEVICE_OBJ_
     uint8_t  nInterfaces;
 
     /* setup packet */
-    USB_SETUP_PACKET *setupPacket;
+    USB_SETUP_PACKET setupPacket;
 
     /* Device level driver */
     USB_HOST_CLIENT_DRIVER  * deviceClientDriver;
