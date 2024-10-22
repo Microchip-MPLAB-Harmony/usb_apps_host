@@ -42,6 +42,7 @@ Following table gives the details of project configurations, target device used,
 |sam\_a5d29\_curiosity.X|MPLABX|ATSAMA5D29|SAMA5D29 Curiosity Development Board|
 |sam\_9x75\_curiosity.X|MPLABX|SAM9X75D2G|SAM9X75-Curiosity Development Board|
 |sam\_a7d65\_curiosity.X|MPLABX|SAMA7D65|SAMA7D65 Curiosity Development Board|
+|wbz653\_curiosity.X|MPLABX|WBZ653|WBZ653 Curiosity Board|
 
 ## **Configuring the Hardware**
 
@@ -293,6 +294,16 @@ Following table gives the details of project configurations, target device used,
 -   The demonstration uses the UART DEBUG port \(J35\) to transfer demonstration application messages on a PC. A USB/Serial converter is required to connect the J35 to a PC \(The USB/Serial converter is not included in the kit\).
 
 ![](GUID-6DEE5CBA-AB4F-43D8-AF25-C502A75A4621-low.jpg)
+
+**WBZ653 Curiosity Board**
+
+-   Jumper J102 must be shorted between 5V and VBUS.
+-   J104 must be connected between VBUSON and EN \(Positions 2 and 3\).
+-   A commercially available USB Keyboard is required to run this demonstration application.
+-   Connect the USB Keyboard to the USB Type-C connector TARGET USB \(J103\). A USB Type-C to Type-A Female adapter is required to connect the USB device to the board \(This cable is not included in the kit\).
+-   The demonstration uses the PKOB4 \(DBG USB J100\) Serial Interface to transfer messages on a PC.
+-   RGB\_LED \(D800\) indicates a Device Connection. \(Attached device has been successfully enumerated and configured\).
+-   The LED on the keyboard toggles on Keyboard "CapsLock" press event.
 
 ## **Running the Application**
 
