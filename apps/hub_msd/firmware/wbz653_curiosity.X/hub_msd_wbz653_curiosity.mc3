@@ -3390,9 +3390,9 @@
         &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;drv_usbfs_v1&quot; x=&quot;15&quot; y=&quot;178&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;evsys&quot; x=&quot;18&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;rtc&quot; x=&quot;177&quot; y=&quot;89&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;sercom0&quot; x=&quot;16&quot; y=&quot;256&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;sercom0&quot; x=&quot;9&quot; y=&quot;320&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;sys_console&quot; x=&quot;154&quot; y=&quot;256&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;sys_debug&quot; x=&quot;334&quot; y=&quot;292&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;sys_debug&quot; x=&quot;335&quot; y=&quot;314&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;sys_fs&quot; x=&quot;495&quot; y=&quot;141&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;sys_time&quot; x=&quot;362&quot; y=&quot;43&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;13&quot; id=&quot;usb_host&quot; x=&quot;178&quot; y=&quot;155&quot;/&gt;
@@ -9835,11 +9835,11 @@
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\configuration.h</file>
-         <hash>3469cf68b31aacb8bfca9c829a8cf10e16b5f5f6f87a229b441c749d91ae0d6d</hash>
+         <hash>da2210b5928a6f42eb02357ded2e2da9f713a47ea28da8866479135f3490a315</hash>
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\definitions.h</file>
-         <hash>62bec79cc82bb531babacc3d27b3eaff4651568fcb8a3f01c827158456d9cf62</hash>
+         <hash>f20be84c827c1b6ffa063c77db0c93c7b972d1493652d95445e26743a078ab53</hash>
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\device.h</file>
@@ -9895,7 +9895,7 @@
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\initialization.c</file>
-         <hash>499d0f4c2ae4eec2c0ca8d5292f3c824f828faf3ebbb723b8ce4a2570daa60f1</hash>
+         <hash>6d60dc68f820a6da0a10c8a82bbfd499c55646e6b1b5c3b07ca1c8cf31470bb8</hash>
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\interrupts.c</file>
@@ -10147,7 +10147,7 @@
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\usb\src\usb_host.c</file>
-         <hash>4a7e8f800a5e21fc431c3d57d11028581458a5450d4b22c2f7850a95ac111242</hash>
+         <hash>3a8c8e7510577dcac7db2c22fba75dda9af24362f5a2a170c095faef88ffcfd5</hash>
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\usb\src\usb_host_hub.c</file>
@@ -10163,7 +10163,7 @@
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\usb\src\usb_host_local.h</file>
-         <hash>ebead4b299cf0376150d541aab5f70210f2f5d1b40127566d44b1149ac0e440d</hash>
+         <hash>aa9e60691421c11748a9659e71b4bce4b24f2aeb9cecd52f850b8868356584b5</hash>
       </entry>
       <entry>
          <file>..\src\config\wbz653_curiosity\usb\src\usb_host_msd.c</file>
