@@ -5,4 +5,4 @@
 
 This application demonstrates the ability of the MPLAB Harmony USB Host Stack to support MSD Host Class Driver . It demonstrates the feature with an application to read / write a file to a USB Flash drive.
 
-[Click here to be redirected to the demo application documentation.](../../docs/docs_md/GUID-99CA2136-314F-430B-8F69-BB1A963654F5.md)
+[Click here to be redirected to the demo application documentation.](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=USB_APPS_HOST_ROOT_HUB_DUAL_MSD_EXAMPLE&redirect=true)

@@ -6,4 +6,4 @@
 
 This application demonstrates the ability of the MPLAB Harmony USB Host Stack to access and manage multiple USB Devices through a Hub.
 
-[Click here to be redirected to the demo application documentation.](../../docs/docs_md/GUID-3EF64A8C-1650-42DE-90B7-4A1818495A29.md)
+[Click here to be redirected to the demo application documentation.](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=USB_APPS_HOST_HUB_CDC_HID_EXAMPLE&redirect=true)
