@@ -56,10 +56,10 @@
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/cmcc/plib_cmcc.h"
+#include "driver/usb/usbfs/drv_usbfs.h"
+#include "bsp/bsp.h"
 #include "usb/usb_host_cdc.h"
 #include "usb/usb_cdc.h"
-#include "bsp/bsp.h"
-#include "driver/usb/usbfs/drv_usbfs.h"
 #include "usb/usb_host_hid.h"
 #include "usb/usb_hid.h"
 #include "usb/usb_host_hid_mouse.h"
@@ -82,13 +82,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "WBZ653"
-#define DEVICE_ARCH			 "CORTEX-M4"
-#define DEVICE_FAMILY		 "PIC32CX_BZ6"
-#define DEVICE_SERIES		 "WBZ65"
+#define DEVICE_NAME          "WBZ653"
+#define DEVICE_ARCH          "CORTEX-M4"
+#define DEVICE_FAMILY        "PIC32CX_BZ6"
+#define DEVICE_SERIES        "WBZ65"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 64000000
+#define CPU_CLOCK_FREQUENCY 64000000U
 
 // *****************************************************************************
 // *****************************************************************************
