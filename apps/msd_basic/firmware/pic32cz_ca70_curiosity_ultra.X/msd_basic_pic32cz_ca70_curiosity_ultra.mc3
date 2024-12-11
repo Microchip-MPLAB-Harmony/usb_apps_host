@@ -51,7 +51,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -12644,11 +12644,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra\configuration.h</file>
-         <hash>f71c47a372657f2e20ea977b90865015a99ab1323176add25f6f794bfd4a1f62</hash>
+         <hash>caec52e3f100b16e86a45bce6af1185b0b6f597dc81c7e064ea8448b0e446c7f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra\definitions.h</file>
-         <hash>35513c37764bf0baee44fd6c4e533d1c4afa7664522a10181c01281e8872205c</hash>
+         <hash>e8a3398f55b195e1df9799fae5707f9a18f30e67f47bf2757054ef5b90fa8aa5</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra\device.h</file>
@@ -12704,7 +12704,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra\initialization.c</file>
-         <hash>e4f0b50aeceb689f37365af4ba4e0ecb6205c37f6c499c5bfc62019a54d7c5b7</hash>
+         <hash>a008562d3dc43fa3e26ee335130ff765b22e5936c2a9a49592a83678930663ec</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra\interrupts.c</file>
@@ -12904,7 +12904,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra\tasks.c</file>
-         <hash>9465e63ca8d9949cf4e07ed99ccd6c6835d6f958d890fa474d8bb664c2dca617</hash>
+         <hash>b94958aee7595e14a142210761c11d56726cbebcee26cb71ecf48a2099d0d8da</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra\toolchain_specifics.h</file>
@@ -12920,7 +12920,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra\usb\src\usb_host.c</file>
-         <hash>3a8c8e7510577dcac7db2c22fba75dda9af24362f5a2a170c095faef88ffcfd5</hash>
+         <hash>f66397aa89f8b43c22792d73e709aec033271b8e9c2ff3aedd10b07a7b44d70c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra\usb\src\usb_host_hub_mapping.h</file>
@@ -12956,7 +12956,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra\usb\usb_host.h</file>
-         <hash>56c248da571d1a46c5d6b5b34e28a978b30b40ee1fb04fa4f2efdcb8a5a1039b</hash>
+         <hash>9e71096993b82346d36f826b35ff46d1cecadbfda0fee4ae47125da2764391e4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra\usb\usb_host_client_driver.h</file>
@@ -13024,7 +13024,7 @@
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</file>
-         <hash>2de01ae2556a38eb82c389de23c701805ec63308cfbcf3f84cb12141589b0858</hash>
+         <hash>8cda7ac3ff6f0eb5e83c4fe613dd195151b24da54167f5c3c007e599a03f1edc</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\core_cm7.h</file>
