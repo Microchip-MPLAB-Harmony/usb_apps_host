@@ -48,10 +48,10 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include "driver/usb/uhp/drv_usb_ohci.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_host.h"
 #include "usb/usb_host_hub.h"
-#include "driver/usb/uhp/drv_usb_ohci.h"
 #include "usb/usb_msd.h"
 #include "usb/usb_host_msd.h"
 #include "usb/usb_host_scsi.h"
@@ -86,13 +86,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "ATSAMG55J19"
-#define DEVICE_ARCH			 "CORTEX-M4"
-#define DEVICE_FAMILY		 "SAMG"
-#define DEVICE_SERIES		 "SAMG55"
+#define DEVICE_NAME          "ATSAMG55J19"
+#define DEVICE_ARCH          "CORTEX-M4"
+#define DEVICE_FAMILY        "SAMG"
+#define DEVICE_SERIES        "SAMG55"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 100007936
+#define CPU_CLOCK_FREQUENCY 100007936U
 
 // *****************************************************************************
 // *****************************************************************************
@@ -204,9 +204,9 @@ Remarks:
 
 typedef struct
 {
-    SYS_MODULE_OBJ  usbHostObject0;
-
     SYS_MODULE_OBJ  drvUSBOHCIObject;
+
+    SYS_MODULE_OBJ  usbHostObject0;
 
     SYS_MODULE_OBJ  sysTime;
 
