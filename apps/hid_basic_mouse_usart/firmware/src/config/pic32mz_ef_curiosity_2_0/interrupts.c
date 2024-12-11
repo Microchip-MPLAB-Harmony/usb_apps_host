@@ -81,32 +81,32 @@ void UART6_TX_Handler (void);
 // Section: System Interrupt Vector definitions
 // *****************************************************************************
 // *****************************************************************************
-void __ISR(_CORE_TIMER_VECTOR, ipl1SRS) CORE_TIMER_Handler (void)
+void __attribute__((used)) __ISR(_CORE_TIMER_VECTOR, ipl1SRS) CORE_TIMER_Handler (void)
 {
     CORE_TIMER_InterruptHandler();
 }
 
-void __ISR(_USB_VECTOR, ipl1SRS) USB_Handler (void)
+void __attribute__((used)) __ISR(_USB_VECTOR, ipl1SRS) USB_Handler (void)
 {
     DRV_USBHS_InterruptHandler();
 }
 
-void __ISR(_USB_DMA_VECTOR, ipl1SRS) USB_DMA_Handler (void)
+void __attribute__((used)) __ISR(_USB_DMA_VECTOR, ipl1SRS) USB_DMA_Handler (void)
 {
     DRV_USBHS_DMAInterruptHandler();
 }
 
-void __ISR(_UART6_FAULT_VECTOR, ipl1SRS) UART6_FAULT_Handler (void)
+void __attribute__((used)) __ISR(_UART6_FAULT_VECTOR, ipl1SRS) UART6_FAULT_Handler (void)
 {
     UART6_FAULT_InterruptHandler();
 }
 
-void __ISR(_UART6_RX_VECTOR, ipl1SRS) UART6_RX_Handler (void)
+void __attribute__((used)) __ISR(_UART6_RX_VECTOR, ipl1SRS) UART6_RX_Handler (void)
 {
     UART6_RX_InterruptHandler();
 }
 
-void __ISR(_UART6_TX_VECTOR, ipl1SRS) UART6_TX_Handler (void)
+void __attribute__((used)) __ISR(_UART6_TX_VECTOR, ipl1SRS) UART6_TX_Handler (void)
 {
     UART6_TX_InterruptHandler();
 }
