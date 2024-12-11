@@ -48,10 +48,10 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "driver/usb/uhp/drv_usb_ohci.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_host.h"
 #include "usb/usb_host_hub.h"
+#include "driver/usb/uhp/drv_usb_ohci.h"
 #include "bsp/bsp.h"
 #include "peripheral/pio/plib_pio.h"
 #include "peripheral/clock/plib_clock.h"
@@ -59,16 +59,16 @@
 #include "peripheral/cmcc/plib_cmcc.h"
 #include "usb/usb_host_cdc.h"
 #include "usb/usb_cdc.h"
-#include "peripheral/efc/plib_efc.h"
 #include "usb/usb_host_hid.h"
 #include "usb/usb_hid.h"
 #include "usb/usb_host_hid_mouse.h"
+#include "peripheral/efc/plib_efc.h"
 #include "peripheral/tc/plib_tc0.h"
+#include "system/time/sys_time.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "system/time/sys_time.h"
 #include "app.h"
 
 
@@ -82,13 +82,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "ATSAMG55J19"
-#define DEVICE_ARCH			 "CORTEX-M4"
-#define DEVICE_FAMILY		 "SAMG"
-#define DEVICE_SERIES		 "SAMG55"
+#define DEVICE_NAME          "ATSAMG55J19"
+#define DEVICE_ARCH          "CORTEX-M4"
+#define DEVICE_FAMILY        "SAMG"
+#define DEVICE_SERIES        "SAMG55"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 100007936
+#define CPU_CLOCK_FREQUENCY 100007936U
 
 // *****************************************************************************
 // *****************************************************************************
@@ -200,9 +200,9 @@ Remarks:
 
 typedef struct
 {
-    SYS_MODULE_OBJ  drvUSBOHCIObject;
-
     SYS_MODULE_OBJ  usbHostObject0;
+
+    SYS_MODULE_OBJ  drvUSBOHCIObject;
 
     SYS_MODULE_OBJ  sysTime;
 

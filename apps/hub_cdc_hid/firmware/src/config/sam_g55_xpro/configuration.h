@@ -102,34 +102,6 @@ extern "C" {
 // Section: Middleware & Other Library Configuration
 // *****************************************************************************
 // *****************************************************************************
-
-/* EHCI Driver is not used */  
-#define DRV_USB_EHCI_INSTANCES_NUMBER                     0U
-    
-
-
-/*** USB OHCI Driver Configurations ***/
-
-#define DRV_USB_OHCI_INSTANCES_NUMBER                        1U
-
-/* Attach Debounce duration in milli Seconds */ 
-#define DRV_USB_OHCI_ATTACH_DEBOUNCE_DURATION           500
-
-/* Reset duration in milli Seconds */ 
-#define DRV_USB_OHCI_RESET_DURATION                     100
-
-/* Maximum Control Transfer Size */
-#define DRV_USB_OHCI_CONTROL_TRANSFER_BUFFER_SIZE 512U
-
-/* Maximum Non Control Transfer Size */ 
-#define DRV_USB_OHCI_TRANSFER_BUFFER_SIZE  512U
-
-
-/* Alignment for buffers that are submitted to USB Driver*/ 
-#ifndef USB_ALIGN
-#define USB_ALIGN __ALIGNED(32)
-#endif 
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: USB Host Layer Configuration
@@ -159,6 +131,34 @@ extern "C" {
 #define USB_HOST_HUB_SUPPORT                  true
 #define USB_HOST_HUB_INSTANCES_NUMBER         1
 #define USB_HOST_HUB_PORTS_NUMBER             4
+
+
+/* EHCI Driver is not used */  
+#define DRV_USB_EHCI_INSTANCES_NUMBER                     0U
+    
+
+
+/*** USB OHCI Driver Configurations ***/
+
+#define DRV_USB_OHCI_INSTANCES_NUMBER                        1U
+
+/* Attach Debounce duration in milli Seconds */ 
+#define DRV_USB_OHCI_ATTACH_DEBOUNCE_DURATION           500
+
+/* Reset duration in milli Seconds */ 
+#define DRV_USB_OHCI_RESET_DURATION                     100
+
+/* Maximum Control Transfer Size */
+#define DRV_USB_OHCI_CONTROL_TRANSFER_BUFFER_SIZE 512U
+
+/* Maximum Non Control Transfer Size */ 
+#define DRV_USB_OHCI_TRANSFER_BUFFER_SIZE  512U
+
+
+/* Alignment for buffers that are submitted to USB Driver*/ 
+#ifndef USB_ALIGN
+#define USB_ALIGN __ALIGNED(32)
+#endif 
 
 /* Number of CDC Function driver instances in the application */
 #define USB_HOST_CDC_INSTANCES_NUMBER         1U
