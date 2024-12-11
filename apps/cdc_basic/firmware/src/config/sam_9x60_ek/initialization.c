@@ -62,9 +62,10 @@
 // *****************************************************************************
 // *****************************************************************************
 /* Following MISRA-C rules are deviated in the below code block */
-/* MISRA C-2012 Rule 11.1 */
-/* MISRA C-2012 Rule 11.3 */
-/* MISRA C-2012 Rule 11.8 */
+/* MISRA C-2012 Rule 7.2 - Deviation record ID - H3_MISRAC_2012_R_7_2_DR_1 */
+/* MISRA C-2012 Rule 11.1 - Deviation record ID - H3_MISRAC_2012_R_11_1_DR_1 */
+/* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
+/* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
 
 
 
@@ -257,6 +258,7 @@ static void STDIO_BufferModeSet(void)
 
     /* Make stdout unbuffered */
     setbuf(stdout, NULL);
+    /* MISRAC 2012 deviation block end */
 }
 
 
@@ -298,13 +300,12 @@ void SYS_Initialize ( void* data )
     /* Disable WDT   */
     WDT_REGS->WDT_MR = WDT_MR_WDDIS_Msk;
 
+    DBGU_Initialize();
+
  
     TC0_CH0_TimerInitialize(); 
      
     
-    DBGU_Initialize();
-
-
 
     /* MISRAC 2012 deviation block start */
     /* Following MISRA-C rules deviated in this block  */
@@ -319,12 +320,12 @@ void SYS_Initialize ( void* data )
     
     /* MISRAC 2012 deviation block end */
 
-    /* Initialize the USB Host layer */
-    sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );    
-
      /* Initialize USB Driver */ 
     sysObj.drvUSBEHCIObject = DRV_USB_EHCI_Initialize (DRV_USB_EHCI_INDEX_0, (SYS_MODULE_INIT *) &drvUSBEHCIInit);
     sysObj.drvUSBOHCIObject = DRV_USB_OHCI_Initialize (DRV_USB_OHCI_INDEX_0, (SYS_MODULE_INIT *) &drvUSBOHCIInit);
+
+    /* Initialize the USB Host layer */
+    sysObj.usbHostObject0 = USB_HOST_Initialize (( SYS_MODULE_INIT *)& usbHostInitData );    
 
 
     /* MISRAC 2012 deviation block end */
