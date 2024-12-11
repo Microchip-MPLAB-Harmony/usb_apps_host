@@ -76,14 +76,14 @@ void USB_FS_Handler (void);
 // Section: System Interrupt Vector definitions
 // *****************************************************************************
 // *****************************************************************************
-void CORE_TIMER_Handler (void)
+void __attribute__((used)) CORE_TIMER_Handler (void)
 {
     CORE_TIMER_InterruptHandler();
 }
 
 
 
-void USB_FS_Handler (void)
+void __attribute__((used)) USB_FS_Handler (void)
 {
     DRV_USBFS_USB_Handler();
 }
