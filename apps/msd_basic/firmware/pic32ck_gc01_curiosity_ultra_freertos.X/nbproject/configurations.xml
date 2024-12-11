@@ -165,6 +165,7 @@
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/timers.h</itemPath>
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/semphr.h</itemPath>
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/stream_buffer.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_syscall_numbers.h</itemPath>
           </logicalFolder>
           <logicalFolder name="portable" displayName="portable" projectFiles="true">
             <logicalFolder name="GCC" displayName="GCC" projectFiles="true">
@@ -234,7 +235,6 @@
             <itemPath>../src/packs/PIC32CK2051GC01144_DFP/component/usb.h</itemPath>
             <itemPath>../src/packs/PIC32CK2051GC01144_DFP/component/eth.h</itemPath>
             <itemPath>../src/packs/PIC32CK2051GC01144_DFP/component/fcw.h</itemPath>
-            <itemPath>../src/packs/PIC32CK2051GC01144_DFP/component/sig.h</itemPath>
             <itemPath>../src/packs/PIC32CK2051GC01144_DFP/component/oscctrl.h</itemPath>
             <itemPath>../src/packs/PIC32CK2051GC01144_DFP/component/spi_ixs.h</itemPath>
             <itemPath>../src/packs/PIC32CK2051GC01144_DFP/component/cmcc.h</itemPath>
@@ -266,7 +266,6 @@
             <itemPath>../src/packs/PIC32CK2051GC01144_DFP/instance/can1.h</itemPath>
             <itemPath>../src/packs/PIC32CK2051GC01144_DFP/instance/mclk.h</itemPath>
             <itemPath>../src/packs/PIC32CK2051GC01144_DFP/instance/tcc3.h</itemPath>
-            <itemPath>../src/packs/PIC32CK2051GC01144_DFP/instance/sig.h</itemPath>
             <itemPath>../src/packs/PIC32CK2051GC01144_DFP/instance/sdmmc1.h</itemPath>
             <itemPath>../src/packs/PIC32CK2051GC01144_DFP/instance/evsys.h</itemPath>
             <itemPath>../src/packs/PIC32CK2051GC01144_DFP/instance/sercom0.h</itemPath>
@@ -450,12 +449,12 @@
         <targetPluginBoard/>
         <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.40</languageToolchainVersion>
+        <languageToolchainVersion>4.45</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
-        <pack name="PIC32CK-GC_DFP" vendor="Microchip" version="1.0.131"/>
+        <pack name="PIC32CK-GC_DFP" vendor="Microchip" version="1.1.148"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
