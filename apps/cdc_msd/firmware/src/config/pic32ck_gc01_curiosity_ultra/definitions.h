@@ -64,13 +64,13 @@
 #include "system/time/sys_time.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_host.h"
-#include "bsp/bsp.h"
 #include "system/fs/sys_fs.h"
 #include "system/fs/sys_fs_media_manager.h"
 #include "system/fs/sys_fs_fat_interface.h"
 #include "system/fs/fat_fs/file_system/ff.h"
 #include "system/fs/fat_fs/file_system/ffconf.h"
 #include "system/fs/fat_fs/hardware_access/diskio.h"
+#include "bsp/bsp.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
@@ -88,13 +88,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "PIC32CK2051GC01144"
-#define DEVICE_ARCH			 "CORTEX-M33"
-#define DEVICE_FAMILY		 "PIC32CK"
-#define DEVICE_SERIES		 "PIC32CKGC01"
+#define DEVICE_NAME          "PIC32CK2051GC01144"
+#define DEVICE_ARCH          "CORTEX-M33"
+#define DEVICE_FAMILY        "PIC32CK"
+#define DEVICE_SERIES        "PIC32CKGC01"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 120000000
+#define CPU_CLOCK_FREQUENCY 120000000U
 
 // *****************************************************************************
 // *****************************************************************************
