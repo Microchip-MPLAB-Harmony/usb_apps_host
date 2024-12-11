@@ -55,11 +55,11 @@
 #include "peripheral/aic/plib_aic.h"
 #include "peripheral/tc/plib_tc0.h"
 #include "system/time/sys_time.h"
-#include "usb/usb_chapter_9.h"
-#include "usb/usb_host.h"
 #include "bsp/bsp.h"
 #include "driver/usb/uhp/drv_usb_ehci.h"
 #include "driver/usb/uhp/drv_usb_ohci.h"
+#include "usb/usb_chapter_9.h"
+#include "usb/usb_host.h"
 #include "peripheral/uart/plib_uart1.h"
 #include "driver/usart/drv_usart.h"
 #include "usb/usb_host_hid.h"
@@ -83,13 +83,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "ATSAMA5D27"
-#define DEVICE_ARCH			 "CORTEX-A5"
-#define DEVICE_FAMILY		 "SAMA5"
-#define DEVICE_SERIES		 "SAMA5D2"
+#define DEVICE_NAME          "ATSAMA5D27"
+#define DEVICE_ARCH          "CORTEX-A5"
+#define DEVICE_FAMILY        "SAMA5"
+#define DEVICE_SERIES        "SAMA5D2"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 498000000
+#define CPU_CLOCK_FREQUENCY 498000000U
 
 // *****************************************************************************
 // *****************************************************************************
@@ -203,10 +203,10 @@ typedef struct
 {
     SYS_MODULE_OBJ  drvUsart0;
     SYS_MODULE_OBJ  sysTime;
-    SYS_MODULE_OBJ  usbHostObject0;
-
     SYS_MODULE_OBJ  drvUSBEHCIObject;
     SYS_MODULE_OBJ  drvUSBOHCIObject;
+
+    SYS_MODULE_OBJ  usbHostObject0;
 
 
 } SYSTEM_OBJECTS;
