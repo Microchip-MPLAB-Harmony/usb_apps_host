@@ -48,9 +48,9 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include "peripheral/coretimer/plib_coretimer.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_host.h"
-#include "peripheral/coretimer/plib_coretimer.h"
 #include "usb/usb_msd.h"
 #include "usb/usb_host_msd.h"
 #include "usb/usb_host_scsi.h"
@@ -82,13 +82,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "PIC32MX470F512H"
-#define DEVICE_ARCH			 "MIPS"
-#define DEVICE_FAMILY		 "PIC32MX1185"
-#define DEVICE_SERIES		 "PIC32MX"
+#define DEVICE_NAME          "PIC32MX470F512H"
+#define DEVICE_ARCH          "MIPS"
+#define DEVICE_FAMILY        "PIC32MX1185"
+#define DEVICE_SERIES        "PIC32MX"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 96000000
+#define CPU_CLOCK_FREQUENCY 96000000U
 
 // *****************************************************************************
 // *****************************************************************************
