@@ -81,9 +81,10 @@
 // *****************************************************************************
 // *****************************************************************************
 /* Following MISRA-C rules are deviated in the below code block */
-/* MISRA C-2012 Rule 11.1 */
-/* MISRA C-2012 Rule 11.3 */
-/* MISRA C-2012 Rule 11.8 */
+/* MISRA C-2012 Rule 7.2 - Deviation record ID - H3_MISRAC_2012_R_7_2_DR_1 */
+/* MISRA C-2012 Rule 11.1 - Deviation record ID - H3_MISRAC_2012_R_11_1_DR_1 */
+/* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
+/* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
 // <editor-fold defaultstate="collapsed" desc="DRV_USART Instance 0 Initialization Data">
 
 static DRV_USART_CLIENT_OBJ drvUSART0ClientObjPool[DRV_USART_CLIENTS_NUMBER_IDX0];
@@ -116,10 +117,10 @@ static const DRV_USART_INTERRUPT_SOURCES drvUSART0InterruptSources =
     .isSingleIntSrc                        = false,
 
     /* Peripheral interrupt lines */
-    .intSources.multi.usartTxCompleteInt   = (int32_t)SERCOM3_1_IRQn,
-    .intSources.multi.usartTxReadyInt      = (int32_t)SERCOM3_0_IRQn,
-    .intSources.multi.usartRxCompleteInt   = (int32_t)SERCOM3_2_IRQn,
-    .intSources.multi.usartErrorInt        = (int32_t)SERCOM3_OTHER_IRQn,
+   .intSources.multi.usartTxCompleteInt   = (int32_t)SERCOM3_1_IRQn,
+   .intSources.multi.usartTxReadyInt      = (int32_t)SERCOM3_0_IRQn,
+   .intSources.multi.usartRxCompleteInt   = (int32_t)SERCOM3_2_IRQn,
+   .intSources.multi.usartErrorInt        = (int32_t)SERCOM3_OTHER_IRQn,        
 };
 
 static const DRV_USART_INIT drvUsart0InitData =
@@ -198,7 +199,7 @@ static void F_DRV_USB_VBUSPowerEnable(uint8_t port, bool enable)
 }
 static const DRV_USBFSV1_INIT drvUSBInit =
 {
-    /* Interrupt Source for USB module */ 
+    /* Interrupt Source for USB module */
     .interruptSource = USB_IRQn,
 
     /* System module initialization */
@@ -302,7 +303,6 @@ void SYS_Initialize ( void* data )
 
 	BSP_Initialize();
     TC0_TimerInitialize();
-
 
 
     /* MISRAC 2012 deviation block start */
