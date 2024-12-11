@@ -63,7 +63,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -13270,11 +13270,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra_freertos\configuration.h</file>
-         <hash>fca67097d1d568f478f80439a80be9c60fefa448499fc94fff426702899fad6d</hash>
+         <hash>cf508f7487820b05cb4bc74d2238d551932368728bb40b0cbb64db687065e79d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra_freertos\definitions.h</file>
-         <hash>3869df6fb6bb206ece7d6831d8472ec3932e4a5e53c7f2cf477913a672357a4d</hash>
+         <hash>fabc08a5006501eb8e3683e4519ac4cfcabf6524c0280fab2f490a24f4e5ba09</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra_freertos\device.h</file>
@@ -13350,7 +13350,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra_freertos\initialization.c</file>
-         <hash>ae0f02416676787f893e687710ec8a32aa7b9a730e6d41a3716742c6cdc1fa69</hash>
+         <hash>e1900fb7522f0a729fc6a1bd428c613d5a2de174cf73a7dfac448ea4f5a302cd</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra_freertos\interrupts.c</file>
@@ -13506,7 +13506,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra_freertos\tasks.c</file>
-         <hash>9add6db2beeddd6596a325ca416b26750ab7d60c38368638b6795ff86a80b334</hash>
+         <hash>f461f1671318becf6c98d83cc3ea63e8c9ad9ea1480ac2b1a9cd074f9785efec</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra_freertos\toolchain_specifics.h</file>
@@ -13518,11 +13518,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra_freertos\usb\src\usb_host.c</file>
-         <hash>3a8c8e7510577dcac7db2c22fba75dda9af24362f5a2a170c095faef88ffcfd5</hash>
+         <hash>f66397aa89f8b43c22792d73e709aec033271b8e9c2ff3aedd10b07a7b44d70c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra_freertos\usb\src\usb_host_hid.c</file>
-         <hash>09460b8a0ba18f9daa3ec94c9b61e744f56d93964abd6c3cbb30bdc2cc6637c6</hash>
+         <hash>56f0ba15a62b575c965febce533b364b27dc9efe816b48851c8a678aa867e3be</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra_freertos\usb\src\usb_host_hid_local.h</file>
@@ -13558,7 +13558,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra_freertos\usb\usb_host.h</file>
-         <hash>56c248da571d1a46c5d6b5b34e28a978b30b40ee1fb04fa4f2efdcb8a5a1039b</hash>
+         <hash>9e71096993b82346d36f826b35ff46d1cecadbfda0fee4ae47125da2764391e4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca70_curiosity_ultra_freertos\usb\usb_host_client_driver.h</file>
@@ -13622,7 +13622,7 @@
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</file>
-         <hash>2de01ae2556a38eb82c389de23c701805ec63308cfbcf3f84cb12141589b0858</hash>
+         <hash>8cda7ac3ff6f0eb5e83c4fe613dd195151b24da54167f5c3c007e599a03f1edc</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\core_cm7.h</file>
