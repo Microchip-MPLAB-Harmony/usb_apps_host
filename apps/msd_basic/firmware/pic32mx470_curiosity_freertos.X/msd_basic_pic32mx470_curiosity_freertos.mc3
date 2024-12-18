@@ -580,7 +580,10 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
     &lt;GraphSettings canvasHeight=&quot;400&quot; canvasWidth=&quot;400&quot; dnOrder=&quot;0&quot;/&gt;
-    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;PowerProfiles dnOrder=&quot;1&quot;&gt;
+      &lt;Profile dnOrder=&quot;0&quot; id=&quot;profile0&quot; name=&quot;Main&quot;/&gt;
+    &lt;/PowerProfiles&gt;
+    &lt;ComponentGraph dnOrder=&quot;2&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_PIC32MX470_Curiosity_Development_Board&quot; x=&quot;18&quot; y=&quot;56&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;FreeRTOS&quot; x=&quot;309&quot; y=&quot;246&quot;/&gt;
@@ -588,7 +591,7 @@
         &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;core&quot; x=&quot;239&quot; y=&quot;19&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;core_timer&quot; x=&quot;36&quot; y=&quot;264&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;dfp&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;drv_usbfs_v1&quot; x=&quot;12&quot; y=&quot;123&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;drv_usbfs_v1&quot; x=&quot;11&quot; y=&quot;124&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;sys_fs&quot; x=&quot;436&quot; y=&quot;123&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;sys_time&quot; x=&quot;175&quot; y=&quot;221&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;usb_host&quot; x=&quot;172&quot; y=&quot;123&quot;/&gt;
@@ -2351,6 +2354,9 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/drv_usbfs_v1&gt;
 &lt;/drv_usbfs_v1&gt;
 </value>
@@ -3185,7 +3191,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\initialization.c</file>
-         <hash>c072ed0fdfbc8228a2c7feffea7399f118e7d9cc0bd44008cd4ce580a633de2a</hash>
+         <hash>3f446c32115eb338cd5d7e496a773abceeeb01c7a06c96814a987c84ca8fed75</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity_freertos\interrupts.c</file>
