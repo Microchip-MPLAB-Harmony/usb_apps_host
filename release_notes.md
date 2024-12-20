@@ -5,6 +5,63 @@
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## Harmony 3 USB Host application examples v3.9.0
+
+### Development kit and demo application support
+
+Following table provides number of USB Host demo applications available for different development kits.
+
+|Development Kits|MPLAB X applications|
+|----------------|--------------------|
+|[PIC32CX SG41 Curiosity Ultra Board](https://www.microchip.com/en-us/development-tool/ev06x38a)|6|
+|[PIC32CK-GC01 Curiosity Ultra board](https://www.microchip.com/en-us/development-tool/ea23j82a)|8|
+|[PIC32CZ-CA80 Curiosity Ultra board](https://www.microchip.com/en-us/development-tool/ea61x20a)|9|
+|[PIC32CZ-CA70 Curiosity Ultra board](https://www.microchip.com/en-us/development-tool/ea60e74a)|10|
+|PIC32CM-GC Curiosity Pro board|6|
+|[PIC32CM LE00 Curiosity Pro Evaluation Kit](https://www.microchip.com/en-us/development-tool/ev80p12a)|3|
+|[Curiosity PIC32MX470 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/dm320103)|5|
+|[Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)|7|
+|[PIC32MK General Purpose \(GP\) Development Board](https://www.microchip.com/developmenttools/ProductDetails/dm320106)|2|
+|[PIC32MZ Embedded Graphics with Stacked DRAM \(DA\) Starter Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/DM320010-C)|1|
+|[PIC32MZ Embedded Connectivity with FPU \(EF\) Starter Kit](https://www.microchip.com/Developmenttools/ProductDetails/DM320007)|6|
+|[Curiosity PIC32MZ W1 Development Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320104)|1|
+|[SAM D21 Xplained Pro Board](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro)|6|
+|[SAM E54 Xplained Pro Board](https://www.microchip.com/developmenttools/productdetails/atsame54-xpro)|6|
+|[SAM E70 Xplained Ultra Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)|10|
+|[SAMG55 Xplained Pro Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMG55-XPRO)|9|
+|[SAM L21 Xplained Pro Board](https://www.microchip.com/developmenttools/ProductDetails/PartNO/ATSAML21-XPRO-B)|1|
+|[SAM V71 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMV71-XULT)|2|
+|[SAM9X60-EK Evaluation Board](https://www.microchip.com/developmenttools/ProductDetails/DT100126)|10|
+|[SAM9X60 Curiosity Development Board](https://www.microchip.com/en-us/development-tool/ev40e67a)|11|
+|[SAM9X75 Curiosity Development Board](https://www.microchip.com/en-us/development-tool/ev31h43a)|8|
+|[SAM A5D2 Xplained Ultra Board](https://www.microchip.com/Developmenttools/ProductDetails/ATSAMA5D2C-XULT)|9|
+|[SAMA5D27 SOM1 Kit1](https://www.microchip.com/developmenttools/ProductDetails/atsama5d27-som1-ek1)|9|
+|[ATSAMA5D27-WLSOM1 Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320117)|9|
+|[SAMA5D29 Curiosity Development Board](https://www.microchip.com/en-us/development-tool/ev07r15a)|5|
+|[SAMA7G54 Evaluation Kit](https://www.microchip.com/en-us/development-tool/ev21h18a)|5|
+|[SAMA7D65 Early Access Curiosity Board](https://www.microchip.com/en-us/development-tool/ea89c15a)|7|
+|WBZ653 Curiosity Board|6|
+
+
+
+**New Features**
+
+- Added USB host demos for PIC32CM-GC Curiosity Pro Board.
+- Added USB host demos for WBZ653 Curiosity Board.
+- Added USB host demos for PIC32CZ CA70 Curiosity Ultra Board.
+- Added additional USB host demos for SAM9X75 Curiosity board.
+
+**Known Issues**
+
+-  After a power cycle, the reset button on the PIC32CZ CA80 Curiosity Ultra board must be pressed to get the program running.
+- All USB host projects for PIC32CM GC/SG family products will fail if compiled with -Os optimisation level.
+
+**Development Tools**
+
+-   [MPLAB® X IDE v6.20](https://www.microchip.com/mplab/mplab-x-ide)
+-   MPLAB® X IDE plug-ins:
+    -   MPLAB® Code Configurator \(MCC\) v5.5.1
+-   [MPLAB® XC32 C/C++ Compiler v4.45](https://www.microchip.com/mplab/compilers)
 ## Harmony 3 USB Host application examples v3.9.0-E1(October, 2024)
 
 ### Development kit and demo application support
