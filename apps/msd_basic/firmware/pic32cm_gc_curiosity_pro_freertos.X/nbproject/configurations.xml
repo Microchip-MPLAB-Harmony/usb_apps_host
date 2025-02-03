@@ -5,116 +5,153 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="pic32cm_gc_curiosity_pro"
-                       displayName="pic32cm_gc_curiosity_pro"
+        <logicalFolder name="pic32cm_gc_curiosity_pro_freertos"
+                       displayName="pic32cm_gc_curiosity_pro_freertos"
                        projectFiles="true">
           <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
-            <itemPath>../src/config/pic32cm_gc_curiosity_pro/bsp/bsp.h</itemPath>
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/bsp/bsp.h</itemPath>
           </logicalFolder>
           <logicalFolder name="driver" displayName="driver" projectFiles="true">
             <logicalFolder name="usb" displayName="usb" projectFiles="true">
               <logicalFolder name="usbfsv1" displayName="usbfsv1" projectFiles="true">
                 <logicalFolder name="src" displayName="src" projectFiles="true">
-                  <itemPath>../src/config/pic32cm_gc_curiosity_pro/driver/usb/usbfsv1/src/drv_usbfsv1_local.h</itemPath>
-                  <itemPath>../src/config/pic32cm_gc_curiosity_pro/driver/usb/usbfsv1/src/drv_usbfsv1_variant_mapping.h</itemPath>
+                  <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/driver/usb/usbfsv1/src/drv_usbfsv1_variant_mapping.h</itemPath>
+                  <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/driver/usb/usbfsv1/src/drv_usbfsv1_local.h</itemPath>
                 </logicalFolder>
-                <itemPath>../src/config/pic32cm_gc_curiosity_pro/driver/usb/usbfsv1/drv_usbfsv1.h</itemPath>
+                <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/driver/usb/usbfsv1/drv_usbfsv1.h</itemPath>
               </logicalFolder>
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/driver/usb/drv_usb_external_dependencies.h</itemPath>
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/driver/usb/drv_usb.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/driver/usb/drv_usb_external_dependencies.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/driver/usb/drv_usb.h</itemPath>
             </logicalFolder>
-            <itemPath>../src/config/pic32cm_gc_curiosity_pro/driver/driver_common.h</itemPath>
-            <itemPath>../src/config/pic32cm_gc_curiosity_pro/driver/driver.h</itemPath>
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/driver/driver.h</itemPath>
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/driver/driver_common.h</itemPath>
           </logicalFolder>
           <logicalFolder name="osal" displayName="osal" projectFiles="true">
-            <itemPath>../src/config/pic32cm_gc_curiosity_pro/osal/osal.h</itemPath>
-            <itemPath>../src/config/pic32cm_gc_curiosity_pro/osal/osal_definitions.h</itemPath>
-            <itemPath>../src/config/pic32cm_gc_curiosity_pro/osal/osal_impl_basic.h</itemPath>
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/osal/osal_freertos.h</itemPath>
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/osal/osal_definitions.h</itemPath>
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/osal/osal.h</itemPath>
           </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
             <logicalFolder name="clock" displayName="clock" projectFiles="true">
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/peripheral/clock/plib_clock.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/peripheral/clock/plib_clock.h</itemPath>
             </logicalFolder>
             <logicalFolder name="evsys" displayName="evsys" projectFiles="true">
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/peripheral/evsys/plib_evsys.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/peripheral/evsys/plib_evsys.h</itemPath>
             </logicalFolder>
             <logicalFolder name="nvic" displayName="nvic" projectFiles="true">
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/peripheral/nvic/plib_nvic.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/peripheral/nvic/plib_nvic.h</itemPath>
             </logicalFolder>
             <logicalFolder name="pm" displayName="pm" projectFiles="true">
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/peripheral/pm/plib_pm.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/peripheral/pm/plib_pm.h</itemPath>
             </logicalFolder>
             <logicalFolder name="port" displayName="port" projectFiles="true">
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/peripheral/port/plib_port.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/peripheral/port/plib_port.h</itemPath>
             </logicalFolder>
             <logicalFolder name="rtc" displayName="rtc" projectFiles="true">
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/peripheral/rtc/plib_rtc.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/peripheral/rtc/plib_rtc.h</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="system" displayName="system" projectFiles="true">
             <logicalFolder name="debug" displayName="debug" projectFiles="true">
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/debug/sys_debug.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/debug/sys_debug.h</itemPath>
             </logicalFolder>
             <logicalFolder name="fs" displayName="fs" projectFiles="true">
               <logicalFolder name="fat_fs" displayName="fat_fs" projectFiles="true">
                 <logicalFolder name="file_system" displayName="file_system" projectFiles="true">
-                  <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/fs/fat_fs/file_system/ffconf.h</itemPath>
-                  <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/fs/fat_fs/file_system/ff.h</itemPath>
+                  <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/fs/fat_fs/file_system/ff.h</itemPath>
+                  <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/fs/fat_fs/file_system/ffconf.h</itemPath>
                 </logicalFolder>
                 <logicalFolder name="hardware_access"
                                displayName="hardware_access"
                                projectFiles="true">
-                  <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/fs/fat_fs/hardware_access/diskio.h</itemPath>
+                  <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/fs/fat_fs/hardware_access/diskio.h</itemPath>
                 </logicalFolder>
               </logicalFolder>
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/fs/sys_fs_media_manager.h</itemPath>
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/fs/src/sys_fs_media_manager_local.h</itemPath>
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/fs/sys_fs_fat_interface.h</itemPath>
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/fs/sys_fs.h</itemPath>
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/fs/src/sys_fs_local.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/fs/src/sys_fs_media_manager_local.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/fs/sys_fs.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/fs/src/sys_fs_local.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/fs/sys_fs_media_manager.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/fs/sys_fs_fat_interface.h</itemPath>
             </logicalFolder>
             <logicalFolder name="int" displayName="int" projectFiles="true">
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/int/sys_int.h</itemPath>
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/int/sys_int_mapping.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/int/sys_int_mapping.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/int/sys_int.h</itemPath>
             </logicalFolder>
             <logicalFolder name="time" displayName="time" projectFiles="true">
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/time/src/sys_time_local.h</itemPath>
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/time/sys_time_definitions.h</itemPath>
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/time/sys_time.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/time/sys_time_definitions.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/time/sys_time.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/time/src/sys_time_local.h</itemPath>
             </logicalFolder>
-            <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/system_module.h</itemPath>
-            <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/system_media.h</itemPath>
-            <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/system_common.h</itemPath>
-            <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/system.h</itemPath>
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/system.h</itemPath>
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/system_common.h</itemPath>
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/system_module.h</itemPath>
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/system_media.h</itemPath>
           </logicalFolder>
           <logicalFolder name="usb" displayName="usb" projectFiles="true">
             <logicalFolder name="src" displayName="src" projectFiles="true">
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/usb/src/usb_host_hub_mapping.h</itemPath>
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/usb/src/usb_external_dependencies.h</itemPath>
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/usb/src/usb_host_scsi_local.h</itemPath>
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/usb/src/usb_host_msd_local.h</itemPath>
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/usb/src/usb_host_local.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/usb/src/usb_host_scsi_local.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/usb/src/usb_host_hub_mapping.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/usb/src/usb_external_dependencies.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/usb/src/usb_host_msd_local.h</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/usb/src/usb_host_local.h</itemPath>
             </logicalFolder>
-            <itemPath>../src/config/pic32cm_gc_curiosity_pro/usb/usb_chapter_9.h</itemPath>
-            <itemPath>../src/config/pic32cm_gc_curiosity_pro/usb/usb_host_client_driver.h</itemPath>
-            <itemPath>../src/config/pic32cm_gc_curiosity_pro/usb/usb_common.h</itemPath>
-            <itemPath>../src/config/pic32cm_gc_curiosity_pro/usb/usb_host_hub_interface.h</itemPath>
-            <itemPath>../src/config/pic32cm_gc_curiosity_pro/usb/usb_host_msd.h</itemPath>
-            <itemPath>../src/config/pic32cm_gc_curiosity_pro/usb/scsi.h</itemPath>
-            <itemPath>../src/config/pic32cm_gc_curiosity_pro/usb/usb_hub.h</itemPath>
-            <itemPath>../src/config/pic32cm_gc_curiosity_pro/usb/usb_msd.h</itemPath>
-            <itemPath>../src/config/pic32cm_gc_curiosity_pro/usb/usb_host.h</itemPath>
-            <itemPath>../src/config/pic32cm_gc_curiosity_pro/usb/usb_host_scsi.h</itemPath>
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/usb/usb_chapter_9.h</itemPath>
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/usb/usb_host_client_driver.h</itemPath>
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/usb/usb_host_hub_interface.h</itemPath>
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/usb/usb_host_scsi.h</itemPath>
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/usb/usb_msd.h</itemPath>
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/usb/scsi.h</itemPath>
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/usb/usb_common.h</itemPath>
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/usb/usb_hub.h</itemPath>
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/usb/usb_host_msd.h</itemPath>
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/usb/usb_host.h</itemPath>
           </logicalFolder>
-          <itemPath>../src/config/pic32cm_gc_curiosity_pro/device.h</itemPath>
-          <itemPath>../src/config/pic32cm_gc_curiosity_pro/configuration.h</itemPath>
-          <itemPath>../src/config/pic32cm_gc_curiosity_pro/device_vectors.h</itemPath>
-          <itemPath>../src/config/pic32cm_gc_curiosity_pro/definitions.h</itemPath>
-          <itemPath>../src/config/pic32cm_gc_curiosity_pro/sys_tasks.h</itemPath>
-          <itemPath>../src/config/pic32cm_gc_curiosity_pro/toolchain_specifics.h</itemPath>
-          <itemPath>../src/config/pic32cm_gc_curiosity_pro/interrupts.h</itemPath>
-          <itemPath>../src/config/pic32cm_gc_curiosity_pro/device_cache.h</itemPath>
-          <itemPath>../src/config/pic32cm_gc_curiosity_pro/user.h</itemPath>
+          <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/device_vectors.h</itemPath>
+          <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/configuration.h</itemPath>
+          <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/FreeRTOSConfig.h</itemPath>
+          <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/device.h</itemPath>
+          <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/definitions.h</itemPath>
+          <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/sys_tasks.h</itemPath>
+          <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/device_cache.h</itemPath>
+          <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/toolchain_specifics.h</itemPath>
+          <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/user.h</itemPath>
+          <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/interrupts.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
+        <logicalFolder name="Source" displayName="Source" projectFiles="true">
+          <logicalFolder name="include" displayName="include" projectFiles="true">
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/semphr.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/task.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_syscall_numbers.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/stream_buffer.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/deprecated_definitions.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/croutine.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/timers.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/event_groups.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/message_buffer.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/stack_macros.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/queue.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/portable.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_prototypes.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/list.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="portable" displayName="portable" projectFiles="true">
+            <logicalFolder name="GCC" displayName="GCC" projectFiles="true">
+              <logicalFolder name="ARM_CM23_NTZ"
+                             displayName="ARM_CM23_NTZ"
+                             projectFiles="true">
+                <logicalFolder name="non_secure" displayName="non_secure" projectFiles="true">
+                  <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM23_NTZ/non_secure/portmacrocommon.h</itemPath>
+                  <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM23_NTZ/non_secure/portmacro.h</itemPath>
+                  <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM23_NTZ/non_secure/portasm.h</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
@@ -235,16 +272,16 @@
                    displayName="Important Files"
                    projectFiles="true">
       <itemPath>Makefile</itemPath>
-      <itemPath>msd_basic_pic32cm_gc_curiosity_pro.mc3</itemPath>
+      <itemPath>msd_basic_pic32cm_gc_curiosity_pro_freertos.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="pic32cm_gc_curiosity_pro"
-                       displayName="pic32cm_gc_curiosity_pro"
+        <logicalFolder name="pic32cm_gc_curiosity_pro_freertos"
+                       displayName="pic32cm_gc_curiosity_pro_freertos"
                        projectFiles="true">
-          <itemPath>../src/config/pic32cm_gc_curiosity_pro/PIC32CM5112GC00100.ld</itemPath>
+          <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/PIC32CM5112GC00100.ld</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
@@ -252,93 +289,123 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="pic32cm_gc_curiosity_pro"
-                       displayName="pic32cm_gc_curiosity_pro"
+        <logicalFolder name="pic32cm_gc_curiosity_pro_freertos"
+                       displayName="pic32cm_gc_curiosity_pro_freertos"
                        projectFiles="true">
           <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
-            <itemPath>../src/config/pic32cm_gc_curiosity_pro/bsp/bsp.c</itemPath>
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/bsp/bsp.c</itemPath>
           </logicalFolder>
           <logicalFolder name="driver" displayName="driver" projectFiles="true">
             <logicalFolder name="usb" displayName="usb" projectFiles="true">
               <logicalFolder name="usbfsv1" displayName="usbfsv1" projectFiles="true">
                 <logicalFolder name="src" displayName="src" projectFiles="true">
-                  <itemPath>../src/config/pic32cm_gc_curiosity_pro/driver/usb/usbfsv1/src/drv_usbfsv1.c</itemPath>
-                  <itemPath>../src/config/pic32cm_gc_curiosity_pro/driver/usb/usbfsv1/src/drv_usbfsv1_host.c</itemPath>
+                  <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/driver/usb/usbfsv1/src/drv_usbfsv1_host.c</itemPath>
+                  <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/driver/usb/usbfsv1/src/drv_usbfsv1.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
+          <logicalFolder name="osal" displayName="osal" projectFiles="true">
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/osal/osal_freertos.c</itemPath>
+          </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
             <logicalFolder name="clock" displayName="clock" projectFiles="true">
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/peripheral/clock/plib_clock.c</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/peripheral/clock/plib_clock.c</itemPath>
             </logicalFolder>
             <logicalFolder name="evsys" displayName="evsys" projectFiles="true">
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/peripheral/evsys/plib_evsys.c</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/peripheral/evsys/plib_evsys.c</itemPath>
             </logicalFolder>
             <logicalFolder name="nvic" displayName="nvic" projectFiles="true">
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/peripheral/nvic/plib_nvic.c</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/peripheral/nvic/plib_nvic.c</itemPath>
             </logicalFolder>
             <logicalFolder name="pm" displayName="pm" projectFiles="true">
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/peripheral/pm/plib_pm.c</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/peripheral/pm/plib_pm.c</itemPath>
             </logicalFolder>
             <logicalFolder name="port" displayName="port" projectFiles="true">
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/peripheral/port/plib_port.c</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/peripheral/port/plib_port.c</itemPath>
             </logicalFolder>
             <logicalFolder name="rtc" displayName="rtc" projectFiles="true">
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/peripheral/rtc/plib_rtc_timer.c</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/peripheral/rtc/plib_rtc_timer.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="stdio" displayName="stdio" projectFiles="true">
-            <itemPath>../src/config/pic32cm_gc_curiosity_pro/stdio/xc32_monitor.c</itemPath>
+            <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/stdio/xc32_monitor.c</itemPath>
           </logicalFolder>
           <logicalFolder name="system" displayName="system" projectFiles="true">
             <logicalFolder name="fs" displayName="fs" projectFiles="true">
               <logicalFolder name="fat_fs" displayName="fat_fs" projectFiles="true">
                 <logicalFolder name="file_system" displayName="file_system" projectFiles="true">
-                  <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/fs/fat_fs/file_system/ffunicode.c</itemPath>
-                  <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/fs/fat_fs/file_system/ff.c</itemPath>
+                  <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/fs/fat_fs/file_system/ffunicode.c</itemPath>
+                  <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/fs/fat_fs/file_system/ff.c</itemPath>
                 </logicalFolder>
                 <logicalFolder name="hardware_access"
                                displayName="hardware_access"
                                projectFiles="true">
-                  <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/fs/fat_fs/hardware_access/diskio.c</itemPath>
+                  <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/fs/fat_fs/hardware_access/diskio.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/fs/src/sys_fs_fat_interface.c</itemPath>
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/fs/src/sys_fs.c</itemPath>
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/fs/src/sys_fs_media_manager.c</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/fs/src/sys_fs_fat_interface.c</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/fs/src/sys_fs.c</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/fs/src/sys_fs_media_manager.c</itemPath>
             </logicalFolder>
             <logicalFolder name="int" displayName="int" projectFiles="true">
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/int/src/sys_int.c</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/int/src/sys_int.c</itemPath>
             </logicalFolder>
             <logicalFolder name="time" displayName="time" projectFiles="true">
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/system/time/src/sys_time.c</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/system/time/src/sys_time.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="usb" displayName="usb" projectFiles="true">
             <logicalFolder name="src" displayName="src" projectFiles="true">
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/usb/src/usb_host.c</itemPath>
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/usb/src/usb_host_msd.c</itemPath>
-              <itemPath>../src/config/pic32cm_gc_curiosity_pro/usb/src/usb_host_scsi.c</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/usb/src/usb_host.c</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/usb/src/usb_host_scsi.c</itemPath>
+              <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/usb/src/usb_host_msd.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <itemPath>../src/config/pic32cm_gc_curiosity_pro/usb_host_init_data.c</itemPath>
-          <itemPath>../src/config/pic32cm_gc_curiosity_pro/exceptions.c</itemPath>
-          <itemPath>../src/config/pic32cm_gc_curiosity_pro/initialization.c</itemPath>
-          <itemPath>../src/config/pic32cm_gc_curiosity_pro/startup_xc32.c</itemPath>
-          <itemPath>../src/config/pic32cm_gc_curiosity_pro/interrupts.c</itemPath>
-          <itemPath>../src/config/pic32cm_gc_curiosity_pro/tasks.c</itemPath>
-          <itemPath>../src/config/pic32cm_gc_curiosity_pro/libc_syscalls.c</itemPath>
+          <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/tasks.c</itemPath>
+          <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/usb_host_init_data.c</itemPath>
+          <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/startup_xc32.c</itemPath>
+          <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/initialization.c</itemPath>
+          <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/exceptions.c</itemPath>
+          <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/libc_syscalls.c</itemPath>
+          <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/freertos_hooks.c</itemPath>
+          <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/interrupts.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
+        <logicalFolder name="Source" displayName="Source" projectFiles="true">
+          <logicalFolder name="portable" displayName="portable" projectFiles="true">
+            <logicalFolder name="GCC" displayName="GCC" projectFiles="true">
+              <logicalFolder name="ARM_CM23_NTZ"
+                             displayName="ARM_CM23_NTZ"
+                             projectFiles="true">
+                <logicalFolder name="non_secure" displayName="non_secure" projectFiles="true">
+                  <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM23_NTZ/non_secure/portasm.c</itemPath>
+                  <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM23_NTZ/non_secure/port.c</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="MemMang" displayName="MemMang" projectFiles="true">
+              <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/MemMang/heap_1.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/FreeRTOS_tasks.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/stream_buffer.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/timers.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/list.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/croutine.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/queue.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/event_groups.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
-      <itemPath>../src/config/pic32cm_gc_curiosity_pro/pin_configurations.csv</itemPath>
+      <itemPath>../src/config/pic32cm_gc_curiosity_pro_freertos/pin_configurations.csv</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
-    <conf name="pic32cm_gc_curiosity_pro" type="2">
+    <conf name="pic32cm_gc_curiosity_pro_freertos" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC32CM5112GC00100</targetDevice>
@@ -346,12 +413,12 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <languageToolchainVersion>4.50</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32CM-GC00_DFP" vendor="Microchip" version="1.0.23"/>
         <pack name="CMSIS" vendor="ARM" version="5.9.0"/>
+        <pack name="PIC32CM-GC00_DFP" vendor="Microchip" version="1.0.23"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -383,15 +450,14 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe"
-                  value="-Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wredundant-decls -Wnested-externs -Wunreachable-code -Wmissing-noreturn"/>
+        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/default;../src/config/pic32cm_gc_curiosity;../src/config/pic32cm_gc_curiosity/system/fs/fat_fs/file_system;../src/config/pic32cm_gc_curiosity/system/fs/fat_fs/hardware_access;../src/config/pic32cm_gc_curiosity_pro;../src/config/pic32cm_gc_curiosity_pro/system/fs/fat_fs/file_system;../src/config/pic32cm_gc_curiosity_pro/system/fs/fat_fs/hardware_access;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CM5112GC00100_DFP"/>
+                  value="../src;../src/config/default;../src/config/pic32cm_gc_curiosity;../src/config/pic32cm_gc_curiosity/system/fs/fat_fs/file_system;../src/config/pic32cm_gc_curiosity/system/fs/fat_fs/hardware_access;../src/config/pic32cm_gc_curiosity_pro;../src/config/pic32cm_gc_curiosity_pro/system/fs/fat_fs/file_system;../src/config/pic32cm_gc_curiosity_pro/system/fs/fat_fs/hardware_access;../src/config/pic32cm_gc_curiosity_pro_freertos;../src/config/pic32cm_gc_curiosity_pro_freertos/system/fs/fat_fs/file_system;../src/config/pic32cm_gc_curiosity_pro_freertos/system/fs/fat_fs/hardware_access;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CM5112GC00100_DFP;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM23_NTZ/non_secure"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -409,7 +475,6 @@
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
-        <appendMe value="-Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wredundant-decls -Wnested-externs -Wunreachable-code -Wmissing-noreturn"/>
       </C32>
       <C32-AR>
         <property key="additional-options-chop-files" value="false"/>
@@ -492,7 +557,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/default;../src/config/pic32cm_gc_curiosity;../src/config/pic32cm_gc_curiosity/system/fs/fat_fs/file_system;../src/config/pic32cm_gc_curiosity/system/fs/fat_fs/hardware_access;../src/config/pic32cm_gc_curiosity_pro;../src/config/pic32cm_gc_curiosity_pro/system/fs/fat_fs/file_system;../src/config/pic32cm_gc_curiosity_pro/system/fs/fat_fs/hardware_access;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CM5112GC00100_DFP"/>
+                  value="../src;../src/config/default;../src/config/pic32cm_gc_curiosity;../src/config/pic32cm_gc_curiosity/system/fs/fat_fs/file_system;../src/config/pic32cm_gc_curiosity/system/fs/fat_fs/hardware_access;../src/config/pic32cm_gc_curiosity_pro;../src/config/pic32cm_gc_curiosity_pro/system/fs/fat_fs/file_system;../src/config/pic32cm_gc_curiosity_pro/system/fs/fat_fs/hardware_access;../src/config/pic32cm_gc_curiosity_pro_freertos;../src/config/pic32cm_gc_curiosity_pro_freertos/system/fs/fat_fs/file_system;../src/config/pic32cm_gc_curiosity_pro_freertos/system/fs/fat_fs/hardware_access;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CM5112GC00100_DFP;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM23_NTZ/non_secure"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -627,7 +692,7 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="8000000-2001ffff"/>
         <property key="programmerToGoFilePath"
-                  value="C:/USB3.13/usb_apps_host/apps/msd_basic/firmware/pic32cm_gc_curiosity.X/debug/pic32cm_gc_curiosity/pic32cm_gc_curiosity_ptg"/>
+                  value="C:/USB_HARMONY/usb_apps_host/apps/msd_basic/firmware/pic32cm_gc_curiosity_pro_freertos.X/debug/pic32cm_gc_curiosity_pro_freertos/pic32cm_gc_curiosity_pro_freertos_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
