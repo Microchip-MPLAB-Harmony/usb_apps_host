@@ -14,7 +14,7 @@
 
 //DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2025 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -54,9 +54,9 @@
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/cmcc/plib_cmcc.h"
-#include "peripheral/pm/plib_pm.h"
 #include "usb/usb_host_cdc.h"
 #include "usb/usb_cdc.h"
+#include "peripheral/pm/plib_pm.h"
 #include "peripheral/rtc/plib_rtc.h"
 #include "system/time/sys_time.h"
 #include "usb/usb_chapter_9.h"
