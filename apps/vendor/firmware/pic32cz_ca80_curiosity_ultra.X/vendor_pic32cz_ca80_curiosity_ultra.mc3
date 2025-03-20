@@ -67,7 +67,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -9242,11 +9242,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\definitions.h</file>
-         <hash>a3f208ca4cae51f173dfa456b658774e6d7bfeeb52f4d0951977321ca3d65cb9</hash>
+         <hash>f5c05e7b07f2b8aeed6e87aa615d07a889ebac37bee9472a0a065d1553344403</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\device.h</file>
-         <hash>33e44f633b5a3a85be5cd1fb73a2714e8014c5a29153d9e3933854c2483a93a5</hash>
+         <hash>f555911b04a2ceae8443b5476194cb6072642886cf2c4b9c753b3e7fa8ad43d9</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\device_cache.h</file>
@@ -9402,15 +9402,15 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\initialization.c</file>
-         <hash>c84e28b97f90073f3cf6bca9649357992a7d273c60e7aaae8000f9b56211e314</hash>
+         <hash>52dd7cbd3eead0fe67152ba4d4acd960ea12857fc97175024a01166a544c6176</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\interrupts.c</file>
-         <hash>a3d440e65d09c84d8ae3aa71d7794dfa31afa704ff405c97b91fda90eb9f78f7</hash>
+         <hash>dcf806636ecf01db7da9e95e3bbed25e6d73bdd0dbf69d7f21469db0cfb2111d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\interrupts.h</file>
-         <hash>5e038d9070d6ddd9ae61af6fd5e049bc00304e43815c773f699b4c257beabe24</hash>
+         <hash>8180ce8445a695b06ff39ab9975f935ba81340ad5ceceb6a2877ffd998fcae96</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\libc_syscalls.c</file>
@@ -9430,7 +9430,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\clock\plib_clock.c</file>
-         <hash>8f89458b56e2ce20cdd19f39256a9680d5c5757cde73ca5e1ca7922194392762</hash>
+         <hash>4f88df7fd3ae54bf4de2181c971543ab3c3a7bdddc9c17b2c98c7d140c6f46d7</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\clock\plib_clock.h</file>
@@ -9466,11 +9466,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\rtc\plib_rtc_timer.c</file>
-         <hash>90fe2f7336106a37330509618a383bf28c73c4fe54a8f4077f3db5d81429682c</hash>
+         <hash>fde5cfe375f477fb82aba8cd5cc70e57e25f0f932dc1e7c6e01f4c0ccf6ffd15</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\sercom\usart\plib_sercom1_usart.c</file>
-         <hash>6aa47cf1f86c886a92b1fef80135081d2549328f2b66aa4596105794acaeba08</hash>
+         <hash>292fa9c692c9cb0d67e50a26889f8a678bb38996a44354325c6f638b3b20ef94</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\sercom\usart\plib_sercom1_usart.h</file>
