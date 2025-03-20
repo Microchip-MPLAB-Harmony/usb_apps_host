@@ -59,7 +59,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -10268,11 +10268,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro_freertos\definitions.h</file>
-         <hash>640d1969e116de31a2dd6f7d3493ead6c875e77b7bb731065e80e3922e44f222</hash>
+         <hash>75db31a11eda65f17a722b991a34bc56c8b31a7bffcd6c13e413cfef0550125c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro_freertos\device.h</file>
-         <hash>1d2e241e6002c8311292a20f031ca39a31f9cdf26d66976860ffbecbac33cf6e</hash>
+         <hash>9a65b0d2091b44dbd418ae1fa394287ba8da90554f8b191696174f271de95e40</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro_freertos\device_cache.h</file>
@@ -10328,15 +10328,15 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro_freertos\initialization.c</file>
-         <hash>fc9e197e77f4d77ca49e23774c51f3d5cad7cf42672310268251483f64989103</hash>
+         <hash>952e5330d669fa13370c027dbc61f9015aa9952732fc7a7c3f2315f1e2fb2418</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro_freertos\interrupts.c</file>
-         <hash>3ea3a2de531621c51b51a0ddf3bcc4dd450bceab7ae785690b92b3a84e460a1c</hash>
+         <hash>fe10188bfe2873c3e76690f546874726bb337ac2fd3c66f8d6666b404d474d62</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro_freertos\interrupts.h</file>
-         <hash>dd0418d2b286544eec28c4b00582f9d86634ee0635983621e424d0ef46da472a</hash>
+         <hash>94b3ef071fc5e5615e9a75c81dfe9d81f60cf69a78fa97a4271cc18fa35127e4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro_freertos\libc_syscalls.c</file>
@@ -10360,7 +10360,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro_freertos\peripheral\clock\plib_clock.c</file>
-         <hash>f9e812438de1ab1dae2edfc99bfd3b23f1f23758d8e753a3ce857a0d06d459ac</hash>
+         <hash>45830fd351123d72b8ede3d4daf0f25dfa9955ec70686a89fd1b9990e41b35e2</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro_freertos\peripheral\clock\plib_clock.h</file>
@@ -10404,7 +10404,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro_freertos\peripheral\rtc\plib_rtc_timer.c</file>
-         <hash>90fe2f7336106a37330509618a383bf28c73c4fe54a8f4077f3db5d81429682c</hash>
+         <hash>fde5cfe375f477fb82aba8cd5cc70e57e25f0f932dc1e7c6e01f4c0ccf6ffd15</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_gc_curiosity_pro_freertos\pin_configurations.csv</file>
