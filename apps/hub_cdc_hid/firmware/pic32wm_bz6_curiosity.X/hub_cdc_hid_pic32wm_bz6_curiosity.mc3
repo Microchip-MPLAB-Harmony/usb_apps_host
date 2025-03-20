@@ -51,7 +51,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -6978,11 +6978,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\configuration.h</file>
-         <hash>62dd8b4afe68c1934913c67397ac78d99ba2b6f5eafd08262c7941312cde4efb</hash>
+         <hash>bef6fbd04f265bd9a662d7daecd0261c5aa15bdf9b1e8c2af2f660093732920b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\definitions.h</file>
-         <hash>e99f4e31ae776e0698dd175cacd0af6c42ba12cb80985a584bb2c26e2744cbf4</hash>
+         <hash>fb3ba36d1aa0349ecef691b399b428360c1d4231b3d5e1378ac2fcc664eeeef8</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\device.h</file>
