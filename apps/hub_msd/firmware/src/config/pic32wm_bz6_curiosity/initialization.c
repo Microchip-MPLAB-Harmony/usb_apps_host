@@ -276,6 +276,9 @@ static const DRV_USBFS_INIT drvUSBFSInit =
 {
      /* Assign the endpoint table */
     .endpointTable= endPointTable1,
+
+    /* Interrupt Source for USB module */
+    .interruptSource = USB_IRQn,
     
     /* USB Controller to operate as USB Host */
     .operationMode = DRV_USBFS_OPMODE_HOST,
@@ -407,9 +410,9 @@ void SYS_Initialize ( void* data )
 
 	GPIO_Initialize();
 
-    SERCOM0_USART_Initialize();
-
     EVSYS_Initialize();
+
+    SERCOM0_USART_Initialize();
 
 	BSP_Initialize();
     RTC_Initialize();
