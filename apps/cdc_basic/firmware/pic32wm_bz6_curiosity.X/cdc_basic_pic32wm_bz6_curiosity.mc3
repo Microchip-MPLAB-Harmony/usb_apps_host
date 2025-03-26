@@ -6771,7 +6771,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\definitions.h</file>
-         <hash>925faf74d67dca045ff4f73e34bed1f0529f04f796778f608359699456a95432</hash>
+         <hash>3a12e6d5778c3a0cec07c5b714467b926ae8088f2f8bee08fd4c158c0008b4c7</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\device.h</file>
@@ -6827,7 +6827,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\initialization.c</file>
-         <hash>fc1f480842a9e8842913476440a08fbaeb0e91f71743456739f1a37db94a787a</hash>
+         <hash>d3b29a45a1d1a230b464632a827411d038e7ae932eda5c944516ba2824c9979a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\interrupts.c</file>
