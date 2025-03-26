@@ -8439,7 +8439,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\initialization.c</file>
-         <hash>e96d87481d697e38c2f5459df81568256421529445f603be794a3bc3ffe7dc68</hash>
+         <hash>65059192a7c9330d9e01de1228fb3329194bb416ce14d79fd9eff08238168a5f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\interrupts.c</file>
